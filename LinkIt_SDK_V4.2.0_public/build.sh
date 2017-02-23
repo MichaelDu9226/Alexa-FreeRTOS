@@ -12,7 +12,7 @@ platform=$(uname)
 if [[ "$platform" =~ "MINGW" ]]; then
     export EXTRA_VAR=-j
 else
-    export EXTRA_VAR=-j`cat /proc/cpuinfo |grep ^processor|wc -l`
+    export EXTRA_VAR=-j
 fi
 ###############################################################################
 #Functions
