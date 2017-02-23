@@ -3,7 +3,7 @@
 <title>M32R-Directives - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="M32R_002dDependent.html#M32R_002dDependent" title="M32R-Dependent">
 <link rel="prev" href="M32R_002dOpts.html#M32R_002dOpts" title="M32R-Opts">
@@ -62,14 +62,14 @@ instruction.  For example:
 
      <pre class="smallexample">             or3   r0, r0, #low(0x12345678) ; compute r0 = r0 | 0x5678
              add3, r0, r0, #low(fred)   ; compute r0 = r0 + low 16-bits of address of fred
-</pre>
+     </pre>
      <br><dt><code>high </code><var>expression</var><dd><a name="index-g_t_0040code_007bhigh_007d-directive_002c-M32R-1225"></a>The <code>high</code> directive computes the value of its expression and
 places the upper 16-bits of the result into the immediate-field of the
 instruction.  For example:
 
      <pre class="smallexample">             seth  r0, #high(0x12345678) ; compute r0 = 0x12340000
              seth, r0, #high(fred)       ; compute r0 = upper 16-bits of address of fred
-</pre>
+     </pre>
      <br><dt><code>shigh </code><var>expression</var><dd><a name="index-g_t_0040code_007bshigh_007d-directive_002c-M32R-1226"></a>The <code>shigh</code> directive is very similar to the <code>high</code>
 directive.  It also computes the value of its expression and places
 the upper 16-bits of the result into the immediate-field of the
@@ -83,7 +83,7 @@ compensate for this the <code>shigh</code> directive pre-biases the upper
 
      <pre class="smallexample">             seth  r0, #shigh(0x12345678) ; compute r0 = 0x12340000
              seth  r0, #shigh(0x00008000) ; compute r0 = 0x00010000
-</pre>
+     </pre>
      <p>In the second example the lower 16-bits are 0x8000.  If these are
 treated as a signed value and sign extended to 32-bits then the value
 becomes 0xffff8000.  If this value is then added to 0x00010000 then
@@ -97,12 +97,12 @@ example:
 
      <pre class="smallexample">             seth  r0, #shigh(0x00008000)
              add3  r0, r0, #low(0x00008000)
-</pre>
+     </pre>
      <p>Produces the correct result in r0, whereas:
 
      <pre class="smallexample">             seth  r0, #shigh(0x00008000)
              or3   r0, r0, #low(0x00008000)
-</pre>
+     </pre>
      <p>Stores 0xffff8000 into r0.
 
      <p>Note - the <code>shigh</code> directive does not know where in the assembly

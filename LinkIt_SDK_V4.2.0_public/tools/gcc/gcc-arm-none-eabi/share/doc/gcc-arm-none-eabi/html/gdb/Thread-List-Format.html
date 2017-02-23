@@ -3,7 +3,7 @@
 <title>Thread List Format - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Protocol.html#Remote-Protocol" title="Remote Protocol">
 <link rel="prev" href="Memory-Map-Format.html#Memory-Map-Format" title="Memory Map Format">
@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Remote-Protocol.html#Remote-Protocol">R
 
 <p><a name="index-thread-list-format-2831"></a>
 To efficiently update the list of threads and their attributes,
-<span class="sc">gdb</span> issues the &lsquo;<samp><span class="samp">qXfer:threads:read</span></samp>&rsquo; packet
+<span class="sc">gdb</span> issues the `<samp><span class="samp">qXfer:threads:read</span></samp>' packet
 (see <a href="qXfer-threads-read.html#qXfer-threads-read">qXfer threads read</a>) and obtains the XML document with
 the following structure:
 
@@ -60,10 +60,10 @@ the following structure:
          &lt;/thread&gt;
      &lt;/threads&gt;
 </pre>
-   <p>Each &lsquo;<samp><span class="samp">thread</span></samp>&rsquo; element must have the &lsquo;<samp><span class="samp">id</span></samp>&rsquo; attribute that
+   <p>Each `<samp><span class="samp">thread</span></samp>' element must have the `<samp><span class="samp">id</span></samp>' attribute that
 identifies the thread (see <a href="thread_002did-syntax.html#thread_002did-syntax">thread-id syntax</a>).  The
-&lsquo;<samp><span class="samp">core</span></samp>&rsquo; attribute, if present, specifies which processor core
-the thread was last executing on.  The content of the of &lsquo;<samp><span class="samp">thread</span></samp>&rsquo;
+`<samp><span class="samp">core</span></samp>' attribute, if present, specifies which processor core
+the thread was last executing on.  The content of the of `<samp><span class="samp">thread</span></samp>'
 element is interpreted as human-readable auxilliary information.
 
    </body></html>

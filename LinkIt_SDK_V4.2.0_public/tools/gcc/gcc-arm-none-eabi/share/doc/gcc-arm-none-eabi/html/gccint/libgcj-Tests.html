@@ -3,7 +3,7 @@
 <title>libgcj Tests - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Testsuites.html#Testsuites" title="Testsuites">
 <link rel="prev" href="C-Tests.html#C-Tests" title="C Tests">
@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Testsuites.html#Testsuites">Testsuites<
 
 <h3 class="section">7.5 The Java library testsuites.</h3>
 
-<p>Runtime tests are executed via &lsquo;<samp><span class="samp">make check</span></samp>&rsquo; in the
+<p>Runtime tests are executed via `<samp><span class="samp">make check</span></samp>' in the
 <samp><var>target</var><span class="file">/libjava/testsuite</span></samp> directory in the build
 tree.  Additional runtime tests can be checked into this testsuite.
 
@@ -63,8 +63,8 @@ Mauve testsuite.  The <a href="http://sourceware.org/mauve/">Mauve Project</a>
 develops tests for the Java Class Libraries.  These tests are run as part
 of libgcj testing by placing the Mauve tree within the libjava testsuite
 sources at <samp><span class="file">libjava/testsuite/libjava.mauve/mauve</span></samp>, or by specifying
-the location of that tree when invoking &lsquo;<samp><span class="samp">make</span></samp>&rsquo;, as in
-&lsquo;<samp><span class="samp">make MAUVEDIR=~/mauve check</span></samp>&rsquo;.
+the location of that tree when invoking `<samp><span class="samp">make</span></samp>', as in
+`<samp><span class="samp">make MAUVEDIR=~/mauve check</span></samp>'.
 
  <p>To detect regressions, a mechanism in <samp><span class="file">mauve.exp</span></samp> compares the
 failures for a test run against the list of expected failures in

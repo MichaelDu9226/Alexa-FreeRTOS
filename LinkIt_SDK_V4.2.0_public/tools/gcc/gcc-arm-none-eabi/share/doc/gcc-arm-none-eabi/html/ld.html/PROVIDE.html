@@ -3,7 +3,7 @@
 <title>PROVIDE - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Assignments.html#Assignments" title="Assignments">
 <link rel="prev" href="HIDDEN.html#HIDDEN" title="HIDDEN">
@@ -51,13 +51,13 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Assignments.html#Assignments">Assignmen
 <p><a name="index-PROVIDE-397"></a>In some cases, it is desirable for a linker script to define a symbol
 only if it is referenced and is not defined by any object included in
 the link.  For example, traditional linkers defined the symbol
-&lsquo;<samp><span class="samp">etext</span></samp>&rsquo;.  However, ANSI C requires that the user be able to use
-&lsquo;<samp><span class="samp">etext</span></samp>&rsquo; as a function name without encountering an error.  The
+`<samp><span class="samp">etext</span></samp>'.  However, ANSI C requires that the user be able to use
+`<samp><span class="samp">etext</span></samp>' as a function name without encountering an error.  The
 <code>PROVIDE</code> keyword may be used to define a symbol, such as
-&lsquo;<samp><span class="samp">etext</span></samp>&rsquo;, only if it is referenced but not defined.  The syntax is
+`<samp><span class="samp">etext</span></samp>', only if it is referenced but not defined.  The syntax is
 <code>PROVIDE(</code><var>symbol</var><code> = </code><var>expression</var><code>)</code>.
 
-   <p>Here is an example of using <code>PROVIDE</code> to define &lsquo;<samp><span class="samp">etext</span></samp>&rsquo;:
+   <p>Here is an example of using <code>PROVIDE</code> to define `<samp><span class="samp">etext</span></samp>':
 <pre class="smallexample">     SECTIONS
      {
        .text :
@@ -68,11 +68,11 @@ the link.  For example, traditional linkers defined the symbol
          }
      }
 </pre>
-   <p>In this example, if the program defines &lsquo;<samp><span class="samp">_etext</span></samp>&rsquo; (with a leading
+   <p>In this example, if the program defines `<samp><span class="samp">_etext</span></samp>' (with a leading
 underscore), the linker will give a multiple definition error.  If, on
-the other hand, the program defines &lsquo;<samp><span class="samp">etext</span></samp>&rsquo; (with no leading
+the other hand, the program defines `<samp><span class="samp">etext</span></samp>' (with no leading
 underscore), the linker will silently use the definition in the program. 
-If the program references &lsquo;<samp><span class="samp">etext</span></samp>&rsquo; but does not define it, the
+If the program references `<samp><span class="samp">etext</span></samp>' but does not define it, the
 linker will use the definition in the linker script.
 
    </body></html>

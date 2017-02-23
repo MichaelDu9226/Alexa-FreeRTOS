@@ -3,7 +3,7 @@
 <title>Ada Tasks and Core Files - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Ada.html#Ada" title="Ada">
 <link rel="prev" href="Ada-Tasks.html#Ada-Tasks" title="Ada Tasks">
@@ -58,7 +58,7 @@ as usual.
    <p>On certain platforms, including Tru64, the debugger needs to perform some
 memory writes in order to provide Ada tasking support.  When inspecting
 a core file, this means that the core file must be opened with read-write
-privileges, using the command &lsquo;<samp><span class="samp">"set write on"</span></samp>&rsquo; (see <a href="Patching.html#Patching">Patching</a>). 
+privileges, using the command `<samp><span class="samp">"set write on"</span></samp>' (see <a href="Patching.html#Patching">Patching</a>). 
 Under these circumstances, you should make a backup copy of the core
 file before inspecting it with <span class="sc">gdb</span>.
 

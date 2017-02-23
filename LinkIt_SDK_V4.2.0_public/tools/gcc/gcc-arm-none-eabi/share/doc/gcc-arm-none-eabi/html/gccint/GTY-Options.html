@@ -3,7 +3,7 @@
 <title>GTY Options - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Type-Information.html#Type-Information" title="Type Information">
 <link rel="next" href="User-GC.html#User-GC" title="User GC">
@@ -83,9 +83,9 @@ the array item currently being marked.
      };
 </pre>
  <p class="noindent">and <code>b</code> is a variable of type <code>struct B</code>.  When marking
-&lsquo;<samp><span class="samp">b.foo[11]</span></samp>&rsquo;, <code>%h</code> would expand to &lsquo;<samp><span class="samp">b.foo[11]</span></samp>&rsquo;,
-<code>%0</code> and <code>%1</code> would both expand to &lsquo;<samp><span class="samp">b</span></samp>&rsquo;, and <code>%a</code>
-would expand to &lsquo;<samp><span class="samp">[11]</span></samp>&rsquo;.
+`<samp><span class="samp">b.foo[11]</span></samp>', <code>%h</code> would expand to `<samp><span class="samp">b.foo[11]</span></samp>',
+<code>%0</code> and <code>%1</code> would both expand to `<samp><span class="samp">b</span></samp>', and <code>%a</code>
+would expand to `<samp><span class="samp">[11]</span></samp>'.
 
  <p>As in ordinary C, adjacent strings will be concatenated; this is
 helpful when you have a complicated expression.
@@ -105,7 +105,7 @@ structure ends in a variable-length array, like this:
             int num_elem;         /* <span class="roman">number of elements</span> */
             rtx GTY ((length ("%h.num_elem"))) elem[1];
           };
-</pre>
+     </pre>
      <p>In this case, the <code>length</code> option is used to override the specified
 array length (which should usually be <code>1</code>).  The parameter of the
 option is a fragment of C code that calculates the length.
@@ -113,10 +113,10 @@ option is a fragment of C code that calculates the length.
      <p>The second case is when a structure or a global variable contains a
 pointer to an array, like this:
      <pre class="smallexample">          struct gimple_omp_for_iter * GTY((length ("%h.collapse"))) iter;
-</pre>
+     </pre>
      <p>In this case, <code>iter</code> has been allocated by writing something like
      <pre class="smallexample">            x-&gt;iter = ggc_alloc_cleared_vec_gimple_omp_for_iter (collapse);
-</pre>
+     </pre>
      <p>and the <code>collapse</code> provides the length of the field.
 
      <p>This second use of <code>length</code> also works on global variables, like:
@@ -158,7 +158,7 @@ constant.
             } GTY ((desc ("BINDING_HAS_LEVEL_P ((tree)&amp;%0)"))) xscope;
             tree value;
           };
-</pre>
+     </pre>
      <p>In this example, the value of BINDING_HAS_LEVEL_P when applied to a
 <code>struct tree_binding *</code> is presumed to be 0 or 1.  If 1, the type
 mechanism will treat the field <code>level</code> as being present and if 0,
@@ -178,10 +178,10 @@ write the definition of <code>htab_t</code> like this:
             void ** GTY ((use_param, ...)) entries;
             ...
           } htab_t;
-</pre>
+     </pre>
      <p>and then declare variables like this:
      <pre class="smallexample">            static htab_t GTY ((param_is (union tree_node))) ict;
-</pre>
+     </pre>
      <p><a name="index-param_0040var_007bn_007d_005fis-4997"></a><a name="index-use_005fparam_0040var_007bn_007d-4998"></a><br><dt><code>param</code><var>n</var><code>_is (</code><var>type</var><code>)</code><dt><code>use_param</code><var>n</var><dd>
 In more complicated cases, the data structure might need to work on
 several different types, which might not necessarily all be pointers. 
@@ -263,7 +263,7 @@ the precompiled header machinery needs to change that ordering, it
 will call the function referenced by the <code>reorder</code> option, before
 changing the pointers in the object that's pointed to by the field the
 option applies to.  The function must take four arguments, with the
-signature &lsquo;<samp><span class="samp">void&nbsp;*,&nbsp;void&nbsp;*,&nbsp;gt_pointer_operator,&nbsp;void&nbsp;*<!-- /@w --></span></samp>&rsquo;. 
+signature `<samp><span class="samp">void&nbsp;*,&nbsp;void&nbsp;*,&nbsp;gt_pointer_operator,&nbsp;void&nbsp;*<!-- /@w --></span></samp>'. 
 The first parameter is a pointer to the structure that contains the
 object being updated, or the object itself if there is no containing
 structure.  The second parameter is a cookie that should be ignored. 
@@ -291,15 +291,15 @@ array lengths in number of elements.
             int len;
             tree GTY((length ("%h.len"))) elts[1];
           };
-</pre>
+     </pre>
      <p>Then the objects of <code>struct sorted_fields_type</code> are allocated in GC
 memory as follows:
      <pre class="smallexample">            field_vec = ggc_alloc_sorted_fields_type (size);
-</pre>
+     </pre>
      <p>If <var>field_vec-&gt;elts</var> stores <var>n</var> elements, then <var>size</var>
 could be calculated as follows:
      <pre class="smallexample">            size_t size = sizeof (struct sorted_fields_type) + n * sizeof (tree);
-</pre>
+     </pre>
      <p><a name="index-atomic-5010"></a><br><dt><code>atomic</code><dd>
 The <code>atomic</code> option can only be used with pointers.  It informs
 the GC machinery that the memory that the pointer points to does not
@@ -327,7 +327,7 @@ the pointer points to does actually contain a pointer.
             int number_of_elements;
             unsigned int * GTY ((atomic)) elements;
           };
-</pre>
+     </pre>
      <p>In this case, <code>elements</code> is a pointer under GC, and the memory it
 points to needs to be allocated using the Garbage Collector, and will
 be freed automatically by the Garbage Collector when it is no longer

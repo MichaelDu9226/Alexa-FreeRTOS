@@ -3,7 +3,7 @@
 <title>Tracepoint Actions - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Set-Tracepoints.html#Set-Tracepoints" title="Set Tracepoints">
 <link rel="prev" href="Trace-State-Variables.html#Trace-State-Variables" title="Trace State Variables">
@@ -63,15 +63,15 @@ far, the only defined actions are <code>collect</code>, <code>teval</code>, and
      <p><code>actions</code> is actually equivalent to <code>commands</code> (see <a href="Break-Commands.html#Break-Commands">Breakpoint Command Lists</a>), except that only the defined
 actions are allowed; any other <span class="sc">gdb</span> command is rejected.
 
-     <p><a name="index-remove-actions-from-a-tracepoint-777"></a>To remove all actions from a tracepoint, type &lsquo;<samp><span class="samp">actions </span><var>num</var></samp>&rsquo;
-and follow it immediately with &lsquo;<samp><span class="samp">end</span></samp>&rsquo;.
+     <p><a name="index-remove-actions-from-a-tracepoint-777"></a>To remove all actions from a tracepoint, type `<samp><span class="samp">actions </span><var>num</var></samp>'
+and follow it immediately with `<samp><span class="samp">end</span></samp>'.
 
      <pre class="smallexample">          (gdb) <b>collect </b><var>data</var> // collect some data
           
           (gdb) <b>while-stepping 5</b> // single-step 5 times, collect data
           
           (gdb) <b>end</b>              // signals the end of actions.
-</pre>
+     </pre>
      <p>In the following example, the action list begins with <code>collect</code>
 commands indicating the things to be collected when the tracepoint is
 hit.  Then, in order to single-step and collect additional data
@@ -90,7 +90,7 @@ list is terminated by an <code>end</code> command.
             &gt; collect $pc, arr[i]
             &gt; end
           end
-</pre>
+     </pre>
      <p><a name="index-collect-_0040r_007b_0028tracepoints_0029_007d-778"></a><br><dt><code>collect</code><span class="roman">[</span><code>/</code><var>mods</var><span class="roman">]</span> <var>expr1</var><code>, </code><var>expr2</var><code>, ...</code><dd>Collect values of the given expressions when the tracepoint is hit. 
 This command accepts a comma-separated list of any valid expressions. 
 In addition to global, static, or local variables, the following
@@ -124,10 +124,10 @@ Here's an example of a UST marker call:
 
           <pre class="smallexample">                const char master_name[] = "$your_name";
                 trace_mark(channel1, marker1, "hello %s", master_name)
-</pre>
+          </pre>
           <p>In this case, collecting <code>$_sdata</code> collects the string
-&lsquo;<samp><span class="samp">hello $yourname</span></samp>&rsquo;.  When analyzing the trace buffer, you can
-inspect &lsquo;<samp><span class="samp">$_sdata</span></samp>&rsquo; like any other variable available to
+`<samp><span class="samp">hello $yourname</span></samp>'.  When analyzing the trace buffer, you can
+inspect `<samp><span class="samp">$_sdata</span></samp>' like any other variable available to
 <span class="sc">gdb</span>. 
 </dl>
 
@@ -141,8 +141,8 @@ particular collecting the contents of the memory being pointed at, up
 to the first zero.  The upper bound is by default the value of the
 <code>print elements</code> variable; if <code>s</code> is followed by a decimal
 number, that is the upper bound instead.  So for instance
-&lsquo;<samp><span class="samp">collect/s25 mystr</span></samp>&rsquo; collects as many as 25 characters at
-&lsquo;<samp><span class="samp">mystr</span></samp>&rsquo;.
+`<samp><span class="samp">collect/s25 mystr</span></samp>' collects as many as 25 characters at
+`<samp><span class="samp">mystr</span></samp>'.
 
      <p>The command <code>info scope</code> (see <a href="Symbols.html#Symbols">info scope</a>) is
 particularly useful for figuring out what data to collect.
@@ -163,7 +163,7 @@ command is followed by the list of what to collect while stepping
             &gt; collect $regs, myglobal
             &gt; end
           &gt;
-</pre>
+     </pre>
      <p class="noindent">Note that <code>$pc</code> is not automatically collected by
 <code>while-stepping</code>; you need to explicitly collect that register if
 you need it.  You may abbreviate <code>while-stepping</code> as <code>ws</code> or

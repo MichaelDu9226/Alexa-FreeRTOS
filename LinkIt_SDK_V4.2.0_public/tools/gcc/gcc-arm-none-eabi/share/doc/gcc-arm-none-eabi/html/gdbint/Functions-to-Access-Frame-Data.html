@@ -3,7 +3,7 @@
 <title>Functions to Access Frame Data - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Frame-Interpretation.html#Frame-Interpretation" title="Frame Interpretation">
 <link rel="prev" href="Functions-and-Variable-to-Analyze-Frames.html#Functions-and-Variable-to-Analyze-Frames" title="Functions and Variable to Analyze Frames">
@@ -51,7 +51,7 @@ stack frame.
 <div class="defun">
 &mdash; Architecture Function: CORE_ADDR <b>unwind_pc</b> (<var>struct gdbarch *gdbarch, struct frame_info *next_frame</var>)<var><a name="index-unwind_005fpc-345"></a></var><br>
 <blockquote>
-        <p>This function is given a pointer to the NEXT stack frame (see <a href="All-About-Stack-Frames.html#All-About-Stack-Frames">All About Stack Frames</a>, for how frames are
+<p>This function is given a pointer to the NEXT stack frame (see <a href="All-About-Stack-Frames.html#All-About-Stack-Frames">All About Stack Frames</a>, for how frames are
 represented) and returns the value of the program counter in the
 PREVIOUS frame (i.e. the frame of the function that called THIS
 one).  This is commonly referred to as the <dfn>return address</dfn>.
@@ -62,13 +62,13 @@ is typically no more than:
      <pre class="smallexample">          ULONGEST pc;
           pc = frame_unwind_register_unsigned (next_frame, <var>ARCH</var>_PC_REGNUM);
           return gdbarch_addr_bits_remove (gdbarch, pc);
-</pre>
+     </pre>
         </blockquote></div>
 
 <div class="defun">
 &mdash; Architecture Function: CORE_ADDR <b>unwind_sp</b> (<var>struct gdbarch *gdbarch, struct frame_info *next_frame</var>)<var><a name="index-unwind_005fsp-346"></a></var><br>
 <blockquote>
-        <p>This function is given a pointer to the NEXT stack frame
+<p>This function is given a pointer to the NEXT stack frame
 (see <a href="All-About-Stack-Frames.html#All-About-Stack-Frames">All About Stack Frames</a> for how
 frames are represented) and returns the value of the stack pointer in
 the PREVIOUS frame (i.e. the frame of the function that called
@@ -80,13 +80,13 @@ is typically no more than:
      <pre class="smallexample">          ULONGEST sp;
           sp = frame_unwind_register_unsigned (next_frame, <var>ARCH</var>_SP_REGNUM);
           return gdbarch_addr_bits_remove (gdbarch, sp);
-</pre>
+     </pre>
         </blockquote></div>
 
 <div class="defun">
 &mdash; Architecture Function: int <b>frame_num_args</b> (<var>struct gdbarch *gdbarch, struct frame_info *this_frame</var>)<var><a name="index-frame_005fnum_005fargs-347"></a></var><br>
 <blockquote>
-        <p>This function is given a pointer to THIS stack frame (see <a href="All-About-Stack-Frames.html#All-About-Stack-Frames">All About Stack Frames</a> for how frames are
+<p>This function is given a pointer to THIS stack frame (see <a href="All-About-Stack-Frames.html#All-About-Stack-Frames">All About Stack Frames</a> for how frames are
 represented), and returns the number of arguments that are being
 passed, or -1 if not known.
 

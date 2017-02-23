@@ -3,7 +3,7 @@
 <title>ARC Directives - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="ARC_002dDependent.html#ARC_002dDependent" title="ARC-Dependent">
 <link rel="prev" href="ARC-Floating-Point.html#ARC-Floating-Point" title="ARC Floating Point">
@@ -74,7 +74,7 @@ register can be operated is and it can be one of:
      <p>For example:
 
      <pre class="smallexample">            .extAuxRegister mulhi,0x12,w
-</pre>
+     </pre>
      <p>This specifies an extension auxiliary register called <em>mulhi</em>
 which is at address 0x12 in the memory space and which is only
 writable.
@@ -88,13 +88,13 @@ specify extra condition codes with any values.  For example:
           
              add.is_busy  r1,r2,r3
              bis_busy     _main
-</pre>
+     </pre>
      <p><a name="index-g_t_0040code_007bextCoreRegister_007d-directive_002c-ARC-602"></a><br><dt><code>.extCoreRegister </code><var>name</var><code>,</code><var>regnum</var><code>,</code><var>mode</var><code>,</code><var>shortcut</var><dd>Specifies an extension core register <var>name</var> for the application. 
 This allows a register <var>name</var> with a valid <var>regnum</var> between 0
 and 60, with the following as valid values for <var>mode</var>
 
           <dl>
-<dt>&lsquo;<samp><em>r</em><span class="samp">   (readonly)</span></samp>&rsquo;<br><dt>&lsquo;<samp><em>w</em><span class="samp">   (write only)</span></samp>&rsquo;<br><dt>&lsquo;<samp><em>r|w</em><span class="samp"> (read or write)</span></samp>&rsquo;<dd></dl>
+<dt>`<samp><em>r</em><span class="samp">   (readonly)</span></samp>'<br><dt>`<samp><em>w</em><span class="samp">   (write only)</span></samp>'<br><dt>`<samp><em>r|w</em><span class="samp"> (read or write)</span></samp>'<dd></dl>
 
      <p>The other parameter gives a description of the register having a
 <var>shortcut</var> in the pipeline.  The valid values are:
@@ -105,7 +105,7 @@ and 60, with the following as valid values for <var>mode</var>
      <p>For example:
 
      <pre class="smallexample">            .extCoreRegister mlo,57,r,can_shortcut
-</pre>
+     </pre>
      <p>This defines an extension core register mlo with the value 57 which
 can shortcut the pipeline.
 
@@ -157,7 +157,7 @@ implied immediate destination operand which does not appear in the
 syntax.  For example, if the source code contains an instruction like:
 
                <pre class="smallexample">                    inst r1,r2
-</pre>
+               </pre>
                <p>it really means that the first argument is an implied immediate (that
 is, the result is discarded).  This is the same as though the source
 code were: inst 0,r1,r2.  You use OP1_IMM_IMPLIED by bitwise ORing it
@@ -170,14 +170,14 @@ with SYNTAX_20P.
 
      <pre class="smallexample">          .extInstruction mp64,0x14,0x0,SUFFIX_COND | SUFFIX_FLAG ,
                           SYNTAX_3OP|OP1_MUST_BE_IMM
-</pre>
+     </pre>
      <p>The above specifies an extension instruction called mp64 which has 3 operands,
 sets the flags, can be used with a condition code, for which the
 first operand is an immediate.  (Equivalent to discarding the result
 of the operation).
 
      <pre class="smallexample">           .extInstruction mul64,0x14,0x00,SUFFIX_COND, SYNTAX_2OP|OP1_IMM_IMPLIED
-</pre>
+     </pre>
      <p>This describes a 2 operand instruction with an implicit first
 immediate operand.  The result of this operation would be discarded.
 

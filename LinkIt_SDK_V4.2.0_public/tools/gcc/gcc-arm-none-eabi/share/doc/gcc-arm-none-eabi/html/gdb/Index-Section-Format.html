@@ -3,7 +3,7 @@
 <title>Index Section Format - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Trace-File-Format.html#Trace-File-Format" title="Trace File Format">
 <link rel="next" href="Copying.html#Copying" title="Copying">
@@ -71,8 +71,8 @@ Version 4 uses a different hashing function from versions 5 and 6.
 Version 6 includes symbols for inlined functions, whereas versions 4
 and 5 do not.  Version 7 adds attributes to the CU indices in the
 symbol table.  Version 8 specifies that symbols from DWARF type units
-(&lsquo;<samp><span class="samp">DW_TAG_type_unit</span></samp>&rsquo;) refer to the type unit's symbol table and not the
-compilation unit (&lsquo;<samp><span class="samp">DW_TAG_comp_unit</span></samp>&rsquo;) using the type.
+(`<samp><span class="samp">DW_TAG_type_unit</span></samp>') refer to the type unit's symbol table and not the
+compilation unit (`<samp><span class="samp">DW_TAG_comp_unit</span></samp>') using the type.
 
           <p><span class="sc">gdb</span> will only read version 4, 5, or 6 indices
 by specifying <code>set use-deprecated-index-sections on</code>. 
@@ -132,7 +132,7 @@ valid index for both a string and a CU vector.
 
      <p>The hash value for a table entry is computed by applying an
 iterative hash function to the symbol's name.  Starting with an
-initial value of <code>r = 0</code>, each (unsigned) character &lsquo;<samp><span class="samp">c</span></samp>&rsquo; in
+initial value of <code>r = 0</code>, each (unsigned) character `<samp><span class="samp">c</span></samp>' in
 the string is incorporated into the hash using the formula depending on the
 index version:
 
@@ -142,11 +142,11 @@ index version:
           <br><dt>Versions 5 to 7<dd>The formula is <code>r = r * 67 + tolower (c) - 113</code>. 
 </dl>
 
-     <p>The terminating &lsquo;<samp><span class="samp">\0</span></samp>&rsquo; is not incorporated into the hash.
+     <p>The terminating `<samp><span class="samp">\0</span></samp>' is not incorporated into the hash.
 
      <p>The step size used in the hash table is computed via
-<code>((hash * 17) &amp; (size - 1)) | 1</code>, where &lsquo;<samp><span class="samp">hash</span></samp>&rsquo; is the hash
-value, and &lsquo;<samp><span class="samp">size</span></samp>&rsquo; is the size of the hash table.  The step size
+<code>((hash * 17) &amp; (size - 1)) | 1</code>, where `<samp><span class="samp">hash</span></samp>' is the hash
+value, and `<samp><span class="samp">size</span></samp>' is the size of the hash table.  The step size
 is used to find the next candidate slot when handling a hash
 collision.
 

@@ -3,7 +3,7 @@
 <title>DEC Alpha Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="Darwin-Options.html#Darwin-Options" title="Darwin Options">
@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
 
 <h4 class="subsection">3.17.10 DEC Alpha Options</h4>
 
-<p>These &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; options are defined for the DEC Alpha implementations:
+<p>These `<samp><span class="samp">-m</span></samp>' options are defined for the DEC Alpha implementations:
 
      <dl>
 <dt><code>-mno-soft-float</code><dt><code>-msoft-float</code><dd><a name="index-mno_002dsoft_002dfloat-1318"></a><a name="index-msoft_002dfloat-1319"></a>Use (do not use) the hardware floating-point instructions for
@@ -108,17 +108,17 @@ Other Alpha compilers call this option <samp><span class="option">-fptm </span><
 The trap mode can be set to one of four values:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">n</span></samp>&rsquo;<dd>This is the default (normal) setting.  The only traps that are enabled
+<dt>`<samp><span class="samp">n</span></samp>'<dd>This is the default (normal) setting.  The only traps that are enabled
 are the ones that cannot be disabled in software (e.g., division by zero
 trap).
 
-          <br><dt>&lsquo;<samp><span class="samp">u</span></samp>&rsquo;<dd>In addition to the traps enabled by &lsquo;<samp><span class="samp">n</span></samp>&rsquo;, underflow traps are enabled
+          <br><dt>`<samp><span class="samp">u</span></samp>'<dd>In addition to the traps enabled by `<samp><span class="samp">n</span></samp>', underflow traps are enabled
 as well.
 
-          <br><dt>&lsquo;<samp><span class="samp">su</span></samp>&rsquo;<dd>Like &lsquo;<samp><span class="samp">u</span></samp>&rsquo;, but the instructions are marked to be safe for software
+          <br><dt>`<samp><span class="samp">su</span></samp>'<dd>Like `<samp><span class="samp">u</span></samp>', but the instructions are marked to be safe for software
 completion (see Alpha architecture manual for details).
 
-          <br><dt>&lsquo;<samp><span class="samp">sui</span></samp>&rsquo;<dd>Like &lsquo;<samp><span class="samp">su</span></samp>&rsquo;, but inexact traps are enabled as well. 
+          <br><dt>`<samp><span class="samp">sui</span></samp>'<dd>Like `<samp><span class="samp">su</span></samp>', but inexact traps are enabled as well. 
 </dl>
 
      <br><dt><code>-mfp-rounding-mode=</code><var>rounding-mode</var><dd><a name="index-mfp_002drounding_002dmode-1325"></a>Selects the IEEE rounding mode.  Other Alpha compilers call this option
@@ -126,19 +126,19 @@ completion (see Alpha architecture manual for details).
 of:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">n</span></samp>&rsquo;<dd>Normal IEEE rounding mode.  Floating-point numbers are rounded towards
+<dt>`<samp><span class="samp">n</span></samp>'<dd>Normal IEEE rounding mode.  Floating-point numbers are rounded towards
 the nearest machine number or towards the even machine number in case
 of a tie.
 
-          <br><dt>&lsquo;<samp><span class="samp">m</span></samp>&rsquo;<dd>Round towards minus infinity.
+          <br><dt>`<samp><span class="samp">m</span></samp>'<dd>Round towards minus infinity.
 
-          <br><dt>&lsquo;<samp><span class="samp">c</span></samp>&rsquo;<dd>Chopped rounding mode.  Floating-point numbers are rounded towards zero.
+          <br><dt>`<samp><span class="samp">c</span></samp>'<dd>Chopped rounding mode.  Floating-point numbers are rounded towards zero.
 
-          <br><dt>&lsquo;<samp><span class="samp">d</span></samp>&rsquo;<dd>Dynamic rounding mode.  A field in the floating-point control register
+          <br><dt>`<samp><span class="samp">d</span></samp>'<dd>Dynamic rounding mode.  A field in the floating-point control register
 (<var>fpcr</var>, see Alpha architecture reference manual) controls the
 rounding mode in effect.  The C library initializes this register for
 rounding towards plus infinity.  Thus, unless your program modifies the
-<var>fpcr</var>, &lsquo;<samp><span class="samp">d</span></samp>&rsquo; corresponds to round towards plus infinity. 
+<var>fpcr</var>, `<samp><span class="samp">d</span></samp>' corresponds to round towards plus infinity. 
 </dl>
 
      <br><dt><code>-mtrap-precision=</code><var>trap-precision</var><dd><a name="index-mtrap_002dprecision-1326"></a>In the Alpha architecture, floating-point traps are imprecise.  This
@@ -150,13 +150,13 @@ Depending on the requirements of an application, different levels of
 precisions can be selected:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">p</span></samp>&rsquo;<dd>Program precision.  This option is the default and means a trap handler
+<dt>`<samp><span class="samp">p</span></samp>'<dd>Program precision.  This option is the default and means a trap handler
 can only identify which program caused a floating-point exception.
 
-          <br><dt>&lsquo;<samp><span class="samp">f</span></samp>&rsquo;<dd>Function precision.  The trap handler can determine the function that
+          <br><dt>`<samp><span class="samp">f</span></samp>'<dd>Function precision.  The trap handler can determine the function that
 caused a floating-point exception.
 
-          <br><dt>&lsquo;<samp><span class="samp">i</span></samp>&rsquo;<dd>Instruction precision.  The trap handler can determine the exact
+          <br><dt>`<samp><span class="samp">i</span></samp>'<dd>Instruction precision.  The trap handler can determine the exact
 instruction that caused a floating-point exception. 
 </dl>
 
@@ -166,7 +166,7 @@ instruction that caused a floating-point exception.
      <br><dt><code>-mieee-conformant</code><dd><a name="index-mieee_002dconformant-1327"></a>This option marks the generated code as IEEE conformant.  You must not
 use this option unless you also specify <samp><span class="option">-mtrap-precision=i</span></samp> and either
 <samp><span class="option">-mfp-trap-mode=su</span></samp> or <samp><span class="option">-mfp-trap-mode=sui</span></samp>.  Its only effect
-is to emit the line &lsquo;<samp><span class="samp">.eflag 48</span></samp>&rsquo; in the function prologue of the
+is to emit the line `<samp><span class="samp">.eflag 48</span></samp>' in the function prologue of the
 generated assembly file.
 
      <br><dt><code>-mbuild-constants</code><dd><a name="index-mbuild_002dconstants-1328"></a>Normally GCC examines a 32- or 64-bit integer constant to
@@ -223,7 +223,7 @@ required for a function call from 4 to 1.
      <p>The default is <samp><span class="option">-mlarge-text</span></samp>.
 
      <br><dt><code>-mcpu=</code><var>cpu_type</var><dd><a name="index-mcpu-1345"></a>Set the instruction set and instruction scheduling parameters for
-machine type <var>cpu_type</var>.  You can specify either the &lsquo;<samp><span class="samp">EV</span></samp>&rsquo;
+machine type <var>cpu_type</var>.  You can specify either the `<samp><span class="samp">EV</span></samp>'
 style name or the corresponding chip number.  GCC supports scheduling
 parameters for the EV4, EV5 and EV6 family of processors and
 chooses the default values for the instruction set from the processor
@@ -233,20 +233,20 @@ to the processor on which the compiler was built.
      <p>Supported values for <var>cpu_type</var> are
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">ev4</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">ev45</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">21064</span></samp>&rsquo;<dd>Schedules as an EV4 and has no instruction set extensions.
+<dt>`<samp><span class="samp">ev4</span></samp>'<dt>`<samp><span class="samp">ev45</span></samp>'<dt>`<samp><span class="samp">21064</span></samp>'<dd>Schedules as an EV4 and has no instruction set extensions.
 
-          <br><dt>&lsquo;<samp><span class="samp">ev5</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">21164</span></samp>&rsquo;<dd>Schedules as an EV5 and has no instruction set extensions.
+          <br><dt>`<samp><span class="samp">ev5</span></samp>'<dt>`<samp><span class="samp">21164</span></samp>'<dd>Schedules as an EV5 and has no instruction set extensions.
 
-          <br><dt>&lsquo;<samp><span class="samp">ev56</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">21164a</span></samp>&rsquo;<dd>Schedules as an EV5 and supports the BWX extension.
+          <br><dt>`<samp><span class="samp">ev56</span></samp>'<dt>`<samp><span class="samp">21164a</span></samp>'<dd>Schedules as an EV5 and supports the BWX extension.
 
-          <br><dt>&lsquo;<samp><span class="samp">pca56</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">21164pc</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">21164PC</span></samp>&rsquo;<dd>Schedules as an EV5 and supports the BWX and MAX extensions.
+          <br><dt>`<samp><span class="samp">pca56</span></samp>'<dt>`<samp><span class="samp">21164pc</span></samp>'<dt>`<samp><span class="samp">21164PC</span></samp>'<dd>Schedules as an EV5 and supports the BWX and MAX extensions.
 
-          <br><dt>&lsquo;<samp><span class="samp">ev6</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">21264</span></samp>&rsquo;<dd>Schedules as an EV6 and supports the BWX, FIX, and MAX extensions.
+          <br><dt>`<samp><span class="samp">ev6</span></samp>'<dt>`<samp><span class="samp">21264</span></samp>'<dd>Schedules as an EV6 and supports the BWX, FIX, and MAX extensions.
 
-          <br><dt>&lsquo;<samp><span class="samp">ev67</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">21264a</span></samp>&rsquo;<dd>Schedules as an EV6 and supports the BWX, CIX, FIX, and MAX extensions. 
+          <br><dt>`<samp><span class="samp">ev67</span></samp>'<dt>`<samp><span class="samp">21264a</span></samp>'<dd>Schedules as an EV6 and supports the BWX, CIX, FIX, and MAX extensions. 
 </dl>
 
-     <p>Native toolchains also support the value &lsquo;<samp><span class="samp">native</span></samp>&rsquo;,
+     <p>Native toolchains also support the value `<samp><span class="samp">native</span></samp>',
 which selects the best architecture option for the host processor. 
 <samp><span class="option">-mcpu=native</span></samp> has no effect if GCC does not recognize
 the processor.
@@ -254,7 +254,7 @@ the processor.
      <br><dt><code>-mtune=</code><var>cpu_type</var><dd><a name="index-mtune-1346"></a>Set only the instruction scheduling parameters for machine type
 <var>cpu_type</var>.  The instruction set is not changed.
 
-     <p>Native toolchains also support the value &lsquo;<samp><span class="samp">native</span></samp>&rsquo;,
+     <p>Native toolchains also support the value `<samp><span class="samp">native</span></samp>',
 which selects the best architecture option for the host processor. 
 <samp><span class="option">-mtune=native</span></samp> has no effect if GCC does not recognize
 the processor.
@@ -267,9 +267,9 @@ and the size of the external cache on the machine.
      <p>Valid options for <var>time</var> are
 
           <dl>
-<dt>&lsquo;<samp><var>number</var></samp>&rsquo;<dd>A decimal number representing clock cycles.
+<dt>`<samp><var>number</var></samp>'<dd>A decimal number representing clock cycles.
 
-          <br><dt>&lsquo;<samp><span class="samp">L1</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">L2</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">L3</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">main</span></samp>&rsquo;<dd>The compiler contains estimates of the number of clock cycles for
+          <br><dt>`<samp><span class="samp">L1</span></samp>'<dt>`<samp><span class="samp">L2</span></samp>'<dt>`<samp><span class="samp">L3</span></samp>'<dt>`<samp><span class="samp">main</span></samp>'<dd>The compiler contains estimates of the number of clock cycles for
 &ldquo;typical&rdquo; EV4 &amp; EV5 hardware for the Level 1, 2 &amp; 3 caches
 (also called Dcache, Scache, and Bcache), as well as to main memory. 
 Note that L3 is only valid for EV5.

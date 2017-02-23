@@ -3,7 +3,7 @@
 <title>ar scripts - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="ar.html#ar" title="ar">
 <link rel="prev" href="ar-cmdline.html#ar-cmdline" title="ar cmdline">
@@ -48,11 +48,11 @@ Up:&nbsp;<a rel="up" accesskey="u" href="ar.html#ar">ar</a>
 
 <pre class="smallexample">     ar -M [ &lt;<var>script</var> ]
 </pre>
-   <p><a name="index-MRI-compatibility_002c-_0040command_007bar_007d-34"></a><a name="index-scripts_002c-_0040command_007bar_007d-35"></a>If you use the single command-line option &lsquo;<samp><span class="samp">-M</span></samp>&rsquo; with <samp><span class="command">ar</span></samp>, you
+   <p><a name="index-MRI-compatibility_002c-_0040command_007bar_007d-34"></a><a name="index-scripts_002c-_0040command_007bar_007d-35"></a>If you use the single command-line option `<samp><span class="samp">-M</span></samp>' with <samp><span class="command">ar</span></samp>, you
 can control its operation with a rudimentary command language.  This
 form of <samp><span class="command">ar</span></samp> operates interactively if standard input is coming
 directly from a terminal.  During interactive use, <samp><span class="command">ar</span></samp> prompts for
-input (the prompt is &lsquo;<samp><span class="samp">AR &gt;</span></samp>&rsquo;), and continues executing even after
+input (the prompt is `<samp><span class="samp">AR &gt;</span></samp>'), and continues executing even after
 errors.  If you redirect standard input to a script file, no prompts are
 issued, and <samp><span class="command">ar</span></samp> abandons execution (with a nonzero exit code)
 on any error.
@@ -74,14 +74,14 @@ line.
 
      <li>empty lines are allowed, and have no effect.
 
-     <li>comments are allowed; text after either of the characters &lsquo;<samp><span class="samp">*</span></samp>&rsquo;
-or &lsquo;<samp><span class="samp">;</span></samp>&rsquo; is ignored.
+     <li>comments are allowed; text after either of the characters `<samp><span class="samp">*</span></samp>'
+or `<samp><span class="samp">;</span></samp>' is ignored.
 
      <li>Whenever you use a list of names as part of the argument to an <samp><span class="command">ar</span></samp>
 command, you can separate the individual names with either commas or
 blanks.  Commas are shown in the explanations below, for clarity.
 
-     <li>&lsquo;<samp><span class="samp">+</span></samp>&rsquo; is used as a line continuation character; if &lsquo;<samp><span class="samp">+</span></samp>&rsquo; appears
+     <li>`<samp><span class="samp">+</span></samp>' is used as a line continuation character; if `<samp><span class="samp">+</span></samp>' appears
 at the end of a line, the text on the following line is considered part
 of the current command. 
 </ul>
@@ -119,15 +119,15 @@ You can overwrite existing archives; similarly, the contents of any
 existing file named <var>archive</var> will not be destroyed until <code>SAVE</code>.
 
      <br><dt><code>DELETE </code><var>module</var><code>, </code><var>module</var><code>, ... </code><var>module</var><dd>Delete each listed <var>module</var> from the current archive; equivalent to
-&lsquo;<samp><span class="samp">ar -d </span><var>archive</var> <var>module</var><span class="samp"> ... </span><var>module</var></samp>&rsquo;.
+`<samp><span class="samp">ar -d </span><var>archive</var> <var>module</var><span class="samp"> ... </span><var>module</var></samp>'.
 
      <p>Requires prior use of <code>OPEN</code> or <code>CREATE</code>.
 
      <br><dt><code>DIRECTORY </code><var>archive</var><code> (</code><var>module</var><code>, ... </code><var>module</var><code>)</code><dt><code>DIRECTORY </code><var>archive</var><code> (</code><var>module</var><code>, ... </code><var>module</var><code>) </code><var>outputfile</var><dd>List each named <var>module</var> present in <var>archive</var>.  The separate
 command <code>VERBOSE</code> specifies the form of the output: when verbose
-output is off, output is like that of &lsquo;<samp><span class="samp">ar -t </span><var>archive</var>
-<var>module</var><span class="samp">...</span></samp>&rsquo;.  When verbose output is on, the listing is like
-&lsquo;<samp><span class="samp">ar -tv </span><var>archive</var> <var>module</var><span class="samp">...</span></samp>&rsquo;.
+output is off, output is like that of `<samp><span class="samp">ar -t </span><var>archive</var>
+<var>module</var><span class="samp">...</span></samp>'.  When verbose output is on, the listing is like
+`<samp><span class="samp">ar -tv </span><var>archive</var> <var>module</var><span class="samp">...</span></samp>'.
 
      <p>Output normally goes to the standard output stream; however, if you
 specify <var>outputfile</var> as a final argument, <samp><span class="command">ar</span></samp> directs the
@@ -139,14 +139,14 @@ changed the current archive since the last <code>SAVE</code> command, those
 changes are lost.
 
      <br><dt><code>EXTRACT </code><var>module</var><code>, </code><var>module</var><code>, ... </code><var>module</var><dd>Extract each named <var>module</var> from the current archive, writing them
-into the current directory as separate files.  Equivalent to &lsquo;<samp><span class="samp">ar -x
-</span><var>archive</var> <var>module</var><span class="samp">...</span></samp>&rsquo;.
+into the current directory as separate files.  Equivalent to `<samp><span class="samp">ar -x
+</span><var>archive</var> <var>module</var><span class="samp">...</span></samp>'.
 
      <p>Requires prior use of <code>OPEN</code> or <code>CREATE</code>.
 
      <br><dt><code>LIST</code><dd>Display full contents of the current archive, in &ldquo;verbose&rdquo; style
-regardless of the state of <code>VERBOSE</code>.  The effect is like &lsquo;<samp><span class="samp">ar
-tv </span><var>archive</var></samp>&rsquo;.  (This single command is a <span class="sc">gnu</span> <samp><span class="command">ar</span></samp>
+regardless of the state of <code>VERBOSE</code>.  The effect is like `<samp><span class="samp">ar
+tv </span><var>archive</var></samp>'.  (This single command is a <span class="sc">gnu</span> <samp><span class="command">ar</span></samp>
 enhancement, rather than present for MRI compatibility.)
 
      <p>Requires prior use of <code>OPEN</code> or <code>CREATE</code>.
@@ -164,7 +164,7 @@ the current archive, must exist.
 
      <br><dt><code>VERBOSE</code><dd>Toggle an internal flag governing the output from <code>DIRECTORY</code>. 
 When the flag is on, <code>DIRECTORY</code> output matches output from
-&lsquo;<samp><span class="samp">ar -tv </span></samp>&rsquo;<small class="dots">...</small>.
+`<samp><span class="samp">ar -tv </span></samp>'<small class="dots">...</small>.
 
      <br><dt><code>SAVE</code><dd>Commit your changes to the current archive, and actually save it as a
 file with the name specified in the last <code>CREATE</code> or <code>OPEN</code>

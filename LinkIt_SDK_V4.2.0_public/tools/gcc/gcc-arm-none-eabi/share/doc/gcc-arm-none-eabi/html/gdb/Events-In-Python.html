@@ -3,7 +3,7 @@
 <title>Events In Python - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Python-API.html#Python-API" title="Python API">
 <link rel="prev" href="Inferiors-In-Python.html#Inferiors-In-Python" title="Inferiors In Python">
@@ -103,7 +103,7 @@ Examples of these events are <code>gdb.BreakpointEvent</code> and
 
      <div class="defun">
 &mdash; Variable: <b>ThreadEvent.inferior_thread</b><var><a name="index-ThreadEvent_002einferior_005fthread-1888"></a></var><br>
-<blockquote> <p>In non-stop mode this attribute will be set to the specific thread which was
+<blockquote><p>In non-stop mode this attribute will be set to the specific thread which was
 involved in the emitted event. Otherwise, it will be set to <code>None</code>. 
 </p></blockquote></div>
 
@@ -117,7 +117,7 @@ inherited attribute refer to <code>gdb.ThreadEvent</code> above.
 
      <div class="defun">
 &mdash; Variable: <b>ExitedEvent.exit_code</b><var><a name="index-ExitedEvent_002eexit_005fcode-1889"></a></var><br>
-<blockquote> <p>An integer representing the exit code, if available, which the inferior
+<blockquote><p>An integer representing the exit code, if available, which the inferior
 has returned.  (The exit code could be unavailable if, for example,
 <span class="sc">gdb</span> detaches from the inferior.) If the exit code is unavailable,
 the attribute does not exist. 
@@ -125,7 +125,7 @@ the attribute does not exist.
 
      <div class="defun">
 &mdash; Variable: <b>ExitedEvent</b><var> inferior<a name="index-ExitedEvent-1890"></a></var><br>
-<blockquote> <p>A reference to the inferior which triggered the <code>exited</code> event. 
+<blockquote><p>A reference to the inferior which triggered the <code>exited</code> event. 
 </p></blockquote></div>
 
      <br><dt><code>events.stop</code><dd>Emits <code>gdb.StopEvent</code> which extends <code>gdb.ThreadEvent</code>.
@@ -142,7 +142,7 @@ signal.  <code>gdb.SignalEvent</code> has the following attributes:
 
      <div class="defun">
 &mdash; Variable: <b>SignalEvent.stop_signal</b><var><a name="index-SignalEvent_002estop_005fsignal-1891"></a></var><br>
-<blockquote> <p>A string representing the signal received by the inferior.  A list of possible
+<blockquote><p>A string representing the signal received by the inferior.  A list of possible
 signal values can be obtained by running the command <code>info signals</code> in
 the <span class="sc">gdb</span> command prompt. 
 </p></blockquote></div>
@@ -154,14 +154,14 @@ been hit, and has the following attributes:
 
      <div class="defun">
 &mdash; Variable: <b>BreakpointEvent.breakpoints</b><var><a name="index-BreakpointEvent_002ebreakpoints-1892"></a></var><br>
-<blockquote> <p>A sequence containing references to all the breakpoints (type
+<blockquote><p>A sequence containing references to all the breakpoints (type
 <code>gdb.Breakpoint</code>) that were hit. 
 See <a href="Breakpoints-In-Python.html#Breakpoints-In-Python">Breakpoints In Python</a>, for details of the <code>gdb.Breakpoint</code> object. 
 </p></blockquote></div>
 
      <div class="defun">
 &mdash; Variable: <b>BreakpointEvent.breakpoint</b><var><a name="index-BreakpointEvent_002ebreakpoint-1893"></a></var><br>
-<blockquote> <p>A reference to the first breakpoint that was hit. 
+<blockquote><p>A reference to the first breakpoint that was hit. 
 This function is maintained for backward compatibility and is now deprecated
 in favor of the <code>gdb.BreakpointEvent.breakpoints</code> attribute. 
 </p></blockquote></div>
@@ -171,7 +171,7 @@ been loaded by <span class="sc">gdb</span>.  <code>gdb.NewObjFileEvent</code> ha
 
      <div class="defun">
 &mdash; Variable: <b>NewObjFileEvent.new_objfile</b><var><a name="index-NewObjFileEvent_002enew_005fobjfile-1894"></a></var><br>
-<blockquote> <p>A reference to the object file (<code>gdb.Objfile</code>) which has been loaded. 
+<blockquote><p>A reference to the object file (<code>gdb.Objfile</code>) which has been loaded. 
 See <a href="Objfiles-In-Python.html#Objfiles-In-Python">Objfiles In Python</a>, for details of the <code>gdb.Objfile</code> object. 
 </p></blockquote></div>
 

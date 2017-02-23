@@ -3,7 +3,7 @@
 <title>Files - The GNU C Preprocessor Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Preprocessor Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Guard-Macros.html#Guard-Macros" title="Guard Macros">
 <link rel="next" href="Concept-Index.html#Concept-Index" title="Concept Index">
@@ -82,7 +82,7 @@ directory on a per-file basis is handled by the function
    <p>Note that a header included with a directory component, such as
 <code>#include "mydir/foo.h"</code> and opened as
 <samp><span class="file">/usr/local/include/mydir/foo.h</span></samp>, will have the complete path minus
-the basename &lsquo;<samp><span class="samp">foo.h</span></samp>&rsquo; as the current directory.
+the basename `<samp><span class="samp">foo.h</span></samp>' as the current directory.
 
    <p>Enough information is stored in the splay tree that CPP can immediately
 tell whether it can skip the header file because of the multiple include
@@ -93,7 +93,7 @@ is with the obsolete <code>#import</code> directive.
    <p>For the benefit of MS-DOS filesystems with an 8.3 filename limitation,
 CPP offers the ability to treat various include file names as aliases
 for the real header files with shorter names.  The map from one to the
-other is found in a special file called &lsquo;<samp><span class="samp">header.gcc</span></samp>&rsquo;, stored in the
+other is found in a special file called `<samp><span class="samp">header.gcc</span></samp>', stored in the
 command line (or system) include directories to which the mapping
 applies.  This may be higher up the directory tree than the full path to
 the file minus the base name.

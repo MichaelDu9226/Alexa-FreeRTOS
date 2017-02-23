@@ -3,7 +3,7 @@
 <title>Range Checking - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Checks.html#Checks" title="Checks">
 <link rel="prev" href="Type-Checking.html#Type-Checking" title="Type Checking">
@@ -63,7 +63,7 @@ error.  In many implementations of C, mathematical overflow causes the
 result to &ldquo;wrap around&rdquo; to lower values&mdash;for example, if <var>m</var> is
 the largest integer value, and <var>s</var> is the smallest, then
 
-<pre class="smallexample">     <var>m</var> + 1  <var>s</var>
+<pre class="smallexample">     <var>m</var> + 1 =&gt; <var>s</var>
 </pre>
    <p>This, too, is specific to individual languages, and in some cases
 specific to individual compilers or machines.  See <a href="Supported-Languages.html#Supported-Languages">Supported Languages</a>, for further details on specific languages.

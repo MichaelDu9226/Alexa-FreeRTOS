@@ -3,7 +3,7 @@
 <title>AArch64 Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="next" href="Adapteva-Epiphany-Options.html#Adapteva-Epiphany-Options" title="Adapteva Epiphany Options">
@@ -57,17 +57,17 @@ These options are defined for AArch64 implementations:
 
      <dl>
 <dt><code>-mbig-endian</code><dd><a name="index-mbig_002dendian-1083"></a>Generate big-endian code.  This is the default when GCC is configured for an
-&lsquo;<samp><span class="samp">aarch64_be-*-*</span></samp>&rsquo; target.
+`<samp><span class="samp">aarch64_be-*-*</span></samp>' target.
 
      <br><dt><code>-mgeneral-regs-only</code><dd><a name="index-mgeneral_002dregs_002donly-1084"></a>Generate code which uses only the general registers.
 
      <br><dt><code>-mlittle-endian</code><dd><a name="index-mlittle_002dendian-1085"></a>Generate little-endian code.  This is the default when GCC is configured for an
-&lsquo;<samp><span class="samp">aarch64-*-*</span></samp>&rsquo; but not an &lsquo;<samp><span class="samp">aarch64_be-*-*</span></samp>&rsquo; target.
+`<samp><span class="samp">aarch64-*-*</span></samp>' but not an `<samp><span class="samp">aarch64_be-*-*</span></samp>' target.
 
      <br><dt><code>-mcmodel=tiny</code><dd><a name="index-mcmodel_003dtiny-1086"></a>Generate code for the tiny code model.  The program and its statically defined
 symbols must be within 1GB of each other.  Pointers are 64 bits.  Programs can
 be statically or dynamically linked.  This model is not fully implemented and
-mostly treated as &lsquo;<samp><span class="samp">small</span></samp>&rsquo;.
+mostly treated as `<samp><span class="samp">small</span></samp>'.
 
      <br><dt><code>-mcmodel=small</code><dd><a name="index-mcmodel_003dsmall-1087"></a>Generate code for the small code model.  The program and its statically defined
 symbols must be within 4GB of each other.  Pointers are 64 bits.  Programs can
@@ -91,7 +91,7 @@ of TLS variables.
      <br><dt><code>-march=</code><var>name</var><dd><a name="index-march-1094"></a>Specify the name of the target architecture, optionally suffixed by one or
 more feature modifiers.  This option has the form
 <samp><span class="option">-march=</span><var>arch</var><span class="option">{+[no]</span><var>feature</var><span class="option">}*</span></samp>, where the
-only value for <var>arch</var> is &lsquo;<samp><span class="samp">armv8-a</span></samp>&rsquo;.  The possible values for
+only value for <var>arch</var> is `<samp><span class="samp">armv8-a</span></samp>'.  The possible values for
 <var>feature</var> are documented in the sub-section below.
 
      <p>Where conflicting feature modifiers are specified, the right-most feature is
@@ -104,7 +104,7 @@ instead of the <samp><span class="option">-mcpu=</span></samp> option.
      <br><dt><code>-mcpu=</code><var>name</var><dd><a name="index-mcpu-1095"></a>Specify the name of the target processor, optionally suffixed by one or more
 feature modifiers.  This option has the form
 <samp><span class="option">-mcpu=</span><var>cpu</var><span class="option">{+[no]</span><var>feature</var><span class="option">}*</span></samp>, where the
-possible values for <var>cpu</var> are &lsquo;<samp><span class="samp">generic</span></samp>&rsquo;, &lsquo;<samp><span class="samp">large</span></samp>&rsquo;.  The
+possible values for <var>cpu</var> are `<samp><span class="samp">generic</span></samp>', `<samp><span class="samp">large</span></samp>'.  The
 possible values for <var>feature</var> are documented in the sub-section
 below.
 
@@ -128,9 +128,9 @@ modifiers.
 the following:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">crypto</span></samp>&rsquo;<dd>Enable Crypto extension.  This implies Advanced SIMD is enabled. 
-<br><dt>&lsquo;<samp><span class="samp">fp</span></samp>&rsquo;<dd>Enable floating-point instructions. 
-<br><dt>&lsquo;<samp><span class="samp">simd</span></samp>&rsquo;<dd>Enable Advanced SIMD instructions.  This implies floating-point instructions
+<dt>`<samp><span class="samp">crypto</span></samp>'<dd>Enable Crypto extension.  This implies Advanced SIMD is enabled. 
+<br><dt>`<samp><span class="samp">fp</span></samp>'<dd>Enable floating-point instructions. 
+<br><dt>`<samp><span class="samp">simd</span></samp>'<dd>Enable Advanced SIMD instructions.  This implies floating-point instructions
 are enabled.  This is the default for all current possible values for options
 <samp><span class="option">-march</span></samp> and <samp><span class="option">-mcpu=</span></samp>. 
 </dl>

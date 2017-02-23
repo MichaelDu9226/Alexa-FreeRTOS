@@ -3,7 +3,7 @@
 <title>Selectors - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Test-Directives.html#Test-Directives" title="Test Directives">
 <link rel="prev" href="Directives.html#Directives" title="Directives">
@@ -61,20 +61,20 @@ on particular targets.
  <p>A selector is:
      <ul>
 <li>one or more target triplets, possibly including wildcard characters;
-use &lsquo;<samp><span class="samp">*-*-*</span></samp>&rsquo; to match any target
+use `<samp><span class="samp">*-*-*</span></samp>' to match any target
 <li>a single effective-target keyword (see <a href="Effective_002dTarget-Keywords.html#Effective_002dTarget-Keywords">Effective-Target Keywords</a>)
 <li>a logical expression
 </ul>
 
  <p>Depending on the context, the selector specifies whether a test is
 skipped and reported as unsupported or is expected to fail.  A context
-that allows either &lsquo;<samp><span class="samp">target</span></samp>&rsquo; or &lsquo;<samp><span class="samp">xfail</span></samp>&rsquo; also allows
-&lsquo;<samp><span class="samp">{ target </span><var>selector1</var><span class="samp"> xfail </span><var>selector2</var><span class="samp"> }</span></samp>&rsquo;
+that allows either `<samp><span class="samp">target</span></samp>' or `<samp><span class="samp">xfail</span></samp>' also allows
+`<samp><span class="samp">{ target </span><var>selector1</var><span class="samp"> xfail </span><var>selector2</var><span class="samp"> }</span></samp>'
 to skip the test for targets that don't match <var>selector1</var> and the
 test to fail for targets that match <var>selector2</var>.
 
  <p>A selector expression appears within curly braces and uses a single
-logical operator: one of &lsquo;<samp><span class="samp">!</span></samp>&rsquo;, &lsquo;<samp><span class="samp">&amp;&amp;</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">||</span></samp>&rsquo;.  An
+logical operator: one of `<samp><span class="samp">!</span></samp>', `<samp><span class="samp">&amp;&amp;</span></samp>', or `<samp><span class="samp">||</span></samp>'.  An
 operand is another selector expression, an effective-target keyword,
 a single target triplet, or a list of target triplets within quotes or
 curly braces.  For example:

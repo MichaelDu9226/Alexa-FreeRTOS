@@ -3,7 +3,7 @@
 <title>M68HC11-Directives - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="M68HC11_002dDependent.html#M68HC11_002dDependent" title="M68HC11-Dependent">
 <link rel="prev" href="M68HC11_002dModifiers.html#M68HC11_002dModifiers" title="M68HC11-Modifiers">
@@ -55,17 +55,17 @@ The 68HC11 and 68HC12 version of <code>as</code> have the following
 specific assembler directives:
 
      <dl>
-<dt><code>.relax</code><dd><a name="index-assembler-directive-_002erelax_002c-M68HC11-1330"></a><a name="index-M68HC11-assembler-directive-_002erelax-1331"></a>The relax directive is used by the &lsquo;<samp><span class="samp">GNU Compiler</span></samp>&rsquo; to emit a specific
+<dt><code>.relax</code><dd><a name="index-assembler-directive-_002erelax_002c-M68HC11-1330"></a><a name="index-M68HC11-assembler-directive-_002erelax-1331"></a>The relax directive is used by the `<samp><span class="samp">GNU Compiler</span></samp>' to emit a specific
 relocation to mark a group of instructions for linker relaxation. 
 The sequence of instructions within the group must be known to the linker
 so that relaxation can be performed.
 
-     <br><dt><code>.mode [mshort|mlong|mshort-double|mlong-double]</code><dd><a name="index-assembler-directive-_002emode_002c-M68HC11-1332"></a><a name="index-M68HC11-assembler-directive-_002emode-1333"></a>This directive specifies the ABI.  It overrides the &lsquo;<samp><span class="samp">-mshort</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">-mlong</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-mshort-double</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-mlong-double</span></samp>&rsquo; options.
+     <br><dt><code>.mode [mshort|mlong|mshort-double|mlong-double]</code><dd><a name="index-assembler-directive-_002emode_002c-M68HC11-1332"></a><a name="index-M68HC11-assembler-directive-_002emode-1333"></a>This directive specifies the ABI.  It overrides the `<samp><span class="samp">-mshort</span></samp>',
+`<samp><span class="samp">-mlong</span></samp>', `<samp><span class="samp">-mshort-double</span></samp>' and `<samp><span class="samp">-mlong-double</span></samp>' options.
 
-     <br><dt><code>.far </code><var>symbol</var><dd><a name="index-assembler-directive-_002efar_002c-M68HC11-1334"></a><a name="index-M68HC11-assembler-directive-_002efar-1335"></a>This directive marks the symbol as a &lsquo;<samp><span class="samp">far</span></samp>&rsquo; symbol meaning that it
-uses a &lsquo;<samp><span class="samp">call/rtc</span></samp>&rsquo; calling convention as opposed to &lsquo;<samp><span class="samp">jsr/rts</span></samp>&rsquo;. 
-During a final link, the linker will identify references to the &lsquo;<samp><span class="samp">far</span></samp>&rsquo;
+     <br><dt><code>.far </code><var>symbol</var><dd><a name="index-assembler-directive-_002efar_002c-M68HC11-1334"></a><a name="index-M68HC11-assembler-directive-_002efar-1335"></a>This directive marks the symbol as a `<samp><span class="samp">far</span></samp>' symbol meaning that it
+uses a `<samp><span class="samp">call/rtc</span></samp>' calling convention as opposed to `<samp><span class="samp">jsr/rts</span></samp>'. 
+During a final link, the linker will identify references to the `<samp><span class="samp">far</span></samp>'
 symbol and will verify the proper calling convention.
 
      <br><dt><code>.interrupt </code><var>symbol</var><dd><a name="index-assembler-directive-_002einterrupt_002c-M68HC11-1336"></a><a name="index-M68HC11-assembler-directive-_002einterrupt-1337"></a>This directive marks the symbol as an interrupt entry point. 
@@ -73,8 +73,8 @@ This information is then used by the debugger to correctly unwind the
 frame across interrupts.
 
      <br><dt><code>.xrefb </code><var>symbol</var><dd><a name="index-assembler-directive-_002exrefb_002c-M68HC11-1338"></a><a name="index-M68HC11-assembler-directive-_002exrefb-1339"></a>This directive is defined for compatibility with the
-&lsquo;<samp><span class="samp">Specification for Motorola 8 and 16-Bit Assembly Language Input
-Standard</span></samp>&rsquo; and is ignored.
+`<samp><span class="samp">Specification for Motorola 8 and 16-Bit Assembly Language Input
+Standard</span></samp>' and is ignored.
 
    </dl>
 

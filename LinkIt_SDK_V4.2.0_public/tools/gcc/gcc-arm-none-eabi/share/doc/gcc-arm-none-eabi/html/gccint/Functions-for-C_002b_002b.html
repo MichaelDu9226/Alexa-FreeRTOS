@@ -3,7 +3,7 @@
 <title>Functions for C++ - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-and-C_002b_002b-Trees.html#C-and-C_002b_002b-Trees" title="C and C++ Trees">
 <link rel="prev" href="Classes.html#Classes" title="Classes">
@@ -60,7 +60,7 @@ A function is represented by a <code>FUNCTION_DECL</code> node.  A set of
 overloaded functions is sometimes represented by an <code>OVERLOAD</code> node.
 
  <p>An <code>OVERLOAD</code> node is not a declaration, so none of the
-&lsquo;<samp><span class="samp">DECL_</span></samp>&rsquo; macros should be used on an <code>OVERLOAD</code>.  An
+`<samp><span class="samp">DECL_</span></samp>' macros should be used on an <code>OVERLOAD</code>.  An
 <code>OVERLOAD</code> node is similar to a <code>TREE_LIST</code>.  Use
 <code>OVL_CURRENT</code> to get the function associated with an
 <code>OVERLOAD</code> node; use <code>OVL_NEXT</code> to get the next
@@ -166,7 +166,7 @@ calculation is given by the following pseudo-code:
      <pre class="smallexample">          this += THUNK_DELTA
           if (THUNK_VCALL_OFFSET)
             this += (*((ptrdiff_t **) this))[THUNK_VCALL_OFFSET]
-</pre>
+     </pre>
      <p>Finally, the thunk should jump to the location given
 by <code>DECL_INITIAL</code>; this will always be an expression for the
 address of a function.
@@ -195,5 +195,5 @@ is of the form `<code>()</code>'.
 <!--  -->
 <!-- Function Bodies -->
 <!--  -->
- </body></html>
+</body></html>
 

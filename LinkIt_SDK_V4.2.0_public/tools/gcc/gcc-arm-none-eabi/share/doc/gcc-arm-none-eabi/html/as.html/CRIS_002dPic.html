@@ -3,7 +3,7 @@
 <title>CRIS-Pic - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="CRIS_002dSyntax.html#CRIS_002dSyntax" title="CRIS-Syntax">
 <link rel="prev" href="CRIS_002dChars.html#CRIS_002dChars" title="CRIS-Chars">
@@ -64,7 +64,7 @@ suffix modifies the value of the symbol, into for example an
 index into the global offset table where the real symbol value
 is entered, or a PC-relative value, or a value relative to the
 start of the global offset table.  All symbol suffixes start
-with the character &lsquo;<samp><span class="samp">:</span></samp>&rsquo; (omitted in the list below).  Every
+with the character `<samp><span class="samp">:</span></samp>' (omitted in the list below).  Every
 symbol use in code or a read-only section must therefore have a
 PIC suffix to enable a useful shared library to be created. 
 Usually, these constructs must not be used with an additive
@@ -78,13 +78,13 @@ Attaching this suffix to a symbol in an instruction causes the
 symbol to be entered into the global offset table.  The value is
 a 32-bit index for that symbol into the global offset table. 
 The name of the corresponding relocation is
-&lsquo;<samp><span class="samp">R_CRIS_32_GOT</span></samp>&rsquo;.  Example: <code>move.d
+`<samp><span class="samp">R_CRIS_32_GOT</span></samp>'.  Example: <code>move.d
 [$r0+extsym:GOT],$r9</code>
 
      <br><dt><code>GOT16</code><dd>
-Same as for &lsquo;<samp><span class="samp">GOT</span></samp>&rsquo;, but the value is a 16-bit index into the
+Same as for `<samp><span class="samp">GOT</span></samp>', but the value is a 16-bit index into the
 global offset table.  The corresponding relocation is
-&lsquo;<samp><span class="samp">R_CRIS_16_GOT</span></samp>&rsquo;.  Example: <code>move.d
+`<samp><span class="samp">R_CRIS_16_GOT</span></samp>'.  Example: <code>move.d
 [$r0+asymbol:GOT16],$r10</code>
 
      <br><dt><code>PLT</code><dd>
@@ -98,36 +98,36 @@ symbol resolver to be called to look up and set the value of the
 symbol the first time the function is called (at latest;
 depending environment variables).  It is only safe to leave the
 symbol unresolved this way if all references are function calls. 
-The name of the relocation is &lsquo;<samp><span class="samp">R_CRIS_32_PLT_PCREL</span></samp>&rsquo;. 
+The name of the relocation is `<samp><span class="samp">R_CRIS_32_PLT_PCREL</span></samp>'. 
 Example: <code>add.d fnname:PLT,$pc</code>
 
      <br><dt><code>PLTG</code><dd>
 Like PLT, but the value is relative to the beginning of the
 global offset table.  The relocation is
-&lsquo;<samp><span class="samp">R_CRIS_32_PLT_GOTREL</span></samp>&rsquo;.  Example: <code>move.d
+`<samp><span class="samp">R_CRIS_32_PLT_GOTREL</span></samp>'.  Example: <code>move.d
 fnname:PLTG,$r3</code>
 
      <br><dt><code>GOTPLT</code><dd>
-Similar to &lsquo;<samp><span class="samp">PLT</span></samp>&rsquo;, but the value of the symbol is a 32-bit
+Similar to `<samp><span class="samp">PLT</span></samp>', but the value of the symbol is a 32-bit
 index into the global offset table.  This is somewhat of a mix
-between the effect of the &lsquo;<samp><span class="samp">GOT</span></samp>&rsquo; and the &lsquo;<samp><span class="samp">PLT</span></samp>&rsquo; suffix;
-the difference to &lsquo;<samp><span class="samp">GOT</span></samp>&rsquo; is that there will be a procedure
+between the effect of the `<samp><span class="samp">GOT</span></samp>' and the `<samp><span class="samp">PLT</span></samp>' suffix;
+the difference to `<samp><span class="samp">GOT</span></samp>' is that there will be a procedure
 linkage table entry created, and that the symbol is assumed to
 be a function entry and will be resolved by the run-time
-resolver as with &lsquo;<samp><span class="samp">PLT</span></samp>&rsquo;.  The relocation is
-&lsquo;<samp><span class="samp">R_CRIS_32_GOTPLT</span></samp>&rsquo;.  Example: <code>jsr
+resolver as with `<samp><span class="samp">PLT</span></samp>'.  The relocation is
+`<samp><span class="samp">R_CRIS_32_GOTPLT</span></samp>'.  Example: <code>jsr
 [$r0+fnname:GOTPLT]</code>
 
      <br><dt><code>GOTPLT16</code><dd>
-A variant of &lsquo;<samp><span class="samp">GOTPLT</span></samp>&rsquo; giving a 16-bit value.  Its
-relocation name is &lsquo;<samp><span class="samp">R_CRIS_16_GOTPLT</span></samp>&rsquo;.  Example: <code>jsr
+A variant of `<samp><span class="samp">GOTPLT</span></samp>' giving a 16-bit value.  Its
+relocation name is `<samp><span class="samp">R_CRIS_16_GOTPLT</span></samp>'.  Example: <code>jsr
 [$r0+fnname:GOTPLT16]</code>
 
      <br><dt><code>GOTOFF</code><dd>
 This suffix must only be attached to a local symbol, but may be
 used in an expression adding an offset.  The value is the
 address of the symbol relative to the start of the global offset
-table.  The relocation name is &lsquo;<samp><span class="samp">R_CRIS_32_GOTREL</span></samp>&rsquo;. 
+table.  The relocation name is `<samp><span class="samp">R_CRIS_32_GOTREL</span></samp>'. 
 Example: <code>move.d [$r0+localsym:GOTOFF],r3</code>
 </dl>
 

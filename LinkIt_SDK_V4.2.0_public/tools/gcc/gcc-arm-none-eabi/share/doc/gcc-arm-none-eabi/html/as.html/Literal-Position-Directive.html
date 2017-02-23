@@ -3,7 +3,7 @@
 <title>Literal Position Directive - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Xtensa-Directives.html#Xtensa-Directives" title="Xtensa Directives">
 <link rel="prev" href="Literal-Directive.html#Literal-Directive" title="Literal Directive">
@@ -50,14 +50,14 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Xtensa-Directives.html#Xtensa-Directive
 <h5 class="subsubsection">9.50.5.5 literal_position</h5>
 
 <p><a name="index-g_t_0040code_007bliteral_005fposition_007d-directive-2327"></a>
-When using &lsquo;<samp><span class="samp">--text-section-literals</span></samp>&rsquo; to place literals inline
+When using `<samp><span class="samp">--text-section-literals</span></samp>' to place literals inline
 in the section being assembled, the <code>.literal_position</code> directive
 can be used to mark a potential location for a literal pool.
 
 <pre class="smallexample">         .literal_position
 </pre>
    <p>The <code>.literal_position</code> directive is ignored when the
-&lsquo;<samp><span class="samp">--text-section-literals</span></samp>&rsquo; option is not used or when
+`<samp><span class="samp">--text-section-literals</span></samp>' option is not used or when
 <code>L32R</code> instructions use the absolute addressing mode.
 
    <p>The assembler will automatically place text section literal pools
@@ -75,7 +75,7 @@ vector must be explicitly positioned in the middle of the vector (before
 any uses of the literals, due to the negative offsets used by
 PC-relative <code>L32R</code> instructions).  The <code>.literal_position</code>
 directive can be used to do this.  In the following code, the literal
-for &lsquo;<samp><span class="samp">M</span></samp>&rsquo; will automatically be aligned correctly and is placed after
+for `<samp><span class="samp">M</span></samp>' will automatically be aligned correctly and is placed after
 the unconditional jump.
 
 <pre class="smallexample">         .global M

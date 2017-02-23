@@ -3,7 +3,7 @@
 <title>strings - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="size.html#size" title="size">
 <link rel="next" href="strip.html#strip" title="strip">
@@ -61,7 +61,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
      <!-- man end -->
 </pre>
    <!-- man begin DESCRIPTION strings -->
-   <p>For each <var>file</var> given, <span class="sc">gnu</span> <samp><span class="command">strings</span></samp> prints the printable
+<p>For each <var>file</var> given, <span class="sc">gnu</span> <samp><span class="command">strings</span></samp> prints the printable
 character sequences that are at least 4 characters long (or the number
 given with the options below) and are followed by an unprintable
 character.  By default, it only prints the strings from the initialized
@@ -73,7 +73,7 @@ files.
 
 <!-- man end -->
 <!-- man begin OPTIONS strings -->
-     <dl>
+<dl>
 <dt><samp><span class="env">-a</span></samp><dt><samp><span class="env">--all</span></samp><dt><samp><span class="env">-</span></samp><dd>Do not scan only the initialized and loaded sections of object files;
 scan the whole files.
 
@@ -84,21 +84,21 @@ scan the whole files.
      <br><dt><samp><span class="env">-</span><var>min-len</var></samp><dt><samp><span class="env">-n </span><var>min-len</var></samp><dt><samp><span class="env">--bytes=</span><var>min-len</var></samp><dd>Print sequences of characters that are at least <var>min-len</var> characters
 long, instead of the default 4.
 
-     <br><dt><samp><span class="env">-o</span></samp><dd>Like &lsquo;<samp><span class="samp">-t o</span></samp>&rsquo;.  Some other versions of <samp><span class="command">strings</span></samp> have <samp><span class="option">-o</span></samp>
-act like &lsquo;<samp><span class="samp">-t d</span></samp>&rsquo; instead.  Since we can not be compatible with both
+     <br><dt><samp><span class="env">-o</span></samp><dd>Like `<samp><span class="samp">-t o</span></samp>'.  Some other versions of <samp><span class="command">strings</span></samp> have <samp><span class="option">-o</span></samp>
+act like `<samp><span class="samp">-t d</span></samp>' instead.  Since we can not be compatible with both
 ways, we simply chose one.
 
      <br><dt><samp><span class="env">-t </span><var>radix</var></samp><dt><samp><span class="env">--radix=</span><var>radix</var></samp><dd>Print the offset within the file before each string.  The single
-character argument specifies the radix of the offset&mdash;&lsquo;<samp><span class="samp">o</span></samp>&rsquo; for
-octal, &lsquo;<samp><span class="samp">x</span></samp>&rsquo; for hexadecimal, or &lsquo;<samp><span class="samp">d</span></samp>&rsquo; for decimal.
+character argument specifies the radix of the offset&mdash;`<samp><span class="samp">o</span></samp>' for
+octal, `<samp><span class="samp">x</span></samp>' for hexadecimal, or `<samp><span class="samp">d</span></samp>' for decimal.
 
      <br><dt><samp><span class="env">-e </span><var>encoding</var></samp><dt><samp><span class="env">--encoding=</span><var>encoding</var></samp><dd>Select the character encoding of the strings that are to be found. 
-Possible values for <var>encoding</var> are: &lsquo;<samp><span class="samp">s</span></samp>&rsquo; = single-7-bit-byte
-characters (ASCII, ISO 8859, etc., default), &lsquo;<samp><span class="samp">S</span></samp>&rsquo; =
-single-8-bit-byte characters, &lsquo;<samp><span class="samp">b</span></samp>&rsquo; = 16-bit bigendian, &lsquo;<samp><span class="samp">l</span></samp>&rsquo; =
-16-bit littleendian, &lsquo;<samp><span class="samp">B</span></samp>&rsquo; = 32-bit bigendian, &lsquo;<samp><span class="samp">L</span></samp>&rsquo; = 32-bit
-littleendian.  Useful for finding wide character strings. (&lsquo;<samp><span class="samp">l</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">b</span></samp>&rsquo; apply to, for example, Unicode UTF-16/UCS-2 encodings).
+Possible values for <var>encoding</var> are: `<samp><span class="samp">s</span></samp>' = single-7-bit-byte
+characters (ASCII, ISO 8859, etc., default), `<samp><span class="samp">S</span></samp>' =
+single-8-bit-byte characters, `<samp><span class="samp">b</span></samp>' = 16-bit bigendian, `<samp><span class="samp">l</span></samp>' =
+16-bit littleendian, `<samp><span class="samp">B</span></samp>' = 32-bit bigendian, `<samp><span class="samp">L</span></samp>' = 32-bit
+littleendian.  Useful for finding wide character strings. (`<samp><span class="samp">l</span></samp>'
+and `<samp><span class="samp">b</span></samp>' apply to, for example, Unicode UTF-16/UCS-2 encodings).
 
      <br><dt><samp><span class="env">-T </span><var>bfdname</var></samp><dt><samp><span class="env">--target=</span><var>bfdname</var></samp><dd><a name="index-object-code-format-127"></a>Specify an object code format other than your system's default format. 
 See <a href="Target-Selection.html#Target-Selection">Target Selection</a>, for more information.
@@ -107,5 +107,5 @@ See <a href="Target-Selection.html#Target-Selection">Target Selection</a>, for m
 </dl>
 
 <!-- man end -->
-   </body></html>
+</body></html>
 

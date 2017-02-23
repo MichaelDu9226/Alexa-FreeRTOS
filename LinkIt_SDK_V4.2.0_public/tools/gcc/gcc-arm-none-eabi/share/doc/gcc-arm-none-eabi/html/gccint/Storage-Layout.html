@@ -3,7 +3,7 @@
 <title>Storage Layout - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Per_002dFunction-Data.html#Per_002dFunction-Data" title="Per-Function Data">
@@ -298,10 +298,10 @@ to specify the maximum alignment of a variable on stack.
       <p>If not defined, the default value is <code>STACK_BOUNDARY</code>.
 
      <!-- FIXME: The default should be @code{PREFERRED_STACK_BOUNDARY}. -->
-     <!-- But the fix for PR 32893 indicates that we can only guarantee -->
-     <!-- maximum stack alignment on stack up to @code{STACK_BOUNDARY}, not -->
-     <!-- @code{PREFERRED_STACK_BOUNDARY}, if stack alignment isn't supported. -->
-      </blockquote></div>
+<!-- But the fix for PR 32893 indicates that we can only guarantee -->
+<!-- maximum stack alignment on stack up to @code{STACK_BOUNDARY}, not -->
+<!-- @code{PREFERRED_STACK_BOUNDARY}, if stack alignment isn't supported. -->
+</blockquote></div>
 
 <div class="defun">
 &mdash; Macro: <b>MAX_OFILE_ALIGNMENT</b><var><a name="index-MAX_005fOFILE_005fALIGNMENT-3888"></a></var><br>
@@ -312,9 +312,9 @@ the default value is <code>BIGGEST_ALIGNMENT</code>.
 
       <p>On systems that use ELF, the default (in <samp><span class="file">config/elfos.h</span></samp>) is
 the largest supported 32-bit ELF section alignment representable on
-a 32-bit host e.g. &lsquo;<samp><span class="samp">(((unsigned HOST_WIDEST_INT) 1 &lt;&lt; 28) * 8)</span></samp>&rsquo;. 
+a 32-bit host e.g. `<samp><span class="samp">(((unsigned HOST_WIDEST_INT) 1 &lt;&lt; 28) * 8)</span></samp>'. 
 On 32-bit ELF the largest supported section alignment in bits is
-&lsquo;<samp><span class="samp">(0x80000000 * 8)</span></samp>&rsquo;, but this is not representable on 32-bit hosts. 
+`<samp><span class="samp">(0x80000000 * 8)</span></samp>', but this is not representable on 32-bit hosts. 
 </p></blockquote></div>
 
 <div class="defun">
@@ -461,8 +461,8 @@ a nonzero value for the expression enables this behavior.
 
       <p>Note that if this macro is not defined, or its value is zero, some
 bit-fields may cross more than one alignment boundary.  The compiler can
-support such references if there are &lsquo;<samp><span class="samp">insv</span></samp>&rsquo;, &lsquo;<samp><span class="samp">extv</span></samp>&rsquo;, and
-&lsquo;<samp><span class="samp">extzv</span></samp>&rsquo; insns that can directly reference memory.
+support such references if there are `<samp><span class="samp">insv</span></samp>', `<samp><span class="samp">extv</span></samp>', and
+`<samp><span class="samp">extzv</span></samp>' insns that can directly reference memory.
 
       <p>The other known way of making bit-fields work is to define
 <code>STRUCTURE_SIZE_BOUNDARY</code> as large as <code>BIGGEST_ALIGNMENT</code>. 
@@ -498,7 +498,7 @@ what the other compiler does.  Compile and run this program:
                     sizeof (struct foo2));
             exit (0);
           }
-</pre>
+     </pre>
       <p>If this prints 2 and 5, then the compiler's behavior is what you would
 get from <code>PCC_BITFIELD_TYPE_MATTERS</code>. 
 </p></blockquote></div>
@@ -652,8 +652,8 @@ chunk of 32 bits.  However, if the size changes, a new field of that
 size is allocated).  In an unpacked record, this is the same as using
 alignment, but not equivalent when packing.
 
-      <p>If both MS bit-fields and &lsquo;<samp><span class="samp">__attribute__((packed))</span></samp>&rsquo; are used,
-the latter will take precedence.  If &lsquo;<samp><span class="samp">__attribute__((packed))</span></samp>&rsquo; is
+      <p>If both MS bit-fields and `<samp><span class="samp">__attribute__((packed))</span></samp>' are used,
+the latter will take precedence.  If `<samp><span class="samp">__attribute__((packed))</span></samp>' is
 used on a single field when MS bit-fields are in use, it will take
 precedence for that field, but the alignment of the rest of the structure
 may affect its placement. 
@@ -699,10 +699,10 @@ string constant.
 
       <p>Target-specific fundamental types might be new fundamental types or
 qualified versions of ordinary fundamental types.  Encode new
-fundamental types as &lsquo;<samp><span class="samp">u&nbsp;</span><var>n</var><span class="samp">&nbsp;</span><var>name</var><span class="samp"><!-- /@w --></span></samp>&rsquo;, where <var>name</var>
+fundamental types as `<samp><span class="samp">u&nbsp;</span><var>n</var><span class="samp">&nbsp;</span><var>name</var><span class="samp"><!-- /@w --></span></samp>', where <var>name</var>
 is the name used for the type in source code, and <var>n</var> is the
 length of <var>name</var> in decimal.  Encode qualified versions of
-ordinary types as &lsquo;<samp><span class="samp">U&nbsp;</span><var>n</var><span class="samp">&nbsp;</span><var>name</var><span class="samp">&nbsp;</span><var>code</var><span class="samp"><!-- /@w --></span></samp>&rsquo;, where
+ordinary types as `<samp><span class="samp">U&nbsp;</span><var>n</var><span class="samp">&nbsp;</span><var>name</var><span class="samp">&nbsp;</span><var>code</var><span class="samp"><!-- /@w --></span></samp>', where
 <var>name</var> is the name used for the type qualifier in source code,
 <var>n</var> is the length of <var>name</var> as above, and <var>code</var> is the
 code used to represent the unqualified version of this type.  (See

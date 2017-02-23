@@ -3,7 +3,7 @@
 <title>Simple Example - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Scripts.html#Scripts" title="Scripts">
 <link rel="prev" href="Script-Format.html#Script-Format" title="Script Format">
@@ -51,13 +51,13 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Scripts.html#Scripts">Scripts</a>
 <p><a name="index-linker-script-example-345"></a><a name="index-example-of-linker-script-346"></a>Many linker scripts are fairly simple.
 
    <p>The simplest possible linker script has just one command:
-&lsquo;<samp><span class="samp">SECTIONS</span></samp>&rsquo;.  You use the &lsquo;<samp><span class="samp">SECTIONS</span></samp>&rsquo; command to describe the
+`<samp><span class="samp">SECTIONS</span></samp>'.  You use the `<samp><span class="samp">SECTIONS</span></samp>' command to describe the
 memory layout of the output file.
 
-   <p>The &lsquo;<samp><span class="samp">SECTIONS</span></samp>&rsquo; command is a powerful command.  Here we will
+   <p>The `<samp><span class="samp">SECTIONS</span></samp>' command is a powerful command.  Here we will
 describe a simple use of it.  Let's assume your program consists only of
 code, initialized data, and uninitialized data.  These will be in the
-&lsquo;<samp><span class="samp">.text</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.data</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">.bss</span></samp>&rsquo; sections, respectively. 
+`<samp><span class="samp">.text</span></samp>', `<samp><span class="samp">.data</span></samp>', and `<samp><span class="samp">.bss</span></samp>' sections, respectively. 
 Let's assume further that these are the only sections which appear in
 your input files.
 
@@ -73,42 +73,42 @@ linker script which will do that:
        .bss : { *(.bss) }
      }
 </pre>
-   <p>You write the &lsquo;<samp><span class="samp">SECTIONS</span></samp>&rsquo; command as the keyword &lsquo;<samp><span class="samp">SECTIONS</span></samp>&rsquo;,
+   <p>You write the `<samp><span class="samp">SECTIONS</span></samp>' command as the keyword `<samp><span class="samp">SECTIONS</span></samp>',
 followed by a series of symbol assignments and output section
 descriptions enclosed in curly braces.
 
-   <p>The first line inside the &lsquo;<samp><span class="samp">SECTIONS</span></samp>&rsquo; command of the above example
-sets the value of the special symbol &lsquo;<samp><span class="samp">.</span></samp>&rsquo;, which is the location
+   <p>The first line inside the `<samp><span class="samp">SECTIONS</span></samp>' command of the above example
+sets the value of the special symbol `<samp><span class="samp">.</span></samp>', which is the location
 counter.  If you do not specify the address of an output section in some
 other way (other ways are described later), the address is set from the
 current value of the location counter.  The location counter is then
 incremented by the size of the output section.  At the start of the
-&lsquo;<samp><span class="samp">SECTIONS</span></samp>&rsquo; command, the location counter has the value &lsquo;<samp><span class="samp">0</span></samp>&rsquo;.
+`<samp><span class="samp">SECTIONS</span></samp>' command, the location counter has the value `<samp><span class="samp">0</span></samp>'.
 
-   <p>The second line defines an output section, &lsquo;<samp><span class="samp">.text</span></samp>&rsquo;.  The colon is
+   <p>The second line defines an output section, `<samp><span class="samp">.text</span></samp>'.  The colon is
 required syntax which may be ignored for now.  Within the curly braces
 after the output section name, you list the names of the input sections
-which should be placed into this output section.  The &lsquo;<samp><span class="samp">*</span></samp>&rsquo; is a
-wildcard which matches any file name.  The expression &lsquo;<samp><span class="samp">*(.text)</span></samp>&rsquo;
-means all &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; input sections in all input files.
+which should be placed into this output section.  The `<samp><span class="samp">*</span></samp>' is a
+wildcard which matches any file name.  The expression `<samp><span class="samp">*(.text)</span></samp>'
+means all `<samp><span class="samp">.text</span></samp>' input sections in all input files.
 
-   <p>Since the location counter is &lsquo;<samp><span class="samp">0x10000</span></samp>&rsquo; when the output section
-&lsquo;<samp><span class="samp">.text</span></samp>&rsquo; is defined, the linker will set the address of the
-&lsquo;<samp><span class="samp">.text</span></samp>&rsquo; section in the output file to be &lsquo;<samp><span class="samp">0x10000</span></samp>&rsquo;.
+   <p>Since the location counter is `<samp><span class="samp">0x10000</span></samp>' when the output section
+`<samp><span class="samp">.text</span></samp>' is defined, the linker will set the address of the
+`<samp><span class="samp">.text</span></samp>' section in the output file to be `<samp><span class="samp">0x10000</span></samp>'.
 
-   <p>The remaining lines define the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; and &lsquo;<samp><span class="samp">.bss</span></samp>&rsquo; sections in
-the output file.  The linker will place the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; output section
-at address &lsquo;<samp><span class="samp">0x8000000</span></samp>&rsquo;.  After the linker places the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo;
+   <p>The remaining lines define the `<samp><span class="samp">.data</span></samp>' and `<samp><span class="samp">.bss</span></samp>' sections in
+the output file.  The linker will place the `<samp><span class="samp">.data</span></samp>' output section
+at address `<samp><span class="samp">0x8000000</span></samp>'.  After the linker places the `<samp><span class="samp">.data</span></samp>'
 output section, the value of the location counter will be
-&lsquo;<samp><span class="samp">0x8000000</span></samp>&rsquo; plus the size of the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; output section.  The
-effect is that the linker will place the &lsquo;<samp><span class="samp">.bss</span></samp>&rsquo; output section
-immediately after the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; output section in memory.
+`<samp><span class="samp">0x8000000</span></samp>' plus the size of the `<samp><span class="samp">.data</span></samp>' output section.  The
+effect is that the linker will place the `<samp><span class="samp">.bss</span></samp>' output section
+immediately after the `<samp><span class="samp">.data</span></samp>' output section in memory.
 
    <p>The linker will ensure that each output section has the required
 alignment, by increasing the location counter if necessary.  In this
-example, the specified addresses for the &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; and &lsquo;<samp><span class="samp">.data</span></samp>&rsquo;
+example, the specified addresses for the `<samp><span class="samp">.text</span></samp>' and `<samp><span class="samp">.data</span></samp>'
 sections will probably satisfy any alignment constraints, but the linker
-may have to create a small gap between the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; and &lsquo;<samp><span class="samp">.bss</span></samp>&rsquo;
+may have to create a small gap between the `<samp><span class="samp">.data</span></samp>' and `<samp><span class="samp">.bss</span></samp>'
 sections.
 
    <p>That's it!  That's a simple and complete linker script.

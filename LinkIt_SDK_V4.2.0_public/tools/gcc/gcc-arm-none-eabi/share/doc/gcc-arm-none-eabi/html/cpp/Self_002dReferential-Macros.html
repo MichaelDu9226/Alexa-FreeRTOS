@@ -3,7 +3,7 @@
 <title>Self-Referential Macros - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Macro-Pitfalls.html#Macro-Pitfalls" title="Macro Pitfalls">
 <link rel="prev" href="Duplication-of-Side-Effects.html#Duplication-of-Side-Effects" title="Duplication of Side Effects">
@@ -91,9 +91,9 @@ expands to itself.  If you write
 </pre>
    <p class="noindent">then the macro <code>EPERM</code> expands to <code>EPERM</code>.  Effectively, it is
 left alone by the preprocessor whenever it's used in running text.  You
-can tell that it's a macro with &lsquo;<samp><span class="samp">#ifdef</span></samp>&rsquo;.  You might do this if you
+can tell that it's a macro with `<samp><span class="samp">#ifdef</span></samp>'.  You might do this if you
 want to define numeric constants with an <code>enum</code>, but have
-&lsquo;<samp><span class="samp">#ifdef</span></samp>&rsquo; be true for each constant.
+`<samp><span class="samp">#ifdef</span></samp>' be true for each constant.
 
    <p>If a macro <code>x</code> expands to use a macro <code>y</code>, and the expansion of
 <code>y</code> refers to the macro <code>x</code>, that is an <dfn>indirect

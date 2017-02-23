@@ -3,7 +3,7 @@
 <title>PIC - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Sections.html#Sections" title="Sections">
@@ -60,7 +60,7 @@ independent code.  Simply defining these macros is not enough to
 generate valid PIC; you must also add support to the hook
 <code>TARGET_LEGITIMATE_ADDRESS_P</code> and to the macro
 <code>PRINT_OPERAND_ADDRESS</code>, as well as <code>LEGITIMIZE_ADDRESS</code>.  You
-must modify the definition of &lsquo;<samp><span class="samp">movsi</span></samp>&rsquo; to do something appropriate
+must modify the definition of `<samp><span class="samp">movsi</span></samp>' to do something appropriate
 when the source operand contains a symbolic address.  You may also
 need to alter the handling of switch statements so that they use
 relative addresses. 

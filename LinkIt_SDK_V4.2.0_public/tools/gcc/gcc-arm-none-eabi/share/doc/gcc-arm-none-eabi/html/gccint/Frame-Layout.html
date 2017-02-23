@@ -3,7 +3,7 @@
 <title>Frame Layout - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stack-and-Calling.html#Stack-and-Calling" title="Stack and Calling">
 <link rel="next" href="Exception-Handling.html#Exception-Handling" title="Exception Handling">
@@ -221,7 +221,7 @@ from the frame pointer of the previous stack frame.
 <blockquote><p>A C expression whose value is RTL representing the location of the
 incoming return address at the beginning of any function, before the
 prologue.  This RTL is either a <code>REG</code>, indicating that the return
-value is saved in &lsquo;<samp><span class="samp">REG</span></samp>&rsquo;, or a <code>MEM</code> representing a location in
+value is saved in `<samp><span class="samp">REG</span></samp>', or a <code>MEM</code> representing a location in
 the stack.
 
       <p>You only need to define this macro if you want to support call frame
@@ -259,10 +259,10 @@ terminate the stack backtrace.  New ports should avoid this.
 contain UNSPECs or UNSPEC_VOLATILEs.  The DWARF 2 call frame debugging
 info engine will invoke it on insns of the form
      <pre class="smallexample">          (set (reg) (unspec [...] UNSPEC_INDEX))
-</pre>
+     </pre>
       <p>and
      <pre class="smallexample">          (set (reg) (unspec_volatile [...] UNSPECV_INDEX)).
-</pre>
+     </pre>
       <p>to let the backend emit the call frame instructions.  <var>label</var> is
 the CFI label attached to the insn, <var>pattern</var> is the pattern of
 the insn and <var>index</var> is <code>UNSPEC_INDEX</code> or <code>UNSPECV_INDEX</code>. 

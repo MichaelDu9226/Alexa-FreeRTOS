@@ -3,7 +3,7 @@
 <title>Algorithms - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Overall-Structure.html#Overall-Structure" title="Overall Structure">
 <link rel="next" href="User-Interface.html#User-Interface" title="User Interface">
@@ -278,10 +278,10 @@ memory cached in <code>shadow_contents</code>, if any; and the field
 <code>placed_size</code> is optionally set and used by the target, if
 it could differ from <code>shadow_len</code>.
 
-     <p>For example, the remote target &lsquo;<samp><span class="samp">Z0</span></samp>&rsquo; packet does not require
+     <p>For example, the remote target `<samp><span class="samp">Z0</span></samp>' packet does not require
 shadowing memory, so <code>shadow_len</code> is left at zero.  However,
 the length reported by <code>gdbarch_breakpoint_from_pc</code> is cached in
-<code>placed_size</code>, so that a matching &lsquo;<samp><span class="samp">z0</span></samp>&rsquo; packet can be
+<code>placed_size</code>, so that a matching `<samp><span class="samp">z0</span></samp>' packet can be
 used to remove the breakpoint.
 
      <p><a name="index-insert-or-remove-hardware-breakpoint-19"></a><a name="index-target_005fremove_005fhw_005fbreakpoint-20"></a><a name="index-target_005finsert_005fhw_005fbreakpoint-21"></a><br><dt><code>target_remove_hw_breakpoint (</code><var>bp_tgt</var><code>)</code><dt><code>target_insert_hw_breakpoint (</code><var>bp_tgt</var><code>)</code><dd>Insert or remove a hardware-assisted breakpoint at address
@@ -306,7 +306,7 @@ but <code>placed_size</code> may be.
 <p><a name="index-g_t_0040code_007blongjmp_007d-debugging-22"></a><span class="sc">gdb</span> has support for figuring out that the target is doing a
 <code>longjmp</code> and for stopping at the target of the jump, if we are
 stepping.  This is done with a few specialized internal breakpoints,
-which are visible in the output of the &lsquo;<samp><span class="samp">maint info breakpoint</span></samp>&rsquo;
+which are visible in the output of the `<samp><span class="samp">maint info breakpoint</span></samp>'
 command.
 
    <p><a name="index-gdbarch_005fget_005flongjmp_005ftarget-23"></a>To make this work, you need to define a function called
@@ -381,7 +381,7 @@ watched value has changed.  Watchpoints whose watched values have
 changed are announced as hit.
 
 <!-- FIXME move these to the main lists of target/native defns -->
-   <p><span class="sc">gdb</span> uses several macros and primitives to support hardware
+<p><span class="sc">gdb</span> uses several macros and primitives to support hardware
 watchpoints:
 
      
@@ -410,7 +410,7 @@ defined by <samp><span class="file">breakpoint.h</span></samp> as follows:
                hw_access  = 2, /* Access (read or write) HW watchpoint */
                hw_execute = 3  /* Execute HW breakpoint */
              };
-</pre>
+     </pre>
      <p class="noindent">These two macros should return 0 for success, non-zero for failure.
 
      <p><a name="index-target_005fstopped_005fdata_005faddress-32"></a><br><dt><code>target_stopped_data_address (</code><var>addr_p</var><code>)</code><dd>If the inferior has some watchpoint that triggered, place the address

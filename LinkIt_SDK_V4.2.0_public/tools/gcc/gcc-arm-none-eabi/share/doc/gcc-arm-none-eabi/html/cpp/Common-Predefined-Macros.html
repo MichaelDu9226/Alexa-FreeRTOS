@@ -3,7 +3,7 @@
 <title>Common Predefined Macros - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Predefined-Macros.html#Predefined-Macros" title="Predefined Macros">
 <link rel="prev" href="Standard-Predefined-Macros.html#Standard-Predefined-Macros" title="Standard Predefined Macros">
@@ -97,7 +97,7 @@ like this:
               (__GNUC__ == 3 &amp;&amp; (__GNUC_MINOR__ &gt; 2 || \
                                  (__GNUC_MINOR__ == 2 &amp;&amp; \
                                   __GNUC_PATCHLEVEL__ &gt; 0))
-</pre>
+     </pre>
      <p class="noindent">Another approach is to use the predefined macros to
 calculate a single number, then compare that against a threshold:
 
@@ -107,7 +107,7 @@ calculate a single number, then compare that against a threshold:
           ...
           /* <span class="roman">Test for GCC &gt; 3.2.0</span> */
           #if GCC_VERSION &gt; 30200
-</pre>
+     </pre>
      <p class="noindent">Many people find this form easier to understand.
 
      <br><dt><code>__GNUG__</code><dd>The GNU C++ compiler defines this.  Testing it is equivalent to
@@ -115,7 +115,7 @@ testing <code>(__GNUC__&nbsp;&amp;&amp;&nbsp;__cplusplus)<!-- /@w --></code>.
 
      <br><dt><code>__STRICT_ANSI__</code><dd>GCC defines this macro if and only if the <samp><span class="option">-ansi</span></samp> switch, or a
 <samp><span class="option">-std</span></samp> switch specifying strict conformance to some version of ISO C
-or ISO C++, was specified when GCC was invoked.  It is defined to &lsquo;<samp><span class="samp">1</span></samp>&rsquo;. 
+or ISO C++, was specified when GCC was invoked.  It is defined to `<samp><span class="samp">1</span></samp>'. 
 This macro exists primarily to direct GNU libc's header files to
 restrict their definitions to the minimal set found in the 1989 C
 standard.
@@ -126,7 +126,7 @@ on the command line of the preprocessor or C compiler.
 
      <br><dt><code>__INCLUDE_LEVEL__</code><dd>This macro expands to a decimal integer constant that represents the
 depth of nesting in include files.  The value of this macro is
-incremented on every &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; directive and decremented at the
+incremented on every `<samp><span class="samp">#include</span></samp>' directive and decremented at the
 end of every included file.  It starts out at 0, its value within the
 base file specified on the command line.
 
@@ -182,11 +182,11 @@ the prefix applied to CPU register names in assembly language for this
 target.  You can use it to write assembly that is usable in multiple
 environments.  For example, in the <code>m68k-aout</code> environment it
 expands to nothing, but in the <code>m68k-coff</code> environment it expands
-to a single &lsquo;<samp><span class="samp">%</span></samp>&rsquo;.
+to a single `<samp><span class="samp">%</span></samp>'.
 
      <br><dt><code>__USER_LABEL_PREFIX__</code><dd>This macro expands to a single token which is the prefix applied to
 user labels (symbols visible to C code) in assembly.  For example, in
-the <code>m68k-aout</code> environment it expands to an &lsquo;<samp><span class="samp">_</span></samp>&rsquo;, but in the
+the <code>m68k-aout</code> environment it expands to an `<samp><span class="samp">_</span></samp>', but in the
 <code>m68k-coff</code> environment it expands to nothing.
 
      <p>This macro will have the correct definition even if
@@ -266,7 +266,7 @@ fashion.
 
      <pre class="smallexample">          /* <span class="roman">Test for a little-endian machine</span> */
           #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
-</pre>
+     </pre>
      <br><dt><code>__FLOAT_WORD_ORDER__</code><dd><code>__FLOAT_WORD_ORDER__</code> is defined to one of the values
 <code>__ORDER_LITTLE_ENDIAN__</code> or <code>__ORDER_BIG_ENDIAN__</code> to reflect
 the layout of the words of multi-word floating-point quantities.

@@ -3,7 +3,7 @@
 <title>String Field - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Overview.html#Overview" title="Overview">
 <link rel="prev" href="Stabs-Format.html#Stabs-Format" title="Stabs Format">
@@ -58,29 +58,29 @@ deal more complex.
    <p><var>name</var> is the name of the symbol represented by the stab; it can
 contain a pair of colons (see <a href="Nested-Symbols.html#Nested-Symbols">Nested Symbols</a>).  <var>name</var> can be
 omitted, which means the stab represents an unnamed object.  For
-example, &lsquo;<samp><span class="samp">:t10=*2</span></samp>&rsquo; defines type 10 as a pointer to type 2, but does
+example, `<samp><span class="samp">:t10=*2</span></samp>' defines type 10 as a pointer to type 2, but does
 not give the type a name.  Omitting the <var>name</var> field is supported by
 AIX dbx and GDB after about version 4.8, but not other debuggers.  GCC
 sometimes uses a single space as the name instead of omitting the name
 altogether; apparently that is supported by most debuggers.
 
-   <p>The <var>symbol-descriptor</var> following the &lsquo;<samp><span class="samp">:</span></samp>&rsquo; is an alphabetic
+   <p>The <var>symbol-descriptor</var> following the `<samp><span class="samp">:</span></samp>' is an alphabetic
 character that tells more specifically what kind of symbol the stab
 represents. If the <var>symbol-descriptor</var> is omitted, but type
 information follows, then the stab represents a local variable.  For a
-list of symbol descriptors, see <a href="Symbol-Descriptors.html#Symbol-Descriptors">Symbol Descriptors</a>.  The &lsquo;<samp><span class="samp">c</span></samp>&rsquo;
+list of symbol descriptors, see <a href="Symbol-Descriptors.html#Symbol-Descriptors">Symbol Descriptors</a>.  The `<samp><span class="samp">c</span></samp>'
 symbol descriptor is an exception in that it is not followed by type
 information.  See <a href="Constants.html#Constants">Constants</a>.
 
    <p><var>type-information</var> is either a <var>type-number</var>, or
-&lsquo;<samp><var>type-number</var><span class="samp">=</span></samp>&rsquo;.  A <var>type-number</var> alone is a type
+`<samp><var>type-number</var><span class="samp">=</span></samp>'.  A <var>type-number</var> alone is a type
 reference, referring directly to a type that has already been defined.
 
-   <p>The &lsquo;<samp><var>type-number</var><span class="samp">=</span></samp>&rsquo; form is a type definition, where the
+   <p>The `<samp><var>type-number</var><span class="samp">=</span></samp>' form is a type definition, where the
 number represents a new type which is about to be defined.  The type
 definition may refer to other types by number, and those type numbers
-may be followed by &lsquo;<samp><span class="samp">=</span></samp>&rsquo; and nested definitions.  Also, the Lucid
-compiler will repeat &lsquo;<samp><var>type-number</var><span class="samp">=</span></samp>&rsquo; more than once if it
+may be followed by `<samp><span class="samp">=</span></samp>' and nested definitions.  Also, the Lucid
+compiler will repeat `<samp><var>type-number</var><span class="samp">=</span></samp>' more than once if it
 wants to define several type numbers at once.
 
    <p>In a type definition, if the character that follows the equals sign is
@@ -88,7 +88,7 @@ non-numeric then it is a <var>type-descriptor</var>, and tells what kind of
 type is about to be defined.  Any other values following the
 <var>type-descriptor</var> vary, depending on the <var>type-descriptor</var>. 
 See <a href="Type-Descriptors.html#Type-Descriptors">Type Descriptors</a>, for a list of <var>type-descriptor</var> values.  If
-a number follows the &lsquo;<samp><span class="samp">=</span></samp>&rsquo; then the number is a <var>type-reference</var>. 
+a number follows the `<samp><span class="samp">=</span></samp>' then the number is a <var>type-reference</var>. 
 For a full description of types, <a href="Types.html#Types">Types</a>.
 
    <p>A <var>type-number</var> is often a single number.  The GNU and Sun tools
@@ -101,14 +101,14 @@ next, and so on.  The <var>filetype-number</var> is a number starting with
 (Separating the file number and the type number permits the
 <code>N_BINCL</code> optimization to succeed more often; see <a href="Include-Files.html#Include-Files">Include Files</a>).
 
-   <p>There is an AIX extension for type attributes.  Following the &lsquo;<samp><span class="samp">=</span></samp>&rsquo;
-are any number of type attributes.  Each one starts with &lsquo;<samp><span class="samp">@</span></samp>&rsquo; and
-ends with &lsquo;<samp><span class="samp">;</span></samp>&rsquo;.  Debuggers, including AIX's dbx and GDB 4.10, skip
+   <p>There is an AIX extension for type attributes.  Following the `<samp><span class="samp">=</span></samp>'
+are any number of type attributes.  Each one starts with `<samp><span class="samp">@</span></samp>' and
+ends with `<samp><span class="samp">;</span></samp>'.  Debuggers, including AIX's dbx and GDB 4.10, skip
 any type attributes they do not recognize.  GDB 4.9 and other versions
 of dbx may not do this.  Because of a conflict with C<tt>++</tt>
 (see <a href="Cplusplus.html#Cplusplus">Cplusplus</a>), new attributes should not be defined which begin
-with a digit, &lsquo;<samp><span class="samp">(</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">-</span></samp>&rsquo;; GDB may be unable to distinguish
-those from the C<tt>++</tt> type descriptor &lsquo;<samp><span class="samp">@</span></samp>&rsquo;.  The attributes are:
+with a digit, `<samp><span class="samp">(</span></samp>', or `<samp><span class="samp">-</span></samp>'; GDB may be unable to distinguish
+those from the C<tt>++</tt> type descriptor `<samp><span class="samp">@</span></samp>'.  The attributes are:
 
      <dl>
 <dt><code>a</code><var>boundary</var><dd><var>boundary</var> is an integer specifying the alignment.  I assume it
@@ -147,7 +147,7 @@ this may be written as a double backslash, depending on the assembler).
 Removing the backslashes and concatenating the string fields of each
 stab produces the original, long string.  Just to be incompatible (or so
 they don't have to worry about what the assembler does with
-backslashes), AIX can use &lsquo;<samp><span class="samp">?</span></samp>&rsquo; instead of backslash.
+backslashes), AIX can use `<samp><span class="samp">?</span></samp>' instead of backslash.
 
    </body></html>
 

@@ -3,7 +3,7 @@
 <title>Optimized Code - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Data.html#Data" title="Data">
 <link rel="next" href="Macros.html#Macros" title="Macros">
@@ -60,16 +60,16 @@ can recompile without optimization, it is easier to follow the
 progress of your program during debugging.  But, there are many cases
 where you may need to debug an optimized version.
 
-   <p>When you debug a program compiled with &lsquo;<samp><span class="samp">-g -O</span></samp>&rsquo;, remember that the
+   <p>When you debug a program compiled with `<samp><span class="samp">-g -O</span></samp>', remember that the
 optimizer has rearranged your code; the debugger shows you what is
 really there.  Do not be too surprised when the execution path does not
 exactly match your source file!  An extreme example: if you define a
 variable, but never use it, <span class="sc">gdb</span> never sees that
 variable&mdash;because the compiler optimizes it out of existence.
 
-   <p>Some things do not work as well with &lsquo;<samp><span class="samp">-g -O</span></samp>&rsquo; as with just
-&lsquo;<samp><span class="samp">-g</span></samp>&rsquo;, particularly on machines with instruction scheduling.  If in
-doubt, recompile with &lsquo;<samp><span class="samp">-g</span></samp>&rsquo; alone, and if this fixes the problem,
+   <p>Some things do not work as well with `<samp><span class="samp">-g -O</span></samp>' as with just
+`<samp><span class="samp">-g</span></samp>', particularly on machines with instruction scheduling.  If in
+doubt, recompile with `<samp><span class="samp">-g</span></samp>' alone, and if this fixes the problem,
 please report it to us as a bug (including a test case!). 
 See <a href="Variables.html#Variables">Variables</a>, for more information about debugging optimized code.
 

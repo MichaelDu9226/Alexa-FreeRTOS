@@ -3,7 +3,7 @@
 <title>MIPS - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Architectures.html#Architectures" title="Architectures">
 <link rel="prev" href="Alpha.html#Alpha" title="Alpha">
@@ -79,9 +79,9 @@ programs:
 values of <var>arg</var> are:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">auto</span></samp>&rsquo;<dd>The default ABI associated with the current binary (this is the
+<dt>`<samp><span class="samp">auto</span></samp>'<dd>The default ABI associated with the current binary (this is the
 default). 
-<br><dt>&lsquo;<samp><span class="samp">o32</span></samp>&rsquo;<br><dt>&lsquo;<samp><span class="samp">o64</span></samp>&rsquo;<br><dt>&lsquo;<samp><span class="samp">n32</span></samp>&rsquo;<br><dt>&lsquo;<samp><span class="samp">n64</span></samp>&rsquo;<br><dt>&lsquo;<samp><span class="samp">eabi32</span></samp>&rsquo;<br><dt>&lsquo;<samp><span class="samp">eabi64</span></samp>&rsquo;<dd></dl>
+<br><dt>`<samp><span class="samp">o32</span></samp>'<br><dt>`<samp><span class="samp">o64</span></samp>'<br><dt>`<samp><span class="samp">n32</span></samp>'<br><dt>`<samp><span class="samp">n64</span></samp>'<br><dt>`<samp><span class="samp">eabi32</span></samp>'<br><dt>`<samp><span class="samp">eabi64</span></samp>'<dd></dl>
 
      <br><dt><code>show mips abi</code><dd><a name="index-show-mips-abi-1514"></a>Show the <acronym>MIPS</acronym> ABI used by <span class="sc">gdb</span> to debug the inferior.
 
@@ -94,8 +94,8 @@ the executable does not provide information about the encoding it uses.
 Otherwise this setting is automatically updated from information
 provided by the executable.
 
-     <p>Possible values of <var>arg</var> are &lsquo;<samp><span class="samp">mips16</span></samp>&rsquo; and &lsquo;<samp><span class="samp">micromips</span></samp>&rsquo;. 
-The default compressed <acronym title="Instruction Set Architecture">ISA</acronym> encoding is &lsquo;<samp><span class="samp">mips16</span></samp>&rsquo;, as
+     <p>Possible values of <var>arg</var> are `<samp><span class="samp">mips16</span></samp>' and `<samp><span class="samp">micromips</span></samp>'. 
+The default compressed <acronym title="Instruction Set Architecture">ISA</acronym> encoding is `<samp><span class="samp">mips16</span></samp>', as
 executables containing <acronym>MIPS16</acronym> code frequently are not
 identified as such.
 
@@ -116,7 +116,7 @@ compressed <acronym title="Instruction Set Architecture">ISA</acronym> encoding 
 
      <br><dt><code>set mips mask-address </code><var>arg</var><dd><a name="index-set-mips-mask_002daddress-1518"></a><a name="index-g_t_0040acronym_007bMIPS_007d-addresses_002c-masking-1519"></a>This command determines whether the most-significant 32 bits of 64-bit
 <acronym>MIPS</acronym> addresses are masked off.  The argument <var>arg</var> can be
-&lsquo;<samp><span class="samp">on</span></samp>&rsquo;, &lsquo;<samp><span class="samp">off</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">auto</span></samp>&rsquo;.  The latter is the default
+`<samp><span class="samp">on</span></samp>', `<samp><span class="samp">off</span></samp>', or `<samp><span class="samp">auto</span></samp>'.  The latter is the default
 setting, which lets <span class="sc">gdb</span> determine the correct value.
 
      <br><dt><code>show mips mask-address</code><dd><a name="index-show-mips-mask_002daddress-1520"></a>Show whether the upper 32 bits of <acronym>MIPS</acronym> addresses are masked off or
@@ -125,7 +125,7 @@ not.
      <br><dt><code>set remote-mips64-transfers-32bit-regs</code><dd><a name="index-set-remote_002dmips64_002dtransfers_002d32bit_002dregs-1521"></a>This command controls compatibility with 64-bit <acronym>MIPS</acronym> targets that
 transfer data in 32-bit quantities.  If you have an old <acronym>MIPS</acronym> 64 target
 that transfers 32 bits for some registers, like <span class="sc">sr</span> and <span class="sc">fsr</span>,
-and 64 bits for other registers, set this option to &lsquo;<samp><span class="samp">on</span></samp>&rsquo;.
+and 64 bits for other registers, set this option to `<samp><span class="samp">on</span></samp>'.
 
      <br><dt><code>show remote-mips64-transfers-32bit-regs</code><dd><a name="index-show-remote_002dmips64_002dtransfers_002d32bit_002dregs-1522"></a>Show the current setting of compatibility with older <acronym>MIPS</acronym> 64 targets.
 

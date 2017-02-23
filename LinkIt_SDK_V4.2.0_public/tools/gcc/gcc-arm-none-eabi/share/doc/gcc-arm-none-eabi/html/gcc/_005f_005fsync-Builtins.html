@@ -3,7 +3,7 @@
 <title>__sync Builtins - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Offsetof.html#Offsetof" title="Offsetof">
@@ -59,7 +59,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="C-Extensions.html#C-Extensions">C Exten
 are intended to be compatible with those described
 in the <cite>Intel Itanium Processor-specific Application Binary Interface</cite>,
 section 7.4.  As such, they depart from the normal GCC practice of using
-the &lsquo;<samp><span class="samp">__builtin_</span></samp>&rsquo; prefix, and further that they are overloaded such that
+the `<samp><span class="samp">__builtin_</span></samp>' prefix, and further that they are overloaded such that
 they work on multiple types.
 
  <p>The definition given in the Intel documentation allows only for the use of
@@ -72,12 +72,12 @@ operation cannot be implemented on the target processor, a warning is
 generated and a call an external function is generated.  The external
 function carries the same name as the built-in version,
 with an additional suffix
-&lsquo;<samp><span class="samp">_</span><var>n</var></samp>&rsquo; where <var>n</var> is the size of the data type.
+`<samp><span class="samp">_</span><var>n</var></samp>' where <var>n</var> is the size of the data type.
 
 <!-- ??? Should we have a mechanism to suppress this warning?  This is almost -->
 <!-- useful for implementing the operation under the control of an external -->
 <!-- mutex. -->
- <p>In most cases, these built-in functions are considered a <dfn>full barrier</dfn>. 
+<p>In most cases, these built-in functions are considered a <dfn>full barrier</dfn>. 
 That is,
 no memory operand is moved across the operation, either forward or
 backward.  Further, instructions are issued as necessary to prevent the
@@ -99,7 +99,7 @@ returns the value that had previously been in memory.  That is,
 
      <pre class="smallexample">          { tmp = *ptr; *ptr <var>op</var>= value; return tmp; }
           { tmp = *ptr; *ptr = ~(tmp &amp; value); return tmp; }   // nand
-</pre>
+     </pre>
      <p><em>Note:</em> GCC 4.4 and later implement <code>__sync_fetch_and_nand</code>
 as <code>*ptr = ~(tmp &amp; value)</code> instead of <code>*ptr = ~tmp &amp; value</code>.
 
@@ -108,7 +108,7 @@ return the new value.  That is,
 
      <pre class="smallexample">          { *ptr <var>op</var>= value; return *ptr; }
           { *ptr = ~(*ptr &amp; value); return *ptr; }   // nand
-</pre>
+     </pre>
      <p><em>Note:</em> GCC 4.4 and later implement <code>__sync_nand_and_fetch</code>
 as <code>*ptr = ~(*ptr &amp; value)</code> instead of
 <code>*ptr = ~*ptr &amp; value</code>.

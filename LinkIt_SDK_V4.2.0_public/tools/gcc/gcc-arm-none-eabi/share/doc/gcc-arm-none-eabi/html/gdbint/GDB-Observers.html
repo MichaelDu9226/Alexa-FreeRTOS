@@ -3,7 +3,7 @@
 <title>GDB Observers - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Hints.html#Hints" title="Hints">
 <link rel="next" href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-License" title="GNU Free Documentation License">
@@ -79,8 +79,8 @@ or detach routines during a notification.
 
 <h3 class="section">A.2 Debugging</h3>
 
-<p>Observer notifications can be traced using the command &lsquo;<samp><span class="samp">set debug
-observer 1</span></samp>&rsquo; (see <a href="../gdb/Debugging-Output.html#Debugging-Output">Optional messages about internal happenings</a>).
+<p>Observer notifications can be traced using the command `<samp><span class="samp">set debug
+observer 1</span></samp>' (see <a href="../gdb/Debugging-Output.html#Debugging-Output">Optional messages about internal happenings</a>).
 
 <h3 class="section">A.3 <code>normal_stop</code> Notifications</h3>
 
@@ -140,9 +140,9 @@ for instance).
 
 <div class="defun">
 &mdash; Function: void <b>inferior_created</b> (<var>struct target_ops *objfile, int from_tty</var>)<var><a name="index-inferior_005fcreated-512"></a></var><br>
-<blockquote><p><span class="sc">gdb</span> has just connected to an inferior.  For &lsquo;<samp><span class="samp">run</span></samp>&rsquo;,
+<blockquote><p><span class="sc">gdb</span> has just connected to an inferior.  For `<samp><span class="samp">run</span></samp>',
 <span class="sc">gdb</span> calls this observer while the inferior is still stopped
-at the entry-point instruction.  For &lsquo;<samp><span class="samp">attach</span></samp>&rsquo; and &lsquo;<samp><span class="samp">core</span></samp>&rsquo;,
+at the entry-point instruction.  For `<samp><span class="samp">attach</span></samp>' and `<samp><span class="samp">core</span></samp>',
 <span class="sc">gdb</span> calls this observer immediately after connecting to the
 inferior, and before any information on the inferior has been printed. 
 </p></blockquote></div>

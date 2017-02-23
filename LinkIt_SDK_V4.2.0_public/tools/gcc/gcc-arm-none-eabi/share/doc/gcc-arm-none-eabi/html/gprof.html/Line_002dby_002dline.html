@@ -3,7 +3,7 @@
 <title>Line-by-line - GNU gprof</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU gprof">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Output.html#Output" title="Output">
 <link rel="prev" href="Call-Graph.html#Call-Graph" title="Call Graph">
@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Output.html#Output">Output</a>
 
 <h3 class="section">5.3 Line-by-line Profiling</h3>
 
-<p><code>gprof</code>'s &lsquo;<samp><span class="samp">-l</span></samp>&rsquo; option causes the program to perform
+<p><code>gprof</code>'s `<samp><span class="samp">-l</span></samp>' option causes the program to perform
 <dfn>line-by-line</dfn> profiling.  In this mode, histogram
 samples are assigned not to functions, but to individual
 lines of source code.  This only works with programs compiled with
@@ -58,10 +58,10 @@ use a different program - <code>gcov</code> - to display line-by-line
 profiling information.
 
    <p>With the older versions of <code>gcc</code> the program usually has to be
-compiled with a &lsquo;<samp><span class="samp">-g</span></samp>&rsquo; option, in addition to &lsquo;<samp><span class="samp">-pg</span></samp>&rsquo;, in order
+compiled with a `<samp><span class="samp">-g</span></samp>' option, in addition to `<samp><span class="samp">-pg</span></samp>', in order
 to generate debugging symbols for tracking source code lines. 
 Note, in much older versions of <code>gcc</code> the program had to be
-compiled with the &lsquo;<samp><span class="samp">-a</span></samp>&rsquo; command line option as well.
+compiled with the `<samp><span class="samp">-a</span></samp>' command line option as well.
 
    <p>The flat profile is the most useful output table
 in line-by-line mode. 

@@ -1,5 +1,5 @@
-This is gdbint.info, produced by makeinfo version 4.11 from
-/home/build/work/GCC-4-8-build/src/gdb/gdb/doc/gdbint.texinfo.
+This is gdbint.info, produced by makeinfo version 4.8 from
+/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gdb/gdb/doc/gdbint.texinfo.
 
 INFO-DIR-SECTION Software development
 START-INFO-DIR-ENTRY
@@ -926,7 +926,7 @@ previously available.  This new interface needed to be strongly typed,
 easy to extend, and versatile enough to be used as the standard
 interface when adding new notifications.
 
-   See *note GDB Observers:: for a brief description of the observers
+   See *Note GDB Observers:: for a brief description of the observers
 currently implemented in GDB. The rationale for the current
 implementation is also briefly discussed.
 
@@ -2119,7 +2119,7 @@ The IBM RS/6000 running AIX uses an object file format called XCOFF.
 The COFF sections, symbols, and line numbers are used, but debugging
 symbols are `dbx'-style stabs whose strings are located in the `.debug'
 section (rather than the string table).  For more information, see
-*note Top: (stabs)Top.
+*Note Top: (stabs)Top.
 
    The shared library scheme has a clean interface for figuring out what
 shared libraries are in use, but the catch is that everything which
@@ -4250,7 +4250,7 @@ architecture.
 
 `I386_USE_GENERIC_WATCHPOINTS'
      An x86-based target can define this to use the generic x86
-     watchpoint support; see *note I386_USE_GENERIC_WATCHPOINTS:
+     watchpoint support; see *Note I386_USE_GENERIC_WATCHPOINTS:
      Algorithms.
 
 `gdbarch_in_function_epilogue_p (GDBARCH, ADDR)'
@@ -4615,7 +4615,7 @@ mechanism for the user to tell GDB more about what their target
 supports, or for the target to tell GDB directly.
 
    For details on writing, automatically supplying, and manually
-selecting target descriptions, see *note Target Descriptions:
+selecting target descriptions, see *Note Target Descriptions:
 (gdb)Target Descriptions.  This section will cover some related topics
 about the GDB internals.
 
@@ -4648,7 +4648,7 @@ architecture's gdbarch initialization routine is called to create the
 new architecture.  Then the initialization routine is called, and has a
 chance to adjust the constructed architecture based on the contents of
 the target description.  For instance, it can recognize any properties
-set by a `to_read_description' routine.  Also see *note Adding Target
+set by a `to_read_description' routine.  Also see *Note Adding Target
 Described Register Support::.
 
 
@@ -4920,7 +4920,7 @@ the same.  These macros should be defined (or left undefined) in
 
 `I386_USE_GENERIC_WATCHPOINTS'
      An x86-based machine can define this to use the generic x86
-     watchpoint support; see *note I386_USE_GENERIC_WATCHPOINTS:
+     watchpoint support; see *Note I386_USE_GENERIC_WATCHPOINTS:
      Algorithms.
 
 `SOLIB_ADD (FILENAME, FROM_TTY, TARG, READSYMS)'
@@ -8274,7 +8274,7 @@ Concept Index
 * language parser:                       Language Support.    (line  25)
 * language support:                      Language Support.    (line   6)
 * legal papers for code contributions:   Debugging GDB.       (line  42)
-* libgdb:                                libgdb.              (line   9)
+* libgdb:                                libgdb.              (line  15)
 * libiberty library:                     Support Libraries.   (line  52)
 * line wrap in output:                   Misc Guidelines.     (line 191)
 * list output functions:                 User Interface.      (line 131)
@@ -8316,9 +8316,9 @@ Concept Index
                                                               (line  14)
 * processor status register:             Register Architecture Functions & Variables.
                                                               (line  69)
-* program counter <1>:                   Register Architecture Functions & Variables.
+* program counter <1>:                   Algorithms.          (line 158)
+* program counter:                       Register Architecture Functions & Variables.
                                                               (line  58)
-* program counter:                       Algorithms.          (line 158)
 * prologue analysis:                     Algorithms.          (line  14)
 * prologue cache:                        Prologue Caches.     (line  12)
 * prologue of a function:                Prologue Caches.     (line   6)
@@ -8581,14 +8581,15 @@ Function and Variable Index
 * gdbarch_addr_bits_remove:              Defining Other Architecture Features.
                                                               (line  11)
 * gdbarch_address_class_name_to_type_flags: Address Classes.  (line  30)
-* gdbarch_address_class_type_flags <1>:  Defining Other Architecture Features.
+* gdbarch_address_class_type_flags <1>:  Address Classes.     (line  18)
+* gdbarch_address_class_type_flags:      Defining Other Architecture Features.
                                                               (line  43)
-* gdbarch_address_class_type_flags:      Address Classes.     (line  18)
 * gdbarch_address_class_type_flags_p:    Defining Other Architecture Features.
                                                               (line  52)
-* gdbarch_address_class_type_flags_to_name <1>: Defining Other Architecture Features.
+* gdbarch_address_class_type_flags_to_name <1>: Address Classes.
+                                                              (line  25)
+* gdbarch_address_class_type_flags_to_name: Defining Other Architecture Features.
                                                               (line  56)
-* gdbarch_address_class_type_flags_to_name: Address Classes.  (line  25)
 * gdbarch_address_class_type_flags_to_name_p: Defining Other Architecture Features.
                                                               (line  60)
 * gdbarch_address_to_pointer <1>:        Defining Other Architecture Features.
@@ -8613,10 +8614,10 @@ Function and Variable Index
                                                               (line 192)
 * gdbarch_char_signed:                   Defining Other Architecture Features.
                                                               (line 463)
-* gdbarch_convert_register_p <1>:        Defining Other Architecture Features.
-                                                              (line 199)
-* gdbarch_convert_register_p:            Register and Memory Data.
+* gdbarch_convert_register_p <1>:        Register and Memory Data.
                                                               (line  30)
+* gdbarch_convert_register_p:            Defining Other Architecture Features.
+                                                              (line 199)
 * gdbarch_data:                          Misc Guidelines.     (line 133)
 * gdbarch_data_register_post_init:       Misc Guidelines.     (line 118)
 * gdbarch_data_register_pre_init:        Misc Guidelines.     (line 108)
@@ -8666,10 +8667,10 @@ Function and Variable Index
                                                               (line 134)
 * gdbarch_osabi_name:                    OS ABI Variant Handling.
                                                               (line  97)
-* gdbarch_pointer_to_address <1>:        Defining Other Architecture Features.
-                                                              (line 299)
-* gdbarch_pointer_to_address:            Pointers and Addresses.
+* gdbarch_pointer_to_address <1>:        Pointers and Addresses.
                                                               (line 105)
+* gdbarch_pointer_to_address:            Defining Other Architecture Features.
+                                                              (line 299)
 * gdbarch_print_insn:                    Defining Other Architecture Features.
                                                               (line 515)
 * gdbarch_ptr_bit:                       Defining Other Architecture Features.
@@ -8678,17 +8679,17 @@ Function and Variable Index
                                                               (line 367)
 * gdbarch_push_dummy_code:               Defining Other Architecture Features.
                                                               (line 379)
-* gdbarch_register <1>:                  Adding a New Target. (line  40)
-* gdbarch_register:                      How an Architecture is Represented.
+* gdbarch_register <1>:                  How an Architecture is Represented.
                                                               (line  19)
+* gdbarch_register:                      Adding a New Target. (line  40)
 * gdbarch_register_osabi:                OS ABI Variant Handling.
                                                               (line 103)
 * gdbarch_register_osabi_sniffer:        OS ABI Variant Handling.
                                                               (line 112)
-* gdbarch_register_to_value <1>:         Defining Other Architecture Features.
-                                                              (line 305)
-* gdbarch_register_to_value:             Register and Memory Data.
+* gdbarch_register_to_value <1>:         Register and Memory Data.
                                                               (line  46)
+* gdbarch_register_to_value:             Defining Other Architecture Features.
+                                                              (line 305)
 * gdbarch_return_value:                  Defining Other Architecture Features.
                                                               (line 400)
 * gdbarch_sdb_reg_to_regnum:             Defining Other Architecture Features.
@@ -8880,7 +8881,7 @@ Function and Variable Index
                                                               (line  84)
 * value_from_pointer:                    Pointers and Addresses.
                                                               (line  93)
-* void:                                  GDB Observers.       (line  67)
+* void:                                  GDB Observers.       (line  71)
 * volatile:                              Host Definition.     (line 110)
 * wrap_here:                             Misc Guidelines.     (line 191)
 * write_pc:                              Register Architecture Functions & Variables.
@@ -8889,85 +8890,85 @@ Function and Variable Index
 
 
 Tag Table:
-Node: Top1389
-Node: Summary2340
-Node: Requirements2490
-Node: Contributors3969
-Node: Overall Structure5562
-Node: Algorithms10585
-Node: User Interface42027
-Ref: UI-Independent Output43882
-Ref: User Interface-Footnote-165872
-Ref: User Interface-Footnote-265921
-Node: libgdb66156
-Node: Values70107
-Node: Stack Frames72951
-Node: Symbol Handling77933
-Node: Language Support94738
-Node: Host Definition99464
-Node: Target Architecture Definition103401
-Node: OS ABI Variant Handling104221
-Node: Initialize New Architecture109066
-Node: How an Architecture is Represented109417
-Node: Looking Up an Existing Architecture111374
-Node: Creating a New Architecture114293
-Node: Registers and Memory116331
-Node: Pointers and Addresses117123
-Ref: Pointers and Addresses-Footnote-1123124
-Node: Address Classes123367
-Node: Register Representation126612
-Node: Raw and Cooked Registers126986
-Node: Register Architecture Functions & Variables128170
-Node: Register Information Functions131779
-Ref: Register Information Functions-Footnote-1137681
-Node: Register and Memory Data138100
-Node: Register Caching141249
-Node: Frame Interpretation142785
-Node: All About Stack Frames143191
-Ref: All About Stack Frames-Footnote-1148483
-Node: Frame Handling Terminology148715
-Node: Prologue Caches151242
-Node: Functions and Variable to Analyze Frames152923
-Ref: frame_align155021
-Node: Functions to Access Frame Data156535
-Node: Analyzing Stacks---Frame Sniffers158826
-Ref: Analyzing Stacks---Frame Sniffers-Footnote-1163476
-Node: Inferior Call Setup163973
-Node: About Dummy Frames164256
-Node: Functions Creating Dummy Frames164882
-Node: Adding support for debugging core files168939
-Node: Defining Other Architecture Features169483
-Ref: gdbarch_breakpoint_from_pc174330
-Ref: gdbarch_stabs_argument_has_addr186964
-Ref: gdbarch_push_dummy_call187211
-Ref: gdbarch_push_dummy_code187807
-Ref: gdbarch_return_value188873
-Ref: gdbarch_dummy_id194510
-Node: Adding a New Target195198
-Node: Target Descriptions197665
-Node: Target Descriptions Implementation198604
-Node: Adding Target Described Register Support199978
-Node: Target Vector Definition202924
-Node: Managing Execution State203456
-Node: Existing Targets205269
-Node: Native Debugging207784
-Node: Support Libraries211612
-Node: Coding Standards223137
-Node: Misc Guidelines231771
-Node: Porting GDB250134
-Node: Versions and Branches252012
-Ref: Tags257968
-Ref: experimental branch tags258299
-Node: Start of New Year Procedure259031
-Node: Releasing GDB260492
-Node: Testsuite278724
-Ref: Testsuite-Footnote-1293601
-Node: Hints293719
-Node: Getting Started294041
-Node: Debugging GDB298206
-Node: GDB Observers303334
-Node: GNU Free Documentation License312713
-Node: Concept Index337888
-Node: Function and Variable Index361450
+Node: Top1422
+Node: Summary2373
+Node: Requirements2523
+Node: Contributors4002
+Node: Overall Structure5595
+Node: Algorithms10618
+Node: User Interface42060
+Ref: UI-Independent Output43915
+Ref: User Interface-Footnote-165905
+Ref: User Interface-Footnote-265954
+Node: libgdb66189
+Node: Values70140
+Node: Stack Frames72984
+Node: Symbol Handling77966
+Node: Language Support94771
+Node: Host Definition99497
+Node: Target Architecture Definition103434
+Node: OS ABI Variant Handling104254
+Node: Initialize New Architecture109099
+Node: How an Architecture is Represented109450
+Node: Looking Up an Existing Architecture111407
+Node: Creating a New Architecture114326
+Node: Registers and Memory116364
+Node: Pointers and Addresses117156
+Ref: Pointers and Addresses-Footnote-1123157
+Node: Address Classes123400
+Node: Register Representation126645
+Node: Raw and Cooked Registers127019
+Node: Register Architecture Functions & Variables128203
+Node: Register Information Functions131812
+Ref: Register Information Functions-Footnote-1137714
+Node: Register and Memory Data138133
+Node: Register Caching141282
+Node: Frame Interpretation142818
+Node: All About Stack Frames143224
+Ref: All About Stack Frames-Footnote-1148516
+Node: Frame Handling Terminology148748
+Node: Prologue Caches151275
+Node: Functions and Variable to Analyze Frames152956
+Ref: frame_align155054
+Node: Functions to Access Frame Data156568
+Node: Analyzing Stacks---Frame Sniffers158859
+Ref: Analyzing Stacks---Frame Sniffers-Footnote-1163509
+Node: Inferior Call Setup164006
+Node: About Dummy Frames164289
+Node: Functions Creating Dummy Frames164915
+Node: Adding support for debugging core files168972
+Node: Defining Other Architecture Features169516
+Ref: gdbarch_breakpoint_from_pc174363
+Ref: gdbarch_stabs_argument_has_addr186997
+Ref: gdbarch_push_dummy_call187244
+Ref: gdbarch_push_dummy_code187840
+Ref: gdbarch_return_value188906
+Ref: gdbarch_dummy_id194543
+Node: Adding a New Target195231
+Node: Target Descriptions197698
+Node: Target Descriptions Implementation198637
+Node: Adding Target Described Register Support200011
+Node: Target Vector Definition202957
+Node: Managing Execution State203489
+Node: Existing Targets205302
+Node: Native Debugging207817
+Node: Support Libraries211645
+Node: Coding Standards223170
+Node: Misc Guidelines231804
+Node: Porting GDB250167
+Node: Versions and Branches252045
+Ref: Tags258001
+Ref: experimental branch tags258332
+Node: Start of New Year Procedure259064
+Node: Releasing GDB260525
+Node: Testsuite278757
+Ref: Testsuite-Footnote-1293634
+Node: Hints293752
+Node: Getting Started294074
+Node: Debugging GDB298239
+Node: GDB Observers303367
+Node: GNU Free Documentation License312746
+Node: Concept Index337921
+Node: Function and Variable Index361483
 
 End Tag Table

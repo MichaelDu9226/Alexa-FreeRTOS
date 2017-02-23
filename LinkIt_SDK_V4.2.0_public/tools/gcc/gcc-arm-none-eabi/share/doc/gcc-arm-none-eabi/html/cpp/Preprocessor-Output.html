@@ -3,7 +3,7 @@
 <title>Preprocessor Output - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Other-Directives.html#Other-Directives" title="Other Directives">
 <link rel="next" href="Traditional-Mode.html#Traditional-Mode" title="Traditional Mode">
@@ -89,34 +89,34 @@ that the following line originated in file <var>filename</var> at line
 <var>linenum</var>.  <var>filename</var> will never contain any non-printing
 characters; they are replaced with octal escape sequences.
 
-   <p>After the file name comes zero or more flags, which are &lsquo;<samp><span class="samp">1</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">2</span></samp>&rsquo;, &lsquo;<samp><span class="samp">3</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">4</span></samp>&rsquo;.  If there are multiple flags, spaces
+   <p>After the file name comes zero or more flags, which are `<samp><span class="samp">1</span></samp>',
+`<samp><span class="samp">2</span></samp>', `<samp><span class="samp">3</span></samp>', or `<samp><span class="samp">4</span></samp>'.  If there are multiple flags, spaces
 separate them.  Here is what the flags mean:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">1</span></samp>&rsquo;<dd>This indicates the start of a new file. 
-<br><dt>&lsquo;<samp><span class="samp">2</span></samp>&rsquo;<dd>This indicates returning to a file (after having included another file). 
-<br><dt>&lsquo;<samp><span class="samp">3</span></samp>&rsquo;<dd>This indicates that the following text comes from a system header file,
+<dt>`<samp><span class="samp">1</span></samp>'<dd>This indicates the start of a new file. 
+<br><dt>`<samp><span class="samp">2</span></samp>'<dd>This indicates returning to a file (after having included another file). 
+<br><dt>`<samp><span class="samp">3</span></samp>'<dd>This indicates that the following text comes from a system header file,
 so certain warnings should be suppressed. 
-<br><dt>&lsquo;<samp><span class="samp">4</span></samp>&rsquo;<dd>This indicates that the following text should be treated as being
+<br><dt>`<samp><span class="samp">4</span></samp>'<dd>This indicates that the following text should be treated as being
 wrapped in an implicit <code>extern "C"</code> block. 
 <!-- maybe cross reference NO_IMPLICIT_EXTERN_C -->
 </dl>
 
    <p>As an extension, the preprocessor accepts linemarkers in non-assembler
-input files.  They are treated like the corresponding &lsquo;<samp><span class="samp">#line</span></samp>&rsquo;
+input files.  They are treated like the corresponding `<samp><span class="samp">#line</span></samp>'
 directive, (see <a href="Line-Control.html#Line-Control">Line Control</a>), except that trailing flags are
 permitted, and are interpreted with the meanings described above.  If
 multiple flags are given, they must be in ascending order.
 
    <p>Some directives may be duplicated in the output of the preprocessor. 
-These are &lsquo;<samp><span class="samp">#ident</span></samp>&rsquo; (always), &lsquo;<samp><span class="samp">#pragma</span></samp>&rsquo; (only if the
-preprocessor does not handle the pragma itself), and &lsquo;<samp><span class="samp">#define</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">#undef</span></samp>&rsquo; (with certain debugging options).  If this happens, the
-&lsquo;<samp><span class="samp">#</span></samp>&rsquo; of the directive will always be in the first column, and there
-will be no space between the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and the directive name.  If macro
+These are `<samp><span class="samp">#ident</span></samp>' (always), `<samp><span class="samp">#pragma</span></samp>' (only if the
+preprocessor does not handle the pragma itself), and `<samp><span class="samp">#define</span></samp>' and
+`<samp><span class="samp">#undef</span></samp>' (with certain debugging options).  If this happens, the
+`<samp><span class="samp">#</span></samp>' of the directive will always be in the first column, and there
+will be no space between the `<samp><span class="samp">#</span></samp>' and the directive name.  If macro
 expansion happens to generate tokens which might be mistaken for a
-duplicated directive, a space will be inserted between the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and
+duplicated directive, a space will be inserted between the `<samp><span class="samp">#</span></samp>' and
 the directive name.
 
    </body></html>

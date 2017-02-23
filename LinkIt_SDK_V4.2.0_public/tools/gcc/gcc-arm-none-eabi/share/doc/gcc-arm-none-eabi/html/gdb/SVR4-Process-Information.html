@@ -3,7 +3,7 @@
 <title>SVR4 Process Information - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Native.html#Native" title="Native">
 <link rel="prev" href="BSD-libkvm-Interface.html#BSD-libkvm-Interface" title="BSD libkvm Interface">
@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Native.html#Native">Native</a>
 
 <p><a name="index-g_t_002fproc-1257"></a><a name="index-examine-process-image-1258"></a><a name="index-process-info-via-_0040file_007b_002fproc_007d-1259"></a>
 Many versions of SVR4 and compatible systems provide a facility called
-&lsquo;<samp><span class="samp">/proc</span></samp>&rsquo; that can be used to examine the image of a running
+`<samp><span class="samp">/proc</span></samp>' that can be used to examine the image of a running
 process using file-system subroutines.
 
    <p>If <span class="sc">gdb</span> is configured for an operating system with this
@@ -60,7 +60,7 @@ process running on your system.  This includes, as of this writing,
 not HP-UX, for example.
 
    <p>This command may also work on core files that were created on a system
-that has the &lsquo;<samp><span class="samp">/proc</span></samp>&rsquo; facility.
+that has the `<samp><span class="samp">/proc</span></samp>' facility.
 
      
 <a name="index-info-proc-1260"></a>
@@ -73,9 +73,9 @@ line used to invoke it, its current working directory, and its
 executable file's absolute file name.
 
      <p>On some systems, <var>process-id</var> can be of the form
-&lsquo;<samp><span class="samp">[</span><var>pid</var><span class="samp">]/</span><var>tid</var></samp>&rsquo; which specifies a certain thread ID
+`<samp><span class="samp">[</span><var>pid</var><span class="samp">]/</span><var>tid</var></samp>' which specifies a certain thread ID
 within a process.  If the optional <var>pid</var> part is missing, it means
-a thread from the process being debugged (the leading &lsquo;<samp><span class="samp">/</span></samp>&rsquo; still
+a thread from the process being debugged (the leading `<samp><span class="samp">/</span></samp>' still
 needs to be present, or else <span class="sc">gdb</span> will interpret the number as
 a process ID rather than a thread ID).
 
@@ -98,8 +98,8 @@ memory access rights to that range.
 the process-related information, including the user ID and group ID;
 how many threads are there in the process; its virtual memory usage;
 the signals that are pending, blocked, and ignored; its TTY; its
-consumption of system and user time; its stack size; its &lsquo;<samp><span class="samp">nice</span></samp>&rsquo;
-value; etc.  For more information, see the &lsquo;<samp><span class="samp">proc</span></samp>&rsquo; man page
+consumption of system and user time; its stack size; its `<samp><span class="samp">nice</span></samp>'
+value; etc.  For more information, see the `<samp><span class="samp">proc</span></samp>' man page
 (type <kbd>man 5 proc</kbd> from your shell prompt).
 
      <br><dt><code>info proc all</code><dd>Show all the information about the process described under all of the

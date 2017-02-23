@@ -3,7 +3,7 @@
 <title>File Options - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GDB.html#Invoking-GDB" title="Invoking GDB">
 <link rel="next" href="Mode-Options.html#Mode-Options" title="Mode Options">
@@ -47,12 +47,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Invoking-GDB.html#Invoking-GDB">Invokin
 
 <p>When <span class="sc">gdb</span> starts, it reads any arguments other than options as
 specifying an executable file and core file (or process ID).  This is
-the same as if the arguments were specified by the &lsquo;<samp><span class="samp">-se</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; (or &lsquo;<samp><span class="samp">-p</span></samp>&rsquo;) options respectively.  (<span class="sc">gdb</span> reads the
+the same as if the arguments were specified by the `<samp><span class="samp">-se</span></samp>' and
+`<samp><span class="samp">-c</span></samp>' (or `<samp><span class="samp">-p</span></samp>') options respectively.  (<span class="sc">gdb</span> reads the
 first argument that does not have an associated option flag as
-equivalent to the &lsquo;<samp><span class="samp">-se</span></samp>&rsquo; option followed by that argument; and the
+equivalent to the `<samp><span class="samp">-se</span></samp>' option followed by that argument; and the
 second argument that does not have an associated option flag, if any, as
-equivalent to the &lsquo;<samp><span class="samp">-c</span></samp>&rsquo;/&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; option followed by that argument.) 
+equivalent to the `<samp><span class="samp">-c</span></samp>'/`<samp><span class="samp">-p</span></samp>' option followed by that argument.) 
 If the second argument begins with a decimal digit, <span class="sc">gdb</span> will
 first attempt to attach to it as a process, and if that fails, attempt
 to open it as a corefile.  If you have a corefile whose name begins with
@@ -66,13 +66,13 @@ argument and ignore it.
    <p>Many options have both long and short forms; both are shown in the
 following list.  <span class="sc">gdb</span> also recognizes the long forms if you truncate
 them, so long as enough of the option is present to be unambiguous. 
-(If you prefer, you can flag option arguments with &lsquo;<samp><span class="samp">--</span></samp>&rsquo; rather
-than &lsquo;<samp><span class="samp">-</span></samp>&rsquo;, though we illustrate the more usual convention.)
+(If you prefer, you can flag option arguments with `<samp><span class="samp">--</span></samp>' rather
+than `<samp><span class="samp">-</span></samp>', though we illustrate the more usual convention.)
 
 <!-- NOTE: the @cindex entries here use double dashes ON PURPOSE.  This -->
 <!-- way, both those who look for -foo and -foo in the index, will find -->
 <!-- it. -->
-     <dl>
+<dl>
 <dt><code>-symbols </code><var>file</var><dt><code>-s </code><var>file</var><dd><a name="index-g_t_0040code_007b_002d_002dsymbols_007d-4"></a><a name="index-g_t_0040code_007b_002ds_007d-5"></a>Read symbol table from file <var>file</var>.
 
      <br><dt><code>-exec </code><var>file</var><dt><code>-e </code><var>file</var><dd><a name="index-g_t_0040code_007b_002d_002dexec_007d-6"></a><a name="index-g_t_0040code_007b_002de_007d-7"></a>Use file <var>file</var> as the executable file to execute when appropriate,
@@ -92,11 +92,11 @@ See <a href="Command-Files.html#Command-Files">Command files</a>.
      <br><dt><code>-eval-command </code><var>command</var><dt><code>-ex </code><var>command</var><dd><a name="index-g_t_0040code_007b_002d_002deval_002dcommand_007d-15"></a><a name="index-g_t_0040code_007b_002dex_007d-16"></a>Execute a single <span class="sc">gdb</span> command.
 
      <p>This option may be used multiple times to call multiple commands.  It may
-also be interleaved with &lsquo;<samp><span class="samp">-command</span></samp>&rsquo; as required.
+also be interleaved with `<samp><span class="samp">-command</span></samp>' as required.
 
      <pre class="smallexample">          gdb -ex 'target sim' -ex 'load' \
              -x setbreakpoints -ex 'run' a.out
-</pre>
+     </pre>
      <br><dt><code>-init-command </code><var>file</var><dt><code>-ix </code><var>file</var><dd><a name="index-g_t_0040code_007b_002d_002dinit_002dcommand_007d-17"></a><a name="index-g_t_0040code_007b_002dix_007d-18"></a>Execute commands from file <var>file</var> before loading the inferior (but
 after loading gdbinit files). 
 See <a href="Startup.html#Startup">Startup</a>.

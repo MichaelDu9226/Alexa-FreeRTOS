@@ -3,7 +3,7 @@
 <title>Function Basics - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Functions.html#Functions" title="Functions">
 <link rel="next" href="Function-Properties.html#Function-Properties" title="Function Properties">
@@ -112,7 +112,7 @@ same level and a backpointer to the parent <code>BLOCK</code> or
             }
             int c;
           }
-</pre>
+     </pre>
      <p>you would get the following:
 
      <pre class="smallexample">          tree foo = FUNCTION_DECL;
@@ -131,11 +131,11 @@ same level and a backpointer to the parent <code>BLOCK</code> or
           BLOCK_VARS(block_c) = decl_c;
           BLOCK_SUPERCONTEXT(block_c) = foo;
           DECL_INITIAL(foo) = block_a;
-</pre>
+     </pre>
      </dl>
 
 <!--  -->
 <!-- Function Properties -->
 <!--  -->
- </body></html>
+</body></html>
 

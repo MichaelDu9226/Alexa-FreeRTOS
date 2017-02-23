@@ -3,7 +3,7 @@
 <title>Native Debugging - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Target-Vector-Definition.html#Target-Vector-Definition" title="Target Vector Definition">
 <link rel="next" href="Support-Libraries.html#Support-Libraries" title="Support Libraries">
@@ -51,17 +51,17 @@ Several files control <span class="sc">gdb</span>'s configuration for native sup
 <a name="index-NATDEPFILES-441"></a>
 <dl><dt><samp><span class="file">gdb/config/</span><var>arch</var><span class="file">/</span><var>xyz</var><span class="file">.mh</span></samp><dd>Specifies Makefile fragments needed by a <em>native</em> configuration on
 machine <var>xyz</var>.  In particular, this lists the required
-native-dependent object files, by defining &lsquo;<samp><span class="samp">NATDEPFILES=...</span></samp>&rsquo;. 
+native-dependent object files, by defining `<samp><span class="samp">NATDEPFILES=...</span></samp>'. 
 Also specifies the header file which describes native support on
-<var>xyz</var>, by defining &lsquo;<samp><span class="samp">NAT_FILE= nm-</span><var>xyz</var><span class="samp">.h</span></samp>&rsquo;.  You can also
-define &lsquo;<samp><span class="samp">NAT_CFLAGS</span></samp>&rsquo;, &lsquo;<samp><span class="samp">NAT_ADD_FILES</span></samp>&rsquo;, &lsquo;<samp><span class="samp">NAT_CLIBS</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">NAT_CDEPS</span></samp>&rsquo;, &lsquo;<samp><span class="samp">NAT_GENERATED_FILES</span></samp>&rsquo;, etc.; see <samp><span class="file">Makefile.in</span></samp>.
+<var>xyz</var>, by defining `<samp><span class="samp">NAT_FILE= nm-</span><var>xyz</var><span class="samp">.h</span></samp>'.  You can also
+define `<samp><span class="samp">NAT_CFLAGS</span></samp>', `<samp><span class="samp">NAT_ADD_FILES</span></samp>', `<samp><span class="samp">NAT_CLIBS</span></samp>',
+`<samp><span class="samp">NAT_CDEPS</span></samp>', `<samp><span class="samp">NAT_GENERATED_FILES</span></samp>', etc.; see <samp><span class="file">Makefile.in</span></samp>.
 
-     <p><em>Maintainer's note: The </em><samp><span class="file">.mh</span></samp><em> suffix is because this file
-originally contained </em><samp><span class="file">Makefile</span></samp><em> fragments for hosting </em><span class="sc">gdb</span><em>
+     <p><em>Maintainer's note: The <samp></em><span class="file">.mh</span><em></samp> suffix is because this file
+originally contained <samp></em><span class="file">Makefile</span><em></samp> fragments for hosting </em><span class="sc">gdb</span><em>
 on machine </em><var>xyz</var><em>.  While the file is no longer used for this
-purpose, the </em><samp><span class="file">.mh</span></samp><em> suffix remains.  Perhaps someone will
-eventually rename these fragments so that they have a </em><samp><span class="file">.mn</span></samp><em>
+purpose, the <samp></em><span class="file">.mh</span><em></samp> suffix remains.  Perhaps someone will
+eventually rename these fragments so that they have a <samp></em><span class="file">.mn</span><em></samp>
 suffix.</em>
 
      <br><dt><samp><span class="file">gdb/config/</span><var>arch</var><span class="file">/nm-</span><var>xyz</var><span class="file">.h</span></samp><dd>(<samp><span class="file">nm.h</span></samp> is a link to this file, created by <code>configure</code>).  Contains C
@@ -76,7 +76,7 @@ this machine.  On some machines it doesn't exist at all.
 various systems.  These can be customized in various ways by macros
 defined in your <samp><span class="file">nm-</span><var>xyz</var><span class="file">.h</span></samp> file.  If these routines work for
 the <var>xyz</var> host, you can just include the generic file's name (with
-&lsquo;<samp><span class="samp">.o</span></samp>&rsquo;, not &lsquo;<samp><span class="samp">.c</span></samp>&rsquo;) in <code>NATDEPFILES</code>.
+`<samp><span class="samp">.o</span></samp>', not `<samp><span class="samp">.c</span></samp>') in <code>NATDEPFILES</code>.
 
    <p>Otherwise, if your machine needs custom support routines, you will need
 to write routines that perform the same functions as the generic file. 

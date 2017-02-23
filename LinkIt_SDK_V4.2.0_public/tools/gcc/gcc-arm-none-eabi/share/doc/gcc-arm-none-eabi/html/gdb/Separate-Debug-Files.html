@@ -3,7 +3,7 @@
 <title>Separate Debug Files - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB-Files.html#GDB-Files" title="GDB Files">
 <link rel="prev" href="Files.html#Files" title="Files">
@@ -111,7 +111,8 @@ debug information files, in the indicated order:
 <li><samp><span class="file">/usr/lib/debug/usr/bin/ls.debug</span></samp>. 
 </ul>
 
-   <p><a name="debug_002dfile_002ddirectory"></a>Global debugging info directories default to what is set by <span class="sc">gdb</span>
+   <p><a name="debug_002dfile_002ddirectory"></a>
+Global debugging info directories default to what is set by <span class="sc">gdb</span>
 configure option <samp><span class="option">--with-separate-debug-dir</span></samp>.  During <span class="sc">gdb</span> run
 you can also set the global debugging info directories, and view the list
 <span class="sc">gdb</span> is currently using.
@@ -163,7 +164,7 @@ but they need not contain any data&mdash;much like a <code>.bss</code> section
 in an ordinary executable.
 
    <p>The <span class="sc">gnu</span> binary utilities (Binutils) package includes the
-&lsquo;<samp><span class="samp">objcopy</span></samp>&rsquo; utility that can produce
+`<samp><span class="samp">objcopy</span></samp>' utility that can produce
 the separated executable / debugging information file pairs using the
 following commands:
 
@@ -180,7 +181,7 @@ two files:
 behind a debug link in <samp><span class="file">foo</span></samp>:
 
      <pre class="smallexample">          <kbd>objcopy --add-gnu-debuglink=foo.debug foo</kbd>
-</pre>
+     </pre>
      <p>Ulrich Drepper's <samp><span class="file">elfutils</span></samp> package, starting with version 0.53, contains
 a version of the <code>strip</code> command such that the command <kbd>strip foo -f
 foo.debug</kbd> has the same functionality as the two <code>objcopy</code> commands and

@@ -3,7 +3,7 @@
 <title>Variable Attributes - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Character-Escapes.html#Character-Escapes" title="Character Escapes">
@@ -65,7 +65,7 @@ systems.  Other attributes are available for functions
 Other front ends might define more attributes
 (see <a href="C_002b_002b-Extensions.html#C_002b_002b-Extensions">Extensions to the C++ Language</a>).
 
- <p>You may also specify attributes with &lsquo;<samp><span class="samp">__</span></samp>&rsquo; preceding and following
+ <p>You may also specify attributes with `<samp><span class="samp">__</span></samp>' preceding and following
 each keyword.  This allows you to use them in header files without
 being concerned about a possible macro of the same name.  For example,
 you may use <code>__aligned__</code> instead of <code>aligned</code>.
@@ -79,7 +79,7 @@ attributes.
 structure field, measured in bytes.  For example, the declaration:
 
      <pre class="smallexample">          int x __attribute__ ((aligned (16))) = 0;
-</pre>
+     </pre>
      <p class="noindent">causes the compiler to allocate the global variable <code>x</code> on a
 16-byte boundary.  On a 68040, this could be used in conjunction with
 an <code>asm</code> expression to access the <code>move16</code> instruction which
@@ -89,7 +89,7 @@ requires 16-byte aligned operands.
 create a double-word aligned <code>int</code> pair, you could write:
 
      <pre class="smallexample">          struct foo { int x[2] __attribute__ ((aligned (8))); };
-</pre>
+     </pre>
      <p class="noindent">This is an alternative to creating a union with a <code>double</code> member,
 which forces the union to be double-word aligned.
 
@@ -107,7 +107,7 @@ which is the largest alignment ever used for any data type on the
 target machine you are compiling for.  For example, you could write:
 
      <pre class="smallexample">          short array[3] __attribute__ ((aligned (__BIGGEST_ALIGNMENT__)));
-</pre>
+     </pre>
      <p>The compiler automatically sets the alignment for the declared
 variable or field to <code>__BIGGEST_ALIGNMENT__</code>.  Doing this can
 often make copy operations more efficient, because the compiler can
@@ -166,7 +166,7 @@ do instead.  Note that the warning only occurs for uses:
      <pre class="smallexample">          extern int old_var __attribute__ ((deprecated));
           extern int old_var;
           int new_fn () { return old_var; }
-</pre>
+     </pre>
      <p class="noindent">results in a warning on line 3 but not line 2.  The optional <var>msg</var>
 argument, which must be a string, is printed in the warning if
 present.
@@ -196,7 +196,7 @@ immediately follows <code>a</code>:
             char a;
             int x[2] __attribute__ ((packed));
           };
-</pre>
+     </pre>
      <p><em>Note:</em> The 4.1, 4.2 and 4.3 series of GCC ignore the
 <code>packed</code> attribute on bit-fields of type <code>char</code>.  This has
 been fixed in GCC 4.4 but the change can lead to differences in the
@@ -227,7 +227,7 @@ section.  For example, this small program uses several specific section names:
             init_duart (&amp;a);
             init_duart (&amp;b);
           }
-</pre>
+     </pre>
      <p class="noindent">Use the <code>section</code> attribute with
 <em>global</em> variables and not <em>local</em> variables,
 as shown in the example.
@@ -262,7 +262,7 @@ shareable:
                copies see the same value.</span>  */
             return 0;
           }
-</pre>
+     </pre>
      <p class="noindent">You may only use the <code>shared</code> attribute along with <code>section</code>
 attribute with a fully-initialized global definition because of the way
 linkers work.  See <code>section</code> attribute for more information.
@@ -293,7 +293,7 @@ class itself is instantiated.
 bytes.  For example, the declaration:
 
      <pre class="smallexample">          int foo __attribute__ ((vector_size (16)));
-</pre>
+     </pre>
      <p class="noindent">causes the compiler to set the mode for <code>foo</code>, to be 16 bytes,
 divided into <code>int</code> sized units.  Assuming a 32-bit int (a vector of
 4 units of 4 bytes), the corresponding mode of <code>foo</code> is V4SI.
@@ -307,7 +307,7 @@ size as a corresponding scalar.  For example, the declaration:
 
      <pre class="smallexample">          struct S { int a; };
           struct S  __attribute__ ((vector_size (16))) foo;
-</pre>
+     </pre>
      <p class="noindent">is invalid even if the size of the structure is the same as the size of
 the <code>int</code>.
 
@@ -366,7 +366,7 @@ of the data but not how this data is accessed.
               /* Access var[] by accessor macro from avr/pgmspace.h */
               return (int) pgm_read_word (&amp; var[i]);
           }
-</pre>
+     </pre>
      <p>AVR is a Harvard architecture processor and data and read-only data
 normally resides in the data memory (RAM).
 
@@ -444,13 +444,13 @@ is assigned that address, else it is not assigned an address (it is
 assumed some other module assigns an address).  Example:
 
      <pre class="smallexample">          int timer_count __attribute__((io(0x123)));
-</pre>
+     </pre>
      <br><dt><code>cb</code><dt><code>cb (</code><var>addr</var><code>)</code><dd>Variables with the <code>cb</code> attribute are used to access the control
 bus, using special instructions.  <code>addr</code> indicates the control bus
 address.  Example:
 
      <pre class="smallexample">          int cpu_clock __attribute__((cb(0x123)));
-</pre>
+     </pre>
      </dl>
 
  <p><a name="i386-Variable-Attributes"></a>
@@ -491,7 +491,7 @@ the alignment requirement is the largest alignment requirement of its members.
 Every object is allocated an offset so that:
 
           <pre class="smallexample">               offset % alignment_requirement == 0
-</pre>
+          </pre>
           <li>Adjacent bit-fields are packed into the same 1-, 2-, or 4-byte allocation
 unit if the integral types are the same size and if the next bit-field fits
 into the current allocation unit without crossing the boundary imposed by the
@@ -512,7 +512,7 @@ are normally coalesced, the bit-fields are not coalesced.
                   unsigned long : 0;
                   unsigned long bf_2 : 12;
                 } t1;
-</pre>
+          </pre>
           <p class="noindent">The size of <code>t1</code> is 8 bytes with the zero-length bit-field.  If the
 zero-length bit-field were removed, <code>t1</code>'s size would be 4 bytes.
 
@@ -535,7 +535,7 @@ alignment of the zero-length bit-field is greater than the member that follows i
                   short : 0;
                   double bar;
                 } t3;
-</pre>
+          </pre>
           <p class="noindent">For <code>t2</code>, <code>bar</code> is placed at offset 2, rather than offset 1. 
 Accordingly, the size of <code>t2</code> is 4.  For <code>t3</code>, the zero-length
 bit-field does not affect the alignment of <code>bar</code> or, as a result, the size
@@ -557,7 +557,7 @@ still affect the alignment of the structure:
                        char foo : 6;
                        long : 0;
                      } t4;
-</pre>
+               </pre>
                <p class="noindent">Here, <code>t4</code> takes up 4 bytes.
                </ol>
 
@@ -569,7 +569,7 @@ still affect the alignment of the structure:
                   long : 0;
                   char bar;
                 } t5;
-</pre>
+          </pre>
           <p class="noindent">Here, <code>t5</code> takes up 2 bytes.
           </ol>
 </dl>

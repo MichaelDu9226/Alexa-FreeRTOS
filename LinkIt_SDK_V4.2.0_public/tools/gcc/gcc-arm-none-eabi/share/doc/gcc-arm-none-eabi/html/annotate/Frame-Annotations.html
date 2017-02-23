@@ -3,7 +3,7 @@
 <title>Frame Annotations - GDB's Obsolete Annotations</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB's Obsolete Annotations">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Value-Annotations.html#Value-Annotations" title="Value Annotations">
 <link rel="next" href="Displays.html#Displays" title="Displays">
@@ -46,8 +46,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 a number of frame commands.</em>
 
    <p><em>Frame annotations are no longer available.  The </em><span class="sc">gdb/mi</span><em>
-provides &lsquo;</em><samp><span class="samp">-stack-list-arguments</span></samp><em>&rsquo;, &lsquo;</em><samp><span class="samp">-stack-list-locals</span></samp><em>&rsquo;, and
-&lsquo;</em><samp><span class="samp">-stack-list-frames</span></samp><em>&rsquo; commands.</em>
+provides `<samp></em><span class="samp">-stack-list-arguments</span><em></samp>', `<samp></em><span class="samp">-stack-list-locals</span><em></samp>', and
+`<samp></em><span class="samp">-stack-list-frames</span><em></samp>' commands.</em>
 
    <p><a name="index-annotations-for-frames-21"></a>Whenever <span class="sc">gdb</span> prints a frame, it annotates it.  For example, this applies
 to frames printed when <span class="sc">gdb</span> stops, output from commands such as
@@ -62,7 +62,7 @@ to frames printed when <span class="sc">gdb</span> stops, output from commands s
 and other frames have positive numbers), <var>address</var> is the address of
 the code executing in that frame, and <var>level-string</var> is a string
 designed to convey the level to the user.  <var>address</var> is in the form
-&lsquo;<samp><span class="samp">0x</span></samp>&rsquo; followed by one or more lowercase hex digits (note that this
+`<samp><span class="samp">0x</span></samp>' followed by one or more lowercase hex digits (note that this
 does not depend on the language).  The frame ends with
 
    <p><a name="index-frame_002dend-23"></a>
@@ -75,7 +75,7 @@ consist of
 <li><a name="index-function_002dcall-24"></a>
      <pre class="smallexample">          ^Z^Zfunction-call
           <var>function-call-string</var>
-</pre>
+     </pre>
      <p>where <var>function-call-string</var> is text designed to convey to the user
 that this frame is associated with a function call made by <span class="sc">gdb</span> to a
 function in the program being debugged.
@@ -83,7 +83,7 @@ function in the program being debugged.
      <li><a name="index-signal_002dhandler_002dcaller-25"></a>
      <pre class="smallexample">          ^Z^Zsignal-handler-caller
           <var>signal-handler-caller-string</var>
-</pre>
+     </pre>
      <p>where <var>signal-handler-caller-string</var> is text designed to convey to
 the user that this frame is associated with whatever mechanism is used
 by this operating system to call a signal handler (it is the frame which
@@ -98,7 +98,7 @@ interesting information for the user to see) begin with
           <var>address</var>
           ^Z^Zframe-address-end
           <var>separator-string</var>
-</pre>
+     </pre>
      <p>where <var>address</var> is the address executing in the frame (the same
 address as in the <code>frame-begin</code> annotation, but printed in a form
 which is intended for user consumption&mdash;in particular, the syntax varies
@@ -112,9 +112,9 @@ benefit.
           <var>function-name</var>
           ^Z^Zframe-args
           <var>arguments</var>
-</pre>
+     </pre>
      <p>where <var>function-name</var> is the name of the function executing in the
-frame, or &lsquo;<samp><span class="samp">??</span></samp>&rsquo; if not known, and <var>arguments</var> are the arguments
+frame, or `<samp><span class="samp">??</span></samp>' if not known, and <var>arguments</var> are the arguments
 to the frame, with parentheses around them (each argument is annotated
 individually as well, see <a href="Value-Annotations.html#Value-Annotations">Value Annotations</a>).
 
@@ -129,7 +129,7 @@ individually as well, see <a href="Value-Annotations.html#Value-Annotations">Val
           ^Z^Zframe-source-line
           <var>line-number</var>
           ^Z^Zframe-source-end
-</pre>
+     </pre>
      <p>where <var>source-intro-string</var> separates for the user's benefit the
 reference from the text which precedes it, <var>filename</var> is the name of
 the source file, and <var>line-number</var> is the line number within that
@@ -141,7 +141,7 @@ it is annotated with
 
      <pre class="smallexample">          ^Z^Zframe-where
           <var>information</var>
-</pre>
+     </pre>
      <p>Then, if source is to actually be displayed for this frame (for example,
 this is not true for output from the <code>backtrace</code> command), then a
 <code>source</code> annotation (see <a href="Source-Annotations.html#Source-Annotations">Source Annotations</a>) is displayed.  Unlike

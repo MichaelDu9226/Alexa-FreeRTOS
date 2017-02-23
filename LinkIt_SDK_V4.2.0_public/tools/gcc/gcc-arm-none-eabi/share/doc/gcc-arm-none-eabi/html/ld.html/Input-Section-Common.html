@@ -3,7 +3,7 @@
 <title>Input Section Common - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Input-Section.html#Input-Section" title="Input Section">
 <link rel="prev" href="Input-Section-Wildcards.html#Input-Section-Wildcards" title="Input Section Wildcards">
@@ -51,29 +51,29 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Input-Section.html#Input-Section">Input
 <p><a name="index-common-symbol-placement-416"></a><a name="index-uninitialized-data-placement-417"></a>A special notation is needed for common symbols, because in many object
 file formats common symbols do not have a particular input section.  The
 linker treats common symbols as though they are in an input section
-named &lsquo;<samp><span class="samp">COMMON</span></samp>&rsquo;.
+named `<samp><span class="samp">COMMON</span></samp>'.
 
-   <p>You may use file names with the &lsquo;<samp><span class="samp">COMMON</span></samp>&rsquo; section just as with any
+   <p>You may use file names with the `<samp><span class="samp">COMMON</span></samp>' section just as with any
 other input sections.  You can use this to place common symbols from a
 particular input file in one section while common symbols from other
 input files are placed in another section.
 
    <p>In most cases, common symbols in input files will be placed in the
-&lsquo;<samp><span class="samp">.bss</span></samp>&rsquo; section in the output file.  For example:
+`<samp><span class="samp">.bss</span></samp>' section in the output file.  For example:
 <pre class="smallexample">     .bss { *(.bss) *(COMMON) }
 </pre>
    <p><a name="index-scommon-section-418"></a><a name="index-small-common-symbols-419"></a>Some object file formats have more than one type of common symbol.  For
 example, the MIPS ELF object file format distinguishes standard common
 symbols and small common symbols.  In this case, the linker will use a
 different special section name for other types of common symbols.  In
-the case of MIPS ELF, the linker uses &lsquo;<samp><span class="samp">COMMON</span></samp>&rsquo; for standard common
-symbols and &lsquo;<samp><span class="samp">.scommon</span></samp>&rsquo; for small common symbols.  This permits you
+the case of MIPS ELF, the linker uses `<samp><span class="samp">COMMON</span></samp>' for standard common
+symbols and `<samp><span class="samp">.scommon</span></samp>' for small common symbols.  This permits you
 to map the different types of common symbols into memory at different
 locations.
 
-   <p><a name="index-g_t_005bCOMMON_005d-420"></a>You will sometimes see &lsquo;<samp><span class="samp">[COMMON]</span></samp>&rsquo; in old linker scripts.  This
+   <p><a name="index-g_t_005bCOMMON_005d-420"></a>You will sometimes see `<samp><span class="samp">[COMMON]</span></samp>' in old linker scripts.  This
 notation is now considered obsolete.  It is equivalent to
-&lsquo;<samp><span class="samp">*(COMMON)</span></samp>&rsquo;.
+`<samp><span class="samp">*(COMMON)</span></samp>'.
 
    </body></html>
 

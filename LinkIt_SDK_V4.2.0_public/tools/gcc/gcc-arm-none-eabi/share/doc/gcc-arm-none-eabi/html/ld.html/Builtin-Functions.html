@@ -3,7 +3,7 @@
 <title>Builtin Functions - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Expressions.html#Expressions" title="Expressions">
 <link rel="prev" href="Expression-Section.html#Expression-Section" title="Expression Section">
@@ -73,7 +73,7 @@ the other two will be absolute:
               symbol_2 = start_of_output_1;
               }
           ... }
-</pre>
+     </pre>
      <br><dt><code>ALIGN(</code><var>align</var><code>)</code><dt><code>ALIGN(</code><var>exp</var><code>,</code><var>align</var><code>)</code><dd><a name="index-ALIGN_0028_0040var_007balign_007d_0029-538"></a><a name="index-ALIGN_0028_0040var_007bexp_007d_002c_0040var_007balign_007d_0029-539"></a><a name="index-round-up-location-counter-540"></a><a name="index-align-location-counter-541"></a><a name="index-round-up-expression-542"></a><a name="index-align-expression-543"></a>Return the location counter (<code>.</code>) or arbitrary expression aligned
 to the next <var>align</var> boundary.  The single operand <code>ALIGN</code>
 doesn't change the value of the location counter&mdash;it just does
@@ -91,7 +91,7 @@ input sections:
               variable = ALIGN(0x8000);
             }
           ... }
-</pre>
+     </pre>
      <p class="noindent">The first use of <code>ALIGN</code> in this example specifies the location of
 a section because it is used as the optional <var>address</var> attribute of
 a section definition (see <a href="Output-Section-Address.html#Output-Section-Address">Output Section Address</a>).  The second use
@@ -110,17 +110,17 @@ value in that section.
               ...
               }
           ... }
-</pre>
+     </pre>
      <br><dt><code>BLOCK(</code><var>exp</var><code>)</code><dd><a name="index-BLOCK_0028_0040var_007bexp_007d_0029-546"></a>This is a synonym for <code>ALIGN</code>, for compatibility with older linker
 scripts.  It is most often seen when setting the address of an output
 section.
 
      <br><dt><code>DATA_SEGMENT_ALIGN(</code><var>maxpagesize</var><code>, </code><var>commonpagesize</var><code>)</code><dd><a name="index-DATA_005fSEGMENT_005fALIGN_0028_0040var_007bmaxpagesize_007d_002c-_0040var_007bcommonpagesize_007d_0029-547"></a>This is equivalent to either
      <pre class="smallexample">          (ALIGN(<var>maxpagesize</var>) + (. &amp; (<var>maxpagesize</var> - 1)))
-</pre>
+     </pre>
      <p>or
      <pre class="smallexample">          (ALIGN(<var>maxpagesize</var>) + (. &amp; (<var>maxpagesize</var> - <var>commonpagesize</var>)))
-</pre>
+     </pre>
      <p class="noindent">depending on whether the latter uses fewer <var>commonpagesize</var> sized pages
 for the data segment (area between the result of this expression and
 <code>DATA_SEGMENT_END</code>) than the former or not. 
@@ -136,15 +136,15 @@ working on system page sizes up to <var>maxpagesize</var>).
 
      <p class="noindent">Example:
      <pre class="smallexample">            . = DATA_SEGMENT_ALIGN(0x10000, 0x2000);
-</pre>
+     </pre>
      <br><dt><code>DATA_SEGMENT_END(</code><var>exp</var><code>)</code><dd><a name="index-DATA_005fSEGMENT_005fEND_0028_0040var_007bexp_007d_0029-548"></a>This defines the end of data segment for <code>DATA_SEGMENT_ALIGN</code>
 evaluation purposes.
 
      <pre class="smallexample">            . = DATA_SEGMENT_END(.);
-</pre>
+     </pre>
      <br><dt><code>DATA_SEGMENT_RELRO_END(</code><var>offset</var><code>, </code><var>exp</var><code>)</code><dd><a name="index-DATA_005fSEGMENT_005fRELRO_005fEND_0028_0040var_007boffset_007d_002c-_0040var_007bexp_007d_0029-549"></a>This defines the end of the <code>PT_GNU_RELRO</code> segment when
-&lsquo;<samp><span class="samp">-z relro</span></samp>&rsquo; option is used.  Second argument is returned. 
-When &lsquo;<samp><span class="samp">-z relro</span></samp>&rsquo; option is not present, <code>DATA_SEGMENT_RELRO_END</code>
+`<samp><span class="samp">-z relro</span></samp>' option is used.  Second argument is returned. 
+When `<samp><span class="samp">-z relro</span></samp>' option is not present, <code>DATA_SEGMENT_RELRO_END</code>
 does nothing, otherwise <code>DATA_SEGMENT_ALIGN</code> is padded so that
 <var>exp</var> + <var>offset</var> is aligned to the most commonly used page
 boundary for particular target.  If present in the linker script,
@@ -152,13 +152,13 @@ it must always come in between <code>DATA_SEGMENT_ALIGN</code> and
 <code>DATA_SEGMENT_END</code>.
 
      <pre class="smallexample">            . = DATA_SEGMENT_RELRO_END(24, .);
-</pre>
+     </pre>
      <br><dt><code>DEFINED(</code><var>symbol</var><code>)</code><dd><a name="index-DEFINED_0028_0040var_007bsymbol_007d_0029-550"></a><a name="index-symbol-defaults-551"></a>Return 1 if <var>symbol</var> is in the linker global symbol table and is
 defined before the statement using DEFINED in the script, otherwise
 return 0.  You can use this function to provide
 default values for symbols.  For example, the following script fragment
-shows how to set a global symbol &lsquo;<samp><span class="samp">begin</span></samp>&rsquo; to the first location in
-the &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; section&mdash;but if a symbol called &lsquo;<samp><span class="samp">begin</span></samp>&rsquo; already
+shows how to set a global symbol `<samp><span class="samp">begin</span></samp>' to the first location in
+the `<samp><span class="samp">.text</span></samp>' section&mdash;but if a symbol called `<samp><span class="samp">begin</span></samp>' already
 existed, its value is preserved:
 
      <pre class="smallexample">          SECTIONS { ...
@@ -168,7 +168,7 @@ existed, its value is preserved:
             }
             ...
           }
-</pre>
+     </pre>
      <br><dt><code>LENGTH(</code><var>memory</var><code>)</code><dd><a name="index-LENGTH_0028_0040var_007bmemory_007d_0029-552"></a>Return the length of the memory region named <var>memory</var>.
 
      <br><dt><code>LOADADDR(</code><var>section</var><code>)</code><dd><a name="index-LOADADDR_0028_0040var_007bsection_007d_0029-553"></a><a name="index-section-load-address-in-expression-554"></a>Return the absolute LMA of the named <var>section</var>.  (see <a href="Output-Section-LMA.html#Output-Section-LMA">Output Section LMA</a>).
@@ -185,9 +185,9 @@ output file, the two functions are equivalent.
      <br><dt><code>ORIGIN(</code><var>memory</var><code>)</code><dd><a name="index-ORIGIN_0028_0040var_007bmemory_007d_0029-559"></a>Return the origin of the memory region named <var>memory</var>.
 
      <br><dt><code>SEGMENT_START(</code><var>segment</var><code>, </code><var>default</var><code>)</code><dd><a name="index-SEGMENT_005fSTART_0028_0040var_007bsegment_007d_002c-_0040var_007bdefault_007d_0029-560"></a>Return the base address of the named <var>segment</var>.  If an explicit
-value has been given for this segment (with a command-line &lsquo;<samp><span class="samp">-T</span></samp>&rsquo;
+value has been given for this segment (with a command-line `<samp><span class="samp">-T</span></samp>'
 option) that value will be returned; otherwise the value will be
-<var>default</var>.  At present, the &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; command-line option can only
+<var>default</var>.  At present, the `<samp><span class="samp">-T</span></samp>' command-line option can only
 be used to set the base address for the &ldquo;text&rdquo;, &ldquo;data&rdquo;, and
 &ldquo;bss&rdquo; sections, but you can use <code>SEGMENT_START</code> with any segment
 name.
@@ -205,7 +205,7 @@ evaluated, the linker will report an error.  In the following example,
             symbol_1 = .end - .start ;
             symbol_2 = SIZEOF(.output);
           ... }
-</pre>
+     </pre>
      <br><dt><code>SIZEOF_HEADERS</code><dt><code>sizeof_headers</code><dd><a name="index-SIZEOF_005fHEADERS-563"></a><a name="index-header-size-564"></a>Return the size in bytes of the output file's headers.  This is
 information which appears at the start of the output file.  You can use
 this number when setting the start address of the first section, if you
@@ -215,8 +215,8 @@ choose, to facilitate paging.
 <code>SIZEOF_HEADERS</code> builtin function, the linker must compute the
 number of program headers before it has determined all the section
 addresses and sizes.  If the linker later discovers that it needs
-additional program headers, it will report an error &lsquo;<samp><span class="samp">not enough
-room for program headers</span></samp>&rsquo;.  To avoid this error, you must avoid using
+additional program headers, it will report an error `<samp><span class="samp">not enough
+room for program headers</span></samp>'.  To avoid this error, you must avoid using
 the <code>SIZEOF_HEADERS</code> function, or you must rework your linker
 script to avoid forcing the linker to use additional program headers, or
 you must define the program headers yourself using the <code>PHDRS</code>

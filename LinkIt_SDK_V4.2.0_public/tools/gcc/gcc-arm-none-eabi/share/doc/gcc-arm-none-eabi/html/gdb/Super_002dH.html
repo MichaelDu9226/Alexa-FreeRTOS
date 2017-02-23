@@ -3,7 +3,7 @@
 <title>Super-H - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Embedded-Processors.html#Embedded-Processors" title="Embedded Processors">
 <link rel="prev" href="CRIS.html#CRIS" title="CRIS">
@@ -52,14 +52,14 @@ commands:
 
      <dl>
 <dt><code>set sh calling-convention </code><var>convention</var><dd><a name="index-set-sh-calling_002dconvention-1498"></a>Set the calling-convention used when calling functions from <span class="sc">gdb</span>. 
-Allowed values are &lsquo;<samp><span class="samp">gcc</span></samp>&rsquo;, which is the default setting, and &lsquo;<samp><span class="samp">renesas</span></samp>&rsquo;. 
-With the &lsquo;<samp><span class="samp">gcc</span></samp>&rsquo; setting, functions are called using the <span class="sc">gcc</span> calling
+Allowed values are `<samp><span class="samp">gcc</span></samp>', which is the default setting, and `<samp><span class="samp">renesas</span></samp>'. 
+With the `<samp><span class="samp">gcc</span></samp>' setting, functions are called using the <span class="sc">gcc</span> calling
 convention.  If the DWARF-2 information of the called function specifies
 that the function follows the Renesas calling convention, the function
 is called using the Renesas calling convention.  If the calling convention
-is set to &lsquo;<samp><span class="samp">renesas</span></samp>&rsquo;, the Renesas calling convention is always used,
+is set to `<samp><span class="samp">renesas</span></samp>', the Renesas calling convention is always used,
 regardless of the DWARF-2 information.  This can be used to override the
-default of &lsquo;<samp><span class="samp">gcc</span></samp>&rsquo; if debug information is missing, or the compiler
+default of `<samp><span class="samp">gcc</span></samp>' if debug information is missing, or the compiler
 does not emit the DWARF-2 calling convention entry for a function.
 
      <br><dt><code>show sh calling-convention</code><dd><a name="index-show-sh-calling_002dconvention-1499"></a>Show the current calling convention setting.

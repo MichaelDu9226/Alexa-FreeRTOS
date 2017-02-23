@@ -3,7 +3,7 @@
 <title>Constants - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="RTL.html#RTL" title="RTL">
 <link rel="prev" href="Machine-Modes.html#Machine-Modes" title="Machine Modes">
@@ -136,9 +136,9 @@ strings in C are placed in memory.
 
      <p><a name="index-symbol_005fref-1983"></a><br><dt><code>(symbol_ref:</code><var>mode</var> <var>symbol</var><code>)</code><dd>Represents the value of an assembler label for data.  <var>symbol</var> is
 a string that describes the name of the assembler label.  If it starts
-with a &lsquo;<samp><span class="samp">*</span></samp>&rsquo;, the label is the rest of <var>symbol</var> not including
-the &lsquo;<samp><span class="samp">*</span></samp>&rsquo;.  Otherwise, the label is <var>symbol</var>, usually prefixed
-with &lsquo;<samp><span class="samp">_</span></samp>&rsquo;.
+with a `<samp><span class="samp">*</span></samp>', the label is the rest of <var>symbol</var> not including
+the `<samp><span class="samp">*</span></samp>'.  Otherwise, the label is <var>symbol</var>, usually prefixed
+with `<samp><span class="samp">_</span></samp>'.
 
      <p>The <code>symbol_ref</code> contains a mode, which is usually <code>Pmode</code>. 
 Usually that is the only mode for which a symbol is directly valid.

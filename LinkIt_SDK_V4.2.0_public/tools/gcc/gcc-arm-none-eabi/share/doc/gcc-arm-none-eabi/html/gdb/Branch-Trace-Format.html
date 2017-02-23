@@ -3,7 +3,7 @@
 <title>Branch Trace Format - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Protocol.html#Remote-Protocol" title="Remote Protocol">
 <link rel="prev" href="Traceframe-Info-Format.html#Traceframe-Info-Format" title="Traceframe Info Format">
@@ -51,7 +51,7 @@ In order to display the branch trace of an inferior thread,
 represented as list of sequential code blocks that are connected via
 branches.  The code in each block has been executed sequentially.
 
-   <p>This list is obtained using the &lsquo;<samp><span class="samp">qXfer:btrace:read</span></samp>&rsquo;
+   <p>This list is obtained using the `<samp><span class="samp">qXfer:btrace:read</span></samp>'
 (see <a href="qXfer-btrace-read.html#qXfer-btrace-read">qXfer btrace read</a>) packet and is an XML document.
 
    <p><span class="sc">gdb</span> must be linked with the Expat library to support XML
@@ -72,7 +72,7 @@ traceframe info discovery.  See <a href="Expat.html#Expat">Expat</a>.
 and ending at <var>end</var>:
 
      <pre class="smallexample">          &lt;block begin="<var>begin</var>" end="<var>end</var>"/&gt;
-</pre>
+     </pre>
      </ul>
 
    <p>The formal DTD for the branch trace format is given below:
@@ -93,5 +93,5 @@ and ending at <var>end</var>:
 <!-- This file is part of the GDB manual. -->
 <!-- Copyright (C) 2003-2013 Free Software Foundation, Inc. -->
 <!-- See the file gdb.texinfo for copying conditions. -->
-   </body></html>
+</body></html>
 

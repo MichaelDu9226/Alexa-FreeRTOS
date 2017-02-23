@@ -3,7 +3,7 @@
 <title>Function Entry - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stack-and-Calling.html#Stack-and-Calling" title="Stack and Calling">
 <link rel="prev" href="Caller-Saves.html#Caller-Saves" title="Caller Saves">
@@ -130,14 +130,14 @@ registers to restore are determined from <code>regs_ever_live</code> and
 
       <p>On some machines, there is a single instruction that does all the work
 of returning from the function.  On these machines, give that
-instruction the name &lsquo;<samp><span class="samp">return</span></samp>&rsquo; and do not define the macro
+instruction the name `<samp><span class="samp">return</span></samp>' and do not define the macro
 <code>TARGET_ASM_FUNCTION_EPILOGUE</code> at all.
 
-      <p>Do not define a pattern named &lsquo;<samp><span class="samp">return</span></samp>&rsquo; if you want the
+      <p>Do not define a pattern named `<samp><span class="samp">return</span></samp>' if you want the
 <code>TARGET_ASM_FUNCTION_EPILOGUE</code> to be used.  If you want the target
 switches to control whether return instructions or epilogues are used,
-define a &lsquo;<samp><span class="samp">return</span></samp>&rsquo; pattern with a validity condition that tests the
-target switches appropriately.  If the &lsquo;<samp><span class="samp">return</span></samp>&rsquo; pattern's validity
+define a `<samp><span class="samp">return</span></samp>' pattern with a validity condition that tests the
+target switches appropriately.  If the `<samp><span class="samp">return</span></samp>' pattern's validity
 condition is false, epilogues will be used.
 
       <p>On machines where functions may or may not have frame-pointers, the
@@ -209,7 +209,7 @@ compiler knows this regardless of <code>EXIT_IGNORE_STACK</code>.
 <div class="defun">
 &mdash; Macro: <b>EPILOGUE_USES</b> (<var>regno</var>)<var><a name="index-EPILOGUE_005fUSES-4258"></a></var><br>
 <blockquote><p>Define this macro as a C expression that is nonzero for registers that are
-used by the epilogue or the &lsquo;<samp><span class="samp">return</span></samp>&rsquo; pattern.  The stack and frame
+used by the epilogue or the `<samp><span class="samp">return</span></samp>' pattern.  The stack and frame
 pointer registers are already assumed to be used as needed. 
 </p></blockquote></div>
 
@@ -232,7 +232,7 @@ the real function.
 contains the incoming first argument.  Assume that this argument
 contains a pointer, and is the one used to pass the <code>this</code> pointer
 in C++.  This is the incoming argument <em>before</em> the function prologue,
-e.g. &lsquo;<samp><span class="samp">%o0</span></samp>&rsquo; on a sparc.  The addition must preserve the values of
+e.g. `<samp><span class="samp">%o0</span></samp>' on a sparc.  The addition must preserve the values of
 all other incoming arguments.
 
       <p>Then, if <var>vcall_offset</var> is nonzero, an additional adjustment should be
@@ -240,11 +240,11 @@ made after adding <code>delta</code>.  In particular, if <var>p</var> is the
 adjusted pointer, the following adjustment should be made:
 
      <pre class="smallexample">          p += (*((ptrdiff_t **)p))[vcall_offset/sizeof(ptrdiff_t)]
-</pre>
+     </pre>
       <p>After the additions, emit code to jump to <var>function</var>, which is a
 <code>FUNCTION_DECL</code>.  This is a direct pure jump, not a call, and does
 not touch the return address.  Hence returning from <var>FUNCTION</var> will
-return to whoever called the current &lsquo;<samp><span class="samp">thunk</span></samp>&rsquo;.
+return to whoever called the current `<samp><span class="samp">thunk</span></samp>'.
 
       <p>The effect must be as if <var>function</var> had been called directly with
 the adjusted first argument.  This macro is responsible for emitting all

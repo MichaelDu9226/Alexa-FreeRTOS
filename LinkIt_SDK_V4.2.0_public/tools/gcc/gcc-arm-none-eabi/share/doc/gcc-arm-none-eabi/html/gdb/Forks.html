@@ -3,7 +3,7 @@
 <title>Forks - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Running.html#Running" title="Running">
 <link rel="prev" href="Threads.html#Threads" title="Threads">
@@ -118,7 +118,7 @@ is held suspended.
      <p><a name="index-show-detach_002don_002dfork-191"></a><br><dt><code>show detach-on-fork</code><dd>Show whether detach-on-fork mode is on/off. 
 </dl>
 
-   <p>If you choose to set &lsquo;<samp><span class="samp">detach-on-fork</span></samp>&rsquo; mode off, then <span class="sc">gdb</span>
+   <p>If you choose to set `<samp><span class="samp">detach-on-fork</span></samp>' mode off, then <span class="sc">gdb</span>
 will retain control of all forked processes (including nested forks). 
 You can list the forked processes under the control of <span class="sc">gdb</span> by
 using the <code>info&nbsp;inferiors</code><!-- /@w --> command, and switch from one fork
@@ -173,7 +173,7 @@ original inferior.
                  Id   Description   Executable
                * 2    &lt;null&gt;        prog2
                  1    &lt;null&gt;        prog1
-</pre>
+          </pre>
           <br><dt><code>same</code><dd><span class="sc">gdb</span> keeps the process bound to the same inferior.  The new
 executable image replaces the previous executable loaded in the
 inferior.  Restarting the inferior after the <code>exec</code> call, with
@@ -191,7 +191,7 @@ running after the <code>exec</code> call.  This is the default mode.
                (gdb) info inferiors
                  Id   Description   Executable
                * 1    &lt;null&gt;        prog2
-</pre>
+          </pre>
           </dl>
      </dl>
 

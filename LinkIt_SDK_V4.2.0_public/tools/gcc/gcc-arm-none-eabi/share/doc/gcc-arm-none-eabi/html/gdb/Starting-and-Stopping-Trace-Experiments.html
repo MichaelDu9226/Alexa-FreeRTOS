@@ -3,7 +3,7 @@
 <title>Starting and Stopping Trace Experiments - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Set-Tracepoints.html#Set-Tracepoints" title="Set Tracepoints">
 <link rel="prev" href="Listing-Static-Tracepoint-Markers.html#Listing-Static-Tracepoint-Markers" title="Listing Static Tracepoint Markers">
@@ -88,7 +88,8 @@ collection.
      	[time passes ...]
      (gdb) <b>tstop</b>
 </pre>
-   <p><a name="disconnected-tracing"></a><a name="index-disconnected-tracing-798"></a>You can choose to continue running the trace experiment even if
+   <p><a name="disconnected-tracing"></a>
+<a name="index-disconnected-tracing-798"></a>You can choose to continue running the trace experiment even if
 <span class="sc">gdb</span> disconnects from the target, voluntarily or
 involuntarily.  For commands such as <code>detach</code>, the debugger will
 ask what you want to do with the trace.  But for unexpected
@@ -131,7 +132,7 @@ frames, oldest first, until there is enough room to continue
 collecting.  This is especially useful if your tracepoints are being
 hit too often, and your trace gets terminated prematurely because the
 buffer is full.  To ask for a circular trace buffer, simply set
-&lsquo;<samp><span class="samp">circular-trace-buffer</span></samp>&rsquo; to on.  You can set this at any time,
+`<samp><span class="samp">circular-trace-buffer</span></samp>' to on.  You can set this at any time,
 including during tracing; if the agent can do it, it will change
 buffer handling on the fly, otherwise it will not take effect until
 the next run.

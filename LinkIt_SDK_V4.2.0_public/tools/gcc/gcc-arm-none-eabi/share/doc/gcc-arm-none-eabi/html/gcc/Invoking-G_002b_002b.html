@@ -3,7 +3,7 @@
 <title>Invoking G++ - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="Overall-Options.html#Overall-Options" title="Overall Options">
@@ -55,21 +55,21 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Invoking-GCC.html#Invoking-GCC">Invokin
 
 <h3 class="section">3.3 Compiling C++ Programs</h3>
 
-<p><a name="index-suffixes-for-C_002b_002b-source-95"></a><a name="index-C_002b_002b-source-file-suffixes-96"></a>C++ source files conventionally use one of the suffixes &lsquo;<samp><span class="samp">.C</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">.cc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.cpp</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.CPP</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.c++</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.cp</span></samp>&rsquo;, or
-&lsquo;<samp><span class="samp">.cxx</span></samp>&rsquo;; C++ header files often use &lsquo;<samp><span class="samp">.hh</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.hpp</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">.H</span></samp>&rsquo;, or (for shared template code) &lsquo;<samp><span class="samp">.tcc</span></samp>&rsquo;; and
-preprocessed C++ files use the suffix &lsquo;<samp><span class="samp">.ii</span></samp>&rsquo;.  GCC recognizes
+<p><a name="index-suffixes-for-C_002b_002b-source-95"></a><a name="index-C_002b_002b-source-file-suffixes-96"></a>C++ source files conventionally use one of the suffixes `<samp><span class="samp">.C</span></samp>',
+`<samp><span class="samp">.cc</span></samp>', `<samp><span class="samp">.cpp</span></samp>', `<samp><span class="samp">.CPP</span></samp>', `<samp><span class="samp">.c++</span></samp>', `<samp><span class="samp">.cp</span></samp>', or
+`<samp><span class="samp">.cxx</span></samp>'; C++ header files often use `<samp><span class="samp">.hh</span></samp>', `<samp><span class="samp">.hpp</span></samp>',
+`<samp><span class="samp">.H</span></samp>', or (for shared template code) `<samp><span class="samp">.tcc</span></samp>'; and
+preprocessed C++ files use the suffix `<samp><span class="samp">.ii</span></samp>'.  GCC recognizes
 files with these names and compiles them as C++ programs even if you
 call the compiler the same way as for compiling C programs (usually
 with the name <samp><span class="command">gcc</span></samp>).
 
  <p><a name="index-g_002b_002b-97"></a><a name="index-c_002b_002b-98"></a>However, the use of <samp><span class="command">gcc</span></samp> does not add the C++ library. 
 <samp><span class="command">g++</span></samp> is a program that calls GCC and automatically specifies linking
-against the C++ library.  It treats &lsquo;<samp><span class="samp">.c</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">.h</span></samp>&rsquo; and &lsquo;<samp><span class="samp">.i</span></samp>&rsquo; files as C++ source files instead of C source
+against the C++ library.  It treats `<samp><span class="samp">.c</span></samp>',
+`<samp><span class="samp">.h</span></samp>' and `<samp><span class="samp">.i</span></samp>' files as C++ source files instead of C source
 files unless <samp><span class="option">-x</span></samp> is used.  This program is also useful when
-precompiling a C header file with a &lsquo;<samp><span class="samp">.h</span></samp>&rsquo; extension for use in C++
+precompiling a C header file with a `<samp><span class="samp">.h</span></samp>' extension for use in C++
 compilations.  On many systems, <samp><span class="command">g++</span></samp> is also installed with
 the name <samp><span class="command">c++</span></samp>.
 

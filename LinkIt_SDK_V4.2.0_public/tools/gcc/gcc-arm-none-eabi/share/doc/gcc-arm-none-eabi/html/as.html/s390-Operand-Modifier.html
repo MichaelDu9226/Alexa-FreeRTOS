@@ -3,7 +3,7 @@
 <title>s390 Operand Modifier - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="s390-Syntax.html#s390-Syntax" title="s390 Syntax">
 <link rel="prev" href="s390-Aliases.html#s390-Aliases" title="s390 Aliases">
@@ -54,16 +54,16 @@ If a symbol modifier is attached to a symbol in an expression for an
 instruction operand field, the symbol term is replaced with a reference
 to an object in the global offset table (GOT) or the procedure linkage
 table (PLT). The following expressions are allowed:
-&lsquo;<samp><span class="samp">symbol@modifier + constant</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">symbol@modifier + label + constant</span></samp>&rsquo;, and
-&lsquo;<samp><span class="samp">symbol@modifier - label + constant</span></samp>&rsquo;. 
-The term &lsquo;<samp><span class="samp">symbol</span></samp>&rsquo; is the symbol that will be entered into the GOT or
-PLT, &lsquo;<samp><span class="samp">label</span></samp>&rsquo; is a local label, and &lsquo;<samp><span class="samp">constant</span></samp>&rsquo; is an arbitrary
+`<samp><span class="samp">symbol@modifier + constant</span></samp>',
+`<samp><span class="samp">symbol@modifier + label + constant</span></samp>', and
+`<samp><span class="samp">symbol@modifier - label + constant</span></samp>'. 
+The term `<samp><span class="samp">symbol</span></samp>' is the symbol that will be entered into the GOT or
+PLT, `<samp><span class="samp">label</span></samp>' is a local label, and `<samp><span class="samp">constant</span></samp>' is an arbitrary
 expression that the assembler can evaluate to a constant value.
 
-   <p>The term &lsquo;<samp><span class="samp">(symbol + constant1)@modifier +/- label + constant2</span></samp>&rsquo;
+   <p>The term `<samp><span class="samp">(symbol + constant1)@modifier +/- label + constant2</span></samp>'
 is also accepted but a warning message is printed and the term is
-converted to &lsquo;<samp><span class="samp">symbol@modifier +/- label + constant1 + constant2</span></samp>&rsquo;.
+converted to `<samp><span class="samp">symbol@modifier +/- label + constant1 + constant2</span></samp>'.
 
      <dl>
 <dt><code>@got</code><dt><code>@got12</code><dd>The @got modifier can be used for displacement fields, 16-bit immediate
@@ -107,8 +107,8 @@ instruction address.
 </dl>
 
    <p>For more information about the thread local storage modifiers
-&lsquo;<samp><span class="samp">gotntpoff</span></samp>&rsquo; and &lsquo;<samp><span class="samp">indntpoff</span></samp>&rsquo; see the ELF extension documentation
-&lsquo;<samp><span class="samp">ELF Handling For Thread-Local Storage</span></samp>&rsquo;.
+`<samp><span class="samp">gotntpoff</span></samp>' and `<samp><span class="samp">indntpoff</span></samp>' see the ELF extension documentation
+`<samp><span class="samp">ELF Handling For Thread-Local Storage</span></samp>'.
 
    </body></html>
 

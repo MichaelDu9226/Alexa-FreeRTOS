@@ -3,7 +3,7 @@
 <title>Word Designators - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="History-Interaction.html#History-Interaction" title="History Interaction">
 <link rel="prev" href="Event-Designators.html#Event-Designators" title="Event Designators">
@@ -48,9 +48,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="History-Interaction.html#History-Intera
 <h4 class="subsection">33.1.2 Word Designators</h4>
 
 <p>Word designators are used to select desired words from the event. 
-A &lsquo;<samp><span class="samp">:</span></samp>&rsquo; separates the event specification from the word designator.  It
-may be omitted if the word designator begins with a &lsquo;<samp><span class="samp">^</span></samp>&rsquo;, &lsquo;<samp><span class="samp">$</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">*</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">%</span></samp>&rsquo;.  Words are numbered from the beginning
+A `<samp><span class="samp">:</span></samp>' separates the event specification from the word designator.  It
+may be omitted if the word designator begins with a `<samp><span class="samp">^</span></samp>', `<samp><span class="samp">$</span></samp>',
+`<samp><span class="samp">*</span></samp>', `<samp><span class="samp">-</span></samp>', or `<samp><span class="samp">%</span></samp>'.  Words are numbered from the beginning
 of the line, with the first word being denoted by 0 (zero).  Words are
 inserted into the current line separated by single spaces.
 
@@ -78,17 +78,17 @@ the letters <code>fi</code>.
 
      <br><dt><code>$</code><dd>The last argument.
 
-     <br><dt><code>%</code><dd>The word matched by the most recent &lsquo;<samp><span class="samp">?</span><var>string</var><span class="samp">?</span></samp>&rsquo; search.
+     <br><dt><code>%</code><dd>The word matched by the most recent `<samp><span class="samp">?</span><var>string</var><span class="samp">?</span></samp>' search.
 
-     <br><dt><var>x</var><code>-</code><var>y</var><dd>A range of words; &lsquo;<samp><span class="samp">-</span><var>y</var></samp>&rsquo; abbreviates &lsquo;<samp><span class="samp">0-</span><var>y</var></samp>&rsquo;.
+     <br><dt><var>x</var><code>-</code><var>y</var><dd>A range of words; `<samp><span class="samp">-</span><var>y</var></samp>' abbreviates `<samp><span class="samp">0-</span><var>y</var></samp>'.
 
-     <br><dt><code>*</code><dd>All of the words, except the <code>0</code>th.  This is a synonym for &lsquo;<samp><span class="samp">1-$</span></samp>&rsquo;. 
-It is not an error to use &lsquo;<samp><span class="samp">*</span></samp>&rsquo; if there is just one word in the event;
+     <br><dt><code>*</code><dd>All of the words, except the <code>0</code>th.  This is a synonym for `<samp><span class="samp">1-$</span></samp>'. 
+It is not an error to use `<samp><span class="samp">*</span></samp>' if there is just one word in the event;
 the empty string is returned in that case.
 
-     <br><dt><var>x</var><code>*</code><dd>Abbreviates &lsquo;<samp><var>x</var><span class="samp">-$</span></samp>&rsquo;
+     <br><dt><var>x</var><code>*</code><dd>Abbreviates `<samp><var>x</var><span class="samp">-$</span></samp>'
 
-     <br><dt><var>x</var><code>-</code><dd>Abbreviates &lsquo;<samp><var>x</var><span class="samp">-$</span></samp>&rsquo; like &lsquo;<samp><var>x</var><span class="samp">*</span></samp>&rsquo;, but omits the last word.
+     <br><dt><var>x</var><code>-</code><dd>Abbreviates `<samp><var>x</var><span class="samp">-$</span></samp>' like `<samp><var>x</var><span class="samp">*</span></samp>', but omits the last word.
 
    </dl>
 

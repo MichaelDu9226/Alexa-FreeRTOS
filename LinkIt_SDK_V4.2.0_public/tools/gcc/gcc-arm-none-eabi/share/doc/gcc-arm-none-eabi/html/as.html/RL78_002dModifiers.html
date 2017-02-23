@@ -3,7 +3,7 @@
 <title>RL78-Modifiers - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="RL78_002dDependent.html#RL78_002dDependent" title="RL78-Dependent">
 <link rel="prev" href="RL78_002dOpts.html#RL78_002dOpts" title="RL78-Opts">
@@ -60,19 +60,19 @@ When loading a 20-bit (or wider) address into registers, this modifier
 selects the 16 least significant bits.
 
      <pre class="smallexample">            movw ax,#%lo16(_sym)
-</pre>
+     </pre>
      <br><dt><code>%hi16()</code><dd>
 When loading a 20-bit (or wider) address into registers, this modifier
 selects the 16 most significant bits.
 
      <pre class="smallexample">            movw ax,#%hi16(_sym)
-</pre>
+     </pre>
      <br><dt><code>%hi8()</code><dd>
 When loading a 20-bit (or wider) address into registers, this modifier
 selects the 8 bits that would go into CS or ES (i.e. bits 23..16).
 
      <pre class="smallexample">            mov es, #%hi8(_sym)
-</pre>
+     </pre>
      </dl>
 
    </body></html>

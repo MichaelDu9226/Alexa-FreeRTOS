@@ -3,7 +3,7 @@
 <title>Argument Prescan - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Macro-Pitfalls.html#Macro-Pitfalls" title="Macro Pitfalls">
 <link rel="prev" href="Self_002dReferential-Macros.html#Self_002dReferential-Macros" title="Self-Referential Macros">
@@ -108,7 +108,7 @@ instance, if you have
           #define XAFTERX(x) AFTERX(x)
           #define TABLESIZE 1024
           #define BUFSIZE TABLESIZE
-</pre>
+     </pre>
      <p>then <code>AFTERX(BUFSIZE)</code> expands to <code>X_BUFSIZE</code>, and
 <code>XAFTERX(BUFSIZE)</code> expands to <code>X_1024</code>.  (Not to
 <code>X_TABLESIZE</code>.  Prescan always does a complete expansion.)
@@ -121,7 +121,7 @@ wrong number of arguments.  Here is an example:
      <pre class="smallexample">          #define foo  a,b
           #define bar(x) lose(x)
           #define lose(x) (1 + (x))
-</pre>
+     </pre>
      <p>We would like <code>bar(foo)</code> to turn into <code>(1 + (foo))</code>, which
 would then turn into <code>(1 + (a,b))</code>.  Instead, <code>bar(foo)</code>
 expands into <code>lose(a,b)</code>, and you get an error because <code>lose</code>
@@ -132,7 +132,7 @@ arithmetic operations:
      <pre class="smallexample">          #define foo (a,b)
      <br>or<br>
           #define bar(x) lose((x))
-</pre>
+     </pre>
      <p>The extra pair of parentheses prevents the comma in <code>foo</code>'s
 definition from being interpreted as an argument separator.
 

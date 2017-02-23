@@ -3,7 +3,7 @@
 <title>Output Statement - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Desc.html#Machine-Desc" title="Machine Desc">
 <link rel="prev" href="Output-Template.html#Output-Template" title="Output Template">
@@ -61,12 +61,12 @@ instruction pattern.  For example, the opcodes may depend on the kinds of
 operands; or some unfortunate combinations of operands may require extra
 machine instructions.
 
- <p>If the output control string starts with a &lsquo;<samp><span class="samp">@</span></samp>&rsquo;, then it is actually
+ <p>If the output control string starts with a `<samp><span class="samp">@</span></samp>', then it is actually
 a series of templates, each on a separate line.  (Blank lines and
 leading spaces and tabs are ignored.)  The templates correspond to the
 pattern's constraint alternatives (see <a href="Multi_002dAlternative.html#Multi_002dAlternative">Multi-Alternative</a>).  For example,
-if a target machine has a two-address add instruction &lsquo;<samp><span class="samp">addr</span></samp>&rsquo; to add
-into a register and another &lsquo;<samp><span class="samp">addm</span></samp>&rsquo; to add a register to memory, you
+if a target machine has a two-address add instruction `<samp><span class="samp">addr</span></samp>' to add
+into a register and another `<samp><span class="samp">addm</span></samp>' to add a register to memory, you
 might write this pattern:
 
 <pre class="smallexample">     (define_insn "addsi3"
@@ -78,12 +78,12 @@ might write this pattern:
         addr %2,%0
         addm %2,%0")
 </pre>
- <p><a name="index-g_t_0040code_007b_002a_007d-in-template-3229"></a><a name="index-asterisk-in-template-3230"></a>If the output control string starts with a &lsquo;<samp><span class="samp">*</span></samp>&rsquo;, then it is not an
+ <p><a name="index-g_t_0040code_007b_002a_007d-in-template-3229"></a><a name="index-asterisk-in-template-3230"></a>If the output control string starts with a `<samp><span class="samp">*</span></samp>', then it is not an
 output template but rather a piece of C program that should compute a
 template.  It should execute a <code>return</code> statement to return the
 template-string you want.  Most such templates use C string literals, which
 require doublequote characters to delimit them.  To include these
-doublequote characters in the string, prefix each one with &lsquo;<samp><span class="samp">\</span></samp>&rsquo;.
+doublequote characters in the string, prefix each one with `<samp><span class="samp">\</span></samp>'.
 
  <p>If the output control string is written as a brace block instead of a
 double-quoted string, it is automatically assumed to be C code.  In that
@@ -115,8 +115,8 @@ was matched.  When this is so, the C code can test the variable
 that was actually satisfied (0 for the first, 1 for the second alternative,
 etc.).
 
- <p>For example, suppose there are two opcodes for storing zero, &lsquo;<samp><span class="samp">clrreg</span></samp>&rsquo;
-for registers and &lsquo;<samp><span class="samp">clrmem</span></samp>&rsquo; for memory locations.  Here is how
+ <p>For example, suppose there are two opcodes for storing zero, `<samp><span class="samp">clrreg</span></samp>'
+for registers and `<samp><span class="samp">clrmem</span></samp>' for memory locations.  Here is how
 a pattern could use <code>which_alternative</code> to choose between them:
 
 <pre class="smallexample">     (define_insn ""
@@ -130,7 +130,7 @@ a pattern could use <code>which_alternative</code> to choose between them:
 </pre>
  <p>The example above, where the assembler code to generate was
 <em>solely</em> determined by the alternative, could also have been specified
-as follows, having the output control string start with a &lsquo;<samp><span class="samp">@</span></samp>&rsquo;:
+as follows, having the output control string start with a `<samp><span class="samp">@</span></samp>':
 
 <pre class="smallexample">     (define_insn ""
        [(set (match_operand:SI 0 "general_operand" "=r,m")
@@ -141,7 +141,7 @@ as follows, having the output control string start with a &lsquo;<samp><span cla
         clrmem %0")
 </pre>
  <p>If you just need a little bit of C code in one (or a few) alternatives,
-you can use &lsquo;<samp><span class="samp">*</span></samp>&rsquo; inside of a &lsquo;<samp><span class="samp">@</span></samp>&rsquo; multi-alternative template:
+you can use `<samp><span class="samp">*</span></samp>' inside of a `<samp><span class="samp">@</span></samp>' multi-alternative template:
 
 <pre class="smallexample">     (define_insn ""
        [(set (match_operand:SI 0 "general_operand" "=r,&lt;,m")

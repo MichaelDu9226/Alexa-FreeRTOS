@@ -3,7 +3,7 @@
 <title>Process list - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Operating-System-Information.html#Operating-System-Information" title="Operating System Information">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
@@ -45,7 +45,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Operating-System-Information.html#Opera
 
 <p><a name="index-operating-system-information_002c-process-list-2862"></a>
 When requesting the process list, the <var>annex</var> field in the
-&lsquo;<samp><span class="samp">qXfer</span></samp>&rsquo; request should be &lsquo;<samp><span class="samp">processes</span></samp>&rsquo;.  The returned data is
+`<samp><span class="samp">qXfer</span></samp>' request should be `<samp><span class="samp">processes</span></samp>'.  The returned data is
 an XML document.  The formal syntax of this document is defined in
 <samp><span class="file">gdb/features/osdata.dtd</span></samp>.
 
@@ -62,10 +62,10 @@ an XML document.  The formal syntax of this document is defined in
        &lt;/item&gt;
      &lt;/osdata&gt;
 </pre>
-   <p>Each item should include a column whose name is &lsquo;<samp><span class="samp">pid</span></samp>&rsquo;.  The value
+   <p>Each item should include a column whose name is `<samp><span class="samp">pid</span></samp>'.  The value
 of that column should identify the process on the target.  The
-&lsquo;<samp><span class="samp">user</span></samp>&rsquo; and &lsquo;<samp><span class="samp">command</span></samp>&rsquo; columns are optional, and will be
-displayed by <span class="sc">gdb</span>.  The &lsquo;<samp><span class="samp">cores</span></samp>&rsquo; column, if present,
+`<samp><span class="samp">user</span></samp>' and `<samp><span class="samp">command</span></samp>' columns are optional, and will be
+displayed by <span class="sc">gdb</span>.  The `<samp><span class="samp">cores</span></samp>' column, if present,
 should contain a comma-separated list of cores that this process
 is running on.  Target may provide additional columns,
 which <span class="sc">gdb</span> currently ignores.

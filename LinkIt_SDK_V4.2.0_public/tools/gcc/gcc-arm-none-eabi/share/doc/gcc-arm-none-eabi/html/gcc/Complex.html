@@ -3,7 +3,7 @@
 <title>Complex - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Long-Long.html#Long-Long" title="Long Long">
@@ -61,15 +61,15 @@ types which are not part of ISO C99.  You can declare complex types
 using the keyword <code>_Complex</code>.  As an extension, the older GNU
 keyword <code>__complex__</code> is also supported.
 
- <p>For example, &lsquo;<samp><span class="samp">_Complex double x;</span></samp>&rsquo; declares <code>x</code> as a
+ <p>For example, `<samp><span class="samp">_Complex double x;</span></samp>' declares <code>x</code> as a
 variable whose real part and imaginary part are both of type
-<code>double</code>.  &lsquo;<samp><span class="samp">_Complex short int y;</span></samp>&rsquo; declares <code>y</code> to
+<code>double</code>.  `<samp><span class="samp">_Complex short int y;</span></samp>' declares <code>y</code> to
 have real and imaginary parts of type <code>short int</code>; this is not
 likely to be useful, but it shows that the set of complex types is
 complete.
 
- <p>To write a constant with a complex data type, use the suffix &lsquo;<samp><span class="samp">i</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">j</span></samp>&rsquo; (either one; they are equivalent).  For example, <code>2.5fi</code>
+ <p>To write a constant with a complex data type, use the suffix `<samp><span class="samp">i</span></samp>' or
+`<samp><span class="samp">j</span></samp>' (either one; they are equivalent).  For example, <code>2.5fi</code>
 has type <code>_Complex float</code> and <code>3i</code> has type
 <code>_Complex int</code>.  Such a constant always has a pure imaginary
 value, but you can form any complex value you like by adding one to a
@@ -86,7 +86,7 @@ floating type, you should use the ISO C99 functions <code>crealf</code>,
 <code>cimagl</code>, declared in <code>&lt;complex.h&gt;</code> and also provided as
 built-in functions by GCC.
 
- <p><a name="index-complex-conjugation-2473"></a>The operator &lsquo;<samp><span class="samp">~</span></samp>&rsquo; performs complex conjugation when used on a value
+ <p><a name="index-complex-conjugation-2473"></a>The operator `<samp><span class="samp">~</span></samp>' performs complex conjugation when used on a value
 with a complex type.  This is a GNU extension; for values of
 floating type, you should use the ISO C99 functions <code>conjf</code>,
 <code>conj</code> and <code>conjl</code>, declared in <code>&lt;complex.h&gt;</code> and also

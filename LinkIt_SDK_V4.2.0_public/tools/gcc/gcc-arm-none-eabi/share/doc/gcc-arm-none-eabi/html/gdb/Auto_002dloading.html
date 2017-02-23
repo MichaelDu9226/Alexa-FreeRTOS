@@ -3,7 +3,7 @@
 <title>Auto-loading - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Controlling-GDB.html#Controlling-GDB" title="Controlling GDB">
 <link rel="prev" href="ABI.html#ABI" title="ABI">
@@ -64,11 +64,12 @@ file) requires accordingly configured <code>auto-load safe-path</code>
 control when to auto-load files and which files should be auto-loaded.
 
      <dl>
-<a name="set-auto_002dload-off"></a><a name="index-set-auto_002dload-off-1587"></a><dt><code>set auto-load off</code><dd>Globally disable loading of all auto-loaded files. 
-You may want to use this command with the &lsquo;<samp><span class="samp">-iex</span></samp>&rsquo; option
+<a name="set-auto_002dload-off"></a>
+<a name="index-set-auto_002dload-off-1587"></a><dt><code>set auto-load off</code><dd>Globally disable loading of all auto-loaded files. 
+You may want to use this command with the `<samp><span class="samp">-iex</span></samp>' option
 (see <a href="Option-_002dinit_002deval_002dcommand.html#Option-_002dinit_002deval_002dcommand">Option -init-eval-command</a>) such as:
      <pre class="smallexample">          $ <kbd>gdb -iex "set auto-load off" untrusted-executable corefile</kbd>
-</pre>
+     </pre>
      <p>Be aware that system init file (see <a href="System_002dwide-configuration.html#System_002dwide-configuration">System-wide configuration</a>)
 and init files from your home directory (see <a href="Home-Directory-Init-File.html#Home-Directory-Init-File">Home Directory Init File</a>)
 still get read (as they come from generally trusted directories). 
@@ -76,7 +77,8 @@ To prevent <span class="sc">gdb</span> from auto-loading even those init files, 
 <samp><span class="option">-nx</span></samp> option (see <a href="Mode-Options.html#Mode-Options">Mode Options</a>), in addition to
 <code>set auto-load no</code>.
 
-     <p><a name="show-auto_002dload"></a><a name="index-show-auto_002dload-1588"></a><br><dt><code>show auto-load</code><dd>Show whether auto-loading of each specific &lsquo;<samp><span class="samp">auto-load</span></samp>&rsquo; file(s) is enabled
+     <p><a name="show-auto_002dload"></a>
+<a name="index-show-auto_002dload-1588"></a><br><dt><code>show auto-load</code><dd>Show whether auto-loading of each specific `<samp><span class="samp">auto-load</span></samp>' file(s) is enabled
 or disabled.
 
      <pre class="smallexample">          (gdb) show auto-load
@@ -89,8 +91,9 @@ or disabled.
                       is $debugdir:$datadir/auto-load.
           scripts-directory:  List of directories from which to load auto-loaded scripts
                               is $debugdir:$datadir/auto-load.
-</pre>
-     <p><a name="info-auto_002dload"></a><a name="index-info-auto_002dload-1589"></a><br><dt><code>info auto-load</code><dd>Print whether each specific &lsquo;<samp><span class="samp">auto-load</span></samp>&rsquo; file(s) have been auto-loaded or
+     </pre>
+     <p><a name="info-auto_002dload"></a>
+<a name="index-info-auto_002dload-1589"></a><br><dt><code>info auto-load</code><dd>Print whether each specific `<samp><span class="samp">auto-load</span></samp>' file(s) have been auto-loaded or
 not.
 
      <pre class="smallexample">          (gdb) info auto-load
@@ -103,7 +106,7 @@ not.
           python-scripts:
           Loaded  Script
           Yes     /home/user/gdb/gdb-gdb.py
-</pre>
+     </pre>
      </dl>
 
    <p>These are various kinds of files <span class="sc">gdb</span> can automatically load:
@@ -163,11 +166,11 @@ controlled by <a href="set-auto_002dload-local_002dgdbinit.html#set-auto_002dloa
    <br></td></tr></table>
 
 <ul class="menu">
-<li><a accesskey="1" href="Init-File-in-the-Current-Directory.html#Init-File-in-the-Current-Directory">Init File in the Current Directory</a>:  &lsquo;<samp><span class="samp">set/show/info auto-load local-gdbinit</span></samp>&rsquo;
-<li><a accesskey="2" href="libthread_005fdb_002eso_002e1-file.html#libthread_005fdb_002eso_002e1-file">libthread_db.so.1 file</a>:              &lsquo;<samp><span class="samp">set/show/info auto-load libthread-db</span></samp>&rsquo;
-<li><a accesskey="3" href="objfile_002dgdb_002egdb-file.html#objfile_002dgdb_002egdb-file">objfile-gdb.gdb file</a>:                &lsquo;<samp><span class="samp">set/show/info auto-load gdb-script</span></samp>&rsquo;
-<li><a accesskey="4" href="Auto_002dloading-safe-path.html#Auto_002dloading-safe-path">Auto-loading safe path</a>:              &lsquo;<samp><span class="samp">set/show/info auto-load safe-path</span></samp>&rsquo;
-<li><a accesskey="5" href="Auto_002dloading-verbose-mode.html#Auto_002dloading-verbose-mode">Auto-loading verbose mode</a>:           &lsquo;<samp><span class="samp">set/show debug auto-load</span></samp>&rsquo;
+<li><a accesskey="1" href="Init-File-in-the-Current-Directory.html#Init-File-in-the-Current-Directory">Init File in the Current Directory</a>:  `<samp><span class="samp">set/show/info auto-load local-gdbinit</span></samp>'
+<li><a accesskey="2" href="libthread_005fdb_002eso_002e1-file.html#libthread_005fdb_002eso_002e1-file">libthread_db.so.1 file</a>:              `<samp><span class="samp">set/show/info auto-load libthread-db</span></samp>'
+<li><a accesskey="3" href="objfile_002dgdb_002egdb-file.html#objfile_002dgdb_002egdb-file">objfile-gdb.gdb file</a>:                `<samp><span class="samp">set/show/info auto-load gdb-script</span></samp>'
+<li><a accesskey="4" href="Auto_002dloading-safe-path.html#Auto_002dloading-safe-path">Auto-loading safe path</a>:              `<samp><span class="samp">set/show/info auto-load safe-path</span></samp>'
+<li><a accesskey="5" href="Auto_002dloading-verbose-mode.html#Auto_002dloading-verbose-mode">Auto-loading verbose mode</a>:           `<samp><span class="samp">set/show debug auto-load</span></samp>'
 See <a href="Python-Auto_002dloading.html#Python-Auto_002dloading">Python Auto-loading</a>. 
 </ul>
 

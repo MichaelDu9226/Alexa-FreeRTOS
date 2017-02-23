@@ -3,7 +3,7 @@
 <title>Invoking GDB - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invocation.html#Invocation" title="Invocation">
 <link rel="next" href="Quitting-GDB.html#Quitting-GDB" title="Quitting GDB">
@@ -85,7 +85,7 @@ option processing.
 <pre class="smallexample">     gdb --args gcc -O2 -c foo.c
 </pre>
    <p>This will cause <code>gdb</code> to debug <code>gcc</code>, and to set
-<code>gcc</code>'s command-line arguments (see <a href="Arguments.html#Arguments">Arguments</a>) to &lsquo;<samp><span class="samp">-O2 -c foo.c</span></samp>&rsquo;.
+<code>gcc</code>'s command-line arguments (see <a href="Arguments.html#Arguments">Arguments</a>) to `<samp><span class="samp">-O2 -c foo.c</span></samp>'.
 
    <p>You can run <code>gdb</code> without printing the front material, which describes
 <span class="sc">gdb</span>'s non-warranty, by specifying <code>-silent</code>:
@@ -100,11 +100,11 @@ options.  <span class="sc">gdb</span> itself can remind you of the options avail
 <pre class="smallexample">     gdb -help
 </pre>
    <p class="noindent">to display all available options and briefly describe their use
-(&lsquo;<samp><span class="samp">gdb -h</span></samp>&rsquo; is a shorter equivalent).
+(`<samp><span class="samp">gdb -h</span></samp>' is a shorter equivalent).
 
    <p>All options and command line arguments you give are processed
 in sequential order.  The order makes a difference when the
-&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; option is used.
+`<samp><span class="samp">-x</span></samp>' option is used.
 
 <ul class="menu">
 <li><a accesskey="1" href="File-Options.html#File-Options">File Options</a>:                 Choosing files

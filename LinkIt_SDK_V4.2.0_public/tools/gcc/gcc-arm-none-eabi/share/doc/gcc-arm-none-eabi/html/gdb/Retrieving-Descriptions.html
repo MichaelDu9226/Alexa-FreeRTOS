@@ -3,7 +3,7 @@
 <title>Retrieving Descriptions - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Descriptions.html#Target-Descriptions" title="Target Descriptions">
 <link rel="next" href="Target-Description-Format.html#Target-Description-Format" title="Target Description Format">
@@ -48,8 +48,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Target-Descriptions.html#Target-Descrip
 <p>Target descriptions can be read from the target automatically, or
 specified by the user manually.  The default behavior is to read the
 description from the target.  <span class="sc">gdb</span> retrieves it via the remote
-protocol using &lsquo;<samp><span class="samp">qXfer</span></samp>&rsquo; requests (see <a href="General-Query-Packets.html#General-Query-Packets">qXfer</a>).  The <var>annex</var> in the &lsquo;<samp><span class="samp">qXfer</span></samp>&rsquo; packet will be
-&lsquo;<samp><span class="samp">target.xml</span></samp>&rsquo;.  The contents of the &lsquo;<samp><span class="samp">target.xml</span></samp>&rsquo; annex are an
+protocol using `<samp><span class="samp">qXfer</span></samp>' requests (see <a href="General-Query-Packets.html#General-Query-Packets">qXfer</a>).  The <var>annex</var> in the `<samp><span class="samp">qXfer</span></samp>' packet will be
+`<samp><span class="samp">target.xml</span></samp>'.  The contents of the `<samp><span class="samp">target.xml</span></samp>' annex are an
 XML document, of the form described in <a href="Target-Description-Format.html#Target-Description-Format">Target Description Format</a>.
 
    <p>Alternatively, you can specify a file to read for the target description. 

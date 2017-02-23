@@ -3,7 +3,7 @@
 <title>Special Accessors - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="RTL.html#RTL" title="RTL">
 <link rel="prev" href="Accessors.html#Accessors" title="Accessors">
@@ -77,18 +77,18 @@ or another <code>COMPONENT_REF</code>, or null if there is no compile-time
 object associated with the reference.
 
           <p><a name="index-MEM_005fOFFSET_005fKNOWN_005fP-1729"></a><br><dt><code>MEM_OFFSET_KNOWN_P (</code><var>x</var><code>)</code><dd>True if the offset of the memory reference from <code>MEM_EXPR</code> is known. 
-&lsquo;<samp><span class="samp">MEM_OFFSET (</span><var>x</var><span class="samp">)</span></samp>&rsquo; provides the offset if so.
+`<samp><span class="samp">MEM_OFFSET (</span><var>x</var><span class="samp">)</span></samp>' provides the offset if so.
 
           <p><a name="index-MEM_005fOFFSET-1730"></a><br><dt><code>MEM_OFFSET (</code><var>x</var><code>)</code><dd>The offset from the start of <code>MEM_EXPR</code>.  The value is only valid if
-&lsquo;<samp><span class="samp">MEM_OFFSET_KNOWN_P (</span><var>x</var><span class="samp">)</span></samp>&rsquo; is true.
+`<samp><span class="samp">MEM_OFFSET_KNOWN_P (</span><var>x</var><span class="samp">)</span></samp>' is true.
 
           <p><a name="index-MEM_005fSIZE_005fKNOWN_005fP-1731"></a><br><dt><code>MEM_SIZE_KNOWN_P (</code><var>x</var><code>)</code><dd>True if the size of the memory reference is known. 
-&lsquo;<samp><span class="samp">MEM_SIZE (</span><var>x</var><span class="samp">)</span></samp>&rsquo; provides its size if so.
+`<samp><span class="samp">MEM_SIZE (</span><var>x</var><span class="samp">)</span></samp>' provides its size if so.
 
           <p><a name="index-MEM_005fSIZE-1732"></a><br><dt><code>MEM_SIZE (</code><var>x</var><code>)</code><dd>The size in bytes of the memory reference. 
 This is mostly relevant for <code>BLKmode</code> references as otherwise
 the size is implied by the mode.  The value is only valid if
-&lsquo;<samp><span class="samp">MEM_SIZE_KNOWN_P (</span><var>x</var><span class="samp">)</span></samp>&rsquo; is true.
+`<samp><span class="samp">MEM_SIZE_KNOWN_P (</span><var>x</var><span class="samp">)</span></samp>' is true.
 
           <p><a name="index-MEM_005fALIGN-1733"></a><br><dt><code>MEM_ALIGN (</code><var>x</var><code>)</code><dd>The known alignment in bits of the memory reference.
 
@@ -123,7 +123,7 @@ that is, some sort of constant.  In this case, the <code>symbol_ref</code>
 is an entry in the per-file constant pool; again, there is no associated
 front end symbol table entry.
 
-          <p><a name="index-SYMBOL_005fREF_005fCONSTANT-1739"></a><br><dt><code>SYMBOL_REF_CONSTANT (</code><var>x</var><code>)</code><dd>If &lsquo;<samp><span class="samp">CONSTANT_POOL_ADDRESS_P (</span><var>x</var><span class="samp">)</span></samp>&rsquo; is true, this is the constant
+          <p><a name="index-SYMBOL_005fREF_005fCONSTANT-1739"></a><br><dt><code>SYMBOL_REF_CONSTANT (</code><var>x</var><code>)</code><dd>If `<samp><span class="samp">CONSTANT_POOL_ADDRESS_P (</span><var>x</var><span class="samp">)</span></samp>' is true, this is the constant
 pool entry for <var>x</var>.  It is null otherwise.
 
           <p><a name="index-SYMBOL_005fREF_005fDATA-1740"></a><br><dt><code>SYMBOL_REF_DATA (</code><var>x</var><code>)</code><dd>A field of opaque type used to store <code>SYMBOL_REF_DECL</code> or
@@ -166,12 +166,12 @@ They are used to implement <samp><span class="option">-fsection-anchors</span></
 the target's use. 
 </dl>
 
-     <p><a name="index-SYMBOL_005fREF_005fBLOCK-1757"></a><br><dt><code>SYMBOL_REF_BLOCK (</code><var>x</var><code>)</code><dd>If &lsquo;<samp><span class="samp">SYMBOL_REF_HAS_BLOCK_INFO_P (</span><var>x</var><span class="samp">)</span></samp>&rsquo;, this is the
-&lsquo;<samp><span class="samp">object_block</span></samp>&rsquo; structure to which the symbol belongs,
+     <p><a name="index-SYMBOL_005fREF_005fBLOCK-1757"></a><br><dt><code>SYMBOL_REF_BLOCK (</code><var>x</var><code>)</code><dd>If `<samp><span class="samp">SYMBOL_REF_HAS_BLOCK_INFO_P (</span><var>x</var><span class="samp">)</span></samp>', this is the
+`<samp><span class="samp">object_block</span></samp>' structure to which the symbol belongs,
 or <code>NULL</code> if it has not been assigned a block.
 
-     <p><a name="index-SYMBOL_005fREF_005fBLOCK_005fOFFSET-1758"></a><br><dt><code>SYMBOL_REF_BLOCK_OFFSET (</code><var>x</var><code>)</code><dd>If &lsquo;<samp><span class="samp">SYMBOL_REF_HAS_BLOCK_INFO_P (</span><var>x</var><span class="samp">)</span></samp>&rsquo;, this is the offset of <var>x</var>
-from the first object in &lsquo;<samp><span class="samp">SYMBOL_REF_BLOCK (</span><var>x</var><span class="samp">)</span></samp>&rsquo;.  The value is
+     <p><a name="index-SYMBOL_005fREF_005fBLOCK_005fOFFSET-1758"></a><br><dt><code>SYMBOL_REF_BLOCK_OFFSET (</code><var>x</var><code>)</code><dd>If `<samp><span class="samp">SYMBOL_REF_HAS_BLOCK_INFO_P (</span><var>x</var><span class="samp">)</span></samp>', this is the offset of <var>x</var>
+from the first object in `<samp><span class="samp">SYMBOL_REF_BLOCK (</span><var>x</var><span class="samp">)</span></samp>'.  The value is
 negative if <var>x</var> has not yet been assigned to a block, or it has not
 been given an offset within that block. 
 </dl>

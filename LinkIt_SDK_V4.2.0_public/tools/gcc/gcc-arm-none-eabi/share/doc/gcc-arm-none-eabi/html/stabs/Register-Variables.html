@@ -3,7 +3,7 @@
 <title>Register Variables - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Variables.html#Variables" title="Variables">
 <link rel="prev" href="Global-Variables.html#Global-Variables" title="Global Variables">
@@ -48,15 +48,15 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Variables.html#Variables">Variables</a>
 <p><a name="index-N_005fRSYM-29"></a><a name="index-C_005fRSYM-30"></a><!-- According to an old version of this manual, AIX uses C_RPSYM instead -->
 <!-- of C_RSYM.  I am skeptical; this should be verified. -->
 Register variables have their own stab type, <code>N_RSYM</code>
-(<code>C_RSYM</code> for XCOFF), and their own symbol descriptor, &lsquo;<samp><span class="samp">r</span></samp>&rsquo;. 
+(<code>C_RSYM</code> for XCOFF), and their own symbol descriptor, `<samp><span class="samp">r</span></samp>'. 
 The stab's value is the number of the register where the variable data
 will be stored. 
 <!-- .stabs "name:type",N_RSYM,0,RegSize,RegNumber (Sun doc) -->
 
-   <p>AIX defines a separate symbol descriptor &lsquo;<samp><span class="samp">d</span></samp>&rsquo; for floating point
+   <p>AIX defines a separate symbol descriptor `<samp><span class="samp">d</span></samp>' for floating point
 registers.  This seems unnecessary; why not just just give floating
 point registers different register numbers?  I have not verified whether
-the compiler actually uses &lsquo;<samp><span class="samp">d</span></samp>&rsquo;.
+the compiler actually uses `<samp><span class="samp">d</span></samp>'.
 
    <p>If the register is explicitly allocated to a global variable, but not
 initialized, as in:

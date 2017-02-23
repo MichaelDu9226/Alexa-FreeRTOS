@@ -3,7 +3,7 @@
 <title>Files - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB-Files.html#GDB-Files" title="GDB Files">
 <link rel="next" href="Separate-Debug-Files.html#Separate-Debug-Files" title="Separate Debug Files">
@@ -128,18 +128,18 @@ still does the two-stage strategy, since the debug info is actually
 in stabs format.
 
      <p><a name="index-readnow-1049"></a><a name="index-reading-symbols-immediately-1050"></a><a name="index-symbols_002c-reading-immediately-1051"></a><br><dt><code>symbol-file </code><span class="roman">[</span><code> -readnow </code><span class="roman">]</span> <var>filename</var><dt><code>file </code><span class="roman">[</span><code> -readnow </code><span class="roman">]</span> <var>filename</var><dd>You can override the <span class="sc">gdb</span> two-stage strategy for reading symbol
-tables by using the &lsquo;<samp><span class="samp">-readnow</span></samp>&rsquo; option with any of the commands that
+tables by using the `<samp><span class="samp">-readnow</span></samp>' option with any of the commands that
 load symbol table information, if you want to be sure <span class="sc">gdb</span> has the
 entire symbol table available.
 
      <!-- FIXME: for now no mention of directories, since this seems to be in -->
-     <!-- flux.  13mar1992 status is that in theory GDB would look either in -->
-     <!-- current dir or in same dir as myprog; but issues like competing -->
-     <!-- GDB's, or clutter in system dirs, mean that in practice right now -->
-     <!-- only current dir is used.  FFish says maybe a special GDB hierarchy -->
-     <!-- (eg rooted in val of env var GDBSYMS) could exist for mappable symbol -->
-     <!-- files. -->
-     <p><a name="index-core_002dfile-1052"></a><br><dt><code>core-file </code><span class="roman">[</span><var>filename</var><span class="roman">]</span><dt><code>core</code><dd>Specify the whereabouts of a core dump file to be used as the &ldquo;contents
+<!-- flux.  13mar1992 status is that in theory GDB would look either in -->
+<!-- current dir or in same dir as myprog; but issues like competing -->
+<!-- GDB's, or clutter in system dirs, mean that in practice right now -->
+<!-- only current dir is used.  FFish says maybe a special GDB hierarchy -->
+<!-- (eg rooted in val of env var GDBSYMS) could exist for mappable symbol -->
+<!-- files. -->
+<p><a name="index-core_002dfile-1052"></a><br><dt><code>core-file </code><span class="roman">[</span><var>filename</var><span class="roman">]</span><dt><code>core</code><dd>Specify the whereabouts of a core dump file to be used as the &ldquo;contents
 of memory&rdquo;.  Traditionally, core files contain only some parts of the
 address space of the process that generated them; <span class="sc">gdb</span> can access the
 executable file itself for other parts.
@@ -159,7 +159,7 @@ when <var>filename</var> has been dynamically loaded (by some other means)
 into the program that is running.  <var>address</var> should be the memory
 address at which the file has been loaded; <span class="sc">gdb</span> cannot figure
 this out for itself.  You can additionally specify an arbitrary number
-of &lsquo;<samp><span class="samp">-s </span><var>section</var> <var>address</var></samp>&rsquo; pairs, to give an explicit
+of `<samp><span class="samp">-s </span><var>section</var> <var>address</var></samp>' pairs, to give an explicit
 section name and base address for that section.  You can specify any
 <var>address</var> as an expression.
 
@@ -279,7 +279,8 @@ and must therefore be fetched from the target when needed.
 as arguments.  <span class="sc">gdb</span> always converts the file name to an absolute file
 name and remembers it that way.
 
-   <p><a name="index-shared-libraries-1071"></a><a name="Shared-Libraries"></a><span class="sc">gdb</span> supports <span class="sc">gnu</span>/Linux, MS-Windows, HP-UX, SunOS, SVr4, Irix,
+   <p><a name="index-shared-libraries-1071"></a><a name="Shared-Libraries"></a>
+<span class="sc">gdb</span> supports <span class="sc">gnu</span>/Linux, MS-Windows, HP-UX, SunOS, SVr4, Irix,
 and IBM RS/6000 AIX shared libraries.
 
    <p>On MS-Windows <span class="sc">gdb</span> must be linked with the Expat library to support
@@ -297,7 +298,7 @@ automatically loads the symbols at the time of the <code>shl_load</code> call.
 <!-- FIXME: some @value{GDBN} release may permit some refs to undef -->
 <!-- FIXME...symbols-eg in a break cmd-assuming they are from a shared -->
 <!-- FIXME...lib; check this from time to time when updating manual -->
-   <p>There are times, however, when you may wish to not automatically load
+<p>There are times, however, when you may wish to not automatically load
 symbol definitions from shared libraries, such as when they are
 particularly large or there are many of them.
 
@@ -408,30 +409,30 @@ absolute file name with <var>path</var>.  But first, on Unix hosts,
 <span class="sc">gdb</span> converts all backslash directory separators into forward
 slashes, because the backslash is not a directory separator on Unix:
 
-     <pre class="smallexample">            c:\foo\bar.dll  c:/foo/bar.dll
-</pre>
+     <pre class="smallexample">            c:\foo\bar.dll =&gt; c:/foo/bar.dll
+     </pre>
      <p>Then, <span class="sc">gdb</span> attempts prefixing the target file name with
 <var>path</var>, and looks for the resulting file name in the host file
 system:
 
-     <pre class="smallexample">            c:/foo/bar.dll  /path/to/sysroot/c:/foo/bar.dll
-</pre>
+     <pre class="smallexample">            c:/foo/bar.dll =&gt; /path/to/sysroot/c:/foo/bar.dll
+     </pre>
      <p>If that does not find the shared library, <span class="sc">gdb</span> tries removing
-the &lsquo;<samp><span class="samp">:</span></samp>&rsquo; character from the drive spec, both for convenience, and,
+the `<samp><span class="samp">:</span></samp>' character from the drive spec, both for convenience, and,
 for the case of the host file system not supporting file names with
 colons:
 
-     <pre class="smallexample">            c:/foo/bar.dll  /path/to/sysroot/c/foo/bar.dll
-</pre>
+     <pre class="smallexample">            c:/foo/bar.dll =&gt; /path/to/sysroot/c/foo/bar.dll
+     </pre>
      <p>This makes it possible to have a system root that mirrors a target
 with more than one drive.  E.g., you may want to setup your local
-copies of the target system shared libraries like so (note &lsquo;<samp><span class="samp">c</span></samp>&rsquo; vs
-&lsquo;<samp><span class="samp">z</span></samp>&rsquo;):
+copies of the target system shared libraries like so (note `<samp><span class="samp">c</span></samp>' vs
+`<samp><span class="samp">z</span></samp>'):
 
      <pre class="smallexample">           <samp><span class="file">/path/to/sysroot/c/sys/bin/foo.dll</span></samp>
            <samp><span class="file">/path/to/sysroot/c/sys/bin/bar.dll</span></samp>
            <samp><span class="file">/path/to/sysroot/z/sys/bin/bar.dll</span></samp>
-</pre>
+     </pre>
      <p class="noindent">and point the system root at <samp><span class="file">/path/to/sysroot</span></samp>, so that
 <span class="sc">gdb</span> can find the correct copies of both
 <samp><span class="file">c:\sys\bin\foo.dll</span></samp>, and <samp><span class="file">z:\sys\bin\bar.dll</span></samp>.
@@ -439,8 +440,8 @@ copies of the target system shared libraries like so (note &lsquo;<samp><span cl
      <p>If that still does not find the shared library, <span class="sc">gdb</span> tries
 removing the whole drive spec from the target file name:
 
-     <pre class="smallexample">            c:/foo/bar.dll  /path/to/sysroot/foo/bar.dll
-</pre>
+     <pre class="smallexample">            c:/foo/bar.dll =&gt; /path/to/sysroot/foo/bar.dll
+     </pre>
      <p>This last lookup makes it possible to not care about the drive name,
 if you don't want or need to.
 
@@ -448,21 +449,21 @@ if you don't want or need to.
 sysroot</code>.
 
      <p><a name="index-default-system-root-1089"></a><a name="index-g_t_0040samp_007b_002d_002dwith_002dsysroot_007d-1090"></a>You can set the default system root by using the configure-time
-&lsquo;<samp><span class="samp">--with-sysroot</span></samp>&rsquo; option.  If the system root is inside
-<span class="sc">gdb</span>'s configured binary prefix (set with &lsquo;<samp><span class="samp">--prefix</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">--exec-prefix</span></samp>&rsquo;), then the default system root will be updated
+`<samp><span class="samp">--with-sysroot</span></samp>' option.  If the system root is inside
+<span class="sc">gdb</span>'s configured binary prefix (set with `<samp><span class="samp">--prefix</span></samp>' or
+`<samp><span class="samp">--exec-prefix</span></samp>'), then the default system root will be updated
 automatically if the installed <span class="sc">gdb</span> is moved to a new
 location.
 
      <p><a name="index-show-sysroot-1091"></a><br><dt><code>show sysroot</code><dd>Display the current shared library prefix.
 
      <p><a name="index-set-solib_002dsearch_002dpath-1092"></a><br><dt><code>set solib-search-path </code><var>path</var><dd>If this variable is set, <var>path</var> is a colon-separated list of
-directories to search for shared libraries.  &lsquo;<samp><span class="samp">solib-search-path</span></samp>&rsquo;
-is used after &lsquo;<samp><span class="samp">sysroot</span></samp>&rsquo; fails to locate the library, or if the
+directories to search for shared libraries.  `<samp><span class="samp">solib-search-path</span></samp>'
+is used after `<samp><span class="samp">sysroot</span></samp>' fails to locate the library, or if the
 path to the library is relative instead of absolute.  If you want to
-use &lsquo;<samp><span class="samp">solib-search-path</span></samp>&rsquo; instead of &lsquo;<samp><span class="samp">sysroot</span></samp>&rsquo;, be sure to set
-&lsquo;<samp><span class="samp">sysroot</span></samp>&rsquo; to a nonexistent directory to prevent <span class="sc">gdb</span> from
-finding your host's libraries.  &lsquo;<samp><span class="samp">sysroot</span></samp>&rsquo; is preferred; setting
+use `<samp><span class="samp">solib-search-path</span></samp>' instead of `<samp><span class="samp">sysroot</span></samp>', be sure to set
+`<samp><span class="samp">sysroot</span></samp>' to a nonexistent directory to prevent <span class="sc">gdb</span> from
+finding your host's libraries.  `<samp><span class="samp">sysroot</span></samp>' is preferred; setting
 it to a nonexistent directory may interfere with automatic loading
 of shared library symbols.
 
@@ -476,7 +477,7 @@ example, when remote debugging a target that has MS-DOS based file
 system semantics, from a Unix host, the target may be reporting to
 <span class="sc">gdb</span> a list of loaded shared libraries with file names such as
 <samp><span class="file">c:\Windows\kernel32.dll</span></samp>.  On Unix hosts, there's no concept of
-drive letters, so the &lsquo;<samp><span class="samp">c:\</span></samp>&rsquo; prefix is not normally understood as
+drive letters, so the `<samp><span class="samp">c:\</span></samp>' prefix is not normally understood as
 indicating an absolute file name, and neither is the backslash
 normally considered a directory separator character.  In that case,
 the native file system would interpret this whole absolute file name
@@ -494,14 +495,14 @@ current target's operating system (see <a href="ABI.html#ABI">Configuring the Cu
 
           <dl>
 <dt><code>unix</code><dd>Instruct <span class="sc">gdb</span> to assume the target file system is of Unix
-kind.  Only file names starting the forward slash (&lsquo;<samp><span class="samp">/</span></samp>&rsquo;) character
+kind.  Only file names starting the forward slash (`<samp><span class="samp">/</span></samp>') character
 are considered absolute, and the directory separator character is also
 the forward slash.
 
           <br><dt><code>dos-based</code><dd>Instruct <span class="sc">gdb</span> to assume the target file system is DOS based. 
 File names starting with either a forward slash, or a drive letter
-followed by a colon (e.g., &lsquo;<samp><span class="samp">c:</span></samp>&rsquo;), are considered absolute, and
-both the slash (&lsquo;<samp><span class="samp">/</span></samp>&rsquo;) and the backslash (&lsquo;<samp><span class="samp">\\</span></samp>&rsquo;) characters are
+followed by a colon (e.g., `<samp><span class="samp">c:</span></samp>'), are considered absolute, and
+both the slash (`<samp><span class="samp">/</span></samp>') and the backslash (`<samp><span class="samp">\\</span></samp>') characters are
 considered directory separators.
 
           <br><dt><code>auto</code><dd>Instruct <span class="sc">gdb</span> to use the file system kind associated with the
@@ -538,7 +539,7 @@ comparisons accurate, but at a price of a significant slowdown.
 that happens to be named <samp><span class="file">remote:</span></samp>, you need to use some equivalent
 variant of the name like <samp><span class="file">./remote:</span></samp>.</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

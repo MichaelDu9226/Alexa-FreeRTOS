@@ -3,7 +3,7 @@
 <title>strip - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="strings.html#strings" title="strings">
 <link rel="next" href="elfedit.html#elfedit" title="elfedit">
@@ -73,7 +73,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
      <!-- man end -->
 </pre>
    <!-- man begin DESCRIPTION strip -->
-   <p><span class="sc">gnu</span> <samp><span class="command">strip</span></samp> discards all symbols from object files
+<p><span class="sc">gnu</span> <samp><span class="command">strip</span></samp> discards all symbols from object files
 <var>objfile</var>.  The list of object files may include archives. 
 At least one object file must be given.
 
@@ -82,7 +82,7 @@ rather than writing modified copies under different names.
 
 <!-- man end -->
 <!-- man begin OPTIONS strip -->
-     <dl>
+<dl>
 <dt><samp><span class="env">-F </span><var>bfdname</var></samp><dt><samp><span class="env">--target=</span><var>bfdname</var></samp><dd>Treat the original <var>objfile</var> as a file with the object
 code format <var>bfdname</var>, and rewrite it in the same format. 
 See <a href="Target-Selection.html#Target-Selection">Target Selection</a>, for more information.
@@ -132,7 +132,7 @@ and use consistent file modes for all files.
 
      <p>If <samp><span class="file">binutils</span></samp> was configured with
 <samp><span class="option">--enable-deterministic-archives</span></samp>, then this mode is on by default. 
-It can be disabled with the &lsquo;<samp><span class="samp">-U</span></samp>&rsquo; option, below.
+It can be disabled with the `<samp><span class="samp">-U</span></samp>' option, below.
 
      <br><dt><samp><span class="env">-U</span></samp><dt><samp><span class="env">--disable-deterministic-archives</span></samp><dd><a name="index-deterministic-archives-134"></a><a name="index-g_t_002d_002denable_002ddeterministic_002darchives-135"></a>Do <em>not</em> operate in <em>deterministic</em> mode.  This is the
 inverse of the <samp><span class="option">-D</span></samp> option, above: when copying archive members
@@ -150,14 +150,14 @@ point (!) then the sense of the switch is reversed for that symbol.
 For example:
 
      <pre class="smallexample">            -w -K !foo -K fo*
-</pre>
+     </pre>
      <p>would cause strip to only keep symbols that start with the letters
 &ldquo;fo&rdquo;, but to discard the symbol &ldquo;foo&rdquo;.
 
      <br><dt><samp><span class="env">-x</span></samp><dt><samp><span class="env">--discard-all</span></samp><dd>Remove non-global symbols.
 
      <br><dt><samp><span class="env">-X</span></samp><dt><samp><span class="env">--discard-locals</span></samp><dd>Remove compiler-generated local symbols. 
-(These usually start with &lsquo;<samp><span class="samp">L</span></samp>&rsquo; or &lsquo;<samp><span class="samp">.</span></samp>&rsquo;.)
+(These usually start with `<samp><span class="samp">L</span></samp>' or `<samp><span class="samp">.</span></samp>'.)
 
      <br><dt><samp><span class="env">--keep-file-symbols</span></samp><dd>When stripping a file, perhaps with <samp><span class="option">--strip-debug</span></samp> or
 <samp><span class="option">--strip-unneeded</span></samp>, retain any symbols specifying source file names,
@@ -210,9 +210,9 @@ basis.
      <br><dt><samp><span class="env">-V</span></samp><dt><samp><span class="env">--version</span></samp><dd>Show the version number for <samp><span class="command">strip</span></samp>.
 
      <br><dt><samp><span class="env">-v</span></samp><dt><samp><span class="env">--verbose</span></samp><dd>Verbose output: list all object files modified.  In the case of
-archives, &lsquo;<samp><span class="samp">strip -v</span></samp>&rsquo; lists all members of the archive. 
+archives, `<samp><span class="samp">strip -v</span></samp>' lists all members of the archive. 
 </dl>
 
 <!-- man end -->
-   </body></html>
+</body></html>
 

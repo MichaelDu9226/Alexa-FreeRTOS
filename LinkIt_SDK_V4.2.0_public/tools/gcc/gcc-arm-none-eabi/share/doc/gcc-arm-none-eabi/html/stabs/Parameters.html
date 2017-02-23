@@ -3,7 +3,7 @@
 <title>Parameters - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Variables.html#Variables" title="Variables">
 <link rel="prev" href="Based-Variables.html#Based-Variables" title="Based Variables">
@@ -49,7 +49,7 @@ the debugger should print the parameters (i.e., the order in which the
 parameters are declared in the source file).  The exact form of the stab
 depends on how the parameter is being passed.
 
-   <p><a name="index-N_005fPSYM-44"></a><a name="index-C_005fPSYM-45"></a>Parameters passed on the stack use the symbol descriptor &lsquo;<samp><span class="samp">p</span></samp>&rsquo; and
+   <p><a name="index-N_005fPSYM-44"></a><a name="index-C_005fPSYM-45"></a>Parameters passed on the stack use the symbol descriptor `<samp><span class="samp">p</span></samp>' and
 the <code>N_PSYM</code> symbol type (or <code>C_PSYM</code> for XCOFF).  The value
 of the symbol is an offset used to locate the parameter on the stack;
 its exact meaning is machine-dependent, but on most machines it is an
@@ -72,7 +72,7 @@ several type definitions.  Type 21 is pointer to type 2 (char) and
 <code>argv</code> (type 20) is pointer to type 21.
 
 <!-- FIXME: figure out what these mean and describe them coherently. -->
-   <p>The following symbol descriptors are also said to go with <code>N_PSYM</code>. 
+<p>The following symbol descriptors are also said to go with <code>N_PSYM</code>. 
 The value of the symbol is said to be an offset from the argument
 pointer (I'm not sure whether this is true or not).
 

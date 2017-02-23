@@ -3,7 +3,7 @@
 <title>Incdec - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="RTL.html#RTL" title="RTL">
 <link rel="prev" href="Side-Effects.html#Side-Effects" title="Side Effects">
@@ -69,7 +69,7 @@ reference of which this expression serves as the address.  Here is an
 example of its use:
 
      <pre class="smallexample">          (mem:DF (pre_dec:SI (reg:SI 39)))
-</pre>
+     </pre>
      <p class="noindent">This says to decrement pseudo register 39 by the length of a <code>DFmode</code>
 value and use the result to address a <code>DFmode</code> value.
 
@@ -97,7 +97,7 @@ where <var>z</var> is an index register and <var>i</var> is a constant.
 
      <pre class="smallexample">          (mem:SF (post_modify:SI (reg:SI 42) (plus (reg:SI 42)
                                                     (reg:SI 48))))
-</pre>
+     </pre>
      <p>This says to modify pseudo register 42 by adding the contents of pseudo
 register 48 to it, after the use of what ever 42 points to.
 
@@ -105,8 +105,8 @@ register 48 to it, after the use of what ever 42 points to.
 </dl>
 
  <p>These embedded side effect expressions must be used with care.  Instruction
-patterns may not use them.  Until the &lsquo;<samp><span class="samp">flow</span></samp>&rsquo; pass of the compiler,
-they may occur only to represent pushes onto the stack.  The &lsquo;<samp><span class="samp">flow</span></samp>&rsquo;
+patterns may not use them.  Until the `<samp><span class="samp">flow</span></samp>' pass of the compiler,
+they may occur only to represent pushes onto the stack.  The `<samp><span class="samp">flow</span></samp>'
 pass finds cases where registers are incremented or decremented in one
 instruction and used as an address shortly before or after; these cases are
 then transformed to use pre- or post-increment or -decrement.

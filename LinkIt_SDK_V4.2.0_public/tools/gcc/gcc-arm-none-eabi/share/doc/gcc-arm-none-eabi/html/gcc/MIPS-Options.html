@@ -3,7 +3,7 @@
 <title>MIPS Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="MicroBlaze-Options.html#MicroBlaze-Options" title="MicroBlaze Options">
@@ -58,71 +58,71 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
      <dl>
 <dt><code>-EB</code><dd><a name="index-EB-1731"></a>Generate big-endian code.
 
-     <br><dt><code>-EL</code><dd><a name="index-EL-1732"></a>Generate little-endian code.  This is the default for &lsquo;<samp><span class="samp">mips*el-*-*</span></samp>&rsquo;
+     <br><dt><code>-EL</code><dd><a name="index-EL-1732"></a>Generate little-endian code.  This is the default for `<samp><span class="samp">mips*el-*-*</span></samp>'
 configurations.
 
      <br><dt><code>-march=</code><var>arch</var><dd><a name="index-march-1733"></a>Generate code that runs on <var>arch</var>, which can be the name of a
 generic MIPS ISA, or the name of a particular processor. 
 The ISA names are:
-&lsquo;<samp><span class="samp">mips1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">mips2</span></samp>&rsquo;, &lsquo;<samp><span class="samp">mips3</span></samp>&rsquo;, &lsquo;<samp><span class="samp">mips4</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">mips32</span></samp>&rsquo;, &lsquo;<samp><span class="samp">mips32r2</span></samp>&rsquo;, &lsquo;<samp><span class="samp">mips64</span></samp>&rsquo; and &lsquo;<samp><span class="samp">mips64r2</span></samp>&rsquo;. 
+`<samp><span class="samp">mips1</span></samp>', `<samp><span class="samp">mips2</span></samp>', `<samp><span class="samp">mips3</span></samp>', `<samp><span class="samp">mips4</span></samp>',
+`<samp><span class="samp">mips32</span></samp>', `<samp><span class="samp">mips32r2</span></samp>', `<samp><span class="samp">mips64</span></samp>' and `<samp><span class="samp">mips64r2</span></samp>'. 
 The processor names are:
-&lsquo;<samp><span class="samp">4kc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">4km</span></samp>&rsquo;, &lsquo;<samp><span class="samp">4kp</span></samp>&rsquo;, &lsquo;<samp><span class="samp">4ksc</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">4kec</span></samp>&rsquo;, &lsquo;<samp><span class="samp">4kem</span></samp>&rsquo;, &lsquo;<samp><span class="samp">4kep</span></samp>&rsquo;, &lsquo;<samp><span class="samp">4ksd</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">5kc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">5kf</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">20kc</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">24kc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">24kf2_1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">24kf1_1</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">24kec</span></samp>&rsquo;, &lsquo;<samp><span class="samp">24kef2_1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">24kef1_1</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">34kc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">34kf2_1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">34kf1_1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">34kn</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">74kc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">74kf2_1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">74kf1_1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">74kf3_2</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">1004kc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">1004kf2_1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">1004kf1_1</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">loongson2e</span></samp>&rsquo;, &lsquo;<samp><span class="samp">loongson2f</span></samp>&rsquo;, &lsquo;<samp><span class="samp">loongson3a</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">m4k</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">octeon</span></samp>&rsquo;, &lsquo;<samp><span class="samp">octeon+</span></samp>&rsquo;, &lsquo;<samp><span class="samp">octeon2</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">orion</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">r2000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r3000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r3900</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r4000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r4400</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">r4600</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r4650</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r4700</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r6000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r8000</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">rm7000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">rm9000</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">r10000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r12000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r14000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">r16000</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">sb1</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">sr71000</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">vr4100</span></samp>&rsquo;, &lsquo;<samp><span class="samp">vr4111</span></samp>&rsquo;, &lsquo;<samp><span class="samp">vr4120</span></samp>&rsquo;, &lsquo;<samp><span class="samp">vr4130</span></samp>&rsquo;, &lsquo;<samp><span class="samp">vr4300</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">vr5000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">vr5400</span></samp>&rsquo;, &lsquo;<samp><span class="samp">vr5500</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">xlr</span></samp>&rsquo; and &lsquo;<samp><span class="samp">xlp</span></samp>&rsquo;. 
-The special value &lsquo;<samp><span class="samp">from-abi</span></samp>&rsquo; selects the
+`<samp><span class="samp">4kc</span></samp>', `<samp><span class="samp">4km</span></samp>', `<samp><span class="samp">4kp</span></samp>', `<samp><span class="samp">4ksc</span></samp>',
+`<samp><span class="samp">4kec</span></samp>', `<samp><span class="samp">4kem</span></samp>', `<samp><span class="samp">4kep</span></samp>', `<samp><span class="samp">4ksd</span></samp>',
+`<samp><span class="samp">5kc</span></samp>', `<samp><span class="samp">5kf</span></samp>',
+`<samp><span class="samp">20kc</span></samp>',
+`<samp><span class="samp">24kc</span></samp>', `<samp><span class="samp">24kf2_1</span></samp>', `<samp><span class="samp">24kf1_1</span></samp>',
+`<samp><span class="samp">24kec</span></samp>', `<samp><span class="samp">24kef2_1</span></samp>', `<samp><span class="samp">24kef1_1</span></samp>',
+`<samp><span class="samp">34kc</span></samp>', `<samp><span class="samp">34kf2_1</span></samp>', `<samp><span class="samp">34kf1_1</span></samp>', `<samp><span class="samp">34kn</span></samp>',
+`<samp><span class="samp">74kc</span></samp>', `<samp><span class="samp">74kf2_1</span></samp>', `<samp><span class="samp">74kf1_1</span></samp>', `<samp><span class="samp">74kf3_2</span></samp>',
+`<samp><span class="samp">1004kc</span></samp>', `<samp><span class="samp">1004kf2_1</span></samp>', `<samp><span class="samp">1004kf1_1</span></samp>',
+`<samp><span class="samp">loongson2e</span></samp>', `<samp><span class="samp">loongson2f</span></samp>', `<samp><span class="samp">loongson3a</span></samp>',
+`<samp><span class="samp">m4k</span></samp>',
+`<samp><span class="samp">octeon</span></samp>', `<samp><span class="samp">octeon+</span></samp>', `<samp><span class="samp">octeon2</span></samp>',
+`<samp><span class="samp">orion</span></samp>',
+`<samp><span class="samp">r2000</span></samp>', `<samp><span class="samp">r3000</span></samp>', `<samp><span class="samp">r3900</span></samp>', `<samp><span class="samp">r4000</span></samp>', `<samp><span class="samp">r4400</span></samp>',
+`<samp><span class="samp">r4600</span></samp>', `<samp><span class="samp">r4650</span></samp>', `<samp><span class="samp">r4700</span></samp>', `<samp><span class="samp">r6000</span></samp>', `<samp><span class="samp">r8000</span></samp>',
+`<samp><span class="samp">rm7000</span></samp>', `<samp><span class="samp">rm9000</span></samp>',
+`<samp><span class="samp">r10000</span></samp>', `<samp><span class="samp">r12000</span></samp>', `<samp><span class="samp">r14000</span></samp>', `<samp><span class="samp">r16000</span></samp>',
+`<samp><span class="samp">sb1</span></samp>',
+`<samp><span class="samp">sr71000</span></samp>',
+`<samp><span class="samp">vr4100</span></samp>', `<samp><span class="samp">vr4111</span></samp>', `<samp><span class="samp">vr4120</span></samp>', `<samp><span class="samp">vr4130</span></samp>', `<samp><span class="samp">vr4300</span></samp>',
+`<samp><span class="samp">vr5000</span></samp>', `<samp><span class="samp">vr5400</span></samp>', `<samp><span class="samp">vr5500</span></samp>',
+`<samp><span class="samp">xlr</span></samp>' and `<samp><span class="samp">xlp</span></samp>'. 
+The special value `<samp><span class="samp">from-abi</span></samp>' selects the
 most compatible architecture for the selected ABI (that is,
-&lsquo;<samp><span class="samp">mips1</span></samp>&rsquo; for 32-bit ABIs and &lsquo;<samp><span class="samp">mips3</span></samp>&rsquo; for 64-bit ABIs).
+`<samp><span class="samp">mips1</span></samp>' for 32-bit ABIs and `<samp><span class="samp">mips3</span></samp>' for 64-bit ABIs).
 
-     <p>The native Linux/GNU toolchain also supports the value &lsquo;<samp><span class="samp">native</span></samp>&rsquo;,
+     <p>The native Linux/GNU toolchain also supports the value `<samp><span class="samp">native</span></samp>',
 which selects the best architecture option for the host processor. 
 <samp><span class="option">-march=native</span></samp> has no effect if GCC does not recognize
 the processor.
 
-     <p>In processor names, a final &lsquo;<samp><span class="samp">000</span></samp>&rsquo; can be abbreviated as &lsquo;<samp><span class="samp">k</span></samp>&rsquo;
+     <p>In processor names, a final `<samp><span class="samp">000</span></samp>' can be abbreviated as `<samp><span class="samp">k</span></samp>'
 (for example, <samp><span class="option">-march=r2k</span></samp>).  Prefixes are optional, and
-&lsquo;<samp><span class="samp">vr</span></samp>&rsquo; may be written &lsquo;<samp><span class="samp">r</span></samp>&rsquo;.
+`<samp><span class="samp">vr</span></samp>' may be written `<samp><span class="samp">r</span></samp>'.
 
-     <p>Names of the form &lsquo;<samp><var>n</var><span class="samp">f2_1</span></samp>&rsquo; refer to processors with
+     <p>Names of the form `<samp><var>n</var><span class="samp">f2_1</span></samp>' refer to processors with
 FPUs clocked at half the rate of the core, names of the form
-&lsquo;<samp><var>n</var><span class="samp">f1_1</span></samp>&rsquo; refer to processors with FPUs clocked at the same
-rate as the core, and names of the form &lsquo;<samp><var>n</var><span class="samp">f3_2</span></samp>&rsquo; refer to
+`<samp><var>n</var><span class="samp">f1_1</span></samp>' refer to processors with FPUs clocked at the same
+rate as the core, and names of the form `<samp><var>n</var><span class="samp">f3_2</span></samp>' refer to
 processors with FPUs clocked a ratio of 3:2 with respect to the core. 
-For compatibility reasons, &lsquo;<samp><var>n</var><span class="samp">f</span></samp>&rsquo; is accepted as a synonym
-for &lsquo;<samp><var>n</var><span class="samp">f2_1</span></samp>&rsquo; while &lsquo;<samp><var>n</var><span class="samp">x</span></samp>&rsquo; and &lsquo;<samp><var>b</var><span class="samp">fx</span></samp>&rsquo; are
-accepted as synonyms for &lsquo;<samp><var>n</var><span class="samp">f1_1</span></samp>&rsquo;.
+For compatibility reasons, `<samp><var>n</var><span class="samp">f</span></samp>' is accepted as a synonym
+for `<samp><var>n</var><span class="samp">f2_1</span></samp>' while `<samp><var>n</var><span class="samp">x</span></samp>' and `<samp><var>b</var><span class="samp">fx</span></samp>' are
+accepted as synonyms for `<samp><var>n</var><span class="samp">f1_1</span></samp>'.
 
      <p>GCC defines two macros based on the value of this option.  The first
-is &lsquo;<samp><span class="samp">_MIPS_ARCH</span></samp>&rsquo;, which gives the name of target architecture, as
-a string.  The second has the form &lsquo;<samp><span class="samp">_MIPS_ARCH_</span><var>foo</var></samp>&rsquo;,
-where <var>foo</var> is the capitalized value of &lsquo;<samp><span class="samp">_MIPS_ARCH</span></samp>&rsquo;. 
-For example, <samp><span class="option">-march=r2000</span></samp> sets &lsquo;<samp><span class="samp">_MIPS_ARCH</span></samp>&rsquo;
-to &lsquo;<samp><span class="samp">"r2000"</span></samp>&rsquo; and defines the macro &lsquo;<samp><span class="samp">_MIPS_ARCH_R2000</span></samp>&rsquo;.
+is `<samp><span class="samp">_MIPS_ARCH</span></samp>', which gives the name of target architecture, as
+a string.  The second has the form `<samp><span class="samp">_MIPS_ARCH_</span><var>foo</var></samp>',
+where <var>foo</var> is the capitalized value of `<samp><span class="samp">_MIPS_ARCH</span></samp>'. 
+For example, <samp><span class="option">-march=r2000</span></samp> sets `<samp><span class="samp">_MIPS_ARCH</span></samp>'
+to `<samp><span class="samp">"r2000"</span></samp>' and defines the macro `<samp><span class="samp">_MIPS_ARCH_R2000</span></samp>'.
 
-     <p>Note that the &lsquo;<samp><span class="samp">_MIPS_ARCH</span></samp>&rsquo; macro uses the processor names given
+     <p>Note that the `<samp><span class="samp">_MIPS_ARCH</span></samp>' macro uses the processor names given
 above.  In other words, it has the full prefix and does not
-abbreviate &lsquo;<samp><span class="samp">000</span></samp>&rsquo; as &lsquo;<samp><span class="samp">k</span></samp>&rsquo;.  In the case of &lsquo;<samp><span class="samp">from-abi</span></samp>&rsquo;,
-the macro names the resolved architecture (either &lsquo;<samp><span class="samp">"mips1"</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">"mips3"</span></samp>&rsquo;).  It names the default architecture when no
+abbreviate `<samp><span class="samp">000</span></samp>' as `<samp><span class="samp">k</span></samp>'.  In the case of `<samp><span class="samp">from-abi</span></samp>',
+the macro names the resolved architecture (either `<samp><span class="samp">"mips1"</span></samp>' or
+`<samp><span class="samp">"mips3"</span></samp>').  It names the default architecture when no
 <samp><span class="option">-march</span></samp> option is given.
 
      <br><dt><code>-mtune=</code><var>arch</var><dd><a name="index-mtune-1734"></a>Optimize for <var>arch</var>.  Among other things, this option controls
@@ -136,8 +136,8 @@ specified by <samp><span class="option">-march</span></samp>.  By using <samp><s
 runs on a family of processors, but optimize the code for one
 particular member of that family.
 
-     <p><samp><span class="option">-mtune</span></samp> defines the macros &lsquo;<samp><span class="samp">_MIPS_TUNE</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">_MIPS_TUNE_</span><var>foo</var></samp>&rsquo;, which work in the same way as the
+     <p><samp><span class="option">-mtune</span></samp> defines the macros `<samp><span class="samp">_MIPS_TUNE</span></samp>' and
+`<samp><span class="samp">_MIPS_TUNE_</span><var>foo</var></samp>', which work in the same way as the
 <samp><span class="option">-march</span></samp> ones described above.
 
      <br><dt><code>-mips1</code><dd><a name="index-mips1-1735"></a>Equivalent to <samp><span class="option">-march=mips1</span></samp>.
@@ -193,8 +193,8 @@ MIPS32R2 processors.
      <p>The register assignments for arguments and return values remain the
 same, but each scalar value is passed in a single 64-bit register
 rather than a pair of 32-bit registers.  For example, scalar
-floating-point values are returned in &lsquo;<samp><span class="samp">$f0</span></samp>&rsquo; only, not a
-&lsquo;<samp><span class="samp">$f0</span></samp>&rsquo;/&lsquo;<samp><span class="samp">$f1</span></samp>&rsquo; pair.  The set of call-saved registers also
+floating-point values are returned in `<samp><span class="samp">$f0</span></samp>' only, not a
+`<samp><span class="samp">$f0</span></samp>'/`<samp><span class="samp">$f1</span></samp>' pair.  The set of call-saved registers also
 remains the same, but all 64 bits are saved.
 
      <br><dt><code>-mabicalls</code><dt><code>-mno-abicalls</code><dd><a name="index-mabicalls-1753"></a><a name="index-mno_002dabicalls-1754"></a>Generate (do not generate) code that is suitable for SVR4-style
@@ -239,7 +239,7 @@ to report an error such as:
 
      <p><a name="index-relocation-truncated-to-fit-_0028MIPS_0029-1759"></a>
      <pre class="smallexample">          relocation truncated to fit: R_MIPS_GOT16 foobar
-</pre>
+     </pre>
      <p>If this happens, you should recompile your code with <samp><span class="option">-mxgot</span></samp>. 
 This works with very large GOTs, although the code is also
 less efficient, since it takes three instructions to fetch the
@@ -281,7 +281,7 @@ operations.
      <br><dt><code>-mdouble-float</code><dd><a name="index-mdouble_002dfloat-1768"></a>Assume that the floating-point coprocessor supports double-precision
 operations.  This is the default.
 
-     <br><dt><code>-mllsc</code><dt><code>-mno-llsc</code><dd><a name="index-mllsc-1769"></a><a name="index-mno_002dllsc-1770"></a>Use (do not use) &lsquo;<samp><span class="samp">ll</span></samp>&rsquo;, &lsquo;<samp><span class="samp">sc</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">sync</span></samp>&rsquo; instructions to
+     <br><dt><code>-mllsc</code><dt><code>-mno-llsc</code><dd><a name="index-mllsc-1769"></a><a name="index-mno_002dllsc-1770"></a>Use (do not use) `<samp><span class="samp">ll</span></samp>', `<samp><span class="samp">sc</span></samp>', and `<samp><span class="samp">sync</span></samp>' instructions to
 implement atomic memory built-in functions.  When neither option is
 specified, GCC uses the instructions if the target architecture
 supports them.
@@ -295,13 +295,13 @@ configurations; see the installation documentation for details.
 
      <br><dt><code>-mdsp</code><dt><code>-mno-dsp</code><dd><a name="index-mdsp-1771"></a><a name="index-mno_002ddsp-1772"></a>Use (do not use) revision 1 of the MIPS DSP ASE. 
 See <a href="MIPS-DSP-Built_002din-Functions.html#MIPS-DSP-Built_002din-Functions">MIPS DSP Built-in Functions</a>.  This option defines the
-preprocessor macro &lsquo;<samp><span class="samp">__mips_dsp</span></samp>&rsquo;.  It also defines
-&lsquo;<samp><span class="samp">__mips_dsp_rev</span></samp>&rsquo; to 1.
+preprocessor macro `<samp><span class="samp">__mips_dsp</span></samp>'.  It also defines
+`<samp><span class="samp">__mips_dsp_rev</span></samp>' to 1.
 
      <br><dt><code>-mdspr2</code><dt><code>-mno-dspr2</code><dd><a name="index-mdspr2-1773"></a><a name="index-mno_002ddspr2-1774"></a>Use (do not use) revision 2 of the MIPS DSP ASE. 
 See <a href="MIPS-DSP-Built_002din-Functions.html#MIPS-DSP-Built_002din-Functions">MIPS DSP Built-in Functions</a>.  This option defines the
-preprocessor macros &lsquo;<samp><span class="samp">__mips_dsp</span></samp>&rsquo; and &lsquo;<samp><span class="samp">__mips_dspr2</span></samp>&rsquo;. 
-It also defines &lsquo;<samp><span class="samp">__mips_dsp_rev</span></samp>&rsquo; to 2.
+preprocessor macros `<samp><span class="samp">__mips_dsp</span></samp>' and `<samp><span class="samp">__mips_dspr2</span></samp>'. 
+It also defines `<samp><span class="samp">__mips_dsp_rev</span></samp>' to 2.
 
      <br><dt><code>-msmartmips</code><dt><code>-mno-smartmips</code><dd><a name="index-msmartmips-1775"></a><a name="index-mno_002dsmartmips-1776"></a>Use (do not use) the MIPS SmartMIPS ASE.
 
@@ -471,7 +471,7 @@ is numerically identical to the equivalent computation using
 separate multiply, add, subtract and negate instructions.
 
      <br><dt><code>-nocpp</code><dd><a name="index-nocpp-1819"></a>Tell the MIPS assembler to not run its preprocessor over user
-assembler files (with a &lsquo;<samp><span class="samp">.s</span></samp>&rsquo; suffix) when assembling them.
+assembler files (with a `<samp><span class="samp">.s</span></samp>' suffix) when assembling them.
 
      <br><dt><code>-mfix-24k</code><br><dt><code>-mno-fix-24k</code><dd><a name="index-mfix_002d24k-1820"></a><a name="index-mno_002dfix_002d24k-1821"></a>Work around the 24K E48 (lost data on stores during refill) errata. 
 The workarounds are implemented by the assembler rather than by GCC.
@@ -564,7 +564,7 @@ accesses to these regions are indeed safe.
      <p>If the input program contains a function declaration such as:
 
      <pre class="smallexample">          void foo (void);
-</pre>
+     </pre>
      <p>then the implementation of <code>foo</code> must allow <code>j foo</code> and
 <code>jal foo</code> to be executed speculatively.  GCC honors this
 restriction for functions it compiles itself.  It expects non-GCC
@@ -589,7 +589,7 @@ arguments as the common <code>_flush_func()</code>, that is, the address of the
 memory range for which the cache is being flushed, the size of the
 memory range, and the number 3 (to flush both caches).  The default
 depends on the target GCC was configured for, but commonly is either
-&lsquo;<samp><span class="samp">_flush_func</span></samp>&rsquo; or &lsquo;<samp><span class="samp">__cpu_flush</span></samp>&rsquo;.
+`<samp><span class="samp">_flush_func</span></samp>' or `<samp><span class="samp">__cpu_flush</span></samp>'.
 
      <br><dt><code>mbranch-cost=</code><var>num</var><dd><a name="index-mbranch_002dcost-1833"></a>Set the cost of branches to roughly <var>num</var> &ldquo;simple&rdquo; instructions. 
 This cost is only a heuristic and is not guaranteed to produce

@@ -3,7 +3,7 @@
 <title>Class Preferences - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Constraints.html#Constraints" title="Constraints">
 <link rel="prev" href="Multi_002dAlternative.html#Multi_002dAlternative" title="Multi-Alternative">
@@ -59,9 +59,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Constraints.html#Constraints">Constrain
 to decide which kind of hardware register a pseudo register is best
 allocated to.  The compiler examines the constraints that apply to the
 insns that use the pseudo register, looking for the machine-dependent
-letters such as &lsquo;<samp><span class="samp">d</span></samp>&rsquo; and &lsquo;<samp><span class="samp">a</span></samp>&rsquo; that specify classes of registers. 
+letters such as `<samp><span class="samp">d</span></samp>' and `<samp><span class="samp">a</span></samp>' that specify classes of registers. 
 The pseudo register is put in whichever class gets the most &ldquo;votes&rdquo;. 
-The constraint letters &lsquo;<samp><span class="samp">g</span></samp>&rsquo; and &lsquo;<samp><span class="samp">r</span></samp>&rsquo; also vote: they vote in
+The constraint letters `<samp><span class="samp">g</span></samp>' and `<samp><span class="samp">r</span></samp>' also vote: they vote in
 favor of a general register.  The machine description says which registers
 are considered general.
 

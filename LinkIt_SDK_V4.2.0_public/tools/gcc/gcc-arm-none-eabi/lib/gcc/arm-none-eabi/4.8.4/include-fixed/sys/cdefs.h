@@ -2,7 +2,7 @@
 
     It has been auto-edited by fixincludes from:
 
-	"/home/build/work/GCC-4-8-build/install-native/arm-none-eabi/usr/include/sys/cdefs.h"
+	"/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/install-native/arm-none-eabi/usr/include/sys/cdefs.h"
 
     This had to be done to correct non-standard usages in the
     original, manufacturer supplied header file.  */

@@ -3,7 +3,7 @@
 <title>Server - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Debugging.html#Remote-Debugging" title="Remote Debugging">
 <link rel="prev" href="File-Transfer.html#File-Transfer" title="File Transfer">
@@ -96,7 +96,7 @@ syntax is:
 hostname and portnumber, or <code>-</code> or <code>stdio</code> to use
 stdin/stdout of <code>gdbserver</code>. 
 For example, to debug Emacs with the argument
-&lsquo;<samp><span class="samp">foo.txt</span></samp>&rsquo; and communicate with <span class="sc">gdb</span> over the serial port
+`<samp><span class="samp">foo.txt</span></samp>' and communicate with <span class="sc">gdb</span> over the serial port
 <samp><span class="file">/dev/com1</span></samp>:
 
 <pre class="smallexample">     target&gt; gdbserver /dev/com1 emacs foo.txt
@@ -110,9 +110,9 @@ with it.
 </pre>
    <p>The only difference from the previous example is the first argument,
 specifying that you are communicating with the host <span class="sc">gdb</span> via
-TCP.  The &lsquo;<samp><span class="samp">host:2345</span></samp>&rsquo; argument means that <code>gdbserver</code> is to
-expect a TCP connection from machine &lsquo;<samp><span class="samp">host</span></samp>&rsquo; to local TCP port 2345. 
-(Currently, the &lsquo;<samp><span class="samp">host</span></samp>&rsquo; part is ignored.)  You can choose any number
+TCP.  The `<samp><span class="samp">host:2345</span></samp>' argument means that <code>gdbserver</code> is to
+expect a TCP connection from machine `<samp><span class="samp">host</span></samp>' to local TCP port 2345. 
+(Currently, the `<samp><span class="samp">host</span></samp>' part is ignored.)  You can choose any number
 you want for the port number as long as it does not conflict with any
 TCP ports already in use on the target system (for example, <code>23</code> is
 reserved for <code>telnet</code>).<a rel="footnote" href="#fn-1" name="fnd-1"><sup>1</sup></a>  You must use the same port number with the host <span class="sc">gdb</span>
@@ -123,7 +123,7 @@ with ssh:
 
 <pre class="smallexample">     (gdb) target remote | ssh -T hostname gdbserver - hello
 </pre>
-   <p>The &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; option to ssh is provided because we don't need a remote pty,
+   <p>The `<samp><span class="samp">-T</span></samp>' option to ssh is provided because we don't need a remote pty,
 and we don't want escape-character handling.  Ssh does this by default when
 a command is provided, the flag is provided to make it explicit. 
 You could elide it if you want to.
@@ -261,13 +261,15 @@ programs.
 For TCP connections, you must start up <code>gdbserver</code> prior to using
 the <code>target remote</code> command.  Otherwise you may get an error whose
 text depends on the host system, but which usually looks something like
-&lsquo;<samp><span class="samp">Connection refused</span></samp>&rsquo;.  Don't use the <code>load</code>
+`<samp><span class="samp">Connection refused</span></samp>'.  Don't use the <code>load</code>
 command in <span class="sc">gdb</span> when using <code>gdbserver</code>, since the program is
 already on the target.
 
 <h4 class="subsection">20.3.3 Monitor Commands for <code>gdbserver</code></h4>
 
-<p><a name="index-monitor-commands_002c-for-_0040code_007bgdbserver_007d-1190"></a><a name="Monitor-Commands-for-gdbserver"></a>During a <span class="sc">gdb</span> session using <code>gdbserver</code>, you can use the
+<p><a name="index-monitor-commands_002c-for-_0040code_007bgdbserver_007d-1190"></a><a name="Monitor-Commands-for-gdbserver"></a>
+
+   <p>During a <span class="sc">gdb</span> session using <code>gdbserver</code>, you can use the
 <code>monitor</code> command to send special requests to <code>gdbserver</code>. 
 Here are the available commands.
 
@@ -281,9 +283,9 @@ protocol (see <a href="Remote-Protocol.html#Remote-Protocol">Remote Protocol</a>
 
      <br><dt><code>monitor set libthread-db-search-path [PATH]</code><dd><a name="index-gdbserver_002c-search-path-for-_0040code_007blibthread_005fdb_007d-1191"></a>When this command is issued, <var>path</var> is a colon-separated list of
 directories to search for <code>libthread_db</code> (see <a href="Threads.html#Threads">set libthread-db-search-path</a>).  If you omit <var>path</var>,
-&lsquo;<samp><span class="samp">libthread-db-search-path</span></samp>&rsquo; will be reset to its default value.
+`<samp><span class="samp">libthread-db-search-path</span></samp>' will be reset to its default value.
 
-     <p>The special entry &lsquo;<samp><span class="samp">$pdir</span></samp>&rsquo; for &lsquo;<samp><span class="samp">libthread-db-search-path</span></samp>&rsquo; is
+     <p>The special entry `<samp><span class="samp">$pdir</span></samp>' for `<samp><span class="samp">libthread-db-search-path</span></samp>' is
 not supported in <code>gdbserver</code>.
 
      <br><dt><code>monitor exit</code><dd>Tell gdbserver to exit immediately.  This command should be followed by
@@ -337,7 +339,7 @@ systems, the function is <code>dlopen</code>.  You'll use the <code>call</code>
 command for that.  For example:
 
      <pre class="smallexample">          (gdb) call dlopen ("libinproctrace.so", ...)
-</pre>
+     </pre>
      <p>Note that on most Unix systems, for the <code>dlopen</code> function to be
 available, the program needs to be linked with <code>-ldl</code>. 
 </dl>
@@ -376,7 +378,7 @@ tracing.
 conflicts with another service, <code>gdbserver</code> prints an error message
 and exits.</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

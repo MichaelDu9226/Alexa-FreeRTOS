@@ -3,7 +3,7 @@
 <title>Inline - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Alignment.html#Alignment" title="Alignment">
@@ -130,7 +130,7 @@ not explicitly declared with the <code>inline</code> keyword.  You can
 override this with <samp><span class="option">-fno-default-inline</span></samp>; see <a href="C_002b_002b-Dialect-Options.html#C_002b_002b-Dialect-Options">Options Controlling C++ Dialect</a>.
 
  <p>GCC does not inline any functions when not optimizing unless you specify
-the &lsquo;<samp><span class="samp">always_inline</span></samp>&rsquo; attribute for the function, like this:
+the `<samp><span class="samp">always_inline</span></samp>' attribute for the function, like this:
 
 <pre class="smallexample">     /* <span class="roman">Prototype.</span>  */
      inline void foo (const char) __attribute__((always_inline));

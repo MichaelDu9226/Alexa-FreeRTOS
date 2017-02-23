@@ -3,7 +3,7 @@
 <title>X86 Built-in Functions - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Builtins.html#Target-Builtins" title="Target Builtins">
 <link rel="prev" href="FR_002dV-Built_002din-Functions.html#FR_002dV-Built_002din-Functions" title="FR-V Built-in Functions">
@@ -137,7 +137,7 @@ don't support constructor priority.
           
           void *memcpy (void *, const void *, size_t)
                __attribute__ ((ifunc ("resolve_memcpy")));
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
@@ -147,41 +147,41 @@ is of type <var>cpuname</var>
 and returns <code>0</code> otherwise. The following CPU names can be detected:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">intel</span></samp>&rsquo;<dd>Intel CPU.
+<dt>`<samp><span class="samp">intel</span></samp>'<dd>Intel CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">atom</span></samp>&rsquo;<dd>Intel Atom CPU.
+          <br><dt>`<samp><span class="samp">atom</span></samp>'<dd>Intel Atom CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">core2</span></samp>&rsquo;<dd>Intel Core 2 CPU.
+          <br><dt>`<samp><span class="samp">core2</span></samp>'<dd>Intel Core 2 CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">corei7</span></samp>&rsquo;<dd>Intel Core i7 CPU.
+          <br><dt>`<samp><span class="samp">corei7</span></samp>'<dd>Intel Core i7 CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">nehalem</span></samp>&rsquo;<dd>Intel Core i7 Nehalem CPU.
+          <br><dt>`<samp><span class="samp">nehalem</span></samp>'<dd>Intel Core i7 Nehalem CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">westmere</span></samp>&rsquo;<dd>Intel Core i7 Westmere CPU.
+          <br><dt>`<samp><span class="samp">westmere</span></samp>'<dd>Intel Core i7 Westmere CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">sandybridge</span></samp>&rsquo;<dd>Intel Core i7 Sandy Bridge CPU.
+          <br><dt>`<samp><span class="samp">sandybridge</span></samp>'<dd>Intel Core i7 Sandy Bridge CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">amd</span></samp>&rsquo;<dd>AMD CPU.
+          <br><dt>`<samp><span class="samp">amd</span></samp>'<dd>AMD CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">amdfam10h</span></samp>&rsquo;<dd>AMD Family 10h CPU.
+          <br><dt>`<samp><span class="samp">amdfam10h</span></samp>'<dd>AMD Family 10h CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">barcelona</span></samp>&rsquo;<dd>AMD Family 10h Barcelona CPU.
+          <br><dt>`<samp><span class="samp">barcelona</span></samp>'<dd>AMD Family 10h Barcelona CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">shanghai</span></samp>&rsquo;<dd>AMD Family 10h Shanghai CPU.
+          <br><dt>`<samp><span class="samp">shanghai</span></samp>'<dd>AMD Family 10h Shanghai CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">istanbul</span></samp>&rsquo;<dd>AMD Family 10h Istanbul CPU.
+          <br><dt>`<samp><span class="samp">istanbul</span></samp>'<dd>AMD Family 10h Istanbul CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">btver1</span></samp>&rsquo;<dd>AMD Family 14h CPU.
+          <br><dt>`<samp><span class="samp">btver1</span></samp>'<dd>AMD Family 14h CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">amdfam15h</span></samp>&rsquo;<dd>AMD Family 15h CPU.
+          <br><dt>`<samp><span class="samp">amdfam15h</span></samp>'<dd>AMD Family 15h CPU.
 
-          <br><dt>&lsquo;<samp><span class="samp">bdver1</span></samp>&rsquo;<dd>AMD Family 15h Bulldozer version 1.
+          <br><dt>`<samp><span class="samp">bdver1</span></samp>'<dd>AMD Family 15h Bulldozer version 1.
 
-          <br><dt>&lsquo;<samp><span class="samp">bdver2</span></samp>&rsquo;<dd>AMD Family 15h Bulldozer version 2.
+          <br><dt>`<samp><span class="samp">bdver2</span></samp>'<dd>AMD Family 15h Bulldozer version 2.
 
-          <br><dt>&lsquo;<samp><span class="samp">bdver3</span></samp>&rsquo;<dd>AMD Family 15h Bulldozer version 3.
+          <br><dt>`<samp><span class="samp">bdver3</span></samp>'<dd>AMD Family 15h Bulldozer version 3.
 
-          <br><dt>&lsquo;<samp><span class="samp">btver2</span></samp>&rsquo;<dd>AMD Family 16h CPU. 
+          <br><dt>`<samp><span class="samp">btver2</span></samp>'<dd>AMD Family 16h CPU. 
 </dl>
 
       <p>Here is an example:
@@ -193,7 +193,7 @@ and returns <code>0</code> otherwise. The following CPU names can be detected:
             {
                do_generic (); // Generic implementation.
             }
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
@@ -203,17 +203,17 @@ supports <var>feature</var>
 and returns <code>0</code> otherwise. The following features can be detected:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">cmov</span></samp>&rsquo;<dd>CMOV instruction. 
-<br><dt>&lsquo;<samp><span class="samp">mmx</span></samp>&rsquo;<dd>MMX instructions. 
-<br><dt>&lsquo;<samp><span class="samp">popcnt</span></samp>&rsquo;<dd>POPCNT instruction. 
-<br><dt>&lsquo;<samp><span class="samp">sse</span></samp>&rsquo;<dd>SSE instructions. 
-<br><dt>&lsquo;<samp><span class="samp">sse2</span></samp>&rsquo;<dd>SSE2 instructions. 
-<br><dt>&lsquo;<samp><span class="samp">sse3</span></samp>&rsquo;<dd>SSE3 instructions. 
-<br><dt>&lsquo;<samp><span class="samp">ssse3</span></samp>&rsquo;<dd>SSSE3 instructions. 
-<br><dt>&lsquo;<samp><span class="samp">sse4.1</span></samp>&rsquo;<dd>SSE4.1 instructions. 
-<br><dt>&lsquo;<samp><span class="samp">sse4.2</span></samp>&rsquo;<dd>SSE4.2 instructions. 
-<br><dt>&lsquo;<samp><span class="samp">avx</span></samp>&rsquo;<dd>AVX instructions. 
-<br><dt>&lsquo;<samp><span class="samp">avx2</span></samp>&rsquo;<dd>AVX2 instructions. 
+<dt>`<samp><span class="samp">cmov</span></samp>'<dd>CMOV instruction. 
+<br><dt>`<samp><span class="samp">mmx</span></samp>'<dd>MMX instructions. 
+<br><dt>`<samp><span class="samp">popcnt</span></samp>'<dd>POPCNT instruction. 
+<br><dt>`<samp><span class="samp">sse</span></samp>'<dd>SSE instructions. 
+<br><dt>`<samp><span class="samp">sse2</span></samp>'<dd>SSE2 instructions. 
+<br><dt>`<samp><span class="samp">sse3</span></samp>'<dd>SSE3 instructions. 
+<br><dt>`<samp><span class="samp">ssse3</span></samp>'<dd>SSSE3 instructions. 
+<br><dt>`<samp><span class="samp">sse4.1</span></samp>'<dd>SSE4.1 instructions. 
+<br><dt>`<samp><span class="samp">sse4.2</span></samp>'<dd>SSE4.2 instructions. 
+<br><dt>`<samp><span class="samp">avx</span></samp>'<dd>AVX instructions. 
+<br><dt>`<samp><span class="samp">avx2</span></samp>'<dd>AVX2 instructions. 
 </dl>
 
       <p>Here is an example:
@@ -225,7 +225,7 @@ and returns <code>0</code> otherwise. The following features can be detected:
             {
                count = generic_countbits (n); //generic implementation.
             }
-</pre>
+     </pre>
       </blockquote></div>
 
  <p>The following built-in functions are made available by <samp><span class="option">-mmmx</span></samp>. 

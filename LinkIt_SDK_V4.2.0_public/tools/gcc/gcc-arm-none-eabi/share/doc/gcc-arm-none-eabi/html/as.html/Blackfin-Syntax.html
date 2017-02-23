@@ -3,7 +3,7 @@
 <title>Blackfin Syntax - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Blackfin_002dDependent.html#Blackfin_002dDependent" title="Blackfin-Dependent">
 <link rel="prev" href="Blackfin-Options.html#Blackfin-Options" title="Blackfin Options">
@@ -59,8 +59,8 @@ not have embedded spaces.  Tokens include numbers, register names,
 keywords, user identifiers, and also some multicharacter special
 symbols like "+=", "/*" or "||".
 
-     <p>Comments are introduced by the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; character and extend to the
-end of the current line.  If the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; appears as the first
+     <p>Comments are introduced by the `<samp><span class="samp">#</span></samp>' character and extend to the
+end of the current line.  If the `<samp><span class="samp">#</span></samp>' appears as the first
 character of a line, the whole line is treated as a comment, but in
 this case the line can also be a logical line number directive
 (see <a href="Comments.html#Comments">Comments</a>) or a preprocessor control command
@@ -72,13 +72,13 @@ cases where this occurs.  The first is when two general operations
 are combined.  Normally a comma separates the different parts, as in
 
      <pre class="smallexample">          a0= r3.h * r2.l, a1 = r3.l * r2.h ;
-</pre>
+     </pre>
      <p>The second case occurs when a general instruction is combined with one
 or two memory references for joint issue.  The latter portions are
 set off by a "||" token.
 
      <pre class="smallexample">          a0 = r3.h * r2.l || r1 = [p3++] || r4 = [i2++];
-</pre>
+     </pre>
      <p>Multiple instructions can occur on the same line.  Each must be
 terminated by a semicolon character.
 
@@ -126,13 +126,13 @@ following the register name.  The most significant 16 bits are called
 the "high" half and is designated with ".H" following the name.
 
      <pre class="smallexample">             R7.L, r2.h, r4.L, R0.H
-</pre>
+     </pre>
      <br><dt><code>Pointer Registers</code><dd>The set of 32-bit registers (P0, P1, P2, P3, P4, P5, SP and FP) that
 normally contain byte addresses of data structures.  These are
 abbreviated as P-register or Preg.
 
      <pre class="smallexample">          p2, p5, fp, sp
-</pre>
+     </pre>
      <br><dt><code>Stack Pointer SP</code><dd>The stack pointer contains the 32-bit address of the last occupied
 byte location in the stack.  The stack grows by decrementing the
 stack pointer.

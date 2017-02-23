@@ -3,7 +3,7 @@
 <title>Value Annotations - GDB's Obsolete Annotations</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB's Obsolete Annotations">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Server-Prefix.html#Server-Prefix" title="Server Prefix">
 <link rel="next" href="Frame-Annotations.html#Frame-Annotations" title="Frame Annotations">
@@ -58,10 +58,10 @@ the annotation looks like
      ^Z^Zvalue-history-end
 </pre>
    <p class="noindent">where <var>history-number</var> is the number it is getting in the value
-history, <var>history-string</var> is a string, such as &lsquo;<samp><span class="samp">$5 = </span></samp>&rsquo;, which
+history, <var>history-string</var> is a string, such as `<samp><span class="samp">$5 = </span></samp>', which
 introduces the value to the user, <var>the-value</var> is the output
-corresponding to the value itself, and <var>value-flags</var> is &lsquo;<samp><span class="samp">*</span></samp>&rsquo; for
-a value which can be dereferenced and &lsquo;<samp><span class="samp">-</span></samp>&rsquo; for a value which cannot.
+corresponding to the value itself, and <var>value-flags</var> is `<samp><span class="samp">*</span></samp>' for
+a value which can be dereferenced and `<samp><span class="samp">-</span></samp>' for a value which cannot.
 
    <p><a name="index-value_002dbegin-7"></a><a name="index-value_002dend-8"></a>If the value is not added to the value history (it is an invalid float
 or it is printed with the <code>output</code> command), the annotation is similar:
@@ -83,7 +83,7 @@ from the <code>backtrace</code> command), it annotates it as follows:
 </pre>
    <p class="noindent">where <var>argument-name</var> is the name of the argument,
 <var>separator-string</var> is text which separates the name from the value
-for the user's benefit (such as &lsquo;<samp><span class="samp">=</span></samp>&rsquo;), and <var>value-flags</var> and
+for the user's benefit (such as `<samp><span class="samp">=</span></samp>'), and <var>value-flags</var> and
 <var>the-value</var> have the same meanings as in a
 <code>value-history-begin</code> annotation.
 
@@ -99,7 +99,7 @@ for the user's benefit (such as &lsquo;<samp><span class="samp">=</span></samp>&
 </pre>
    <p class="noindent">where <var>field-name</var> is the name of the field, <var>separator-string</var>
 is text which separates the name from the value for the user's benefit
-(such as &lsquo;<samp><span class="samp">=</span></samp>&rsquo;), and <var>value-flags</var> and <var>the-value</var> have the
+(such as `<samp><span class="samp">=</span></samp>'), and <var>value-flags</var> and <var>the-value</var> have the
 same meanings as in a <code>value-history-begin</code> annotation.
 
    <p>When printing an array, <span class="sc">gdb</span> annotates it as follows:
@@ -112,14 +112,14 @@ annotated and <var>value-flags</var> has the same meaning as in a
 of elements, where is element can be either a single element:
 
    <p><a name="index-elt-17"></a>
-<pre class="smallexample">     &lsquo;<samp><span class="samp">,</span></samp>&rsquo; <var>whitespace</var>         ; <span class="roman">omitted for the first element</span>
+<pre class="smallexample">     `<samp><span class="samp">,</span></samp>' <var>whitespace</var>         ; <span class="roman">omitted for the first element</span>
      <var>the-value</var>
      ^Z^Zelt
 </pre>
    <p>or a repeated element
 
    <p><a name="index-elt_002drep-18"></a><a name="index-elt_002drep_002dend-19"></a>
-<pre class="smallexample">     &lsquo;<samp><span class="samp">,</span></samp>&rsquo; <var>whitespace</var>         ; <span class="roman">omitted for the first element</span>
+<pre class="smallexample">     `<samp><span class="samp">,</span></samp>' <var>whitespace</var>         ; <span class="roman">omitted for the first element</span>
      <var>the-value</var>
      ^Z^Zelt-rep <var>number-of-repetitions</var>
      <var>repetition-string</var>

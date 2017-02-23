@@ -3,7 +3,7 @@
 <title>Value History - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Data.html#Data" title="Data">
 <link rel="prev" href="Pretty-Printing.html#Pretty-Printing" title="Pretty Printing">
@@ -58,10 +58,10 @@ symbol table.
    <p><a name="index-g_t_0040code_007b_0024_007d-623"></a><a name="index-g_t_0040code_007b_0024_0024_007d-624"></a><a name="index-history-number-625"></a>The values printed are given <dfn>history numbers</dfn> by which you can
 refer to them.  These are successive integers starting with one. 
 <code>print</code> shows you the history number assigned to a value by
-printing &lsquo;<samp><span class="samp">$</span><var>num</var><span class="samp"> = </span></samp>&rsquo; before the value; here <var>num</var> is the
+printing `<samp><span class="samp">$</span><var>num</var><span class="samp"> = </span></samp>' before the value; here <var>num</var> is the
 history number.
 
-   <p>To refer to any previous value, use &lsquo;<samp><span class="samp">$</span></samp>&rsquo; followed by the value's
+   <p>To refer to any previous value, use `<samp><span class="samp">$</span></samp>' followed by the value's
 history number.  The way <code>print</code> labels its output is designed to
 remind you of this.  Just <code>$</code> refers to the most recent value in
 the history, and <code>$$</code> refers to the value before that. 
@@ -94,7 +94,7 @@ remains 4 even though the value of <code>x</code> has changed.
      
 <a name="index-show-values-626"></a>
 <dl><dt><code>show values</code><dd>Print the last ten values in the value history, with their item numbers. 
-This is like &lsquo;<samp><span class="samp">p $$9</span></samp>&rsquo; repeated ten times, except that <code>show
+This is like `<samp><span class="samp">p $$9</span></samp>' repeated ten times, except that <code>show
 values</code> does not change the history.
 
      <br><dt><code>show values </code><var>n</var><dd>Print ten history values centered on history item number <var>n</var>.
@@ -104,7 +104,7 @@ values are available, <code>show values +</code> produces no display.
 </dl>
 
    <p>Pressing &lt;RET&gt; to repeat <code>show values </code><var>n</var> has exactly the
-same effect as &lsquo;<samp><span class="samp">show values +</span></samp>&rsquo;.
+same effect as `<samp><span class="samp">show values +</span></samp>'.
 
    </body></html>
 

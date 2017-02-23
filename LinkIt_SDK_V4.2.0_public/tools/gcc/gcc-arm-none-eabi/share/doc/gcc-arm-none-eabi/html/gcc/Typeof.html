@@ -3,7 +3,7 @@
 <title>Typeof - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Constructing-Calls.html#Constructing-Calls" title="Constructing Calls">
@@ -110,29 +110,29 @@ more reliable way to prevent such conflicts.
 <li>This declares <code>y</code> with the type of what <code>x</code> points to.
 
      <pre class="smallexample">          typeof (*x) y;
-</pre>
+     </pre>
      <li>This declares <code>y</code> as an array of such values.
 
      <pre class="smallexample">          typeof (*x) y[4];
-</pre>
+     </pre>
      <li>This declares <code>y</code> as an array of pointers to characters:
 
      <pre class="smallexample">          typeof (typeof (char *)[4]) y;
-</pre>
+     </pre>
      <p class="noindent">It is equivalent to the following traditional C declaration:
 
      <pre class="smallexample">          char *y[4];
-</pre>
+     </pre>
      <p>To see the meaning of the declaration using <code>typeof</code>, and why it
 might be a useful way to write, rewrite it with these macros:
 
      <pre class="smallexample">          #define pointer(T)  typeof(T *)
           #define array(T, N) typeof(T [N])
-</pre>
+     </pre>
      <p class="noindent">Now the declaration can be rewritten this way:
 
      <pre class="smallexample">          array (pointer (char), 4) y;
-</pre>
+     </pre>
      <p class="noindent">Thus, <code>array (pointer (char), 4)</code> is the type of arrays of 4
 pointers to <code>char</code>. 
 </ul>

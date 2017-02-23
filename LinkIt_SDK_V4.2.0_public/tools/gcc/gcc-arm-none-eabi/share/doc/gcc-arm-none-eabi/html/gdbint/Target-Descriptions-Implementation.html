@@ -3,7 +3,7 @@
 <title>Target Descriptions Implementation - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Descriptions.html#Target-Descriptions" title="Target Descriptions">
 <link rel="next" href="Adding-Target-Described-Register-Support.html#Adding-Target-Described-Register-Support" title="Adding Target Described Register Support">
@@ -50,14 +50,14 @@ reverts to a default gdbarch.  Then, after connecting, it looks for a
 new target description by calling <code>target_find_description</code>.
 
    <p>A description may come from a user specified file (XML), the remote
-&lsquo;<samp><span class="samp">qXfer:features:read</span></samp>&rsquo; packet (also XML), or from any custom
+`<samp><span class="samp">qXfer:features:read</span></samp>' packet (also XML), or from any custom
 <code>to_read_description</code> routine in the target vector.  For instance,
 the remote target supports guessing whether a MIPS target is 32-bit or
-64-bit based on the size of the &lsquo;<samp><span class="samp">g</span></samp>&rsquo; packet.
+64-bit based on the size of the `<samp><span class="samp">g</span></samp>' packet.
 
    <p>If any target description is found, <span class="sc">gdb</span> creates a new gdbarch
 incorporating the description by calling <code>gdbarch_update_p</code>.  Any
-&lsquo;<samp><span class="samp">&lt;architecture&gt;</span></samp>&rsquo; element is handled first, to determine which
+`<samp><span class="samp">&lt;architecture&gt;</span></samp>' element is handled first, to determine which
 architecture's gdbarch initialization routine is called to create the
 new architecture.  Then the initialization routine is called, and has
 a chance to adjust the constructed architecture based on the contents

@@ -3,7 +3,7 @@
 <title>Macro Expansion - The GNU C Preprocessor Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Preprocessor Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Hash-Nodes.html#Hash-Nodes" title="Hash Nodes">
 <link rel="next" href="Token-Spacing.html#Token-Spacing" title="Token Spacing">
@@ -145,23 +145,23 @@ example, which illustrates many of the points above, consider
 <pre class="smallexample">     #define foo(x) bar x
      foo(foo) (2)
 </pre>
-   <p class="noindent">which fully expands to &lsquo;<samp><span class="samp">bar foo (2)</span></samp>&rsquo;.  During pre-expansion
-of the argument, &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; does not expand even though the macro is
+   <p class="noindent">which fully expands to `<samp><span class="samp">bar foo (2)</span></samp>'.  During pre-expansion
+of the argument, `<samp><span class="samp">foo</span></samp>' does not expand even though the macro is
 enabled, since it has no following parenthesis [pre-expansion of an
 argument only uses tokens from that argument; it cannot take tokens
 from whatever follows the macro invocation].  This still leaves the
-argument token &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; eligible for future expansion.  Then, when
-re-scanning after argument replacement, the token &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; is
+argument token `<samp><span class="samp">foo</span></samp>' eligible for future expansion.  Then, when
+re-scanning after argument replacement, the token `<samp><span class="samp">foo</span></samp>' is
 rejected for expansion, and marked ineligible for future expansion,
 since the macro is now disabled.  It is disabled because the
-replacement list &lsquo;<samp><span class="samp">bar foo</span></samp>&rsquo; of the macro is still on the context
+replacement list `<samp><span class="samp">bar foo</span></samp>' of the macro is still on the context
 stack.
 
    <p>If instead the algorithm looked for an opening parenthesis first and
 then tested whether the macro were disabled it would be subtly wrong. 
-In the example above, the replacement list of &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; would be
+In the example above, the replacement list of `<samp><span class="samp">foo</span></samp>' would be
 popped in the process of finding the parenthesis, re-enabling
-&lsquo;<samp><span class="samp">foo</span></samp>&rsquo; and expanding it a second time.
+`<samp><span class="samp">foo</span></samp>' and expanding it a second time.
 
 <h3 class="section">Looking for a function-like macro's opening parenthesis</h3>
 

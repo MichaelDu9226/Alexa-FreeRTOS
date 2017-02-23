@@ -3,7 +3,7 @@
 <title>Output Section Fill - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Output-Section-Attributes.html#Output-Section-Attributes" title="Output Section Attributes">
 <link rel="prev" href="Output-Section-Phdr.html#Output-Section-Phdr" title="Output Section Phdr">
@@ -47,12 +47,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Output-Section-Attributes.html#Output-S
 <h5 class="subsubsection">3.6.8.8 Output Section Fill</h5>
 
 <p><a name="index-g_t_003d_0040var_007bfillexp_007d-469"></a><a name="index-section-fill-pattern-470"></a><a name="index-fill-pattern_002c-entire-section-471"></a>You can set the fill pattern for an entire section by using
-&lsquo;<samp><span class="samp">=</span><var>fillexp</var></samp>&rsquo;.  <var>fillexp</var> is an expression
+`<samp><span class="samp">=</span><var>fillexp</var></samp>'.  <var>fillexp</var> is an expression
 (see <a href="Expressions.html#Expressions">Expressions</a>).  Any otherwise unspecified regions of memory
 within the output section (for example, gaps left due to the required
 alignment of input sections) will be filled with the value, repeated as
 necessary.  If the fill expression is a simple hex number, ie. a string
-of hex digit starting with &lsquo;<samp><span class="samp">0x</span></samp>&rsquo; and without a trailing &lsquo;<samp><span class="samp">k</span></samp>&rsquo; or &lsquo;<samp><span class="samp">M</span></samp>&rsquo;, then
+of hex digit starting with `<samp><span class="samp">0x</span></samp>' and without a trailing `<samp><span class="samp">k</span></samp>' or `<samp><span class="samp">M</span></samp>', then
 an arbitrarily long sequence of hex digits can be used to specify the
 fill pattern;  Leading zeros become part of the pattern too.  For all
 other cases, including extra parentheses or a unary <code>+</code>, the fill

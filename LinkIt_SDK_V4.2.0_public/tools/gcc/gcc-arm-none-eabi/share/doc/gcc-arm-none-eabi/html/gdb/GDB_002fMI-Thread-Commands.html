@@ -3,7 +3,7 @@
 <title>GDB/MI Thread Commands - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-Program-Context.html#GDB_002fMI-Program-Context" title="GDB/MI Program Context">
@@ -63,7 +63,7 @@ also reports the current thread.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The &lsquo;<samp><span class="samp">info thread</span></samp>&rsquo; command prints the same information
+<p>The `<samp><span class="samp">info thread</span></samp>' command prints the same information
 about all threads.
 
 <h5 class="subsubheading">Result</h5>
@@ -72,24 +72,24 @@ about all threads.
 defined for a given thread:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">current</span></samp>&rsquo;<dd>This field exists only for the current thread.  It has the value &lsquo;<samp><span class="samp">*</span></samp>&rsquo;.
+<dt>`<samp><span class="samp">current</span></samp>'<dd>This field exists only for the current thread.  It has the value `<samp><span class="samp">*</span></samp>'.
 
-     <br><dt>&lsquo;<samp><span class="samp">id</span></samp>&rsquo;<dd>The identifier that <span class="sc">gdb</span> uses to refer to the thread.
+     <br><dt>`<samp><span class="samp">id</span></samp>'<dd>The identifier that <span class="sc">gdb</span> uses to refer to the thread.
 
-     <br><dt>&lsquo;<samp><span class="samp">target-id</span></samp>&rsquo;<dd>The identifier that the target uses to refer to the thread.
+     <br><dt>`<samp><span class="samp">target-id</span></samp>'<dd>The identifier that the target uses to refer to the thread.
 
-     <br><dt>&lsquo;<samp><span class="samp">details</span></samp>&rsquo;<dd>Extra information about the thread, in a target-specific format.  This
+     <br><dt>`<samp><span class="samp">details</span></samp>'<dd>Extra information about the thread, in a target-specific format.  This
 field is optional.
 
-     <br><dt>&lsquo;<samp><span class="samp">name</span></samp>&rsquo;<dd>The name of the thread.  If the user specified a name using the
+     <br><dt>`<samp><span class="samp">name</span></samp>'<dd>The name of the thread.  If the user specified a name using the
 <code>thread name</code> command, then this name is given.  Otherwise, if
 <span class="sc">gdb</span> can extract the thread name from the target, then that
 name is given.  If <span class="sc">gdb</span> cannot find the thread name, then this
 field is omitted.
 
-     <br><dt>&lsquo;<samp><span class="samp">frame</span></samp>&rsquo;<dd>The stack frame currently executing in the thread.
+     <br><dt>`<samp><span class="samp">frame</span></samp>'<dd>The stack frame currently executing in the thread.
 
-     <br><dt>&lsquo;<samp><span class="samp">state</span></samp>&rsquo;<dd>The thread's state.  The &lsquo;<samp><span class="samp">state</span></samp>&rsquo; field may have the following
+     <br><dt>`<samp><span class="samp">state</span></samp>'<dd>The thread's state.  The `<samp><span class="samp">state</span></samp>' field may have the following
 values:
 
           <dl>
@@ -101,7 +101,7 @@ threads.
 
      </dl>
 
-     <br><dt>&lsquo;<samp><span class="samp">core</span></samp>&rsquo;<dd>If <span class="sc">gdb</span> can find the CPU core on which this thread is running,
+     <br><dt>`<samp><span class="samp">core</span></samp>'<dd>If <span class="sc">gdb</span> can find the CPU core on which this thread is running,
 then this field is the core identifier.  This field is optional.
 
    </dl>
@@ -137,7 +137,7 @@ end of the list it also prints the total number of such threads.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>Part of &lsquo;<samp><span class="samp">info threads</span></samp>&rsquo; supplies the same information.
+<p>Part of `<samp><span class="samp">info threads</span></samp>' supplies the same information.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -159,11 +159,11 @@ end of the list it also prints the total number of such threads.
 current thread, and the topmost frame for that thread.
 
    <p>This command is deprecated in favor of explicitly using the
-&lsquo;<samp><span class="samp">--thread</span></samp>&rsquo; option to each command.
+`<samp><span class="samp">--thread</span></samp>' option to each command.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">thread</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">thread</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -187,5 +187,5 @@ current thread, and the topmost frame for that thread.
      (gdb)
 </pre>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-   </body></html>
+</body></html>
 

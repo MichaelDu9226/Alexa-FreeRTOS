@@ -3,7 +3,7 @@
 <title>Stack Variables - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Variables.html#Variables" title="Variables">
 <link rel="next" href="Global-Variables.html#Global-Variables" title="Global Variables">
@@ -49,10 +49,10 @@ long as that function executes (C calls such variables
 
    <p><a name="index-N_005fLSYM_002c-for-stack-variables-25"></a><a name="index-C_005fLSYM-26"></a>Each variable allocated on the stack has a stab with the symbol
 descriptor omitted.  Since type information should begin with a digit,
-&lsquo;<samp><span class="samp">-</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">(</span></samp>&rsquo;, only those characters precluded from being used
+`<samp><span class="samp">-</span></samp>', or `<samp><span class="samp">(</span></samp>', only those characters precluded from being used
 for symbol descriptors.  However, the Acorn RISC machine (ARM) is said
 to get this wrong: it puts out a mere type definition here, without the
-preceding &lsquo;<samp><var>type-number</var><span class="samp">=</span></samp>&rsquo;.  This is a bad idea; there is no
+preceding `<samp><var>type-number</var><span class="samp">=</span></samp>'.  This is a bad idea; there is no
 guarantee that type descriptors are distinct from symbol descriptors. 
 Stabs for stack variables use the <code>N_LSYM</code> stab type, or
 <code>C_LSYM</code> for XCOFF.

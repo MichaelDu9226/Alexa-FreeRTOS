@@ -3,7 +3,7 @@
 <title>MicroBlaze Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="MeP-Options.html#MeP-Options" title="MeP Options">
@@ -65,10 +65,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
      <br><dt><code>-mno-clearbss</code><dd><a name="index-mno_002dclearbss-1715"></a>This option is deprecated.  Use <samp><span class="option">-fno-zero-initialized-in-bss</span></samp> instead.
 
      <br><dt><code>-mcpu=</code><var>cpu-type</var><dd><a name="index-mcpu_003d-1716"></a>Use features of, and schedule code for, the given CPU. 
-Supported values are in the format &lsquo;<samp><span class="samp">v</span><var>X</var><span class="samp">.</span><var>YY</var><span class="samp">.</span><var>Z</var></samp>&rsquo;,
+Supported values are in the format `<samp><span class="samp">v</span><var>X</var><span class="samp">.</span><var>YY</var><span class="samp">.</span><var>Z</var></samp>',
 where <var>X</var> is a major version, <var>YY</var> is the minor version, and
-<var>Z</var> is compatibility code.  Example values are &lsquo;<samp><span class="samp">v3.00.a</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">v4.00.b</span></samp>&rsquo;, &lsquo;<samp><span class="samp">v5.00.a</span></samp>&rsquo;, &lsquo;<samp><span class="samp">v5.00.b</span></samp>&rsquo;, &lsquo;<samp><span class="samp">v5.00.b</span></samp>&rsquo;, &lsquo;<samp><span class="samp">v6.00.a</span></samp>&rsquo;.
+<var>Z</var> is compatibility code.  Example values are `<samp><span class="samp">v3.00.a</span></samp>',
+`<samp><span class="samp">v4.00.b</span></samp>', `<samp><span class="samp">v5.00.a</span></samp>', `<samp><span class="samp">v5.00.b</span></samp>', `<samp><span class="samp">v5.00.b</span></samp>', `<samp><span class="samp">v6.00.a</span></samp>'.
 
      <br><dt><code>-mxl-soft-mul</code><dd><a name="index-mxl_002dsoft_002dmul-1717"></a>Use software multiply emulation (default).
 
@@ -98,18 +98,18 @@ where <var>X</var> is a major version, <var>YY</var> is the minor version, and
 
      <br><dt><code>-mxl-mode-</code><var>app-model</var><dd>Select application model <var>app-model</var>.  Valid models are
           <dl>
-<dt>&lsquo;<samp><span class="samp">executable</span></samp>&rsquo;<dd>normal executable (default), uses startup code <samp><span class="file">crt0.o</span></samp>.
+<dt>`<samp><span class="samp">executable</span></samp>'<dd>normal executable (default), uses startup code <samp><span class="file">crt0.o</span></samp>.
 
-          <br><dt>&lsquo;<samp><span class="samp">xmdstub</span></samp>&rsquo;<dd>for use with Xilinx Microprocessor Debugger (XMD) based
+          <br><dt>`<samp><span class="samp">xmdstub</span></samp>'<dd>for use with Xilinx Microprocessor Debugger (XMD) based
 software intrusive debug agent called xmdstub. This uses startup file
 <samp><span class="file">crt1.o</span></samp> and sets the start address of the program to 0x800.
 
-          <br><dt>&lsquo;<samp><span class="samp">bootstrap</span></samp>&rsquo;<dd>for applications that are loaded using a bootloader. 
+          <br><dt>`<samp><span class="samp">bootstrap</span></samp>'<dd>for applications that are loaded using a bootloader. 
 This model uses startup file <samp><span class="file">crt2.o</span></samp> which does not contain a processor
 reset vector handler. This is suitable for transferring control on a
 processor reset to the bootloader rather than the application.
 
-          <br><dt>&lsquo;<samp><span class="samp">novectors</span></samp>&rsquo;<dd>for applications that do not require any of the
+          <br><dt>`<samp><span class="samp">novectors</span></samp>'<dd>for applications that do not require any of the
 MicroBlaze vectors. This option may be useful for applications running
 within a monitoring application. This model uses <samp><span class="file">crt3.o</span></samp> as a startup file. 
 </dl>

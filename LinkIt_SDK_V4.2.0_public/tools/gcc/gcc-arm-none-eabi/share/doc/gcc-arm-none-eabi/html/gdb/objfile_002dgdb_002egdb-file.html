@@ -3,7 +3,7 @@
 <title>objfile-gdb.gdb file - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Auto_002dloading.html#Auto_002dloading" title="Auto-loading">
 <link rel="prev" href="libthread_005fdb_002eso_002e1-file.html#libthread_005fdb_002eso_002e1-file" title="libthread_db.so.1 file">
@@ -50,8 +50,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Auto_002dloading.html#Auto_002dloading"
 
 <p><a name="index-auto_002dloading-_0040file_007b_0040var_007bobjfile_007d_002dgdb_002egdb_007d-1598"></a>
 <span class="sc">gdb</span> tries to load an <samp><var>objfile</var><span class="file">-gdb.gdb</span></samp> file containing
-canned sequences of commands (see <a href="Sequences.html#Sequences">Sequences</a>), as long as &lsquo;<samp><span class="samp">set
-auto-load gdb-scripts</span></samp>&rsquo; is set to &lsquo;<samp><span class="samp">on</span></samp>&rsquo;.
+canned sequences of commands (see <a href="Sequences.html#Sequences">Sequences</a>), as long as `<samp><span class="samp">set
+auto-load gdb-scripts</span></samp>' is set to `<samp><span class="samp">on</span></samp>'.
 
    <p>Note that loading of this script file also requires accordingly configured
 <code>auto-load safe-path</code> (see <a href="Auto_002dloading-safe-path.html#Auto_002dloading-safe-path">Auto-loading safe path</a>).
@@ -60,12 +60,15 @@ auto-load gdb-scripts</span></samp>&rsquo; is set to &lsquo;<samp><span class="s
 description (see <a href="objfile_002dgdb_002epy-file.html#objfile_002dgdb_002epy-file">objfile-gdb.py file</a>).
 
      <dl>
-<a name="set-auto_002dload-gdb_002dscripts"></a><a name="index-set-auto_002dload-gdb_002dscripts-1599"></a><dt><code>set auto-load gdb-scripts [on|off]</code><dd>Enable or disable the auto-loading of canned sequences of commands scripts.
+<a name="set-auto_002dload-gdb_002dscripts"></a>
+<a name="index-set-auto_002dload-gdb_002dscripts-1599"></a><dt><code>set auto-load gdb-scripts [on|off]</code><dd>Enable or disable the auto-loading of canned sequences of commands scripts.
 
-     <p><a name="show-auto_002dload-gdb_002dscripts"></a><a name="index-show-auto_002dload-gdb_002dscripts-1600"></a><br><dt><code>show auto-load gdb-scripts</code><dd>Show whether auto-loading of canned sequences of commands scripts is enabled or
+     <p><a name="show-auto_002dload-gdb_002dscripts"></a>
+<a name="index-show-auto_002dload-gdb_002dscripts-1600"></a><br><dt><code>show auto-load gdb-scripts</code><dd>Show whether auto-loading of canned sequences of commands scripts is enabled or
 disabled.
 
-     <p><a name="info-auto_002dload-gdb_002dscripts"></a><a name="index-info-auto_002dload-gdb_002dscripts-1601"></a><a name="index-print-list-of-auto_002dloaded-canned-sequences-of-commands-scripts-1602"></a><br><dt><code>info auto-load gdb-scripts [</code><var>regexp</var><code>]</code><dd>Print the list of all canned sequences of commands scripts that <span class="sc">gdb</span>
+     <p><a name="info-auto_002dload-gdb_002dscripts"></a>
+<a name="index-info-auto_002dload-gdb_002dscripts-1601"></a><a name="index-print-list-of-auto_002dloaded-canned-sequences-of-commands-scripts-1602"></a><br><dt><code>info auto-load gdb-scripts [</code><var>regexp</var><code>]</code><dd>Print the list of all canned sequences of commands scripts that <span class="sc">gdb</span>
 auto-loaded. 
 </dl>
 

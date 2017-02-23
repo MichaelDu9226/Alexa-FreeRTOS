@@ -3,7 +3,7 @@
 <title>Profiling - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stack-and-Calling.html#Stack-and-Calling" title="Stack and Calling">
 <link rel="prev" href="Function-Entry.html#Function-Entry" title="Function Entry">
@@ -69,8 +69,8 @@ compiler and look at the assembler code that results.
 
       <p>Older implementations of <code>mcount</code> expect the address of a counter
 variable to be loaded into some register.  The name of this variable is
-&lsquo;<samp><span class="samp">LP</span></samp>&rsquo; followed by the number <var>labelno</var>, so you would generate
-the name using &lsquo;<samp><span class="samp">LP%d</span></samp>&rsquo; in a <code>fprintf</code>. 
+`<samp><span class="samp">LP</span></samp>' followed by the number <var>labelno</var>, so you would generate
+the name using `<samp><span class="samp">LP%d</span></samp>' in a <code>fprintf</code>. 
 </p></blockquote></div>
 
 <div class="defun">

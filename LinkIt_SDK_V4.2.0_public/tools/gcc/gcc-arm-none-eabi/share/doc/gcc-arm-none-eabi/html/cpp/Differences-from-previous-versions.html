@@ -3,7 +3,7 @@
 <title>Differences from previous versions - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Implementation-Details.html#Implementation-Details" title="Implementation Details">
 <link rel="prev" href="Obsolete-Features.html#Obsolete-Features" title="Obsolete Features">
@@ -70,21 +70,21 @@ they generally represent bugs in the snapshots.
      <p>This option has been deprecated in 4.0.  <samp><span class="option">-iquote</span></samp> is meant to
 replace the need for this option.
 
-     <li>Order of evaluation of &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and &lsquo;<samp><span class="samp">##</span></samp>&rsquo; operators
+     <li>Order of evaluation of `<samp><span class="samp">#</span></samp>' and `<samp><span class="samp">##</span></samp>' operators
 
      <p>The standard does not specify the order of evaluation of a chain of
-&lsquo;<samp><span class="samp">##</span></samp>&rsquo; operators, nor whether &lsquo;<samp><span class="samp">#</span></samp>&rsquo; is evaluated before, after, or
-at the same time as &lsquo;<samp><span class="samp">##</span></samp>&rsquo;.  You should therefore not write any code
+`<samp><span class="samp">##</span></samp>' operators, nor whether `<samp><span class="samp">#</span></samp>' is evaluated before, after, or
+at the same time as `<samp><span class="samp">##</span></samp>'.  You should therefore not write any code
 which depends on any specific ordering.  It is possible to guarantee an
 ordering, if you need one, by suitable use of nested macros.
 
-     <p>An example of where this might matter is pasting the arguments &lsquo;<samp><span class="samp">1</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">e</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-2</span></samp>&rsquo;.  This would be fine for left-to-right pasting,
-but right-to-left pasting would produce an invalid token &lsquo;<samp><span class="samp">e-2</span></samp>&rsquo;.
+     <p>An example of where this might matter is pasting the arguments `<samp><span class="samp">1</span></samp>',
+`<samp><span class="samp">e</span></samp>' and `<samp><span class="samp">-2</span></samp>'.  This would be fine for left-to-right pasting,
+but right-to-left pasting would produce an invalid token `<samp><span class="samp">e-2</span></samp>'.
 
-     <p>GCC 3.0 evaluates &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and &lsquo;<samp><span class="samp">##</span></samp>&rsquo; at the same time and strictly
-left to right.  Older versions evaluated all &lsquo;<samp><span class="samp">#</span></samp>&rsquo; operators first,
-then all &lsquo;<samp><span class="samp">##</span></samp>&rsquo; operators, in an unreliable order.
+     <p>GCC 3.0 evaluates `<samp><span class="samp">#</span></samp>' and `<samp><span class="samp">##</span></samp>' at the same time and strictly
+left to right.  Older versions evaluated all `<samp><span class="samp">#</span></samp>' operators first,
+then all `<samp><span class="samp">##</span></samp>' operators, in an unreliable order.
 
      <li>The form of whitespace between tokens in preprocessor output
 
@@ -105,33 +105,33 @@ when you use a variable argument macro.  This is forbidden by the 1999 C
 standard, and will provoke a pedantic warning with GCC 3.0.  Previous
 versions accepted it silently.
 
-     <li>&lsquo;<samp><span class="samp">##</span></samp>&rsquo; swallowing preceding text in rest argument macros
+     <li>`<samp><span class="samp">##</span></samp>' swallowing preceding text in rest argument macros
 
-     <p>Formerly, in a macro expansion, if &lsquo;<samp><span class="samp">##</span></samp>&rsquo; appeared before a variable
+     <p>Formerly, in a macro expansion, if `<samp><span class="samp">##</span></samp>' appeared before a variable
 arguments parameter, and the set of tokens specified for that argument
 in the macro invocation was empty, previous versions of CPP would
 back up and remove the preceding sequence of non-whitespace characters
 (<strong>not</strong> the preceding token).  This extension is in direct
 conflict with the 1999 C standard and has been drastically pared back.
 
-     <p>In the current version of the preprocessor, if &lsquo;<samp><span class="samp">##</span></samp>&rsquo; appears between
+     <p>In the current version of the preprocessor, if `<samp><span class="samp">##</span></samp>' appears between
 a comma and a variable arguments parameter, and the variable argument is
 omitted entirely, the comma will be removed from the expansion.  If the
-variable argument is empty, or the token before &lsquo;<samp><span class="samp">##</span></samp>&rsquo; is not a
-comma, then &lsquo;<samp><span class="samp">##</span></samp>&rsquo; behaves as a normal token paste.
+variable argument is empty, or the token before `<samp><span class="samp">##</span></samp>' is not a
+comma, then `<samp><span class="samp">##</span></samp>' behaves as a normal token paste.
 
-     <li>&lsquo;<samp><span class="samp">#line</span></samp>&rsquo; and &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;
+     <li>`<samp><span class="samp">#line</span></samp>' and `<samp><span class="samp">#include</span></samp>'
 
-     <p>The &lsquo;<samp><span class="samp">#line</span></samp>&rsquo; directive used to change GCC's notion of the
-&ldquo;directory containing the current file&rdquo;, used by &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; with
+     <p>The `<samp><span class="samp">#line</span></samp>' directive used to change GCC's notion of the
+&ldquo;directory containing the current file&rdquo;, used by `<samp><span class="samp">#include</span></samp>' with
 a double-quoted header file name.  In 3.0 and later, it does not. 
 See <a href="Line-Control.html#Line-Control">Line Control</a>, for further explanation.
 
-     <li>Syntax of &lsquo;<samp><span class="samp">#line</span></samp>&rsquo;
+     <li>Syntax of `<samp><span class="samp">#line</span></samp>'
 
-     <p>In GCC 2.95 and previous, the string constant argument to &lsquo;<samp><span class="samp">#line</span></samp>&rsquo;
-was treated the same way as the argument to &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;: backslash
-escapes were not honored, and the string ended at the second &lsquo;<samp><span class="samp">"</span></samp>&rsquo;. 
+     <p>In GCC 2.95 and previous, the string constant argument to `<samp><span class="samp">#line</span></samp>'
+was treated the same way as the argument to `<samp><span class="samp">#include</span></samp>': backslash
+escapes were not honored, and the string ended at the second `<samp><span class="samp">"</span></samp>'. 
 This is not compliant with the C standard.  In GCC 3.0, an attempt was
 made to correct the behavior, so that the string was treated as a real
 string constant, but it turned out to be buggy.  In 3.1, the bugs have

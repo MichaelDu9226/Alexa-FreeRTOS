@@ -3,7 +3,7 @@
 <title>PHDRS - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Scripts.html#Scripts" title="Scripts">
 <link rel="prev" href="MEMORY.html#MEMORY" title="MEMORY">
@@ -51,7 +51,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Scripts.html#Scripts">Scripts</a>
 <p><a name="index-PHDRS-486"></a><a name="index-program-headers-487"></a><a name="index-ELF-program-headers-488"></a><a name="index-program-segments-489"></a><a name="index-segments_002c-ELF-490"></a>The ELF object file format uses <dfn>program headers</dfn>, also knows as
 <dfn>segments</dfn>.  The program headers describe how the program should be
 loaded into memory.  You can print them out by using the <code>objdump</code>
-program with the &lsquo;<samp><span class="samp">-p</span></samp>&rsquo; option.
+program with the `<samp><span class="samp">-p</span></samp>' option.
 
    <p>When you run an ELF program on a native ELF system, the system loader
 reads the program headers in order to figure out how to load the
@@ -88,17 +88,17 @@ is usual for them to map to sections in ascending load address order.
    <p>Certain program header types describe segments of memory which the
 system loader will load from the file.  In the linker script, you
 specify the contents of these segments by placing allocatable output
-sections in the segments.  You use the &lsquo;<samp><span class="samp">:</span><var>phdr</var></samp>&rsquo; output section
+sections in the segments.  You use the `<samp><span class="samp">:</span><var>phdr</var></samp>' output section
 attribute to place a section in a particular segment.  See <a href="Output-Section-Phdr.html#Output-Section-Phdr">Output Section Phdr</a>.
 
    <p>It is normal to put certain sections in more than one segment.  This
 merely implies that one segment of memory contains another.  You may
-repeat &lsquo;<samp><span class="samp">:</span><var>phdr</var></samp>&rsquo;, using it once for each segment which should
+repeat `<samp><span class="samp">:</span><var>phdr</var></samp>', using it once for each segment which should
 contain the section.
 
-   <p>If you place a section in one or more segments using &lsquo;<samp><span class="samp">:</span><var>phdr</var></samp>&rsquo;,
+   <p>If you place a section in one or more segments using `<samp><span class="samp">:</span><var>phdr</var></samp>',
 then the linker will place all subsequent allocatable sections which do
-not specify &lsquo;<samp><span class="samp">:</span><var>phdr</var></samp>&rsquo; in the same segments.  This is for
+not specify `<samp><span class="samp">:</span><var>phdr</var></samp>' in the same segments.  This is for
 convenience, since generally a whole set of contiguous sections will be
 placed in a single segment.  You can use <code>:NONE</code> to override the
 default segment and tell the linker to not put the section in any

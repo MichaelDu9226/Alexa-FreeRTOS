@@ -3,7 +3,7 @@
 <title>Integers implementation - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Implementation.html#C-Implementation" title="C Implementation">
 <link rel="prev" href="Characters-implementation.html#Characters-implementation" title="Characters implementation">
@@ -90,11 +90,11 @@ modulo 2^N to be within range of the type; no signal is raised.
 
      <p>Bitwise operators act on the representation of the value including
 both the sign and value bits, where the sign bit is considered
-immediately above the highest-value value bit.  Signed &lsquo;<samp><span class="samp">&gt;&gt;</span></samp>&rsquo; acts
+immediately above the highest-value value bit.  Signed `<samp><span class="samp">&gt;&gt;</span></samp>' acts
 on negative numbers by sign extension.
 
      <p>GCC does not use the latitude given in C99 only to treat certain
-aspects of signed &lsquo;<samp><span class="samp">&lt;&lt;</span></samp>&rsquo; as undefined, but this is subject to
+aspects of signed `<samp><span class="samp">&lt;&lt;</span></samp>' as undefined, but this is subject to
 change.
 
      <li><cite>The sign of the remainder on integer division (C90 6.3.5).</cite>

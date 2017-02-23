@@ -3,7 +3,7 @@
 <title>MEMORY - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Scripts.html#Scripts" title="Scripts">
 <link rel="prev" href="SECTIONS.html#SECTIONS" title="SECTIONS">
@@ -86,17 +86,17 @@ them to select the memory region for the output section that it creates.
 
    <p>The <var>attr</var> string must consist only of the following characters:
      <dl>
-<dt>&lsquo;<samp><span class="samp">R</span></samp>&rsquo;<dd>Read-only section
-<br><dt>&lsquo;<samp><span class="samp">W</span></samp>&rsquo;<dd>Read/write section
-<br><dt>&lsquo;<samp><span class="samp">X</span></samp>&rsquo;<dd>Executable section
-<br><dt>&lsquo;<samp><span class="samp">A</span></samp>&rsquo;<dd>Allocatable section
-<br><dt>&lsquo;<samp><span class="samp">I</span></samp>&rsquo;<dd>Initialized section
-<br><dt>&lsquo;<samp><span class="samp">L</span></samp>&rsquo;<dd>Same as &lsquo;<samp><span class="samp">I</span></samp>&rsquo;
-<br><dt>&lsquo;<samp><span class="samp">!</span></samp>&rsquo;<dd>Invert the sense of any of the attributes that follow
+<dt>`<samp><span class="samp">R</span></samp>'<dd>Read-only section
+<br><dt>`<samp><span class="samp">W</span></samp>'<dd>Read/write section
+<br><dt>`<samp><span class="samp">X</span></samp>'<dd>Executable section
+<br><dt>`<samp><span class="samp">A</span></samp>'<dd>Allocatable section
+<br><dt>`<samp><span class="samp">I</span></samp>'<dd>Initialized section
+<br><dt>`<samp><span class="samp">L</span></samp>'<dd>Same as `<samp><span class="samp">I</span></samp>'
+<br><dt>`<samp><span class="samp">!</span></samp>'<dd>Invert the sense of any of the attributes that follow
 </dl>
 
    <p>If a unmapped section matches any of the listed attributes other than
-&lsquo;<samp><span class="samp">!</span></samp>&rsquo;, it will be placed in the memory region.  The &lsquo;<samp><span class="samp">!</span></samp>&rsquo;
+`<samp><span class="samp">!</span></samp>', it will be placed in the memory region.  The `<samp><span class="samp">!</span></samp>'
 attribute reverses this test, so that an unmapped section will be placed
 in the memory region only if it does not match any of the listed
 attributes.
@@ -113,12 +113,12 @@ be numerical only and must evaluate to a constant.  The keyword
 <code>LENGTH</code> may be abbreviated to <code>len</code> or <code>l</code>.
 
    <p>In the following example, we specify that there are two memory regions
-available for allocation: one starting at &lsquo;<samp><span class="samp">0</span></samp>&rsquo; for 256 kilobytes,
-and the other starting at &lsquo;<samp><span class="samp">0x40000000</span></samp>&rsquo; for four megabytes.  The
-linker will place into the &lsquo;<samp><span class="samp">rom</span></samp>&rsquo; memory region every section which
+available for allocation: one starting at `<samp><span class="samp">0</span></samp>' for 256 kilobytes,
+and the other starting at `<samp><span class="samp">0x40000000</span></samp>' for four megabytes.  The
+linker will place into the `<samp><span class="samp">rom</span></samp>' memory region every section which
 is not explicitly mapped into a memory region, and is either read-only
 or executable.  The linker will place other sections which are not
-explicitly mapped into a memory region into the &lsquo;<samp><span class="samp">ram</span></samp>&rsquo; memory
+explicitly mapped into a memory region into the `<samp><span class="samp">ram</span></samp>' memory
 region.
 
 <pre class="smallexample">     MEMORY
@@ -129,8 +129,8 @@ region.
 </pre>
    <p>Once you define a memory region, you can direct the linker to place
 specific output sections into that memory region by using the
-&lsquo;<samp><span class="samp">&gt;</span><var>region</var></samp>&rsquo; output section attribute.  For example, if you have
-a memory region named &lsquo;<samp><span class="samp">mem</span></samp>&rsquo;, you would use &lsquo;<samp><span class="samp">&gt;mem</span></samp>&rsquo; in the
+`<samp><span class="samp">&gt;</span><var>region</var></samp>' output section attribute.  For example, if you have
+a memory region named `<samp><span class="samp">mem</span></samp>', you would use `<samp><span class="samp">&gt;mem</span></samp>' in the
 output section definition.  See <a href="Output-Section-Region.html#Output-Section-Region">Output Section Region</a>.  If no address
 was specified for the output section, the linker will set the address to
 the next available address within the memory region.  If the combined

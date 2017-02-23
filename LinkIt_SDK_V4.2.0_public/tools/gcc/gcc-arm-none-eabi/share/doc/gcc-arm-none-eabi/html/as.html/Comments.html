@@ -3,7 +3,7 @@
 <title>Comments - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Syntax.html#Syntax" title="Syntax">
 <link rel="prev" href="Whitespace.html#Whitespace" title="Whitespace">
@@ -52,7 +52,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Syntax.html#Syntax">Syntax</a>
 <p><a name="index-comments-123"></a>There are two ways of rendering comments to <samp><span class="command">as</span></samp>.  In both
 cases the comment is equivalent to one space.
 
-   <p>Anything from &lsquo;<samp><span class="samp">/*</span></samp>&rsquo; through the next &lsquo;<samp><span class="samp">*/</span></samp>&rsquo; is a comment. 
+   <p>Anything from `<samp><span class="samp">/*</span></samp>' through the next `<samp><span class="samp">*/</span></samp>' is a comment. 
 This means you may not nest these comments.
 
 <pre class="smallexample">     /*
@@ -71,12 +71,12 @@ comment.  Some targets can also change their line comment characters depending
 upon command line options that have been used.  For more details see the
 <em>Syntax</em> section in the documentation for individual targets.
 
-   <p>If the line comment character is the hash sign (&lsquo;<samp><span class="samp">#</span></samp>&rsquo;) then it still has the
+   <p>If the line comment character is the hash sign (`<samp><span class="samp">#</span></samp>') then it still has the
 special ability to enable and disable preprocessing (see <a href="Preprocessing.html#Preprocessing">Preprocessing</a>) and
 to specify logical line numbers:
 
-   <p><a name="index-g_t_0023-125"></a><a name="index-lines-starting-with-_0040code_007b_0023_007d-126"></a><a name="index-logical-line-numbers-127"></a>To be compatible with past assemblers, lines that begin with &lsquo;<samp><span class="samp">#</span></samp>&rsquo; have a
-special interpretation.  Following the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; should be an absolute
+   <p><a name="index-g_t_0023-125"></a><a name="index-lines-starting-with-_0040code_007b_0023_007d-126"></a><a name="index-logical-line-numbers-127"></a>To be compatible with past assemblers, lines that begin with `<samp><span class="samp">#</span></samp>' have a
+special interpretation.  Following the `<samp><span class="samp">#</span></samp>' should be an absolute
 expression (see <a href="Expressions.html#Expressions">Expressions</a>): the logical line number of the <em>next</em>
 line.  Then a string (see <a href="Strings.html#Strings">Strings</a>) is allowed: if present it is a
 new logical file name.  The rest of the line, if any, should be whitespace.

@@ -3,7 +3,7 @@
 <title>Patterns - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Desc.html#Machine-Desc" title="Machine Desc">
 <link rel="prev" href="Overview.html#Overview" title="Overview">
@@ -78,7 +78,7 @@ to be combined later on.
 effect; they are equivalent to no name at all.
 
      <p>For the purpose of debugging the compiler, you may also specify a
-name beginning with the &lsquo;<samp><span class="samp">*</span></samp>&rsquo; character.  Such a name is used only
+name beginning with the `<samp><span class="samp">*</span></samp>' character.  Such a name is used only
 for identifying the instruction in RTL dumps; it is entirely equivalent
 to having a nameless pattern for all other purposes.
 
@@ -110,7 +110,7 @@ can't be used to control register allocation, for example by excluding
 certain hard registers or hard register combinations.
 
      <li>The <dfn>output template</dfn>: a string that says how to output matching
-insns as assembler code.  &lsquo;<samp><span class="samp">%</span></samp>&rsquo; in this string specifies where
+insns as assembler code.  `<samp><span class="samp">%</span></samp>' in this string specifies where
 to substitute the value of an operand.  See <a href="Output-Template.html#Output-Template">Output Template</a>.
 
      <p>When simple substitution isn't general enough, you can specify a piece

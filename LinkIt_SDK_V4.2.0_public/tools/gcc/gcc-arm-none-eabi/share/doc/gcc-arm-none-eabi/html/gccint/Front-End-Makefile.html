@@ -3,7 +3,7 @@
 <title>Front End Makefile - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Front-End.html#Front-End" title="Front End">
 <link rel="prev" href="Front-End-Config.html#Front-End-Config" title="Front End Config">
@@ -67,7 +67,7 @@ standard rule in <samp><span class="file">gcc/Makefile.in</span></samp> to the v
 <br><dt><code>tags</code><dd>Build an <samp><span class="command">etags</span></samp> <samp><span class="file">TAGS</span></samp> file in the language subdirectory
 in the source tree. 
 <br><dt><code>info</code><dd>Build info documentation for the front end, in the build directory. 
-This target is only called by &lsquo;<samp><span class="samp">make bootstrap</span></samp>&rsquo; if a suitable
+This target is only called by `<samp><span class="samp">make bootstrap</span></samp>' if a suitable
 version of <samp><span class="command">makeinfo</span></samp> is available, so does not need to check
 for this, and should fail if an error occurs. 
 <br><dt><code>dvi</code><dd>Build DVI documentation for the front end, in the build directory. 
@@ -95,16 +95,16 @@ errors.
 be used for generated files such as Bison output files which are not
 version-controlled, but should be included in any release tarballs.  This
 target will be executed during a bootstrap if
-&lsquo;<samp><span class="samp">--enable-generated-files-in-srcdir</span></samp>&rsquo; was specified as a
+`<samp><span class="samp">--enable-generated-files-in-srcdir</span></samp>' was specified as a
 <samp><span class="file">configure</span></samp> option. 
 <br><dt><code>srcinfo</code><dt><code>srcman</code><dd>Copies its dependencies into the source directory.  These targets will be
-executed during a bootstrap if &lsquo;<samp><span class="samp">--enable-generated-files-in-srcdir</span></samp>&rsquo;
+executed during a bootstrap if `<samp><span class="samp">--enable-generated-files-in-srcdir</span></samp>'
 was specified as a <samp><span class="file">configure</span></samp> option. 
 <br><dt><code>uninstall</code><dd>Uninstall files installed by installing the compiler.  This is
 currently documented not to be supported, so the hook need not do
 anything. 
 <br><dt><code>mostlyclean</code><dt><code>clean</code><dt><code>distclean</code><dt><code>maintainer-clean</code><dd>The language parts of the standard GNU
-&lsquo;<samp><span class="samp">*clean</span></samp>&rsquo; targets.  See <a href="../standards/Standard-Targets.html#Standard-Targets">Standard Targets for Users</a>, for details of the standard
+`<samp><span class="samp">*clean</span></samp>' targets.  See <a href="../standards/Standard-Targets.html#Standard-Targets">Standard Targets for Users</a>, for details of the standard
 targets.  For GCC, <code>maintainer-clean</code> should delete
 all generated files in the source directory that are not version-controlled,
 but should not delete anything that is. 

@@ -3,7 +3,7 @@
 <title>Overall Structure - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Summary.html#Summary" title="Summary">
 <link rel="next" href="Algorithms.html#Algorithms" title="Algorithms">
@@ -133,7 +133,7 @@ deal with direct control of the <dfn>inferior program</dfn> (<span class="sc">gd
 parlance for the program being debugged).
 
    <p>There are several dozens of files in the <samp><span class="file">*-tdep.c</span></samp> family. 
-&lsquo;<samp><span class="samp">tdep</span></samp>&rsquo; stands for <dfn>target-dependent code</dfn>&mdash;each of these
+`<samp><span class="samp">tdep</span></samp>' stands for <dfn>target-dependent code</dfn>&mdash;each of these
 files implements debug support for a specific target architecture
 (sparc, mips, etc).  Usually, only one of these will be used in a
 specific <span class="sc">gdb</span> configuration (sometimes two, closely related).

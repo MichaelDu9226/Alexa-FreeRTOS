@@ -3,7 +3,7 @@
 <title>Invoking - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Overview.html#Overview" title="Overview">
 <link rel="next" href="Syntax.html#Syntax" title="Syntax">
@@ -54,20 +54,20 @@ for options specific
 to particular machine architectures.
 
 <!-- man begin DESCRIPTION -->
-   <p>If you are invoking <samp><span class="command">as</span></samp> via the <span class="sc">gnu</span> C compiler,
-you can use the &lsquo;<samp><span class="samp">-Wa</span></samp>&rsquo; option to pass arguments through to the assembler. 
-The assembler arguments must be separated from each other (and the &lsquo;<samp><span class="samp">-Wa</span></samp>&rsquo;)
+<p>If you are invoking <samp><span class="command">as</span></samp> via the <span class="sc">gnu</span> C compiler,
+you can use the `<samp><span class="samp">-Wa</span></samp>' option to pass arguments through to the assembler. 
+The assembler arguments must be separated from each other (and the `<samp><span class="samp">-Wa</span></samp>')
 by commas.  For example:
 
 <pre class="smallexample">     gcc -c -g -O -Wa,-alh,-L file.c
 </pre>
-   <p class="noindent">This passes two options to the assembler: &lsquo;<samp><span class="samp">-alh</span></samp>&rsquo; (emit a listing to
-standard output with high-level and assembly source) and &lsquo;<samp><span class="samp">-L</span></samp>&rsquo; (retain
+   <p class="noindent">This passes two options to the assembler: `<samp><span class="samp">-alh</span></samp>' (emit a listing to
+standard output with high-level and assembly source) and `<samp><span class="samp">-L</span></samp>' (retain
 local symbols in the symbol table).
 
-   <p>Usually you do not need to use this &lsquo;<samp><span class="samp">-Wa</span></samp>&rsquo; mechanism, since many compiler
+   <p>Usually you do not need to use this `<samp><span class="samp">-Wa</span></samp>' mechanism, since many compiler
 command-line options are automatically passed to the assembler by the compiler. 
-(You can call the <span class="sc">gnu</span> compiler driver with the &lsquo;<samp><span class="samp">-v</span></samp>&rsquo; option to see
+(You can call the <span class="sc">gnu</span> compiler driver with the `<samp><span class="samp">-v</span></samp>' option to see
 precisely what options it passes to each compilation pass, including the
 assembler.)
 

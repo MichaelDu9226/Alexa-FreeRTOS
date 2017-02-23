@@ -3,7 +3,7 @@
 <title>Search Path - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Header-Files.html#Header-Files" title="Header Files">
 <link rel="prev" href="Include-Operation.html#Include-Operation" title="Include Operation">
@@ -99,7 +99,7 @@ brackets.  For example, if <samp><span class="file">/usr/include/sys/stat.h</spa
 <code>#include&nbsp;"types.h"<!-- /@w --></code>, GCC looks for <samp><span class="file">types.h</span></samp> first in
 <samp><span class="file">/usr/include/sys</span></samp>, then in its usual search path.
 
-   <p>&lsquo;<samp><span class="samp">#line</span></samp>&rsquo; (see <a href="Line-Control.html#Line-Control">Line Control</a>) does not change GCC's idea of the
+   <p>`<samp><span class="samp">#line</span></samp>' (see <a href="Line-Control.html#Line-Control">Line Control</a>) does not change GCC's idea of the
 directory containing the current file.
 
    <p>You may put <samp><span class="option">-I-</span></samp> at any point in your list of <samp><span class="option">-I</span></samp> options. 
@@ -112,7 +112,7 @@ named by an <samp><span class="option">-I</span></samp> switch.  <samp><span cla
 should be used instead.
 
    <p><samp><span class="option">-I. -I-</span></samp> is not the same as no <samp><span class="option">-I</span></samp> options at all, and does
-not cause the same behavior for &lsquo;<samp><span class="samp">&lt;&gt;</span></samp>&rsquo; includes that &lsquo;<samp><span class="samp">""</span></samp>&rsquo;
+not cause the same behavior for `<samp><span class="samp">&lt;&gt;</span></samp>' includes that `<samp><span class="samp">""</span></samp>'
 includes get with no special options.  <samp><span class="option">-I.</span></samp> searches the
 compiler's current working directory for header files.  That may or may
 not be the same as the directory containing the current file.

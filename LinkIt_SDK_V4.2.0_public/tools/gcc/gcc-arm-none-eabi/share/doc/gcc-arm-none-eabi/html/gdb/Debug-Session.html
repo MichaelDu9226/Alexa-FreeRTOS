@@ -3,7 +3,7 @@
 <title>Debug Session - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Stub.html#Remote-Stub" title="Remote Stub">
 <link rel="prev" href="Bootstrapping.html#Bootstrapping" title="Bootstrapping">
@@ -53,13 +53,13 @@ steps.
 (see <a href="Bootstrapping.html#Bootstrapping">What You Must Do for the Stub</a>):
      <pre class="display">          <code>getDebugChar</code>, <code>putDebugChar</code>,
           <code>flush_i_cache</code>, <code>memset</code>, <code>exceptionHandler</code>.
-</pre>
+     </pre>
      <li>Insert these lines in your program's startup code, before the main
 procedure is called:
 
      <pre class="smallexample">          set_debug_traps();
           breakpoint();
-</pre>
+     </pre>
      <p>On some machines, when a breakpoint trap is raised, the hardware
 automatically makes the PC point to the instruction after the
 breakpoint.  If your machine doesn't do that, you may need to adjust
@@ -72,7 +72,7 @@ progress.
 <code>exceptionHook</code>.  Normally you just use:
 
      <pre class="smallexample">          void (*exceptionHook)() = 0;
-</pre>
+     </pre>
      <p class="noindent">but if before calling <code>set_debug_traps</code>, you set it to point to a
 function in your program, that function is called when
 <span class="sc">gdb</span> continues after stopping on a trap (for example, bus

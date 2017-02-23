@@ -3,7 +3,7 @@
 <title>Traceframe Info Format - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Protocol.html#Remote-Protocol" title="Remote Protocol">
 <link rel="prev" href="Thread-List-Format.html#Thread-List-Format" title="Thread List Format">
@@ -53,7 +53,7 @@ inspecting a tracepoint hit, <span class="sc">gdb</span> needs to obtain the lis
 memory ranges, registers and trace state variables that have been
 collected in a traceframe.
 
-   <p>This list is obtained using the &lsquo;<samp><span class="samp">qXfer:traceframe-info:read</span></samp>&rsquo;
+   <p>This list is obtained using the `<samp><span class="samp">qXfer:traceframe-info:read</span></samp>'
 (see <a href="qXfer-traceframe-info-read.html#qXfer-traceframe-info-read">qXfer traceframe info read</a>) packet and is an XML document.
 
    <p><span class="sc">gdb</span> must be linked with the Expat library to support XML
@@ -76,7 +76,7 @@ traceframe info discovery.  See <a href="Expat.html#Expat">Expat</a>.
 <var>length</var> bytes from there:
 
      <pre class="smallexample">          &lt;memory start="<var>addr</var>" length="<var>length</var>"/&gt;
-</pre>
+     </pre>
      </ul>
 
    <p>The formal DTD for the traceframe info format is given below:

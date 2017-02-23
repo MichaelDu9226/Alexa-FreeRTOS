@@ -3,7 +3,7 @@
 <title>Analysis Options - GNU gprof</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU gprof">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking.html#Invoking" title="Invoking">
 <link rel="prev" href="Output-Options.html#Output-Options" title="Output Options">
@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Invoking.html#Invoking">Invoking</a>
 <h3 class="section">4.2 Analysis Options</h3>
 
      <dl>
-<dt><code>-a</code><dt><code>--no-static</code><dd>The &lsquo;<samp><span class="samp">-a</span></samp>&rsquo; option causes <code>gprof</code> to suppress the printing of
+<dt><code>-a</code><dt><code>--no-static</code><dd>The `<samp><span class="samp">-a</span></samp>' option causes <code>gprof</code> to suppress the printing of
 statically declared (private) functions.  (These are functions whose
 names are not listed as global, and which are not visible outside the
 file/function/block where they were defined.)  Time spent in these
@@ -58,7 +58,7 @@ function that was loaded directly before it in the executable file.
 <!-- This is compatible with Unix @code{gprof}, but a bad idea. -->
 This option affects both the flat profile and the call graph.
 
-     <br><dt><code>-c</code><dt><code>--static-call-graph</code><dd>The &lsquo;<samp><span class="samp">-c</span></samp>&rsquo; option causes the call graph of the program to be
+     <br><dt><code>-c</code><dt><code>--static-call-graph</code><dd>The `<samp><span class="samp">-c</span></samp>' option causes the call graph of the program to be
 augmented by a heuristic which examines the text space of the object
 file and identifies function calls in the binary machine code. 
 Since normal call graph records are only generated when functions are
@@ -69,17 +69,17 @@ entries are present for them.
 Calls to dynamic library routines are typically <em>not</em> found
 by this option. 
 Parents or children identified via this heuristic
-are indicated in the call graph with call counts of &lsquo;<samp><span class="samp">0</span></samp>&rsquo;.
+are indicated in the call graph with call counts of `<samp><span class="samp">0</span></samp>'.
 
-     <br><dt><code>-D</code><dt><code>--ignore-non-functions</code><dd>The &lsquo;<samp><span class="samp">-D</span></samp>&rsquo; option causes <code>gprof</code> to ignore symbols which
+     <br><dt><code>-D</code><dt><code>--ignore-non-functions</code><dd>The `<samp><span class="samp">-D</span></samp>' option causes <code>gprof</code> to ignore symbols which
 are not known to be functions.  This option will give more accurate
 profile data on systems where it is supported (Solaris and HPUX for
 example).
 
-     <br><dt><code>-k </code><var>from</var><code>/</code><var>to</var><dd>The &lsquo;<samp><span class="samp">-k</span></samp>&rsquo; option allows you to delete from the call graph any arcs from
+     <br><dt><code>-k </code><var>from</var><code>/</code><var>to</var><dd>The `<samp><span class="samp">-k</span></samp>' option allows you to delete from the call graph any arcs from
 symbols matching symspec <var>from</var> to those matching symspec <var>to</var>.
 
-     <br><dt><code>-l</code><dt><code>--line</code><dd>The &lsquo;<samp><span class="samp">-l</span></samp>&rsquo; option enables line-by-line profiling, which causes
+     <br><dt><code>-l</code><dt><code>--line</code><dd>The `<samp><span class="samp">-l</span></samp>' option enables line-by-line profiling, which causes
 histogram hits to be charged to individual source code lines,
 instead of functions.  This feature only works with programs compiled
 by older versions of the <code>gcc</code> compiler.  Newer versions of
@@ -97,21 +97,21 @@ See <a href="Sampling-Error.html#Sampling-Error">Statistical Sampling Error</a>.
      <br><dt><code>-m </code><var>num</var><dt><code>--min-count=</code><var>num</var><dd>This option affects execution count output only. 
 Symbols that are executed less than <var>num</var> times are suppressed.
 
-     <br><dt><code>-n</code><var>symspec</var><dt><code>--time=</code><var>symspec</var><dd>The &lsquo;<samp><span class="samp">-n</span></samp>&rsquo; option causes <code>gprof</code>, in its call graph analysis,
+     <br><dt><code>-n</code><var>symspec</var><dt><code>--time=</code><var>symspec</var><dd>The `<samp><span class="samp">-n</span></samp>' option causes <code>gprof</code>, in its call graph analysis,
 to only propagate times for symbols matching <var>symspec</var>.
 
-     <br><dt><code>-N</code><var>symspec</var><dt><code>--no-time=</code><var>symspec</var><dd>The &lsquo;<samp><span class="samp">-n</span></samp>&rsquo; option causes <code>gprof</code>, in its call graph analysis,
+     <br><dt><code>-N</code><var>symspec</var><dt><code>--no-time=</code><var>symspec</var><dd>The `<samp><span class="samp">-n</span></samp>' option causes <code>gprof</code>, in its call graph analysis,
 not to propagate times for symbols matching <var>symspec</var>.
 
-     <br><dt><code>-S</code><var>filename</var><dt><code>--external-symbol-table=</code><var>filename</var><dd>The &lsquo;<samp><span class="samp">-S</span></samp>&rsquo; option causes <code>gprof</code> to read an external symbol table
+     <br><dt><code>-S</code><var>filename</var><dt><code>--external-symbol-table=</code><var>filename</var><dd>The `<samp><span class="samp">-S</span></samp>' option causes <code>gprof</code> to read an external symbol table
 file, such as <samp><span class="file">/proc/kallsyms</span></samp>, rather than read the symbol table
 from the given object file (the default is <code>a.out</code>). This is useful
 for profiling kernel modules.
 
-     <br><dt><code>-z</code><dt><code>--display-unused-functions</code><dd>If you give the &lsquo;<samp><span class="samp">-z</span></samp>&rsquo; option, <code>gprof</code> will mention all
+     <br><dt><code>-z</code><dt><code>--display-unused-functions</code><dd>If you give the `<samp><span class="samp">-z</span></samp>' option, <code>gprof</code> will mention all
 functions in the flat profile, even those that were never called, and
 that had no time spent in them.  This is useful in conjunction with the
-&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; option for discovering which routines were never called.
+`<samp><span class="samp">-c</span></samp>' option for discovering which routines were never called.
 
 </dl>
 

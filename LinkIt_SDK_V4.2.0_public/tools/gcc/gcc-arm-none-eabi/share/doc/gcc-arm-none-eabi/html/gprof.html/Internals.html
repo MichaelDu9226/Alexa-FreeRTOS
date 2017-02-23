@@ -3,7 +3,7 @@
 <title>Internals - GNU gprof</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU gprof">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Details.html#Details" title="Details">
 <link rel="prev" href="File-Format.html#File-Format" title="File Format">
@@ -74,14 +74,14 @@ verify that it is an object file,
 and read its symbol table (<code>core.c:core_init</code>),
 using <code>bfd_canonicalize_symtab</code> after mallocing
 an appropriately sized array of symbols.  At this point,
-function mappings are read (if the &lsquo;<samp><span class="samp">--file-ordering</span></samp>&rsquo; option
+function mappings are read (if the `<samp><span class="samp">--file-ordering</span></samp>' option
 has been specified), and the core text space is read into
-memory (if the &lsquo;<samp><span class="samp">-c</span></samp>&rsquo; option was given).
+memory (if the `<samp><span class="samp">-c</span></samp>' option was given).
 
    <p><code>gprof</code>'s own symbol table, an array of Sym structures,
 is now built. 
 This is done in one of two ways, by one of two routines, depending
-on whether line-by-line profiling (&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; option) has been
+on whether line-by-line profiling (`<samp><span class="samp">-l</span></samp>' option) has been
 enabled. 
 For normal profiling, the BFD canonical symbol table is scanned. 
 For line-by-line profiling, every
@@ -126,8 +126,8 @@ in the <code>syms</code> array.
 
    <p>Now the profile data file(s) themselves are read
 (<code>gmon_io.c:gmon_out_read</code>),
-first by checking for a new-style &lsquo;<samp><span class="samp">gmon.out</span></samp>&rsquo; header,
-then assuming this is an old-style BSD &lsquo;<samp><span class="samp">gmon.out</span></samp>&rsquo;
+first by checking for a new-style `<samp><span class="samp">gmon.out</span></samp>' header,
+then assuming this is an old-style BSD `<samp><span class="samp">gmon.out</span></samp>'
 if the magic number test failed.
 
    <p>New-style histogram records are read by <code>hist.c:hist_read_rec</code>. 
@@ -178,7 +178,7 @@ cause each of two adjacent lines to be credited with half
 a hit, for example.
 
    <p>If call graph data is present, <code>cg_arcs.c:cg_assemble</code> is called. 
-First, if &lsquo;<samp><span class="samp">-c</span></samp>&rsquo; was specified, a machine-dependent
+First, if `<samp><span class="samp">-c</span></samp>' was specified, a machine-dependent
 routine (<code>find_call</code>) scans through each symbol's machine code,
 looking for subroutine call instructions, and adding them
 to the call graph with a zero call count. 

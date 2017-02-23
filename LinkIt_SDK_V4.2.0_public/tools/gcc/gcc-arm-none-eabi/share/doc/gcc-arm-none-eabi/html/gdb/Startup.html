@@ -3,7 +3,7 @@
 <title>Startup - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GDB.html#Invoking-GDB" title="Invoking GDB">
 <link rel="prev" href="Mode-Options.html#Mode-Options" title="Mode Options">
@@ -56,20 +56,23 @@ Here's the description of what <span class="sc">gdb</span> does during session s
 used when building <span class="sc">gdb</span>; see <a href="System_002dwide-configuration.html#System_002dwide-configuration">System-wide configuration and settings</a>) and executes all the commands in
 that file.
 
-     <p><a name="Home-Directory-Init-File"></a><li>Reads the init file (if any) in your home directory<a rel="footnote" href="#fn-1" name="fnd-1"><sup>1</sup></a> and executes all the commands in
+     <p><a name="Home-Directory-Init-File"></a>
+<li>Reads the init file (if any) in your home directory<a rel="footnote" href="#fn-1" name="fnd-1"><sup>1</sup></a> and executes all the commands in
 that file.
 
-     <p><a name="Option-_002dinit_002deval_002dcommand"></a><li>Executes commands and command files specified by the &lsquo;<samp><span class="samp">-iex</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">-ix</span></samp>&rsquo; options in their specified order.  Usually you should use the
-&lsquo;<samp><span class="samp">-ex</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-x</span></samp>&rsquo; options instead, but this way you can apply
+     <p><a name="Option-_002dinit_002deval_002dcommand"></a>
+<li>Executes commands and command files specified by the `<samp><span class="samp">-iex</span></samp>' and
+`<samp><span class="samp">-ix</span></samp>' options in their specified order.  Usually you should use the
+`<samp><span class="samp">-ex</span></samp>' and `<samp><span class="samp">-x</span></samp>' options instead, but this way you can apply
 settings before <span class="sc">gdb</span> init files get executed and before inferior
 gets loaded.
 
      <li>Processes command line options and operands.
 
-     <p><a name="Init-File-in-the-Current-Directory-during-Startup"></a><li>Reads and executes the commands from init file (if any) in the current
-working directory as long as &lsquo;<samp><span class="samp">set auto-load local-gdbinit</span></samp>&rsquo; is set to
-&lsquo;<samp><span class="samp">on</span></samp>&rsquo; (see <a href="Init-File-in-the-Current-Directory.html#Init-File-in-the-Current-Directory">Init File in the Current Directory</a>). 
+     <p><a name="Init-File-in-the-Current-Directory-during-Startup"></a>
+<li>Reads and executes the commands from init file (if any) in the current
+working directory as long as `<samp><span class="samp">set auto-load local-gdbinit</span></samp>' is set to
+`<samp><span class="samp">on</span></samp>' (see <a href="Init-File-in-the-Current-Directory.html#Init-File-in-the-Current-Directory">Init File in the Current Directory</a>). 
 This is only done if the current directory is
 different from your home directory.  Thus, you can have more than one
 init file, one generic in your home directory, and another, specific
@@ -85,12 +88,12 @@ See <a href="Auto_002dloading.html#Auto_002dloading">Auto-loading</a>.
 you must do something like the following:
 
      <pre class="smallexample">          $ gdb -iex "set auto-load python-scripts off" myprogram
-</pre>
-     <p>Option &lsquo;<samp><span class="samp">-ex</span></samp>&rsquo; does not work because the auto-loading is then turned
+     </pre>
+     <p>Option `<samp><span class="samp">-ex</span></samp>' does not work because the auto-loading is then turned
 off too late.
 
-     <li>Executes commands and command files specified by the &lsquo;<samp><span class="samp">-ex</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; options in their specified order.  See <a href="Command-Files.html#Command-Files">Command Files</a>, for
+     <li>Executes commands and command files specified by the `<samp><span class="samp">-ex</span></samp>' and
+`<samp><span class="samp">-x</span></samp>' options in their specified order.  See <a href="Command-Files.html#Command-Files">Command Files</a>, for
 more details about <span class="sc">gdb</span> command files.
 
      <li>Reads the command history recorded in the <dfn>history file</dfn>. 
@@ -99,9 +102,9 @@ files where <span class="sc">gdb</span> records it.
         </ol>
 
    <p>Init files use the same syntax as <dfn>command files</dfn> (see <a href="Command-Files.html#Command-Files">Command Files</a>) and are processed by <span class="sc">gdb</span> in the same way.  The init
-file in your home directory can set options (such as &lsquo;<samp><span class="samp">set
-complaints</span></samp>&rsquo;) that affect subsequent processing of command line options
-and operands.  Init files are not executed if you use the &lsquo;<samp><span class="samp">-nx</span></samp>&rsquo;
+file in your home directory can set options (such as `<samp><span class="samp">set
+complaints</span></samp>') that affect subsequent processing of command line options
+and operands.  Init files are not executed if you use the `<samp><span class="samp">-nx</span></samp>'
 option (see <a href="Mode-Options.html#Mode-Options">Choosing Modes</a>).
 
    <p>To display the list of init files loaded by gdb at startup, you
@@ -120,7 +123,7 @@ and suggests to rename the file to the standard name.
 DOS/Windows systems, the home directory is the one pointed to by the
 <code>HOME</code> environment variable.</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

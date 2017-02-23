@@ -3,7 +3,7 @@
 <title>GDB/MI Catchpoint Commands - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-Breakpoint-Commands.html#GDB_002fMI-Breakpoint-Commands" title="GDB/MI Breakpoint Commands">
@@ -59,14 +59,14 @@ catchpoints.
 
 <pre class="smallexample">      -catch-load [ -t ] [ -d ] <var>regexp</var>
 </pre>
-   <p>Add a catchpoint for library load events.  If the &lsquo;<samp><span class="samp">-t</span></samp>&rsquo; option is used,
-the catchpoint is a temporary one (see <a href="Set-Breaks.html#Set-Breaks">Setting Breakpoints</a>).  If the &lsquo;<samp><span class="samp">-d</span></samp>&rsquo; option is used, the catchpoint is created
-in a disabled state.  The &lsquo;<samp><span class="samp">regexp</span></samp>&rsquo; argument is a regular
+   <p>Add a catchpoint for library load events.  If the `<samp><span class="samp">-t</span></samp>' option is used,
+the catchpoint is a temporary one (see <a href="Set-Breaks.html#Set-Breaks">Setting Breakpoints</a>).  If the `<samp><span class="samp">-d</span></samp>' option is used, the catchpoint is created
+in a disabled state.  The `<samp><span class="samp">regexp</span></samp>' argument is a regular
 expression used to match the name of the loaded library.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">catch load</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">catch load</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -83,14 +83,14 @@ expression used to match the name of the loaded library.
 
 <pre class="smallexample">      -catch-unload [ -t ] [ -d ] <var>regexp</var>
 </pre>
-   <p>Add a catchpoint for library unload events.  If the &lsquo;<samp><span class="samp">-t</span></samp>&rsquo; option is
-used, the catchpoint is a temporary one (see <a href="Set-Breaks.html#Set-Breaks">Setting Breakpoints</a>).  If the &lsquo;<samp><span class="samp">-d</span></samp>&rsquo; option is used, the catchpoint is
-created in a disabled state.  The &lsquo;<samp><span class="samp">regexp</span></samp>&rsquo; argument is a regular
+   <p>Add a catchpoint for library unload events.  If the `<samp><span class="samp">-t</span></samp>' option is
+used, the catchpoint is a temporary one (see <a href="Set-Breaks.html#Set-Breaks">Setting Breakpoints</a>).  If the `<samp><span class="samp">-d</span></samp>' option is used, the catchpoint is
+created in a disabled state.  The `<samp><span class="samp">regexp</span></samp>' argument is a regular
 expression used to match the name of the unloaded library.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">catch unload</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">catch unload</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -100,5 +100,5 @@ expression used to match the name of the unloaded library.
      (gdb)
 </pre>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-   </body></html>
+</body></html>
 

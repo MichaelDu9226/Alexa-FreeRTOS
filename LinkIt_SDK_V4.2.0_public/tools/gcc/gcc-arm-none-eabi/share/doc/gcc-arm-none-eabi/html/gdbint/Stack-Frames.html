@@ -3,7 +3,7 @@
 <title>Stack Frames - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Values.html#Values" title="Values">
 <link rel="next" href="Symbol-Handling.html#Symbol-Handling" title="Symbol Handling">
@@ -56,7 +56,7 @@ read the <span class="sc">dwarf</span> specification, available from
 
    <p><a name="index-frame_005fregister_005funwind-109"></a><a name="index-get_005fframe_005fregister-110"></a><span class="sc">gdb</span>'s model is that you find a frame's registers by
 &ldquo;unwinding&rdquo; them from the next younger frame.  That is,
-&lsquo;<samp><span class="samp">get_frame_register</span></samp>&rsquo; which returns the value of a register in
+`<samp><span class="samp">get_frame_register</span></samp>' which returns the value of a register in
 frame #1 (the next-to-youngest frame), is implemented by calling frame
 #0's <code>frame_register_unwind</code> (the youngest frame).  But then the
 obvious question is: how do you access the registers of the youngest

@@ -3,7 +3,7 @@
 <title>PowerPC AltiVec/VSX Built-in Functions - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Builtins.html#Target-Builtins" title="Target Builtins">
 <link rel="prev" href="PowerPC-Built_002din-Functions.html#PowerPC-Built_002din-Functions" title="PowerPC Built-in Functions">
@@ -114,7 +114,7 @@ vector type.
 does not work:
 
      <pre class="smallexample">            vec_add ((vector signed int){1, 2, 3, 4}, foo);
-</pre>
+     </pre>
      <p class="noindent">Since <code>vec_add</code> is a macro, the vector constant in the example
 is treated as four separate arguments.  Wrap the entire argument in
 parentheses for this to work. 
@@ -2115,11 +2115,11 @@ additional functions are available:
      vector unsigned char vec_xxsldi (vector unsigned char,
                                       vector unsigned char, int);
 </pre>
- <p>Note that the &lsquo;<samp><span class="samp">vec_ld</span></samp>&rsquo; and &lsquo;<samp><span class="samp">vec_st</span></samp>&rsquo; built-in functions always
-generate the AltiVec &lsquo;<samp><span class="samp">LVX</span></samp>&rsquo; and &lsquo;<samp><span class="samp">STVX</span></samp>&rsquo; instructions even
-if the VSX instruction set is available.  The &lsquo;<samp><span class="samp">vec_vsx_ld</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">vec_vsx_st</span></samp>&rsquo; built-in functions always generate the VSX &lsquo;<samp><span class="samp">LXVD2X</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">LXVW4X</span></samp>&rsquo;, &lsquo;<samp><span class="samp">STXVD2X</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">STXVW4X</span></samp>&rsquo; instructions.
+ <p>Note that the `<samp><span class="samp">vec_ld</span></samp>' and `<samp><span class="samp">vec_st</span></samp>' built-in functions always
+generate the AltiVec `<samp><span class="samp">LVX</span></samp>' and `<samp><span class="samp">STVX</span></samp>' instructions even
+if the VSX instruction set is available.  The `<samp><span class="samp">vec_vsx_ld</span></samp>' and
+`<samp><span class="samp">vec_vsx_st</span></samp>' built-in functions always generate the VSX `<samp><span class="samp">LXVD2X</span></samp>',
+`<samp><span class="samp">LXVW4X</span></samp>', `<samp><span class="samp">STXVD2X</span></samp>', and `<samp><span class="samp">STXVW4X</span></samp>' instructions.
 
  <p>If the ISA 2.07 additions to the vector/scalar (power8-vector)
 instruction set is available, the following additional functions are

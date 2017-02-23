@@ -3,7 +3,7 @@
 <title>Target Description Format - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Descriptions.html#Target-Descriptions" title="Target Descriptions">
 <link rel="prev" href="Retrieving-Descriptions.html#Retrieving-Descriptions" title="Retrieving Descriptions">
@@ -88,8 +88,8 @@ are explained further below.
 breaks, under the usual common-sense rules.  The XML version
 declaration and document type declaration can generally be omitted
 (<span class="sc">gdb</span> does not require them), but specifying them may be
-useful for XML validation tools.  The &lsquo;<samp><span class="samp">version</span></samp>&rsquo; attribute for
-&lsquo;<samp><span class="samp">&lt;target&gt;</span></samp>&rsquo; may also be omitted, but we recommend
+useful for XML validation tools.  The `<samp><span class="samp">version</span></samp>' attribute for
+`<samp><span class="samp">&lt;target&gt;</span></samp>' may also be omitted, but we recommend
 including it; if future versions of <span class="sc">gdb</span> use an incompatible
 revision of <samp><span class="file">gdb-target.dtd</span></samp>, they will detect and report
 the version mismatch.
@@ -108,7 +108,7 @@ the target description with an inclusion directive of the form:
    <p class="noindent">When <span class="sc">gdb</span> encounters an element of this form, it will retrieve
 the named XML <var>document</var>, and replace the inclusion directive with
 the contents of that document.  If the current description was read
-using &lsquo;<samp><span class="samp">qXfer</span></samp>&rsquo;, then so will be the included document;
+using `<samp><span class="samp">qXfer</span></samp>', then so will be the included document;
 <var>document</var> will be interpreted as the name of an annex.  If the
 current description was read from a file, <span class="sc">gdb</span> will look for
 <var>document</var> as a file in the same directory where it found the
@@ -117,7 +117,7 @@ original description.
 <h4 class="subsection">G.2.2 Architecture</h4>
 
 <p><a name="index-g_t_003carchitecture_003e-2842"></a>
-An &lsquo;<samp><span class="samp">&lt;architecture&gt;</span></samp>&rsquo; element has this form:
+An `<samp><span class="samp">&lt;architecture&gt;</span></samp>' element has this form:
 
 <pre class="smallexample">       &lt;architecture&gt;<var>arch</var>&lt;/architecture&gt;
 </pre>
@@ -130,7 +130,7 @@ An &lsquo;<samp><span class="samp">&lt;architecture&gt;</span></samp>&rsquo; ele
 This optional field was introduced in <span class="sc">gdb</span> version 7.0. 
 Previous versions of <span class="sc">gdb</span> ignore it.
 
-   <p>An &lsquo;<samp><span class="samp">&lt;osabi&gt;</span></samp>&rsquo; element has this form:
+   <p>An `<samp><span class="samp">&lt;osabi&gt;</span></samp>' element has this form:
 
 <pre class="smallexample">       &lt;osabi&gt;<var>abi-name</var>&lt;/osabi&gt;
 </pre>
@@ -143,20 +143,20 @@ Previous versions of <span class="sc">gdb</span> ignore it.
 This optional field was introduced in <span class="sc">gdb</span> version 7.0. 
 Previous versions of <span class="sc">gdb</span> ignore it.
 
-   <p>A &lsquo;<samp><span class="samp">&lt;compatible&gt;</span></samp>&rsquo; element has this form:
+   <p>A `<samp><span class="samp">&lt;compatible&gt;</span></samp>' element has this form:
 
 <pre class="smallexample">       &lt;compatible&gt;<var>arch</var>&lt;/compatible&gt;
 </pre>
    <p><var>arch</var> is one of the architectures from the set accepted by
 <code>set architecture</code> (see <a href="Targets.html#Targets">Specifying a Debugging Target</a>).
 
-   <p>A &lsquo;<samp><span class="samp">&lt;compatible&gt;</span></samp>&rsquo; element is used to specify that the target
+   <p>A `<samp><span class="samp">&lt;compatible&gt;</span></samp>' element is used to specify that the target
 is able to run binaries in some other than the main target architecture
-given by the &lsquo;<samp><span class="samp">&lt;architecture&gt;</span></samp>&rsquo; element.  For example, on the
+given by the `<samp><span class="samp">&lt;architecture&gt;</span></samp>' element.  For example, on the
 Cell Broadband Engine, the main architecture is <code>powerpc:common</code>
 or <code>powerpc:common64</code>, but the system is able to run binaries
 in the <code>spu</code> architecture as well.  The way to describe this
-capability with &lsquo;<samp><span class="samp">&lt;compatible&gt;</span></samp>&rsquo; is as follows:
+capability with `<samp><span class="samp">&lt;compatible&gt;</span></samp>' is as follows:
 
 <pre class="smallexample">       &lt;architecture&gt;powerpc:common&lt;/architecture&gt;
        &lt;compatible&gt;spu&lt;/compatible&gt;
@@ -164,9 +164,9 @@ capability with &lsquo;<samp><span class="samp">&lt;compatible&gt;</span></samp>
    <h4 class="subsection">G.2.5 Features</h4>
 
 <p><a name="index-g_t_003cfeature_003e-2845"></a>
-Each &lsquo;<samp><span class="samp">&lt;feature&gt;</span></samp>&rsquo; describes some logical portion of the target
+Each `<samp><span class="samp">&lt;feature&gt;</span></samp>' describes some logical portion of the target
 system.  Features are currently used to describe available CPU
-registers and the types of their contents.  A &lsquo;<samp><span class="samp">&lt;feature&gt;</span></samp>&rsquo; element
+registers and the types of their contents.  A `<samp><span class="samp">&lt;feature&gt;</span></samp>' element
 has this form:
 
 <pre class="smallexample">     &lt;feature name="<var>name</var>"&gt;
@@ -186,12 +186,12 @@ interpret.  The default interpretation is a two's complement integer,
 but other types can be requested by name in the register description. 
 Some predefined types are provided by <span class="sc">gdb</span> (see <a href="Predefined-Target-Types.html#Predefined-Target-Types">Predefined Target Types</a>), and the description can define additional composite types.
 
-   <p>Each type element must have an &lsquo;<samp><span class="samp">id</span></samp>&rsquo; attribute, which gives
-a unique (within the containing &lsquo;<samp><span class="samp">&lt;feature&gt;</span></samp>&rsquo;) name to the type. 
+   <p>Each type element must have an `<samp><span class="samp">id</span></samp>' attribute, which gives
+a unique (within the containing `<samp><span class="samp">&lt;feature&gt;</span></samp>') name to the type. 
 Types must be defined before they are used.
 
    <p><a name="index-g_t_003cvector_003e-2846"></a>Some targets offer vector registers, which can be treated as arrays
-of scalar elements.  These types are written as &lsquo;<samp><span class="samp">&lt;vector&gt;</span></samp>&rsquo; elements,
+of scalar elements.  These types are written as `<samp><span class="samp">&lt;vector&gt;</span></samp>' elements,
 specifying the array element type, <var>type</var>, and the number of elements,
 <var>count</var>:
 
@@ -199,7 +199,7 @@ specifying the array element type, <var>type</var>, and the number of elements,
 </pre>
    <p><a name="index-g_t_003cunion_003e-2847"></a>If a register's value is usefully viewed in multiple ways, define it
 with a union type containing the useful representations.  The
-&lsquo;<samp><span class="samp">&lt;union&gt;</span></samp>&rsquo; element contains one or more &lsquo;<samp><span class="samp">&lt;field&gt;</span></samp>&rsquo; elements,
+`<samp><span class="samp">&lt;union&gt;</span></samp>' element contains one or more `<samp><span class="samp">&lt;field&gt;</span></samp>' elements,
 each of which has a <var>name</var> and a <var>type</var>:
 
 <pre class="smallexample">     &lt;union id="<var>id</var>"&gt;
@@ -208,8 +208,8 @@ each of which has a <var>name</var> and a <var>type</var>:
      &lt;/union&gt;
 </pre>
    <p><a name="index-g_t_003cstruct_003e-2848"></a>If a register's value is composed from several separate values, define
-it with a structure type.  There are two forms of the &lsquo;<samp><span class="samp">&lt;struct&gt;</span></samp>&rsquo;
-element; a &lsquo;<samp><span class="samp">&lt;struct&gt;</span></samp>&rsquo; element must either contain only bitfields
+it with a structure type.  There are two forms of the `<samp><span class="samp">&lt;struct&gt;</span></samp>'
+element; a `<samp><span class="samp">&lt;struct&gt;</span></samp>' element must either contain only bitfields
 or contain no bitfields.  If the structure contains only bitfields,
 its total size in bytes must be specified, each bitfield must have an
 explicit start and end, and bitfields are automatically assigned an
@@ -230,8 +230,8 @@ explicit type, and no implicit padding is added.
      &lt;/struct&gt;
 </pre>
    <p><a name="index-g_t_003cflags_003e-2849"></a>If a register's value is a series of single-bit flags, define it with
-a flags type.  The &lsquo;<samp><span class="samp">&lt;flags&gt;</span></samp>&rsquo; element has an explicit <var>size</var>
-and contains one or more &lsquo;<samp><span class="samp">&lt;field&gt;</span></samp>&rsquo; elements.  Each field has a
+a flags type.  The `<samp><span class="samp">&lt;flags&gt;</span></samp>' element has an explicit <var>size</var>
+and contains one or more `<samp><span class="samp">&lt;field&gt;</span></samp>' elements.  Each field has a
 <var>name</var>, a <var>start</var>, and an <var>end</var>.  Only single-bit flags
 are supported.
 

@@ -3,7 +3,7 @@
 <title>Remote Configuration - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Debugging.html#Remote-Debugging" title="Remote Debugging">
 <link rel="prev" href="Server.html#Server" title="Server">
@@ -65,13 +65,14 @@ remote targets.
 
      <br><dt><code>show remotebaud</code><dd>Show the current speed of the remote connection.
 
-     <br><dt><code>set remotebreak</code><dd><a name="index-interrupt-remote-programs-1198"></a><a name="index-BREAK-signal-instead-of-Ctrl_002dC-1199"></a><a name="set-remotebreak"></a>If set to on, <span class="sc">gdb</span> sends a <code>BREAK</code> signal to the remote
+     <br><dt><code>set remotebreak</code><dd><a name="index-interrupt-remote-programs-1198"></a><a name="index-BREAK-signal-instead-of-Ctrl_002dC-1199"></a><a name="set-remotebreak"></a>
+If set to on, <span class="sc">gdb</span> sends a <code>BREAK</code> signal to the remote
 when you type <kbd>Ctrl-c</kbd> to interrupt the program running
-on the remote.  If set to off, <span class="sc">gdb</span> sends the &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;
+on the remote.  If set to off, <span class="sc">gdb</span> sends the `<samp><span class="samp">Ctrl-C</span></samp>'
 character instead.  The default is off, since most remote systems
-expect to see &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo; as the interrupt signal.
+expect to see `<samp><span class="samp">Ctrl-C</span></samp>' as the interrupt signal.
 
-     <br><dt><code>show remotebreak</code><dd>Show whether <span class="sc">gdb</span> sends <code>BREAK</code> or &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo; to
+     <br><dt><code>show remotebreak</code><dd>Show whether <span class="sc">gdb</span> sends <code>BREAK</code> or `<samp><span class="samp">Ctrl-C</span></samp>' to
 interrupt the remote program.
 
      <br><dt><code>set remoteflow on</code><dt><code>set remoteflow off</code><dd><a name="index-set-remoteflow-1200"></a>Enable or disable hardware flow control (<code>RTS</code>/<code>CTS</code>)
@@ -99,30 +100,34 @@ serial communications.
      <br><dt><code>show remotetimeout</code><dd>Show the current number of seconds to wait for the remote target
 responses.
 
-     <p><a name="index-limit-hardware-breakpoints-and-watchpoints-1205"></a><a name="index-remote-target_002c-limit-break_002d-and-watchpoints-1206"></a><a name="set-remote-hardware_002dwatchpoint_002dlimit"></a><a name="set-remote-hardware_002dbreakpoint_002dlimit"></a><br><dt><code>set remote hardware-watchpoint-limit </code><var>limit</var><dt><code>set remote hardware-breakpoint-limit </code><var>limit</var><dd>Restrict <span class="sc">gdb</span> to using <var>limit</var> remote hardware breakpoint or
+     <p><a name="index-limit-hardware-breakpoints-and-watchpoints-1205"></a><a name="index-remote-target_002c-limit-break_002d-and-watchpoints-1206"></a><a name="set-remote-hardware_002dwatchpoint_002dlimit"></a>
+<a name="set-remote-hardware_002dbreakpoint_002dlimit"></a>
+<br><dt><code>set remote hardware-watchpoint-limit </code><var>limit</var><dt><code>set remote hardware-breakpoint-limit </code><var>limit</var><dd>Restrict <span class="sc">gdb</span> to using <var>limit</var> remote hardware breakpoint or
 watchpoints.  A limit of -1, the default, is treated as unlimited.
 
-     <p><a name="index-limit-hardware-watchpoints-length-1207"></a><a name="index-remote-target_002c-limit-watchpoints-length-1208"></a><a name="set-remote-hardware_002dwatchpoint_002dlength_002dlimit"></a><br><dt><code>set remote hardware-watchpoint-length-limit </code><var>limit</var><dd>Restrict <span class="sc">gdb</span> to using <var>limit</var> bytes for the maximum length of
+     <p><a name="index-limit-hardware-watchpoints-length-1207"></a><a name="index-remote-target_002c-limit-watchpoints-length-1208"></a><a name="set-remote-hardware_002dwatchpoint_002dlength_002dlimit"></a>
+<br><dt><code>set remote hardware-watchpoint-length-limit </code><var>limit</var><dd>Restrict <span class="sc">gdb</span> to using <var>limit</var> bytes for the maximum length of
 a remote hardware watchpoint.  A limit of -1, the default, is treated
 as unlimited.
 
      <br><dt><code>show remote hardware-watchpoint-length-limit</code><dd>Show the current limit (in bytes) of the maximum length of
 a remote hardware watchpoint.
 
-     <br><dt><code>set remote exec-file </code><var>filename</var><dt><code>show remote exec-file</code><dd><a name="set-remote-exec_002dfile"></a><a name="index-executable-file_002c-for-remote-target-1209"></a>Select the file used for <code>run</code> with <code>target
+     <br><dt><code>set remote exec-file </code><var>filename</var><dt><code>show remote exec-file</code><dd><a name="set-remote-exec_002dfile"></a>
+<a name="index-executable-file_002c-for-remote-target-1209"></a>Select the file used for <code>run</code> with <code>target
 extended-remote</code>.  This should be set to a filename valid on the
 target system.  If it is not set, the target will use a default
 filename (e.g. the last program run).
 
-     <br><dt><code>set remote interrupt-sequence</code><dd><a name="index-interrupt-remote-programs-1210"></a><a name="index-select-Ctrl_002dC_002c-BREAK-or-BREAK_002dg-1211"></a>Allow the user to select one of &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;, a <code>BREAK</code> or
-&lsquo;<samp><span class="samp">BREAK-g</span></samp>&rsquo; as the
+     <br><dt><code>set remote interrupt-sequence</code><dd><a name="index-interrupt-remote-programs-1210"></a><a name="index-select-Ctrl_002dC_002c-BREAK-or-BREAK_002dg-1211"></a>Allow the user to select one of `<samp><span class="samp">Ctrl-C</span></samp>', a <code>BREAK</code> or
+`<samp><span class="samp">BREAK-g</span></samp>' as the
 sequence to the remote target in order to interrupt the execution. 
-&lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo; is a default.  Some system prefers <code>BREAK</code> which
+`<samp><span class="samp">Ctrl-C</span></samp>' is a default.  Some system prefers <code>BREAK</code> which
 is high level of serial line for some certain time. 
-Linux kernel prefers &lsquo;<samp><span class="samp">BREAK-g</span></samp>&rsquo;, a.k.a Magic SysRq g. 
+Linux kernel prefers `<samp><span class="samp">BREAK-g</span></samp>', a.k.a Magic SysRq g. 
 It is <code>BREAK</code> signal followed by character <code>g</code>.
 
-     <br><dt><code>show interrupt-sequence</code><dd>Show which of &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;, <code>BREAK</code> or <code>BREAK-g</code>
+     <br><dt><code>show interrupt-sequence</code><dd>Show which of `<samp><span class="samp">Ctrl-C</span></samp>', <code>BREAK</code> or <code>BREAK-g</code>
 is sent by <span class="sc">gdb</span> to interrupt the remote program. 
 <code>BREAK-g</code> is BREAK signal followed by <code>g</code> and
 also known as Magic SysRq g.
@@ -159,10 +164,10 @@ value.
    <p><a name="index-remote-packets_002c-enabling-and-disabling-1218"></a>The <span class="sc">gdb</span> remote protocol autodetects the packets supported by
 your debugging stub.  If you need to override the autodetection, you
 can use these commands to enable or disable individual packets.  Each
-packet can be set to &lsquo;<samp><span class="samp">on</span></samp>&rsquo; (the remote target supports this
-packet), &lsquo;<samp><span class="samp">off</span></samp>&rsquo; (the remote target does not support this packet),
-or &lsquo;<samp><span class="samp">auto</span></samp>&rsquo; (detect remote target support for this packet).  They
-all default to &lsquo;<samp><span class="samp">auto</span></samp>&rsquo;.  For more information about each packet,
+packet can be set to `<samp><span class="samp">on</span></samp>' (the remote target supports this
+packet), `<samp><span class="samp">off</span></samp>' (the remote target does not support this packet),
+or `<samp><span class="samp">auto</span></samp>' (detect remote target support for this packet).  They
+all default to `<samp><span class="samp">auto</span></samp>'.  For more information about each packet,
 see <a href="Remote-Protocol.html#Remote-Protocol">Remote Protocol</a>.
 
    <p>During normal use, you should not have to use any of these commands. 

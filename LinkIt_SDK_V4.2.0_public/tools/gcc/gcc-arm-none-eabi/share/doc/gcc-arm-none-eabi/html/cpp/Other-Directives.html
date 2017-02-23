@@ -3,7 +3,7 @@
 <title>Other Directives - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Pragmas.html#Pragmas" title="Pragmas">
 <link rel="next" href="Preprocessor-Output.html#Preprocessor-Output" title="Preprocessor Output">
@@ -55,22 +55,22 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 
 <h2 class="chapter">8 Other Directives</h2>
 
-<p><a name="index-g_t_0023ident-106"></a><a name="index-g_t_0023sccs-107"></a>The &lsquo;<samp><span class="samp">#ident</span></samp>&rsquo; directive takes one argument, a string constant.  On
+<p><a name="index-g_t_0023ident-106"></a><a name="index-g_t_0023sccs-107"></a>The `<samp><span class="samp">#ident</span></samp>' directive takes one argument, a string constant.  On
 some systems, that string constant is copied into a special segment of
 the object file.  On other systems, the directive is ignored.  The
-&lsquo;<samp><span class="samp">#sccs</span></samp>&rsquo; directive is a synonym for &lsquo;<samp><span class="samp">#ident</span></samp>&rsquo;.
+`<samp><span class="samp">#sccs</span></samp>' directive is a synonym for `<samp><span class="samp">#ident</span></samp>'.
 
    <p>These directives are not part of the C standard, but they are not
 official GNU extensions either.  What historical information we have
 been able to find, suggests they originated with System V.
 
-   <p><a name="index-null-directive-108"></a>The <dfn>null directive</dfn> consists of a &lsquo;<samp><span class="samp">#</span></samp>&rsquo; followed by a newline,
+   <p><a name="index-null-directive-108"></a>The <dfn>null directive</dfn> consists of a `<samp><span class="samp">#</span></samp>' followed by a newline,
 with only whitespace (including comments) in between.  A null directive
 is understood as a preprocessing directive but has no effect on the
 preprocessor output.  The primary significance of the existence of the
-null directive is that an input line consisting of just a &lsquo;<samp><span class="samp">#</span></samp>&rsquo; will
+null directive is that an input line consisting of just a `<samp><span class="samp">#</span></samp>' will
 produce no output, rather than a line of output containing just a
-&lsquo;<samp><span class="samp">#</span></samp>&rsquo;.  Supposedly some old C programs contain such lines.
+`<samp><span class="samp">#</span></samp>'.  Supposedly some old C programs contain such lines.
 
    </body></html>
 

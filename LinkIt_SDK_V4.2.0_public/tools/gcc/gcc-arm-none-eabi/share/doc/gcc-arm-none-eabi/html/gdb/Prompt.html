@@ -3,7 +3,7 @@
 <title>Prompt - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Controlling-GDB.html#Controlling-GDB" title="Controlling GDB">
 <link rel="next" href="Editing.html#Editing" title="Editing">
@@ -47,7 +47,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Controlling-GDB.html#Controlling-GDB">C
 
 <p><a name="index-prompt-1534"></a>
 <span class="sc">gdb</span> indicates its readiness to read a command by printing a string
-called the <dfn>prompt</dfn>.  This string is normally &lsquo;<samp><span class="samp">(gdb)</span></samp>&rsquo;.  You
+called the <dfn>prompt</dfn>.  This string is normally `<samp><span class="samp">(gdb)</span></samp>'.  You
 can change the prompt string with the <code>set prompt</code> command.  For
 instance, when debugging <span class="sc">gdb</span> with <span class="sc">gdb</span>, it is useful to change
 the prompt in one of the <span class="sc">gdb</span> sessions so that you can always tell
@@ -61,7 +61,7 @@ or a prompt that does not.
 <a name="index-set-prompt-1535"></a>
 <dl><dt><code>set prompt </code><var>newprompt</var><dd>Directs <span class="sc">gdb</span> to use <var>newprompt</var> as its prompt string henceforth.
 
-     <p><a name="index-show-prompt-1536"></a><br><dt><code>show prompt</code><dd>Prints a line of the form: &lsquo;<samp><span class="samp">Gdb's prompt is: </span><var>your-prompt</var></samp>&rsquo;
+     <p><a name="index-show-prompt-1536"></a><br><dt><code>show prompt</code><dd>Prints a line of the form: `<samp><span class="samp">Gdb's prompt is: </span><var>your-prompt</var></samp>'
 </dl>
 
    <p>Versions of <span class="sc">gdb</span> that ship with Python scripting enabled have
@@ -79,7 +79,7 @@ is displayed.
      <p>For example:
 
      <pre class="smallexample">          set extended-prompt Current working directory: \w (gdb)
-</pre>
+     </pre>
      <p>Note that when an extended-prompt is set, it takes control of the
 <var>prompt_hook</var> hook.  See <a href="prompt_005fhook.html#prompt_005fhook">prompt_hook</a>, for further information.
 

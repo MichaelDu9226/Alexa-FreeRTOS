@@ -3,7 +3,7 @@
 <title>Include Operation - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Header-Files.html#Header-Files" title="Header Files">
 <link rel="prev" href="Include-Syntax.html#Include-Syntax" title="Include Syntax">
@@ -56,12 +56,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Header-Files.html#Header-Files">Header 
 
 <h3 class="section">2.2 Include Operation</h3>
 
-<p>The &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; directive works by directing the C preprocessor to
+<p>The `<samp><span class="samp">#include</span></samp>' directive works by directing the C preprocessor to
 scan the specified file as input before continuing with the rest of the
 current file.  The output from the preprocessor contains the output
 already generated, followed by the output resulting from the included
 file, followed by the output that comes from the text after the
-&lsquo;<samp><span class="samp">#include</span></samp>&rsquo; directive.  For example, if you have a header file
+`<samp><span class="samp">#include</span></samp>' directive.  For example, if you have a header file
 <samp><span class="file">header.h</span></samp> as follows,
 
 <pre class="smallexample">     char *test (void);
@@ -104,7 +104,7 @@ the file.
 syntactic units&mdash;function declarations or definitions, type
 declarations, etc.
 
-   <p>The line following the &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; directive is always treated as a
+   <p>The line following the `<samp><span class="samp">#include</span></samp>' directive is always treated as a
 separate line by the C preprocessor, even if the included file lacks a
 final newline.
 

@@ -3,7 +3,7 @@
 <title>Basic Statements - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Statements.html#Statements" title="Statements">
 <link rel="next" href="Blocks.html#Blocks" title="Blocks">
@@ -58,7 +58,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Statements.html#Statements">Statements<
 Used to represent an inline assembly statement.  For an inline assembly
 statement like:
      <pre class="smallexample">          asm ("mov x, y");
-</pre>
+     </pre>
      <p>The <code>ASM_STRING</code> macro will return a <code>STRING_CST</code> node for
 <code>"mov x, y"</code>.  If the original statement made use of the
 extended-assembly syntax, then <code>ASM_OUTPUTS</code>,
@@ -66,7 +66,7 @@ extended-assembly syntax, then <code>ASM_OUTPUTS</code>,
 and clobbers for the statement, represented as <code>STRING_CST</code> nodes. 
 The extended-assembly syntax looks like:
      <pre class="smallexample">          asm ("fsinx %1,%0" : "=f" (result) : "f" (angle));
-</pre>
+     </pre>
      <p>The first string is the <code>ASM_STRING</code>, containing the instruction
 template.  The next two strings are the output and inputs, respectively;
 this statement has no clobbers.  As this example indicates, &ldquo;plain&rdquo;
@@ -108,7 +108,7 @@ containing function, or a <code>MODIFY_EXPR</code> or <code>INIT_EXPR</code>
 setting the function's <code>RESULT_DECL</code>.  It will be
 <code>NULL_TREE</code> if the statement was just
      <pre class="smallexample">          return;
-</pre>
+     </pre>
      <br><dt><code>LOOP_EXPR</code><dd>These nodes represent &ldquo;infinite&rdquo; loops.  The <code>LOOP_EXPR_BODY</code>
 represents the body of the loop.  It should be executed forever, unless
 an <code>EXIT_EXPR</code> is encountered.
@@ -139,7 +139,7 @@ the same type as the condition expression in the switch statement.
 statement is a range of case labels.  Such statements originate with the
 extension that allows users to write things of the form:
      <pre class="smallexample">          case 2 ... 5:
-</pre>
+     </pre>
      <p>The first value will be <code>CASE_LOW</code>, while the second will be
 <code>CASE_HIGH</code>.
 

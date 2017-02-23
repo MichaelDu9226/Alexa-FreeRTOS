@@ -3,7 +3,7 @@
 <title>Option properties - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Options.html#Options" title="Options">
 <link rel="prev" href="Option-file-format.html#Option-file-format" title="Option file format">
@@ -91,8 +91,8 @@ turned off.
 options, their <code>Negative</code> properties should form a circular chain. 
 For example, if options <samp><span class="option">-</span><var>a</var></samp>, <samp><span class="option">-</span><var>b</var></samp> and
 <samp><span class="option">-</span><var>c</var></samp> are mutually exclusive, their respective <code>Negative</code>
-properties should be &lsquo;<samp><span class="samp">Negative(</span><var>b</var><span class="samp">)</span></samp>&rsquo;, &lsquo;<samp><span class="samp">Negative(</span><var>c</var><span class="samp">)</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">Negative(</span><var>a</var><span class="samp">)</span></samp>&rsquo;.
+properties should be `<samp><span class="samp">Negative(</span><var>b</var><span class="samp">)</span></samp>', `<samp><span class="samp">Negative(</span><var>c</var><span class="samp">)</span></samp>'
+and `<samp><span class="samp">Negative(</span><var>a</var><span class="samp">)</span></samp>'.
 
      <br><dt><code>Joined</code><dt><code>Separate</code><dd>The option takes a mandatory argument.  <code>Joined</code> indicates
 that the option and argument can be included in the same <code>argv</code>
@@ -110,7 +110,7 @@ it will be part of the same <code>argv</code> entry as the option itself.
 <var>message</var> will be used as an error message if the mandatory
 argument is missing; for options without <code>MissingArgError</code>, a
 generic error message is used.  <var>message</var> should contain a single
-&lsquo;<samp><span class="samp">%qs</span></samp>&rsquo; format, which will be used to format the name of the option
+`<samp><span class="samp">%qs</span></samp>' format, which will be used to format the name of the option
 passed.
 
      <br><dt><code>Args(</code><var>n</var><code>)</code><dd>For an option marked <code>Separate</code>, indicate that it takes <var>n</var>
@@ -150,7 +150,7 @@ option is used and 0 when the &ldquo;no-&rdquo; form is used.
 
           <li>If the option takes an argument and has the <code>Enum</code> property,
 <var>var</var> is a variable (type given in the <code>Type</code> property of the
-&lsquo;<samp><span class="samp">Enum</span></samp>&rsquo; record whose <code>Name</code> property has the same argument as
+`<samp><span class="samp">Enum</span></samp>' record whose <code>Name</code> property has the same argument as
 the <code>Enum</code> property of this option) that stores the value of the
 argument.
 
@@ -185,7 +185,7 @@ You may also specify <code>Var</code> to select a variable other than
 <code>target_flags</code>.
 
      <p>The options-processing script will automatically allocate a unique bit
-for the option.  If the option is attached to &lsquo;<samp><span class="samp">target_flags</span></samp>&rsquo;,
+for the option.  If the option is attached to `<samp><span class="samp">target_flags</span></samp>',
 the script will set the macro <code>MASK_</code><var>name</var> to the appropriate
 bitmask.  It will also declare a <code>TARGET_</code><var>name</var> macro that has
 the value 1 when the option is active and 0 otherwise.  If you use <code>Var</code>
@@ -198,9 +198,9 @@ the options-processing script will declare a <code>TARGET_</code><var>thisname</
 macro that is 1 when the option is active and 0 otherwise.
 
      <br><dt><code>Enum(</code><var>name</var><code>)</code><dd>The option's argument is a string from the set of strings associated
-with the corresponding &lsquo;<samp><span class="samp">Enum</span></samp>&rsquo; record.  The string is checked and
+with the corresponding `<samp><span class="samp">Enum</span></samp>' record.  The string is checked and
 converted to the integer specified in the corresponding
-&lsquo;<samp><span class="samp">EnumValue</span></samp>&rsquo; record before being passed to option handlers.
+`<samp><span class="samp">EnumValue</span></samp>' record before being passed to option handlers.
 
      <br><dt><code>Defer</code><dd>The option should be stored in a vector, specified with <code>Var</code>,
 for later processing.
@@ -225,7 +225,7 @@ while those on the alias will be used to identify what command-line
 text is the option and what text is any argument to that option.
 
      <p>When an <code>Alias</code> definition is used for an option, driver specs do
-not need to handle it and no &lsquo;<samp><span class="samp">OPT_</span></samp>&rsquo; enumeration value is defined
+not need to handle it and no `<samp><span class="samp">OPT_</span></samp>' enumeration value is defined
 for it; only the canonical form of the option will be seen in those
 places.
 
@@ -236,19 +236,19 @@ negated.  <code>NegativeAlias</code> may not be used with the forms of
 <code>Alias</code> taking more than one argument.
 
      <br><dt><code>Ignore</code><dd>This option is ignored apart from printing any warning specified using
-<code>Warn</code>.  The option will not be seen by specs and no &lsquo;<samp><span class="samp">OPT_</span></samp>&rsquo;
+<code>Warn</code>.  The option will not be seen by specs and no `<samp><span class="samp">OPT_</span></samp>'
 enumeration value is defined for it.
 
      <br><dt><code>SeparateAlias</code><dd>For an option marked with <code>Joined</code>, <code>Separate</code> and
 <code>Alias</code>, the option only acts as an alias when passed a separate
 argument; with a joined argument it acts as a normal option, with an
-&lsquo;<samp><span class="samp">OPT_</span></samp>&rsquo; enumeration value.  This is for compatibility with the
+`<samp><span class="samp">OPT_</span></samp>' enumeration value.  This is for compatibility with the
 Java <samp><span class="option">-d</span></samp> option and should not be used for new options.
 
      <br><dt><code>Warn(</code><var>message</var><code>)</code><dd>If this option is used, output the warning <var>message</var>. 
 <var>message</var> is a format string, either taking a single operand with
-a &lsquo;<samp><span class="samp">%qs</span></samp>&rsquo; format which is the option name, or not taking any
-operands, which is passed to the &lsquo;<samp><span class="samp">warning</span></samp>&rsquo; function.  If an alias
+a `<samp><span class="samp">%qs</span></samp>' format which is the option name, or not taking any
+operands, which is passed to the `<samp><span class="samp">warning</span></samp>' function.  If an alias
 is marked <code>Warn</code>, the target of the alias must not also be marked
 <code>Warn</code>.
 
@@ -308,5 +308,5 @@ record.  See <a href="Option-file-format.html#Option-file-format">Option file fo
 <!-- Copyright (C) 1988-2013 Free Software Foundation, Inc. -->
 <!-- This is part of the GCC manual. -->
 <!-- For copying conditions, see the file gcc.texi. -->
- </body></html>
+</body></html>
 

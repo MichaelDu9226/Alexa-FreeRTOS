@@ -3,7 +3,7 @@
 <title>GIMPLE Exception Handling - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GIMPLE.html#GIMPLE" title="GIMPLE">
 <link rel="prev" href="GIMPLE-instruction-set.html#GIMPLE-instruction-set" title="GIMPLE instruction set">
@@ -90,7 +90,7 @@ point in the future we will want to add some way to express that
 the call will throw an exception of a known type.
 
  <p>Just before running the optimizers, the compiler lowers the
-high-level EH constructs above into a set of &lsquo;<samp><span class="samp">goto</span></samp>&rsquo;s, magic
+high-level EH constructs above into a set of `<samp><span class="samp">goto</span></samp>'s, magic
 labels, and EH regions.  Continuing to unwind at the end of a
 cleanup is represented with a <code>GIMPLE_RESX</code>.
 

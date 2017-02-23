@@ -3,7 +3,7 @@
 <title>Symbol Handling - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Stack-Frames.html#Stack-Frames" title="Stack Frames">
 <link rel="next" href="Language-Support.html#Language-Support" title="Language Support">
@@ -65,8 +65,8 @@ symbols, and only expand them to full symbol tables when necessary.
 <p><a name="index-symbol-reading-122"></a><a name="index-reading-of-symbols-123"></a><a name="index-symbol-files-124"></a><span class="sc">gdb</span> reads symbols from <dfn>symbol files</dfn>.  The usual symbol
 file is the file containing the program which <span class="sc">gdb</span> is
 debugging.  <span class="sc">gdb</span> can be directed to use a different file for
-symbols (with the &lsquo;<samp><span class="samp">symbol-file</span></samp>&rsquo; command), and it can also read
-more symbols via the &lsquo;<samp><span class="samp">add-file</span></samp>&rsquo; and &lsquo;<samp><span class="samp">load</span></samp>&rsquo; commands. In
+symbols (with the `<samp><span class="samp">symbol-file</span></samp>' command), and it can also read
+more symbols via the `<samp><span class="samp">add-file</span></samp>' and `<samp><span class="samp">load</span></samp>' commands. In
 addition, it may bring in more symbols while loading shared
 libraries.
 
@@ -276,7 +276,7 @@ respectively.
 
    <p>The <code>a.out</code> format is so simple that it doesn't have any reserved
 place for debugging information.  (Hey, the original Unix hackers used
-&lsquo;<samp><span class="samp">adb</span></samp>&rsquo;, which is a machine-language debugger!)  The only debugging
+`<samp><span class="samp">adb</span></samp>', which is a machine-language debugger!)  The only debugging
 format for <code>a.out</code> is stabs, which is encoded as a set of normal
 symbols with distinctive attributes.
 

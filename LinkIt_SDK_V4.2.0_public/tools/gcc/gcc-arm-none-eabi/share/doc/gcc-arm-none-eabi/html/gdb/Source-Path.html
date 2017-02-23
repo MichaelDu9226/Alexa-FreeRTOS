@@ -3,7 +3,7 @@
 <title>Source Path - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Source.html#Source" title="Source">
 <link rel="prev" href="Search.html#Search" title="Search">
@@ -81,12 +81,12 @@ source files.
 any information it has cached about where source files are found and where
 each line is in the file.
 
-   <p><a name="index-directory-489"></a><a name="index-dir-490"></a>When you start <span class="sc">gdb</span>, its source path includes only &lsquo;<samp><span class="samp">cdir</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">cwd</span></samp>&rsquo;, in that order. 
+   <p><a name="index-directory-489"></a><a name="index-dir-490"></a>When you start <span class="sc">gdb</span>, its source path includes only `<samp><span class="samp">cdir</span></samp>'
+and `<samp><span class="samp">cwd</span></samp>', in that order. 
 To add other directories, use the <code>directory</code> command.
 
    <p>The search path is used to find both program source files and <span class="sc">gdb</span>
-script files (read using the &lsquo;<samp><span class="samp">-command</span></samp>&rsquo; option and &lsquo;<samp><span class="samp">source</span></samp>&rsquo; command).
+script files (read using the `<samp><span class="samp">-command</span></samp>' option and `<samp><span class="samp">source</span></samp>' command).
 
    <p>In addition to the source path, <span class="sc">gdb</span> provides a set of commands
 that manage a list of source path substitution rules.  A <dfn>substitution
@@ -137,9 +137,9 @@ method available to point <span class="sc">gdb</span> at the new location.
 
    <p><a name="index-g_t_0040samp_007b_002d_002dwith_002drelocated_002dsources_007d-491"></a><a name="index-default-source-path-substitution-492"></a>You can configure a default source path substitution rule by
 configuring <span class="sc">gdb</span> with the
-&lsquo;<samp><span class="samp">--with-relocated-sources=</span><var>dir</var></samp>&rsquo; option.  The <var>dir</var>
+`<samp><span class="samp">--with-relocated-sources=</span><var>dir</var></samp>' option.  The <var>dir</var>
 should be the name of a directory under <span class="sc">gdb</span>'s configured
-prefix (set with &lsquo;<samp><span class="samp">--prefix</span></samp>&rsquo; or &lsquo;<samp><span class="samp">--exec-prefix</span></samp>&rsquo;), and
+prefix (set with `<samp><span class="samp">--prefix</span></samp>' or `<samp><span class="samp">--exec-prefix</span></samp>'), and
 directory names in debug information under <var>dir</var> will be adjusted
 automatically if the installed <span class="sc">gdb</span> is moved to a new
 location.  This is useful if <span class="sc">gdb</span>, libraries or executables
@@ -148,29 +148,30 @@ together.
 
      <dl>
 <dt><code>directory </code><var>dirname</var><code> ...</code><br><dt><code>dir </code><var>dirname</var><code> ...</code><dd>Add directory <var>dirname</var> to the front of the source path.  Several
-directory names may be given to this command, separated by &lsquo;<samp><span class="samp">:</span></samp>&rsquo;
-(&lsquo;<samp><span class="samp">;</span></samp>&rsquo; on MS-DOS and MS-Windows, where &lsquo;<samp><span class="samp">:</span></samp>&rsquo; usually appears as
+directory names may be given to this command, separated by `<samp><span class="samp">:</span></samp>'
+(`<samp><span class="samp">;</span></samp>' on MS-DOS and MS-Windows, where `<samp><span class="samp">:</span></samp>' usually appears as
 part of absolute file names) or
 whitespace.  You may specify a directory that is already in the source
 path; this moves it forward, so <span class="sc">gdb</span> searches it sooner.
 
-     <p><a name="index-cdir-493"></a><a name="index-cwd-494"></a><a name="index-g_t_0024cdir_0040r_007b_002c-convenience-variable_007d-495"></a><a name="index-g_t_0024cwd_0040r_007b_002c-convenience-variable_007d-496"></a><a name="index-compilation-directory-497"></a><a name="index-current-directory-498"></a><a name="index-working-directory-499"></a><a name="index-directory_002c-current-500"></a><a name="index-directory_002c-compilation-501"></a>You can use the string &lsquo;<samp><span class="samp">$cdir</span></samp>&rsquo; to refer to the compilation
-directory (if one is recorded), and &lsquo;<samp><span class="samp">$cwd</span></samp>&rsquo; to refer to the current
-working directory.  &lsquo;<samp><span class="samp">$cwd</span></samp>&rsquo; is not the same as &lsquo;<samp><span class="samp">.</span></samp>&rsquo;&mdash;the former
+     <p><a name="index-cdir-493"></a><a name="index-cwd-494"></a><a name="index-g_t_0024cdir_0040r_007b_002c-convenience-variable_007d-495"></a><a name="index-g_t_0024cwd_0040r_007b_002c-convenience-variable_007d-496"></a><a name="index-compilation-directory-497"></a><a name="index-current-directory-498"></a><a name="index-working-directory-499"></a><a name="index-directory_002c-current-500"></a><a name="index-directory_002c-compilation-501"></a>You can use the string `<samp><span class="samp">$cdir</span></samp>' to refer to the compilation
+directory (if one is recorded), and `<samp><span class="samp">$cwd</span></samp>' to refer to the current
+working directory.  `<samp><span class="samp">$cwd</span></samp>' is not the same as `<samp><span class="samp">.</span></samp>'&mdash;the former
 tracks the current working directory as it changes during your <span class="sc">gdb</span>
 session, while the latter is immediately expanded to the current
 directory at the time you add an entry to the source path.
 
-     <br><dt><code>directory</code><dd>Reset the source path to its default value (&lsquo;<samp><span class="samp">$cdir:$cwd</span></samp>&rsquo; on Unix systems).  This requires confirmation.
+     <br><dt><code>directory</code><dd>Reset the source path to its default value (`<samp><span class="samp">$cdir:$cwd</span></samp>' on Unix systems).  This requires confirmation.
 
      <!-- RET-repeat for @code{directory} is explicitly disabled, but since -->
-     <!-- repeating it would be a no-op we do not say that.  (thanks to RMS) -->
-     <br><dt><code>set directories </code><var>path-list</var><dd><a name="index-set-directories-502"></a>Set the source path to <var>path-list</var>. 
-&lsquo;<samp><span class="samp">$cdir:$cwd</span></samp>&rsquo; are added if missing.
+<!-- repeating it would be a no-op we do not say that.  (thanks to RMS) -->
+<br><dt><code>set directories </code><var>path-list</var><dd><a name="index-set-directories-502"></a>Set the source path to <var>path-list</var>. 
+`<samp><span class="samp">$cdir:$cwd</span></samp>' are added if missing.
 
      <br><dt><code>show directories</code><dd><a name="index-show-directories-503"></a>Print the source path: show which directories it contains.
 
-     <p><a name="set-substitute_002dpath"></a><br><dt><code>set substitute-path </code><var>from</var> <var>to</var><dd><a name="index-set-substitute_002dpath-504"></a>Define a source path substitution rule, and add it at the end of the
+     <p><a name="set-substitute_002dpath"></a>
+<br><dt><code>set substitute-path </code><var>from</var> <var>to</var><dd><a name="index-set-substitute_002dpath-504"></a>Define a source path substitution rule, and add it at the end of the
 current list of existing substitution rules.  If a rule with the same
 <var>from</var> was already defined, then the old rule is also deleted.
 
@@ -178,9 +179,9 @@ current list of existing substitution rules.  If a rule with the same
 <samp><span class="file">/mnt/cross/baz.c</span></samp>, then the command
 
      <pre class="smallexample">          (gdb) set substitute-path /usr/src /mnt/cross
-</pre>
-     <p class="noindent">will tell <span class="sc">gdb</span> to replace &lsquo;<samp><span class="samp">/usr/src</span></samp>&rsquo; with
-&lsquo;<samp><span class="samp">/mnt/cross</span></samp>&rsquo;, which will allow <span class="sc">gdb</span> to find the file
+     </pre>
+     <p class="noindent">will tell <span class="sc">gdb</span> to replace `<samp><span class="samp">/usr/src</span></samp>' with
+`<samp><span class="samp">/mnt/cross</span></samp>', which will allow <span class="sc">gdb</span> to find the file
 <samp><span class="file">baz.c</span></samp> even though it was moved.
 
      <p>In the case when more than one substitution rule have been defined,
@@ -192,7 +193,7 @@ the substitution.
 
      <pre class="smallexample">          (gdb) set substitute-path /usr/src/include /mnt/include
           (gdb) set substitute-path /usr/src /mnt/src
-</pre>
+     </pre>
      <p class="noindent"><span class="sc">gdb</span> would then rewrite <samp><span class="file">/usr/src/include/defs.h</span></samp> into
 <samp><span class="file">/mnt/include/defs.h</span></samp> by using the first rule.  However, it would
 use the second rule to rewrite <samp><span class="file">/usr/src/lib/foo.c</span></samp> into

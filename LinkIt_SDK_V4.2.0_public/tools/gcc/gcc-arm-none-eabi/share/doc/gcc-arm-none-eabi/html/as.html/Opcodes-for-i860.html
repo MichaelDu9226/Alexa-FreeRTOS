@@ -3,7 +3,7 @@
 <title>Opcodes for i860 - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="i860_002dDependent.html#i860_002dDependent" title="i860-Dependent">
 <link rel="prev" href="Directives_002di860.html#Directives_002di860" title="Directives-i860">
@@ -66,14 +66,14 @@ are the pseudo-instructions that result in expansions.
 not fit within a signed 16-bit field) will be expanded into:
      <pre class="smallexample">          orh large_imm@h,%r0,%rn
           or large_imm@l,%rn,%rn
-</pre>
+     </pre>
      <li>Load/store with relocatable address expression:
 
      <p>For example, the pseudo-instruction <code>ld.b addr_exp(%rx),%rn</code>
 will be expanded into:
      <pre class="smallexample">          orh addr_exp@ha,%rx,%r31
           ld.l addr_exp@l(%r31),%rn
-</pre>
+     </pre>
      <p>The analogous expansions apply to <code>ld.x, st.x, fld.x, pfld.x, fst.x</code>, and <code>pst.x</code> as well. 
 <li>Signed large immediate with add/subtract:
 
@@ -83,18 +83,18 @@ For instance, the pseudo-instruction <code>adds large_imm,%rx,%rn</code> expands
      <pre class="smallexample">          orh large_imm@h,%r0,%r31
           or large_imm@l,%r31,%r31
           adds %r31,%rx,%rn
-</pre>
+     </pre>
      <li>Unsigned large immediate with logical operations:
 
      <p>Logical operations (<code>or, andnot, or, xor</code>) also result in expansions. 
 The pseudo-instruction <code>or large_imm,%rx,%rn</code> results in:
      <pre class="smallexample">          orh large_imm@h,%rx,%r31
           or large_imm@l,%r31,%rn
-</pre>
+     </pre>
      <p>Similarly for the others, except for <code>and</code> which expands to:
      <pre class="smallexample">          andnot (-1 - large_imm)@h,%rx,%r31
           andnot (-1 - large_imm)@l,%r31,%rn
-</pre>
+     </pre>
      </ul>
 
    </body></html>

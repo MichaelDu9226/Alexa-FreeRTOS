@@ -3,7 +3,7 @@
 <title>GDB/MI Development and Front Ends - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-Compatibility-with-CLI.html#GDB_002fMI-Compatibility-with-CLI" title="GDB/MI Compatibility with CLI">
@@ -72,10 +72,10 @@ parse MI output in a way that can handle them:
 <code>in_scope</code> (see <a href="_002dvar_002dupdate.html#g_t_002dvar_002dupdate">-var-update</a>) may be extended.
 
      <!-- The format of field's content e.g type prefix, may change so parse it -->
-     <!-- at your own risk.  Yes, in general? -->
-     <!-- The order of fields may change?  Shouldn't really matter but it might -->
-     <!-- resolve inconsistencies. -->
-   </ul>
+<!-- at your own risk.  Yes, in general? -->
+<!-- The order of fields may change?  Shouldn't really matter but it might -->
+<!-- resolve inconsistencies. -->
+</ul>
 
    <p>If the changes are likely to break front ends, the MI version level
 will be increased by one.  This will allow the front end to parse the
@@ -85,7 +85,7 @@ responsibility of the front end to work with the new one.
 
 <!-- Starting with mi3, add a new command -mi-version that prints the MI -->
 <!-- version? -->
-   <p>The best way to avoid unexpected changes in MI that might break your front
+<p>The best way to avoid unexpected changes in MI that might break your front
 end is to make your project known to <span class="sc">gdb</span> developers and
 follow development on <a href="mailto:gdb@sourceware.org">gdb@sourceware.org</a> and
 <a href="mailto:gdb-patches@sourceware.org">gdb-patches@sourceware.org</a>. 

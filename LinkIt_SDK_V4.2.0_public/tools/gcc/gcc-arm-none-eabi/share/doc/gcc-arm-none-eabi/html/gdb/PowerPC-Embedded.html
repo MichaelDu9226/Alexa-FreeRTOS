@@ -3,7 +3,7 @@
 <title>PowerPC Embedded - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Embedded-Processors.html#Embedded-Processors" title="Embedded Processors">
 <link rel="prev" href="OpenRISC-1000.html#OpenRISC-1000" title="OpenRISC 1000">
@@ -98,9 +98,9 @@ convention.  By default, <span class="sc">gdb</span> selects the calling convent
 on the selected architecture and the provided executable file.
 
      <br><dt><code>set powerpc vector-abi</code><dt><code>show powerpc vector-abi</code><dd>Force <span class="sc">gdb</span> to use the specified calling convention for vector
-arguments and return values.  The valid options are &lsquo;<samp><span class="samp">auto</span></samp>&rsquo;;
-&lsquo;<samp><span class="samp">generic</span></samp>&rsquo;, to avoid vector registers even if they are present;
-&lsquo;<samp><span class="samp">altivec</span></samp>&rsquo;, to use AltiVec registers; and &lsquo;<samp><span class="samp">spe</span></samp>&rsquo; to use SPE
+arguments and return values.  The valid options are `<samp><span class="samp">auto</span></samp>';
+`<samp><span class="samp">generic</span></samp>', to avoid vector registers even if they are present;
+`<samp><span class="samp">altivec</span></samp>', to use AltiVec registers; and `<samp><span class="samp">spe</span></samp>' to use SPE
 registers.  By default, <span class="sc">gdb</span> selects the calling convention
 based on the selected architecture and the provided executable file.
 

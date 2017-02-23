@@ -3,7 +3,7 @@
 <title>__atomic Builtins - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="_005f_005fsync-Builtins.html#g_t_005f_005fsync-Builtins" title="__sync Builtins">
@@ -56,18 +56,18 @@ Up:&nbsp;<a rel="up" accesskey="u" href="C-Extensions.html#C-Extensions">C Exten
 <h3 class="section">6.52 Built-in functions for memory model aware atomic operations</h3>
 
 <p>The following built-in functions approximately match the requirements for
-C++11 memory model. Many are similar to the &lsquo;<samp><span class="samp">__sync</span></samp>&rsquo; prefixed built-in
+C++11 memory model. Many are similar to the `<samp><span class="samp">__sync</span></samp>' prefixed built-in
 functions, but all also have a memory model parameter.  These are all
-identified by being prefixed with &lsquo;<samp><span class="samp">__atomic</span></samp>&rsquo;, and most are overloaded
+identified by being prefixed with `<samp><span class="samp">__atomic</span></samp>', and most are overloaded
 such that they work with multiple types.
 
  <p>GCC allows any integral scalar or pointer type that is 1, 2, 4, or 8
 bytes in length. 16-byte integral types are also allowed if
-&lsquo;<samp><span class="samp">__int128</span></samp>&rsquo; (see <a href="_005f_005fint128.html#g_t_005f_005fint128">__int128</a>) is supported by the architecture.
+`<samp><span class="samp">__int128</span></samp>' (see <a href="_005f_005fint128.html#g_t_005f_005fint128">__int128</a>) is supported by the architecture.
 
  <p>Target architectures are encouraged to provide their own patterns for
 each of these built-in functions.  If no target is provided, the original
-non-memory model set of &lsquo;<samp><span class="samp">__sync</span></samp>&rsquo; atomic built-in functions are
+non-memory model set of `<samp><span class="samp">__sync</span></samp>' atomic built-in functions are
 utilized, along with any required synchronization fences surrounding it in
 order to achieve the proper behavior.  Execution in this case is subject
 to the same restrictions as those built-in functions.
@@ -82,7 +82,7 @@ version works on any data type.  If the data type size maps to one
 of the integral sizes that may have lock free support, the generic
 version utilizes the lock free built-in function.  Otherwise an
 external call is left to be resolved at run time.  This external call is
-the same format with the addition of a &lsquo;<samp><span class="samp">size_t</span></samp>&rsquo; parameter inserted
+the same format with the addition of a `<samp><span class="samp">size_t</span></samp>' parameter inserted
 as the first parameter indicating the size of the object being pointed to. 
 All objects must be the same size.
 
@@ -224,7 +224,7 @@ pointer.
 return the result of the operation. That is,
 
      <pre class="smallexample">          { *ptr <var>op</var>= val; return *ptr; }
-</pre>
+     </pre>
       <p>All memory models are valid.
 
       </blockquote></div>
@@ -240,7 +240,7 @@ return the result of the operation. That is,
 return the value that had previously been in <code>*</code><var>ptr</var>.  That is,
 
      <pre class="smallexample">          { tmp = *ptr; *ptr <var>op</var>= val; return tmp; }
-</pre>
+     </pre>
       <p>All memory models are valid.
 
       </blockquote></div>
@@ -248,7 +248,7 @@ return the value that had previously been in <code>*</code><var>ptr</var>.  That
 <div class="defun">
 &mdash; Built-in Function: bool <b>__atomic_test_and_set</b> (<var>void *ptr, int memmodel</var>)<var><a name="index-g_t_005f_005fatomic_005ftest_005fand_005fset-2954"></a></var><br>
 <blockquote>
-      <p>This built-in function performs an atomic test-and-set operation on
+<p>This built-in function performs an atomic test-and-set operation on
 the byte at <code>*</code><var>ptr</var>.  The byte is set to some implementation
 defined nonzero &ldquo;set&rdquo; value and the return value is <code>true</code> if and only
 if the previous contents were &ldquo;set&rdquo;. 
@@ -262,7 +262,7 @@ other types only part of the value may be set.
 <div class="defun">
 &mdash; Built-in Function: void <b>__atomic_clear</b> (<var>bool *ptr, int memmodel</var>)<var><a name="index-g_t_005f_005fatomic_005fclear-2955"></a></var><br>
 <blockquote>
-      <p>This built-in function performs an atomic clear operation on
+<p>This built-in function performs an atomic clear operation on
 <code>*</code><var>ptr</var>.  After the operation, <code>*</code><var>ptr</var> contains 0. 
 It should be only used for operands of type <code>bool</code> or <code>char</code> and
 in conjunction with <code>__atomic_test_and_set</code>. 
@@ -278,7 +278,7 @@ prefer using <code>__atomic_store</code>.
 <div class="defun">
 &mdash; Built-in Function: void <b>__atomic_thread_fence</b> (<var>int memmodel</var>)<var><a name="index-g_t_005f_005fatomic_005fthread_005ffence-2956"></a></var><br>
 <blockquote>
-      <p>This built-in function acts as a synchronization fence between threads
+<p>This built-in function acts as a synchronization fence between threads
 based on the specified memory model.
 
       <p>All memory orders are valid.
@@ -288,7 +288,7 @@ based on the specified memory model.
 <div class="defun">
 &mdash; Built-in Function: void <b>__atomic_signal_fence</b> (<var>int memmodel</var>)<var><a name="index-g_t_005f_005fatomic_005fsignal_005ffence-2957"></a></var><br>
 <blockquote>
-      <p>This built-in function acts as a synchronization fence between a thread
+<p>This built-in function acts as a synchronization fence between a thread
 and signal handlers based in the same thread.
 
       <p>All memory orders are valid.
@@ -298,7 +298,7 @@ and signal handlers based in the same thread.
 <div class="defun">
 &mdash; Built-in Function: bool <b>__atomic_always_lock_free</b> (<var>size_t size, void *ptr</var>)<var><a name="index-g_t_005f_005fatomic_005falways_005flock_005ffree-2958"></a></var><br>
 <blockquote>
-      <p>This built-in function returns true if objects of <var>size</var> bytes always
+<p>This built-in function returns true if objects of <var>size</var> bytes always
 generate lock free atomic instructions for the target architecture. 
 <var>size</var> must resolve to a compile-time constant and the result also
 resolves to a compile-time constant.
@@ -308,13 +308,13 @@ alignment.  A value of 0 indicates typical alignment should be used.  The
 compiler may also ignore this parameter.
 
      <pre class="smallexample">          if (_atomic_always_lock_free (sizeof (long long), 0))
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
 &mdash; Built-in Function: bool <b>__atomic_is_lock_free</b> (<var>size_t size, void *ptr</var>)<var><a name="index-g_t_005f_005fatomic_005fis_005flock_005ffree-2959"></a></var><br>
 <blockquote>
-      <p>This built-in function returns true if objects of <var>size</var> bytes always
+<p>This built-in function returns true if objects of <var>size</var> bytes always
 generate lock free atomic instructions for the target architecture.  If
 it is not known to be lock free a call is made to a runtime routine named
 <code>__atomic_is_lock_free</code>.

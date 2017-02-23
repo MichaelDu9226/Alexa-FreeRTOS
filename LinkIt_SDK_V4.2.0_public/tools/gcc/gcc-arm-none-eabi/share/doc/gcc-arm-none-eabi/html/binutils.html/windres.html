@@ -3,7 +3,7 @@
 <title>windres - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="nlmconv.html#nlmconv" title="nlmconv">
 <link rel="next" href="windmc.html#windmc" title="windmc">
@@ -60,7 +60,7 @@ utilities, since it is only useful for Windows targets.
      <!-- man end -->
 </pre>
    <!-- man begin DESCRIPTION windres -->
-   <p><samp><span class="command">windres</span></samp> reads resources from an input file and copies them into
+<p><samp><span class="command">windres</span></samp> reads resources from an input file and copies them into
 an output file.  Either file may be in one of three formats:
 
      <dl>
@@ -101,7 +101,7 @@ your application.  This will make the resources described in the
 
 <!-- man end -->
 <!-- man begin OPTIONS windres -->
-     <dl>
+<dl>
 <dt><samp><span class="env">-i </span><var>filename</var></samp><dt><samp><span class="env">--input </span><var>filename</var></samp><dd>The name of the input file.  If this option is not used, then
 <samp><span class="command">windres</span></samp> will use the first non-option argument as the input file
 name.  If there are no non-option arguments, then <samp><span class="command">windres</span></samp> will
@@ -116,12 +116,12 @@ non-option argument, then <samp><span class="command">windres</span></samp> will
 for compatibility with <samp><span class="command">rc</span></samp> the option <samp><span class="option">-fo</span></samp> is also
 accepted, but its use is not recommended.
 
-     <br><dt><samp><span class="env">-J </span><var>format</var></samp><dt><samp><span class="env">--input-format </span><var>format</var></samp><dd>The input format to read.  <var>format</var> may be &lsquo;<samp><span class="samp">res</span></samp>&rsquo;, &lsquo;<samp><span class="samp">rc</span></samp>&rsquo;, or
-&lsquo;<samp><span class="samp">coff</span></samp>&rsquo;.  If no input format is specified, <samp><span class="command">windres</span></samp> will
+     <br><dt><samp><span class="env">-J </span><var>format</var></samp><dt><samp><span class="env">--input-format </span><var>format</var></samp><dd>The input format to read.  <var>format</var> may be `<samp><span class="samp">res</span></samp>', `<samp><span class="samp">rc</span></samp>', or
+`<samp><span class="samp">coff</span></samp>'.  If no input format is specified, <samp><span class="command">windres</span></samp> will
 guess, as described above.
 
-     <br><dt><samp><span class="env">-O </span><var>format</var></samp><dt><samp><span class="env">--output-format </span><var>format</var></samp><dd>The output format to generate.  <var>format</var> may be &lsquo;<samp><span class="samp">res</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">rc</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">coff</span></samp>&rsquo;.  If no output format is specified,
+     <br><dt><samp><span class="env">-O </span><var>format</var></samp><dt><samp><span class="env">--output-format </span><var>format</var></samp><dd>The output format to generate.  <var>format</var> may be `<samp><span class="samp">res</span></samp>',
+`<samp><span class="samp">rc</span></samp>', or `<samp><span class="samp">coff</span></samp>'.  If no output format is specified,
 <samp><span class="command">windres</span></samp> will guess, as described above.
 
      <br><dt><samp><span class="env">-F </span><var>target</var></samp><dt><samp><span class="env">--target </span><var>target</var></samp><dd>Specify the BFD format to use for a COFF file as input or output.  This
@@ -148,7 +148,7 @@ files named in the <code>rc</code> file.  If the argument passed to this command
 matches any of the supported <var>formats</var> (as described in the <samp><span class="option">-J</span></samp>
 option), it will issue a deprecation warning, and behave just like the
 <samp><span class="option">-J</span></samp> option.  New programs should not use this behaviour.  If a
-directory happens to match a <var>format</var>, simple prefix it with &lsquo;<samp><span class="samp">./</span></samp>&rsquo;
+directory happens to match a <var>format</var>, simple prefix it with `<samp><span class="samp">./</span></samp>'
 to disable the backward compatibility.
 
      <br><dt><samp><span class="env">-D </span><var>target</var></samp><dt><samp><span class="env">--define </span><var>sym</var><span class="env">[=</span><var>val</var><span class="env">]</span></samp><dd>Specify a <samp><span class="option">-D</span></samp> option to pass to the preprocessor when reading an
@@ -163,7 +163,7 @@ to disable the backward compatibility.
 didn't specify one.
 
      <br><dt><samp><span class="env">-c </span><var>val</var></samp><br><dt><samp><span class="env">--codepage </span><var>val</var></samp><dd>Specify the default codepage to use when reading an <code>rc</code> file. 
-<var>val</var> should be a hexadecimal prefixed by &lsquo;<samp><span class="samp">0x</span></samp>&rsquo; or decimal
+<var>val</var> should be a hexadecimal prefixed by `<samp><span class="samp">0x</span></samp>' or decimal
 codepage code. The valid range is from zero up to 0xffff, but the
 validity of the codepage is host and configuration dependent.
 
@@ -189,5 +189,5 @@ this will turn on parser debugging.
 </dl>
 
 <!-- man end -->
-   </body></html>
+</body></html>
 

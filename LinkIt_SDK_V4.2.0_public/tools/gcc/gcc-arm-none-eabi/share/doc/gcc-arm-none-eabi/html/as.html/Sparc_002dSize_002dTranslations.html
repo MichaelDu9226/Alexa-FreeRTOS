@@ -3,7 +3,7 @@
 <title>Sparc-Size-Translations - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Sparc_002dSyntax.html#Sparc_002dSyntax" title="Sparc-Syntax">
 <link rel="prev" href="Sparc_002dRelocs.html#Sparc_002dRelocs" title="Sparc-Relocs">
@@ -53,7 +53,7 @@ Often it is desirable to write code in an operand size agnostic
 manner.  <code>as</code> provides support for this via
 operand size opcode translations.  Translations are supported
 for loads, stores, shifts, compare-and-swap atomics, and the
-&lsquo;<samp><span class="samp">clr</span></samp>&rsquo; synthetic instruction.
+`<samp><span class="samp">clr</span></samp>' synthetic instruction.
 
    <p>If generating 32-bit code, <code>as</code> will generate the
 32-bit opcode.  Whereas if 64-bit code is being generated,
@@ -101,7 +101,7 @@ opcode translations:
      casxa [%o0] %asi, %o1, %o2
      clrx  %g1
 </pre>
-   <p>Finally, the &lsquo;<samp><span class="samp">.nword</span></samp>&rsquo; translating directive is supported
+   <p>Finally, the `<samp><span class="samp">.nword</span></samp>' translating directive is supported
 as well.  It is documented in the section on Sparc machine
 directives.
 

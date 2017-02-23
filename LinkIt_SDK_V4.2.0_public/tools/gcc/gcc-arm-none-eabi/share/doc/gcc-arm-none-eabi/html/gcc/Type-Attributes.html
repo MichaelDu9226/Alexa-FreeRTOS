@@ -3,7 +3,7 @@
 <title>Type Attributes - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Variable-Attributes.html#Variable-Attributes" title="Variable Attributes">
@@ -64,7 +64,7 @@ types: <code>aligned</code>, <code>packed</code>, <code>transparent_union</code>
 <code>may_alias</code>.  Other attributes are defined for functions
 (see <a href="Function-Attributes.html#Function-Attributes">Function Attributes</a>) and for variables (see <a href="Variable-Attributes.html#Variable-Attributes">Variable Attributes</a>).
 
- <p>You may also specify any one of these attributes with &lsquo;<samp><span class="samp">__</span></samp>&rsquo;
+ <p>You may also specify any one of these attributes with `<samp><span class="samp">__</span></samp>'
 preceding and following its keyword.  This allows you to use these
 attributes in header files without being concerned about a possible
 macro of the same name.  For example, you may use <code>__aligned__</code>
@@ -89,7 +89,7 @@ of the specified type.  For example, the declarations:
 
      <pre class="smallexample">          struct S { short f[3]; } __attribute__ ((aligned (8)));
           typedef int more_aligned_int __attribute__ ((aligned (8)));
-</pre>
+     </pre>
      <p class="noindent">force the compiler to ensure (as far as it can) that each variable whose
 type is <code>struct S</code> or <code>more_aligned_int</code> is allocated and
 aligned <em>at least</em> on a 8-byte boundary.  On a SPARC, having all
@@ -116,7 +116,7 @@ useful alignment for the target machine you are compiling for.  For
 example, you could write:
 
      <pre class="smallexample">          struct S { short f[3]; } __attribute__ ((aligned));
-</pre>
+     </pre>
      <p>Whenever you leave out the alignment factor in an <code>aligned</code>
 attribute specification, the compiler automatically sets the alignment
 for the type to the largest alignment that is ever used for any data
@@ -185,7 +185,7 @@ be packed too.
                int  i;
                struct my_unpacked_struct s;
             };
-</pre>
+     </pre>
      <p>You may only specify this attribute on the definition of an <code>enum</code>,
 <code>struct</code> or <code>union</code>, not on a <code>typedef</code> that does not
 also define the enumerated type, structure or union.
@@ -226,21 +226,21 @@ as follows:
             } wait_status_ptr_t;
           
           pid_t wait (wait_status_ptr_t);
-</pre>
+     </pre>
      <p class="noindent">This interface allows either <code>int *</code> or <code>union wait *</code>
 arguments to be passed, using the <code>int *</code> calling convention. 
 The program can call <code>wait</code> with arguments of either type:
 
      <pre class="smallexample">          int w1 () { int w; return wait (&amp;w); }
           int w2 () { union wait w; return wait (&amp;w); }
-</pre>
+     </pre>
      <p class="noindent">With this interface, <code>wait</code>'s implementation might look like this:
 
      <pre class="smallexample">          pid_t wait (wait_status_ptr_t p)
           {
             return waitpid (-1, p.__ip, 0);
           }
-</pre>
+     </pre>
      <br><dt><code>unused</code><dd>When attached to a type (including a <code>union</code> or a <code>struct</code>),
 this attribute means that variables of that type are meant to appear
 possibly unused.  GCC does not produce a warning for any variables of
@@ -265,7 +265,7 @@ declared as deprecated.
           T2 y;
           typedef T1 T3 __attribute__ ((deprecated));
           T3 z __attribute__ ((deprecated));
-</pre>
+     </pre>
      <p class="noindent">results in a warning on line 2 and 3 but not lines 4, 5, or 6.  No
 warning is issued for line 4 because T2 is not explicitly
 deprecated.  Line 5 has no warning because T3 is explicitly
@@ -306,7 +306,7 @@ special semantics.
           
             exit(0);
           }
-</pre>
+     </pre>
      <p class="noindent">If you replaced <code>short_a</code> with <code>short</code> in the variable
 declaration, the above program would abort when compiled with
 <samp><span class="option">-fstrict-aliasing</span></samp>, which is on by default at <samp><span class="option">-O2</span></samp> or
@@ -327,8 +327,8 @@ typeinfo node and exception handling will break.
  </dl>
 
  <p>To specify multiple attributes, separate them by commas within the
-double parentheses: for example, &lsquo;<samp><span class="samp">__attribute__ ((aligned (16),
-packed))</span></samp>&rsquo;.
+double parentheses: for example, `<samp><span class="samp">__attribute__ ((aligned (16),
+packed))</span></samp>'.
 
 <h4 class="subsection">6.37.1 ARM Type Attributes</h4>
 

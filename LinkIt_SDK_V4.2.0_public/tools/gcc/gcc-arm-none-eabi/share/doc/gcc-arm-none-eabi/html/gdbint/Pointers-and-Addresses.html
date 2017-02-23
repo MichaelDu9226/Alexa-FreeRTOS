@@ -3,7 +3,7 @@
 <title>Pointers and Addresses - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Architecture-Definition.html#Target-Architecture-Definition" title="Target Architecture Definition">
 <link rel="prev" href="Registers-and-Memory.html#Registers-and-Memory" title="Registers and Memory">
@@ -55,7 +55,7 @@ address space, so they may choose a pointer representation that breaks this
 identity, and allows a larger code address space.
 
 <!-- D10V is gone from sources - more current example? -->
-   <p>For example, the Renesas D10V is a 16-bit VLIW processor whose
+<p>For example, the Renesas D10V is a 16-bit VLIW processor whose
 instructions are 32 bits long<a rel="footnote" href="#fn-1" name="fnd-1"><sup>1</sup></a>. 
 If the D10V used ordinary byte addresses to refer to code locations,
 then the processor would only be able to address 64kb of instructions. 
@@ -177,7 +177,7 @@ actually pairs of 16-bit sub-instructions.  However, since you can't
 jump into the middle of such a pair, code addresses can only refer to
 full 32 bit instructions, which is what matters in this explanation.</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

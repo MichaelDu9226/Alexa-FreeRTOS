@@ -3,7 +3,7 @@
 <title>Character Sets - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Data.html#Data" title="Data">
 <link rel="prev" href="Core-File-Generation.html#Core-File-Generation" title="Core File Generation">
@@ -83,7 +83,7 @@ list of supported target character sets, type
 system it is running on; you can override that default using the
 <code>set host-charset</code> command.  On some systems, <span class="sc">gdb</span> cannot
 automatically determine the appropriate host character set.  In this
-case, <span class="sc">gdb</span> uses &lsquo;<samp><span class="samp">UTF-8</span></samp>&rsquo;.
+case, <span class="sc">gdb</span> uses `<samp><span class="samp">UTF-8</span></samp>'.
 
      <p><span class="sc">gdb</span> can only use certain character sets as its host character
 set.  If you type <kbd>set&nbsp;host-charset&nbsp;&lt;TAB&gt;&lt;TAB&gt;<!-- /@w --></kbd>,
@@ -127,7 +127,7 @@ Assume that the following source code has been placed in the file
      }
 </pre>
    <p>In this program, <code>ascii_hello</code> and <code>ibm1047_hello</code> are arrays
-containing the string &lsquo;<samp><span class="samp">Hello, world!</span></samp>&rsquo; followed by a newline,
+containing the string `<samp><span class="samp">Hello, world!</span></samp>' followed by a newline,
 encoded in the <span class="sc">ascii</span> and <span class="sc">ibm1047</span> character sets.
 
    <p>We compile the program, and invoke the debugger on it:
@@ -173,7 +173,7 @@ literals you use in expressions:
      $3 = 43 '+'
      (gdb)
 </pre>
-   <p>The <span class="sc">ascii</span> character set uses the number 43 to encode the &lsquo;<samp><span class="samp">+</span></samp>&rsquo;
+   <p>The <span class="sc">ascii</span> character set uses the number 43 to encode the `<samp><span class="samp">+</span></samp>'
 character.
 
    <p><span class="sc">gdb</span> relies on the user to tell it which character set the
@@ -220,7 +220,7 @@ string literals you use in expressions:
      $10 = 78 '+'
      (gdb)
 </pre>
-   <p>The <span class="sc">ibm1047</span> character set uses the number 78 to encode the &lsquo;<samp><span class="samp">+</span></samp>&rsquo;
+   <p>The <span class="sc">ibm1047</span> character set uses the number 78 to encode the `<samp><span class="samp">+</span></samp>'
 character.
 
    </body></html>

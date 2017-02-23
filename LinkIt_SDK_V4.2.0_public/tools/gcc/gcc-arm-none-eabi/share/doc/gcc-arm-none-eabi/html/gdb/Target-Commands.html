@@ -3,7 +3,7 @@
 <title>Target Commands - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Targets.html#Targets" title="Targets">
 <link rel="prev" href="Active-Targets.html#Active-Targets" title="Active Targets">
@@ -83,7 +83,7 @@ you must know the actual BFD name.
      <p><a name="index-show-gnutarget-1138"></a><br><dt><code>show gnutarget</code><dd>Use the <code>show gnutarget</code> command to display what file format
 <code>gnutarget</code> is set to read.  If you have not set <code>gnutarget</code>,
 <span class="sc">gdb</span> will determine the file format for each file automatically,
-and <code>show gnutarget</code> displays &lsquo;<samp><span class="samp">The current BFD target is "auto"</span></samp>&rsquo;. 
+and <code>show gnutarget</code> displays `<samp><span class="samp">The current BFD target is "auto"</span></samp>'. 
 </dl>
 
    <p><a name="index-common-targets-1139"></a>Here are some common targets (available, or not, depending on the GDB
@@ -91,11 +91,11 @@ configuration):
 
      
 <a name="index-target-1140"></a>
-<dl><dt><code>target exec </code><var>program</var><dd><a name="index-executable-file-target-1141"></a>An executable file.  &lsquo;<samp><span class="samp">target exec </span><var>program</var></samp>&rsquo; is the same as
-&lsquo;<samp><span class="samp">exec-file </span><var>program</var></samp>&rsquo;.
+<dl><dt><code>target exec </code><var>program</var><dd><a name="index-executable-file-target-1141"></a>An executable file.  `<samp><span class="samp">target exec </span><var>program</var></samp>' is the same as
+`<samp><span class="samp">exec-file </span><var>program</var></samp>'.
 
-     <br><dt><code>target core </code><var>filename</var><dd><a name="index-core-dump-file-target-1142"></a>A core dump file.  &lsquo;<samp><span class="samp">target core </span><var>filename</var></samp>&rsquo; is the same as
-&lsquo;<samp><span class="samp">core-file </span><var>filename</var></samp>&rsquo;.
+     <br><dt><code>target core </code><var>filename</var><dd><a name="index-core-dump-file-target-1142"></a>A core dump file.  `<samp><span class="samp">target core </span><var>filename</var></samp>' is the same as
+`<samp><span class="samp">core-file </span><var>filename</var></samp>'.
 
      <br><dt><code>target remote </code><var>medium</var><dd><a name="index-remote-target-1143"></a>A remote system connected to <span class="sc">gdb</span> via a serial line or network
 connection.  This command tells <span class="sc">gdb</span> to use its own remote
@@ -105,7 +105,7 @@ protocol over <var>medium</var> for debugging.  See <a href="Remote-Debugging.ht
 machine running <span class="sc">gdb</span>, you could say:
 
      <pre class="smallexample">          target remote /dev/ttya
-</pre>
+     </pre>
      <p><code>target remote</code> supports the <code>load</code> command.  This is only
 useful if you have some other way of getting the stub to the target
 system, and you can put it somewhere in memory where it won't get
@@ -116,7 +116,7 @@ In general,
      <pre class="smallexample">                  target sim
                   load
                   run
-</pre>
+     </pre>
      <p class="noindent">works; however, you cannot assume that a specific memory map, device
 drivers, or even basic I/O is available, although some simulators do
 provide these.  For info about any processor-specific simulator details,
@@ -139,7 +139,7 @@ you've successfully established a connection.  You may wish to control
 various aspects of this process.
 
      <dl>
-<dt><code>set hash</code><dd><a name="index-set-hash_0040r_007b_002c-for-remote-monitors_007d-1146"></a><a name="index-hash-mark-while-downloading-1147"></a>This command controls whether a hash mark &lsquo;<samp><span class="samp">#</span></samp>&rsquo; is displayed while
+<dt><code>set hash</code><dd><a name="index-set-hash_0040r_007b_002c-for-remote-monitors_007d-1146"></a><a name="index-hash-mark-while-downloading-1147"></a>This command controls whether a hash mark `<samp><span class="samp">#</span></samp>' is displayed while
 downloading a file to the remote monitor.  If on, a hash mark is
 displayed after each S-record is successfully downloaded to the
 monitor.
@@ -155,7 +155,8 @@ monitor.
 
      
 <a name="index-load-_0040var_007bfilename_007d-1152"></a>
-<dl><dt><code>load </code><var>filename</var><dd><a name="load"></a>Depending on what remote debugging facilities are configured into
+<dl><dt><code>load </code><var>filename</var><dd><a name="load"></a>
+Depending on what remote debugging facilities are configured into
 <span class="sc">gdb</span>, the <code>load</code> command may be available.  Where it exists, it
 is meant to make <var>filename</var> (an executable) available for debugging
 on the remote system&mdash;by downloading, or dynamic linking, for example. 

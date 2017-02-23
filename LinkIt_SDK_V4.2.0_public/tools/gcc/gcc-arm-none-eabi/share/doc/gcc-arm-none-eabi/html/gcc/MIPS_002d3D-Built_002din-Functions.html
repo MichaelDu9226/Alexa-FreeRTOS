@@ -3,7 +3,7 @@
 <title>MIPS-3D Built-in Functions - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="MIPS-Loongson-Built_002din-Functions.html#MIPS-Loongson-Built_002din-Functions" title="MIPS Loongson Built-in Functions">
 <link rel="prev" href="Paired_002dSingle-Built_002din-Functions.html#Paired_002dSingle-Built_002din-Functions" title="Paired-Single Built-in Functions">
@@ -101,7 +101,7 @@ For example:
             true ();
           else
             false ();
-</pre>
+     </pre>
      <br><dt><code>int __builtin_mips_upper_cabs_</code><var>cond</var><code>_ps (v2sf </code><var>a</var><code>, v2sf </code><var>b</var><code>)</code><dt><code>int __builtin_mips_lower_cabs_</code><var>cond</var><code>_ps (v2sf </code><var>a</var><code>, v2sf </code><var>b</var><code>)</code><dd>Absolute comparison of two paired-single values (<code>cabs.</code><var>cond</var><code>.ps</code>,
 <code>bc1t</code>/<code>bc1f</code>).
 
@@ -118,7 +118,7 @@ and return either the upper or lower half of the result.  For example:
             lower_halves_are_equal ();
           else
             lower_halves_are_unequal ();
-</pre>
+     </pre>
      <br><dt><code>v2sf __builtin_mips_movt_cabs_</code><var>cond</var><code>_ps (v2sf </code><var>a</var><code>, v2sf </code><var>b</var><code>, v2sf </code><var>c</var><code>, v2sf </code><var>d</var><code>)</code><dt><code>v2sf __builtin_mips_movf_cabs_</code><var>cond</var><code>_ps (v2sf </code><var>a</var><code>, v2sf </code><var>b</var><code>, v2sf </code><var>c</var><code>, v2sf </code><var>d</var><code>)</code><dd>Conditional move based on absolute comparison (<code>cabs.</code><var>cond</var><code>.ps</code>,
 <code>movt.ps</code>/<code>movf.ps</code>).
 
@@ -127,7 +127,7 @@ and return either the upper or lower half of the result.  For example:
      <pre class="smallexample">          cabs.<var>cond</var>.ps <var>cc</var>,<var>a</var>,<var>b</var>
           mov.ps <var>x</var>,<var>c</var>
           movt.ps <var>x</var>,<var>d</var>,<var>cc</var>
-</pre>
+     </pre>
      <p>The <code>movf</code> functions are similar but use <code>movf.ps</code> instead
 of <code>movt.ps</code>.
 
@@ -150,7 +150,7 @@ For example:
             both_are_true ();
           else
             one_is_false ();
-</pre>
+     </pre>
      <br><dt><code>int __builtin_mips_any_c_</code><var>cond</var><code>_4s (v2sf </code><var>a</var><code>, v2sf </code><var>b</var><code>, v2sf </code><var>c</var><code>, v2sf </code><var>d</var><code>)</code><dt><code>int __builtin_mips_all_c_</code><var>cond</var><code>_4s (v2sf </code><var>a</var><code>, v2sf </code><var>b</var><code>, v2sf </code><var>c</var><code>, v2sf </code><var>d</var><code>)</code><dt><code>int __builtin_mips_any_cabs_</code><var>cond</var><code>_4s (v2sf </code><var>a</var><code>, v2sf </code><var>b</var><code>, v2sf </code><var>c</var><code>, v2sf </code><var>d</var><code>)</code><dt><code>int __builtin_mips_all_cabs_</code><var>cond</var><code>_4s (v2sf </code><var>a</var><code>, v2sf </code><var>b</var><code>, v2sf </code><var>c</var><code>, v2sf </code><var>d</var><code>)</code><dd>Comparison of four paired-single values
 (<code>c.</code><var>cond</var><code>.ps</code>/<code>cabs.</code><var>cond</var><code>.ps</code>,
 <code>bc1any4t</code>/<code>bc1any4f</code>).
@@ -171,7 +171,7 @@ For example:
             all_are_true ();
           else
             some_are_false ();
-</pre>
+     </pre>
      </dl>
 
  </body></html>

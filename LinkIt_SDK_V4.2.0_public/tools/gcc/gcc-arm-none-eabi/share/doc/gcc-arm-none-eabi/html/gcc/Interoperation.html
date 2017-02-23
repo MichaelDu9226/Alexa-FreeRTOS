@@ -3,7 +3,7 @@
 <title>Interoperation - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Trouble.html#Trouble" title="Trouble">
 <link rel="prev" href="Actual-Bugs.html#Actual-Bugs" title="Actual Bugs">
@@ -93,7 +93,7 @@ Another solution is to modify the function that is compiled with
 Sun CC to copy the argument into a local variable; local variables
 are always properly aligned.  A third solution is to modify the function
 that uses the pointer to dereference it via the following function
-<code>access_double</code> instead of directly with &lsquo;<samp><span class="samp">*</span></samp>&rsquo;:
+<code>access_double</code> instead of directly with `<samp><span class="samp">*</span></samp>':
 
      <pre class="smallexample">          inline double
           access_double (double *unaligned_ptr)
@@ -108,7 +108,7 @@ that uses the pointer to dereference it via the following function
           
             return u.d;
           }
-</pre>
+     </pre>
      <p class="noindent">Storing into the pointer can be done likewise with the same union.
 
      <li>On Solaris, the <code>malloc</code> function in the <samp><span class="file">libmalloc.a</span></samp> library
@@ -149,7 +149,7 @@ the form:
 
      <pre class="smallexample">          (warning) Use of GR3 when
             frame &gt;= 8192 may cause conflict.
-</pre>
+     </pre>
      <p>These warnings are harmless and can be safely ignored.
 
      <li>In extremely rare cases involving some very large functions you may
@@ -166,7 +166,7 @@ enabled so that symbol merging can occur.  To utilize this feature,
 the application linked with <samp><span class="file">libstdc++.a</span></samp> must include the
 <samp><span class="option">-Wl,-brtl</span></samp> flag on the link line.  G++ cannot impose this
 because this option may interfere with the semantics of the user
-program and users may not always use &lsquo;<samp><span class="samp">g++</span></samp>&rsquo; to link his or her
+program and users may not always use `<samp><span class="samp">g++</span></samp>' to link his or her
 application.  Applications are not required to use the
 <samp><span class="option">-Wl,-brtl</span></samp> flag on the link line&mdash;the rest of the
 <samp><span class="file">libstdc++.a</span></samp> library which is not dependent on the symbol
@@ -181,14 +181,14 @@ exported by the application (<samp><span class="option">-Wl,-brtl,-bE:exportfile
      <li>AIX on the RS/6000 provides support (NLS) for environments outside of
 the United States.  Compilers and assemblers use NLS to support
 locale-specific representations of various objects including
-floating-point numbers (&lsquo;<samp><span class="samp">.</span></samp>&rsquo; vs &lsquo;<samp><span class="samp">,</span></samp>&rsquo; for separating decimal
+floating-point numbers (`<samp><span class="samp">.</span></samp>' vs `<samp><span class="samp">,</span></samp>' for separating decimal
 fractions).  There have been problems reported where the library linked
 with GCC does not produce the same floating-point formats that the
 assembler accepts.  If you have this problem, set the <samp><span class="env">LANG</span></samp>
-environment variable to &lsquo;<samp><span class="samp">C</span></samp>&rsquo; or &lsquo;<samp><span class="samp">En_US</span></samp>&rsquo;.
+environment variable to `<samp><span class="samp">C</span></samp>' or `<samp><span class="samp">En_US</span></samp>'.
 
      <li><a name="index-fdollars_002din_002didentifiers-3562"></a>Even if you specify <samp><span class="option">-fdollars-in-identifiers</span></samp>,
-you cannot successfully use &lsquo;<samp><span class="samp">$</span></samp>&rsquo; in identifiers on the RS/6000 due
+you cannot successfully use `<samp><span class="samp">$</span></samp>' in identifiers on the RS/6000 due
 to a restriction in the IBM assembler.  GAS supports these
 identifiers.
 

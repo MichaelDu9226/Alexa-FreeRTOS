@@ -3,7 +3,7 @@
 <title>Continuing and Stepping - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stopping.html#Stopping" title="Stopping">
 <link rel="prev" href="Breakpoints.html#Breakpoints" title="Breakpoints">
@@ -54,7 +54,7 @@ line of source code, or one machine instruction (depending on what
 particular command you use).  Either when continuing or when stepping,
 your program may stop even sooner, due to a breakpoint or a signal.  (If
 it stops due to a signal, you may want to use <code>handle</code>, or use
-&lsquo;<samp><span class="samp">signal 0</span></samp>&rsquo; to resume execution.  See <a href="Signals.html#Signals">Signals</a>.)
+`<samp><span class="samp">signal 0</span></samp>' to resume execution.  See <a href="Signals.html#Signals">Signals</a>.)
 
      
 <a name="index-continue-306"></a>
@@ -135,11 +135,11 @@ is abbreviated <code>n</code>.
      <p>An argument <var>count</var> is a repeat count, as for <code>step</code>.
 
      <!-- FIX ME!!  Do we delete this, or is there a way it fits in with -->
-     <!-- the following paragraph?   -  Vctoria -->
-     <!-- @code{next} within a function that lacks debugging information acts like -->
-     <!-- @code{step}, but any function calls appearing within the code of the -->
-     <!-- function are executed without stopping. -->
-     <p>The <code>next</code> command only stops at the first instruction of a
+<!-- the following paragraph?   -  Vctoria -->
+<!-- @code{next} within a function that lacks debugging information acts like -->
+<!-- @code{step}, but any function calls appearing within the code of the -->
+<!-- function are executed without stopping. -->
+<p>The <code>next</code> command only stops at the first instruction of a
 source line.  This prevents multiple stops that could otherwise occur in
 <code>switch</code> statements, <code>for</code> loops, etc.
 
@@ -190,7 +190,7 @@ example, in the following excerpt from a debugging session, the <code>f</code>
           206                 expand_input();
           (gdb) until
           195             for ( ; argc &gt; 0; NEXTARG) {
-</pre>
+     </pre>
      <p>This happened because, for execution efficiency, the compiler had
 generated code for the loop closure test at the end, rather than the
 start, of the loop&mdash;even though the test in a C <code>for</code>-loop is
@@ -222,7 +222,7 @@ invocations have returned.
           98	    }
           99	    return (value);
           100     }
-</pre>
+     </pre>
      <p><a name="index-advance-_0040var_007blocation_007d-321"></a><br><dt><code>advance </code><var>location</var><dd>Continue running the program up to the given <var>location</var>.  An argument is
 required, which should be of one of the forms described in
 <a href="Specify-Location.html#Specify-Location">Specify Location</a>. 
@@ -233,7 +233,7 @@ have to be in the same frame as the current one.
 
      <p><a name="index-stepi-322"></a><a name="index-si-_0040r_007b_0028_0040code_007bstepi_007d_0029_007d-323"></a><br><dt><code>stepi</code><dt><code>stepi </code><var>arg</var><dt><code>si</code><dd>Execute one machine instruction, then stop and return to the debugger.
 
-     <p>It is often useful to do &lsquo;<samp><span class="samp">display/i $pc</span></samp>&rsquo; when stepping by machine
+     <p>It is often useful to do `<samp><span class="samp">display/i $pc</span></samp>' when stepping by machine
 instructions.  This makes <span class="sc">gdb</span> automatically display the next
 instruction to be executed, each time your program stops.  See <a href="Auto-Display.html#Auto-Display">Automatic Display</a>.
 

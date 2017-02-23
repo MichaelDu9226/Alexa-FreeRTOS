@@ -3,7 +3,7 @@
 <title>Location Counter - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Expressions.html#Expressions" title="Expressions">
 <link rel="prev" href="Orphan-Sections.html#Orphan-Sections" title="Orphan Sections">
@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Expressions.html#Expressions">Expressio
 
 <h4 class="subsection">3.10.5 The Location Counter</h4>
 
-<p><a name="index-g_t_002e-515"></a><a name="index-dot-516"></a><a name="index-location-counter-517"></a><a name="index-current-output-location-518"></a>The special linker variable <dfn>dot</dfn> &lsquo;<samp><span class="samp">.</span></samp>&rsquo; always contains the
+<p><a name="index-g_t_002e-515"></a><a name="index-dot-516"></a><a name="index-location-counter-517"></a><a name="index-current-output-location-518"></a>The special linker variable <dfn>dot</dfn> `<samp><span class="samp">.</span></samp>' always contains the
 current output location counter.  Since the <code>.</code> always refers to a
 location in an output section, it may only appear in an expression
 within a <code>SECTIONS</code> command.  The <code>.</code> symbol may appear
@@ -72,11 +72,11 @@ doing creates areas with overlapping LMAs.
          } = 0x12345678;
      }
 </pre>
-   <p class="noindent">In the previous example, the &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; section from <samp><span class="file">file1</span></samp> is
-located at the beginning of the output section &lsquo;<samp><span class="samp">output</span></samp>&rsquo;.  It is
-followed by a 1000 byte gap.  Then the &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; section from
+   <p class="noindent">In the previous example, the `<samp><span class="samp">.text</span></samp>' section from <samp><span class="file">file1</span></samp> is
+located at the beginning of the output section `<samp><span class="samp">output</span></samp>'.  It is
+followed by a 1000 byte gap.  Then the `<samp><span class="samp">.text</span></samp>' section from
 <samp><span class="file">file2</span></samp> appears, also with a 1000 byte gap following before the
-&lsquo;<samp><span class="samp">.text</span></samp>&rsquo; section from <samp><span class="file">file3</span></samp>.  The notation &lsquo;<samp><span class="samp">= 0x12345678</span></samp>&rsquo;
+`<samp><span class="samp">.text</span></samp>' section from <samp><span class="file">file3</span></samp>.  The notation `<samp><span class="samp">= 0x12345678</span></samp>'
 specifies what data to write in the gaps (see <a href="Output-Section-Fill.html#Output-Section-Fill">Output Section Fill</a>).
 
    <p><a name="index-dot-inside-sections-520"></a>Note: <code>.</code> actually refers to the byte offset from the start of the
@@ -100,14 +100,14 @@ not an absolute address.  Thus in a script like this:
          }
      }
 </pre>
-   <p>The &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; section will be assigned a starting address of 0x100
+   <p>The `<samp><span class="samp">.text</span></samp>' section will be assigned a starting address of 0x100
 and a size of exactly 0x200 bytes, even if there is not enough data in
-the &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; input sections to fill this area.  (If there is too
+the `<samp><span class="samp">.text</span></samp>' input sections to fill this area.  (If there is too
 much data, an error will be produced because this would be an attempt to
-move <code>.</code> backwards).  The &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; section will start at 0x500
+move <code>.</code> backwards).  The `<samp><span class="samp">.data</span></samp>' section will start at 0x500
 and it will have an extra 0x600 bytes worth of space after the end of
-the values from the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; input sections and before the end of
-the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; output section itself.
+the values from the `<samp><span class="samp">.data</span></samp>' input sections and before the end of
+the `<samp><span class="samp">.data</span></samp>' output section itself.
 
    <p><a name="index-dot-outside-sections-521"></a>Setting symbols to the value of the location counter outside of an
 output section statement can result in unexpected values if the linker

@@ -3,7 +3,7 @@
 <title>Invoking Gcov - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Gcov.html#Gcov" title="Gcov">
 <link rel="prev" href="Gcov-Intro.html#Gcov-Intro" title="Gcov Intro">
@@ -59,7 +59,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Gcov.html#Gcov">Gcov</a>
  <p><samp><span class="command">gcov</span></samp> accepts the following options:
 
 <!-- man begin OPTIONS -->
-     <dl>
+<dl>
 <dt><code>-h</code><dt><code>--help</code><dd>Display help about using <samp><span class="command">gcov</span></samp> (on the standard output), and
 exit without doing any further processing.
 
@@ -87,15 +87,15 @@ header file <samp><span class="file">x.h</span></samp> contains code, and was in
 produce an output file called <samp><span class="file">a.c##x.h.gcov</span></samp> instead of
 <samp><span class="file">x.h.gcov</span></samp>.  This can be useful if <samp><span class="file">x.h</span></samp> is included in
 multiple source files and you want to see the individual
-contributions.  If you use the &lsquo;<samp><span class="samp">-p</span></samp>&rsquo; option, both the including
+contributions.  If you use the `<samp><span class="samp">-p</span></samp>' option, both the including
 and included file names will be complete path names.
 
      <br><dt><code>-p</code><dt><code>--preserve-paths</code><dd>Preserve complete path information in the names of generated
 <samp><span class="file">.gcov</span></samp> files.  Without this option, just the filename component is
-used.  With this option, all directories are used, with &lsquo;<samp><span class="samp">/</span></samp>&rsquo; characters
-translated to &lsquo;<samp><span class="samp">#</span></samp>&rsquo; characters, <samp><span class="file">.</span></samp> directory components
+used.  With this option, all directories are used, with `<samp><span class="samp">/</span></samp>' characters
+translated to `<samp><span class="samp">#</span></samp>' characters, <samp><span class="file">.</span></samp> directory components
 removed and unremoveable <samp><span class="file">..</span></samp>
-components renamed to &lsquo;<samp><span class="samp">^</span></samp>&rsquo;.  This is useful if sourcefiles are in several
+components renamed to `<samp><span class="samp">^</span></samp>'.  This is useful if sourcefiles are in several
 different directories.
 
      <br><dt><code>-r</code><dt><code>--relative-only</code><dd>Only output information about source files with a relative pathname
@@ -134,22 +134,22 @@ One <samp><span class="file">.gcov</span></samp> file is produced for each sourc
 containing code,
 which was compiled to produce the data files.  The <var>mangledname</var> part
 of the output file name is usually simply the source file name, but can
-be something more complicated if the &lsquo;<samp><span class="samp">-l</span></samp>&rsquo; or &lsquo;<samp><span class="samp">-p</span></samp>&rsquo; options are
+be something more complicated if the `<samp><span class="samp">-l</span></samp>' or `<samp><span class="samp">-p</span></samp>' options are
 given.  Refer to those options for details.
 
  <p>If you invoke <samp><span class="command">gcov</span></samp> with multiple input files, the
 contributions from each input file are summed.  Typically you would
 invoke it with the same list of files as the final link of your executable.
 
- <p>The <samp><span class="file">.gcov</span></samp> files contain the &lsquo;<samp><span class="samp">:</span></samp>&rsquo; separated fields along with
+ <p>The <samp><span class="file">.gcov</span></samp> files contain the `<samp><span class="samp">:</span></samp>' separated fields along with
 program source code.  The format is
 
 <pre class="smallexample">     <var>execution_count</var>:<var>line_number</var>:<var>source line text</var>
 </pre>
  <p>Additional block information may succeed each line, when requested by
-command line option.  The <var>execution_count</var> is &lsquo;<samp><span class="samp">-</span></samp>&rsquo; for lines
-containing no code.  Unexecuted lines are marked &lsquo;<samp><span class="samp">#####</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">====</span></samp>&rsquo;, depending on whether they are reachable by
+command line option.  The <var>execution_count</var> is `<samp><span class="samp">-</span></samp>' for lines
+containing no code.  Unexecuted lines are marked `<samp><span class="samp">#####</span></samp>' or
+`<samp><span class="samp">====</span></samp>', depending on whether they are reachable by
 non-exceptional paths or only exceptional paths such as C++ exception
 handlers, respectively.
 
@@ -175,7 +175,7 @@ conventionally be rounded to 0% or 100% are instead printed as the
 nearest non-boundary value.
 
  <p>When using <samp><span class="command">gcov</span></samp>, you must first compile your program with two
-special GCC options: &lsquo;<samp><span class="samp">-fprofile-arcs -ftest-coverage</span></samp>&rsquo;. 
+special GCC options: `<samp><span class="samp">-fprofile-arcs -ftest-coverage</span></samp>'. 
 This tells the compiler to generate additional information needed by
 gcov (basically a flow graph of the program) and also includes
 additional code in the object files for generating the extra profiling

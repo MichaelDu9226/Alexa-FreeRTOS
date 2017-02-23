@@ -3,7 +3,7 @@
 <title>If - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Conditional-Syntax.html#Conditional-Syntax" title="Conditional Syntax">
 <link rel="prev" href="Ifdef.html#Ifdef" title="Ifdef">
@@ -56,7 +56,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Conditional-Syntax.html#Conditional-Syn
 
 <h4 class="subsection">4.2.2 If</h4>
 
-<p>The &lsquo;<samp><span class="samp">#if</span></samp>&rsquo; directive allows you to test the value of an arithmetic
+<p>The `<samp><span class="samp">#if</span></samp>' directive allows you to test the value of an arithmetic
 expression, rather than the mere existence of one macro.  Its syntax is
 
 <pre class="smallexample">     #if <var>expression</var>
@@ -83,7 +83,7 @@ short-circuiting rules of standard C.
 computation of the expression's value begins.
 
      <li>Uses of the <code>defined</code> operator, which lets you check whether macros
-are defined in the middle of an &lsquo;<samp><span class="samp">#if</span></samp>&rsquo;.
+are defined in the middle of an `<samp><span class="samp">#if</span></samp>'.
 
      <li>Identifiers that are not macros, which are all considered to be the
 number zero.  This allows you to write <code>#if&nbsp;MACRO<!-- /@w --></code> instead of
@@ -93,11 +93,11 @@ function call parentheses are also treated as zero.
 
      <p>In some contexts this shortcut is undesirable.  The <samp><span class="option">-Wundef</span></samp>
 option causes GCC to warn whenever it encounters an identifier which is
-not a macro in an &lsquo;<samp><span class="samp">#if</span></samp>&rsquo;. 
+not a macro in an `<samp><span class="samp">#if</span></samp>'. 
 </ul>
 
    <p>The preprocessor does not know anything about types in the language. 
-Therefore, <code>sizeof</code> operators are not recognized in &lsquo;<samp><span class="samp">#if</span></samp>&rsquo;, and
+Therefore, <code>sizeof</code> operators are not recognized in `<samp><span class="samp">#if</span></samp>', and
 neither are <code>enum</code> constants.  They will be taken as identifiers
 which are not macros, and replaced by zero.  In the case of
 <code>sizeof</code>, this is likely to cause the expression to be invalid.
@@ -107,7 +107,7 @@ out all calculations in the widest integer type known to the compiler;
 on most machines supported by GCC this is 64 bits.  This is not the same
 rule as the compiler uses to calculate the value of a constant
 expression, and may give different results in some cases.  If the value
-comes out to be nonzero, the &lsquo;<samp><span class="samp">#if</span></samp>&rsquo; succeeds and the <var>controlled
+comes out to be nonzero, the `<samp><span class="samp">#if</span></samp>' succeeds and the <var>controlled
 text</var> is included; otherwise it is skipped.
 
    </body></html>

@@ -3,7 +3,7 @@
 <title>Tree overview - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GENERIC.html#GENERIC" title="GENERIC">
 <link rel="prev" href="Deficiencies.html#Deficiencies" title="Deficiencies">
@@ -74,7 +74,7 @@ tree types are checked at run-time), and is therefore inappropriate in a
 release version, it is extremely helpful during the development process.
 
  <p>Many macros behave as predicates.  Many, although not all, of these
-predicates end in &lsquo;<samp><span class="samp">_P</span></samp>&rsquo;.  Do not rely on the result type of these
+predicates end in `<samp><span class="samp">_P</span></samp>'.  Do not rely on the result type of these
 macros being of any particular type.  You may, however, rely on the fact
 that the type can be compared to <code>0</code>, so that statements like
 <pre class="smallexample">     if (TEST_P (t) &amp;&amp; !TEST_P (y))
@@ -140,5 +140,5 @@ bug.
 <!--  -->
 <!-- Trees -->
 <!--  -->
- </body></html>
+</body></html>
 

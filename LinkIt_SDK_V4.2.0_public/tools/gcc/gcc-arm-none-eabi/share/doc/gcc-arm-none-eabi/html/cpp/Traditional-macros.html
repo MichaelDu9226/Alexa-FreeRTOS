@@ -3,7 +3,7 @@
 <title>Traditional macros - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Traditional-Mode.html#Traditional-Mode" title="Traditional Mode">
 <link rel="prev" href="Traditional-lexical-analysis.html#Traditional-lexical-analysis" title="Traditional lexical analysis">
@@ -76,8 +76,8 @@ implementation removes comments even before saving the macro
 replacement text, but it careful to do it in such a way that the
 observed effect is identical even in the function-like macro case.)
 
-   <p>The ISO stringification operator &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and token paste operator
-&lsquo;<samp><span class="samp">##</span></samp>&rsquo; have no special meaning.  As explained later, an effect
+   <p>The ISO stringification operator `<samp><span class="samp">#</span></samp>' and token paste operator
+`<samp><span class="samp">##</span></samp>' have no special meaning.  As explained later, an effect
 similar to these operators can be obtained in a different way.  Macro
 names that are embedded in quotes, either from the main file or after
 macro replacement, do not expand.
@@ -112,7 +112,7 @@ whitespace.  In particular
 
 <pre class="smallexample">     f( )
 </pre>
-   <p class="noindent">is treated as an invocation of the macro &lsquo;<samp><span class="samp">f</span></samp>&rsquo; with a single
+   <p class="noindent">is treated as an invocation of the macro `<samp><span class="samp">f</span></samp>' with a single
 argument consisting of a single space.  If you want to invoke a
 function-like macro that takes no arguments, you must not leave any
 whitespace between the parentheses.

@@ -3,7 +3,7 @@
 <title>Input Section Wildcards - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Input-Section.html#Input-Section" title="Input Section">
 <link rel="prev" href="Input-Section-Basics.html#Input-Section-Basics" title="Input Section Basics">
@@ -51,26 +51,26 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Input-Section.html#Input-Section">Input
 <p><a name="index-input-section-wildcards-407"></a><a name="index-wildcard-file-name-patterns-408"></a><a name="index-file-name-wildcard-patterns-409"></a><a name="index-section-name-wildcard-patterns-410"></a>In an input section description, either the file name or the section
 name or both may be wildcard patterns.
 
-   <p>The file name of &lsquo;<samp><span class="samp">*</span></samp>&rsquo; seen in many examples is a simple wildcard
+   <p>The file name of `<samp><span class="samp">*</span></samp>' seen in many examples is a simple wildcard
 pattern for the file name.
 
    <p>The wildcard patterns are like those used by the Unix shell.
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">*</span></samp>&rsquo;<dd>matches any number of characters
-<br><dt>&lsquo;<samp><span class="samp">?</span></samp>&rsquo;<dd>matches any single character
-<br><dt>&lsquo;<samp><span class="samp">[</span><var>chars</var><span class="samp">]</span></samp>&rsquo;<dd>matches a single instance of any of the <var>chars</var>; the &lsquo;<samp><span class="samp">-</span></samp>&rsquo;
+<dt>`<samp><span class="samp">*</span></samp>'<dd>matches any number of characters
+<br><dt>`<samp><span class="samp">?</span></samp>'<dd>matches any single character
+<br><dt>`<samp><span class="samp">[</span><var>chars</var><span class="samp">]</span></samp>'<dd>matches a single instance of any of the <var>chars</var>; the `<samp><span class="samp">-</span></samp>'
 character may be used to specify a range of characters, as in
-&lsquo;<samp><span class="samp">[a-z]</span></samp>&rsquo; to match any lower case letter
-<br><dt>&lsquo;<samp><span class="samp">\</span></samp>&rsquo;<dd>quotes the following character
+`<samp><span class="samp">[a-z]</span></samp>' to match any lower case letter
+<br><dt>`<samp><span class="samp">\</span></samp>'<dd>quotes the following character
 </dl>
 
    <p>When a file name is matched with a wildcard, the wildcard characters
-will not match a &lsquo;<samp><span class="samp">/</span></samp>&rsquo; character (used to separate directory names on
-Unix).  A pattern consisting of a single &lsquo;<samp><span class="samp">*</span></samp>&rsquo; character is an
+will not match a `<samp><span class="samp">/</span></samp>' character (used to separate directory names on
+Unix).  A pattern consisting of a single `<samp><span class="samp">*</span></samp>' character is an
 exception; it will always match any file name, whether it contains a
-&lsquo;<samp><span class="samp">/</span></samp>&rsquo; or not.  In a section name, the wildcard characters will match
-a &lsquo;<samp><span class="samp">/</span></samp>&rsquo; character.
+`<samp><span class="samp">/</span></samp>' or not.  In a section name, the wildcard characters will match
+a `<samp><span class="samp">/</span></samp>' character.
 
    <p>File name wildcard patterns only match files which are explicitly
 specified on the command line or in an <code>INPUT</code> command.  The linker
@@ -143,15 +143,15 @@ command line option will be ignored.
 section sorting option.
 
    <p>If you ever get confused about where input sections are going, use the
-&lsquo;<samp><span class="samp">-M</span></samp>&rsquo; linker option to generate a map file.  The map file shows
+`<samp><span class="samp">-M</span></samp>' linker option to generate a map file.  The map file shows
 precisely how input sections are mapped to output sections.
 
    <p>This example shows how wildcard patterns might be used to partition
-files.  This linker script directs the linker to place all &lsquo;<samp><span class="samp">.text</span></samp>&rsquo;
-sections in &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; and all &lsquo;<samp><span class="samp">.bss</span></samp>&rsquo; sections in &lsquo;<samp><span class="samp">.bss</span></samp>&rsquo;. 
-The linker will place the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; section from all files beginning
-with an upper case character in &lsquo;<samp><span class="samp">.DATA</span></samp>&rsquo;; for all other files, the
-linker will place the &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; section in &lsquo;<samp><span class="samp">.data</span></samp>&rsquo;.
+files.  This linker script directs the linker to place all `<samp><span class="samp">.text</span></samp>'
+sections in `<samp><span class="samp">.text</span></samp>' and all `<samp><span class="samp">.bss</span></samp>' sections in `<samp><span class="samp">.bss</span></samp>'. 
+The linker will place the `<samp><span class="samp">.data</span></samp>' section from all files beginning
+with an upper case character in `<samp><span class="samp">.DATA</span></samp>'; for all other files, the
+linker will place the `<samp><span class="samp">.data</span></samp>' section in `<samp><span class="samp">.data</span></samp>'.
 <pre class="smallexample">     SECTIONS {
        .text : { *(.text) }
        .DATA : { [A-Z]*(.data) }

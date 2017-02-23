@@ -3,7 +3,7 @@
 <title>Print Settings - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Data.html#Data" title="Data">
 <link rel="prev" href="Auto-Display.html#Auto-Display" title="Auto Display">
@@ -64,7 +64,7 @@ is <code>on</code>.  For example, this is what a stack frame display looks like 
           #0  set_quotes (lq=0x34c78 "&lt;&lt;", rq=0x34c88 "&gt;&gt;")
               at input.c:530
           530         if (lquote != def_lquote)
-</pre>
+     </pre>
      <br><dt><code>set print address off</code><dd>Do not print addresses when displaying their contents.  For example,
 this is the same stack frame displayed with <code>set print address off</code>:
 
@@ -72,8 +72,8 @@ this is the same stack frame displayed with <code>set print address off</code>:
           (gdb) f
           #0  set_quotes (lq="&lt;&lt;", rq="&gt;&gt;") at input.c:530
           530         if (lquote != def_lquote)
-</pre>
-     <p>You can use &lsquo;<samp><span class="samp">set print address off</span></samp>&rsquo; to eliminate all machine
+     </pre>
+     <p>You can use `<samp><span class="samp">set print address off</span></samp>' to eliminate all machine
 dependent displays from the <span class="sc">gdb</span> interface.  For example, with
 <code>print address off</code>, you should get the same text for backtraces on
 all machines&mdash;whether or not they involve pointer arguments.
@@ -85,7 +85,7 @@ all machines&mdash;whether or not they involve pointer arguments.
 closest earlier symbol plus an offset.  If that symbol does not uniquely
 identify the address (for example, it is a name whose scope is a single
 source file), you may need to clarify.  One way to do this is with
-<code>info line</code>, for example &lsquo;<samp><span class="samp">info line *0x4537</span></samp>&rsquo;.  Alternately,
+<code>info line</code>, for example `<samp><span class="samp">info line *0x4537</span></samp>'.  Alternately,
 you can set <span class="sc">gdb</span> to print the source file and line number when
 it prints a symbolic address:
 
@@ -118,9 +118,9 @@ symbolic address.
 </dl>
 
    <p><a name="index-wild-pointer_002c-interpreting-586"></a><a name="index-pointer_002c-finding-referent-587"></a>If you have a pointer and you are not sure where it points, try
-&lsquo;<samp><span class="samp">set print symbol-filename on</span></samp>&rsquo;.  Then you can determine the name
+`<samp><span class="samp">set print symbol-filename on</span></samp>'.  Then you can determine the name
 and source file location of the variable where it points, using
-&lsquo;<samp><span class="samp">p/a </span><var>pointer</var></samp>&rsquo;.  This interprets the address in symbolic form. 
+`<samp><span class="samp">p/a </span><var>pointer</var></samp>'.  This interprets the address in symbolic form. 
 For example, here <span class="sc">gdb</span> shows that a variable <code>ptt</code> points
 at another variable <code>t</code>, defined in <samp><span class="file">hi2.c</span></samp>:
 
@@ -129,13 +129,13 @@ at another variable <code>t</code>, defined in <samp><span class="file">hi2.c</s
      $4 = 0xe008 &lt;t in hi2.c&gt;
 </pre>
    <blockquote>
-<em>Warning:</em> For pointers that point to a local variable, &lsquo;<samp><span class="samp">p/a</span></samp>&rsquo;
+<em>Warning:</em> For pointers that point to a local variable, `<samp><span class="samp">p/a</span></samp>'
 does not show the symbol name and filename of the referent, even with
 the appropriate <code>set print</code> options turned on. 
 </blockquote>
 
-   <p>You can also enable &lsquo;<samp><span class="samp">/a</span></samp>&rsquo;-like formatting all the time using
-&lsquo;<samp><span class="samp">set print symbol on</span></samp>&rsquo;:
+   <p>You can also enable `<samp><span class="samp">/a</span></samp>'-like formatting all the time using
+`<samp><span class="samp">set print symbol on</span></samp>':
 
      <dl>
 <dt><code>set print symbol on</code><dd>Tell <span class="sc">gdb</span> to print the symbol corresponding to an address, if
@@ -193,13 +193,13 @@ only scalar arguments are shown:
 
           <pre class="smallexample">               #1  0x08048361 in call_me (i=3, s=..., ss=0xbf8d508c, u=..., e=green)
                  at frame-args.c:23
-</pre>
+          </pre>
           <br><dt><code>none</code><dd>None of the argument values are printed.  Instead, the value of each argument
 is replaced by <code>...</code>.  In this case, the example above now becomes:
 
           <pre class="smallexample">               #1  0x08048361 in call_me (i=..., s=..., ss=..., u=..., e=...)
                  at frame-args.c:23
-</pre>
+          </pre>
           </dl>
 
      <p>By default, only scalar arguments are printed.  This command can be used
@@ -215,7 +215,8 @@ thus speeding up the display of each Ada frame.
 
      <br><dt><code>show print frame-arguments</code><dd>Show how the value of arguments should be displayed when printing a frame.
 
-     <p><a name="set-print-entry_002dvalues"></a><br><dt><code>set print entry-values </code><var>value</var><dd><a name="index-set-print-entry_002dvalues-597"></a>Set printing of frame argument values at function entry.  In some cases
+     <p><a name="set-print-entry_002dvalues"></a>
+<br><dt><code>set print entry-values </code><var>value</var><dd><a name="index-set-print-entry_002dvalues-597"></a>Set printing of frame argument values at function entry.  In some cases
 <span class="sc">gdb</span> can determine the value of function argument which was passed by
 the function caller, even if the value was modified inside the called function
 and therefore is different.  With optimized code, the current value could be
@@ -227,7 +228,7 @@ this feature will behave in the <code>default</code> setting the same way as wit
 <code>no</code> setting.
 
      <p>This functionality is currently supported only by DWARF 2 debugging format and
-the compiler has to produce &lsquo;<samp><span class="samp">DW_TAG_GNU_call_site</span></samp>&rsquo; tags.  With
+the compiler has to produce `<samp><span class="samp">DW_TAG_GNU_call_site</span></samp>' tags.  With
 <span class="sc">gcc</span>, you need to specify <samp><span class="option">-O -g</span></samp> during compilation, to get
 this information.
 
@@ -241,7 +242,7 @@ point.
                #0  lost (val=&lt;optimized out&gt;)
                #0  born (val=10)
                #0  invalid (val=&lt;optimized out&gt;)
-</pre>
+          </pre>
           <br><dt><code>only</code><dd>Print only parameter values from function entry point.  The actual parameter
 values are never printed.
           <pre class="smallexample">               #0  equal (val@entry=5)
@@ -249,7 +250,7 @@ values are never printed.
                #0  lost (val@entry=5)
                #0  born (val@entry=&lt;optimized out&gt;)
                #0  invalid (val@entry=&lt;optimized out&gt;)
-</pre>
+          </pre>
           <br><dt><code>preferred</code><dd>Print only parameter values from function entry point.  If value from function
 entry point is not known while the actual value is known, print the actual
 value for such parameter.
@@ -258,7 +259,7 @@ value for such parameter.
                #0  lost (val@entry=5)
                #0  born (val=10)
                #0  invalid (val@entry=&lt;optimized out&gt;)
-</pre>
+          </pre>
           <br><dt><code>if-needed</code><dd>Print actual parameter values.  If actual parameter value is not known while
 value from function entry point is known, print the entry point value for such
 parameter.
@@ -267,7 +268,7 @@ parameter.
                #0  lost (val@entry=5)
                #0  born (val=10)
                #0  invalid (val=&lt;optimized out&gt;)
-</pre>
+          </pre>
           <br><dt><code>both</code><dd>Always print both the actual parameter value and its value from function entry
 point, even if values of one or both are not available due to compiler
 optimizations.
@@ -276,7 +277,7 @@ optimizations.
                #0  lost (val=&lt;optimized out&gt;, val@entry=5)
                #0  born (val=10, val@entry=&lt;optimized out&gt;)
                #0  invalid (val=&lt;optimized out&gt;, val@entry=&lt;optimized out&gt;)
-</pre>
+          </pre>
           <br><dt><code>compact</code><dd>Print the actual parameter value if it is known and also its value from
 function entry point if it is known.  If neither is known, print for the actual
 value <code>&lt;optimized out&gt;</code>.  If not in MI mode (see <a href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>) and if both
@@ -287,7 +288,7 @@ values are known and identical, print the shortened
                #0  lost (val@entry=5)
                #0  born (val=10)
                #0  invalid (val=&lt;optimized out&gt;)
-</pre>
+          </pre>
           <br><dt><code>default</code><dd>Always print the actual parameter value.  Print also its value from function
 entry point, but only if it is known.  If not in MI mode (see <a href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>) and
 if both values are known and identical, print the shortened
@@ -297,7 +298,7 @@ if both values are known and identical, print the shortened
                #0  lost (val=&lt;optimized out&gt;, val@entry=5)
                #0  born (val=10)
                #0  invalid (val=&lt;optimized out&gt;)
-</pre>
+          </pre>
           </dl>
 
      <p>For analysis messages on possible failures of frame argument values at function
@@ -336,12 +337,12 @@ per line, like this:
             },
             meat = 0x54 "Pork"
           }
-</pre>
+     </pre>
      <br><dt><code>set print pretty off</code><dd>Cause <span class="sc">gdb</span> to print structures in a compact format, like this:
 
      <pre class="smallexample">          $1 = {next = 0x0, flags = {sweet = 1, sour = 1}, \
           meat = 0x54 "Pork"}
-</pre>
+     </pre>
      <p class="noindent">This is the default format.
 
      <br><dt><code>show print pretty</code><dd>Show which format <span class="sc">gdb</span> is using to print structures.
@@ -383,15 +384,15 @@ structures and other unions.
           };
           
           struct thing foo = {Tree, {Acorn}};
-</pre>
-     <p class="noindent">with <code>set print union on</code> in effect &lsquo;<samp><span class="samp">p foo</span></samp>&rsquo; would print
+     </pre>
+     <p class="noindent">with <code>set print union on</code> in effect `<samp><span class="samp">p foo</span></samp>' would print
 
      <pre class="smallexample">          $1 = {it = Tree, form = {tree = Acorn, bug = Cocoon}}
-</pre>
+     </pre>
      <p class="noindent">and with <code>set print union off</code> in effect it would print
 
      <pre class="smallexample">          $1 = {it = Tree, form = {...}}
-</pre>
+     </pre>
      <p class="noindent"><code>set print union</code> affects programs written in C-like languages
 and in Pascal. 
 </dl>
@@ -462,7 +463,7 @@ virtual function table.  This is the default setting.
      <br><dt><code>show print pascal_static-members</code><dd>Show whether Pascal static members are printed or not.
 
      <!-- These don't work with HP ANSI C++ yet. -->
-     <br><dt><code>set print vtbl</code><dt><code>set print vtbl on</code><dd><a name="index-pretty-print-C_0040t_007b_002b_002b_007d-virtual-function-tables-614"></a><a name="index-virtual-functions-_0028C_0040t_007b_002b_002b_007d_0029-display-615"></a><a name="index-VTBL-display-616"></a>Pretty print C<tt>++</tt> virtual function tables.  The default is off. 
+<br><dt><code>set print vtbl</code><dt><code>set print vtbl on</code><dd><a name="index-pretty-print-C_0040t_007b_002b_002b_007d-virtual-function-tables-614"></a><a name="index-virtual-functions-_0028C_0040t_007b_002b_002b_007d_0029-display-615"></a><a name="index-VTBL-display-616"></a>Pretty print C<tt>++</tt> virtual function tables.  The default is off. 
 (The <code>vtbl</code> commands do not work on programs compiled with the HP
 ANSI C<tt>++</tt> compiler (<code>aCC</code>).)
 

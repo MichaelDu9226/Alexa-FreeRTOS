@@ -3,7 +3,7 @@
 <title>Interrupts - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Protocol.html#Remote-Protocol" title="Remote Protocol">
 <link rel="prev" href="Host-I_002fO-Packets.html#Host-I_002fO-Packets" title="Host I/O Packets">
@@ -49,9 +49,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Remote-Protocol.html#Remote-Protocol">R
 
 <p><a name="index-interrupts-_0028remote-protocol_0029-2786"></a>
 When a program on the remote target is running, <span class="sc">gdb</span> may
-attempt to interrupt it by sending a &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;, <code>BREAK</code> or
+attempt to interrupt it by sending a `<samp><span class="samp">Ctrl-C</span></samp>', <code>BREAK</code> or
 a <code>BREAK</code> followed by <code>g</code>,
-control of which is specified via <span class="sc">gdb</span>'s &lsquo;<samp><span class="samp">interrupt-sequence</span></samp>&rsquo;.
+control of which is specified via <span class="sc">gdb</span>'s `<samp><span class="samp">interrupt-sequence</span></samp>'.
 
    <p>The precise meaning of <code>BREAK</code> is defined by the transport
 mechanism and may, in fact, be undefined.  <span class="sc">gdb</span> does not
@@ -59,12 +59,12 @@ currently define a <code>BREAK</code> mechanism for any of the network
 interfaces except for TCP, in which case <span class="sc">gdb</span> sends the
 <code>telnet</code> BREAK sequence.
 
-   <p>&lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;, on the other hand, is defined and implemented for all
+   <p>`<samp><span class="samp">Ctrl-C</span></samp>', on the other hand, is defined and implemented for all
 transport mechanisms.  It is represented by sending the single byte
 <code>0x03</code> without any of the usual packet overhead described in
 the Overview section (see <a href="Overview.html#Overview">Overview</a>).  When a <code>0x03</code> byte is
 transmitted as part of a packet, it is considered to be packet data
-and does <em>not</em> represent an interrupt.  E.g., an &lsquo;<samp><span class="samp">X</span></samp>&rsquo; packet
+and does <em>not</em> represent an interrupt.  E.g., an `<samp><span class="samp">X</span></samp>' packet
 (see <a href="X-packet.html#X-packet">X packet</a>), used for binary downloads, may include an unescaped
 <code>0x03</code> as part of its packet.
 

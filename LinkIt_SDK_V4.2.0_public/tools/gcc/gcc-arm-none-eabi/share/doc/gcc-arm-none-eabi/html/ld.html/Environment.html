@@ -3,7 +3,7 @@
 <title>Environment - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invocation.html#Invocation" title="Invocation">
 <link rel="prev" href="Options.html#Options" title="Options">
@@ -52,7 +52,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Invocation.html#Invocation">Invocation<
 <code>LDEMULATION</code> and <code>COLLECT_NO_DEMANGLE</code>.
 
    <p><a name="index-GNUTARGET-333"></a><a name="index-default-input-format-334"></a><code>GNUTARGET</code> determines the input-file object format if you don't
-use &lsquo;<samp><span class="samp">-b</span></samp>&rsquo; (or its synonym &lsquo;<samp><span class="samp">--format</span></samp>&rsquo;).  Its value should be one
+use `<samp><span class="samp">-b</span></samp>' (or its synonym `<samp><span class="samp">--format</span></samp>').  Its value should be one
 of the BFD names for an input format (see <a href="BFD.html#BFD">BFD</a>).  If there is no
 <code>GNUTARGET</code> in the environment, <samp><span class="command">ld</span></samp> uses the natural format
 of the target. If <code>GNUTARGET</code> is set to <code>default</code> then BFD
@@ -64,10 +64,10 @@ BFD on each system places the conventional format for that system first
 in the search-list, so ambiguities are resolved in favor of convention.
 
    <p><a name="index-LDEMULATION-335"></a><a name="index-default-emulation-336"></a><a name="index-emulation_002c-default-337"></a><code>LDEMULATION</code> determines the default emulation if you don't use the
-&lsquo;<samp><span class="samp">-m</span></samp>&rsquo; option.  The emulation can affect various aspects of linker
+`<samp><span class="samp">-m</span></samp>' option.  The emulation can affect various aspects of linker
 behaviour, particularly the default linker script.  You can list the
-available emulations with the &lsquo;<samp><span class="samp">--verbose</span></samp>&rsquo; or &lsquo;<samp><span class="samp">-V</span></samp>&rsquo; options.  If
-the &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; option is not used, and the <code>LDEMULATION</code> environment
+available emulations with the `<samp><span class="samp">--verbose</span></samp>' or `<samp><span class="samp">-V</span></samp>' options.  If
+the `<samp><span class="samp">-m</span></samp>' option is not used, and the <code>LDEMULATION</code> environment
 variable is not defined, the default emulation depends upon how the
 linker was configured.
 
@@ -75,9 +75,9 @@ linker was configured.
 <code>COLLECT_NO_DEMANGLE</code> is set in the environment, then it will
 default to not demangling symbols.  This environment variable is used in
 a similar fashion by the <code>gcc</code> linker wrapper program.  The default
-may be overridden by the &lsquo;<samp><span class="samp">--demangle</span></samp>&rsquo; and &lsquo;<samp><span class="samp">--no-demangle</span></samp>&rsquo;
+may be overridden by the `<samp><span class="samp">--demangle</span></samp>' and `<samp><span class="samp">--no-demangle</span></samp>'
 options.
 
 <!-- man end -->
-   </body></html>
+</body></html>
 

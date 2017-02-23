@@ -3,7 +3,7 @@
 <title>Connecting - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Debugging.html#Remote-Debugging" title="Remote Debugging">
 <link rel="next" href="File-Transfer.html#File-Transfer" title="File Transfer">
@@ -62,9 +62,9 @@ Its arguments indicate which medium to use:
 to use a serial line connected to the device named <samp><span class="file">/dev/ttyb</span></samp>:
 
      <pre class="smallexample">          target remote /dev/ttyb
-</pre>
+     </pre>
      <p>If you're using a serial line, you may want to give <span class="sc">gdb</span> the
-&lsquo;<samp><span class="samp">--baud</span></samp>&rsquo;<!-- /@w --> option, or use the <code>set remotebaud</code> command
+`<samp><span class="samp">--baud</span></samp>'<!-- /@w --> option, or use the <code>set remotebaud</code> command
 (see <a href="Remote-Configuration.html#Remote-Configuration">set remotebaud</a>) before the
 <code>target</code> command.
 
@@ -79,21 +79,21 @@ target.
 <code>manyfarms</code>:
 
      <pre class="smallexample">          target remote manyfarms:2828
-</pre>
+     </pre>
      <p>If your remote target is actually running on the same machine as your
 debugger session (e.g. a simulator for your target running on the
 same host), you can omit the hostname.  For example, to connect to
 port 1234 on your local machine:
 
      <pre class="smallexample">          target remote :1234
-</pre>
+     </pre>
      <p class="noindent">Note that the colon is still required here.
 
      <br><dt><code>target remote udp:</code><var>host</var><code>:</code><var>port</var><dd><a name="index-g_t_0040acronym_007bUDP_007d-port_002c-_0040code_007btarget-remote_007d-1160"></a>Debug using <acronym>UDP</acronym> packets to <var>port</var> on <var>host</var>.  For example, to
 connect to <acronym>UDP</acronym> port 2828 on a terminal server named <code>manyfarms</code>:
 
      <pre class="smallexample">          target remote udp:manyfarms:2828
-</pre>
+     </pre>
      <p>When using a <acronym>UDP</acronym> connection for remote debugging, you should
 keep in mind that the `U' stands for &ldquo;Unreliable&rdquo;.  <acronym>UDP</acronym>
 can silently drop packets on busy or unreliable networks, which will
@@ -128,8 +128,8 @@ interrupt character once again, <span class="sc">gdb</span> displays this prompt
      Give up (and stop debugging it)?  (y or n)
 </pre>
    <p>If you type <kbd>y</kbd>, <span class="sc">gdb</span> abandons the remote debugging session. 
-(If you decide you want to try again later, you can use &lsquo;<samp><span class="samp">target
-remote</span></samp>&rsquo; again to connect once more.)  If you type <kbd>n</kbd>, <span class="sc">gdb</span>
+(If you decide you want to try again later, you can use `<samp><span class="samp">target
+remote</span></samp>' again to connect once more.)  If you type <kbd>n</kbd>, <span class="sc">gdb</span>
 goes back to waiting.
 
      

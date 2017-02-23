@@ -3,7 +3,7 @@
 <title>Statements - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Syntax.html#Syntax" title="Syntax">
 <link rel="prev" href="Symbol-Intro.html#Symbol-Intro" title="Symbol Intro">
@@ -50,7 +50,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Syntax.html#Syntax">Syntax</a>
 <h3 class="section">3.5 Statements</h3>
 
 <p><a name="index-statements_002c-structure-of-130"></a><a name="index-line-separator-character-131"></a><a name="index-statement-separator-character-132"></a>
-A <dfn>statement</dfn> ends at a newline character (&lsquo;<samp><span class="samp">\n</span></samp>&rsquo;) or a
+A <dfn>statement</dfn> ends at a newline character (`<samp><span class="samp">\n</span></samp>') or a
 <dfn>line separator character</dfn>.  The line separator character is target
 specific and described in the <em>Syntax</em> section of each
 target's documentation.  Not all targets support a line separator character. 
@@ -69,7 +69,7 @@ character of any input file should be a newline.
 A statement begins with zero or more labels, optionally followed by a
 key symbol which determines what kind of statement it is.  The key
 symbol determines the syntax of the rest of the statement.  If the
-symbol begins with a dot &lsquo;<samp><span class="samp">.</span></samp>&rsquo; then the statement is an assembler
+symbol begins with a dot `<samp><span class="samp">.</span></samp>' then the statement is an assembler
 directive: typically valid for any computer.  If the symbol begins with
 a letter the statement is an assembly language <dfn>instruction</dfn>: it
 assembles into a machine language instruction. 

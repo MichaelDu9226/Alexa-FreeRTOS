@@ -3,7 +3,7 @@
 <title>Z8000 Directives - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Z8000_002dDependent.html#Z8000_002dDependent" title="Z8000-Dependent">
 <link rel="prev" href="Z8000-Syntax.html#Z8000-Syntax" title="Z8000 Syntax">
@@ -51,7 +51,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Z8000_002dDependent.html#Z8000_002dDepe
 
 <p><a name="index-Z8000-directives-2094"></a><a name="index-directives_002c-Z8000-2095"></a>The Z8000 port of as includes additional assembler directives,
 for compatibility with other Z8000 assemblers.  These do not begin with
-&lsquo;<samp><span class="samp">.</span></samp>&rsquo; (unlike the ordinary as directives).
+`<samp><span class="samp">.</span></samp>' (unlike the ordinary as directives).
 
      
 <a name="index-segm-2096"></a>
@@ -71,11 +71,11 @@ for compatibility with other Z8000 assemblers.  These do not begin with
 
      <p><a name="index-sval-2105"></a><br><dt><code>sval</code><dd>Assemble a string.  <code>sval</code> expects one string literal, delimited by
 single quotes.  It assembles each byte of the string into consecutive
-addresses.  You can use the escape sequence &lsquo;<samp><span class="samp">%</span><var>xx</var></samp>&rsquo; (where
+addresses.  You can use the escape sequence `<samp><span class="samp">%</span><var>xx</var></samp>' (where
 <var>xx</var> represents a two-digit hexadecimal number) to represent the
 character whose <span class="sc">ascii</span> value is <var>xx</var>.  Use this feature to
 describe single quote and other characters that may not appear in string
-literals as themselves.  For example, the C statement &lsquo;<samp><span class="samp">char&nbsp;*a&nbsp;=&nbsp;"he&nbsp;said&nbsp;\"it's&nbsp;50%&nbsp;off\"";</span></samp>&rsquo;<!-- /@w --> is represented in Z8000 assembly language
+literals as themselves.  For example, the C statement `<samp><span class="samp">char&nbsp;*a&nbsp;=&nbsp;"he&nbsp;said&nbsp;\"it's&nbsp;50%&nbsp;off\"";</span></samp>'<!-- /@w --> is represented in Z8000 assembly language
 (shown with the assembler output in hex at the left) as
 
      <pre class="smallexample">          68652073    sval    'he said %22it%27s 50%25 off%22%00'
@@ -84,7 +84,7 @@ literals as themselves.  For example, the C statement &lsquo;<samp><span class="
           73203530
           25206F66
           662200
-</pre>
+     </pre>
      <p><a name="index-rsect-2106"></a><br><dt><code>rsect</code><dd>synonym for <code>.section</code>
 
      <p><a name="index-block-2107"></a><br><dt><code>block</code><dd>synonym for <code>.space</code>

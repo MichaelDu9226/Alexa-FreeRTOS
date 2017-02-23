@@ -3,7 +3,7 @@
 <title>Copy Assignment - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C_002b_002b-Misunderstandings.html#C_002b_002b-Misunderstandings" title="C++ Misunderstandings">
 <link rel="prev" href="Temporaries.html#Temporaries" title="Temporaries">
@@ -85,17 +85,17 @@ objects behave unspecified when being assigned.  For example:
        d1 = d2;
      }
 </pre>
- <p>The C++ standard specifies that &lsquo;<samp><span class="samp">Base::Base</span></samp>&rsquo; is only called once
+ <p>The C++ standard specifies that `<samp><span class="samp">Base::Base</span></samp>' is only called once
 when constructing or copy-constructing a Derived object.  It is
-unspecified whether &lsquo;<samp><span class="samp">Base::operator=</span></samp>&rsquo; is called more than once when
+unspecified whether `<samp><span class="samp">Base::operator=</span></samp>' is called more than once when
 the implicit copy-assignment for Derived objects is invoked (as it is
-inside &lsquo;<samp><span class="samp">func</span></samp>&rsquo; in the example).
+inside `<samp><span class="samp">func</span></samp>' in the example).
 
  <p>G++ implements the &ldquo;intuitive&rdquo; algorithm for copy-assignment: assign all
 direct bases, then assign all members.  In that algorithm, the virtual
 base subobject can be encountered more than once.  In the example, copying
-proceeds in the following order: &lsquo;<samp><span class="samp">val</span></samp>&rsquo;, &lsquo;<samp><span class="samp">name</span></samp>&rsquo; (via
-<code>strdup</code>), &lsquo;<samp><span class="samp">bval</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">name</span></samp>&rsquo; again.
+proceeds in the following order: `<samp><span class="samp">val</span></samp>', `<samp><span class="samp">name</span></samp>' (via
+<code>strdup</code>), `<samp><span class="samp">bval</span></samp>', and `<samp><span class="samp">name</span></samp>' again.
 
  <p>If application code relies on copy-assignment, a user-defined
 copy-assignment operator removes any uncertainties.  With such an

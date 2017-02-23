@@ -3,7 +3,7 @@
 <title>Bound member functions - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C_002b_002b-Extensions.html#C_002b_002b-Extensions" title="C++ Extensions">
 <link rel="prev" href="Template-Instantiation.html#Template-Instantiation" title="Template Instantiation">
@@ -57,7 +57,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="C_002b_002b-Extensions.html#C_002b_002b
 <p><a name="index-pmf-3546"></a><a name="index-pointer-to-member-function-3547"></a><a name="index-bound-pointer-to-member-function-3548"></a>
 In C++, pointer to member functions (PMFs) are implemented using a wide
 pointer of sorts to handle all the possible call mechanisms; the PMF
-needs to store information about how to adjust the &lsquo;<samp><span class="samp">this</span></samp>&rsquo; pointer,
+needs to store information about how to adjust the `<samp><span class="samp">this</span></samp>' pointer,
 and if the function pointed to is virtual, where to find the vtable, and
 where in the vtable to look for the member function.  If you are using
 PMFs in an inner loop, you should really reconsider that decision.  If
@@ -78,7 +78,7 @@ virtual function calls.
      
      fptr p = (fptr)(a.*fp);
 </pre>
- <p>For PMF constants (i.e. expressions of the form &lsquo;<samp><span class="samp">&amp;Klasse::Member</span></samp>&rsquo;),
+ <p>For PMF constants (i.e. expressions of the form `<samp><span class="samp">&amp;Klasse::Member</span></samp>'),
 no object is needed to obtain the address of the function.  They can be
 converted to function pointers directly:
 

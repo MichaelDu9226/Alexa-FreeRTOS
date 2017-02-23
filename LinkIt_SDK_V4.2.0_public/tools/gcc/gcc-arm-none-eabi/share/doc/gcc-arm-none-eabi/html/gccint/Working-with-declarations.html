@@ -3,7 +3,7 @@
 <title>Working with declarations - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Declarations.html#Declarations" title="Declarations">
 <link rel="next" href="Internal-structure.html#Internal-structure" title="Internal structure">
@@ -72,11 +72,11 @@ compiler.  For example, this predicate will hold of an implicitly
 declared member function, or of the <code>TYPE_DECL</code> implicitly
 generated for a class type.  Recall that in C++ code like:
      <pre class="smallexample">          struct S {};
-</pre>
+     </pre>
      <p class="noindent">is roughly equivalent to C code like:
      <pre class="smallexample">          struct S {};
           typedef struct S S;
-</pre>
+     </pre>
      <p>The implicitly generated <code>typedef</code> declaration is represented by a
 <code>TYPE_DECL</code> for which <code>DECL_ARTIFICIAL</code> holds.
 

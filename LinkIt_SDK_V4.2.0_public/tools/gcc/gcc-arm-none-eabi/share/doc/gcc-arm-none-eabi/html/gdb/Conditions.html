@@ -3,7 +3,7 @@
 <title>Conditions - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Breakpoints.html#Breakpoints" title="Breakpoints">
 <link rel="prev" href="Disabling.html#Disabling" title="Disabling">
@@ -61,7 +61,7 @@ and your program stops only if the condition is <em>true</em>.
 situation, you want to stop when the assertion is violated&mdash;that is,
 when the condition is false.  In C, if you want to test an assertion expressed
 by the condition <var>assert</var>, you should set the condition
-&lsquo;<samp><span class="samp">! </span><var>assert</var></samp>&rsquo; on the appropriate breakpoint.
+`<samp><span class="samp">! </span><var>assert</var></samp>' on the appropriate breakpoint.
 
    <p>Conditions are also accepted for watchpoints; you may not need them,
 since a watchpoint is inspecting the value of an expression anyhow&mdash;but
@@ -95,7 +95,7 @@ since it does not need to keep <span class="sc">gdb</span> informed about
 every breakpoint trigger, even those with false conditions.
 
    <p>Break conditions can be specified when a breakpoint is set, by using
-&lsquo;<samp><span class="samp">if</span></samp>&rsquo; in the arguments to the <code>break</code> command.  See <a href="Set-Breaks.html#Set-Breaks">Setting Breakpoints</a>.  They can also be changed at any time
+`<samp><span class="samp">if</span></samp>' in the arguments to the <code>break</code> command.  See <a href="Set-Breaks.html#Set-Breaks">Setting Breakpoints</a>.  They can also be changed at any time
 with the <code>condition</code> command.
 
    <p>You can also use the <code>if</code> keyword with the <code>watch</code> command. 
@@ -116,7 +116,7 @@ symbols not referenced in the context of the breakpoint, <span class="sc">gdb</s
 prints an error message:
 
      <pre class="smallexample">          No symbol "foo" in current context.
-</pre>
+     </pre>
      <p class="noindent"><span class="sc">gdb</span> does
 not actually evaluate <var>expression</var> at the time the <code>condition</code>
 command (or a command that sets a breakpoint with a condition, like
@@ -156,7 +156,7 @@ condition is not checked.  Once the ignore count reaches zero,
 <span class="sc">gdb</span> resumes checking the condition.
 
      <p>You could achieve the effect of the ignore count with a condition such
-as &lsquo;<samp><span class="samp">$foo--&nbsp;&lt;=&nbsp;0</span></samp>&rsquo;<!-- /@w --> using a debugger convenience variable that
+as `<samp><span class="samp">$foo--&nbsp;&lt;=&nbsp;0</span></samp>'<!-- /@w --> using a debugger convenience variable that
 is decremented each time.  See <a href="Convenience-Vars.html#Convenience-Vars">Convenience Variables</a>. 
 </dl>
 

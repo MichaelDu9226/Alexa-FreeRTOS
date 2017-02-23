@@ -3,7 +3,7 @@
 <title>File Commands - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Simple-Commands.html#Simple-Commands" title="Simple Commands">
 <link rel="prev" href="Entry-Point.html#Entry-Point" title="Entry Point">
@@ -64,22 +64,22 @@ in the link, as though they were named on the command line.
 
      <p>For example, if you always want to include <samp><span class="file">subr.o</span></samp> any time you do
 a link, but you can't be bothered to put it on every link command line,
-then you can put &lsquo;<samp><span class="samp">INPUT (subr.o)</span></samp>&rsquo; in your linker script.
+then you can put `<samp><span class="samp">INPUT (subr.o)</span></samp>' in your linker script.
 
      <p>In fact, if you like, you can list all of your input files in the linker
-script, and then invoke the linker with nothing but a &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; option.
+script, and then invoke the linker with nothing but a `<samp><span class="samp">-T</span></samp>' option.
 
      <p>In case a <dfn>sysroot prefix</dfn> is configured, and the filename starts
-with the &lsquo;<samp><span class="samp">/</span></samp>&rsquo; character, and the script being processed was
+with the `<samp><span class="samp">/</span></samp>' character, and the script being processed was
 located inside the <dfn>sysroot prefix</dfn>, the filename will be looked
 for in the <dfn>sysroot prefix</dfn>.  Otherwise, the linker will try to
 open the file in the current directory.  If it is not found, the
 linker will search through the archive library search path.  See the
-description of &lsquo;<samp><span class="samp">-L</span></samp>&rsquo; in <a href="Options.html#Options">Command Line Options</a>.
+description of `<samp><span class="samp">-L</span></samp>' in <a href="Options.html#Options">Command Line Options</a>.
 
-     <p>If you use &lsquo;<samp><span class="samp">INPUT (-l</span><var>file</var><span class="samp">)</span></samp>&rsquo;, <samp><span class="command">ld</span></samp> will transform the
+     <p>If you use `<samp><span class="samp">INPUT (-l</span><var>file</var><span class="samp">)</span></samp>', <samp><span class="command">ld</span></samp> will transform the
 name to <code>lib</code><var>file</var><code>.a</code>, as with the command line argument
-&lsquo;<samp><span class="samp">-l</span></samp>&rsquo;.
+`<samp><span class="samp">-l</span></samp>'.
 
      <p>When you use the <code>INPUT</code> command in an implicit linker script, the
 files will be included in the link at the point at which the linker
@@ -87,7 +87,7 @@ script file is included.  This can affect archive searching.
 
      <br><dt><code>GROUP(</code><var>file</var><code>, </code><var>file</var><code>, ...)</code><dt><code>GROUP(</code><var>file</var> <var>file</var><code> ...)</code><dd><a name="index-GROUP_0028_0040var_007bfiles_007d_0029-359"></a><a name="index-grouping-input-files-360"></a>The <code>GROUP</code> command is like <code>INPUT</code>, except that the named
 files should all be archives, and they are searched repeatedly until no
-new undefined references are created.  See the description of &lsquo;<samp><span class="samp">-(</span></samp>&rsquo;
+new undefined references are created.  See the description of `<samp><span class="samp">-(</span></samp>'
 in <a href="Options.html#Options">Command Line Options</a>.
 
      <br><dt><code>AS_NEEDED(</code><var>file</var><code>, </code><var>file</var><code>, ...)</code><dt><code>AS_NEEDED(</code><var>file</var> <var>file</var><code> ...)</code><dd><a name="index-AS_005fNEEDED_0028_0040var_007bfiles_007d_0029-361"></a>This construct can appear only inside of the <code>INPUT</code> or <code>GROUP</code>
@@ -101,7 +101,7 @@ setting afterwards.
 
      <br><dt><code>OUTPUT(</code><var>filename</var><code>)</code><dd><a name="index-OUTPUT_0028_0040var_007bfilename_007d_0029-362"></a><a name="index-output-file-name-in-linker-script-363"></a>The <code>OUTPUT</code> command names the output file.  Using
 <code>OUTPUT(</code><var>filename</var><code>)</code> in the linker script is exactly like using
-&lsquo;<samp><span class="samp">-o </span><var>filename</var></samp>&rsquo; on the command line (see <a href="Options.html#Options">Command Line Options</a>).  If both are used, the command line option takes
+`<samp><span class="samp">-o </span><var>filename</var></samp>' on the command line (see <a href="Options.html#Options">Command Line Options</a>).  If both are used, the command line option takes
 precedence.
 
      <p>You can use the <code>OUTPUT</code> command to define a default name for the
@@ -109,7 +109,7 @@ output file other than the usual default of <samp><span class="file">a.out</span
 
      <br><dt><code>SEARCH_DIR(</code><var>path</var><code>)</code><dd><a name="index-SEARCH_005fDIR_0028_0040var_007bpath_007d_0029-364"></a><a name="index-library-search-path-in-linker-script-365"></a><a name="index-archive-search-path-in-linker-script-366"></a><a name="index-search-path-in-linker-script-367"></a>The <code>SEARCH_DIR</code> command adds <var>path</var> to the list of paths where
 <samp><span class="command">ld</span></samp> looks for archive libraries.  Using
-<code>SEARCH_DIR(</code><var>path</var><code>)</code> is exactly like using &lsquo;<samp><span class="samp">-L </span><var>path</var></samp>&rsquo;
+<code>SEARCH_DIR(</code><var>path</var><code>)</code> is exactly like using `<samp><span class="samp">-L </span><var>path</var></samp>'
 on the command line (see <a href="Options.html#Options">Command Line Options</a>).  If both
 are used, then the linker will search both paths.  Paths specified using
 the command line option are searched first.

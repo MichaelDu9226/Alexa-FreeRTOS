@@ -3,7 +3,7 @@
 <title>TIC6X Syntax - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="TIC6X_002dDependent.html#TIC6X_002dDependent" title="TIC6X-Dependent">
 <link rel="prev" href="TIC6X-Options.html#TIC6X-Options" title="TIC6X Options">
@@ -49,20 +49,20 @@ Up:&nbsp;<a rel="up" accesskey="u" href="TIC6X_002dDependent.html#TIC6X_002dDepe
 
 <h4 class="subsection">9.41.2 TIC6X Syntax</h4>
 
-<p><a name="index-line-comment-character_002c-TIC6X-2005"></a><a name="index-TIC6X-line-comment-character-2006"></a>The presence of a &lsquo;<samp><span class="samp">;</span></samp>&rsquo; on a line indicates the start of a comment
-that extends to the end of the current line.  If a &lsquo;<samp><span class="samp">#</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">*</span></samp>&rsquo; appears as the first character of a line, the whole line is
-treated as a comment.  Note that if a line starts with a &lsquo;<samp><span class="samp">#</span></samp>&rsquo;
+<p><a name="index-line-comment-character_002c-TIC6X-2005"></a><a name="index-TIC6X-line-comment-character-2006"></a>The presence of a `<samp><span class="samp">;</span></samp>' on a line indicates the start of a comment
+that extends to the end of the current line.  If a `<samp><span class="samp">#</span></samp>' or
+`<samp><span class="samp">*</span></samp>' appears as the first character of a line, the whole line is
+treated as a comment.  Note that if a line starts with a `<samp><span class="samp">#</span></samp>'
 character then it can also be a logical line number directive
 (see <a href="Comments.html#Comments">Comments</a>) or a preprocessor control command
 (see <a href="Preprocessing.html#Preprocessing">Preprocessing</a>).
 
-   <p><a name="index-line-separator_002c-TIC6X-2007"></a><a name="index-statement-separator_002c-TIC6X-2008"></a><a name="index-TIC6X-line-separator-2009"></a>The &lsquo;<samp><span class="samp">@</span></samp>&rsquo; character can be used instead of a newline to separate
+   <p><a name="index-line-separator_002c-TIC6X-2007"></a><a name="index-statement-separator_002c-TIC6X-2008"></a><a name="index-TIC6X-line-separator-2009"></a>The `<samp><span class="samp">@</span></samp>' character can be used instead of a newline to separate
 statements.
 
    <p>Instruction, register and functional unit names are case-insensitive. 
 <samp><span class="command">as</span></samp> requires fully-specified functional unit names,
-such as &lsquo;<samp><span class="samp">.S1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.L1X</span></samp>&rsquo; or &lsquo;<samp><span class="samp">.D1T2</span></samp>&rsquo;, on all instructions
+such as `<samp><span class="samp">.S1</span></samp>', `<samp><span class="samp">.L1X</span></samp>' or `<samp><span class="samp">.D1T2</span></samp>', on all instructions
 using a functional unit.
 
    <p>For some instructions, there may be syntactic ambiguity between

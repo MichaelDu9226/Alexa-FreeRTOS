@@ -3,7 +3,7 @@
 <title>Auto-loading safe path - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Auto_002dloading.html#Auto_002dloading" title="Auto-loading">
 <link rel="prev" href="objfile_002dgdb_002egdb-file.html#objfile_002dgdb_002egdb-file" title="objfile-gdb.gdb file">
@@ -51,7 +51,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Auto_002dloading.html#Auto_002dloading"
 <p><a name="index-auto_002dloading-safe_002dpath-1603"></a>
 As the files of inferior can come from untrusted source (such as submitted by
 an application user) <span class="sc">gdb</span> does not always load any files automatically. 
-<span class="sc">gdb</span> provides the &lsquo;<samp><span class="samp">set auto-load safe-path</span></samp>&rsquo; setting to list
+<span class="sc">gdb</span> provides the `<samp><span class="samp">set auto-load safe-path</span></samp>' setting to list
 directories trusted for loading files not explicitly requested by user. 
 Each directory can also be a shell wildcard pattern.
 
@@ -75,22 +75,25 @@ invoke <span class="sc">gdb</span> like this:
    <p>The list of trusted directories is controlled by the following commands:
 
      <dl>
-<a name="set-auto_002dload-safe_002dpath"></a><a name="index-set-auto_002dload-safe_002dpath-1604"></a><dt><code>set auto-load safe-path </code><span class="roman">[</span><var>directories</var><span class="roman">]</span><dd>Set the list of directories (and their subdirectories) trusted for automatic
+<a name="set-auto_002dload-safe_002dpath"></a>
+<a name="index-set-auto_002dload-safe_002dpath-1604"></a><dt><code>set auto-load safe-path </code><span class="roman">[</span><var>directories</var><span class="roman">]</span><dd>Set the list of directories (and their subdirectories) trusted for automatic
 loading and execution of scripts.  You can also enter a specific trusted file. 
 Each directory can also be a shell wildcard pattern; wildcards do not match
 directory separator - see <code>FNM_PATHNAME</code> for system function <code>fnmatch</code>
 (see <a href="../libc/Wildcard-Matching.html#Wildcard-Matching">fnmatch</a>). 
-If you omit <var>directories</var>, &lsquo;<samp><span class="samp">auto-load safe-path</span></samp>&rsquo; will be reset to
+If you omit <var>directories</var>, `<samp><span class="samp">auto-load safe-path</span></samp>' will be reset to
 its default value as specified during <span class="sc">gdb</span> compilation.
 
-     <p>The list of directories uses path separator (&lsquo;<samp><span class="samp">:</span></samp>&rsquo; on GNU and Unix
-systems, &lsquo;<samp><span class="samp">;</span></samp>&rsquo; on MS-Windows and MS-DOS) to separate directories, similarly
+     <p>The list of directories uses path separator (`<samp><span class="samp">:</span></samp>' on GNU and Unix
+systems, `<samp><span class="samp">;</span></samp>' on MS-Windows and MS-DOS) to separate directories, similarly
 to the <samp><span class="env">PATH</span></samp> environment variable.
 
-     <p><a name="show-auto_002dload-safe_002dpath"></a><a name="index-show-auto_002dload-safe_002dpath-1605"></a><br><dt><code>show auto-load safe-path</code><dd>Show the list of directories trusted for automatic loading and execution of
+     <p><a name="show-auto_002dload-safe_002dpath"></a>
+<a name="index-show-auto_002dload-safe_002dpath-1605"></a><br><dt><code>show auto-load safe-path</code><dd>Show the list of directories trusted for automatic loading and execution of
 scripts.
 
-     <p><a name="add_002dauto_002dload_002dsafe_002dpath"></a><a name="index-add_002dauto_002dload_002dsafe_002dpath-1606"></a><br><dt><code>add-auto-load-safe-path</code><dd>Add an entry (or list of entries) the list of directories trusted for automatic
+     <p><a name="add_002dauto_002dload_002dsafe_002dpath"></a>
+<a name="index-add_002dauto_002dload_002dsafe_002dpath-1606"></a><br><dt><code>add-auto-load-safe-path</code><dd>Add an entry (or list of entries) the list of directories trusted for automatic
 loading and execution of scripts.  Multiple entries may be delimited by the
 host platform path separator in use. 
 </dl>
@@ -114,9 +117,9 @@ init file in the current directory
 example, you could use one of the following ways:
 
      <dl>
-<dt><samp><span class="file">~/.gdbinit</span></samp>: &lsquo;<samp><span class="samp">add-auto-load-safe-path ~/src/gdb</span></samp>&rsquo;<dd>Specify this trusted directory (or a file) as additional component of the list. 
+<dt><samp><span class="file">~/.gdbinit</span></samp>: `<samp><span class="samp">add-auto-load-safe-path ~/src/gdb</span></samp>'<dd>Specify this trusted directory (or a file) as additional component of the list. 
 You have to specify also any existing directories displayed by
-by &lsquo;<samp><span class="samp">show auto-load safe-path</span></samp>&rsquo; (such as &lsquo;<samp><span class="samp">/usr:/bin</span></samp>&rsquo; in this example).
+by `<samp><span class="samp">show auto-load safe-path</span></samp>' (such as `<samp><span class="samp">/usr:/bin</span></samp>' in this example).
 
      <br><dt><kbd>gdb -iex "set auto-load safe-path /usr:/bin:~/src/gdb" ...</kbd><dd>Specify this directory as in the previous case but just for a single
 <span class="sc">gdb</span> session.
@@ -136,7 +139,7 @@ also suppresses any such warning messages:
      <dl>
 <dt><kbd>gdb -iex "set auto-load no" ...</kbd><dd>You can use <span class="sc">gdb</span> command-line option for a single <span class="sc">gdb</span> session.
 
-     <br><dt><samp><span class="file">~/.gdbinit</span></samp>: &lsquo;<samp><span class="samp">set auto-load no</span></samp>&rsquo;<dd>Disable auto-loading globally for the user
+     <br><dt><samp><span class="file">~/.gdbinit</span></samp>: `<samp><span class="samp">set auto-load no</span></samp>'<dd>Disable auto-loading globally for the user
 (see <a href="Home-Directory-Init-File.html#Home-Directory-Init-File">Home Directory Init File</a>).  While it is improbable, you could also
 use system init file instead (see <a href="System_002dwide-configuration.html#System_002dwide-configuration">System-wide configuration</a>). 
 </dl>

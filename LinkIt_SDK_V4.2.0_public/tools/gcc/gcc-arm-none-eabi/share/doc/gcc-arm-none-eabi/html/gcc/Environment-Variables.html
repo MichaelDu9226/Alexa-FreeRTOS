@@ -3,7 +3,7 @@
 <title>Environment Variables - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="Code-Gen-Options.html#Code-Gen-Options" title="Code Gen Options">
@@ -81,7 +81,7 @@ localization information which allows GCC to work with different
 national conventions.  GCC inspects the locale categories
 <samp><span class="env">LC_CTYPE</span></samp> and <samp><span class="env">LC_MESSAGES</span></samp> if it has been configured to do
 so.  These locale categories can be set to any value supported by your
-installation.  A typical value is &lsquo;<samp><span class="samp">en_GB.UTF-8</span></samp>&rsquo; for English in the United
+installation.  A typical value is `<samp><span class="samp">en_GB.UTF-8</span></samp>' for English in the United
 Kingdom encoded in UTF-8.
 
      <p>The <samp><span class="env">LC_CTYPE</span></samp> environment variable specifies character
@@ -132,7 +132,7 @@ used for linking.
 
      <p>In addition, the prefix is used in an unusual way in finding the
 directories to search for header files.  For each of the standard
-directories whose name normally begins with &lsquo;<samp><span class="samp">/usr/local/lib/gcc</span></samp>&rsquo;
+directories whose name normally begins with `<samp><span class="samp">/usr/local/lib/gcc</span></samp>'
 (more precisely, with the value of <samp><span class="env">GCC_INCLUDE_DIR</span></samp>), GCC tries
 replacing that beginning with the specified prefix to produce an
 alternate directory name.  Thus, with <samp><span class="option">-Bfoo/</span></samp>, GCC searches
@@ -162,9 +162,9 @@ When the compiler is configured to allow multibyte characters,
 the following values for <samp><span class="env">LANG</span></samp> are recognized:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">C-JIS</span></samp>&rsquo;<dd>Recognize JIS characters. 
-<br><dt>&lsquo;<samp><span class="samp">C-SJIS</span></samp>&rsquo;<dd>Recognize SJIS characters. 
-<br><dt>&lsquo;<samp><span class="samp">C-EUCJP</span></samp>&rsquo;<dd>Recognize EUCJP characters. 
+<dt>`<samp><span class="samp">C-JIS</span></samp>'<dd>Recognize JIS characters. 
+<br><dt>`<samp><span class="samp">C-SJIS</span></samp>'<dd>Recognize SJIS characters. 
+<br><dt>`<samp><span class="samp">C-EUCJP</span></samp>'<dd>Recognize EUCJP characters. 
 </dl>
 
      <p>If <samp><span class="env">LANG</span></samp> is not defined, or if it has some other value, then the
@@ -183,7 +183,7 @@ preprocessor.
 <!--  -->
 <!-- If this file is included with the flag ``cppmanual'' set, it is -->
 <!-- formatted for inclusion in the CPP manual; otherwise the main GCC manual. -->
-     <dl>
+<dl>
 <dt><samp><span class="env">CPATH</span></samp><a name="index-CPATH-2407"></a><dt><samp><span class="env">C_INCLUDE_PATH</span></samp><a name="index-C_005fINCLUDE_005fPATH-2408"></a><dt><samp><span class="env">CPLUS_INCLUDE_PATH</span></samp><a name="index-CPLUS_005fINCLUDE_005fPATH-2409"></a><dt><samp><span class="env">OBJC_INCLUDE_PATH</span></samp><a name="index-OBJC_005fINCLUDE_005fPATH-2410"></a><dd><!-- Commented out until ObjC++ is part of GCC: -->
 <!-- @itemx OBJCPLUS_INCLUDE_PATH -->
 Each variable's value is a list of directories separated by a special
@@ -206,11 +206,11 @@ paths given with <samp><span class="option">-isystem</span></samp> options on th
 search its current working directory.  Empty elements can appear at the
 beginning or end of a path.  For instance, if the value of
 <samp><span class="env">CPATH</span></samp> is <code>:/special/include</code>, that has the same
-effect as &lsquo;<samp><span class="samp">-I.&nbsp;-I/special/include<!-- /@w --></span></samp>&rsquo;.
+effect as `<samp><span class="samp">-I.&nbsp;-I/special/include<!-- /@w --></span></samp>'.
 
      <!-- man end -->
-     <!-- man begin ENVIRONMENT -->
-     <br><dt><samp><span class="env">DEPENDENCIES_OUTPUT</span></samp><a name="index-DEPENDENCIES_005fOUTPUT-2411"></a><dd><a name="index-dependencies-for-make-as-output-2412"></a>If this variable is set, its value specifies how to output
+<!-- man begin ENVIRONMENT -->
+<br><dt><samp><span class="env">DEPENDENCIES_OUTPUT</span></samp><a name="index-DEPENDENCIES_005fOUTPUT-2411"></a><dd><a name="index-dependencies-for-make-as-output-2412"></a>If this variable is set, its value specifies how to output
 dependencies for Make based on the non-system header files processed
 by the compiler.  System header files are ignored in the dependency
 output.
@@ -218,7 +218,7 @@ output.
      <p>The value of <samp><span class="env">DEPENDENCIES_OUTPUT</span></samp> can be just a file name, in
 which case the Make rules are written to that file, guessing the target
 name from the source file name.  Or the value can have the form
-&lsquo;<samp><var>file</var> <var>target</var></samp>&rsquo;, in which case the rules are written to
+`<samp><var>file</var> <var>target</var></samp>', in which case the rules are written to
 file <var>file</var> using <var>target</var> as the target name.
 
      <p>In other words, this environment variable is equivalent to combining
@@ -234,5 +234,5 @@ See <a href="Preprocessor-Options.html#Preprocessor-Options">Preprocessor Option
 </dl>
 
 <!-- man end -->
- </body></html>
+</body></html>
 

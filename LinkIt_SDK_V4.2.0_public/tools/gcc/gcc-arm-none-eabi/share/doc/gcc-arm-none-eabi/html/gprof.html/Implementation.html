@@ -3,7 +3,7 @@
 <title>Implementation - GNU gprof</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU gprof">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Details.html#Details" title="Details">
 <link rel="next" href="File-Format.html#File-Format" title="File Format">
@@ -50,7 +50,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Details.html#Details">Details</a>
 so that when it is called, it will stash away some information about where
 it was called from.  From this, the profiler can figure out what function
 called it, and can count how many times it was called.  This change is made
-by the compiler when your program is compiled with the &lsquo;<samp><span class="samp">-pg</span></samp>&rsquo; option,
+by the compiler when your program is compiled with the `<samp><span class="samp">-pg</span></samp>' option,
 which causes every function to call <code>mcount</code>
 (or <code>_mcount</code>, or <code>__mcount</code>, depending on the OS and compiler)
 as one of its first operations.
@@ -78,8 +78,8 @@ of <code>mcount</code> is used for performance reasons.
 
    <p>Number-of-calls information for library routines is collected by using a
 special version of the C library.  The programs in it are the same as in
-the usual C library, but they were compiled with &lsquo;<samp><span class="samp">-pg</span></samp>&rsquo;.  If you
-link your program with &lsquo;<samp><span class="samp">gcc ... -pg</span></samp>&rsquo;, it automatically uses the
+the usual C library, but they were compiled with `<samp><span class="samp">-pg</span></samp>'.  If you
+link your program with `<samp><span class="samp">gcc ... -pg</span></samp>', it automatically uses the
 profiling version of the library.
 
    <p>Profiling also involves watching your program as it runs, and keeping a
@@ -121,13 +121,13 @@ On Linux systems, a special profiling startup file <code>gcrt0.o</code>,
 which invokes <code>monstartup</code> before <code>main</code>,
 is used instead of the default <code>crt0.o</code>. 
 Use of this special startup file is one of the effects
-of using &lsquo;<samp><span class="samp">gcc ... -pg</span></samp>&rsquo; to link. 
+of using `<samp><span class="samp">gcc ... -pg</span></samp>' to link. 
 On SPARC systems, no special startup files are used. 
 Rather, the <code>mcount</code> routine, when it is invoked for
 the first time (typically when <code>main</code> is called),
 calls <code>monstartup</code>.
 
-   <p>If the compiler's &lsquo;<samp><span class="samp">-a</span></samp>&rsquo; option was used, basic-block counting
+   <p>If the compiler's `<samp><span class="samp">-a</span></samp>' option was used, basic-block counting
 is also enabled.  Each object file is then compiled with a static array
 of counts, initially zero. 
 In the executable code, every time a new basic-block begins

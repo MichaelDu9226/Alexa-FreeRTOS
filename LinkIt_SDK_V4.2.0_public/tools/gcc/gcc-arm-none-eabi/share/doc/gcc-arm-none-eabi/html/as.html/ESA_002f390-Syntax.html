@@ -3,7 +3,7 @@
 <title>ESA/390 Syntax - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="ESA_002f390_002dDependent.html#ESA_002f390_002dDependent" title="ESA/390-Dependent">
 <link rel="prev" href="ESA_002f390-Options.html#ESA_002f390-Options" title="ESA/390 Options">
@@ -64,11 +64,11 @@ effect.
 simply for compatibility with how most assembly language programmers
 write code.
 
-   <p>&lsquo;<samp><span class="samp">#</span></samp>&rsquo; is the line comment character.
+   <p>`<samp><span class="samp">#</span></samp>' is the line comment character.
 
-   <p>&lsquo;<samp><span class="samp">;</span></samp>&rsquo; can be used instead of a newline to separate statements.
+   <p>`<samp><span class="samp">;</span></samp>' can be used instead of a newline to separate statements.
 
-   <p>Since &lsquo;<samp><span class="samp">$</span></samp>&rsquo; has no special meaning, you may use it in symbol names.
+   <p>Since `<samp><span class="samp">$</span></samp>' has no special meaning, you may use it in symbol names.
 
    <p>Registers can be given the symbolic names r0..r15, fp0, fp2, fp4, fp6. 
 By using thesse symbolic names, <code>as</code> can detect simple
@@ -76,9 +76,9 @@ syntax errors. The name rarg or r.arg is a synonym for r11, rtca or r.tca
 for r12, sp, r.sp, dsa r.dsa for r13, lr or r.lr for r14, rbase or r.base
 for r3 and rpgt or r.pgt for r4.
 
-   <p>&lsquo;<samp><span class="samp">*</span></samp>&rsquo; is the current location counter.  Unlike &lsquo;<samp><span class="samp">.</span></samp>&rsquo; it is always
+   <p>`<samp><span class="samp">*</span></samp>' is the current location counter.  Unlike `<samp><span class="samp">.</span></samp>' it is always
 relative to the last USING directive.  Note that this means that
-expressions cannot use multiplication, as any occurrence of &lsquo;<samp><span class="samp">*</span></samp>&rsquo;
+expressions cannot use multiplication, as any occurrence of `<samp><span class="samp">*</span></samp>'
 will be interpreted as a location counter.
 
    <p>All labels are relative to the last USING.  Thus, branches to a label

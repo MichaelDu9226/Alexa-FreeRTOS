@@ -3,7 +3,7 @@
 <title>XStormy16 Opcodes - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="XSTORMY16_002dDependent.html#XSTORMY16_002dDependent" title="XSTORMY16-Dependent">
 <link rel="prev" href="XStormy16-Directives.html#XStormy16-Directives" title="XStormy16 Directives">
@@ -56,7 +56,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="XSTORMY16_002dDependent.html#XSTORMY16_
 <dl><dt><code>@lo()</code><dd>Computes the lower 16 bits of the given expression and stores it into
 the immediate operand field of the given instruction.  For example:
 
-     <p>&lsquo;<samp><span class="samp">add r6, @lo(here - there)</span></samp>&rsquo;
+     <p>`<samp><span class="samp">add r6, @lo(here - there)</span></samp>'
 
      <p>computes the difference between the address of labels 'here' and
 'there', takes the lower 16 bits of this difference and adds it to
@@ -65,7 +65,7 @@ register 6.
      <p><a name="index-g_t_0040code_007b_0040_0040hi_007d-pseudo_002dop_002c-XStormy16-2271"></a><br><dt><code>@hi()</code><dd>Computes the higher 16 bits of the given expression and stores it into
 the immediate operand field of the given instruction.  For example:
 
-     <p>&lsquo;<samp><span class="samp">addc r7, @hi(here - there)</span></samp>&rsquo;
+     <p>`<samp><span class="samp">addc r7, @hi(here - there)</span></samp>'
 
      <p>computes the difference between the address of labels 'here' and
 'there', takes the upper 16 bits of this difference, shifts it down 16
@@ -79,5 +79,5 @@ register 7.
 <!-- This is part of the GAS manual. -->
 <!-- For copying conditions, see the file as.texinfo. -->
 <!-- man end -->
-   </body></html>
+</body></html>
 

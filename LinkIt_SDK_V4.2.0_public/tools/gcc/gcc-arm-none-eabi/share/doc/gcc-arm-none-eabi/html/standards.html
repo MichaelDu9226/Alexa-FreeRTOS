@@ -3,7 +3,7 @@
 <title>GNU Coding Standards</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Coding Standards">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="top" href="#Top">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
@@ -382,7 +382,7 @@ Microsoft Windows when speaking on your own, by all means do so, but
 not in GNU software.  Usually we write the name &ldquo;Windows&rdquo; in full,
 but when brevity is very important (as in file names and sometimes
 symbol names), we abbreviate it to &ldquo;w&rdquo;.  For instance, the files and
-functions in Emacs that deal with Windows start with &lsquo;<samp><span class="samp">w32</span></samp>&rsquo;.
+functions in Emacs that deal with Windows start with `<samp><span class="samp">w32</span></samp>'.
 
 <div class="node">
 <p><hr>
@@ -489,8 +489,8 @@ their behavior.
 modes for each of them.
 
    <p><a name="index-options-for-compatibility-19"></a>Standard C and <span class="sc">posix</span> prohibit many kinds of extensions.  Feel
-free to make the extensions anyway, and include a &lsquo;<samp><span class="samp">--ansi</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">--posix</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">--compatible</span></samp>&rsquo; option to turn them off. 
+free to make the extensions anyway, and include a `<samp><span class="samp">--ansi</span></samp>',
+`<samp><span class="samp">--posix</span></samp>', or `<samp><span class="samp">--compatible</span></samp>' option to turn them off. 
 However, if the extension has a significant chance of breaking any real
 programs or scripts, then it is not really upward compatible.  So you
 should try to redesign its interface to make it upward compatible.
@@ -732,16 +732,16 @@ make the GNU system better for users.
 prohibited.  How silly!  GCC implements many extensions, some of which
 were later adopted as part of the standard.  If you want these
 constructs to give an error message as &ldquo;required&rdquo; by the standard,
-you must specify &lsquo;<samp><span class="samp">--pedantic</span></samp>&rsquo;, which was implemented only so that
+you must specify `<samp><span class="samp">--pedantic</span></samp>', which was implemented only so that
 we can say &ldquo;GCC is a 100% implementation of the standard,&rdquo; not
 because there is any reason to actually use it.
 
-   <p>POSIX.2 specifies that &lsquo;<samp><span class="samp">df</span></samp>&rsquo; and &lsquo;<samp><span class="samp">du</span></samp>&rsquo; must output sizes by
+   <p>POSIX.2 specifies that `<samp><span class="samp">df</span></samp>' and `<samp><span class="samp">du</span></samp>' must output sizes by
 default in units of 512 bytes.  What users want is units of 1k, so
 that is what we do by default.  If you want the ridiculous behavior
 &ldquo;required&rdquo; by POSIX, you must set the environment variable
-&lsquo;<samp><span class="samp">POSIXLY_CORRECT</span></samp>&rsquo; (which was originally going to be named
-&lsquo;<samp><span class="samp">POSIX_ME_HARDER</span></samp>&rsquo;).
+`<samp><span class="samp">POSIXLY_CORRECT</span></samp>' (which was originally going to be named
+`<samp><span class="samp">POSIX_ME_HARDER</span></samp>').
 
    <p>GNU utilities also depart from the letter of the POSIX.2 specification
 when they support long-named command-line options, and intermixing
@@ -887,7 +887,7 @@ together, so that no reasonable program could use one without the
 other; then they can both go in the same file.
 
    <p>External symbols that are not documented entry points for the user
-should have names beginning with &lsquo;<samp><span class="samp">_</span></samp>&rsquo;.  The &lsquo;<samp><span class="samp">_</span></samp>&rsquo; should be
+should have names beginning with `<samp><span class="samp">_</span></samp>'.  The `<samp><span class="samp">_</span></samp>' should be
 followed by the chosen name prefix for the library, to prevent
 collisions with other libraries.  These can go in the same files with
 user entry points if you like.
@@ -1052,7 +1052,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Program-Behavior">Program Behavior</a>
 command-line options of a program.  The easiest way to do this is to use
 <code>getopt</code> to parse them.  Note that the GNU version of <code>getopt</code>
 will normally permit options anywhere among the arguments unless the
-special argument &lsquo;<samp><span class="samp">--</span></samp>&rsquo; is used.  This is not what <span class="sc">posix</span>
+special argument `<samp><span class="samp">--</span></samp>' is used.  This is not what <span class="sc">posix</span>
 specifies; it is a GNU extension.
 
    <p><a name="index-long_002dnamed-options-51"></a>Please define long-named options that are equivalent to the
@@ -1063,22 +1063,22 @@ friendly this way.  This is easy to do with the GNU function
    <p>One of the advantages of long-named options is that they can be
 consistent from program to program.  For example, users should be able
 to expect the &ldquo;verbose&rdquo; option of any GNU program which has one, to be
-spelled precisely &lsquo;<samp><span class="samp">--verbose</span></samp>&rsquo;.  To achieve this uniformity, look at
+spelled precisely `<samp><span class="samp">--verbose</span></samp>'.  To achieve this uniformity, look at
 the table of common long-option names when you choose the option names
 for your program (see <a href="#Option-Table">Option Table</a>).
 
    <p>It is usually a good idea for file names given as ordinary arguments to
 be input files only; any output files would be specified using options
-(preferably &lsquo;<samp><span class="samp">-o</span></samp>&rsquo; or &lsquo;<samp><span class="samp">--output</span></samp>&rsquo;).  Even if you allow an output
+(preferably `<samp><span class="samp">-o</span></samp>' or `<samp><span class="samp">--output</span></samp>').  Even if you allow an output
 file name as an ordinary argument for compatibility, try to provide an
 option as another way to specify it.  This will lead to more consistency
 among GNU utilities, and fewer idiosyncrasies for users to remember.
 
-   <p><a name="index-standard-command_002dline-options-52"></a><a name="index-options_002c-standard-command_002dline-53"></a><a name="index-CGI-programs_002c-standard-options-for-54"></a><a name="index-PATH_005fINFO_002c-specifying-standard-options-as-55"></a>All programs should support two standard options: &lsquo;<samp><span class="samp">--version</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">--help</span></samp>&rsquo;.  CGI programs should accept these as command-line
+   <p><a name="index-standard-command_002dline-options-52"></a><a name="index-options_002c-standard-command_002dline-53"></a><a name="index-CGI-programs_002c-standard-options-for-54"></a><a name="index-PATH_005fINFO_002c-specifying-standard-options-as-55"></a>All programs should support two standard options: `<samp><span class="samp">--version</span></samp>'
+and `<samp><span class="samp">--help</span></samp>'.  CGI programs should accept these as command-line
 options, and also if given as the <samp><span class="env">PATH_INFO</span></samp>; for instance,
 visiting <a href="http://example.org/p.cgi/--help">http://example.org/p.cgi/&ndash;help</a> in a browser should
-output the same information as invoking &lsquo;<samp><span class="samp">p.cgi --help</span></samp>&rsquo; from the
+output the same information as invoking `<samp><span class="samp">p.cgi --help</span></samp>' from the
 command line.
 
 <ul class="menu">
@@ -1169,7 +1169,7 @@ see <a href="maintain.html#Copyright-Notices">Copyright Notices</a>.)
 
    <p>Translations of the above lines must preserve the validity of the
 copyright notices (see <a href="#Internationalization">Internationalization</a>).  If the translation's
-character set supports it, the &lsquo;<samp><span class="samp">(C)</span></samp>&rsquo; should be replaced with the
+character set supports it, the `<samp><span class="samp">(C)</span></samp>' should be replaced with the
 copyright symbol, as follows:
 
    <p>&copy;
@@ -1180,12 +1180,12 @@ the English word &ldquo;Copyright&rdquo;; translations into other languages do n
 have legal significance.
 
    <p>Finally, here is the table of our suggested license abbreviations. 
-Any abbreviation can be followed by &lsquo;<samp><span class="samp">v</span><var>version</var><span class="samp">[+]</span></samp>&rsquo;, meaning
-that particular version, or later versions with the &lsquo;<samp><span class="samp">+</span></samp>&rsquo;, as shown
+Any abbreviation can be followed by `<samp><span class="samp">v</span><var>version</var><span class="samp">[+]</span></samp>', meaning
+that particular version, or later versions with the `<samp><span class="samp">+</span></samp>', as shown
 above.
 
    <p>In the case of exceptions for extra permissions with the GPL, we use
-&lsquo;<samp><span class="samp">/</span></samp>&rsquo; for a separator; the version number can follow the license
+`<samp><span class="samp">/</span></samp>' for a separator; the version number can follow the license
 abbreviation as usual, as in the examples below.
 
      <dl>
@@ -1245,7 +1245,7 @@ for how to invoke the program, on standard output, then exit
 successfully.  Other options and arguments should be ignored once this
 is seen, and the program should not perform its normal function.
 
-   <p><a name="index-address-for-bug-reports-60"></a><a name="index-bug-reports-61"></a>Near the end of the &lsquo;<samp><span class="samp">--help</span></samp>&rsquo; option's output, please place lines
+   <p><a name="index-address-for-bug-reports-60"></a><a name="index-bug-reports-61"></a>Near the end of the `<samp><span class="samp">--help</span></samp>' option's output, please place lines
 giving the email address for bug reports, the package's home page
 (normally &lt;<code>http://www.gnu.org/software/</code><var>pkg</var>&gt;, and the
 general page for help using GNU programs.  The format should be like this:
@@ -1279,750 +1279,750 @@ meanings, so we can update the table.
 <!-- When there is more than one short option for a long option name, put -->
 <!-- a semicolon between the lists of the programs that use them, not a -->
 <!-- period.   -friedman -->
-     <dl>
-<dt>&lsquo;<samp><span class="samp">after-date</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-N</span></samp>&rsquo; in <code>tar</code>.
+<dl>
+<dt>`<samp><span class="samp">after-date</span></samp>'<dd>`<samp><span class="samp">-N</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">all</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>du</code>, <code>ls</code>, <code>nm</code>, <code>stty</code>, <code>uname</code>,
+     <br><dt>`<samp><span class="samp">all</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>du</code>, <code>ls</code>, <code>nm</code>, <code>stty</code>, <code>uname</code>,
 and <code>unexpand</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">all-text</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">all-text</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">almost-all</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-A</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">almost-all</span></samp>'<dd>`<samp><span class="samp">-A</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">append</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>etags</code>, <code>tee</code>, <code>time</code>;
-&lsquo;<samp><span class="samp">-r</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">append</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>etags</code>, <code>tee</code>, <code>time</code>;
+`<samp><span class="samp">-r</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">archive</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>cp</code>.
+     <br><dt>`<samp><span class="samp">archive</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>cp</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">archive-name</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">archive-name</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">arglength</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">arglength</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ascii</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">ascii</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">assign</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-v</span></samp>&rsquo; in <code>gawk</code>.
+     <br><dt>`<samp><span class="samp">assign</span></samp>'<dd>`<samp><span class="samp">-v</span></samp>' in <code>gawk</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">assume-new</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-W</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">assume-new</span></samp>'<dd>`<samp><span class="samp">-W</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">assume-old</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">assume-old</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">auto-check</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>recode</code>.
+     <br><dt>`<samp><span class="samp">auto-check</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>recode</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">auto-pager</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">auto-pager</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">auto-reference</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-A</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">auto-reference</span></samp>'<dd>`<samp><span class="samp">-A</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">avoid-wraps</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">avoid-wraps</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">background</span></samp>&rsquo;<dd>For server programs, run in the background.
+     <br><dt>`<samp><span class="samp">background</span></samp>'<dd>For server programs, run in the background.
 
-     <br><dt>&lsquo;<samp><span class="samp">backward-search</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-B</span></samp>&rsquo; in <code>ctags</code>.
+     <br><dt>`<samp><span class="samp">backward-search</span></samp>'<dd>`<samp><span class="samp">-B</span></samp>' in <code>ctags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">basename</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">basename</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">batch</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">batch</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">baud</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">baud</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">before</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in <code>tac</code>.
+     <br><dt>`<samp><span class="samp">before</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in <code>tac</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">binary</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in <code>cpio</code> and <code>diff</code>.
+     <br><dt>`<samp><span class="samp">binary</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in <code>cpio</code> and <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">bits-per-code</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">bits-per-code</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">block-size</span></samp>&rsquo;<dd>Used in <code>cpio</code> and <code>tar</code>.
+     <br><dt>`<samp><span class="samp">block-size</span></samp>'<dd>Used in <code>cpio</code> and <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">blocks</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in <code>head</code> and <code>tail</code>.
+     <br><dt>`<samp><span class="samp">blocks</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in <code>head</code> and <code>tail</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">break-file</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">break-file</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">brief</span></samp>&rsquo;<dd>Used in various programs to make output shorter.
+     <br><dt>`<samp><span class="samp">brief</span></samp>'<dd>Used in various programs to make output shorter.
 
-     <br><dt>&lsquo;<samp><span class="samp">bytes</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; in <code>head</code>, <code>split</code>, and <code>tail</code>.
+     <br><dt>`<samp><span class="samp">bytes</span></samp>'<dd>`<samp><span class="samp">-c</span></samp>' in <code>head</code>, <code>split</code>, and <code>tail</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">c</span><tt>++</tt></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-C</span></samp>&rsquo; in <code>etags</code>.
+     <br><dt>`<samp><span class="samp">c</span><tt>++</tt></samp>'<dd>`<samp><span class="samp">-C</span></samp>' in <code>etags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">catenate</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-A</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">catenate</span></samp>'<dd>`<samp><span class="samp">-A</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">cd</span></samp>&rsquo;<dd>Used in various programs to specify the directory to use.
+     <br><dt>`<samp><span class="samp">cd</span></samp>'<dd>Used in various programs to specify the directory to use.
 
-     <br><dt>&lsquo;<samp><span class="samp">changes</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; in <code>chgrp</code> and <code>chown</code>.
+     <br><dt>`<samp><span class="samp">changes</span></samp>'<dd>`<samp><span class="samp">-c</span></samp>' in <code>chgrp</code> and <code>chown</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">classify</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-F</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">classify</span></samp>'<dd>`<samp><span class="samp">-F</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">colons</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; in <code>recode</code>.
+     <br><dt>`<samp><span class="samp">colons</span></samp>'<dd>`<samp><span class="samp">-c</span></samp>' in <code>recode</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">command</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; in <code>su</code>;
-&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; in GDB.
+     <br><dt>`<samp><span class="samp">command</span></samp>'<dd>`<samp><span class="samp">-c</span></samp>' in <code>su</code>;
+`<samp><span class="samp">-x</span></samp>' in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">compare</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">compare</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">compat</span></samp>&rsquo;<dd>Used in <code>gawk</code>.
+     <br><dt>`<samp><span class="samp">compat</span></samp>'<dd>Used in <code>gawk</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">compress</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-Z</span></samp>&rsquo; in <code>tar</code> and <code>shar</code>.
+     <br><dt>`<samp><span class="samp">compress</span></samp>'<dd>`<samp><span class="samp">-Z</span></samp>' in <code>tar</code> and <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">concatenate</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-A</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">concatenate</span></samp>'<dd>`<samp><span class="samp">-A</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">confirmation</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-w</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">confirmation</span></samp>'<dd>`<samp><span class="samp">-w</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">context</span></samp>&rsquo;<dd>Used in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">context</span></samp>'<dd>Used in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">copyleft</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-W copyleft</span></samp>&rsquo; in <code>gawk</code>.
+     <br><dt>`<samp><span class="samp">copyleft</span></samp>'<dd>`<samp><span class="samp">-W copyleft</span></samp>' in <code>gawk</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">copyright</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-C</span></samp>&rsquo; in <code>ptx</code>, <code>recode</code>, and <code>wdiff</code>;
-&lsquo;<samp><span class="samp">-W copyright</span></samp>&rsquo; in <code>gawk</code>.
+     <br><dt>`<samp><span class="samp">copyright</span></samp>'<dd>`<samp><span class="samp">-C</span></samp>' in <code>ptx</code>, <code>recode</code>, and <code>wdiff</code>;
+`<samp><span class="samp">-W copyright</span></samp>' in <code>gawk</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">core</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">core</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">count</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-q</span></samp>&rsquo; in <code>who</code>.
+     <br><dt>`<samp><span class="samp">count</span></samp>'<dd>`<samp><span class="samp">-q</span></samp>' in <code>who</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">count-links</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>du</code>.
+     <br><dt>`<samp><span class="samp">count-links</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>du</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">create</span></samp>&rsquo;<dd>Used in <code>tar</code> and <code>cpio</code>.
+     <br><dt>`<samp><span class="samp">create</span></samp>'<dd>Used in <code>tar</code> and <code>cpio</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">cut-mark</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">cut-mark</span></samp>'<dd>`<samp><span class="samp">-c</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">cxref</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; in <code>ctags</code>.
+     <br><dt>`<samp><span class="samp">cxref</span></samp>'<dd>`<samp><span class="samp">-x</span></samp>' in <code>ctags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">date</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>touch</code>.
+     <br><dt>`<samp><span class="samp">date</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>touch</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">debug</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>make</code> and <code>m4</code>;
-&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in Bison.
+     <br><dt>`<samp><span class="samp">debug</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>make</code> and <code>m4</code>;
+`<samp><span class="samp">-t</span></samp>' in Bison.
 
-     <br><dt>&lsquo;<samp><span class="samp">define</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-D</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">define</span></samp>'<dd>`<samp><span class="samp">-D</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">defines</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in Bison and <code>ctags</code>.
+     <br><dt>`<samp><span class="samp">defines</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in Bison and <code>ctags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">delete</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-D</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">delete</span></samp>'<dd>`<samp><span class="samp">-D</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">dereference</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-L</span></samp>&rsquo; in <code>chgrp</code>, <code>chown</code>, <code>cpio</code>, <code>du</code>,
+     <br><dt>`<samp><span class="samp">dereference</span></samp>'<dd>`<samp><span class="samp">-L</span></samp>' in <code>chgrp</code>, <code>chown</code>, <code>cpio</code>, <code>du</code>,
 <code>ls</code>, and <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">dereference-args</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-D</span></samp>&rsquo; in <code>du</code>.
+     <br><dt>`<samp><span class="samp">dereference-args</span></samp>'<dd>`<samp><span class="samp">-D</span></samp>' in <code>du</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">device</span></samp>&rsquo;<dd>Specify an I/O device (special file name).
+     <br><dt>`<samp><span class="samp">device</span></samp>'<dd>Specify an I/O device (special file name).
 
-     <br><dt>&lsquo;<samp><span class="samp">diacritics</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>recode</code>.
+     <br><dt>`<samp><span class="samp">diacritics</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>recode</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">dictionary-order</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>look</code>.
+     <br><dt>`<samp><span class="samp">dictionary-order</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>look</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">diff</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">diff</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">digits</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>csplit</code>.
+     <br><dt>`<samp><span class="samp">digits</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>csplit</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">directory</span></samp>&rsquo;<dd>Specify the directory to use, in various programs.  In <code>ls</code>, it
+     <br><dt>`<samp><span class="samp">directory</span></samp>'<dd>Specify the directory to use, in various programs.  In <code>ls</code>, it
 means to show directories themselves rather than their contents.  In
 <code>rm</code> and <code>ln</code>, it means to not treat links to directories
 specially.
 
-     <br><dt>&lsquo;<samp><span class="samp">discard-all</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; in <code>strip</code>.
+     <br><dt>`<samp><span class="samp">discard-all</span></samp>'<dd>`<samp><span class="samp">-x</span></samp>' in <code>strip</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">discard-locals</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-X</span></samp>&rsquo; in <code>strip</code>.
+     <br><dt>`<samp><span class="samp">discard-locals</span></samp>'<dd>`<samp><span class="samp">-X</span></samp>' in <code>strip</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">dry-run</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">dry-run</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ed</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-e</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">ed</span></samp>'<dd>`<samp><span class="samp">-e</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">elide-empty-files</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-z</span></samp>&rsquo; in <code>csplit</code>.
+     <br><dt>`<samp><span class="samp">elide-empty-files</span></samp>'<dd>`<samp><span class="samp">-z</span></samp>' in <code>csplit</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">end-delete</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">end-delete</span></samp>'<dd>`<samp><span class="samp">-x</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">end-insert</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-z</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">end-insert</span></samp>'<dd>`<samp><span class="samp">-z</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">entire-new-file</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-N</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">entire-new-file</span></samp>'<dd>`<samp><span class="samp">-N</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">environment-overrides</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-e</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">environment-overrides</span></samp>'<dd>`<samp><span class="samp">-e</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">eof</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-e</span></samp>&rsquo; in <code>xargs</code>.
+     <br><dt>`<samp><span class="samp">eof</span></samp>'<dd>`<samp><span class="samp">-e</span></samp>' in <code>xargs</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">epoch</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">epoch</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">error-limit</span></samp>&rsquo;<dd>Used in <code>makeinfo</code>.
+     <br><dt>`<samp><span class="samp">error-limit</span></samp>'<dd>Used in <code>makeinfo</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">error-output</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">error-output</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">escape</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">escape</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">exclude-from</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-X</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">exclude-from</span></samp>'<dd>`<samp><span class="samp">-X</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">exec</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">exec</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">exit</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; in <code>xargs</code>.
+     <br><dt>`<samp><span class="samp">exit</span></samp>'<dd>`<samp><span class="samp">-x</span></samp>' in <code>xargs</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">exit-0</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-e</span></samp>&rsquo; in <code>unshar</code>.
+     <br><dt>`<samp><span class="samp">exit-0</span></samp>'<dd>`<samp><span class="samp">-e</span></samp>' in <code>unshar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">expand-tabs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">expand-tabs</span></samp>'<dd>`<samp><span class="samp">-t</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">expression</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-e</span></samp>&rsquo; in <code>sed</code>.
+     <br><dt>`<samp><span class="samp">expression</span></samp>'<dd>`<samp><span class="samp">-e</span></samp>' in <code>sed</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">extern-only</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-g</span></samp>&rsquo; in <code>nm</code>.
+     <br><dt>`<samp><span class="samp">extern-only</span></samp>'<dd>`<samp><span class="samp">-g</span></samp>' in <code>nm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">extract</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>cpio</code>;
-&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">extract</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>cpio</code>;
+`<samp><span class="samp">-x</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">faces</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>finger</code>.
+     <br><dt>`<samp><span class="samp">faces</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>finger</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">fast</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>su</code>.
+     <br><dt>`<samp><span class="samp">fast</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>su</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">fatal-warnings</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-E</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">fatal-warnings</span></samp>'<dd>`<samp><span class="samp">-E</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">file</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>gawk</code>, <code>info</code>, <code>make</code>, <code>mt</code>,
+     <br><dt>`<samp><span class="samp">file</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>gawk</code>, <code>info</code>, <code>make</code>, <code>mt</code>,
 <code>sed</code>, and <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">field-separator</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-F</span></samp>&rsquo; in <code>gawk</code>.
+     <br><dt>`<samp><span class="samp">field-separator</span></samp>'<dd>`<samp><span class="samp">-F</span></samp>' in <code>gawk</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">file-prefix</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in Bison.
+     <br><dt>`<samp><span class="samp">file-prefix</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in Bison.
 
-     <br><dt>&lsquo;<samp><span class="samp">file-type</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-F</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">file-type</span></samp>'<dd>`<samp><span class="samp">-F</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">files-from</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">files-from</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">fill-column</span></samp>&rsquo;<dd>Used in <code>makeinfo</code>.
+     <br><dt>`<samp><span class="samp">fill-column</span></samp>'<dd>Used in <code>makeinfo</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">flag-truncation</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-F</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">flag-truncation</span></samp>'<dd>`<samp><span class="samp">-F</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">fixed-output-files</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-y</span></samp>&rsquo; in Bison.
+     <br><dt>`<samp><span class="samp">fixed-output-files</span></samp>'<dd>`<samp><span class="samp">-y</span></samp>' in Bison.
 
-     <br><dt>&lsquo;<samp><span class="samp">follow</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>tail</code>.
+     <br><dt>`<samp><span class="samp">follow</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>tail</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">footnote-style</span></samp>&rsquo;<dd>Used in <code>makeinfo</code>.
+     <br><dt>`<samp><span class="samp">footnote-style</span></samp>'<dd>Used in <code>makeinfo</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">force</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>cp</code>, <code>ln</code>, <code>mv</code>, and <code>rm</code>.
+     <br><dt>`<samp><span class="samp">force</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>cp</code>, <code>ln</code>, <code>mv</code>, and <code>rm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">force-prefix</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-F</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">force-prefix</span></samp>'<dd>`<samp><span class="samp">-F</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">foreground</span></samp>&rsquo;<dd>For server programs, run in the foreground;
+     <br><dt>`<samp><span class="samp">foreground</span></samp>'<dd>For server programs, run in the foreground;
 in other words, don't do anything special to run the server
 in the background.
 
-     <br><dt>&lsquo;<samp><span class="samp">format</span></samp>&rsquo;<dd>Used in <code>ls</code>, <code>time</code>, and <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">format</span></samp>'<dd>Used in <code>ls</code>, <code>time</code>, and <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">freeze-state</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-F</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">freeze-state</span></samp>'<dd>`<samp><span class="samp">-F</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">fullname</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">fullname</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">gap-size</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-g</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">gap-size</span></samp>'<dd>`<samp><span class="samp">-g</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">get</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">get</span></samp>'<dd>`<samp><span class="samp">-x</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">graphic</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>ul</code>.
+     <br><dt>`<samp><span class="samp">graphic</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>ul</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">graphics</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-g</span></samp>&rsquo; in <code>recode</code>.
+     <br><dt>`<samp><span class="samp">graphics</span></samp>'<dd>`<samp><span class="samp">-g</span></samp>' in <code>recode</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">group</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-g</span></samp>&rsquo; in <code>install</code>.
+     <br><dt>`<samp><span class="samp">group</span></samp>'<dd>`<samp><span class="samp">-g</span></samp>' in <code>install</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">gzip</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-z</span></samp>&rsquo; in <code>tar</code> and <code>shar</code>.
+     <br><dt>`<samp><span class="samp">gzip</span></samp>'<dd>`<samp><span class="samp">-z</span></samp>' in <code>tar</code> and <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">hashsize</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-H</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">hashsize</span></samp>'<dd>`<samp><span class="samp">-H</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">header</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-h</span></samp>&rsquo; in <code>objdump</code> and <code>recode</code>
+     <br><dt>`<samp><span class="samp">header</span></samp>'<dd>`<samp><span class="samp">-h</span></samp>' in <code>objdump</code> and <code>recode</code>
 
-     <br><dt>&lsquo;<samp><span class="samp">heading</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-H</span></samp>&rsquo; in <code>who</code>.
+     <br><dt>`<samp><span class="samp">heading</span></samp>'<dd>`<samp><span class="samp">-H</span></samp>' in <code>who</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">help</span></samp>&rsquo;<dd>Used to ask for brief usage information.
+     <br><dt>`<samp><span class="samp">help</span></samp>'<dd>Used to ask for brief usage information.
 
-     <br><dt>&lsquo;<samp><span class="samp">here-delimiter</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">here-delimiter</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">hide-control-chars</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-q</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">hide-control-chars</span></samp>'<dd>`<samp><span class="samp">-q</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">html</span></samp>&rsquo;<dd>In <code>makeinfo</code>, output HTML.
+     <br><dt>`<samp><span class="samp">html</span></samp>'<dd>In <code>makeinfo</code>, output HTML.
 
-     <br><dt>&lsquo;<samp><span class="samp">idle</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-u</span></samp>&rsquo; in <code>who</code>.
+     <br><dt>`<samp><span class="samp">idle</span></samp>'<dd>`<samp><span class="samp">-u</span></samp>' in <code>who</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ifdef</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-D</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">ifdef</span></samp>'<dd>`<samp><span class="samp">-D</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-I</span></samp>&rsquo; in <code>ls</code>;
-&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; in <code>recode</code>.
+     <br><dt>`<samp><span class="samp">ignore</span></samp>'<dd>`<samp><span class="samp">-I</span></samp>' in <code>ls</code>;
+`<samp><span class="samp">-x</span></samp>' in <code>recode</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-all-space</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-w</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">ignore-all-space</span></samp>'<dd>`<samp><span class="samp">-w</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-backups</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-B</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">ignore-backups</span></samp>'<dd>`<samp><span class="samp">-B</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-blank-lines</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-B</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">ignore-blank-lines</span></samp>'<dd>`<samp><span class="samp">-B</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-case</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>look</code> and <code>ptx</code>;
-&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>diff</code> and <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">ignore-case</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>look</code> and <code>ptx</code>;
+`<samp><span class="samp">-i</span></samp>' in <code>diff</code> and <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-errors</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">ignore-errors</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-file</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">ignore-file</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-indentation</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-I</span></samp>&rsquo; in <code>etags</code>.
+     <br><dt>`<samp><span class="samp">ignore-indentation</span></samp>'<dd>`<samp><span class="samp">-I</span></samp>' in <code>etags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-init-file</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in Oleo.
+     <br><dt>`<samp><span class="samp">ignore-init-file</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in Oleo.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-interrupts</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>tee</code>.
+     <br><dt>`<samp><span class="samp">ignore-interrupts</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>tee</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-matching-lines</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-I</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">ignore-matching-lines</span></samp>'<dd>`<samp><span class="samp">-I</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-space-change</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">ignore-space-change</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">ignore-zeros</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">ignore-zeros</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">include</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>etags</code>;
-&lsquo;<samp><span class="samp">-I</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">include</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>etags</code>;
+`<samp><span class="samp">-I</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">include-dir</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-I</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">include-dir</span></samp>'<dd>`<samp><span class="samp">-I</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">incremental</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-G</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">incremental</span></samp>'<dd>`<samp><span class="samp">-G</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">info</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-l</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; in Finger.
+     <br><dt>`<samp><span class="samp">info</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>', `<samp><span class="samp">-l</span></samp>', and `<samp><span class="samp">-m</span></samp>' in Finger.
 
-     <br><dt>&lsquo;<samp><span class="samp">init-file</span></samp>&rsquo;<dd>In some programs, specify the name of the file to read as the user's
+     <br><dt>`<samp><span class="samp">init-file</span></samp>'<dd>In some programs, specify the name of the file to read as the user's
 init file.
 
-     <br><dt>&lsquo;<samp><span class="samp">initial</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>expand</code>.
+     <br><dt>`<samp><span class="samp">initial</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>expand</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">initial-tab</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">initial-tab</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">inode</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">inode</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">interactive</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>cp</code>, <code>ln</code>, <code>mv</code>, <code>rm</code>;
-&lsquo;<samp><span class="samp">-e</span></samp>&rsquo; in <code>m4</code>;
-&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>xargs</code>;
-&lsquo;<samp><span class="samp">-w</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">interactive</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>cp</code>, <code>ln</code>, <code>mv</code>, <code>rm</code>;
+`<samp><span class="samp">-e</span></samp>' in <code>m4</code>;
+`<samp><span class="samp">-p</span></samp>' in <code>xargs</code>;
+`<samp><span class="samp">-w</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">intermix-type</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">intermix-type</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">iso-8601</span></samp>&rsquo;<dd>Used in <code>date</code>
+     <br><dt>`<samp><span class="samp">iso-8601</span></samp>'<dd>Used in <code>date</code>
 
-     <br><dt>&lsquo;<samp><span class="samp">jobs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-j</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">jobs</span></samp>'<dd>`<samp><span class="samp">-j</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">just-print</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">just-print</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">keep-going</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-k</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">keep-going</span></samp>'<dd>`<samp><span class="samp">-k</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">keep-files</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-k</span></samp>&rsquo; in <code>csplit</code>.
+     <br><dt>`<samp><span class="samp">keep-files</span></samp>'<dd>`<samp><span class="samp">-k</span></samp>' in <code>csplit</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">kilobytes</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-k</span></samp>&rsquo; in <code>du</code> and <code>ls</code>.
+     <br><dt>`<samp><span class="samp">kilobytes</span></samp>'<dd>`<samp><span class="samp">-k</span></samp>' in <code>du</code> and <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">language</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>etags</code>.
+     <br><dt>`<samp><span class="samp">language</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>etags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">less-mode</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">less-mode</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">level-for-gzip</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-g</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">level-for-gzip</span></samp>'<dd>`<samp><span class="samp">-g</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">line-bytes</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-C</span></samp>&rsquo; in <code>split</code>.
+     <br><dt>`<samp><span class="samp">line-bytes</span></samp>'<dd>`<samp><span class="samp">-C</span></samp>' in <code>split</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">lines</span></samp>&rsquo;<dd>Used in <code>split</code>, <code>head</code>, and <code>tail</code>.
+     <br><dt>`<samp><span class="samp">lines</span></samp>'<dd>Used in <code>split</code>, <code>head</code>, and <code>tail</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">link</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>cpio</code>.
+     <br><dt>`<samp><span class="samp">link</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>cpio</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">lint</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">lint-old</span></samp>&rsquo;<dd>Used in <code>gawk</code>.
+     <br><dt>`<samp><span class="samp">lint</span></samp>'<dt>`<samp><span class="samp">lint-old</span></samp>'<dd>Used in <code>gawk</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">list</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>cpio</code>;
-&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>recode</code>.
+     <br><dt>`<samp><span class="samp">list</span></samp>'<dd>`<samp><span class="samp">-t</span></samp>' in <code>cpio</code>;
+`<samp><span class="samp">-l</span></samp>' in <code>recode</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">list</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">list</span></samp>'<dd>`<samp><span class="samp">-t</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">literal</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-N</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">literal</span></samp>'<dd>`<samp><span class="samp">-N</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">load-average</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">load-average</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">login</span></samp>&rsquo;<dd>Used in <code>su</code>.
+     <br><dt>`<samp><span class="samp">login</span></samp>'<dd>Used in <code>su</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">machine</span></samp>&rsquo;<dd>Used in <code>uname</code>.
+     <br><dt>`<samp><span class="samp">machine</span></samp>'<dd>Used in <code>uname</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">macro-name</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-M</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">macro-name</span></samp>'<dd>`<samp><span class="samp">-M</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">mail</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-m</span></samp>&rsquo; in <code>hello</code> and <code>uname</code>.
+     <br><dt>`<samp><span class="samp">mail</span></samp>'<dd>`<samp><span class="samp">-m</span></samp>' in <code>hello</code> and <code>uname</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">make-directories</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>cpio</code>.
+     <br><dt>`<samp><span class="samp">make-directories</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>cpio</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">makefile</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">makefile</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">mapped</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">mapped</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">max-args</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>xargs</code>.
+     <br><dt>`<samp><span class="samp">max-args</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>xargs</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">max-chars</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>xargs</code>.
+     <br><dt>`<samp><span class="samp">max-chars</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>xargs</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">max-lines</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>xargs</code>.
+     <br><dt>`<samp><span class="samp">max-lines</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>xargs</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">max-load</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">max-load</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">max-procs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-P</span></samp>&rsquo; in <code>xargs</code>.
+     <br><dt>`<samp><span class="samp">max-procs</span></samp>'<dd>`<samp><span class="samp">-P</span></samp>' in <code>xargs</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">mesg</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>who</code>.
+     <br><dt>`<samp><span class="samp">mesg</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>who</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">message</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>who</code>.
+     <br><dt>`<samp><span class="samp">message</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>who</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">minimal</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">minimal</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">mixed-uuencode</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-M</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">mixed-uuencode</span></samp>'<dd>`<samp><span class="samp">-M</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">mode</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-m</span></samp>&rsquo; in <code>install</code>, <code>mkdir</code>, and <code>mkfifo</code>.
+     <br><dt>`<samp><span class="samp">mode</span></samp>'<dd>`<samp><span class="samp">-m</span></samp>' in <code>install</code>, <code>mkdir</code>, and <code>mkfifo</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">modification-time</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-m</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">modification-time</span></samp>'<dd>`<samp><span class="samp">-m</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">multi-volume</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-M</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">multi-volume</span></samp>'<dd>`<samp><span class="samp">-M</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">name-prefix</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in Bison.
+     <br><dt>`<samp><span class="samp">name-prefix</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in Bison.
 
-     <br><dt>&lsquo;<samp><span class="samp">nesting-limit</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-L</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">nesting-limit</span></samp>'<dd>`<samp><span class="samp">-L</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">net-headers</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">net-headers</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">new-file</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-W</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">new-file</span></samp>'<dd>`<samp><span class="samp">-W</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-builtin-rules</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-r</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">no-builtin-rules</span></samp>'<dd>`<samp><span class="samp">-r</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-character-count</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-w</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">no-character-count</span></samp>'<dd>`<samp><span class="samp">-w</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-check-existing</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-x</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">no-check-existing</span></samp>'<dd>`<samp><span class="samp">-x</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-common</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-3</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">no-common</span></samp>'<dd>`<samp><span class="samp">-3</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-create</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; in <code>touch</code>.
+     <br><dt>`<samp><span class="samp">no-create</span></samp>'<dd>`<samp><span class="samp">-c</span></samp>' in <code>touch</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-defines</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-D</span></samp>&rsquo; in <code>etags</code>.
+     <br><dt>`<samp><span class="samp">no-defines</span></samp>'<dd>`<samp><span class="samp">-D</span></samp>' in <code>etags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-deleted</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-1</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">no-deleted</span></samp>'<dd>`<samp><span class="samp">-1</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-dereference</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo; in <code>cp</code>.
+     <br><dt>`<samp><span class="samp">no-dereference</span></samp>'<dd>`<samp><span class="samp">-d</span></samp>' in <code>cp</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-inserted</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-2</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">no-inserted</span></samp>'<dd>`<samp><span class="samp">-2</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-keep-going</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-S</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">no-keep-going</span></samp>'<dd>`<samp><span class="samp">-S</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-lines</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in Bison.
+     <br><dt>`<samp><span class="samp">no-lines</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in Bison.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-piping</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-P</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">no-piping</span></samp>'<dd>`<samp><span class="samp">-P</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-prof</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-e</span></samp>&rsquo; in <code>gprof</code>.
+     <br><dt>`<samp><span class="samp">no-prof</span></samp>'<dd>`<samp><span class="samp">-e</span></samp>' in <code>gprof</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-regex</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-R</span></samp>&rsquo; in <code>etags</code>.
+     <br><dt>`<samp><span class="samp">no-regex</span></samp>'<dd>`<samp><span class="samp">-R</span></samp>' in <code>etags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-sort</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>nm</code>.
+     <br><dt>`<samp><span class="samp">no-sort</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>nm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-splash</span></samp>&rsquo;<dd>Don't print a startup splash screen.
+     <br><dt>`<samp><span class="samp">no-splash</span></samp>'<dd>Don't print a startup splash screen.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-split</span></samp>&rsquo;<dd>Used in <code>makeinfo</code>.
+     <br><dt>`<samp><span class="samp">no-split</span></samp>'<dd>Used in <code>makeinfo</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-static</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>gprof</code>.
+     <br><dt>`<samp><span class="samp">no-static</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>gprof</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-time</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-E</span></samp>&rsquo; in <code>gprof</code>.
+     <br><dt>`<samp><span class="samp">no-time</span></samp>'<dd>`<samp><span class="samp">-E</span></samp>' in <code>gprof</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-timestamp</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-m</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">no-timestamp</span></samp>'<dd>`<samp><span class="samp">-m</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-validate</span></samp>&rsquo;<dd>Used in <code>makeinfo</code>.
+     <br><dt>`<samp><span class="samp">no-validate</span></samp>'<dd>Used in <code>makeinfo</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-wait</span></samp>&rsquo;<dd>Used in <code>emacsclient</code>.
+     <br><dt>`<samp><span class="samp">no-wait</span></samp>'<dd>Used in <code>emacsclient</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">no-warn</span></samp>&rsquo;<dd>Used in various programs to inhibit warnings.
+     <br><dt>`<samp><span class="samp">no-warn</span></samp>'<dd>Used in various programs to inhibit warnings.
 
-     <br><dt>&lsquo;<samp><span class="samp">node</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>info</code>.
+     <br><dt>`<samp><span class="samp">node</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>info</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">nodename</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>uname</code>.
+     <br><dt>`<samp><span class="samp">nodename</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>uname</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">nonmatching</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>cpio</code>.
+     <br><dt>`<samp><span class="samp">nonmatching</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>cpio</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">nstuff</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>objdump</code>.
+     <br><dt>`<samp><span class="samp">nstuff</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>objdump</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">null</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-0</span></samp>&rsquo; in <code>xargs</code>.
+     <br><dt>`<samp><span class="samp">null</span></samp>'<dd>`<samp><span class="samp">-0</span></samp>' in <code>xargs</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">number</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>cat</code>.
+     <br><dt>`<samp><span class="samp">number</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>cat</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">number-nonblank</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in <code>cat</code>.
+     <br><dt>`<samp><span class="samp">number-nonblank</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in <code>cat</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">numeric-sort</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>nm</code>.
+     <br><dt>`<samp><span class="samp">numeric-sort</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>nm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">numeric-uid-gid</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>cpio</code> and <code>ls</code>.
+     <br><dt>`<samp><span class="samp">numeric-uid-gid</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>cpio</code> and <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">nx</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">nx</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">old-archive</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">old-archive</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">old-file</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">old-file</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">one-file-system</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>tar</code>, <code>cp</code>, and <code>du</code>.
+     <br><dt>`<samp><span class="samp">one-file-system</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>tar</code>, <code>cp</code>, and <code>du</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">only-file</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">only-file</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">only-prof</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>gprof</code>.
+     <br><dt>`<samp><span class="samp">only-prof</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>gprof</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">only-time</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-F</span></samp>&rsquo; in <code>gprof</code>.
+     <br><dt>`<samp><span class="samp">only-time</span></samp>'<dd>`<samp><span class="samp">-F</span></samp>' in <code>gprof</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">options</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>getopt</code>, <code>fdlist</code>, <code>fdmount</code>,
+     <br><dt>`<samp><span class="samp">options</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>getopt</code>, <code>fdlist</code>, <code>fdmount</code>,
 <code>fdmountd</code>, and <code>fdumount</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">output</span></samp>&rsquo;<dd>In various programs, specify the output file name.
+     <br><dt>`<samp><span class="samp">output</span></samp>'<dd>In various programs, specify the output file name.
 
-     <br><dt>&lsquo;<samp><span class="samp">output-prefix</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">output-prefix</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">override</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>rm</code>.
+     <br><dt>`<samp><span class="samp">override</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>rm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">overwrite</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; in <code>unshar</code>.
+     <br><dt>`<samp><span class="samp">overwrite</span></samp>'<dd>`<samp><span class="samp">-c</span></samp>' in <code>unshar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">owner</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>install</code>.
+     <br><dt>`<samp><span class="samp">owner</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>install</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">paginate</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">paginate</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">paragraph-indent</span></samp>&rsquo;<dd>Used in <code>makeinfo</code>.
+     <br><dt>`<samp><span class="samp">paragraph-indent</span></samp>'<dd>Used in <code>makeinfo</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">parents</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>mkdir</code> and <code>rmdir</code>.
+     <br><dt>`<samp><span class="samp">parents</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>mkdir</code> and <code>rmdir</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">pass-all</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>ul</code>.
+     <br><dt>`<samp><span class="samp">pass-all</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>ul</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">pass-through</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>cpio</code>.
+     <br><dt>`<samp><span class="samp">pass-through</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>cpio</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">port</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-P</span></samp>&rsquo; in <code>finger</code>.
+     <br><dt>`<samp><span class="samp">port</span></samp>'<dd>`<samp><span class="samp">-P</span></samp>' in <code>finger</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">portability</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; in <code>cpio</code> and <code>tar</code>.
+     <br><dt>`<samp><span class="samp">portability</span></samp>'<dd>`<samp><span class="samp">-c</span></samp>' in <code>cpio</code> and <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">posix</span></samp>&rsquo;<dd>Used in <code>gawk</code>.
+     <br><dt>`<samp><span class="samp">posix</span></samp>'<dd>Used in <code>gawk</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">prefix-builtins</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-P</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">prefix-builtins</span></samp>'<dd>`<samp><span class="samp">-P</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">prefix</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>csplit</code>.
+     <br><dt>`<samp><span class="samp">prefix</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>csplit</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">preserve</span></samp>&rsquo;<dd>Used in <code>tar</code> and <code>cp</code>.
+     <br><dt>`<samp><span class="samp">preserve</span></samp>'<dd>Used in <code>tar</code> and <code>cp</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">preserve-environment</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>su</code>.
+     <br><dt>`<samp><span class="samp">preserve-environment</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>su</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">preserve-modification-time</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-m</span></samp>&rsquo; in <code>cpio</code>.
+     <br><dt>`<samp><span class="samp">preserve-modification-time</span></samp>'<dd>`<samp><span class="samp">-m</span></samp>' in <code>cpio</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">preserve-order</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">preserve-order</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">preserve-permissions</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">preserve-permissions</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">print</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">print</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">print-chars</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-L</span></samp>&rsquo; in <code>cmp</code>.
+     <br><dt>`<samp><span class="samp">print-chars</span></samp>'<dd>`<samp><span class="samp">-L</span></samp>' in <code>cmp</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">print-data-base</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">print-data-base</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">print-directory</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-w</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">print-directory</span></samp>'<dd>`<samp><span class="samp">-w</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">print-file-name</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-o</span></samp>&rsquo; in <code>nm</code>.
+     <br><dt>`<samp><span class="samp">print-file-name</span></samp>'<dd>`<samp><span class="samp">-o</span></samp>' in <code>nm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">print-symdefs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>nm</code>.
+     <br><dt>`<samp><span class="samp">print-symdefs</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>nm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">printer</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">printer</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">prompt</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>ed</code>.
+     <br><dt>`<samp><span class="samp">prompt</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>ed</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">proxy</span></samp>&rsquo;<dd>Specify an HTTP proxy.
+     <br><dt>`<samp><span class="samp">proxy</span></samp>'<dd>Specify an HTTP proxy.
 
-     <br><dt>&lsquo;<samp><span class="samp">query-user</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-X</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">query-user</span></samp>'<dd>`<samp><span class="samp">-X</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">question</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-q</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">question</span></samp>'<dd>`<samp><span class="samp">-q</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">quiet</span></samp>&rsquo;<dd>Used in many programs to inhibit the usual output.  Every
-program accepting &lsquo;<samp><span class="samp">--quiet</span></samp>&rsquo; should accept &lsquo;<samp><span class="samp">--silent</span></samp>&rsquo; as a
+     <br><dt>`<samp><span class="samp">quiet</span></samp>'<dd>Used in many programs to inhibit the usual output.  Every
+program accepting `<samp><span class="samp">--quiet</span></samp>' should accept `<samp><span class="samp">--silent</span></samp>' as a
 synonym.
 
-     <br><dt>&lsquo;<samp><span class="samp">quiet-unshar</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-Q</span></samp>&rsquo; in <code>shar</code>
+     <br><dt>`<samp><span class="samp">quiet-unshar</span></samp>'<dd>`<samp><span class="samp">-Q</span></samp>' in <code>shar</code>
 
-     <br><dt>&lsquo;<samp><span class="samp">quote-name</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-Q</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">quote-name</span></samp>'<dd>`<samp><span class="samp">-Q</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">rcs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">rcs</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">re-interval</span></samp>&rsquo;<dd>Used in <code>gawk</code>.
+     <br><dt>`<samp><span class="samp">re-interval</span></samp>'<dd>Used in <code>gawk</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">read-full-blocks</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-B</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">read-full-blocks</span></samp>'<dd>`<samp><span class="samp">-B</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">readnow</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">readnow</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">recon</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-n</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">recon</span></samp>'<dd>`<samp><span class="samp">-n</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">record-number</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-R</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">record-number</span></samp>'<dd>`<samp><span class="samp">-R</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">recursive</span></samp>&rsquo;<dd>Used in <code>chgrp</code>, <code>chown</code>, <code>cp</code>, <code>ls</code>, <code>diff</code>,
+     <br><dt>`<samp><span class="samp">recursive</span></samp>'<dd>Used in <code>chgrp</code>, <code>chown</code>, <code>cp</code>, <code>ls</code>, <code>diff</code>,
 and <code>rm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">reference</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-r</span></samp>&rsquo; in <code>touch</code>.
+     <br><dt>`<samp><span class="samp">reference</span></samp>'<dd>`<samp><span class="samp">-r</span></samp>' in <code>touch</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">references</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-r</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">references</span></samp>'<dd>`<samp><span class="samp">-r</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">regex</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-r</span></samp>&rsquo; in <code>tac</code> and <code>etags</code>.
+     <br><dt>`<samp><span class="samp">regex</span></samp>'<dd>`<samp><span class="samp">-r</span></samp>' in <code>tac</code> and <code>etags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">release</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-r</span></samp>&rsquo; in <code>uname</code>.
+     <br><dt>`<samp><span class="samp">release</span></samp>'<dd>`<samp><span class="samp">-r</span></samp>' in <code>uname</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">reload-state</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-R</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">reload-state</span></samp>'<dd>`<samp><span class="samp">-R</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">relocation</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-r</span></samp>&rsquo; in <code>objdump</code>.
+     <br><dt>`<samp><span class="samp">relocation</span></samp>'<dd>`<samp><span class="samp">-r</span></samp>' in <code>objdump</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">rename</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-r</span></samp>&rsquo; in <code>cpio</code>.
+     <br><dt>`<samp><span class="samp">rename</span></samp>'<dd>`<samp><span class="samp">-r</span></samp>' in <code>cpio</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">replace</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-i</span></samp>&rsquo; in <code>xargs</code>.
+     <br><dt>`<samp><span class="samp">replace</span></samp>'<dd>`<samp><span class="samp">-i</span></samp>' in <code>xargs</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">report-identical-files</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">report-identical-files</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">reset-access-time</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>cpio</code>.
+     <br><dt>`<samp><span class="samp">reset-access-time</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>cpio</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">reverse</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-r</span></samp>&rsquo; in <code>ls</code> and <code>nm</code>.
+     <br><dt>`<samp><span class="samp">reverse</span></samp>'<dd>`<samp><span class="samp">-r</span></samp>' in <code>ls</code> and <code>nm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">reversed-ed</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-f</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">reversed-ed</span></samp>'<dd>`<samp><span class="samp">-f</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">right-side-defs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-R</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">right-side-defs</span></samp>'<dd>`<samp><span class="samp">-R</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">same-order</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">same-order</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">same-permissions</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">same-permissions</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">save</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-g</span></samp>&rsquo; in <code>stty</code>.
+     <br><dt>`<samp><span class="samp">save</span></samp>'<dd>`<samp><span class="samp">-g</span></samp>' in <code>stty</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">se</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">se</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">sentence-regexp</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-S</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">sentence-regexp</span></samp>'<dd>`<samp><span class="samp">-S</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">separate-dirs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-S</span></samp>&rsquo; in <code>du</code>.
+     <br><dt>`<samp><span class="samp">separate-dirs</span></samp>'<dd>`<samp><span class="samp">-S</span></samp>' in <code>du</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">separator</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>tac</code>.
+     <br><dt>`<samp><span class="samp">separator</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>tac</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">sequence</span></samp>&rsquo;<dd>Used by <code>recode</code> to chose files or pipes for sequencing passes.
+     <br><dt>`<samp><span class="samp">sequence</span></samp>'<dd>Used by <code>recode</code> to chose files or pipes for sequencing passes.
 
-     <br><dt>&lsquo;<samp><span class="samp">shell</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>su</code>.
+     <br><dt>`<samp><span class="samp">shell</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>su</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">show-all</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-A</span></samp>&rsquo; in <code>cat</code>.
+     <br><dt>`<samp><span class="samp">show-all</span></samp>'<dd>`<samp><span class="samp">-A</span></samp>' in <code>cat</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">show-c-function</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-p</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">show-c-function</span></samp>'<dd>`<samp><span class="samp">-p</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">show-ends</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-E</span></samp>&rsquo; in <code>cat</code>.
+     <br><dt>`<samp><span class="samp">show-ends</span></samp>'<dd>`<samp><span class="samp">-E</span></samp>' in <code>cat</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">show-function-line</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-F</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">show-function-line</span></samp>'<dd>`<samp><span class="samp">-F</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">show-tabs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>cat</code>.
+     <br><dt>`<samp><span class="samp">show-tabs</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>cat</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">silent</span></samp>&rsquo;<dd>Used in many programs to inhibit the usual output. 
+     <br><dt>`<samp><span class="samp">silent</span></samp>'<dd>Used in many programs to inhibit the usual output. 
 Every program accepting
-&lsquo;<samp><span class="samp">--silent</span></samp>&rsquo; should accept &lsquo;<samp><span class="samp">--quiet</span></samp>&rsquo; as a synonym.
+`<samp><span class="samp">--silent</span></samp>' should accept `<samp><span class="samp">--quiet</span></samp>' as a synonym.
 
-     <br><dt>&lsquo;<samp><span class="samp">size</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">size</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">socket</span></samp>&rsquo;<dd>Specify a file descriptor for a network server to use for its socket,
+     <br><dt>`<samp><span class="samp">socket</span></samp>'<dd>Specify a file descriptor for a network server to use for its socket,
 instead of opening and binding a new socket.  This provides a way to
 run, in a non-privileged process, a server that normally needs a
 reserved port number.
 
-     <br><dt>&lsquo;<samp><span class="samp">sort</span></samp>&rsquo;<dd>Used in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">sort</span></samp>'<dd>Used in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">source</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-W source</span></samp>&rsquo; in <code>gawk</code>.
+     <br><dt>`<samp><span class="samp">source</span></samp>'<dd>`<samp><span class="samp">-W source</span></samp>' in <code>gawk</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">sparse</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-S</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">sparse</span></samp>'<dd>`<samp><span class="samp">-S</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">speed-large-files</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-H</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">speed-large-files</span></samp>'<dd>`<samp><span class="samp">-H</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">split-at</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-E</span></samp>&rsquo; in <code>unshar</code>.
+     <br><dt>`<samp><span class="samp">split-at</span></samp>'<dd>`<samp><span class="samp">-E</span></samp>' in <code>unshar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">split-size-limit</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-L</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">split-size-limit</span></samp>'<dd>`<samp><span class="samp">-L</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">squeeze-blank</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>cat</code>.
+     <br><dt>`<samp><span class="samp">squeeze-blank</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>cat</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">start-delete</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-w</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">start-delete</span></samp>'<dd>`<samp><span class="samp">-w</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">start-insert</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-y</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">start-insert</span></samp>'<dd>`<samp><span class="samp">-y</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">starting-file</span></samp>&rsquo;<dd>Used in <code>tar</code> and <code>diff</code> to specify which file within
+     <br><dt>`<samp><span class="samp">starting-file</span></samp>'<dd>Used in <code>tar</code> and <code>diff</code> to specify which file within
 a directory to start processing with.
 
-     <br><dt>&lsquo;<samp><span class="samp">statistics</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">statistics</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">stdin-file-list</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-S</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">stdin-file-list</span></samp>'<dd>`<samp><span class="samp">-S</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">stop</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-S</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">stop</span></samp>'<dd>`<samp><span class="samp">-S</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">strict</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>recode</code>.
+     <br><dt>`<samp><span class="samp">strict</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>recode</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">strip</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>install</code>.
+     <br><dt>`<samp><span class="samp">strip</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>install</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">strip-all</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>strip</code>.
+     <br><dt>`<samp><span class="samp">strip-all</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>strip</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">strip-debug</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-S</span></samp>&rsquo; in <code>strip</code>.
+     <br><dt>`<samp><span class="samp">strip-debug</span></samp>'<dd>`<samp><span class="samp">-S</span></samp>' in <code>strip</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">submitter</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">submitter</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">suffix</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-S</span></samp>&rsquo; in <code>cp</code>, <code>ln</code>, <code>mv</code>.
+     <br><dt>`<samp><span class="samp">suffix</span></samp>'<dd>`<samp><span class="samp">-S</span></samp>' in <code>cp</code>, <code>ln</code>, <code>mv</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">suffix-format</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-b</span></samp>&rsquo; in <code>csplit</code>.
+     <br><dt>`<samp><span class="samp">suffix-format</span></samp>'<dd>`<samp><span class="samp">-b</span></samp>' in <code>csplit</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">sum</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>gprof</code>.
+     <br><dt>`<samp><span class="samp">sum</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>gprof</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">summarize</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>du</code>.
+     <br><dt>`<samp><span class="samp">summarize</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>du</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">symbolic</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>ln</code>.
+     <br><dt>`<samp><span class="samp">symbolic</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>ln</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">symbols</span></samp>&rsquo;<dd>Used in GDB and <code>objdump</code>.
+     <br><dt>`<samp><span class="samp">symbols</span></samp>'<dd>Used in GDB and <code>objdump</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">synclines</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">synclines</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">sysname</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-s</span></samp>&rsquo; in <code>uname</code>.
+     <br><dt>`<samp><span class="samp">sysname</span></samp>'<dd>`<samp><span class="samp">-s</span></samp>' in <code>uname</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">tabs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>expand</code> and <code>unexpand</code>.
+     <br><dt>`<samp><span class="samp">tabs</span></samp>'<dd>`<samp><span class="samp">-t</span></samp>' in <code>expand</code> and <code>unexpand</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">tabsize</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>ls</code>.
+     <br><dt>`<samp><span class="samp">tabsize</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>ls</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">terminal</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>tput</code> and <code>ul</code>. 
-&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>wdiff</code>.
+     <br><dt>`<samp><span class="samp">terminal</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>tput</code> and <code>ul</code>. 
+`<samp><span class="samp">-t</span></samp>' in <code>wdiff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">text</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-a</span></samp>&rsquo; in <code>diff</code>.
+     <br><dt>`<samp><span class="samp">text</span></samp>'<dd>`<samp><span class="samp">-a</span></samp>' in <code>diff</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">text-files</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">text-files</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">time</span></samp>&rsquo;<dd>Used in <code>ls</code> and <code>touch</code>.
+     <br><dt>`<samp><span class="samp">time</span></samp>'<dd>Used in <code>ls</code> and <code>touch</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">timeout</span></samp>&rsquo;<dd>Specify how long to wait before giving up on some operation.
+     <br><dt>`<samp><span class="samp">timeout</span></samp>'<dd>Specify how long to wait before giving up on some operation.
 
-     <br><dt>&lsquo;<samp><span class="samp">to-stdout</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-O</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">to-stdout</span></samp>'<dd>`<samp><span class="samp">-O</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">total</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-c</span></samp>&rsquo; in <code>du</code>.
+     <br><dt>`<samp><span class="samp">total</span></samp>'<dd>`<samp><span class="samp">-c</span></samp>' in <code>du</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">touch</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>make</code>, <code>ranlib</code>, and <code>recode</code>.
+     <br><dt>`<samp><span class="samp">touch</span></samp>'<dd>`<samp><span class="samp">-t</span></samp>' in <code>make</code>, <code>ranlib</code>, and <code>recode</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">trace</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">trace</span></samp>'<dd>`<samp><span class="samp">-t</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">traditional</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>hello</code>;
-&lsquo;<samp><span class="samp">-W traditional</span></samp>&rsquo; in <code>gawk</code>;
-&lsquo;<samp><span class="samp">-G</span></samp>&rsquo; in <code>ed</code>, <code>m4</code>, and <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">traditional</span></samp>'<dd>`<samp><span class="samp">-t</span></samp>' in <code>hello</code>;
+`<samp><span class="samp">-W traditional</span></samp>' in <code>gawk</code>;
+`<samp><span class="samp">-G</span></samp>' in <code>ed</code>, <code>m4</code>, and <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">tty</span></samp>&rsquo;<dd>Used in GDB.
+     <br><dt>`<samp><span class="samp">tty</span></samp>'<dd>Used in GDB.
 
-     <br><dt>&lsquo;<samp><span class="samp">typedefs</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>ctags</code>.
+     <br><dt>`<samp><span class="samp">typedefs</span></samp>'<dd>`<samp><span class="samp">-t</span></samp>' in <code>ctags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">typedefs-and-c++</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>ctags</code>.
+     <br><dt>`<samp><span class="samp">typedefs-and-c++</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>ctags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">typeset-mode</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">typeset-mode</span></samp>'<dd>`<samp><span class="samp">-t</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">uncompress</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-z</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">uncompress</span></samp>'<dd>`<samp><span class="samp">-z</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">unconditional</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-u</span></samp>&rsquo; in <code>cpio</code>.
+     <br><dt>`<samp><span class="samp">unconditional</span></samp>'<dd>`<samp><span class="samp">-u</span></samp>' in <code>cpio</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">undefine</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-U</span></samp>&rsquo; in <code>m4</code>.
+     <br><dt>`<samp><span class="samp">undefine</span></samp>'<dd>`<samp><span class="samp">-U</span></samp>' in <code>m4</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">undefined-only</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-u</span></samp>&rsquo; in <code>nm</code>.
+     <br><dt>`<samp><span class="samp">undefined-only</span></samp>'<dd>`<samp><span class="samp">-u</span></samp>' in <code>nm</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">update</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-u</span></samp>&rsquo; in <code>cp</code>, <code>ctags</code>, <code>mv</code>, <code>tar</code>.
+     <br><dt>`<samp><span class="samp">update</span></samp>'<dd>`<samp><span class="samp">-u</span></samp>' in <code>cp</code>, <code>ctags</code>, <code>mv</code>, <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">usage</span></samp>&rsquo;<dd>Used in <code>gawk</code>; same as &lsquo;<samp><span class="samp">--help</span></samp>&rsquo;.
+     <br><dt>`<samp><span class="samp">usage</span></samp>'<dd>Used in <code>gawk</code>; same as `<samp><span class="samp">--help</span></samp>'.
 
-     <br><dt>&lsquo;<samp><span class="samp">uuencode</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-B</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">uuencode</span></samp>'<dd>`<samp><span class="samp">-B</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">vanilla-operation</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-V</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">vanilla-operation</span></samp>'<dd>`<samp><span class="samp">-V</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">verbose</span></samp>&rsquo;<dd>Print more information about progress.  Many programs support this.
+     <br><dt>`<samp><span class="samp">verbose</span></samp>'<dd>Print more information about progress.  Many programs support this.
 
-     <br><dt>&lsquo;<samp><span class="samp">verify</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-W</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">verify</span></samp>'<dd>`<samp><span class="samp">-W</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">version</span></samp>&rsquo;<dd>Print the version number.
+     <br><dt>`<samp><span class="samp">version</span></samp>'<dd>Print the version number.
 
-     <br><dt>&lsquo;<samp><span class="samp">version-control</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-V</span></samp>&rsquo; in <code>cp</code>, <code>ln</code>, <code>mv</code>.
+     <br><dt>`<samp><span class="samp">version-control</span></samp>'<dd>`<samp><span class="samp">-V</span></samp>' in <code>cp</code>, <code>ln</code>, <code>mv</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">vgrind</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-v</span></samp>&rsquo; in <code>ctags</code>.
+     <br><dt>`<samp><span class="samp">vgrind</span></samp>'<dd>`<samp><span class="samp">-v</span></samp>' in <code>ctags</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">volume</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-V</span></samp>&rsquo; in <code>tar</code>.
+     <br><dt>`<samp><span class="samp">volume</span></samp>'<dd>`<samp><span class="samp">-V</span></samp>' in <code>tar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">what-if</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-W</span></samp>&rsquo; in <code>make</code>.
+     <br><dt>`<samp><span class="samp">what-if</span></samp>'<dd>`<samp><span class="samp">-W</span></samp>' in <code>make</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">whole-size-limit</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-l</span></samp>&rsquo; in <code>shar</code>.
+     <br><dt>`<samp><span class="samp">whole-size-limit</span></samp>'<dd>`<samp><span class="samp">-l</span></samp>' in <code>shar</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">width</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-w</span></samp>&rsquo; in <code>ls</code> and <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">width</span></samp>'<dd>`<samp><span class="samp">-w</span></samp>' in <code>ls</code> and <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">word-regexp</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-W</span></samp>&rsquo; in <code>ptx</code>.
+     <br><dt>`<samp><span class="samp">word-regexp</span></samp>'<dd>`<samp><span class="samp">-W</span></samp>' in <code>ptx</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">writable</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-T</span></samp>&rsquo; in <code>who</code>.
+     <br><dt>`<samp><span class="samp">writable</span></samp>'<dd>`<samp><span class="samp">-T</span></samp>' in <code>who</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">zeros</span></samp>&rsquo;<dd>&lsquo;<samp><span class="samp">-z</span></samp>&rsquo; in <code>gprof</code>. 
+     <br><dt>`<samp><span class="samp">zeros</span></samp>'<dd>`<samp><span class="samp">-z</span></samp>' in <code>gprof</code>. 
 </dl>
 
 <div class="node">
@@ -2318,8 +2318,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Writing-C">Writing C</a>
 
 <p><a name="index-commenting-77"></a>
 Every program should start with a comment saying briefly what it is for. 
-Example: &lsquo;<samp><span class="samp">fmt - filter for simple filling of text</span></samp>&rsquo;.  This comment
-should be at the top of the source file containing the &lsquo;<samp><span class="samp">main</span></samp>&rsquo;
+Example: `<samp><span class="samp">fmt - filter for simple filling of text</span></samp>'.  This comment
+should be at the top of the source file containing the `<samp><span class="samp">main</span></samp>'
 function of the program.
 
    <p>Also, please write a brief comment at the start of each source file,
@@ -2371,10 +2371,10 @@ itself would be off the bottom of the screen.
         zero means continue them.  */
      int truncate_lines;
 </pre>
-   <p><a name="index-conditionals_002c-comments-for-78"></a><a name="index-g_t_0040code_007b_0023endif_007d_002c-commenting-79"></a>Every &lsquo;<samp><span class="samp">#endif</span></samp>&rsquo; should have a comment, except in the case of short
+   <p><a name="index-conditionals_002c-comments-for-78"></a><a name="index-g_t_0040code_007b_0023endif_007d_002c-commenting-79"></a>Every `<samp><span class="samp">#endif</span></samp>' should have a comment, except in the case of short
 conditionals (just a few lines) that are not nested.  The comment should
 state the condition of the conditional that is ending, <em>including
-its sense</em>.  &lsquo;<samp><span class="samp">#else</span></samp>&rsquo; should have a comment describing the condition
+its sense</em>.  `<samp><span class="samp">#else</span></samp>' should have a comment describing the condition
 <em>and sense</em> of the code that follows.  For example:
 
 <pre class="example">     #ifdef foo
@@ -2386,7 +2386,7 @@ its sense</em>.  &lsquo;<samp><span class="samp">#else</span></samp>&rsquo; shou
        ...
      #endif /* foo */
 </pre>
-   <p class="noindent">but, by contrast, write the comments this way for a &lsquo;<samp><span class="samp">#ifndef</span></samp>&rsquo;:
+   <p class="noindent">but, by contrast, write the comments this way for a `<samp><span class="samp">#ifndef</span></samp>':
 
 <pre class="example">     #ifndef foo
        ...
@@ -2414,9 +2414,9 @@ should explicitly declare all arguments to functions, and you should
 declare functions to return <code>int</code> rather than omitting the
 <code>int</code>.
 
-   <p><a name="index-compiler-warnings-83"></a><a name="index-g_t_0040samp_007b_002dWall_007d-compiler-option-84"></a>Some programmers like to use the GCC &lsquo;<samp><span class="samp">-Wall</span></samp>&rsquo; option, and change the
+   <p><a name="index-compiler-warnings-83"></a><a name="index-g_t_0040samp_007b_002dWall_007d-compiler-option-84"></a>Some programmers like to use the GCC `<samp><span class="samp">-Wall</span></samp>' option, and change the
 code whenever it issues a warning.  If you want to do this, then do. 
-Other programmers prefer not to use &lsquo;<samp><span class="samp">-Wall</span></samp>&rsquo;, because it gives
+Other programmers prefer not to use `<samp><span class="samp">-Wall</span></samp>', because it gives
 warnings for valid and legitimate code which they do not want to change. 
 If you want to do this, then do.  The compiler should be your servant,
 not your master.
@@ -2558,7 +2558,7 @@ the option and its letter.  For example,
      int ignore_space_change_flag;
 </pre>
    <p>When you want to define names with constant integer values, use
-<code>enum</code> rather than &lsquo;<samp><span class="samp">#define</span></samp>&rsquo;.  GDB knows about enumeration
+<code>enum</code> rather than `<samp><span class="samp">#define</span></samp>'.  GDB knows about enumeration
 constants.
 
    <p><a name="index-file_002dname-limitations-89"></a><a name="index-doschk-90"></a>You might want to make sure that none of the file names would conflict
@@ -2621,7 +2621,7 @@ hacker terminology, calling something a &ldquo;win&rdquo; is a form of praise.
 You're free to praise Microsoft Windows on your own if you want, but
 please don't do this in GNU packages.  Instead of abbreviating
 &ldquo;Windows&rdquo; to &ldquo;win&rdquo;, you can write it in full or abbreviate it to
-&ldquo;woe&rdquo; or &ldquo;w&rdquo;.  In GNU Emacs, for instance, we use &lsquo;<samp><span class="samp">w32</span></samp>&rsquo; in
+&ldquo;woe&rdquo; or &ldquo;w&rdquo;.  In GNU Emacs, for instance, we use `<samp><span class="samp">w32</span></samp>' in
 file names of Windows-specific files, but the macro for Windows
 conditionals is called <code>WINDOWSNT</code>.
 
@@ -2701,7 +2701,7 @@ often better nowadays to use prototypes to define functions whose
 argument types are not trivial.
 
    <p>In particular, if functions accept varying argument counts or types
-they should be declared using prototypes containing &lsquo;<samp><span class="samp">...</span></samp>&rsquo; and
+they should be declared using prototypes containing `<samp><span class="samp">...</span></samp>' and
 defined using <samp><span class="file">stdarg.h</span></samp>.  For an example of this, please see the
 <a href="http://www.gnu.org/software/gnulib/">Gnulib</a> error module, which
 declares and defines the following function:
@@ -2820,7 +2820,7 @@ don't support them.  The string functions you can use are these:
      <pre class="example">          strcpy   strncpy   strcat   strncat
           strlen   strcmp    strncmp
           strchr   strrchr
-</pre>
+     </pre>
      <p>The copy and concatenate functions work fine without a declaration as
 long as you don't use their values.  Using their values without a
 declaration fails on systems where the width of a pointer differs from
@@ -2857,7 +2857,7 @@ beginning of your file (or in a header) if you want to use the names
           
           char *strchr ();
           char *strrchr ();
-</pre>
+     </pre>
      </ul>
 
    <p>Here we assume that <code>HAVE_STRCHR</code> and <code>HAVE_STRRCHR</code> are
@@ -2897,7 +2897,7 @@ around each string that might need translation&mdash;like this:
 name</dfn> for the package.  The text domain name is used to separate the
 translations for this package from the translations for other packages. 
 Normally, the text domain name should be the same as the name of the
-package&mdash;for example, &lsquo;<samp><span class="samp">coreutils</span></samp>&rsquo; for the GNU core utilities.
+package&mdash;for example, `<samp><span class="samp">coreutils</span></samp>' for the GNU core utilities.
 
    <p><a name="index-message-text_002c-and-internationalization-103"></a>To enable gettext to work well, avoid writing code that makes
 assumptions about the structure of words or sentences.  When you want
@@ -3005,8 +3005,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Writing-C">Writing C</a>
 
 <p><a name="index-quote-characters-108"></a><a name="index-locale_002dspecific-quote-characters-109"></a><a name="index-left-quote-110"></a><a name="index-grave-accent-111"></a>
 In the C locale, GNU programs should stick to plain ASCII for quotation
-characters in messages to users: preferably 0x60 (&lsquo;<samp><span class="samp">`</span></samp>&rsquo;) for left
-quotes and 0x27 (&lsquo;<samp><span class="samp">'</span></samp>&rsquo;) for right quotes.  It is ok, but not
+characters in messages to users: preferably 0x60 (`<samp><span class="samp">`</span></samp>') for left
+quotes and 0x27 (`<samp><span class="samp">'</span></samp>') for right quotes.  It is ok, but not
 required, to use locale-specific quotes in other locales.
 
    <p>The <a href="http://www.gnu.org/software/gnulib/">Gnulib</a> <code>quote</code> and
@@ -3016,13 +3016,13 @@ other issues, such as quoting a filename that itself contains a quote
 character.  See the Gnulib documentation for usage details.
 
    <p>In any case, the documentation for your program should clearly specify
-how it does quoting, if different than the preferred method of &lsquo;<samp><span class="samp">`</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">'</span></samp>&rsquo;.  This is especially important if the output of your
+how it does quoting, if different than the preferred method of `<samp><span class="samp">`</span></samp>'
+and `<samp><span class="samp">'</span></samp>'.  This is especially important if the output of your
 program is ever likely to be parsed by another program.
 
    <p>Quotation characters are a difficult area in the computing world at
 this time: there are no true left or right quote characters in Latin1;
-the &lsquo;<samp><span class="samp">`</span></samp>&rsquo; character we use was standardized there as a grave
+the `<samp><span class="samp">`</span></samp>' character we use was standardized there as a grave
 accent.  Moreover, Latin1 is still not universally usable.
 
    <p>Unicode contains the unambiguous quote characters required, and its
@@ -3198,7 +3198,7 @@ documentation; use &ldquo;file name&rdquo; (two words) instead.  We use the term
 a computer program.  Please use &ldquo;invalid&rdquo; for this, and reserve the
 term &ldquo;illegal&rdquo; for activities prohibited by law.
 
-   <p>Please do not write &lsquo;<samp><span class="samp">()</span></samp>&rsquo; after a function name just to indicate
+   <p>Please do not write `<samp><span class="samp">()</span></samp>' after a function name just to indicate
 it is a function.  <code>foo ()</code> is not a function, it is a function
 call with no arguments.
 
@@ -3256,10 +3256,10 @@ frequently than or independent of the program, also state a version
 number for the manual in both of these places.
 
    <p>Each program documented in the manual should have a node named
-&lsquo;<samp><var>program</var><span class="samp"> Invocation</span></samp>&rsquo; or &lsquo;<samp><span class="samp">Invoking </span><var>program</var></samp>&rsquo;.  This
+`<samp><var>program</var><span class="samp"> Invocation</span></samp>' or `<samp><span class="samp">Invoking </span><var>program</var></samp>'.  This
 node (together with its subnodes, if any) should describe the program's
 command line arguments and how to run it (the sort of information people
-would look for in a man page).  Start with an &lsquo;<samp><span class="samp">@example</span></samp>&rsquo;
+would look for in a man page).  Start with an `<samp><span class="samp">@example</span></samp>'
 containing a template for all the options and arguments that the program
 uses.
 
@@ -3267,7 +3267,7 @@ uses.
 the above patterns.  This identifies the node which that item points to
 as the node for this purpose, regardless of the node's actual name.
 
-   <p>The &lsquo;<samp><span class="samp">--usage</span></samp>&rsquo; feature of the Info reader looks for such a node
+   <p>The `<samp><span class="samp">--usage</span></samp>' feature of the Info reader looks for such a node
 or menu item in order to find the relevant text, so it is essential
 for every Texinfo file to have one.
 
@@ -3476,7 +3476,7 @@ the change log entries that pertain to it; if you abbreviate the name,
 they won't find it when they search.
 
    <p>For example, some people are tempted to abbreviate groups of function
-names by writing &lsquo;<samp><span class="samp">* register.el ({insert,jump-to}-register)</span></samp>&rsquo;;
+names by writing `<samp><span class="samp">* register.el ({insert,jump-to}-register)</span></samp>';
 this is not a good idea, since searching for <code>jump-to-register</code> or
 <code>insert-register</code> would not find that entry.
 
@@ -3486,8 +3486,8 @@ then don't put blank lines between them.  Then you can omit the file
 name and the asterisk when successive entries are in the same file.
 
    <p>Break long lists of function names by closing continued lines with
-&lsquo;<samp><span class="samp">)</span></samp>&rsquo;, rather than &lsquo;<samp><span class="samp">,</span></samp>&rsquo;, and opening the continuation with
-&lsquo;<samp><span class="samp">(</span></samp>&rsquo; as in this example:
+`<samp><span class="samp">)</span></samp>', rather than `<samp><span class="samp">,</span></samp>', and opening the continuation with
+`<samp><span class="samp">(</span></samp>' as in this example:
 
 <pre class="example">     * keyboard.c (menu_bar_items, tool_bar_items)
      (Fexecute_extended_command): Deal with `keymap' property.
@@ -3580,7 +3580,7 @@ used only when <code>HAVE_X_WINDOWS</code> is defined:
 </pre>
    <p>Here is an entry for a change within the function <code>init_display</code>,
 whose definition as a whole is unconditional, but the changes themselves
-are contained in a &lsquo;<samp><span class="samp">#ifdef HAVE_LIBNCURSES</span></samp>&rsquo; conditional:
+are contained in a `<samp><span class="samp">#ifdef HAVE_LIBNCURSES</span></samp>' conditional:
 
 <pre class="example">     * dispnew.c (init_display) [HAVE_LIBNCURSES]: If X, call tgetent.
 </pre>
@@ -3762,24 +3762,24 @@ program was last configured.  This file should be a shell script which,
 if run, will recreate the same configuration.
 
    <p>The <code>configure</code> script should accept an option of the form
-&lsquo;<samp><span class="samp">--srcdir=</span><var>dirname</var></samp>&rsquo; to specify the directory where sources are found
+`<samp><span class="samp">--srcdir=</span><var>dirname</var></samp>' to specify the directory where sources are found
 (if it is not the current directory).  This makes it possible to build
 the program in a separate directory, so that the actual source directory
 is not modified.
 
-   <p>If the user does not specify &lsquo;<samp><span class="samp">--srcdir</span></samp>&rsquo;, then <code>configure</code> should
+   <p>If the user does not specify `<samp><span class="samp">--srcdir</span></samp>', then <code>configure</code> should
 check both <samp><span class="file">.</span></samp> and <samp><span class="file">..</span></samp> to see if it can find the sources.  If
 it finds the sources in one of these places, it should use them from
 there.  Otherwise, it should report that it cannot find the sources, and
 should exit with nonzero status.
 
-   <p>Usually the easy way to support &lsquo;<samp><span class="samp">--srcdir</span></samp>&rsquo; is by editing a
+   <p>Usually the easy way to support `<samp><span class="samp">--srcdir</span></samp>' is by editing a
 definition of <code>VPATH</code> into the Makefile.  Some rules may need to
 refer explicitly to the specified source directory.  To make this
 possible, <code>configure</code> can add to the Makefile a variable named
 <code>srcdir</code> whose value is precisely the specified directory.
 
-   <p>In addition, the &lsquo;<samp><span class="samp">configure</span></samp>&rsquo; script should take options
+   <p>In addition, the `<samp><span class="samp">configure</span></samp>' script should take options
 corresponding to most of the standard directory variables
 (see <a href="#Directory-Variables">Directory Variables</a>).  Here is the list:
 
@@ -3795,20 +3795,20 @@ this:
 <pre class="example">     <var>cpu</var>-<var>company</var>-<var>system</var>
 </pre>
    <p>For example, an Athlon-based GNU/Linux system might be
-&lsquo;<samp><span class="samp">i686-pc-linux-gnu</span></samp>&rsquo;.
+`<samp><span class="samp">i686-pc-linux-gnu</span></samp>'.
 
    <p>The <code>configure</code> script needs to be able to decode all plausible
 alternatives for how to describe a machine.  Thus,
-&lsquo;<samp><span class="samp">athlon-pc-gnu/linux</span></samp>&rsquo; would be a valid alias.  There is a shell
+`<samp><span class="samp">athlon-pc-gnu/linux</span></samp>' would be a valid alias.  There is a shell
 script called
 <a href="http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=HEAD"><samp><span class="file">config.sub</span></samp></a> that you can use as a subroutine to validate system
 types and canonicalize aliases.
 
    <p>The <code>configure</code> script should also take the option
 <samp><span class="option">--build=</span><var>buildtype</var></samp>, which should be equivalent to a
-plain <var>buildtype</var> argument.  For example, &lsquo;<samp><span class="samp">configure
---build=i686-pc-linux-gnu</span></samp>&rsquo; is equivalent to &lsquo;<samp><span class="samp">configure
-i686-pc-linux-gnu</span></samp>&rsquo;.  When the build type is not specified by an option
+plain <var>buildtype</var> argument.  For example, `<samp><span class="samp">configure
+--build=i686-pc-linux-gnu</span></samp>' is equivalent to `<samp><span class="samp">configure
+i686-pc-linux-gnu</span></samp>'.  When the build type is not specified by an option
 or argument, the <code>configure</code> script should normally guess it using
 the shell script
 <a href="http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=HEAD"><samp><span class="file">config.guess</span></samp></a>.
@@ -3818,46 +3818,46 @@ or hardware present on the machine, to include or exclude optional parts
 of the package, or to adjust the name of some tools or arguments to them:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">--enable-</span><var>feature</var><span class="samp">[=</span><var>parameter</var><span class="samp">]</span></samp>&rsquo;<dd>Configure the package to build and install an optional user-level
+<dt>`<samp><span class="samp">--enable-</span><var>feature</var><span class="samp">[=</span><var>parameter</var><span class="samp">]</span></samp>'<dd>Configure the package to build and install an optional user-level
 facility called <var>feature</var>.  This allows users to choose which
 optional features to include.  Giving an optional <var>parameter</var> of
-&lsquo;<samp><span class="samp">no</span></samp>&rsquo; should omit <var>feature</var>, if it is built by default.
+`<samp><span class="samp">no</span></samp>' should omit <var>feature</var>, if it is built by default.
 
-     <p>No &lsquo;<samp><span class="samp">--enable</span></samp>&rsquo; option should <strong>ever</strong> cause one feature to
-replace another.  No &lsquo;<samp><span class="samp">--enable</span></samp>&rsquo; option should ever substitute one
+     <p>No `<samp><span class="samp">--enable</span></samp>' option should <strong>ever</strong> cause one feature to
+replace another.  No `<samp><span class="samp">--enable</span></samp>' option should ever substitute one
 useful behavior for another useful behavior.  The only proper use for
-&lsquo;<samp><span class="samp">--enable</span></samp>&rsquo; is for questions of whether to build part of the program
+`<samp><span class="samp">--enable</span></samp>' is for questions of whether to build part of the program
 or exclude it.
 
-     <br><dt>&lsquo;<samp><span class="samp">--with-</span><var>package</var></samp>&rsquo;<dd><!-- @r{[}=@var{parameter}@r{]} -->
+     <br><dt>`<samp><span class="samp">--with-</span><var>package</var></samp>'<dd><!-- @r{[}=@var{parameter}@r{]} -->
 The package <var>package</var> will be installed, so configure this package
 to work with <var>package</var>.
 
      <!-- Giving an optional @var{parameter} of -->
-     <!-- @samp{no} should omit @var{package}, if it is used by default. -->
-     <p>Possible values of <var>package</var> include
-&lsquo;<samp><span class="samp">gnu-as</span></samp>&rsquo; (or &lsquo;<samp><span class="samp">gas</span></samp>&rsquo;), &lsquo;<samp><span class="samp">gnu-ld</span></samp>&rsquo;, &lsquo;<samp><span class="samp">gnu-libc</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">gdb</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">x</span></samp>&rsquo;,
+<!-- @samp{no} should omit @var{package}, if it is used by default. -->
+<p>Possible values of <var>package</var> include
+`<samp><span class="samp">gnu-as</span></samp>' (or `<samp><span class="samp">gas</span></samp>'), `<samp><span class="samp">gnu-ld</span></samp>', `<samp><span class="samp">gnu-libc</span></samp>',
+`<samp><span class="samp">gdb</span></samp>',
+`<samp><span class="samp">x</span></samp>',
 and
-&lsquo;<samp><span class="samp">x-toolkit</span></samp>&rsquo;.
+`<samp><span class="samp">x-toolkit</span></samp>'.
 
-     <p>Do not use a &lsquo;<samp><span class="samp">--with</span></samp>&rsquo; option to specify the file name to use to
-find certain files.  That is outside the scope of what &lsquo;<samp><span class="samp">--with</span></samp>&rsquo;
+     <p>Do not use a `<samp><span class="samp">--with</span></samp>' option to specify the file name to use to
+find certain files.  That is outside the scope of what `<samp><span class="samp">--with</span></samp>'
 options are for.
 
-     <br><dt>&lsquo;<samp><var>variable</var><span class="samp">=</span><var>value</var></samp>&rsquo;<dd>Set the value of the variable <var>variable</var> to <var>value</var>.  This is
+     <br><dt>`<samp><var>variable</var><span class="samp">=</span><var>value</var></samp>'<dd>Set the value of the variable <var>variable</var> to <var>value</var>.  This is
 used to override the default values of commands or arguments in the
-build process.  For example, the user could issue &lsquo;<samp><span class="samp">configure
-CFLAGS=-g CXXFLAGS=-g</span></samp>&rsquo; to build with debugging information and without
+build process.  For example, the user could issue `<samp><span class="samp">configure
+CFLAGS=-g CXXFLAGS=-g</span></samp>' to build with debugging information and without
 the default optimization.
 
      <p>Specifying variables as arguments to <code>configure</code>, like this:
      <pre class="example">          ./configure CC=gcc
-</pre>
+     </pre>
      <p>is preferable to setting them in environment variables:
      <pre class="example">          CC=gcc ./configure
-</pre>
+     </pre>
      <p>as it helps to recreate the same configuration later with
 <samp><span class="file">config.status</span></samp>.  However, both methods should be supported. 
 </dl>
@@ -3865,11 +3865,11 @@ the default optimization.
    <p>All <code>configure</code> scripts should accept all of the &ldquo;detail&rdquo;
 options and the variable settings, whether or not they make any
 difference to the particular package at hand.  In particular, they
-should accept any option that starts with &lsquo;<samp><span class="samp">--with-</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">--enable-</span></samp>&rsquo;.  This is so users will be able to configure an
+should accept any option that starts with `<samp><span class="samp">--with-</span></samp>' or
+`<samp><span class="samp">--enable-</span></samp>'.  This is so users will be able to configure an
 entire GNU source tree at once with a single set of options.
 
-   <p>You will note that the categories &lsquo;<samp><span class="samp">--with-</span></samp>&rsquo; and &lsquo;<samp><span class="samp">--enable-</span></samp>&rsquo;
+   <p>You will note that the categories `<samp><span class="samp">--with-</span></samp>' and `<samp><span class="samp">--enable-</span></samp>'
 are narrow: they <strong>do not</strong> provide a place for any sort of option
 you might think of.  That is deliberate.  We want to limit the possible
 configuration options in GNU software.  We do not want GNU programs to
@@ -3890,7 +3890,7 @@ normally defaults to the build type.
 
    <p>To configure a cross-compiler, cross-assembler, or what have you, you
 should specify a target different from the host, using the configure
-option &lsquo;<samp><span class="samp">--target=</span><var>targettype</var></samp>&rsquo;.  The syntax for
+option `<samp><span class="samp">--target=</span><var>targettype</var></samp>'.  The syntax for
 <var>targettype</var> is the same as for the host type.  So the command would
 look like this:
 
@@ -3898,7 +3898,7 @@ look like this:
 </pre>
    <p>The target type normally defaults to the host type. 
 Programs for which cross-operation is not meaningful need not accept the
-&lsquo;<samp><span class="samp">--target</span></samp>&rsquo; option, because configuring an entire operating system for
+`<samp><span class="samp">--target</span></samp>' option, because configuring an entire operating system for
 cross-operation is not a meaningful operation.
 
    <p>Some programs have ways of configuring themselves automatically.  If
@@ -3933,7 +3933,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Managing-Releases">Managing Releases</
 <!-- Front-Cover Texts, and with no Back-Cover Texts. -->
 <!-- A copy of the license is included in the section entitled ``GNU -->
 <!-- Free Documentation License''. -->
-   <p>This
+<p>This
 describes conventions for writing the Makefiles for GNU programs. 
 Using Automake will help you write a Makefile that follows these
 conventions.
@@ -3987,7 +3987,7 @@ path is used.
 
    <p>The distinction between <samp><span class="file">./</span></samp> (the <dfn>build directory</dfn>) and
 <samp><span class="file">$(srcdir)/</span></samp> (the <dfn>source directory</dfn>) is important because
-users can build in a separate directory using the &lsquo;<samp><span class="samp">--srcdir</span></samp>&rsquo; option
+users can build in a separate directory using the `<samp><span class="samp">--srcdir</span></samp>' option
 to <samp><span class="file">configure</span></samp>.  A rule of the form:
 
 <pre class="smallexample">     foo.1 : foo.man sedscript
@@ -3996,10 +3996,10 @@ to <samp><span class="file">configure</span></samp>.  A rule of the form:
    <p class="noindent">will fail when the build directory is not the source directory, because
 <samp><span class="file">foo.man</span></samp> and <samp><span class="file">sedscript</span></samp> are in the source directory.
 
-   <p>When using GNU <code>make</code>, relying on &lsquo;<samp><span class="samp">VPATH</span></samp>&rsquo; to find the source
+   <p>When using GNU <code>make</code>, relying on `<samp><span class="samp">VPATH</span></samp>' to find the source
 file will work in the case where there is a single dependency file,
-since the <code>make</code> automatic variable &lsquo;<samp><span class="samp">$&lt;</span></samp>&rsquo; will represent the
-source file wherever it is.  (Many versions of <code>make</code> set &lsquo;<samp><span class="samp">$&lt;</span></samp>&rsquo;
+since the <code>make</code> automatic variable `<samp><span class="samp">$&lt;</span></samp>' will represent the
+source file wherever it is.  (Many versions of <code>make</code> set `<samp><span class="samp">$&lt;</span></samp>'
 only in implicit rules.)  A Makefile target like
 
 <pre class="smallexample">     foo.o : bar.c
@@ -4010,8 +4010,8 @@ only in implicit rules.)  A Makefile target like
 <pre class="smallexample">     foo.o : bar.c
              $(CC) -I. -I$(srcdir) $(CFLAGS) -c $&lt; -o $@
 </pre>
-   <p class="noindent">in order to allow &lsquo;<samp><span class="samp">VPATH</span></samp>&rsquo; to work correctly.  When the target has
-multiple dependencies, using an explicit &lsquo;<samp><span class="samp">$(srcdir)</span></samp>&rsquo; is the easiest
+   <p class="noindent">in order to allow `<samp><span class="samp">VPATH</span></samp>' to work correctly.  When the target has
+multiple dependencies, using an explicit `<samp><span class="samp">$(srcdir)</span></samp>' is the easiest
 way to make the rule work well.  For example, the target above for
 <samp><span class="file">foo.1</span></samp> is best written as:
 
@@ -4060,7 +4060,7 @@ installation should not use any utilities directly except these:
    <p>The compression program <code>gzip</code> can be used in the <code>dist</code> rule.
 
    <p>Stick to the generally supported options for these programs.  For
-example, don't use &lsquo;<samp><span class="samp">mkdir -p</span></samp>&rsquo;, convenient as it may be, because
+example, don't use `<samp><span class="samp">mkdir -p</span></samp>', convenient as it may be, because
 most systems don't support it.
 
    <p>It is a good idea to avoid creating symbolic links in makefiles, since a
@@ -4083,7 +4083,7 @@ mean:
 nothing bad happens if the system does not have the program in question. 
 Arrange to ignore an error from that command, and print a message before
 the command to tell the user that failure of this command does not mean
-a problem.  (The Autoconf &lsquo;<samp><span class="samp">AC_PROG_RANLIB</span></samp>&rsquo; macro can help with
+a problem.  (The Autoconf `<samp><span class="samp">AC_PROG_RANLIB</span></samp>' macro can help with
 this.)
 
    <p>If you use symbolic links, you should implement a fallback for systems
@@ -4113,7 +4113,7 @@ and so on.
 
    <p>In particular, you should run most utility programs via variables. 
 Thus, if you use Bison, have a variable named <code>BISON</code> whose default
-value is set with &lsquo;<samp><span class="samp">BISON = bison</span></samp>&rsquo;, and refer to it with
+value is set with `<samp><span class="samp">BISON = bison</span></samp>', and refer to it with
 <code>$(BISON)</code> whenever you need to use Bison.
 
    <p>File management utilities such as <code>ln</code>, <code>rm</code>, <code>mv</code>, and
@@ -4121,7 +4121,7 @@ so on, need not be referred to through variables in this way, since users
 don't need to replace them with other programs.
 
    <p>Each program-name variable should come with an options variable that is
-used to supply options to the program.  Append &lsquo;<samp><span class="samp">FLAGS</span></samp>&rsquo; to the
+used to supply options to the program.  Append `<samp><span class="samp">FLAGS</span></samp>' to the
 program-name variable name to get the options variable name&mdash;for
 example, <code>BISONFLAGS</code>.  (The names <code>CFLAGS</code> for the C
 compiler, <code>YFLAGS</code> for yacc, and <code>LFLAGS</code> for lex, are
@@ -4142,10 +4142,10 @@ compilation commands or by defining an implicit rule, like this:
      .c.o:
              $(CC) -c $(CPPFLAGS) $(ALL_CFLAGS) $&lt;
 </pre>
-   <p>Do include the &lsquo;<samp><span class="samp">-g</span></samp>&rsquo; option in <code>CFLAGS</code>, because that is not
+   <p>Do include the `<samp><span class="samp">-g</span></samp>' option in <code>CFLAGS</code>, because that is not
 <em>required</em> for proper compilation.  You can consider it a default
 that is only recommended.  If the package is set up so that it is
-compiled with GCC by default, then you might as well include &lsquo;<samp><span class="samp">-O</span></samp>&rsquo;
+compiled with GCC by default, then you might as well include `<samp><span class="samp">-O</span></samp>'
 in the default value of <code>CFLAGS</code> as well.
 
    <p>Put <code>CFLAGS</code> last in the compilation command, after other variables
@@ -4267,22 +4267,22 @@ directories.
 below.  The default value of <code>prefix</code> should be <samp><span class="file">/usr/local</span></samp>. 
 When building the complete GNU system, the prefix will be empty and
 <samp><span class="file">/usr</span></samp> will be a symbolic link to <samp><span class="file">/</span></samp>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@prefix@</span></samp>&rsquo;.)
+(If you are using Autoconf, write it as `<samp><span class="samp">@prefix@</span></samp>'.)
 
-     <p>Running &lsquo;<samp><span class="samp">make install</span></samp>&rsquo; with a different value of <code>prefix</code> from
+     <p>Running `<samp><span class="samp">make install</span></samp>' with a different value of <code>prefix</code> from
 the one used to build the program should <em>not</em> recompile the
 program.
 
      <br><dt><code>exec_prefix</code><dd><a name="index-exec_005fprefix-134"></a>A prefix used in constructing the default values of some of the
 variables listed below.  The default value of <code>exec_prefix</code> should
 be <code>$(prefix)</code>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@exec_prefix@</span></samp>&rsquo;.)
+(If you are using Autoconf, write it as `<samp><span class="samp">@exec_prefix@</span></samp>'.)
 
      <p>Generally, <code>$(exec_prefix)</code> is used for directories that contain
 machine-specific files (such as executables and subroutine libraries),
 while <code>$(prefix)</code> is used directly for other directories.
 
-     <p>Running &lsquo;<samp><span class="samp">make install</span></samp>&rsquo; with a different value of <code>exec_prefix</code>
+     <p>Running `<samp><span class="samp">make install</span></samp>' with a different value of <code>exec_prefix</code>
 from the one used to build the program should <em>not</em> recompile the
 program. 
 </dl>
@@ -4293,21 +4293,21 @@ program.
 <dt><code>bindir</code><dd><a name="index-bindir-135"></a>The directory for installing executable programs that users can run. 
 This should normally be <samp><span class="file">/usr/local/bin</span></samp>, but write it as
 <samp><span class="file">$(exec_prefix)/bin</span></samp>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@bindir@</span></samp>&rsquo;.)
+(If you are using Autoconf, write it as `<samp><span class="samp">@bindir@</span></samp>'.)
 
      <br><dt><code>sbindir</code><dd><a name="index-sbindir-136"></a>The directory for installing executable programs that can be run from
 the shell, but are only generally useful to system administrators.  This
 should normally be <samp><span class="file">/usr/local/sbin</span></samp>, but write it as
 <samp><span class="file">$(exec_prefix)/sbin</span></samp>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@sbindir@</span></samp>&rsquo;.)
+(If you are using Autoconf, write it as `<samp><span class="samp">@sbindir@</span></samp>'.)
 
      <br><dt><code>libexecdir</code><dd><a name="index-libexecdir-137"></a><!-- This paragraph adjusted to avoid overfull hbox -roland 5jul94 -->
 The directory for installing executable programs to be run by other
 programs rather than by users.  This directory should normally be
 <samp><span class="file">/usr/local/libexec</span></samp>, but write it as <samp><span class="file">$(exec_prefix)/libexec</span></samp>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@libexecdir@</span></samp>&rsquo;.)
+(If you are using Autoconf, write it as `<samp><span class="samp">@libexecdir@</span></samp>'.)
 
-     <p>The definition of &lsquo;<samp><span class="samp">libexecdir</span></samp>&rsquo; is the same for all packages, so
+     <p>The definition of `<samp><span class="samp">libexecdir</span></samp>' is the same for all packages, so
 you should install your data in a subdirectory thereof.  Most packages
 install their data under <samp><span class="file">$(libexecdir)/</span><var>package-name</var><span class="file">/</span></samp>,
 possibly within additional subdirectories thereof, such as
@@ -4336,34 +4336,34 @@ architecture-independent, and it is generally not hard.
 to put these various kinds of files in:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">datarootdir</span></samp>&rsquo;<dd>The root of the directory tree for read-only architecture-independent
+<dt>`<samp><span class="samp">datarootdir</span></samp>'<dd>The root of the directory tree for read-only architecture-independent
 data files.  This should normally be <samp><span class="file">/usr/local/share</span></samp>, but
 write it as <samp><span class="file">$(prefix)/share</span></samp>.  (If you are using Autoconf, write
-it as &lsquo;<samp><span class="samp">@datarootdir@</span></samp>&rsquo;.)  &lsquo;<samp><span class="samp">datadir</span></samp>&rsquo;'s default value is
-based on this variable; so are &lsquo;<samp><span class="samp">infodir</span></samp>&rsquo;, &lsquo;<samp><span class="samp">mandir</span></samp>&rsquo;, and
+it as `<samp><span class="samp">@datarootdir@</span></samp>'.)  `<samp><span class="samp">datadir</span></samp>''s default value is
+based on this variable; so are `<samp><span class="samp">infodir</span></samp>', `<samp><span class="samp">mandir</span></samp>', and
 others.
 
-     <br><dt>&lsquo;<samp><span class="samp">datadir</span></samp>&rsquo;<dd>The directory for installing idiosyncratic read-only
+     <br><dt>`<samp><span class="samp">datadir</span></samp>'<dd>The directory for installing idiosyncratic read-only
 architecture-independent data files for this program.  This is usually
-the same place as &lsquo;<samp><span class="samp">datarootdir</span></samp>&rsquo;, but we use the two separate
+the same place as `<samp><span class="samp">datarootdir</span></samp>', but we use the two separate
 variables so that you can move these program-specific files without
 altering the location for Info files, man pages, etc.
 
      <p>This should normally be <samp><span class="file">/usr/local/share</span></samp>, but write it as
 <samp><span class="file">$(datarootdir)</span></samp>.  (If you are using Autoconf, write it as
-&lsquo;<samp><span class="samp">@datadir@</span></samp>&rsquo;.)
+`<samp><span class="samp">@datadir@</span></samp>'.)
 
-     <p>The definition of &lsquo;<samp><span class="samp">datadir</span></samp>&rsquo; is the same for all packages, so you
+     <p>The definition of `<samp><span class="samp">datadir</span></samp>' is the same for all packages, so you
 should install your data in a subdirectory thereof.  Most packages
 install their data under <samp><span class="file">$(datadir)/</span><var>package-name</var><span class="file">/</span></samp>.
 
-     <br><dt>&lsquo;<samp><span class="samp">sysconfdir</span></samp>&rsquo;<dd>The directory for installing read-only data files that pertain to a
+     <br><dt>`<samp><span class="samp">sysconfdir</span></samp>'<dd>The directory for installing read-only data files that pertain to a
 single machine&ndash;that is to say, files for configuring a host.  Mailer
 and network configuration files, <samp><span class="file">/etc/passwd</span></samp>, and so forth belong
 here.  All the files in this directory should be ordinary ASCII text
 files.  This directory should normally be <samp><span class="file">/usr/local/etc</span></samp>, but
 write it as <samp><span class="file">$(prefix)/etc</span></samp>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@sysconfdir@</span></samp>&rsquo;.)
+(If you are using Autoconf, write it as `<samp><span class="samp">@sysconfdir@</span></samp>'.)
 
      <p>Do not install executables here in this directory (they probably belong
 in <samp><span class="file">$(libexecdir)</span></samp> or <samp><span class="file">$(sbindir)</span></samp>).  Also do not install
@@ -4371,33 +4371,33 @@ files that are modified in the normal course of their use (programs
 whose purpose is to change the configuration of the system excluded). 
 Those probably belong in <samp><span class="file">$(localstatedir)</span></samp>.
 
-     <br><dt>&lsquo;<samp><span class="samp">sharedstatedir</span></samp>&rsquo;<dd>The directory for installing architecture-independent data files which
+     <br><dt>`<samp><span class="samp">sharedstatedir</span></samp>'<dd>The directory for installing architecture-independent data files which
 the programs modify while they run.  This should normally be
 <samp><span class="file">/usr/local/com</span></samp>, but write it as <samp><span class="file">$(prefix)/com</span></samp>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@sharedstatedir@</span></samp>&rsquo;.)
+(If you are using Autoconf, write it as `<samp><span class="samp">@sharedstatedir@</span></samp>'.)
 
-     <br><dt>&lsquo;<samp><span class="samp">localstatedir</span></samp>&rsquo;<dd>The directory for installing data files which the programs modify while
+     <br><dt>`<samp><span class="samp">localstatedir</span></samp>'<dd>The directory for installing data files which the programs modify while
 they run, and that pertain to one specific machine.  Users should never
 need to modify files in this directory to configure the package's
 operation; put such configuration information in separate files that go
 in <samp><span class="file">$(datadir)</span></samp> or <samp><span class="file">$(sysconfdir)</span></samp>.  <samp><span class="file">$(localstatedir)</span></samp>
 should normally be <samp><span class="file">/usr/local/var</span></samp>, but write it as
 <samp><span class="file">$(prefix)/var</span></samp>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@localstatedir@</span></samp>&rsquo;.) 
+(If you are using Autoconf, write it as `<samp><span class="samp">@localstatedir@</span></samp>'.) 
 </dl>
 
    <p>These variables specify the directory for installing certain specific
 types of files, if your program has them.  Every GNU package should
-have Info files, so every program needs &lsquo;<samp><span class="samp">infodir</span></samp>&rsquo;, but not all
-need &lsquo;<samp><span class="samp">libdir</span></samp>&rsquo; or &lsquo;<samp><span class="samp">lispdir</span></samp>&rsquo;.
+have Info files, so every program needs `<samp><span class="samp">infodir</span></samp>', but not all
+need `<samp><span class="samp">libdir</span></samp>' or `<samp><span class="samp">lispdir</span></samp>'.
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">includedir</span></samp>&rsquo;<dd><!-- rewritten to avoid overfull hbox -roland -->
+<dt>`<samp><span class="samp">includedir</span></samp>'<dd><!-- rewritten to avoid overfull hbox -roland -->
 The directory for installing header files to be included by user
-programs with the C &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; preprocessor directive.  This
+programs with the C `<samp><span class="samp">#include</span></samp>' preprocessor directive.  This
 should normally be <samp><span class="file">/usr/local/include</span></samp>, but write it as
 <samp><span class="file">$(prefix)/include</span></samp>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@includedir@</span></samp>&rsquo;.)
+(If you are using Autoconf, write it as `<samp><span class="samp">@includedir@</span></samp>'.)
 
      <p>Most compilers other than GCC do not look for header files in directory
 <samp><span class="file">/usr/local/include</span></samp>.  So installing the header files this way is
@@ -4407,9 +4407,9 @@ are intended to work with other compilers.  They should install their
 header files in two places, one specified by <code>includedir</code> and one
 specified by <code>oldincludedir</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">oldincludedir</span></samp>&rsquo;<dd>The directory for installing &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; header files for use with
+     <br><dt>`<samp><span class="samp">oldincludedir</span></samp>'<dd>The directory for installing `<samp><span class="samp">#include</span></samp>' header files for use with
 compilers other than GCC.  This should normally be <samp><span class="file">/usr/include</span></samp>. 
-(If you are using Autoconf, you can write it as &lsquo;<samp><span class="samp">@oldincludedir@</span></samp>&rsquo;.)
+(If you are using Autoconf, you can write it as `<samp><span class="samp">@oldincludedir@</span></samp>'.)
 
      <p>The Makefile commands should check whether the value of
 <code>oldincludedir</code> is empty.  If it is, they should not try to use
@@ -4425,85 +4425,85 @@ package.
      <p>To tell whether <samp><span class="file">foo.h</span></samp> came from the Foo package, put a magic
 string in the file&mdash;part of a comment&mdash;and <code>grep</code> for that string.
 
-     <br><dt>&lsquo;<samp><span class="samp">docdir</span></samp>&rsquo;<dd>The directory for installing documentation files (other than Info) for
+     <br><dt>`<samp><span class="samp">docdir</span></samp>'<dd>The directory for installing documentation files (other than Info) for
 this package.  By default, it should be
 <samp><span class="file">/usr/local/share/doc/</span><var>yourpkg</var></samp>, but it should be written as
 <samp><span class="file">$(datarootdir)/doc/</span><var>yourpkg</var></samp>.  (If you are using Autoconf,
-write it as &lsquo;<samp><span class="samp">@docdir@</span></samp>&rsquo;.)  The <var>yourpkg</var> subdirectory, which
+write it as `<samp><span class="samp">@docdir@</span></samp>'.)  The <var>yourpkg</var> subdirectory, which
 may include a version number, prevents collisions among files with
 common names, such as <samp><span class="file">README</span></samp>.
 
-     <br><dt>&lsquo;<samp><span class="samp">infodir</span></samp>&rsquo;<dd>The directory for installing the Info files for this package.  By
+     <br><dt>`<samp><span class="samp">infodir</span></samp>'<dd>The directory for installing the Info files for this package.  By
 default, it should be <samp><span class="file">/usr/local/share/info</span></samp>, but it should be
 written as <samp><span class="file">$(datarootdir)/info</span></samp>.  (If you are using Autoconf,
-write it as &lsquo;<samp><span class="samp">@infodir@</span></samp>&rsquo;.)  <code>infodir</code> is separate from
+write it as `<samp><span class="samp">@infodir@</span></samp>'.)  <code>infodir</code> is separate from
 <code>docdir</code> for compatibility with existing practice.
 
-     <br><dt>&lsquo;<samp><span class="samp">htmldir</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">dvidir</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">pdfdir</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">psdir</span></samp>&rsquo;<dd>Directories for installing documentation files in the particular
+     <br><dt>`<samp><span class="samp">htmldir</span></samp>'<dt>`<samp><span class="samp">dvidir</span></samp>'<dt>`<samp><span class="samp">pdfdir</span></samp>'<dt>`<samp><span class="samp">psdir</span></samp>'<dd>Directories for installing documentation files in the particular
 format.  They should all be set to <code>$(docdir)</code> by default.  (If
-you are using Autoconf, write them as &lsquo;<samp><span class="samp">@htmldir@</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">@dvidir@</span></samp>&rsquo;, etc.)  Packages which supply several translations
+you are using Autoconf, write them as `<samp><span class="samp">@htmldir@</span></samp>',
+`<samp><span class="samp">@dvidir@</span></samp>', etc.)  Packages which supply several translations
 of their documentation should install them in
-&lsquo;<samp><span class="samp">$(htmldir)/</span></samp>&rsquo;<var>ll</var>, &lsquo;<samp><span class="samp">$(pdfdir)/</span></samp>&rsquo;<var>ll</var>, etc. where
-<var>ll</var> is a locale abbreviation such as &lsquo;<samp><span class="samp">en</span></samp>&rsquo; or &lsquo;<samp><span class="samp">pt_BR</span></samp>&rsquo;.
+`<samp><span class="samp">$(htmldir)/</span></samp>'<var>ll</var>, `<samp><span class="samp">$(pdfdir)/</span></samp>'<var>ll</var>, etc. where
+<var>ll</var> is a locale abbreviation such as `<samp><span class="samp">en</span></samp>' or `<samp><span class="samp">pt_BR</span></samp>'.
 
-     <br><dt>&lsquo;<samp><span class="samp">libdir</span></samp>&rsquo;<dd>The directory for object files and libraries of object code.  Do not
+     <br><dt>`<samp><span class="samp">libdir</span></samp>'<dd>The directory for object files and libraries of object code.  Do not
 install executables here, they probably ought to go in <samp><span class="file">$(libexecdir)</span></samp>
 instead.  The value of <code>libdir</code> should normally be
 <samp><span class="file">/usr/local/lib</span></samp>, but write it as <samp><span class="file">$(exec_prefix)/lib</span></samp>. 
-(If you are using Autoconf, write it as &lsquo;<samp><span class="samp">@libdir@</span></samp>&rsquo;.)
+(If you are using Autoconf, write it as `<samp><span class="samp">@libdir@</span></samp>'.)
 
-     <br><dt>&lsquo;<samp><span class="samp">lispdir</span></samp>&rsquo;<dd>The directory for installing any Emacs Lisp files in this package.  By
+     <br><dt>`<samp><span class="samp">lispdir</span></samp>'<dd>The directory for installing any Emacs Lisp files in this package.  By
 default, it should be <samp><span class="file">/usr/local/share/emacs/site-lisp</span></samp>, but it
 should be written as <samp><span class="file">$(datarootdir)/emacs/site-lisp</span></samp>.
 
-     <p>If you are using Autoconf, write the default as &lsquo;<samp><span class="samp">@lispdir@</span></samp>&rsquo;. 
-In order to make &lsquo;<samp><span class="samp">@lispdir@</span></samp>&rsquo; work, you need the following lines
+     <p>If you are using Autoconf, write the default as `<samp><span class="samp">@lispdir@</span></samp>'. 
+In order to make `<samp><span class="samp">@lispdir@</span></samp>' work, you need the following lines
 in your <samp><span class="file">configure.in</span></samp> file:
 
      <pre class="example">          lispdir='${datarootdir}/emacs/site-lisp'
           AC_SUBST(lispdir)
-</pre>
-     <br><dt>&lsquo;<samp><span class="samp">localedir</span></samp>&rsquo;<dd>The directory for installing locale-specific message catalogs for this
+     </pre>
+     <br><dt>`<samp><span class="samp">localedir</span></samp>'<dd>The directory for installing locale-specific message catalogs for this
 package.  By default, it should be <samp><span class="file">/usr/local/share/locale</span></samp>, but
 it should be written as <samp><span class="file">$(datarootdir)/locale</span></samp>.  (If you are
-using Autoconf, write it as &lsquo;<samp><span class="samp">@localedir@</span></samp>&rsquo;.)  This directory
+using Autoconf, write it as `<samp><span class="samp">@localedir@</span></samp>'.)  This directory
 usually has a subdirectory per locale. 
 </dl>
 
    <p>Unix-style man pages are installed in one of the following:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">mandir</span></samp>&rsquo;<dd>The top-level directory for installing the man pages (if any) for this
+<dt>`<samp><span class="samp">mandir</span></samp>'<dd>The top-level directory for installing the man pages (if any) for this
 package.  It will normally be <samp><span class="file">/usr/local/share/man</span></samp>, but you
 should write it as <samp><span class="file">$(datarootdir)/man</span></samp>.  (If you are using
-Autoconf, write it as &lsquo;<samp><span class="samp">@mandir@</span></samp>&rsquo;.)
+Autoconf, write it as `<samp><span class="samp">@mandir@</span></samp>'.)
 
-     <br><dt>&lsquo;<samp><span class="samp">man1dir</span></samp>&rsquo;<dd>The directory for installing section 1 man pages.  Write it as
+     <br><dt>`<samp><span class="samp">man1dir</span></samp>'<dd>The directory for installing section 1 man pages.  Write it as
 <samp><span class="file">$(mandir)/man1</span></samp>. 
-<br><dt>&lsquo;<samp><span class="samp">man2dir</span></samp>&rsquo;<dd>The directory for installing section 2 man pages.  Write it as
+<br><dt>`<samp><span class="samp">man2dir</span></samp>'<dd>The directory for installing section 2 man pages.  Write it as
 <samp><span class="file">$(mandir)/man2</span></samp>
-<br><dt>&lsquo;<samp><span class="samp">...</span></samp>&rsquo;<dd>
+<br><dt>`<samp><span class="samp">...</span></samp>'<dd>
 <strong>Don't make the primary documentation for any GNU software be a
 man page.  Write a manual in Texinfo instead.  Man pages are just for
 the sake of people running GNU software on Unix, which is a secondary
 application only.</strong>
 
-     <br><dt>&lsquo;<samp><span class="samp">manext</span></samp>&rsquo;<dd>The file name extension for the installed man page.  This should contain
-a period followed by the appropriate digit; it should normally be &lsquo;<samp><span class="samp">.1</span></samp>&rsquo;.
+     <br><dt>`<samp><span class="samp">manext</span></samp>'<dd>The file name extension for the installed man page.  This should contain
+a period followed by the appropriate digit; it should normally be `<samp><span class="samp">.1</span></samp>'.
 
-     <br><dt>&lsquo;<samp><span class="samp">man1ext</span></samp>&rsquo;<dd>The file name extension for installed section 1 man pages. 
-<br><dt>&lsquo;<samp><span class="samp">man2ext</span></samp>&rsquo;<dd>The file name extension for installed section 2 man pages. 
-<br><dt>&lsquo;<samp><span class="samp">...</span></samp>&rsquo;<dd>Use these names instead of &lsquo;<samp><span class="samp">manext</span></samp>&rsquo; if the package needs to install man
+     <br><dt>`<samp><span class="samp">man1ext</span></samp>'<dd>The file name extension for installed section 1 man pages. 
+<br><dt>`<samp><span class="samp">man2ext</span></samp>'<dd>The file name extension for installed section 2 man pages. 
+<br><dt>`<samp><span class="samp">...</span></samp>'<dd>Use these names instead of `<samp><span class="samp">manext</span></samp>' if the package needs to install man
 pages in more than one section of the manual. 
 </dl>
 
    <p>And finally, you should set the following variable:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">srcdir</span></samp>&rsquo;<dd>The directory for the sources being compiled.  The value of this
+<dt>`<samp><span class="samp">srcdir</span></samp>'<dd>The directory for the sources being compiled.  The value of this
 variable is normally inserted by the <code>configure</code> shell script. 
-(If you are using Autoconf, use &lsquo;<samp><span class="samp">srcdir = @srcdir@</span></samp>&rsquo;.) 
+(If you are using Autoconf, use `<samp><span class="samp">srcdir = @srcdir@</span></samp>'.) 
 </dl>
 
    <p>For example:
@@ -4536,7 +4536,7 @@ order for this to be useful, all the packages must be designed so that
 they will work sensibly when the user does so.
 
    <p>At times, not all of these variables may be implemented in the current
-release of Autoconf and/or Automake; but as of Autoconf&nbsp;2.60, we
+release of Autoconf and/or Automake; but as of Autoconf&nbsp;<!-- /@w -->2.60, we
 believe all of them are.  When any are missing, the descriptions here
 serve as specifications for what Autoconf will implement.  As a
 programmer, you can either use a development version of Autoconf or
@@ -4557,17 +4557,17 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Makefile-Conventions">Makefile Convent
 <p>All GNU programs should have the following targets in their Makefiles:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">all</span></samp>&rsquo;<dd>Compile the entire program.  This should be the default target.  This
+<dt>`<samp><span class="samp">all</span></samp>'<dd>Compile the entire program.  This should be the default target.  This
 target need not rebuild any documentation files; Info files should
 normally be included in the distribution, and DVI (and other
 documentation format) files should be made only when explicitly asked
 for.
 
-     <p>By default, the Make rules should compile and link with &lsquo;<samp><span class="samp">-g</span></samp>&rsquo;, so
+     <p>By default, the Make rules should compile and link with `<samp><span class="samp">-g</span></samp>', so
 that executable programs have debugging symbols.  Users who don't mind
 being helpless can strip the executables later if they wish.
 
-     <br><dt>&lsquo;<samp><span class="samp">install</span></samp>&rsquo;<dd>Compile the program and copy the executables, libraries, and so on to
+     <br><dt>`<samp><span class="samp">install</span></samp>'<dd>Compile the program and copy the executables, libraries, and so on to
 the file names where they should reside for actual use.  If there is a
 simple test to verify that a program is properly installed, this target
 should run that test.
@@ -4577,7 +4577,7 @@ use the <code>install-strip</code> target to do that.
 
      <p>If possible, write the <code>install</code> target rule so that it does not
 modify anything in the directory where the program was built, provided
-&lsquo;<samp><span class="samp">make all</span></samp>&rsquo; has just been done.  This is convenient for building the
+`<samp><span class="samp">make all</span></samp>' has just been done.  This is convenient for building the
 program under one user name and installing it under another.
 
      <p>The commands should create all the directories in which files are to be
@@ -4587,7 +4587,7 @@ specified as the values of the variables <code>prefix</code> and
 One way to do this is by means of an <code>installdirs</code> target
 as described below.
 
-     <p>Use &lsquo;<samp><span class="samp">-</span></samp>&rsquo; before any command for installing a man page, so that
+     <p>Use `<samp><span class="samp">-</span></samp>' before any command for installing a man page, so that
 <code>make</code> will ignore any errors.  This is in case there are systems
 that don't have the Unix man page documentation system installed.
 
@@ -4599,8 +4599,8 @@ menu entry for the given Info file; it is part of the Texinfo package.
 Here is a sample rule to install an Info file:
 
      <!-- This example has been carefully formatted for the Make manual. -->
-     <!-- Please do not reformat it without talking to bug-make@gnu.org. -->
-     <pre class="smallexample">          $(DESTDIR)$(infodir)/foo.info: foo.info
+<!-- Please do not reformat it without talking to bug-make@gnu.org. -->
+<pre class="smallexample">          $(DESTDIR)$(infodir)/foo.info: foo.info
                   $(POST_INSTALL)
           # There may be a newer info file in . than in srcdir.
                   -if test -f foo.info; then d=.; \
@@ -4616,12 +4616,12 @@ Here is a sample rule to install an Info file:
                     install-info --dir-file=$(DESTDIR)$(infodir)/dir \
                                  $(DESTDIR)$(infodir)/foo.info; \
                   else true; fi
-</pre>
+     </pre>
      <p>When writing the <code>install</code> target, you must classify all the
 commands into three categories: normal ones, <dfn>pre-installation</dfn>
 commands and <dfn>post-installation</dfn> commands.  See <a href="#Install-Command-Categories">Install Command Categories</a>.
 
-     <br><dt>&lsquo;<samp><span class="samp">install-html</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">install-dvi</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">install-pdf</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">install-ps</span></samp>&rsquo;<dd>These targets install documentation in formats other than Info;
+     <br><dt>`<samp><span class="samp">install-html</span></samp>'<dt>`<samp><span class="samp">install-dvi</span></samp>'<dt>`<samp><span class="samp">install-pdf</span></samp>'<dt>`<samp><span class="samp">install-ps</span></samp>'<dd>These targets install documentation in formats other than Info;
 they're intended to be called explicitly by the person installing the
 package, if that format is desired.  GNU prefers Info files, so these
 must be installed by the <code>install</code> target.
@@ -4639,8 +4639,8 @@ in different manuals will overwrite each other.
 commands for the <var>format</var> target, for example, by making
 <var>format</var> a dependency.
 
-     <br><dt>&lsquo;<samp><span class="samp">uninstall</span></samp>&rsquo;<dd>Delete all the installed files&mdash;the copies that the &lsquo;<samp><span class="samp">install</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">install-*</span></samp>&rsquo; targets create.
+     <br><dt>`<samp><span class="samp">uninstall</span></samp>'<dd>Delete all the installed files&mdash;the copies that the `<samp><span class="samp">install</span></samp>'
+and `<samp><span class="samp">install-*</span></samp>' targets create.
 
      <p>This rule should not modify the directories where compilation is done,
 only the directories where files are installed.
@@ -4648,14 +4648,14 @@ only the directories where files are installed.
      <p>The uninstallation commands are divided into three categories, just like
 the installation commands.  See <a href="#Install-Command-Categories">Install Command Categories</a>.
 
-     <br><dt>&lsquo;<samp><span class="samp">install-strip</span></samp>&rsquo;<dd>Like <code>install</code>, but strip the executable files while installing
+     <br><dt>`<samp><span class="samp">install-strip</span></samp>'<dd>Like <code>install</code>, but strip the executable files while installing
 them.  In simple cases, this target can use the <code>install</code> target in
 a simple way:
 
      <pre class="smallexample">          install-strip:
                   $(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' \
                           install
-</pre>
+     </pre>
      <p>But if the package installs scripts as well as real executables, the
 <code>install-strip</code> target can't just refer to the <code>install</code>
 target; it has to strip the executables but not the scripts.
@@ -4670,50 +4670,50 @@ stripped executable for actual execution while saving the unstripped
 executable elsewhere in case there is a bug.
 
      <!-- The gratuitous blank line here is to make the table look better -->
-     <!-- in the printed Make manual.  Please leave it in. -->
-     <br><dt>&lsquo;<samp><span class="samp">clean</span></samp>&rsquo;<dd>
+<!-- in the printed Make manual.  Please leave it in. -->
+<br><dt>`<samp><span class="samp">clean</span></samp>'<dd>
 Delete all files in the current directory that are normally created by
 building the program.  Also delete files in other directories if they
 are created by this makefile.  However, don't delete the files that
 record the configuration.  Also preserve files that could be made by
 building, but normally aren't because the distribution comes with
 them.  There is no need to delete parent directories that were created
-with &lsquo;<samp><span class="samp">mkdir -p</span></samp>&rsquo;, since they could have existed anyway.
+with `<samp><span class="samp">mkdir -p</span></samp>', since they could have existed anyway.
 
      <p>Delete <samp><span class="file">.dvi</span></samp> files here if they are not part of the distribution.
 
-     <br><dt>&lsquo;<samp><span class="samp">distclean</span></samp>&rsquo;<dd>Delete all files in the current directory (or created by this
+     <br><dt>`<samp><span class="samp">distclean</span></samp>'<dd>Delete all files in the current directory (or created by this
 makefile) that are created by configuring or building the program.  If
 you have unpacked the source and built the program without creating
-any other files, &lsquo;<samp><span class="samp">make distclean</span></samp>&rsquo; should leave only the files
+any other files, `<samp><span class="samp">make distclean</span></samp>' should leave only the files
 that were in the distribution.  However, there is no need to delete
-parent directories that were created with &lsquo;<samp><span class="samp">mkdir -p</span></samp>&rsquo;, since they
+parent directories that were created with `<samp><span class="samp">mkdir -p</span></samp>', since they
 could have existed anyway.
 
-     <br><dt>&lsquo;<samp><span class="samp">mostlyclean</span></samp>&rsquo;<dd>Like &lsquo;<samp><span class="samp">clean</span></samp>&rsquo;, but may refrain from deleting a few files that people
-normally don't want to recompile.  For example, the &lsquo;<samp><span class="samp">mostlyclean</span></samp>&rsquo;
+     <br><dt>`<samp><span class="samp">mostlyclean</span></samp>'<dd>Like `<samp><span class="samp">clean</span></samp>', but may refrain from deleting a few files that people
+normally don't want to recompile.  For example, the `<samp><span class="samp">mostlyclean</span></samp>'
 target for GCC does not delete <samp><span class="file">libgcc.a</span></samp>, because recompiling it
 is rarely necessary and takes a lot of time.
 
-     <br><dt>&lsquo;<samp><span class="samp">maintainer-clean</span></samp>&rsquo;<dd>Delete almost everything that can be reconstructed with this Makefile. 
+     <br><dt>`<samp><span class="samp">maintainer-clean</span></samp>'<dd>Delete almost everything that can be reconstructed with this Makefile. 
 This typically includes everything deleted by <code>distclean</code>, plus
 more: C source files produced by Bison, tags tables, Info files, and
 so on.
 
      <p>The reason we say &ldquo;almost everything&rdquo; is that running the command
-&lsquo;<samp><span class="samp">make maintainer-clean</span></samp>&rsquo; should not delete <samp><span class="file">configure</span></samp> even
+`<samp><span class="samp">make maintainer-clean</span></samp>' should not delete <samp><span class="file">configure</span></samp> even
 if <samp><span class="file">configure</span></samp> can be remade using a rule in the Makefile.  More
-generally, &lsquo;<samp><span class="samp">make maintainer-clean</span></samp>&rsquo; should not delete anything
+generally, `<samp><span class="samp">make maintainer-clean</span></samp>' should not delete anything
 that needs to exist in order to run <samp><span class="file">configure</span></samp> and then begin to
 build the program.  Also, there is no need to delete parent
-directories that were created with &lsquo;<samp><span class="samp">mkdir -p</span></samp>&rsquo;, since they could
+directories that were created with `<samp><span class="samp">mkdir -p</span></samp>', since they could
 have existed anyway.  These are the only exceptions;
 <code>maintainer-clean</code> should delete everything else that can be
 rebuilt.
 
-     <p>The &lsquo;<samp><span class="samp">maintainer-clean</span></samp>&rsquo; target is intended to be used by a maintainer of
+     <p>The `<samp><span class="samp">maintainer-clean</span></samp>' target is intended to be used by a maintainer of
 the package, not by ordinary users.  You may need special tools to
-reconstruct some of the files that &lsquo;<samp><span class="samp">make maintainer-clean</span></samp>&rsquo; deletes. 
+reconstruct some of the files that `<samp><span class="samp">make maintainer-clean</span></samp>' deletes. 
 Since these files are normally included in the distribution, we don't
 take care to make them easy to reconstruct.  If you find you need to
 unpack the full distribution again, don't blame us.
@@ -4723,18 +4723,18 @@ unpack the full distribution again, don't blame us.
 
      <pre class="smallexample">          @echo 'This command is intended for maintainers to use; it'
           @echo 'deletes files that may need special tools to rebuild.'
-</pre>
-     <br><dt>&lsquo;<samp><span class="samp">TAGS</span></samp>&rsquo;<dd>Update a tags table for this program. 
+     </pre>
+     <br><dt>`<samp><span class="samp">TAGS</span></samp>'<dd>Update a tags table for this program. 
 <!-- ADR: how? -->
 
-     <br><dt>&lsquo;<samp><span class="samp">info</span></samp>&rsquo;<dd>Generate any Info files needed.  The best way to write the rules is as
+     <br><dt>`<samp><span class="samp">info</span></samp>'<dd>Generate any Info files needed.  The best way to write the rules is as
 follows:
 
      <pre class="smallexample">          info: foo.info
           
           foo.info: foo.texi chap1.texi chap2.texi
                   $(MAKEINFO) $(srcdir)/foo.texi
-</pre>
+     </pre>
      <p class="noindent">You must define the variable <code>MAKEINFO</code> in the Makefile.  It should
 run the <code>makeinfo</code> program, which is part of the Texinfo
 distribution.
@@ -4745,7 +4745,7 @@ rule for an info file should update it in the source directory.  When
 users build the package, ordinarily Make will not update the Info files
 because they will already be up to date.
 
-     <br><dt>&lsquo;<samp><span class="samp">dvi</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">html</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">pdf</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">ps</span></samp>&rsquo;<dd>Generate documentation files in the given format.  These targets
+     <br><dt>`<samp><span class="samp">dvi</span></samp>'<dt>`<samp><span class="samp">html</span></samp>'<dt>`<samp><span class="samp">pdf</span></samp>'<dt>`<samp><span class="samp">ps</span></samp>'<dd>Generate documentation files in the given format.  These targets
 should always exist, but any or all can be a no-op if the given output
 format cannot be generated.  These targets should not be dependencies
 of the <code>all</code> target; the user must manually invoke them.
@@ -4756,7 +4756,7 @@ of the <code>all</code> target; the user must manually invoke them.
           
           foo.dvi: foo.texi chap1.texi chap2.texi
                   $(TEXI2DVI) $(srcdir)/foo.texi
-</pre>
+     </pre>
      <p class="noindent">You must define the variable <code>TEXI2DVI</code> in the Makefile.  It should
 run the program <code>texi2dvi</code>, which is part of the Texinfo
 distribution.<a rel="footnote" href="#fn-1" name="fnd-1"><sup>1</sup></a>  Alternatively,
@@ -4768,12 +4768,12 @@ write just the dependencies, and allow GNU <code>make</code> to provide the comm
           
           foo.html: foo.texi chap1.texi chap2.texi
                   $(TEXI2HTML) $(srcdir)/foo.texi
-</pre>
+     </pre>
      <p class="noindent">Again, you would define the variable <code>TEXI2HTML</code> in the Makefile;
 for example, it might run <code>makeinfo --no-split --html</code>
 (<samp><span class="command">makeinfo</span></samp> is part of the Texinfo distribution).
 
-     <br><dt>&lsquo;<samp><span class="samp">dist</span></samp>&rsquo;<dd>Create a distribution tar file for this program.  The tar file should be
+     <br><dt>`<samp><span class="samp">dist</span></samp>'<dd>Create a distribution tar file for this program.  The tar file should be
 set up so that the file names in the tar file start with a subdirectory
 name which is the name of the package it is a distribution for.  This
 name can include the version number.
@@ -4793,7 +4793,7 @@ that are in the distribution, to make sure they are up to date in the
 distribution. 
 See <a href="#Releases">Making Releases</a>.
 
-     <br><dt>&lsquo;<samp><span class="samp">check</span></samp>&rsquo;<dd>Perform self-tests (if any).  The user must build the program before
+     <br><dt>`<samp><span class="samp">check</span></samp>'<dd>Perform self-tests (if any).  The user must build the program before
 running the tests, but need not install the program; you should write
 the self-tests so that they work when the program is built but not
 installed. 
@@ -4807,7 +4807,7 @@ in which they are useful.
 the program before running the tests.  You should not assume that
 <samp><span class="file">$(bindir)</span></samp> is in the search path.
 
-     <br><dt><code>installdirs</code><dd>It's useful to add a target named &lsquo;<samp><span class="samp">installdirs</span></samp>&rsquo; to create the
+     <br><dt><code>installdirs</code><dd>It's useful to add a target named `<samp><span class="samp">installdirs</span></samp>' to create the
 directories where files are installed, and their parent directories. 
 There is a script called <samp><span class="file">mkinstalldirs</span></samp> which is convenient for
 this; you can find it in the Texinfo package. 
@@ -4815,14 +4815,14 @@ this; you can find it in the Texinfo package.
 You can use a rule like this:
 
      <!-- This has been carefully formatted to look decent in the Make manual. -->
-     <!-- Please be sure not to make it extend any further to the right.-roland -->
-     <pre class="smallexample">          # Make sure all installation directories (e.g. $(bindir))
+<!-- Please be sure not to make it extend any further to the right.-roland -->
+<pre class="smallexample">          # Make sure all installation directories (e.g. $(bindir))
           # actually exist by making them if necessary.
           installdirs: mkinstalldirs
                   $(srcdir)/mkinstalldirs $(bindir) $(datadir) \
                                           $(libdir) $(infodir) \
                                           $(mandir)
-</pre>
+     </pre>
      <p class="noindent">or, if you wish to support <samp><span class="env">DESTDIR</span></samp>,
 
      <pre class="smallexample">          # Make sure all installation directories (e.g. $(bindir))
@@ -4832,7 +4832,7 @@ You can use a rule like this:
                       $(DESTDIR)$(bindir) $(DESTDIR)$(datadir) \
                       $(DESTDIR)$(libdir) $(DESTDIR)$(infodir) \
                       $(DESTDIR)$(mandir)
-</pre>
+     </pre>
      <p>This rule should not modify the directories where compilation is done. 
 It should do nothing but create installation directories. 
 </dl>
@@ -5639,9 +5639,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 
 <ul class="index-cp" compact>
 <li><a href="#index-g_t_0040code_007b_0023endif_007d_002c-commenting-79"><code>#endif</code>, commenting</a>: <a href="#Comments">Comments</a></li>
-<li><a href="#index-g_t_0040samp_007b_002d_002dhelp_007d-output-59">&lsquo;<samp><span class="samp">--help</span></samp>&rsquo; output</a>: <a href="#g_t_002d_002dhelp">--help</a></li>
-<li><a href="#index-g_t_0040samp_007b_002d_002dversion_007d-output-56">&lsquo;<samp><span class="samp">--version</span></samp>&rsquo; output</a>: <a href="#g_t_002d_002dversion">--version</a></li>
-<li><a href="#index-g_t_0040samp_007b_002dWall_007d-compiler-option-84">&lsquo;<samp><span class="samp">-Wall</span></samp>&rsquo; compiler option</a>: <a href="#Syntactic-Conventions">Syntactic Conventions</a></li>
+<li><a href="#index-g_t_0040samp_007b_002d_002dhelp_007d-output-59">`<samp><span class="samp">--help</span></samp>' output</a>: <a href="#g_t_002d_002dhelp">--help</a></li>
+<li><a href="#index-g_t_0040samp_007b_002d_002dversion_007d-output-56">`<samp><span class="samp">--version</span></samp>' output</a>: <a href="#g_t_002d_002dversion">--version</a></li>
+<li><a href="#index-g_t_0040samp_007b_002dWall_007d-compiler-option-84">`<samp><span class="samp">-Wall</span></samp>' compiler option</a>: <a href="#Syntactic-Conventions">Syntactic Conventions</a></li>
 <li><a href="#index-accepting-contributions-11">accepting contributions</a>: <a href="#Contributions">Contributions</a></li>
 <li><a href="#index-address-for-bug-reports-60">address for bug reports</a>: <a href="#g_t_002d_002dhelp">--help</a></li>
 <li><a href="#index-g_t_0040sc_007bansi_007d-C-standard-22"><span class="sc">ansi</span> C standard</a>: <a href="#Standard-C">Standard C</a></li>
@@ -5788,7 +5788,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <a name="texinfo-footnotes-in-document"></a><h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="#fnd-1">1</a>]</small> <code>texi2dvi</code> uses TeX to do the real work
 of formatting. TeX is not distributed with Texinfo.</p>
 
-   <hr></div>
+   <p><hr></div>
 
 </body></html>
 

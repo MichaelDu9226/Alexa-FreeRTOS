@@ -3,7 +3,7 @@
 <title>Overall Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="Option-Summary.html#Option-Summary" title="Option Summary">
@@ -78,7 +78,7 @@ library to make an Objective-C program work.
      <br><dt><var>file</var><code>.mi</code><dd>Objective-C source code that should not be preprocessed.
 
      <br><dt><var>file</var><code>.mm</code><dt><var>file</var><code>.M</code><dd>Objective-C++ source code.  Note that you must link with the <samp><span class="file">libobjc</span></samp>
-library to make an Objective-C++ program work.  Note that &lsquo;<samp><span class="samp">.M</span></samp>&rsquo; refers
+library to make an Objective-C++ program work.  Note that `<samp><span class="samp">.M</span></samp>' refers
 to a literal capital M.
 
      <br><dt><var>file</var><code>.mii</code><dd>Objective-C++ source code that should not be preprocessed.
@@ -87,9 +87,9 @@ to a literal capital M.
 precompiled header (default), or C, C++ header file to be turned into an
 Ada spec (via the <samp><span class="option">-fdump-ada-spec</span></samp> switch).
 
-     <br><dt><var>file</var><code>.cc</code><dt><var>file</var><code>.cp</code><dt><var>file</var><code>.cxx</code><dt><var>file</var><code>.cpp</code><dt><var>file</var><code>.CPP</code><dt><var>file</var><code>.c++</code><dt><var>file</var><code>.C</code><dd>C++ source code that must be preprocessed.  Note that in &lsquo;<samp><span class="samp">.cxx</span></samp>&rsquo;,
-the last two letters must both be literally &lsquo;<samp><span class="samp">x</span></samp>&rsquo;.  Likewise,
-&lsquo;<samp><span class="samp">.C</span></samp>&rsquo; refers to a literal capital C.
+     <br><dt><var>file</var><code>.cc</code><dt><var>file</var><code>.cp</code><dt><var>file</var><code>.cxx</code><dt><var>file</var><code>.cpp</code><dt><var>file</var><code>.CPP</code><dt><var>file</var><code>.c++</code><dt><var>file</var><code>.C</code><dd>C++ source code that must be preprocessed.  Note that in `<samp><span class="samp">.cxx</span></samp>',
+the last two letters must both be literally `<samp><span class="samp">x</span></samp>'.  Likewise,
+`<samp><span class="samp">.C</span></samp>' refers to a literal capital C.
 
      <br><dt><var>file</var><code>.mm</code><dt><var>file</var><code>.M</code><dd>Objective-C++ source code that must be preprocessed.
 
@@ -110,11 +110,11 @@ traditional preprocessor).
      <br><dt><var>file</var><code>.go</code><dd>Go source code.
 
      <!-- FIXME: Descriptions of Java file types. -->
-     <!-- @var{file}.java -->
-     <!-- @var{file}.class -->
-     <!-- @var{file}.zip -->
-     <!-- @var{file}.jar -->
-     <br><dt><var>file</var><code>.ads</code><dd>Ada source code file that contains a library unit declaration (a
+<!-- @var{file}.java -->
+<!-- @var{file}.class -->
+<!-- @var{file}.zip -->
+<!-- @var{file}.jar -->
+<br><dt><var>file</var><code>.ads</code><dd>Ada source code file that contains a library unit declaration (a
 declaration of a package, subprogram, or generic, or a generic
 instantiation), or a library unit renaming declaration (a package,
 generic, or subprogram renaming declaration).  Such files are also
@@ -124,12 +124,12 @@ called <dfn>specs</dfn>.
 package body).  Such files are also called <dfn>bodies</dfn>.
 
      <!-- GCC also knows about some suffixes for languages not yet included: -->
-     <!-- Pascal: -->
-     <!-- @var{file}.p -->
-     <!-- @var{file}.pas -->
-     <!-- Ratfor: -->
-     <!-- @var{file}.r -->
-     <br><dt><var>file</var><code>.s</code><dd>Assembler code.
+<!-- Pascal: -->
+<!-- @var{file}.p -->
+<!-- @var{file}.pas -->
+<!-- Ratfor: -->
+<!-- @var{file}.r -->
+<br><dt><var>file</var><code>.s</code><dd>Assembler code.
 
      <br><dt><var>file</var><code>.S</code><dt><var>file</var><code>.sx</code><dd>Assembler code that must be preprocessed.
 
@@ -153,7 +153,7 @@ the next <samp><span class="option">-x</span></samp> option.  Possible values fo
           f77  f77-cpp-input f95  f95-cpp-input
           go
           java
-</pre>
+     </pre>
      <br><dt><code>-x none</code><dd>Turn off any specification of a language, so that subsequent files are
 handled according to their file name suffixes (as they are if <samp><span class="option">-x</span></samp>
 has not been used at all).
@@ -170,7 +170,7 @@ compiler error is encountered.
 <samp><span class="option">-x</span></samp> (or filename suffixes) to tell <samp><span class="command">gcc</span></samp> where to start, and
 one of the options <samp><span class="option">-c</span></samp>, <samp><span class="option">-S</span></samp>, or <samp><span class="option">-E</span></samp> to say where
 <samp><span class="command">gcc</span></samp> is to stop.  Note that some combinations (for example,
-&lsquo;<samp><span class="samp">-x cpp-output -E</span></samp>&rsquo;) instruct <samp><span class="command">gcc</span></samp> to do nothing at all.
+`<samp><span class="samp">-x cpp-output -E</span></samp>') instruct <samp><span class="command">gcc</span></samp> to do nothing at all.
 
      <dl>
 <dt><code>-c</code><dd><a name="index-c-79"></a>Compile or assemble the source files, but do not link.  The linking
@@ -178,7 +178,7 @@ stage simply is not done.  The ultimate output is in the form of an
 object file for each source file.
 
      <p>By default, the object file name for a source file is made by replacing
-the suffix &lsquo;<samp><span class="samp">.c</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.i</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.s</span></samp>&rsquo;, etc., with &lsquo;<samp><span class="samp">.o</span></samp>&rsquo;.
+the suffix `<samp><span class="samp">.c</span></samp>', `<samp><span class="samp">.i</span></samp>', `<samp><span class="samp">.s</span></samp>', etc., with `<samp><span class="samp">.o</span></samp>'.
 
      <p>Unrecognized input files, not requiring compilation or assembly, are
 ignored.
@@ -188,7 +188,7 @@ is in the form of an assembler code file for each non-assembler input
 file specified.
 
      <p>By default, the assembler file name for a source file is made by
-replacing the suffix &lsquo;<samp><span class="samp">.c</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.i</span></samp>&rsquo;, etc., with &lsquo;<samp><span class="samp">.s</span></samp>&rsquo;.
+replacing the suffix `<samp><span class="samp">.c</span></samp>', `<samp><span class="samp">.i</span></samp>', etc., with `<samp><span class="samp">.s</span></samp>'.
 
      <p>Input files that don't require compilation are ignored.
 
@@ -239,52 +239,52 @@ options understood by the compiler that fit into all specified classes
 and qualifiers.  These are the supported classes:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">optimizers</span></samp>&rsquo;<dd>Display all of the optimization options supported by the
+<dt>`<samp><span class="samp">optimizers</span></samp>'<dd>Display all of the optimization options supported by the
 compiler.
 
-          <br><dt>&lsquo;<samp><span class="samp">warnings</span></samp>&rsquo;<dd>Display all of the options controlling warning messages
+          <br><dt>`<samp><span class="samp">warnings</span></samp>'<dd>Display all of the options controlling warning messages
 produced by the compiler.
 
-          <br><dt>&lsquo;<samp><span class="samp">target</span></samp>&rsquo;<dd>Display target-specific options.  Unlike the
+          <br><dt>`<samp><span class="samp">target</span></samp>'<dd>Display target-specific options.  Unlike the
 <samp><span class="option">--target-help</span></samp> option however, target-specific options of the
 linker and assembler are not displayed.  This is because those
 tools do not currently support the extended <samp><span class="option">--help=</span></samp> syntax.
 
-          <br><dt>&lsquo;<samp><span class="samp">params</span></samp>&rsquo;<dd>Display the values recognized by the <samp><span class="option">--param</span></samp>
+          <br><dt>`<samp><span class="samp">params</span></samp>'<dd>Display the values recognized by the <samp><span class="option">--param</span></samp>
 option.
 
           <br><dt><var>language</var><dd>Display the options supported for <var>language</var>, where
 <var>language</var> is the name of one of the languages supported in this
 version of GCC.
 
-          <br><dt>&lsquo;<samp><span class="samp">common</span></samp>&rsquo;<dd>Display the options that are common to all languages. 
+          <br><dt>`<samp><span class="samp">common</span></samp>'<dd>Display the options that are common to all languages. 
 </dl>
 
      <p>These are the supported qualifiers:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">undocumented</span></samp>&rsquo;<dd>Display only those options that are undocumented.
+<dt>`<samp><span class="samp">undocumented</span></samp>'<dd>Display only those options that are undocumented.
 
-          <br><dt>&lsquo;<samp><span class="samp">joined</span></samp>&rsquo;<dd>Display options taking an argument that appears after an equal
+          <br><dt>`<samp><span class="samp">joined</span></samp>'<dd>Display options taking an argument that appears after an equal
 sign in the same continuous piece of text, such as:
-&lsquo;<samp><span class="samp">--help=target</span></samp>&rsquo;.
+`<samp><span class="samp">--help=target</span></samp>'.
 
-          <br><dt>&lsquo;<samp><span class="samp">separate</span></samp>&rsquo;<dd>Display options taking an argument that appears as a separate word
-following the original option, such as: &lsquo;<samp><span class="samp">-o output-file</span></samp>&rsquo;. 
+          <br><dt>`<samp><span class="samp">separate</span></samp>'<dd>Display options taking an argument that appears as a separate word
+following the original option, such as: `<samp><span class="samp">-o output-file</span></samp>'. 
 </dl>
 
      <p>Thus for example to display all the undocumented target-specific
 switches supported by the compiler, use:
 
      <pre class="smallexample">          --help=target,undocumented
-</pre>
+     </pre>
      <p>The sense of a qualifier can be inverted by prefixing it with the
-&lsquo;<samp><span class="samp">^</span></samp>&rsquo; character, so for example to display all binary warning
+`<samp><span class="samp">^</span></samp>' character, so for example to display all binary warning
 options (i.e., ones that are either on or off and that do not take an
 argument) that have a description, use:
 
      <pre class="smallexample">          --help=warnings,^joined,^undocumented
-</pre>
+     </pre>
      <p>The argument to <samp><span class="option">--help=</span></samp> should not consist solely of inverted
 qualifiers.
 
@@ -295,7 +295,7 @@ case where it does work, however, is when one of the classes is
 optimization options, use:
 
      <pre class="smallexample">          --help=target,optimizers
-</pre>
+     </pre>
      <p>The <samp><span class="option">--help=</span></samp> option can be repeated on the command line.  Each
 successive use displays its requested class of options, skipping
 those that have already been displayed.
@@ -314,22 +314,22 @@ knows this at the point where the <samp><span class="option">--help=</span></sam
             -mabi=                                2
             -mabort-on-noreturn                   [disabled]
             -mapcs                                [disabled]
-</pre>
+     </pre>
      <p>The output is sensitive to the effects of previous command-line
 options, so for example it is possible to find out which optimizations
 are enabled at <samp><span class="option">-O2</span></samp> by using:
 
      <pre class="smallexample">          -Q -O2 --help=optimizers
-</pre>
+     </pre>
      <p>Alternatively you can discover which binary optimizations are enabled
 by <samp><span class="option">-O3</span></samp> by using:
 
      <pre class="smallexample">          gcc -c -Q -O3 --help=optimizers &gt; /tmp/O3-opts
           gcc -c -Q -O2 --help=optimizers &gt; /tmp/O2-opts
           diff /tmp/O2-opts /tmp/O3-opts | grep enabled
-</pre>
-     <br><dt><code>-no-canonical-prefixes</code><dd><a name="index-no_002dcanonical_002dprefixes-89"></a>Do not expand any symbolic links, resolve references to &lsquo;<samp><span class="samp">/../</span></samp>&rsquo;
-or &lsquo;<samp><span class="samp">/./</span></samp>&rsquo;, or make the path absolute when generating a relative
+     </pre>
+     <br><dt><code>-no-canonical-prefixes</code><dd><a name="index-no_002dcanonical_002dprefixes-89"></a>Do not expand any symbolic links, resolve references to `<samp><span class="samp">/../</span></samp>'
+or `<samp><span class="samp">/./</span></samp>', or make the path absolute when generating a relative
 prefix.
 
      <br><dt><code>--version</code><dd><a name="index-version-90"></a>Display the version number and copyrights of the invoked GCC.
@@ -339,10 +339,10 @@ wrapper program and its parameters are passed as a comma separated
 list.
 
      <pre class="smallexample">          gcc -c t.c -wrapper gdb,--args
-</pre>
+     </pre>
      <p class="noindent">This invokes all subprograms of <samp><span class="command">gcc</span></samp> under
-&lsquo;<samp><span class="samp">gdb --args</span></samp>&rsquo;, thus the invocation of <samp><span class="command">cc1</span></samp> is
-&lsquo;<samp><span class="samp">gdb --args cc1 ...</span></samp>&rsquo;.
+`<samp><span class="samp">gdb --args</span></samp>', thus the invocation of <samp><span class="command">cc1</span></samp> is
+`<samp><span class="samp">gdb --args cc1 ...</span></samp>'.
 
      <br><dt><code>-fplugin=</code><var>name</var><code>.so</code><dd>Load the plugin code in file <var>name</var>.so, assumed to be a
 shared object to be dlopen'd by the compiler.  The base name of
@@ -368,8 +368,8 @@ useful way to start writing a Go interface to code written in some
 other language.
 
      <!-- This file is designed to be included in manuals that use -->
-     <!-- expandargv. -->
-     <br><dt><code>@</code><var>file</var><dd>Read command-line options from <var>file</var>.  The options read are
+<!-- expandargv. -->
+<br><dt><code>@</code><var>file</var><dd>Read command-line options from <var>file</var>.  The options read are
 inserted in place of the original @<var>file</var> option.  If <var>file</var>
 does not exist, or cannot be read, then the option will be treated
 literally, and not removed.

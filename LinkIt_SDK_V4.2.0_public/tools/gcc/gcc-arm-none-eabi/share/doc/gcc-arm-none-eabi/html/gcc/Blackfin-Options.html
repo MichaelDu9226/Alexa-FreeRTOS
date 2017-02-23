@@ -3,7 +3,7 @@
 <title>Blackfin Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="AVR-Options.html#AVR-Options" title="AVR Options">
@@ -57,38 +57,38 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
 <p><a name="index-Blackfin-Options-1171"></a>
      <dl>
 <dt><code>-mcpu=</code><var>cpu</var><span class="roman">[</span><code>-</code><var>sirevision</var><span class="roman">]</span><dd><a name="index-mcpu_003d-1172"></a>Specifies the name of the target Blackfin processor.  Currently, <var>cpu</var>
-can be one of &lsquo;<samp><span class="samp">bf512</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf514</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf516</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf518</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">bf522</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf523</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf524</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf525</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf526</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">bf527</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf531</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf532</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf533</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">bf534</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf536</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf537</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf538</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf539</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">bf542</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf544</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf547</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf548</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf549</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">bf542m</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf544m</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf547m</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf548m</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf549m</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">bf561</span></samp>&rsquo;, &lsquo;<samp><span class="samp">bf592</span></samp>&rsquo;.
+can be one of `<samp><span class="samp">bf512</span></samp>', `<samp><span class="samp">bf514</span></samp>', `<samp><span class="samp">bf516</span></samp>', `<samp><span class="samp">bf518</span></samp>',
+`<samp><span class="samp">bf522</span></samp>', `<samp><span class="samp">bf523</span></samp>', `<samp><span class="samp">bf524</span></samp>', `<samp><span class="samp">bf525</span></samp>', `<samp><span class="samp">bf526</span></samp>',
+`<samp><span class="samp">bf527</span></samp>', `<samp><span class="samp">bf531</span></samp>', `<samp><span class="samp">bf532</span></samp>', `<samp><span class="samp">bf533</span></samp>',
+`<samp><span class="samp">bf534</span></samp>', `<samp><span class="samp">bf536</span></samp>', `<samp><span class="samp">bf537</span></samp>', `<samp><span class="samp">bf538</span></samp>', `<samp><span class="samp">bf539</span></samp>',
+`<samp><span class="samp">bf542</span></samp>', `<samp><span class="samp">bf544</span></samp>', `<samp><span class="samp">bf547</span></samp>', `<samp><span class="samp">bf548</span></samp>', `<samp><span class="samp">bf549</span></samp>',
+`<samp><span class="samp">bf542m</span></samp>', `<samp><span class="samp">bf544m</span></samp>', `<samp><span class="samp">bf547m</span></samp>', `<samp><span class="samp">bf548m</span></samp>', `<samp><span class="samp">bf549m</span></samp>',
+`<samp><span class="samp">bf561</span></samp>', `<samp><span class="samp">bf592</span></samp>'.
 
      <p>The optional <var>sirevision</var> specifies the silicon revision of the target
 Blackfin processor.  Any workarounds available for the targeted silicon revision
-are enabled.  If <var>sirevision</var> is &lsquo;<samp><span class="samp">none</span></samp>&rsquo;, no workarounds are enabled. 
-If <var>sirevision</var> is &lsquo;<samp><span class="samp">any</span></samp>&rsquo;, all workarounds for the targeted processor
+are enabled.  If <var>sirevision</var> is `<samp><span class="samp">none</span></samp>', no workarounds are enabled. 
+If <var>sirevision</var> is `<samp><span class="samp">any</span></samp>', all workarounds for the targeted processor
 are enabled.  The <code>__SILICON_REVISION__</code> macro is defined to two
 hexadecimal digits representing the major and minor numbers in the silicon
-revision.  If <var>sirevision</var> is &lsquo;<samp><span class="samp">none</span></samp>&rsquo;, the <code>__SILICON_REVISION__</code>
-is not defined.  If <var>sirevision</var> is &lsquo;<samp><span class="samp">any</span></samp>&rsquo;, the
+revision.  If <var>sirevision</var> is `<samp><span class="samp">none</span></samp>', the <code>__SILICON_REVISION__</code>
+is not defined.  If <var>sirevision</var> is `<samp><span class="samp">any</span></samp>', the
 <code>__SILICON_REVISION__</code> is defined to be <code>0xffff</code>. 
 If this optional <var>sirevision</var> is not used, GCC assumes the latest known
 silicon revision of the targeted Blackfin processor.
 
      <p>GCC defines a preprocessor macro for the specified <var>cpu</var>. 
-For the &lsquo;<samp><span class="samp">bfin-elf</span></samp>&rsquo; toolchain, this option causes the hardware BSP
+For the `<samp><span class="samp">bfin-elf</span></samp>' toolchain, this option causes the hardware BSP
 provided by libgloss to be linked in if <samp><span class="option">-msim</span></samp> is not given.
 
-     <p>Without this option, &lsquo;<samp><span class="samp">bf532</span></samp>&rsquo; is used as the processor by default.
+     <p>Without this option, `<samp><span class="samp">bf532</span></samp>' is used as the processor by default.
 
-     <p>Note that support for &lsquo;<samp><span class="samp">bf561</span></samp>&rsquo; is incomplete.  For &lsquo;<samp><span class="samp">bf561</span></samp>&rsquo;,
+     <p>Note that support for `<samp><span class="samp">bf561</span></samp>' is incomplete.  For `<samp><span class="samp">bf561</span></samp>',
 only the preprocessor macro is defined.
 
      <br><dt><code>-msim</code><dd><a name="index-msim-1173"></a>Specifies that the program will be run on the simulator.  This causes
 the simulator BSP provided by libgloss to be linked in.  This option
-has effect only for &lsquo;<samp><span class="samp">bfin-elf</span></samp>&rsquo; toolchain. 
+has effect only for `<samp><span class="samp">bfin-elf</span></samp>' toolchain. 
 Certain other options, such as <samp><span class="option">-mid-shared-library</span></samp> and
 <samp><span class="option">-mfdpic</span></samp>, imply <samp><span class="option">-msim</span></samp>.
 
@@ -122,7 +122,7 @@ uClinux kernel.
      <br><dt><code>-mid-shared-library</code><dd><a name="index-mid_002dshared_002dlibrary-1182"></a>Generate code that supports shared libraries via the library ID method. 
 This allows for execute in place and shared libraries in an environment
 without virtual memory management.  This option implies <samp><span class="option">-fPIC</span></samp>. 
-With a &lsquo;<samp><span class="samp">bfin-elf</span></samp>&rsquo; target, this option implies <samp><span class="option">-msim</span></samp>.
+With a `<samp><span class="samp">bfin-elf</span></samp>' target, this option implies <samp><span class="option">-msim</span></samp>.
 
      <br><dt><code>-mno-id-shared-library</code><dd><a name="index-mno_002did_002dshared_002dlibrary-1183"></a>Generate code that doesn't assume ID-based shared libraries are being used. 
 This is the default.

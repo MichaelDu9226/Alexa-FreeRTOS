@@ -3,7 +3,7 @@
 <title>Member Type Descriptor - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Cplusplus.html#Cplusplus" title="Cplusplus">
 <link rel="prev" href="Method-Type-Descriptor.html#Method-Type-Descriptor" title="Method Type Descriptor">
@@ -43,9 +43,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Cplusplus.html#Cplusplus">Cplusplus</a>
 <hr>
 </div>
 
-<h3 class="section">8.8 The &lsquo;<samp><span class="samp">@</span></samp>&rsquo; Type Descriptor</h3>
+<h3 class="section">8.8 The `<samp><span class="samp">@</span></samp>' Type Descriptor</h3>
 
-<p>The &lsquo;<samp><span class="samp">@</span></samp>&rsquo; type descriptor is used for a
+<p>The `<samp><span class="samp">@</span></samp>' type descriptor is used for a
 pointer-to-non-static-member-data type.  It is followed
 by type information for the class (or union), a comma, and type
 information for the member data.
@@ -59,9 +59,9 @@ information for the member data.
 <pre class="smallexample">     .stabs "int_in_a:t20=21=@19,1",128,0,0,0
 </pre>
    <p>Note that there is a conflict between this and type attributes
-(see <a href="String-Field.html#String-Field">String Field</a>); both use type descriptor &lsquo;<samp><span class="samp">@</span></samp>&rsquo;. 
-Fortunately, the &lsquo;<samp><span class="samp">@</span></samp>&rsquo; type descriptor used in this C<tt>++</tt> sense always
-will be followed by a digit, &lsquo;<samp><span class="samp">(</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">-</span></samp>&rsquo;, and type attributes
+(see <a href="String-Field.html#String-Field">String Field</a>); both use type descriptor `<samp><span class="samp">@</span></samp>'. 
+Fortunately, the `<samp><span class="samp">@</span></samp>' type descriptor used in this C<tt>++</tt> sense always
+will be followed by a digit, `<samp><span class="samp">(</span></samp>', or `<samp><span class="samp">-</span></samp>', and type attributes
 never start with those things.
 
    </body></html>

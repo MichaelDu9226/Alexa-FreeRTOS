@@ -3,7 +3,7 @@
 <title>Overlay Description - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="SECTIONS.html#SECTIONS" title="SECTIONS">
 <link rel="prev" href="Output-Section-Attributes.html#Output-Section-Attributes" title="Output Section Attributes">
@@ -113,9 +113,9 @@ the start address of the overlay plus the size of the largest section.
           .text1 { o2/*.o(.text) }
         }
 </pre>
-   <p class="noindent">This will define both &lsquo;<samp><span class="samp">.text0</span></samp>&rsquo; and &lsquo;<samp><span class="samp">.text1</span></samp>&rsquo; to start at
-address 0x1000.  &lsquo;<samp><span class="samp">.text0</span></samp>&rsquo; will be loaded at address 0x4000, and
-&lsquo;<samp><span class="samp">.text1</span></samp>&rsquo; will be loaded immediately after &lsquo;<samp><span class="samp">.text0</span></samp>&rsquo;.  The
+   <p class="noindent">This will define both `<samp><span class="samp">.text0</span></samp>' and `<samp><span class="samp">.text1</span></samp>' to start at
+address 0x1000.  `<samp><span class="samp">.text0</span></samp>' will be loaded at address 0x4000, and
+`<samp><span class="samp">.text1</span></samp>' will be loaded immediately after `<samp><span class="samp">.text0</span></samp>'.  The
 following symbols will be defined if referenced: <code>__load_start_text0</code>,
 <code>__load_stop_text0</code>, <code>__load_start_text1</code>,
 <code>__load_stop_text1</code>.

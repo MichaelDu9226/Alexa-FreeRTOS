@@ -3,7 +3,7 @@
 <title>Tagging Insns - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Insn-Attributes.html#Insn-Attributes" title="Insn Attributes">
 <link rel="prev" href="Expressions.html#Expressions" title="Expressions">
@@ -74,7 +74,7 @@ attribute's value is to use a <code>set</code> expression whose first operand is
 second operand of the <code>set</code> is an attribute expression
 (see <a href="Expressions.html#Expressions">Expressions</a>) giving the value of the attribute.
 
- <p>When the attribute value depends on the &lsquo;<samp><span class="samp">alternative</span></samp>&rsquo; attribute
+ <p>When the attribute value depends on the `<samp><span class="samp">alternative</span></samp>' attribute
 (i.e., which is the applicable alternative in the constraint of the
 insn), the <code>set_attr_alternative</code> expression can be used.  It
 allows the specification of a vector of attribute expressions, one for
@@ -94,13 +94,13 @@ or a string containing a comma-separated list giving the values for
 succeeding alternatives.  The number of elements must match the number
 of alternatives in the constraint of the insn pattern.
 
-     <p>Note that it may be useful to specify &lsquo;<samp><span class="samp">*</span></samp>&rsquo; for some alternative, in
+     <p>Note that it may be useful to specify `<samp><span class="samp">*</span></samp>' for some alternative, in
 which case the attribute will assume its default value for insns matching
 that alternative.
 
      <p><a name="index-set_005fattr_005falternative-3702"></a><br><dt><code>(set_attr_alternative </code><var>name</var><code> [</code><var>value1</var> <var>value2</var><code> ...])</code><dd>Depending on the alternative of the insn, the value will be one of the
 specified values.  This is a shorthand for using a <code>cond</code> with
-tests on the &lsquo;<samp><span class="samp">alternative</span></samp>&rsquo; attribute.
+tests on the `<samp><span class="samp">alternative</span></samp>' attribute.
 
      <p><a name="index-attr-3703"></a><br><dt><code>(set (attr </code><var>name</var><code>) </code><var>value</var><code>)</code><dd>The first operand of this <code>set</code> must be the special RTL expression
 <code>attr</code>, whose sole operand is a string giving the name of the

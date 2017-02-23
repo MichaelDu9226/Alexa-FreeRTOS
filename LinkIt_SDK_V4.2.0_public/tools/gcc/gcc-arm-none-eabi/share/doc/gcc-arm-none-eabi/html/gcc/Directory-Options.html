@@ -3,7 +3,7 @@
 <title>Directory Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="Link-Options.html#Link-Options" title="Link Options">
@@ -83,8 +83,8 @@ by <samp><span class="option">-fplugin=</span><var>name</var></samp> instead of
 to be used by the user, but only passed by the driver.
 
      <br><dt><code>-iquote</code><var>dir</var><dd><a name="index-iquote-1061"></a>Add the directory <var>dir</var> to the head of the list of directories to
-be searched for header files only for the case of &lsquo;<samp><span class="samp">#include
-"</span><var>file</var><span class="samp">"</span></samp>&rsquo;; they are not searched for &lsquo;<samp><span class="samp">#include &lt;</span><var>file</var><span class="samp">&gt;</span></samp>&rsquo;,
+be searched for header files only for the case of `<samp><span class="samp">#include
+"</span><var>file</var><span class="samp">"</span></samp>'; they are not searched for `<samp><span class="samp">#include &lt;</span><var>file</var><span class="samp">&gt;</span></samp>',
 otherwise just like <samp><span class="option">-I</span></samp>.
 
      <br><dt><code>-L</code><var>dir</var><dd><a name="index-L-1062"></a>Add directory <var>dir</var> to the list of directories to be searched
@@ -96,7 +96,7 @@ include files, and data files of the compiler itself.
      <p>The compiler driver program runs one or more of the subprograms
 <samp><span class="command">cpp</span></samp>, <samp><span class="command">cc1</span></samp>, <samp><span class="command">as</span></samp> and <samp><span class="command">ld</span></samp>.  It tries
 <var>prefix</var> as a prefix for each program it tries to run, both with and
-without &lsquo;<samp><var>machine</var><span class="samp">/</span><var>version</var><span class="samp">/</span></samp>&rsquo; (see <a href="Target-Options.html#Target-Options">Target Options</a>).
+without `<samp><var>machine</var><span class="samp">/</span><var>version</var><span class="samp">/</span></samp>' (see <a href="Target-Options.html#Target-Options">Target Options</a>).
 
      <p>For each subprogram to be run, the compiler driver first tries the
 <samp><span class="option">-B</span></samp> prefix, if any.  If that name is not found, or if <samp><span class="option">-B</span></samp>
@@ -115,7 +115,7 @@ to libraries in the linker, because the compiler translates these
 options into <samp><span class="option">-L</span></samp> options for the linker.  They also apply to
 includes files in the preprocessor, because the compiler translates these
 options into <samp><span class="option">-isystem</span></samp> options for the preprocessor.  In this case,
-the compiler appends &lsquo;<samp><span class="samp">include</span></samp>&rsquo; to the prefix.
+the compiler appends `<samp><span class="samp">include</span></samp>' to the prefix.
 
      <p>The runtime support file <samp><span class="file">libgcc.a</span></samp> can also be searched for using
 the <samp><span class="option">-B</span></samp> prefix, if needed.  If it is not found there, the two
@@ -161,17 +161,17 @@ such a suffix.
      <br><dt><code>-I-</code><dd><a name="index-I_002d-1067"></a>This option has been deprecated.  Please use <samp><span class="option">-iquote</span></samp> instead for
 <samp><span class="option">-I</span></samp> directories before the <samp><span class="option">-I-</span></samp> and remove the <samp><span class="option">-I-</span></samp>. 
 Any directories you specify with <samp><span class="option">-I</span></samp> options before the <samp><span class="option">-I-</span></samp>
-option are searched only for the case of &lsquo;<samp><span class="samp">#include "</span><var>file</var><span class="samp">"</span></samp>&rsquo;;
-they are not searched for &lsquo;<samp><span class="samp">#include &lt;</span><var>file</var><span class="samp">&gt;</span></samp>&rsquo;.
+option are searched only for the case of `<samp><span class="samp">#include "</span><var>file</var><span class="samp">"</span></samp>';
+they are not searched for `<samp><span class="samp">#include &lt;</span><var>file</var><span class="samp">&gt;</span></samp>'.
 
      <p>If additional directories are specified with <samp><span class="option">-I</span></samp> options after
-the <samp><span class="option">-I-</span></samp>, these directories are searched for all &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;
+the <samp><span class="option">-I-</span></samp>, these directories are searched for all `<samp><span class="samp">#include</span></samp>'
 directives.  (Ordinarily <em>all</em> <samp><span class="option">-I</span></samp> directories are used
 this way.)
 
      <p>In addition, the <samp><span class="option">-I-</span></samp> option inhibits the use of the current
 directory (where the current input file came from) as the first search
-directory for &lsquo;<samp><span class="samp">#include "</span><var>file</var><span class="samp">"</span></samp>&rsquo;.  There is no way to
+directory for `<samp><span class="samp">#include "</span><var>file</var><span class="samp">"</span></samp>'.  There is no way to
 override this effect of <samp><span class="option">-I-</span></samp>.  With <samp><span class="option">-I.</span></samp> you can specify
 searching the directory that is current when the compiler is
 invoked.  That is not exactly the same as what the preprocessor does
@@ -183,5 +183,5 @@ independent.
 </dl>
 
 <!-- man end -->
- </body></html>
+</body></html>
 

@@ -3,7 +3,7 @@
 <title>Fixed-Point - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Hex-Floats.html#Hex-Floats" title="Hex Floats">
@@ -114,35 +114,35 @@ The format of fixed-point data varies and depends on the target machine.
 
  <p>Use a suffix in a fixed-point literal constant:
      <ul>
-<li>&lsquo;<samp><span class="samp">hr</span></samp>&rsquo; or &lsquo;<samp><span class="samp">HR</span></samp>&rsquo; for <code>short _Fract</code> and
+<li>`<samp><span class="samp">hr</span></samp>' or `<samp><span class="samp">HR</span></samp>' for <code>short _Fract</code> and
 <code>_Sat short _Fract</code>
-<li>&lsquo;<samp><span class="samp">r</span></samp>&rsquo; or &lsquo;<samp><span class="samp">R</span></samp>&rsquo; for <code>_Fract</code> and <code>_Sat _Fract</code>
-<li>&lsquo;<samp><span class="samp">lr</span></samp>&rsquo; or &lsquo;<samp><span class="samp">LR</span></samp>&rsquo; for <code>long _Fract</code> and
+<li>`<samp><span class="samp">r</span></samp>' or `<samp><span class="samp">R</span></samp>' for <code>_Fract</code> and <code>_Sat _Fract</code>
+<li>`<samp><span class="samp">lr</span></samp>' or `<samp><span class="samp">LR</span></samp>' for <code>long _Fract</code> and
 <code>_Sat long _Fract</code>
-<li>&lsquo;<samp><span class="samp">llr</span></samp>&rsquo; or &lsquo;<samp><span class="samp">LLR</span></samp>&rsquo; for <code>long long _Fract</code> and
+<li>`<samp><span class="samp">llr</span></samp>' or `<samp><span class="samp">LLR</span></samp>' for <code>long long _Fract</code> and
 <code>_Sat long long _Fract</code>
-<li>&lsquo;<samp><span class="samp">uhr</span></samp>&rsquo; or &lsquo;<samp><span class="samp">UHR</span></samp>&rsquo; for <code>unsigned short _Fract</code> and
+<li>`<samp><span class="samp">uhr</span></samp>' or `<samp><span class="samp">UHR</span></samp>' for <code>unsigned short _Fract</code> and
 <code>_Sat unsigned short _Fract</code>
-<li>&lsquo;<samp><span class="samp">ur</span></samp>&rsquo; or &lsquo;<samp><span class="samp">UR</span></samp>&rsquo; for <code>unsigned _Fract</code> and
+<li>`<samp><span class="samp">ur</span></samp>' or `<samp><span class="samp">UR</span></samp>' for <code>unsigned _Fract</code> and
 <code>_Sat unsigned _Fract</code>
-<li>&lsquo;<samp><span class="samp">ulr</span></samp>&rsquo; or &lsquo;<samp><span class="samp">ULR</span></samp>&rsquo; for <code>unsigned long _Fract</code> and
+<li>`<samp><span class="samp">ulr</span></samp>' or `<samp><span class="samp">ULR</span></samp>' for <code>unsigned long _Fract</code> and
 <code>_Sat unsigned long _Fract</code>
-<li>&lsquo;<samp><span class="samp">ullr</span></samp>&rsquo; or &lsquo;<samp><span class="samp">ULLR</span></samp>&rsquo; for <code>unsigned long long _Fract</code>
+<li>`<samp><span class="samp">ullr</span></samp>' or `<samp><span class="samp">ULLR</span></samp>' for <code>unsigned long long _Fract</code>
 and <code>_Sat unsigned long long _Fract</code>
-<li>&lsquo;<samp><span class="samp">hk</span></samp>&rsquo; or &lsquo;<samp><span class="samp">HK</span></samp>&rsquo; for <code>short _Accum</code> and
+<li>`<samp><span class="samp">hk</span></samp>' or `<samp><span class="samp">HK</span></samp>' for <code>short _Accum</code> and
 <code>_Sat short _Accum</code>
-<li>&lsquo;<samp><span class="samp">k</span></samp>&rsquo; or &lsquo;<samp><span class="samp">K</span></samp>&rsquo; for <code>_Accum</code> and <code>_Sat _Accum</code>
-<li>&lsquo;<samp><span class="samp">lk</span></samp>&rsquo; or &lsquo;<samp><span class="samp">LK</span></samp>&rsquo; for <code>long _Accum</code> and
+<li>`<samp><span class="samp">k</span></samp>' or `<samp><span class="samp">K</span></samp>' for <code>_Accum</code> and <code>_Sat _Accum</code>
+<li>`<samp><span class="samp">lk</span></samp>' or `<samp><span class="samp">LK</span></samp>' for <code>long _Accum</code> and
 <code>_Sat long _Accum</code>
-<li>&lsquo;<samp><span class="samp">llk</span></samp>&rsquo; or &lsquo;<samp><span class="samp">LLK</span></samp>&rsquo; for <code>long long _Accum</code> and
+<li>`<samp><span class="samp">llk</span></samp>' or `<samp><span class="samp">LLK</span></samp>' for <code>long long _Accum</code> and
 <code>_Sat long long _Accum</code>
-<li>&lsquo;<samp><span class="samp">uhk</span></samp>&rsquo; or &lsquo;<samp><span class="samp">UHK</span></samp>&rsquo; for <code>unsigned short _Accum</code> and
+<li>`<samp><span class="samp">uhk</span></samp>' or `<samp><span class="samp">UHK</span></samp>' for <code>unsigned short _Accum</code> and
 <code>_Sat unsigned short _Accum</code>
-<li>&lsquo;<samp><span class="samp">uk</span></samp>&rsquo; or &lsquo;<samp><span class="samp">UK</span></samp>&rsquo; for <code>unsigned _Accum</code> and
+<li>`<samp><span class="samp">uk</span></samp>' or `<samp><span class="samp">UK</span></samp>' for <code>unsigned _Accum</code> and
 <code>_Sat unsigned _Accum</code>
-<li>&lsquo;<samp><span class="samp">ulk</span></samp>&rsquo; or &lsquo;<samp><span class="samp">ULK</span></samp>&rsquo; for <code>unsigned long _Accum</code> and
+<li>`<samp><span class="samp">ulk</span></samp>' or `<samp><span class="samp">ULK</span></samp>' for <code>unsigned long _Accum</code> and
 <code>_Sat unsigned long _Accum</code>
-<li>&lsquo;<samp><span class="samp">ullk</span></samp>&rsquo; or &lsquo;<samp><span class="samp">ULLK</span></samp>&rsquo; for <code>unsigned long long _Accum</code>
+<li>`<samp><span class="samp">ullk</span></samp>' or `<samp><span class="samp">ULLK</span></samp>' for <code>unsigned long long _Accum</code>
 and <code>_Sat unsigned long long _Accum</code>
 </ul>
 

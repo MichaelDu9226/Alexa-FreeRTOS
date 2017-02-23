@@ -3,7 +3,7 @@
 <title>Trace File Format - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Operating-System-Information.html#Operating-System-Information" title="Operating System Information">
 <link rel="next" href="Index-Section-Format.html#Index-Section-Format" title="Index Section Format">
@@ -63,7 +63,7 @@ ignore any line that it does not recognize.  An empty line marks the end
 of this section.
 
 <!-- FIXME add some specific types of data -->
-   <p>The trace frame section consists of a number of consecutive frames. 
+<p>The trace frame section consists of a number of consecutive frames. 
 Each frame begins with a two-byte tracepoint number, followed by a
 four-byte size giving the amount of data in the frame.  The data in
 the frame consists of a number of blocks, each introduced by a
@@ -73,7 +73,7 @@ hexadecimal or other encoding; its endianness matches the target's
 endianness.
 
 <!-- FIXME bi-arch may require endianness/arch info in description section -->
-     <dl>
+<dl>
 <dt><code>R </code><var>bytes</var><dd>Register block.  The number and ordering of bytes matches that of a
 <code>g</code> packet in the remote protocol.  Note that these are the
 actual bytes, in target order and <span class="sc">gdb</span> register order, not a

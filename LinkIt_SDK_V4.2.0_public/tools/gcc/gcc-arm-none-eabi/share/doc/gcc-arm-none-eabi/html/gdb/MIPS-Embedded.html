@@ -3,7 +3,7 @@
 <title>MIPS Embedded - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Embedded-Processors.html#Embedded-Processors" title="Embedded Processors">
 <link rel="prev" href="MicroBlaze.html#MicroBlaze" title="MicroBlaze">
@@ -49,14 +49,14 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Embedded-Processors.html#Embedded-Proce
 
 <p><a name="index-g_t_0040acronym_007bMIPS_007d-boards-1428"></a><span class="sc">gdb</span> can use the <acronym>MIPS</acronym> remote debugging protocol to talk to a
 <acronym>MIPS</acronym> board attached to a serial line.  This is available when
-you configure <span class="sc">gdb</span> with &lsquo;<samp><span class="samp">--target=mips-elf</span></samp>&rsquo;.
+you configure <span class="sc">gdb</span> with `<samp><span class="samp">--target=mips-elf</span></samp>'.
 
    <p>Use these <span class="sc">gdb</span> commands to specify the connection to your target board:
 
      <dl>
 <dt><code>target mips </code><var>port</var><dd><a name="index-target-mips-_0040var_007bport_007d-1429"></a>To run a program on the board, start up <code>gdb</code> with the
 name of your program as the argument.  To connect to the board, use the
-command &lsquo;<samp><span class="samp">target mips </span><var>port</var></samp>&rsquo;, where <var>port</var> is the name of
+command `<samp><span class="samp">target mips </span><var>port</var></samp>', where <var>port</var> is the name of
 the serial port connected to the board.  If the program has not already
 been downloaded to the board, you may use the <code>load</code> command to
 download it.  You can then use all the usual <span class="sc">gdb</span> commands.
@@ -70,11 +70,11 @@ debugger:
           (gdb) target mips /dev/ttyb
           (gdb) load <var>prog</var>
           (gdb) run
-</pre>
+     </pre>
      <br><dt><code>target mips </code><var>hostname</var><code>:</code><var>portnumber</var><dd>On some <span class="sc">gdb</span> host configurations, you can specify a TCP
 connection (for instance, to a serial line managed by a terminal
 concentrator) instead of a serial port, using the syntax
-&lsquo;<samp><var>hostname</var><span class="samp">:</span><var>portnumber</var></samp>&rsquo;.
+`<samp><var>hostname</var><span class="samp">:</span><var>portnumber</var></samp>'.
 
      <br><dt><code>target pmon </code><var>port</var><dd><a name="index-target-pmon-_0040var_007bport_007d-1430"></a>PMON ROM monitor.
 
@@ -92,23 +92,23 @@ concentrator) instead of a serial port, using the syntax
 
      <dl>
 <dt><code>set mipsfpu double</code><dt><code>set mipsfpu single</code><dt><code>set mipsfpu none</code><dt><code>set mipsfpu auto</code><dt><code>show mipsfpu</code><dd><a name="index-set-mipsfpu-1435"></a><a name="index-show-mipsfpu-1436"></a><a name="index-g_t_0040acronym_007bMIPS_007d-remote-floating-point-1437"></a><a name="index-floating-point_002c-_0040acronym_007bMIPS_007d-remote-1438"></a>If your target board does not support the <acronym>MIPS</acronym> floating point
-coprocessor, you should use the command &lsquo;<samp><span class="samp">set mipsfpu none</span></samp>&rsquo; (if you
+coprocessor, you should use the command `<samp><span class="samp">set mipsfpu none</span></samp>' (if you
 need this, you may wish to put the command in your <span class="sc">gdb</span> init
 file).  This tells <span class="sc">gdb</span> how to find the return value of
 functions which return floating point values.  It also allows
 <span class="sc">gdb</span> to avoid saving the floating point registers when calling
 functions on the board.  If you are using a floating point coprocessor
 with only single precision floating point support, as on the <span class="sc">r4650</span>
-processor, use the command &lsquo;<samp><span class="samp">set mipsfpu single</span></samp>&rsquo;.  The default
+processor, use the command `<samp><span class="samp">set mipsfpu single</span></samp>'.  The default
 double precision floating point coprocessor may be selected using
-&lsquo;<samp><span class="samp">set mipsfpu double</span></samp>&rsquo;.
+`<samp><span class="samp">set mipsfpu double</span></samp>'.
 
      <p>In previous versions the only choices were double precision or no
-floating point, so &lsquo;<samp><span class="samp">set mipsfpu on</span></samp>&rsquo; will select double precision
-and &lsquo;<samp><span class="samp">set mipsfpu off</span></samp>&rsquo; will select no floating point.
+floating point, so `<samp><span class="samp">set mipsfpu on</span></samp>' will select double precision
+and `<samp><span class="samp">set mipsfpu off</span></samp>' will select no floating point.
 
      <p>As usual, you can inquire about the <code>mipsfpu</code> variable with
-&lsquo;<samp><span class="samp">show mipsfpu</span></samp>&rsquo;.
+`<samp><span class="samp">show mipsfpu</span></samp>'.
 
      <br><dt><code>set timeout </code><var>seconds</var><dt><code>set retransmit-timeout </code><var>seconds</var><dt><code>show timeout</code><dt><code>show retransmit-timeout</code><dd><a name="index-g_t_0040code_007btimeout_007d_002c-_0040acronym_007bMIPS_007d-protocol-1439"></a><a name="index-g_t_0040code_007bretransmit_002dtimeout_007d_002c-_0040acronym_007bMIPS_007d-protocol-1440"></a><a name="index-set-timeout-1441"></a><a name="index-show-timeout-1442"></a><a name="index-set-retransmit_002dtimeout-1443"></a><a name="index-show-retransmit_002dtimeout-1444"></a>You can control the timeout used while waiting for a packet, in the <acronym>MIPS</acronym>
 remote protocol, with the <code>set timeout </code><var>seconds</var> command.  The
@@ -117,7 +117,7 @@ waiting for an acknowledgment of a packet with the <code>set
 retransmit-timeout </code><var>seconds</var> command.  The default is 3 seconds. 
 You can inspect both values with <code>show timeout</code> and <code>show
 retransmit-timeout</code>.  (These commands are <em>only</em> available when
-<span class="sc">gdb</span> is configured for &lsquo;<samp><span class="samp">--target=mips-elf</span></samp>&rsquo;.)
+<span class="sc">gdb</span> is configured for `<samp><span class="samp">--target=mips-elf</span></samp>'.)
 
      <p>The timeout set by <code>set timeout</code> does not apply when <span class="sc">gdb</span>
 is waiting for your program to stop.  In that case, <span class="sc">gdb</span> waits
@@ -134,9 +134,9 @@ trying to synchronize with the remote system.
      <br><dt><code>set monitor-prompt </code><var>prompt</var><dd><a name="index-set-monitor_002dprompt_0040r_007b_002c-_0040acronym_007bMIPS_007d-remote_007d-1448"></a><a name="index-remote-monitor-prompt-1449"></a>Tell <span class="sc">gdb</span> to expect the specified <var>prompt</var> string from the
 remote monitor.  The default depends on the target:
           <dl>
-<dt>pmon target<dd>&lsquo;<samp><span class="samp">PMON</span></samp>&rsquo;
-<br><dt>ddb target<dd>&lsquo;<samp><span class="samp">NEC010</span></samp>&rsquo;
-<br><dt>lsi target<dd>&lsquo;<samp><span class="samp">PMON&gt;</span></samp>&rsquo;
+<dt>pmon target<dd>`<samp><span class="samp">PMON</span></samp>'
+<br><dt>ddb target<dd>`<samp><span class="samp">NEC010</span></samp>'
+<br><dt>lsi target<dd>`<samp><span class="samp">PMON&gt;</span></samp>'
 </dl>
 
      <br><dt><code>show monitor-prompt</code><dd><a name="index-show-monitor_002dprompt_0040r_007b_002c-_0040acronym_007bMIPS_007d-remote_007d-1450"></a>Show the current strings <span class="sc">gdb</span> expects as the prompt from the

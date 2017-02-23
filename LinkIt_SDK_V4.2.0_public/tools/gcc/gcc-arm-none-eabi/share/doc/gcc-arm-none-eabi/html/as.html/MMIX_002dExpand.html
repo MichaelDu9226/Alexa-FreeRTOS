@@ -3,7 +3,7 @@
 <title>MMIX-Expand - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="MMIX_002dDependent.html#MMIX_002dDependent" title="MMIX-Dependent">
 <link rel="prev" href="MMIX_002dOpts.html#MMIX_002dOpts" title="MMIX-Opts">
@@ -58,20 +58,20 @@ the instruction.  Expansion will take place for the following
 instructions:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">GETA</span></samp>&rsquo;<dd>Expands to a sequence of four instructions: <code>SETL</code>, <code>INCML</code>,
+<dt>`<samp><span class="samp">GETA</span></samp>'<dd>Expands to a sequence of four instructions: <code>SETL</code>, <code>INCML</code>,
 <code>INCMH</code> and <code>INCH</code>.  The operand must be a multiple of four. 
 <br><dt>Conditional branches<dd>A branch instruction is turned into a branch with the complemented
 condition and prediction bit over five instructions; four instructions
 setting <code>$255</code> to the operand value, which like with <code>GETA</code> must
 be a multiple of four, and a final <code>GO $255,$255,0</code>. 
-<br><dt>&lsquo;<samp><span class="samp">PUSHJ</span></samp>&rsquo;<dd>Similar to expansion for conditional branches; four instructions set
+<br><dt>`<samp><span class="samp">PUSHJ</span></samp>'<dd>Similar to expansion for conditional branches; four instructions set
 <code>$255</code> to the operand value, followed by a <code>PUSHGO $255,$255,0</code>. 
-<br><dt>&lsquo;<samp><span class="samp">JMP</span></samp>&rsquo;<dd>Similar to conditional branches and <code>PUSHJ</code>.  The final instruction
+<br><dt>`<samp><span class="samp">JMP</span></samp>'<dd>Similar to conditional branches and <code>PUSHJ</code>.  The final instruction
 is <code>GO $255,$255,0</code>. 
 </dl>
 
    <p>The linker <code>ld</code> is expected to shrink these expansions for
-code assembled with &lsquo;<samp><span class="samp">--relax</span></samp>&rsquo; (though not currently implemented).
+code assembled with `<samp><span class="samp">--relax</span></samp>' (though not currently implemented).
 
    </body></html>
 

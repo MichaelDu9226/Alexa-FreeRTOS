@@ -3,7 +3,7 @@
 <title>Structures - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Types.html#Types" title="Types">
 <link rel="prev" href="Enumerations.html#Enumerations" title="Enumerations">
@@ -67,15 +67,15 @@ of the program in the bss section.
 </pre>
    <p>The structure tag has an <code>N_LSYM</code> stab type because, like the
 enumeration, the symbol has file scope.  Like the enumeration, the
-symbol descriptor is &lsquo;<samp><span class="samp">T</span></samp>&rsquo;, for enumeration, structure, or tag type. 
-The type descriptor &lsquo;<samp><span class="samp">s</span></samp>&rsquo; following the &lsquo;<samp><span class="samp">16=</span></samp>&rsquo; of the type
+symbol descriptor is `<samp><span class="samp">T</span></samp>', for enumeration, structure, or tag type. 
+The type descriptor `<samp><span class="samp">s</span></samp>' following the `<samp><span class="samp">16=</span></samp>' of the type
 definition narrows the symbol type to structure.
 
-   <p>Following the &lsquo;<samp><span class="samp">s</span></samp>&rsquo; type descriptor is the number of bytes the
+   <p>Following the `<samp><span class="samp">s</span></samp>' type descriptor is the number of bytes the
 structure occupies, followed by a description of each structure element. 
 The structure element descriptions are of the form
-&lsquo;<samp><var>name</var><span class="samp">:</span><var>type</var><span class="samp">, </span><var>bit offset from the start of the
-struct</var><span class="samp">, </span><var>number of bits in the element</var></samp>&rsquo;.
+`<samp><var>name</var><span class="samp">:</span><var>type</var><span class="samp">, </span><var>bit offset from the start of the
+struct</var><span class="samp">, </span><var>number of bits in the element</var></samp>'.
 
 <!-- FIXME: phony line break.  Can probably be fixed by using an example -->
 <!-- with fewer fields. -->
@@ -84,10 +84,10 @@ struct</var><span class="samp">, </span><var>number of bits in the element</var>
              s_char_vec:17=ar1;0;7;2,64,64;s_next:18=*16,128,32;;",128,0,0,0
 </pre>
    <p>In this example, the first two structure elements are previously defined
-types.  For these, the type following the &lsquo;<samp><var>name</var><span class="samp">:</span></samp>&rsquo; part of the
+types.  For these, the type following the `<samp><var>name</var><span class="samp">:</span></samp>' part of the
 element description is a simple type reference.  The other two structure
 elements are new types.  In this case there is a type definition
-embedded after the &lsquo;<samp><var>name</var><span class="samp">:</span></samp>&rsquo;.  The type definition for the
+embedded after the `<samp><var>name</var><span class="samp">:</span></samp>'.  The type definition for the
 array element looks just like a type definition for a stand-alone array. 
 The <code>s_next</code> field is a pointer to the same kind of structure that
 the field is an element of.  So the definition of structure type 16

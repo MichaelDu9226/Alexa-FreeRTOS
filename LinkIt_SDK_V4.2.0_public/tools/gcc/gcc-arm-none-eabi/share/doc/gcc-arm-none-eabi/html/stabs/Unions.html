@@ -3,7 +3,7 @@
 <title>Unions - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Types.html#Types" title="Types">
 <link rel="prev" href="Typedefs.html#Typedefs" title="Typedefs">
@@ -70,19 +70,19 @@ scope.
      .stabs "u_tag:T23=u4u_int:1,0,32;u_float:12,0,32;u_char:21,0,32;;",
             128,0,0,0
 </pre>
-   <p>The symbol descriptor &lsquo;<samp><span class="samp">T</span></samp>&rsquo;, following the &lsquo;<samp><span class="samp">name:</span></samp>&rsquo; means that
+   <p>The symbol descriptor `<samp><span class="samp">T</span></samp>', following the `<samp><span class="samp">name:</span></samp>' means that
 the stab describes an enumeration, structure, or union tag.  The type
-descriptor &lsquo;<samp><span class="samp">u</span></samp>&rsquo;, following the &lsquo;<samp><span class="samp">23=</span></samp>&rsquo; of the type definition,
-narrows it down to a union type definition.  Following the &lsquo;<samp><span class="samp">u</span></samp>&rsquo; is
+descriptor `<samp><span class="samp">u</span></samp>', following the `<samp><span class="samp">23=</span></samp>' of the type definition,
+narrows it down to a union type definition.  Following the `<samp><span class="samp">u</span></samp>' is
 the number of bytes in the union.  After that is a list of union element
-descriptions.  Their format is &lsquo;<samp><var>name</var><span class="samp">:</span><var>type</var><span class="samp">, </span><var>bit
-offset into the union</var><span class="samp">, </span><var>number of bytes for the element</var><span class="samp">;</span></samp>&rsquo;.
+descriptions.  Their format is `<samp><var>name</var><span class="samp">:</span><var>type</var><span class="samp">, </span><var>bit
+offset into the union</var><span class="samp">, </span><var>number of bytes for the element</var><span class="samp">;</span></samp>'.
 
    <p>The stab for the union variable is:
 
 <pre class="example">     .stabs "an_u:23",128,0,0,-20     # <span class="roman">128 is N_LSYM</span>
 </pre>
-   <p>&lsquo;<samp><span class="samp">-20</span></samp>&rsquo; specifies where the variable is stored (see <a href="Stack-Variables.html#Stack-Variables">Stack Variables</a>).
+   <p>`<samp><span class="samp">-20</span></samp>' specifies where the variable is stored (see <a href="Stack-Variables.html#Stack-Variables">Stack Variables</a>).
 
    </body></html>
 

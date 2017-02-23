@@ -3,7 +3,7 @@
 <title>GDB/MI Output Syntax - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI-Command-Syntax.html#GDB_002fMI-Command-Syntax" title="GDB/MI Command Syntax">
 <link rel="prev" href="GDB_002fMI-Input-Syntax.html#GDB_002fMI-Input-Syntax" title="GDB/MI Input Syntax">
@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI-Command-Syntax.html#GDB_002f
 <p><a name="index-output-syntax-of-_0040sc_007bgdb_002fmi_007d-2237"></a><a name="index-g_t_0040sc_007bgdb_002fmi_007d_002c-output-syntax-2238"></a>The output from <span class="sc">gdb/mi</span> consists of zero or more out-of-band records
 followed, optionally, by a single result record.  This result record
 is for the most recent command.  The sequence of output records is
-terminated by &lsquo;<samp><span class="samp">(gdb)</span></samp>&rsquo;.
+terminated by `<samp><span class="samp">(gdb)</span></samp>'.
 
    <p>If an input command was prefixed with a <var>token</var> then the
 corresponding output for that command will also be prefixed by that same
@@ -118,26 +118,26 @@ prior command.
 
      <li><a name="index-status-output-in-_0040sc_007bgdb_002fmi_007d-2239"></a><var>status-async-output</var> contains on-going status information about the
 progress of a slow operation.  It can be discarded.  All status output is
-prefixed by &lsquo;<samp><span class="samp">+</span></samp>&rsquo;.
+prefixed by `<samp><span class="samp">+</span></samp>'.
 
      <li><a name="index-async-output-in-_0040sc_007bgdb_002fmi_007d-2240"></a><var>exec-async-output</var> contains asynchronous state change on the target
 (stopped, started, disappeared).  All async output is prefixed by
-&lsquo;<samp><span class="samp">*</span></samp>&rsquo;.
+`<samp><span class="samp">*</span></samp>'.
 
      <li><a name="index-notify-output-in-_0040sc_007bgdb_002fmi_007d-2241"></a><var>notify-async-output</var> contains supplementary information that the
 client should handle (e.g., a new breakpoint information).  All notify
-output is prefixed by &lsquo;<samp><span class="samp">=</span></samp>&rsquo;.
+output is prefixed by `<samp><span class="samp">=</span></samp>'.
 
      <li><a name="index-console-output-in-_0040sc_007bgdb_002fmi_007d-2242"></a><var>console-stream-output</var> is output that should be displayed as is in the
 console.  It is the textual response to a CLI command.  All the console
-output is prefixed by &lsquo;<samp><span class="samp">~</span></samp>&rsquo;.
+output is prefixed by `<samp><span class="samp">~</span></samp>'.
 
      <li><a name="index-target-output-in-_0040sc_007bgdb_002fmi_007d-2243"></a><var>target-stream-output</var> is the output produced by the target program. 
-All the target output is prefixed by &lsquo;<samp><span class="samp">@</span></samp>&rsquo;.
+All the target output is prefixed by `<samp><span class="samp">@</span></samp>'.
 
      <li><a name="index-log-output-in-_0040sc_007bgdb_002fmi_007d-2244"></a><var>log-stream-output</var> is output text coming from <span class="sc">gdb</span>'s internals, for
 instance messages that should be displayed as part of an error log.  All
-the log output is prefixed by &lsquo;<samp><span class="samp">&amp;</span></samp>&rsquo;.
+the log output is prefixed by `<samp><span class="samp">&amp;</span></samp>'.
 
      <li><a name="index-list-output-in-_0040sc_007bgdb_002fmi_007d-2245"></a>New <span class="sc">gdb/mi</span> commands should only output <var>lists</var> containing
 <var>values</var>.
@@ -148,5 +148,5 @@ the log output is prefixed by &lsquo;<samp><span class="samp">&amp;</span></samp
 details about the various output records.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-   </body></html>
+</body></html>
 

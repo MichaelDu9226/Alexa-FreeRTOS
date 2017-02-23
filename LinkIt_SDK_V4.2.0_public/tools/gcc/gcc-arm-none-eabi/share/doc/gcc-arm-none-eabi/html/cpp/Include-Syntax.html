@@ -3,7 +3,7 @@
 <title>Include Syntax - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Header-Files.html#Header-Files" title="Header Files">
 <link rel="next" href="Include-Operation.html#Include-Operation" title="Include Operation">
@@ -55,7 +55,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Header-Files.html#Header-Files">Header 
 <h3 class="section">2.1 Include Syntax</h3>
 
 <p><a name="index-g_t_0023include-27"></a>Both user and system header files are included using the preprocessing
-directive &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;.  It has two variants:
+directive `<samp><span class="samp">#include</span></samp>'.  It has two variants:
 
      <dl>
 <dt><code>#include &lt;</code><var>file</var><code>&gt;</code><dd>This variant is used for system header files.  It searches for a file
@@ -69,7 +69,7 @@ directories used for <code>&lt;</code><var>file</var><code>&gt;</code>.  You can
 to the list of quote directories with the <samp><span class="option">-iquote</span></samp> option. 
 </dl>
 
-   <p>The argument of &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;, whether delimited with quote marks or
+   <p>The argument of `<samp><span class="samp">#include</span></samp>', whether delimited with quote marks or
 angle brackets, behaves like a string constant in that comments are not
 recognized, and macro names are not expanded.  Thus, <code>#include&nbsp;&lt;x/*y&gt;<!-- /@w --></code> specifies inclusion of a system header file named <samp><span class="file">x/*y</span></samp>.
 
@@ -77,9 +77,9 @@ recognized, and macro names are not expanded.  Thus, <code>#include&nbsp;&lt;x/*
 ordinary text characters, not escape characters.  None of the character
 escape sequences appropriate to string constants in C are processed. 
 Thus, <code>#include&nbsp;"x\n\\y"<!-- /@w --></code> specifies a filename containing three
-backslashes.  (Some systems interpret &lsquo;<samp><span class="samp">\</span></samp>&rsquo; as a pathname separator. 
-All of these also interpret &lsquo;<samp><span class="samp">/</span></samp>&rsquo; the same way.  It is most portable
-to use only &lsquo;<samp><span class="samp">/</span></samp>&rsquo;.)
+backslashes.  (Some systems interpret `<samp><span class="samp">\</span></samp>' as a pathname separator. 
+All of these also interpret `<samp><span class="samp">/</span></samp>' the same way.  It is most portable
+to use only `<samp><span class="samp">/</span></samp>'.)
 
    <p>It is an error if there is anything (other than comments) on the line
 after the file name.

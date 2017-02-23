@@ -3,7 +3,7 @@
 <title>Environment - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Running.html#Running" title="Running">
 <link rel="prev" href="Arguments.html#Arguments" title="Arguments">
@@ -61,14 +61,14 @@ environment without having to start <span class="sc">gdb</span> over again.
 (the search path for executables) that will be passed to your program. 
 The value of <code>PATH</code> used by <span class="sc">gdb</span> does not change. 
 You may specify several directory names, separated by whitespace or by a
-system-dependent separator character (&lsquo;<samp><span class="samp">:</span></samp>&rsquo; on Unix, &lsquo;<samp><span class="samp">;</span></samp>&rsquo; on
+system-dependent separator character (`<samp><span class="samp">:</span></samp>' on Unix, `<samp><span class="samp">;</span></samp>' on
 MS-DOS and MS-Windows).  If <var>directory</var> is already in the path, it
 is moved to the front, so it is searched sooner.
 
-     <p>You can use the string &lsquo;<samp><span class="samp">$cwd</span></samp>&rsquo; to refer to whatever is the current
+     <p>You can use the string `<samp><span class="samp">$cwd</span></samp>' to refer to whatever is the current
 working directory at the time <span class="sc">gdb</span> searches the path.  If you
-use &lsquo;<samp><span class="samp">.</span></samp>&rsquo; instead, it refers to the directory where you executed the
-<code>path</code> command.  <span class="sc">gdb</span> replaces &lsquo;<samp><span class="samp">.</span></samp>&rsquo; in the
+use `<samp><span class="samp">.</span></samp>' instead, it refers to the directory where you executed the
+<code>path</code> command.  <span class="sc">gdb</span> replaces `<samp><span class="samp">.</span></samp>' in the
 <var>directory</var> argument (with the current path) before adding
 <var>directory</var> to the search path. 
 <!-- 'path' is explicitly nonrepeatable, but RMS points out it is silly to -->
@@ -94,13 +94,13 @@ null value.
      <p>For example, this command:
 
      <pre class="smallexample">          set env USER = foo
-</pre>
+     </pre>
      <p class="noindent">tells the debugged program, when subsequently run, that its user is named
-&lsquo;<samp><span class="samp">foo</span></samp>&rsquo;.  (The spaces around &lsquo;<samp><span class="samp">=</span></samp>&rsquo; are used for clarity here; they
+`<samp><span class="samp">foo</span></samp>'.  (The spaces around `<samp><span class="samp">=</span></samp>' are used for clarity here; they
 are not actually required.)
 
      <p><a name="index-unset-environment-124"></a><br><dt><code>unset environment </code><var>varname</var><dd>Remove variable <var>varname</var> from the environment to be passed to your
-program.  This is different from &lsquo;<samp><span class="samp">set env </span><var>varname</var><span class="samp"> =</span></samp>&rsquo;;
+program.  This is different from `<samp><span class="samp">set env </span><var>varname</var><span class="samp"> =</span></samp>';
 <code>unset environment</code> removes the variable from the environment,
 rather than assigning it an empty value. 
 </dl>

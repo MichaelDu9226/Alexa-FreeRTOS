@@ -3,7 +3,7 @@
 <title>M680x0 Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="M32R_002fD-Options.html#M32R_002fD-Options" title="M32R/D Options">
@@ -55,7 +55,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
 <h4 class="subsection">3.17.22 M680x0 Options</h4>
 
 <p><a name="index-M680x0-options-1617"></a>
-These are the &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; options defined for M680x0 and ColdFire processors. 
+These are the `<samp><span class="samp">-m</span></samp>' options defined for M680x0 and ColdFire processors. 
 The default settings depend on which architecture was selected when
 the compiler was configured; the defaults for the most common choices
 are given below.
@@ -63,13 +63,13 @@ are given below.
      <dl>
 <dt><code>-march=</code><var>arch</var><dd><a name="index-march-1618"></a>Generate code for a specific M680x0 or ColdFire instruction set
 architecture.  Permissible values of <var>arch</var> for M680x0
-architectures are: &lsquo;<samp><span class="samp">68000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68010</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68020</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">68030</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68040</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68060</span></samp>&rsquo; and &lsquo;<samp><span class="samp">cpu32</span></samp>&rsquo;.  ColdFire
+architectures are: `<samp><span class="samp">68000</span></samp>', `<samp><span class="samp">68010</span></samp>', `<samp><span class="samp">68020</span></samp>',
+`<samp><span class="samp">68030</span></samp>', `<samp><span class="samp">68040</span></samp>', `<samp><span class="samp">68060</span></samp>' and `<samp><span class="samp">cpu32</span></samp>'.  ColdFire
 architectures are selected according to Freescale's ISA classification
-and the permissible values are: &lsquo;<samp><span class="samp">isaa</span></samp>&rsquo;, &lsquo;<samp><span class="samp">isaaplus</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">isab</span></samp>&rsquo; and &lsquo;<samp><span class="samp">isac</span></samp>&rsquo;.
+and the permissible values are: `<samp><span class="samp">isaa</span></samp>', `<samp><span class="samp">isaaplus</span></samp>',
+`<samp><span class="samp">isab</span></samp>' and `<samp><span class="samp">isac</span></samp>'.
 
-     <p>GCC defines a macro &lsquo;<samp><span class="samp">__mcf</span><var>arch</var><span class="samp">__</span></samp>&rsquo; whenever it is generating
+     <p>GCC defines a macro `<samp><span class="samp">__mcf</span><var>arch</var><span class="samp">__</span></samp>' whenever it is generating
 code for a ColdFire target.  The <var>arch</var> in this macro is one of the
 <samp><span class="option">-march</span></samp> arguments given above.
 
@@ -78,51 +78,51 @@ that runs on a family of similar processors but that is optimized
 for a particular microarchitecture.
 
      <br><dt><code>-mcpu=</code><var>cpu</var><dd><a name="index-mcpu-1619"></a>Generate code for a specific M680x0 or ColdFire processor. 
-The M680x0 <var>cpu</var>s are: &lsquo;<samp><span class="samp">68000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68010</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68020</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">68030</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68040</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68060</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68302</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68332</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">cpu32</span></samp>&rsquo;.  The ColdFire <var>cpu</var>s are given by the table
+The M680x0 <var>cpu</var>s are: `<samp><span class="samp">68000</span></samp>', `<samp><span class="samp">68010</span></samp>', `<samp><span class="samp">68020</span></samp>',
+`<samp><span class="samp">68030</span></samp>', `<samp><span class="samp">68040</span></samp>', `<samp><span class="samp">68060</span></samp>', `<samp><span class="samp">68302</span></samp>', `<samp><span class="samp">68332</span></samp>'
+and `<samp><span class="samp">cpu32</span></samp>'.  The ColdFire <var>cpu</var>s are given by the table
 below, which also classifies the CPUs into families:
 
-     <p><table summary=""><tr align="left"><td valign="top" width="20%"><strong>Family</strong> </td><td valign="top" width="80%"><strong>&lsquo;</strong><samp><span class="samp">-mcpu</span></samp><strong>&rsquo; arguments</strong>
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">51</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">51</span></samp>&rsquo; &lsquo;<samp><span class="samp">51ac</span></samp>&rsquo; &lsquo;<samp><span class="samp">51ag</span></samp>&rsquo; &lsquo;<samp><span class="samp">51cn</span></samp>&rsquo; &lsquo;<samp><span class="samp">51em</span></samp>&rsquo; &lsquo;<samp><span class="samp">51je</span></samp>&rsquo; &lsquo;<samp><span class="samp">51jf</span></samp>&rsquo; &lsquo;<samp><span class="samp">51jg</span></samp>&rsquo; &lsquo;<samp><span class="samp">51jm</span></samp>&rsquo; &lsquo;<samp><span class="samp">51mm</span></samp>&rsquo; &lsquo;<samp><span class="samp">51qe</span></samp>&rsquo; &lsquo;<samp><span class="samp">51qm</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5206</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5202</span></samp>&rsquo; &lsquo;<samp><span class="samp">5204</span></samp>&rsquo; &lsquo;<samp><span class="samp">5206</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5206e</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5206e</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5208</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5207</span></samp>&rsquo; &lsquo;<samp><span class="samp">5208</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5211a</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5210a</span></samp>&rsquo; &lsquo;<samp><span class="samp">5211a</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5213</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5211</span></samp>&rsquo; &lsquo;<samp><span class="samp">5212</span></samp>&rsquo; &lsquo;<samp><span class="samp">5213</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5216</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5214</span></samp>&rsquo; &lsquo;<samp><span class="samp">5216</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">52235</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">52230</span></samp>&rsquo; &lsquo;<samp><span class="samp">52231</span></samp>&rsquo; &lsquo;<samp><span class="samp">52232</span></samp>&rsquo; &lsquo;<samp><span class="samp">52233</span></samp>&rsquo; &lsquo;<samp><span class="samp">52234</span></samp>&rsquo; &lsquo;<samp><span class="samp">52235</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5225</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5224</span></samp>&rsquo; &lsquo;<samp><span class="samp">5225</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">52259</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">52252</span></samp>&rsquo; &lsquo;<samp><span class="samp">52254</span></samp>&rsquo; &lsquo;<samp><span class="samp">52255</span></samp>&rsquo; &lsquo;<samp><span class="samp">52256</span></samp>&rsquo; &lsquo;<samp><span class="samp">52258</span></samp>&rsquo; &lsquo;<samp><span class="samp">52259</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5235</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5232</span></samp>&rsquo; &lsquo;<samp><span class="samp">5233</span></samp>&rsquo; &lsquo;<samp><span class="samp">5234</span></samp>&rsquo; &lsquo;<samp><span class="samp">5235</span></samp>&rsquo; &lsquo;<samp><span class="samp">523x</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5249</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5249</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5250</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5250</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5271</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5270</span></samp>&rsquo; &lsquo;<samp><span class="samp">5271</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5272</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5272</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5275</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5274</span></samp>&rsquo; &lsquo;<samp><span class="samp">5275</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5282</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5280</span></samp>&rsquo; &lsquo;<samp><span class="samp">5281</span></samp>&rsquo; &lsquo;<samp><span class="samp">5282</span></samp>&rsquo; &lsquo;<samp><span class="samp">528x</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">53017</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">53011</span></samp>&rsquo; &lsquo;<samp><span class="samp">53012</span></samp>&rsquo; &lsquo;<samp><span class="samp">53013</span></samp>&rsquo; &lsquo;<samp><span class="samp">53014</span></samp>&rsquo; &lsquo;<samp><span class="samp">53015</span></samp>&rsquo; &lsquo;<samp><span class="samp">53016</span></samp>&rsquo; &lsquo;<samp><span class="samp">53017</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5307</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5307</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5329</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5327</span></samp>&rsquo; &lsquo;<samp><span class="samp">5328</span></samp>&rsquo; &lsquo;<samp><span class="samp">5329</span></samp>&rsquo; &lsquo;<samp><span class="samp">532x</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5373</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5372</span></samp>&rsquo; &lsquo;<samp><span class="samp">5373</span></samp>&rsquo; &lsquo;<samp><span class="samp">537x</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5407</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5407</span></samp>&rsquo;
-<br></td></tr><tr align="left"><td valign="top" width="20%">&lsquo;<samp><span class="samp">5475</span></samp>&rsquo; </td><td valign="top" width="80%">&lsquo;<samp><span class="samp">5470</span></samp>&rsquo; &lsquo;<samp><span class="samp">5471</span></samp>&rsquo; &lsquo;<samp><span class="samp">5472</span></samp>&rsquo; &lsquo;<samp><span class="samp">5473</span></samp>&rsquo; &lsquo;<samp><span class="samp">5474</span></samp>&rsquo; &lsquo;<samp><span class="samp">5475</span></samp>&rsquo; &lsquo;<samp><span class="samp">547x</span></samp>&rsquo; &lsquo;<samp><span class="samp">5480</span></samp>&rsquo; &lsquo;<samp><span class="samp">5481</span></samp>&rsquo; &lsquo;<samp><span class="samp">5482</span></samp>&rsquo; &lsquo;<samp><span class="samp">5483</span></samp>&rsquo; &lsquo;<samp><span class="samp">5484</span></samp>&rsquo; &lsquo;<samp><span class="samp">5485</span></samp>&rsquo;
+     <p><table summary=""><tr align="left"><td valign="top" width="20%"><strong>Family</strong> </td><td valign="top" width="80%"><strong>`<samp></strong><span class="samp">-mcpu</span><strong></samp>' arguments</strong>
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">51</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">51</span></samp>' `<samp><span class="samp">51ac</span></samp>' `<samp><span class="samp">51ag</span></samp>' `<samp><span class="samp">51cn</span></samp>' `<samp><span class="samp">51em</span></samp>' `<samp><span class="samp">51je</span></samp>' `<samp><span class="samp">51jf</span></samp>' `<samp><span class="samp">51jg</span></samp>' `<samp><span class="samp">51jm</span></samp>' `<samp><span class="samp">51mm</span></samp>' `<samp><span class="samp">51qe</span></samp>' `<samp><span class="samp">51qm</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5206</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5202</span></samp>' `<samp><span class="samp">5204</span></samp>' `<samp><span class="samp">5206</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5206e</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5206e</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5208</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5207</span></samp>' `<samp><span class="samp">5208</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5211a</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5210a</span></samp>' `<samp><span class="samp">5211a</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5213</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5211</span></samp>' `<samp><span class="samp">5212</span></samp>' `<samp><span class="samp">5213</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5216</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5214</span></samp>' `<samp><span class="samp">5216</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">52235</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">52230</span></samp>' `<samp><span class="samp">52231</span></samp>' `<samp><span class="samp">52232</span></samp>' `<samp><span class="samp">52233</span></samp>' `<samp><span class="samp">52234</span></samp>' `<samp><span class="samp">52235</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5225</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5224</span></samp>' `<samp><span class="samp">5225</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">52259</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">52252</span></samp>' `<samp><span class="samp">52254</span></samp>' `<samp><span class="samp">52255</span></samp>' `<samp><span class="samp">52256</span></samp>' `<samp><span class="samp">52258</span></samp>' `<samp><span class="samp">52259</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5235</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5232</span></samp>' `<samp><span class="samp">5233</span></samp>' `<samp><span class="samp">5234</span></samp>' `<samp><span class="samp">5235</span></samp>' `<samp><span class="samp">523x</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5249</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5249</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5250</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5250</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5271</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5270</span></samp>' `<samp><span class="samp">5271</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5272</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5272</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5275</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5274</span></samp>' `<samp><span class="samp">5275</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5282</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5280</span></samp>' `<samp><span class="samp">5281</span></samp>' `<samp><span class="samp">5282</span></samp>' `<samp><span class="samp">528x</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">53017</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">53011</span></samp>' `<samp><span class="samp">53012</span></samp>' `<samp><span class="samp">53013</span></samp>' `<samp><span class="samp">53014</span></samp>' `<samp><span class="samp">53015</span></samp>' `<samp><span class="samp">53016</span></samp>' `<samp><span class="samp">53017</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5307</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5307</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5329</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5327</span></samp>' `<samp><span class="samp">5328</span></samp>' `<samp><span class="samp">5329</span></samp>' `<samp><span class="samp">532x</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5373</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5372</span></samp>' `<samp><span class="samp">5373</span></samp>' `<samp><span class="samp">537x</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5407</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5407</span></samp>'
+<br></td></tr><tr align="left"><td valign="top" width="20%">`<samp><span class="samp">5475</span></samp>' </td><td valign="top" width="80%">`<samp><span class="samp">5470</span></samp>' `<samp><span class="samp">5471</span></samp>' `<samp><span class="samp">5472</span></samp>' `<samp><span class="samp">5473</span></samp>' `<samp><span class="samp">5474</span></samp>' `<samp><span class="samp">5475</span></samp>' `<samp><span class="samp">547x</span></samp>' `<samp><span class="samp">5480</span></samp>' `<samp><span class="samp">5481</span></samp>' `<samp><span class="samp">5482</span></samp>' `<samp><span class="samp">5483</span></samp>' `<samp><span class="samp">5484</span></samp>' `<samp><span class="samp">5485</span></samp>'
      <br></td></tr></table>
 
      <p><samp><span class="option">-mcpu=</span><var>cpu</var></samp> overrides <samp><span class="option">-march=</span><var>arch</var></samp> if
 <var>arch</var> is compatible with <var>cpu</var>.  Other combinations of
 <samp><span class="option">-mcpu</span></samp> and <samp><span class="option">-march</span></samp> are rejected.
 
-     <p>GCC defines the macro &lsquo;<samp><span class="samp">__mcf_cpu_</span><var>cpu</var></samp>&rsquo; when ColdFire target
-<var>cpu</var> is selected.  It also defines &lsquo;<samp><span class="samp">__mcf_family_</span><var>family</var></samp>&rsquo;,
+     <p>GCC defines the macro `<samp><span class="samp">__mcf_cpu_</span><var>cpu</var></samp>' when ColdFire target
+<var>cpu</var> is selected.  It also defines `<samp><span class="samp">__mcf_family_</span><var>family</var></samp>',
 where the value of <var>family</var> is given by the table above.
 
      <br><dt><code>-mtune=</code><var>tune</var><dd><a name="index-mtune-1620"></a>Tune the code for a particular microarchitecture within the
 constraints set by <samp><span class="option">-march</span></samp> and <samp><span class="option">-mcpu</span></samp>. 
-The M680x0 microarchitectures are: &lsquo;<samp><span class="samp">68000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68010</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">68020</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68030</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68040</span></samp>&rsquo;, &lsquo;<samp><span class="samp">68060</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">cpu32</span></samp>&rsquo;.  The ColdFire microarchitectures
-are: &lsquo;<samp><span class="samp">cfv1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">cfv2</span></samp>&rsquo;, &lsquo;<samp><span class="samp">cfv3</span></samp>&rsquo;, &lsquo;<samp><span class="samp">cfv4</span></samp>&rsquo; and &lsquo;<samp><span class="samp">cfv4e</span></samp>&rsquo;.
+The M680x0 microarchitectures are: `<samp><span class="samp">68000</span></samp>', `<samp><span class="samp">68010</span></samp>',
+`<samp><span class="samp">68020</span></samp>', `<samp><span class="samp">68030</span></samp>', `<samp><span class="samp">68040</span></samp>', `<samp><span class="samp">68060</span></samp>'
+and `<samp><span class="samp">cpu32</span></samp>'.  The ColdFire microarchitectures
+are: `<samp><span class="samp">cfv1</span></samp>', `<samp><span class="samp">cfv2</span></samp>', `<samp><span class="samp">cfv3</span></samp>', `<samp><span class="samp">cfv4</span></samp>' and `<samp><span class="samp">cfv4e</span></samp>'.
 
      <p>You can also use <samp><span class="option">-mtune=68020-40</span></samp> for code that needs
 to run relatively well on 68020, 68030 and 68040 targets. 
@@ -130,14 +130,14 @@ to run relatively well on 68020, 68030 and 68040 targets.
 as well.  These two options select the same tuning decisions as
 <samp><span class="option">-m68020-40</span></samp> and <samp><span class="option">-m68020-60</span></samp> respectively.
 
-     <p>GCC defines the macros &lsquo;<samp><span class="samp">__mc</span><var>arch</var></samp>&rsquo; and &lsquo;<samp><span class="samp">__mc</span><var>arch</var><span class="samp">__</span></samp>&rsquo;
+     <p>GCC defines the macros `<samp><span class="samp">__mc</span><var>arch</var></samp>' and `<samp><span class="samp">__mc</span><var>arch</var><span class="samp">__</span></samp>'
 when tuning for 680x0 architecture <var>arch</var>.  It also defines
-&lsquo;<samp><span class="samp">mc</span><var>arch</var></samp>&rsquo; unless either <samp><span class="option">-ansi</span></samp> or a non-GNU <samp><span class="option">-std</span></samp>
+`<samp><span class="samp">mc</span><var>arch</var></samp>' unless either <samp><span class="option">-ansi</span></samp> or a non-GNU <samp><span class="option">-std</span></samp>
 option is used.  If GCC is tuning for a range of architectures,
 as selected by <samp><span class="option">-mtune=68020-40</span></samp> or <samp><span class="option">-mtune=68020-60</span></samp>,
 it defines the macros for every architecture in the range.
 
-     <p>GCC also defines the macro &lsquo;<samp><span class="samp">__m</span><var>uarch</var><span class="samp">__</span></samp>&rsquo; when tuning for
+     <p>GCC also defines the macro `<samp><span class="samp">__m</span><var>uarch</var><span class="samp">__</span></samp>' when tuning for
 ColdFire microarchitecture <var>uarch</var>, where <var>uarch</var> is one
 of the arguments given above.
 
@@ -226,7 +226,7 @@ This results in code that can run relatively efficiently on either a
 
      <br><dt><code>-mhard-float</code><dt><code>-m68881</code><dd><a name="index-mhard_002dfloat-1638"></a><a name="index-m68881-1639"></a>Generate floating-point instructions.  This is the default for 68020
 and above, and for ColdFire devices that have an FPU.  It defines the
-macro &lsquo;<samp><span class="samp">__HAVE_68881__</span></samp>&rsquo; on M680x0 targets and &lsquo;<samp><span class="samp">__mcffpu__</span></samp>&rsquo;
+macro `<samp><span class="samp">__HAVE_68881__</span></samp>' on M680x0 targets and `<samp><span class="samp">__mcffpu__</span></samp>'
 on ColdFire targets.
 
      <br><dt><code>-msoft-float</code><dd><a name="index-msoft_002dfloat-1640"></a>Do not generate floating-point instructions; use library calls instead. 
@@ -241,7 +241,7 @@ architectures.  Otherwise, the default is taken from the target CPU
 example, the default is &ldquo;off&rdquo; for <samp><span class="option">-mcpu=5206</span></samp> and &ldquo;on&rdquo; for
 <samp><span class="option">-mcpu=5206e</span></samp>.
 
-     <p>GCC defines the macro &lsquo;<samp><span class="samp">__mcfhwdiv__</span></samp>&rsquo; when this option is enabled.
+     <p>GCC defines the macro `<samp><span class="samp">__mcfhwdiv__</span></samp>' when this option is enabled.
 
      <br><dt><code>-mshort</code><dd><a name="index-mshort-1643"></a>Consider type <code>int</code> to be 16 bits wide, like <code>short int</code>. 
 Additionally, parameters passed on the stack are also aligned to a
@@ -332,7 +332,7 @@ to report an error such as:
 
      <p><a name="index-relocation-truncated-to-fit-_0028ColdFire_0029-1657"></a>
      <pre class="smallexample">          relocation truncated to fit: R_68K_GOT16O foobar
-</pre>
+     </pre>
      <p>If this happens, you should recompile your code with <samp><span class="option">-mxgot</span></samp>. 
 It should then work with very large GOTs.  However, code generated with
 <samp><span class="option">-mxgot</span></samp> is less efficient, since it takes 4 instructions to fetch

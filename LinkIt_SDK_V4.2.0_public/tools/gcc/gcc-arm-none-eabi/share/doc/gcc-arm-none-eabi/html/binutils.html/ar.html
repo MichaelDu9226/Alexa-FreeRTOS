@@ -3,7 +3,7 @@
 <title>ar - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="index.html#Top" title="Top">
 <link rel="next" href="nm.html#nm" title="nm">
@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
      ar -M [ &lt;mri-script ]
 </pre>
    <!-- man begin DESCRIPTION ar -->
-   <p>The <span class="sc">gnu</span> <samp><span class="command">ar</span></samp> program creates, modifies, and extracts from
+<p>The <span class="sc">gnu</span> <samp><span class="command">ar</span></samp> program creates, modifies, and extracts from
 archives.  An <dfn>archive</dfn> is a single file holding a collection of
 other files in a structure that makes it possible to retrieve
 the original individual files (called <dfn>members</dfn> of the archive).
@@ -75,14 +75,14 @@ are most often used as <dfn>libraries</dfn> holding commonly needed
 subroutines.
 
    <p><a name="index-symbol-index-7"></a><samp><span class="command">ar</span></samp> creates an index to the symbols defined in relocatable
-object modules in the archive when you specify the modifier &lsquo;<samp><span class="samp">s</span></samp>&rsquo;. 
+object modules in the archive when you specify the modifier `<samp><span class="samp">s</span></samp>'. 
 Once created, this index is updated in the archive whenever <samp><span class="command">ar</span></samp>
-makes a change to its contents (save for the &lsquo;<samp><span class="samp">q</span></samp>&rsquo; update operation). 
+makes a change to its contents (save for the `<samp><span class="samp">q</span></samp>' update operation). 
 An archive with such an index speeds up linking to the library, and
 allows routines in the library to call each other without regard to
 their placement in the archive.
 
-   <p>You may use &lsquo;<samp><span class="samp">nm -s</span></samp>&rsquo; or &lsquo;<samp><span class="samp">nm --print-armap</span></samp>&rsquo; to list this index
+   <p>You may use `<samp><span class="samp">nm -s</span></samp>' or `<samp><span class="samp">nm --print-armap</span></samp>' to list this index
 table.  If an archive lacks the table, another form of <samp><span class="command">ar</span></samp> called
 <samp><span class="command">ranlib</span></samp> can be used to add just the table.
 

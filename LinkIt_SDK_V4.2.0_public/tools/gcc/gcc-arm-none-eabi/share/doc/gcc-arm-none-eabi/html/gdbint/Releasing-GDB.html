@@ -3,7 +3,7 @@
 <title>Releasing GDB - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Start-of-New-Year-Procedure.html#Start-of-New-Year-Procedure" title="Start of New Year Procedure">
 <link rel="next" href="Testsuite.html#Testsuite" title="Testsuite">
@@ -345,7 +345,7 @@ releases should probably mention any significant bugs that were fixed.
           c-x c-s c-x c-c
           $  cp gdb/src/gdb/NEWS insight/src/gdb/NEWS
           $  cp gdb/src/gdb/ChangeLog insight/src/gdb/ChangeLog
-</pre>
+     </pre>
      <br><dt><samp><span class="file">gdb/README</span></samp><dd>
 You'll need to update:
 
@@ -362,13 +362,13 @@ You'll need to update:
           c-x c-s c-x c-c
           $  cp gdb/src/gdb/README insight/src/gdb/README
           $  cp gdb/src/gdb/ChangeLog insight/src/gdb/ChangeLog
-</pre>
-     <p><em>Maintainer note: Hopefully the </em><samp><span class="file">README</span></samp><em> file was reviewed
+     </pre>
+     <p><em>Maintainer note: Hopefully the <samp></em><span class="file">README</span><em></samp> file was reviewed
 before the initial branch was cut so just a simple substitute is needed
 to get it updated.</em>
 
-     <p><em>Maintainer note: Other projects generate </em><samp><span class="file">README</span></samp><em> and
-</em><samp><span class="file">INSTALL</span></samp><em> from the core documentation.  This might be worth
+     <p><em>Maintainer note: Other projects generate <samp></em><span class="file">README</span><em></samp> and
+<samp></em><span class="file">INSTALL</span><em></samp> from the core documentation.  This might be worth
 pursuing.</em>
 
      <br><dt><samp><span class="file">gdb/version.in</span></samp><dd>
@@ -382,7 +382,7 @@ pursuing.</em>
           c-x c-s c-x c-c
           $  cp gdb/src/gdb/version.in insight/src/gdb/version.in
           $  cp gdb/src/gdb/ChangeLog insight/src/gdb/ChangeLog
-</pre>
+     </pre>
      </dl>
 
 <h5 class="subsubheading">Do the dirty work</h5>
@@ -420,8 +420,8 @@ for the <samp><span class="file">version.in</span></samp> update <kbd>cronjob</k
      ... lots of generated files ...
      $
 </pre>
-   <p class="noindent"><em>Don't worry about the </em><samp><span class="file">gdb.info-??</span></samp><em> or
-</em><samp><span class="file">gdb/p-exp.tab.c</span></samp><em>.  They were generated (and yes </em><samp><span class="file">gdb.info-1</span></samp><em>
+   <p class="noindent"><em>Don't worry about the <samp></em><span class="file">gdb.info-??</span><em></samp> or
+<samp></em><span class="file">gdb/p-exp.tab.c</span><em></samp>.  They were generated (and yes <samp></em><span class="file">gdb.info-1</span><em></samp>
 was also generated only something strange with CVS means that they
 didn't get suppressed).  Fixing it would be nice though.</em>
 
@@ -538,7 +538,7 @@ Something like:
            $PWD/www \
            /www/sourceware/htdocs/gdb/download/onlinedocs \
            gdb
-</pre>
+     </pre>
      <br><dt><samp><span class="file">download/ari/</span></samp><dd>Just like the online documentation.  Something like:
 
      <pre class="smallexample">          $  /bin/sh ~/ss/update-web-ari \
@@ -546,7 +546,7 @@ Something like:
            $PWD/www \
            /www/sourceware/htdocs/gdb/download/ari \
            gdb
-</pre>
+     </pre>
      </dl>
 
 <h5 class="subsubheading">Shadow the pages onto gnu</h5>

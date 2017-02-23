@@ -3,7 +3,7 @@
 <title>Variadic Macros - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Variable-Length.html#Variable-Length" title="Variable Length">
@@ -62,7 +62,7 @@ example:
 
 <pre class="smallexample">     #define debug(format, ...) fprintf (stderr, format, __VA_ARGS__)
 </pre>
- <p class="noindent">Here &lsquo;<samp><span class="samp">...</span></samp>&rsquo; is a <dfn>variable argument</dfn>.  In the invocation of
+ <p class="noindent">Here `<samp><span class="samp">...</span></samp>' is a <dfn>variable argument</dfn>.  In the invocation of
 such a macro, it represents the zero or more tokens until the closing
 parenthesis that ends the invocation, including any commas.  This set of
 tokens replaces the identifier <code>__VA_ARGS__</code> in the macro body
@@ -93,11 +93,11 @@ the expansion of the macro still has the extra comma after the format
 string.
 
  <p>To help solve this problem, CPP behaves specially for variable arguments
-used with the token paste operator, &lsquo;<samp><span class="samp">##</span></samp>&rsquo;.  If instead you write
+used with the token paste operator, `<samp><span class="samp">##</span></samp>'.  If instead you write
 
 <pre class="smallexample">     #define debug(format, ...) fprintf (stderr, format, ## __VA_ARGS__)
 </pre>
- <p class="noindent">and if the variable arguments are omitted or empty, the &lsquo;<samp><span class="samp">##</span></samp>&rsquo;
+ <p class="noindent">and if the variable arguments are omitted or empty, the `<samp><span class="samp">##</span></samp>'
 operator causes the preprocessor to remove the comma before it.  If you
 do provide some variable arguments in your macro invocation, GNU CPP
 does not complain about the paste operation and instead places the

@@ -3,7 +3,7 @@
 <title>Misc Guidelines - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Coding-Standards.html#Coding-Standards" title="Coding Standards">
 <link rel="next" href="Porting-GDB.html#Porting-GDB" title="Porting GDB">
@@ -133,7 +133,7 @@ that they &ldquo;should not be called when cleanups are not in place&rdquo;.  Th
 means that any actions you need to reverse in the case of an error or
 interruption must be on the cleanup chain before you call these
 functions, since they might never return to your code (they
-&lsquo;<samp><span class="samp">longjmp</span></samp>&rsquo; instead).
+`<samp><span class="samp">longjmp</span></samp>' instead).
 
 <h3 class="section">17.2 Per-architecture module data</h3>
 
@@ -296,9 +296,9 @@ errors.</em>
 
 <p><a name="index-compiler-warnings-473"></a>
 With few exceptions, developers should avoid the configuration option
-&lsquo;<samp><span class="samp">--disable-werror</span></samp>&rsquo; when building <span class="sc">gdb</span>.  The exceptions
+`<samp><span class="samp">--disable-werror</span></samp>' when building <span class="sc">gdb</span>.  The exceptions
 are listed in the file <samp><span class="file">gdb/MAINTAINERS</span></samp>.  The default, when
-building with <span class="sc">gcc</span>, is &lsquo;<samp><span class="samp">--enable-werror</span></samp>&rsquo;.
+building with <span class="sc">gcc</span>, is `<samp><span class="samp">--enable-werror</span></samp>'.
 
    <p>This option causes <span class="sc">gdb</span> (when built using GCC) to be compiled
 with a carefully selected list of compiler warning flags.  Any warnings
@@ -307,34 +307,34 @@ from those flags are treated as errors.
    <p>The current list of warning flags includes:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">-Wall</span></samp>&rsquo;<dd>Recommended <span class="sc">gcc</span> warnings.
+<dt>`<samp><span class="samp">-Wall</span></samp>'<dd>Recommended <span class="sc">gcc</span> warnings.
 
-     <br><dt>&lsquo;<samp><span class="samp">-Wdeclaration-after-statement</span></samp>&rsquo;<dd>
+     <br><dt>`<samp><span class="samp">-Wdeclaration-after-statement</span></samp>'<dd>
 <span class="sc">gcc</span> 3.x (and later) and <span class="sc">c99</span> allow declarations mixed with
 code, but <span class="sc">gcc</span> 2.x and <span class="sc">c89</span> do not.
 
-     <br><dt>&lsquo;<samp><span class="samp">-Wpointer-arith</span></samp>&rsquo;
-<br><dt>&lsquo;<samp><span class="samp">-Wformat-nonliteral</span></samp>&rsquo;<dd>Non-literal format strings, with a few exceptions, are bugs - they
+     <br><dt>`<samp><span class="samp">-Wpointer-arith</span></samp>'
+<br><dt>`<samp><span class="samp">-Wformat-nonliteral</span></samp>'<dd>Non-literal format strings, with a few exceptions, are bugs - they
 might contain unintended user-supplied format specifiers. 
 Since <span class="sc">gdb</span> uses the <code>format printf</code> attribute on all
 <code>printf</code> like functions this checks not just <code>printf</code> calls
 but also calls to functions such as <code>fprintf_unfiltered</code>.
 
-     <br><dt>&lsquo;<samp><span class="samp">-Wno-pointer-sign</span></samp>&rsquo;<dd>In version 4.0, GCC began warning about pointer argument passing or
+     <br><dt>`<samp><span class="samp">-Wno-pointer-sign</span></samp>'<dd>In version 4.0, GCC began warning about pointer argument passing or
 assignment even when the source and destination differed only in
 signedness.  However, most <span class="sc">gdb</span> code doesn't distinguish
 carefully between <code>char</code> and <code>unsigned char</code>.  In early 2006
 the <span class="sc">gdb</span> developers decided correcting these warnings wasn't
 worth the time it would take.
 
-     <br><dt>&lsquo;<samp><span class="samp">-Wno-unused-parameter</span></samp>&rsquo;<dd>Due to the way that <span class="sc">gdb</span> is implemented many functions have
+     <br><dt>`<samp><span class="samp">-Wno-unused-parameter</span></samp>'<dd>Due to the way that <span class="sc">gdb</span> is implemented many functions have
 unused parameters.  Consequently this warning is avoided.  The macro
 <code>ATTRIBUTE_UNUSED</code> is not used as it leads to false negatives &mdash;
 it is not an error to have <code>ATTRIBUTE_UNUSED</code> on a parameter that
 is being used.
 
-     <br><dt>&lsquo;<samp><span class="samp">-Wno-unused</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">-Wno-switch</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">-Wno-char-subscripts</span></samp>&rsquo;<dd>These are warnings which might be useful for <span class="sc">gdb</span>, but are
-currently too noisy to enable with &lsquo;<samp><span class="samp">-Werror</span></samp>&rsquo;.
+     <br><dt>`<samp><span class="samp">-Wno-unused</span></samp>'<dt>`<samp><span class="samp">-Wno-switch</span></samp>'<dt>`<samp><span class="samp">-Wno-char-subscripts</span></samp>'<dd>These are warnings which might be useful for <span class="sc">gdb</span>, but are
+currently too noisy to enable with `<samp><span class="samp">-Werror</span></samp>'.
 
    </dl>
 
@@ -359,7 +359,7 @@ error and issued an </em><code>internal_error</code><em>.</em>
 
 <h3 class="section">17.7 Command Names</h3>
 
-<p>GDB U/I commands are written &lsquo;<samp><span class="samp">foo-bar</span></samp>&rsquo;, not &lsquo;<samp><span class="samp">foo_bar</span></samp>&rsquo;.
+<p>GDB U/I commands are written `<samp><span class="samp">foo-bar</span></samp>', not `<samp><span class="samp">foo_bar</span></samp>'.
 
 <h3 class="section">17.8 Clean Design and Portable Implementation</h3>
 
@@ -435,7 +435,7 @@ will call <code>strcasecmp</code> instead.
 
      <p><a name="index-DIRNAME_005fSEPARATOR-484"></a><br><dt><code>DIRNAME_SEPARATOR</code><dd>Evaluates to a character which separates directories in
 <code>PATH</code>-style lists, typically held in environment variables. 
-This character is &lsquo;<samp><span class="samp">:</span></samp>&rsquo; on Unix, &lsquo;<samp><span class="samp">;</span></samp>&rsquo; on DOS and Windows.
+This character is `<samp><span class="samp">:</span></samp>' on Unix, `<samp><span class="samp">;</span></samp>' on DOS and Windows.
 
      <p><a name="index-SLASH_005fSTRING-485"></a><br><dt><code>SLASH_STRING</code><dd>This evaluates to a constant string you should use to produce an
 absolute filename from leading directories and the file's basename. 
@@ -473,8 +473,8 @@ with variations between systems the same way any system-independent
 file would (hooks, <code>#if defined</code>, etc.), and machines which are
 radically different don't need to use <samp><span class="file">infptrace.c</span></samp> at all.
 
-   <p>All debugging code must be controllable using the &lsquo;<samp><span class="samp">set debug
-</span><var>module</var></samp>&rsquo; command.  Do not use <code>printf</code> to print trace
+   <p>All debugging code must be controllable using the `<samp><span class="samp">set debug
+</span><var>module</var></samp>' command.  Do not use <code>printf</code> to print trace
 messages.  Use <code>fprintf_unfiltered(gdb_stdlog, ...</code>.  Do not use
 <code>#ifdef DEBUG</code>.
 

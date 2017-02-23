@@ -3,7 +3,7 @@
 <title>Directives - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Test-Directives.html#Test-Directives" title="Test Directives">
 <link rel="next" href="Selectors.html#Selectors" title="Selectors">
@@ -83,12 +83,12 @@ an exit code of 0.
 tests by redefining <code>dg-do-what-default</code> within the <code>.exp</code>
 file for those tests.
 
-     <p>If the directive includes the optional &lsquo;<samp><span class="samp">{ target </span><var>selector</var><span class="samp"> }</span></samp>&rsquo;
+     <p>If the directive includes the optional `<samp><span class="samp">{ target </span><var>selector</var><span class="samp"> }</span></samp>'
 then the test is skipped unless the target system matches the
 <var>selector</var>.
 
      <p>If <var>do-what-keyword</var> is <code>run</code> and the directive includes
-the optional &lsquo;<samp><span class="samp">{ xfail </span><var>selector</var><span class="samp"> }</span></samp>&rsquo; and the selector is met
+the optional `<samp><span class="samp">{ xfail </span><var>selector</var><span class="samp"> }</span></samp>' and the selector is met
 then the test is expected to fail.  The <code>xfail</code> clause is ignored
 for other values of <var>do-what-keyword</var>; those tests can use
 directive <code>dg-xfail-if</code>. 
@@ -147,40 +147,40 @@ Skip the test if all of the following conditions are met:
 
           <li>for at least one of the option strings in <var>include-opts</var>,
 every option from that string is in the set of options with which
-the test would be compiled; use &lsquo;<samp><span class="samp">"*"</span></samp>&rsquo; for an <var>include-opts</var> list
+the test would be compiled; use `<samp><span class="samp">"*"</span></samp>' for an <var>include-opts</var> list
 that matches any options; that is the default if <var>include-opts</var> is
 not specified
 
           <li>for each of the option strings in <var>exclude-opts</var>, at least one
 option from that string is not in the set of options with which the test
-would be compiled; use &lsquo;<samp><span class="samp">""</span></samp>&rsquo; for an empty <var>exclude-opts</var> list;
+would be compiled; use `<samp><span class="samp">""</span></samp>' for an empty <var>exclude-opts</var> list;
 that is the default if <var>exclude-opts</var> is not specified
 </ul>
 
      <p>For example, to skip a test if option <code>-Os</code> is present:
 
      <pre class="smallexample">          /* { dg-skip-if "" { *-*-* }  { "-Os" } { "" } } */
-</pre>
+     </pre>
      <p>To skip a test if both options <code>-O2</code> and <code>-g</code> are present:
 
      <pre class="smallexample">          /* { dg-skip-if "" { *-*-* }  { "-O2 -g" } { "" } } */
-</pre>
+     </pre>
      <p>To skip a test if either <code>-O2</code> or <code>-O3</code> is present:
 
      <pre class="smallexample">          /* { dg-skip-if "" { *-*-* }  { "-O2" "-O3" } { "" } } */
-</pre>
+     </pre>
      <p>To skip a test unless option <code>-Os</code> is present:
 
      <pre class="smallexample">          /* { dg-skip-if "" { *-*-* }  { "*" } { "-Os" } } */
-</pre>
+     </pre>
      <p>To skip a test if either <code>-O2</code> or <code>-O3</code> is used with <code>-g</code>
 but not if <code>-fpic</code> is also present:
 
      <pre class="smallexample">          /* { dg-skip-if "" { *-*-* }  { "-O2 -g" "-O3 -g" } { "-fpic" } } */
-</pre>
+     </pre>
      <br><dt><code>{ dg-require-effective-target </code><var>keyword</var><code> [{ </code><var>selector</var><code> }] }</code><dd>Skip the test if the test target, including current multilib flags,
 is not covered by the effective-target keyword. 
-If the directive includes the optional &lsquo;<samp><span class="samp">{ </span><var>selector</var><span class="samp"> }</span></samp>&rsquo;
+If the directive includes the optional `<samp><span class="samp">{ </span><var>selector</var><span class="samp"> }</span></samp>'
 then the effective-target test is only performed if the target system
 matches the <var>selector</var>. 
 This directive must appear after any <code>dg-do</code> directive in the test
@@ -220,14 +220,14 @@ an error message, or else specifies the source line associated with the
 message.  If there is no message for that line or if the text of that
 message is not matched by <var>regexp</var> then the check fails and
 <var>comment</var> is included in the <code>FAIL</code> message.  The check does
-not look for the string &lsquo;<samp><span class="samp">error</span></samp>&rsquo; unless it is part of <var>regexp</var>.
+not look for the string `<samp><span class="samp">error</span></samp>' unless it is part of <var>regexp</var>.
 
      <br><dt><code>{ dg-warning </code><var>regexp</var><code> [</code><var>comment</var><code> [{ target/xfail </code><var>selector</var><code> } [</code><var>line</var><code>] }]] }</code><dd>This DejaGnu directive appears on a source line that is expected to get
 a warning message, or else specifies the source line associated with the
 message.  If there is no message for that line or if the text of that
 message is not matched by <var>regexp</var> then the check fails and
 <var>comment</var> is included in the <code>FAIL</code> message.  The check does
-not look for the string &lsquo;<samp><span class="samp">warning</span></samp>&rsquo; unless it is part of <var>regexp</var>.
+not look for the string `<samp><span class="samp">warning</span></samp>' unless it is part of <var>regexp</var>.
 
      <br><dt><code>{ dg-message </code><var>regexp</var><code> [</code><var>comment</var><code> [{ target/xfail </code><var>selector</var><code> } [</code><var>line</var><code>] }]] }</code><dd>The line is expected to get a message other than an error or warning. 
 If there is no message for that line or if the text of that message is
@@ -236,14 +236,14 @@ included in the <code>FAIL</code> message.
 
      <br><dt><code>{ dg-bogus </code><var>regexp</var><code> [</code><var>comment</var><code> [{ target/xfail </code><var>selector</var><code> } [</code><var>line</var><code>] }]] }</code><dd>This DejaGnu directive appears on a source line that should not get a
 message matching <var>regexp</var>, or else specifies the source line
-associated with the bogus message.  It is usually used with &lsquo;<samp><span class="samp">xfail</span></samp>&rsquo;
+associated with the bogus message.  It is usually used with `<samp><span class="samp">xfail</span></samp>'
 to indicate that the message is a known problem for a particular set of
 targets.
 
      <br><dt><code>{ dg-excess-errors </code><var>comment</var><code> [{ target/xfail </code><var>selector</var><code> }] }</code><dd>This DejaGnu directive indicates that the test is expected to fail due
-to compiler messages that are not handled by &lsquo;<samp><span class="samp">dg-error</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">dg-warning</span></samp>&rsquo; or &lsquo;<samp><span class="samp">dg-bogus</span></samp>&rsquo;.  For this directive &lsquo;<samp><span class="samp">xfail</span></samp>&rsquo;
-has the same effect as &lsquo;<samp><span class="samp">target</span></samp>&rsquo;.
+to compiler messages that are not handled by `<samp><span class="samp">dg-error</span></samp>',
+`<samp><span class="samp">dg-warning</span></samp>' or `<samp><span class="samp">dg-bogus</span></samp>'.  For this directive `<samp><span class="samp">xfail</span></samp>'
+has the same effect as `<samp><span class="samp">target</span></samp>'.
 
      <br><dt><code>{ dg-prune-output </code><var>regexp</var><code> }</code><dd>Prune messages matching <var>regexp</var> from the test output. 
 </dl>
@@ -270,7 +270,7 @@ following the main test file.
      <dl>
 <dt><code>{ dg-final { </code><var>local-directive</var><code> } }</code><dd>This DejaGnu directive is placed within a comment anywhere in the
 source file and is processed after the test has been compiled and run. 
-Multiple &lsquo;<samp><span class="samp">dg-final</span></samp>&rsquo; commands are processed in the order in which
+Multiple `<samp><span class="samp">dg-final</span></samp>' commands are processed in the order in which
 they appear in the source file.  See <a href="Final-Actions.html#Final-Actions">Final Actions</a>, for a list
 of directives that can be used within <code>dg-final</code>. 
 </dl>

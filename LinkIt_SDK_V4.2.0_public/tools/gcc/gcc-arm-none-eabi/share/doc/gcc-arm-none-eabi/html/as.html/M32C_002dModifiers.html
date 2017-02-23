@@ -3,7 +3,7 @@
 <title>M32C-Modifiers - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="M32C_002dSyntax.html#M32C_002dSyntax" title="M32C-Syntax">
 <link rel="next" href="M32C_002dChars.html#M32C_002dChars" title="M32C-Chars">
@@ -60,25 +60,25 @@ in M32C instruction operands.  The general syntax is the following:
 <dt><code>%dsp8</code><dt><code>%dsp16</code><dd>
 These modifiers override the assembler's assumptions about how big a
 symbol's address is.  Normally, when it sees an operand like
-&lsquo;<samp><span class="samp">sym[a0]</span></samp>&rsquo; it assumes &lsquo;<samp><span class="samp">sym</span></samp>&rsquo; may require the widest
-displacement field (16 bits for &lsquo;<samp><span class="samp">-m16c</span></samp>&rsquo;, 24 bits for
-&lsquo;<samp><span class="samp">-m32c</span></samp>&rsquo;).  These modifiers tell it to assume the address will fit
+`<samp><span class="samp">sym[a0]</span></samp>' it assumes `<samp><span class="samp">sym</span></samp>' may require the widest
+displacement field (16 bits for `<samp><span class="samp">-m16c</span></samp>', 24 bits for
+`<samp><span class="samp">-m32c</span></samp>').  These modifiers tell it to assume the address will fit
 in an 8 or 16 bit (respectively) unsigned displacement.  Note that, of
 course, if it doesn't actually fit you will get linker errors.  Example:
 
      <pre class="smallexample">          mov.w %dsp8(sym)[a0],r1
           mov.b #0,%dsp8(sym)[a0]
-</pre>
+     </pre>
      <br><dt><code>%hi8</code><dd>
 This modifier allows you to load bits 16 through 23 of a 24 bit
 address into an 8 bit register.  This is useful with, for example, the
-M16C &lsquo;<samp><span class="samp">smovf</span></samp>&rsquo; instruction, which expects a 20 bit address in
-&lsquo;<samp><span class="samp">r1h</span></samp>&rsquo; and &lsquo;<samp><span class="samp">a0</span></samp>&rsquo;.  Example:
+M16C `<samp><span class="samp">smovf</span></samp>' instruction, which expects a 20 bit address in
+`<samp><span class="samp">r1h</span></samp>' and `<samp><span class="samp">a0</span></samp>'.  Example:
 
      <pre class="smallexample">          mov.b #%hi8(sym),r1h
           mov.w #%lo16(sym),a0
           smovf.b
-</pre>
+     </pre>
      <br><dt><code>%lo16</code><dd>
 Likewise, this modifier allows you to load bits 0 through 15 of a 24
 bit address into a 16 bit register.
@@ -87,14 +87,14 @@ bit address into a 16 bit register.
 This modifier allows you to load bits 16 through 31 of a 32 bit
 address into a 16 bit register.  While the M32C family only has 24
 bits of address space, it does support addresses in pairs of 16 bit
-registers (like &lsquo;<samp><span class="samp">a1a0</span></samp>&rsquo; for the &lsquo;<samp><span class="samp">lde</span></samp>&rsquo; instruction).  This
+registers (like `<samp><span class="samp">a1a0</span></samp>' for the `<samp><span class="samp">lde</span></samp>' instruction).  This
 modifier is for loading the upper half in such cases.  Example:
 
      <pre class="smallexample">          mov.w #%hi16(sym),a1
           mov.w #%lo16(sym),a0
           ...
           lde.w [a1a0],r1
-</pre>
+     </pre>
      </dl>
 
    </body></html>

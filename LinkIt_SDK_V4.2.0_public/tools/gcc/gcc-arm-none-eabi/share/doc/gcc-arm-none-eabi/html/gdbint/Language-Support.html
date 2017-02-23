@@ -3,7 +3,7 @@
 <title>Language Support - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Symbol-Handling.html#Symbol-Handling" title="Symbol Handling">
 <link rel="next" href="Host-Definition.html#Host-Definition" title="Host Definition">
@@ -85,11 +85,11 @@ various parsers from defining the same global names:
           #define yyexca          <var>lang</var>_exca
           #define yyerrflag       <var>lang</var>_errflag
           #define yynerrs         <var>lang</var>_nerrs
-</pre>
+     </pre>
      <p>At the bottom of your parser, define a <code>struct language_defn</code> and
 initialize it with the right values for your language.  Define an
 <code>initialize_</code><var>lang</var> routine and have it call
-&lsquo;<samp><span class="samp">add_language(</span><var>lang</var><span class="samp">_language_defn)</span></samp>&rsquo; to tell the rest of <span class="sc">gdb</span>
+`<samp><span class="samp">add_language(</span><var>lang</var><span class="samp">_language_defn)</span></samp>' to tell the rest of <span class="sc">gdb</span>
 that your language exists.  You'll need some other supporting variables
 and functions, which will be used via pointers from your
 <var>lang</var><code>_language_defn</code>.  See the declaration of <code>struct
@@ -139,7 +139,7 @@ printed representations of your operators to <code>op_print_tab</code>.
 <a name="index-parse_005fexp_005f1-172"></a>Add a call to <var>lang</var><code>_parse()</code> and <var>lang</var><code>_error</code> in
 <code>parse_exp_1</code> (defined in <samp><span class="file">parse.c</span></samp>).
 
-     <br><dt><em>Edit </em><samp><span class="file">Makefile.in</span></samp><dd>
+     <br><dt><em>Edit <samp></em><span class="file">Makefile.in</span><em></samp></em><dd>
 Add dependencies in <samp><span class="file">Makefile.in</span></samp>.  Make sure you update the macro
 variables such as <code>HFILES</code> and <code>OBJS</code>, otherwise your code may
 not get linked in, or, worse yet, it may not get <code>tar</code>red into the

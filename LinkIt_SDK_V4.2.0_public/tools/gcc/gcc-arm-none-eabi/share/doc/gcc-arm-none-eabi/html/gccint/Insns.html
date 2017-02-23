@@ -3,7 +3,7 @@
 <title>Insns - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="RTL.html#RTL" title="RTL">
 <link rel="prev" href="Debug-Information.html#Debug-Information" title="Debug Information">
@@ -180,7 +180,7 @@ standard ones.  <code>CODE_LABEL_NUMBER</code> is used to hold the <dfn>label
 number</dfn>, a number that identifies this label uniquely among all the
 labels in the compilation (not just in the current function). 
 Ultimately, the label is represented in the assembler output as an
-assembler label, usually of the form &lsquo;<samp><span class="samp">L</span><var>n</var></samp>&rsquo; where <var>n</var> is
+assembler label, usually of the form `<samp><span class="samp">L</span><var>n</var></samp>' where <var>n</var> is
 the label number.
 
      <p>When a <code>code_label</code> appears in an RTL expression, it normally
@@ -206,7 +206,7 @@ same name).
      <p>Much of the compiler treats all four kinds of label identically.  Some
 of it needs to know whether or not a label is an alternate entry point;
 for this purpose, the macro <code>LABEL_ALT_ENTRY_P</code> is provided.  It is
-equivalent to testing whether &lsquo;<samp><span class="samp">LABEL_KIND (label) == LABEL_NORMAL</span></samp>&rsquo;. 
+equivalent to testing whether `<samp><span class="samp">LABEL_KIND (label) == LABEL_NORMAL</span></samp>'. 
 The only place that cares about the distinction between static, global,
 and weak alternate entry points, besides the front-end code that creates
 them, is the function <code>output_alternate_entry_point</code>, in
@@ -426,7 +426,7 @@ insn is reached.  This is used so that decrement and branch until zero
 instructions, such as the m68k dbra, can be matched.
 
      <p>The <code>REG_NONNEG</code> note is added to insns only if the machine
-description has a &lsquo;<samp><span class="samp">decrement_and_branch_until_zero</span></samp>&rsquo; pattern.
+description has a `<samp><span class="samp">decrement_and_branch_until_zero</span></samp>' pattern.
 
      <p><a name="index-REG_005fLABEL_005fOPERAND-2264"></a><br><dt><code>REG_LABEL_OPERAND</code><dd>This insn uses <var>op</var>, a <code>code_label</code> or a <code>note</code> of type
 <code>NOTE_INSN_DELETED_LABEL</code>, but is not a <code>jump_insn</code>, or it

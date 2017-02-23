@@ -3,7 +3,7 @@
 <title>objcopy - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="nm.html#nm" title="nm">
 <link rel="next" href="objdump.html#objdump" title="objdump">
@@ -132,7 +132,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
      <!-- man end -->
 </pre>
 <!-- man begin DESCRIPTION objcopy -->
-   <p>The <span class="sc">gnu</span> <samp><span class="command">objcopy</span></samp> utility copies the contents of an object
+<p>The <span class="sc">gnu</span> <samp><span class="command">objcopy</span></samp> utility copies the contents of an object
 file to another.  <samp><span class="command">objcopy</span></samp> uses the <span class="sc">gnu</span> <span class="sc">bfd</span> Library to
 read and write the object files.  It can write the destination object
 file in a format different from that of the source object file.  The
@@ -148,10 +148,10 @@ and thus is able to recognize most formats without being told
 explicitly.  See <a href="../ld/BFD.html#BFD">BFD</a>.
 
    <p><samp><span class="command">objcopy</span></samp> can be used to generate S-records by using an output
-target of &lsquo;<samp><span class="samp">srec</span></samp>&rsquo; (e.g., use &lsquo;<samp><span class="samp">-O srec</span></samp>&rsquo;).
+target of `<samp><span class="samp">srec</span></samp>' (e.g., use `<samp><span class="samp">-O srec</span></samp>').
 
    <p><samp><span class="command">objcopy</span></samp> can be used to generate a raw binary file by using an
-output target of &lsquo;<samp><span class="samp">binary</span></samp>&rsquo; (e.g., use <samp><span class="option">-O binary</span></samp>).  When
+output target of `<samp><span class="samp">binary</span></samp>' (e.g., use <samp><span class="option">-O binary</span></samp>).  When
 <samp><span class="command">objcopy</span></samp> generates a raw binary file, it will essentially produce
 a memory dump of the contents of the input object file.  All symbols and
 relocation information will be discarded.  The memory dump will start at
@@ -165,12 +165,12 @@ information that is not needed by the binary file.
    <p>Note&mdash;<samp><span class="command">objcopy</span></samp> is not able to change the endianness of its input
 files.  If the input format has an endianness (some formats do not),
 <samp><span class="command">objcopy</span></samp> can only copy the inputs into file formats that have the
-same endianness or which have no endianness (e.g., &lsquo;<samp><span class="samp">srec</span></samp>&rsquo;). 
+same endianness or which have no endianness (e.g., `<samp><span class="samp">srec</span></samp>'). 
 (However, see the <samp><span class="option">--reverse-bytes</span></samp> option.)
 
 <!-- man end -->
 <!-- man begin OPTIONS objcopy -->
-     <dl>
+<dl>
 <dt><samp><var>infile</var></samp><dt><samp><var>outfile</var></samp><dd>The input and output files, respectively. 
 If you do not specify <var>outfile</var>, <samp><span class="command">objcopy</span></samp> creates a
 temporary file and destructively renames the result with
@@ -243,7 +243,7 @@ point (!) then the sense of the switch is reversed for that symbol.
 For example:
 
      <pre class="smallexample">            -w -W !foo -W fo*
-</pre>
+     </pre>
      <p>would cause objcopy to weaken all symbols that start with &ldquo;fo&rdquo;
 except for the symbol &ldquo;foo&rdquo;.
 
@@ -251,7 +251,7 @@ except for the symbol &ldquo;foo&rdquo;.
 <!-- FIXME any reason to prefer "non-global" to "local" here? -->
 
      <br><dt><samp><span class="env">-X</span></samp><dt><samp><span class="env">--discard-locals</span></samp><dd>Do not copy compiler-generated local symbols. 
-(These usually start with &lsquo;<samp><span class="samp">L</span></samp>&rsquo; or &lsquo;<samp><span class="samp">.</span></samp>&rsquo;.)
+(These usually start with `<samp><span class="samp">L</span></samp>' or `<samp><span class="samp">.</span></samp>'.)
 
      <br><dt><samp><span class="env">-b </span><var>byte</var></samp><dt><samp><span class="env">--byte=</span><var>byte</var></samp><dd>If interleaving has been enabled via the <samp><span class="option">--interleave</span></samp> option
 then start the range of bytes to keep at the <var>byte</var>th byte. 
@@ -296,7 +296,7 @@ and use consistent file modes for all files.
 
      <p>If <samp><span class="file">binutils</span></samp> was configured with
 <samp><span class="option">--enable-deterministic-archives</span></samp>, then this mode is on by default. 
-It can be disabled with the &lsquo;<samp><span class="samp">-U</span></samp>&rsquo; option, below.
+It can be disabled with the `<samp><span class="samp">-U</span></samp>' option, below.
 
      <br><dt><samp><span class="env">-U</span></samp><dt><samp><span class="env">--disable-deterministic-archives</span></samp><dd><a name="index-deterministic-archives-60"></a><a name="index-g_t_002d_002denable_002ddeterministic_002darchives-61"></a>Do <em>not</em> operate in <em>deterministic</em> mode.  This is the
 inverse of the <samp><span class="option">-D</span></samp> option, above: when copying archive members
@@ -333,7 +333,7 @@ certain address, and this option is used to change the sections such
 that they are loaded at a different address, the program may fail.
 
      <br><dt><samp><span class="env">--change-section-address </span><var>section</var><span class="env">{=,+,-}</span><var>val</var></samp><dt><samp><span class="env">--adjust-section-vma </span><var>section</var><span class="env">{=,+,-}</span><var>val</var></samp><dd><a name="index-changing-section-address-64"></a>Set or change both the VMA address and the LMA address of the named
-<var>section</var>.  If &lsquo;<samp><span class="samp">=</span></samp>&rsquo; is used, the section address is set to
+<var>section</var>.  If `<samp><span class="samp">=</span></samp>' is used, the section address is set to
 <var>val</var>.  Otherwise, <var>val</var> is added to or subtracted from the
 section address.  See the comments under <samp><span class="option">--change-addresses</span></samp>,
 above. If <var>section</var> does not exist in the input file, a warning will
@@ -344,7 +344,7 @@ address is the address where the section will be loaded into memory at
 program load time.  Normally this is the same as the VMA address, which
 is the address of the section at program run time, but on some systems,
 especially those where a program is held in ROM, the two can be
-different.  If &lsquo;<samp><span class="samp">=</span></samp>&rsquo; is used, the section address is set to
+different.  If `<samp><span class="samp">=</span></samp>' is used, the section address is set to
 <var>val</var>.  Otherwise, <var>val</var> is added to or subtracted from the
 section address.  See the comments under <samp><span class="option">--change-addresses</span></samp>,
 above.  If <var>section</var> does not exist in the input file, a warning
@@ -355,7 +355,7 @@ address is the address where the section will be located once the
 program has started executing.  Normally this is the same as the LMA
 address, which is the address where the section will be loaded into
 memory, but on some systems, especially those where a program is held in
-ROM, the two can be different.  If &lsquo;<samp><span class="samp">=</span></samp>&rsquo; is used, the section address
+ROM, the two can be different.  If `<samp><span class="samp">=</span></samp>' is used, the section address
 is set to <var>val</var>.  Otherwise, <var>val</var> is added to or subtracted
 from the section address.  See the comments under
 <samp><span class="option">--change-addresses</span></samp>, above.  If <var>section</var> does not exist in
@@ -372,11 +372,11 @@ if the named section does not exist.
 
      <br><dt><samp><span class="env">--set-section-flags </span><var>section</var><span class="env">=</span><var>flags</var></samp><dd>Set the flags for the named section.  The <var>flags</var> argument is a
 comma separated string of flag names.  The recognized names are
-&lsquo;<samp><span class="samp">alloc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">contents</span></samp>&rsquo;, &lsquo;<samp><span class="samp">load</span></samp>&rsquo;, &lsquo;<samp><span class="samp">noload</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">readonly</span></samp>&rsquo;, &lsquo;<samp><span class="samp">code</span></samp>&rsquo;, &lsquo;<samp><span class="samp">data</span></samp>&rsquo;, &lsquo;<samp><span class="samp">rom</span></samp>&rsquo;, &lsquo;<samp><span class="samp">share</span></samp>&rsquo;, and
-&lsquo;<samp><span class="samp">debug</span></samp>&rsquo;.  You can set the &lsquo;<samp><span class="samp">contents</span></samp>&rsquo; flag for a section which
+`<samp><span class="samp">alloc</span></samp>', `<samp><span class="samp">contents</span></samp>', `<samp><span class="samp">load</span></samp>', `<samp><span class="samp">noload</span></samp>',
+`<samp><span class="samp">readonly</span></samp>', `<samp><span class="samp">code</span></samp>', `<samp><span class="samp">data</span></samp>', `<samp><span class="samp">rom</span></samp>', `<samp><span class="samp">share</span></samp>', and
+`<samp><span class="samp">debug</span></samp>'.  You can set the `<samp><span class="samp">contents</span></samp>' flag for a section which
 does not have contents, but it is not meaningful to clear the
-&lsquo;<samp><span class="samp">contents</span></samp>&rsquo; flag of a section which does have contents&ndash;just remove
+`<samp><span class="samp">contents</span></samp>' flag of a section which does have contents&ndash;just remove
 the section instead.  Not all flags are meaningful for all object file
 formats.
 
@@ -399,16 +399,16 @@ data you could use the following command line to achieve it:
      <pre class="smallexample">            objcopy -I binary -O &lt;output_format&gt; -B &lt;architecture&gt; \
              --rename-section .data=.rodata,alloc,load,readonly,data,contents \
              &lt;input_binary_file&gt; &lt;output_object_file&gt;
-</pre>
+     </pre>
      <br><dt><samp><span class="env">--long-section-names {enable,disable,keep}</span></samp><dd>Controls the handling of long section names when processing <code>COFF</code>
-and <code>PE-COFF</code> object formats.  The default behaviour, &lsquo;<samp><span class="samp">keep</span></samp>&rsquo;,
+and <code>PE-COFF</code> object formats.  The default behaviour, `<samp><span class="samp">keep</span></samp>',
 is to preserve long section names if any are present in the input file. 
-The &lsquo;<samp><span class="samp">enable</span></samp>&rsquo; and &lsquo;<samp><span class="samp">disable</span></samp>&rsquo; options forcibly enable or disable
-the use of long section names in the output object; when &lsquo;<samp><span class="samp">disable</span></samp>&rsquo;
+The `<samp><span class="samp">enable</span></samp>' and `<samp><span class="samp">disable</span></samp>' options forcibly enable or disable
+the use of long section names in the output object; when `<samp><span class="samp">disable</span></samp>'
 is in effect, any long section names in the input object will be truncated. 
-The &lsquo;<samp><span class="samp">enable</span></samp>&rsquo; option will only emit long section names if any are
-present in the inputs; this is mostly the same as &lsquo;<samp><span class="samp">keep</span></samp>&rsquo;, but it
-is left undefined whether the &lsquo;<samp><span class="samp">enable</span></samp>&rsquo; option might force the
+The `<samp><span class="samp">enable</span></samp>' option will only emit long section names if any are
+present in the inputs; this is mostly the same as `<samp><span class="samp">keep</span></samp>', but it
+is left undefined whether the `<samp><span class="samp">enable</span></samp>' option might force the
 creation of an empty string table in the output file.
 
      <br><dt><samp><span class="env">--change-leading-char</span></samp><dd>Some object file formats use special characters at the start of
@@ -443,14 +443,14 @@ endianness of the ROM may need to be modified.
      <p>Consider a simple file with a section containing the following eight
 bytes:  <code>12345678</code>.
 
-     <p>Using &lsquo;<samp><span class="samp">--reverse-bytes=2</span></samp>&rsquo; for the above example, the bytes in the
+     <p>Using `<samp><span class="samp">--reverse-bytes=2</span></samp>' for the above example, the bytes in the
 output file would be ordered <code>21436587</code>.
 
-     <p>Using &lsquo;<samp><span class="samp">--reverse-bytes=4</span></samp>&rsquo; for the above example, the bytes in the
+     <p>Using `<samp><span class="samp">--reverse-bytes=4</span></samp>' for the above example, the bytes in the
 output file would be ordered <code>43218765</code>.
 
-     <p>By using &lsquo;<samp><span class="samp">--reverse-bytes=2</span></samp>&rsquo; for the above example, followed by
-&lsquo;<samp><span class="samp">--reverse-bytes=4</span></samp>&rsquo; on the output file, the bytes in the second
+     <p>By using `<samp><span class="samp">--reverse-bytes=2</span></samp>' for the above example, followed by
+`<samp><span class="samp">--reverse-bytes=4</span></samp>' on the output file, the bytes in the second
 output file would be ordered <code>34127856</code>.
 
      <br><dt><samp><span class="env">--srec-len=</span><var>ival</var></samp><dd>Meaningful only for srec output.  Set the maximum length of the Srecords
@@ -653,7 +653,7 @@ linker input file.
      <br><dt><samp><span class="env">-V</span></samp><dt><samp><span class="env">--version</span></samp><dd>Show the version number of <samp><span class="command">objcopy</span></samp>.
 
      <br><dt><samp><span class="env">-v</span></samp><dt><samp><span class="env">--verbose</span></samp><dd>Verbose output: list all object files modified.  In the case of
-archives, &lsquo;<samp><span class="samp">objcopy -V</span></samp>&rsquo; lists all members of the archive.
+archives, `<samp><span class="samp">objcopy -V</span></samp>' lists all members of the archive.
 
      <br><dt><samp><span class="env">--help</span></samp><dd>Show a summary of the options to <samp><span class="command">objcopy</span></samp>.
 
@@ -661,5 +661,5 @@ archives, &lsquo;<samp><span class="samp">objcopy -V</span></samp>&rsquo; lists 
 </dl>
 
 <!-- man end -->
-   </body></html>
+</body></html>
 

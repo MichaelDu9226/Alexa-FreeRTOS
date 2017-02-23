@@ -3,7 +3,7 @@
 <title>Object-like Macros - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Macros.html#Macros" title="Macros">
 <link rel="next" href="Function_002dlike-Macros.html#Function_002dlike-Macros" title="Function-like Macros">
@@ -61,7 +61,7 @@ by a code fragment.  It is called object-like because it looks like a
 data object in code that uses it.  They are most commonly used to give
 symbolic names to numeric constants.
 
-   <p><a name="index-g_t_0023define-44"></a>You create macros with the &lsquo;<samp><span class="samp">#define</span></samp>&rsquo; directive.  &lsquo;<samp><span class="samp">#define</span></samp>&rsquo; is
+   <p><a name="index-g_t_0023define-44"></a>You create macros with the `<samp><span class="samp">#define</span></samp>' directive.  `<samp><span class="samp">#define</span></samp>' is
 followed by the name of the macro and then the token sequence it should
 be an abbreviation for, which is variously referred to as the macro's
 <dfn>body</dfn>, <dfn>expansion</dfn> or <dfn>replacement list</dfn>.  For example,
@@ -69,7 +69,7 @@ be an abbreviation for, which is variously referred to as the macro's
 <pre class="smallexample">     #define BUFFER_SIZE 1024
 </pre>
    <p class="noindent">defines a macro named <code>BUFFER_SIZE</code> as an abbreviation for the
-token <code>1024</code>.  If somewhere after this &lsquo;<samp><span class="samp">#define</span></samp>&rsquo; directive
+token <code>1024</code>.  If somewhere after this `<samp><span class="samp">#define</span></samp>' directive
 there comes a C statement of the form
 
 <pre class="smallexample">     foo = (char *) malloc (BUFFER_SIZE);
@@ -84,7 +84,7 @@ if you had written
 easier to read when it is possible to tell at a glance which names are
 macros.
 
-   <p>The macro's body ends at the end of the &lsquo;<samp><span class="samp">#define</span></samp>&rsquo; line.  You may
+   <p>The macro's body ends at the end of the `<samp><span class="samp">#define</span></samp>' line.  You may
 continue the definition onto multiple lines, if necessary, using
 backslash-newline.  When the macro is expanded, however, it will all
 come out on one line.  For example,
@@ -130,7 +130,7 @@ macros to expand.  For example,
 macro is expanded to produce the final result, <code>1024</code>.
 
    <p>Notice that <code>BUFSIZE</code> was not defined when <code>TABLESIZE</code> was
-defined.  The &lsquo;<samp><span class="samp">#define</span></samp>&rsquo; for <code>TABLESIZE</code> uses exactly the
+defined.  The `<samp><span class="samp">#define</span></samp>' for <code>TABLESIZE</code> uses exactly the
 expansion you specify&mdash;in this case, <code>BUFSIZE</code>&mdash;and does not
 check to see whether it too contains macro names.  Only when you
 <em>use</em> <code>TABLESIZE</code> is the result of its expansion scanned for

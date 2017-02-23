@@ -3,7 +3,7 @@
 <title>Guard Macros - The GNU C Preprocessor Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Preprocessor Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Line-Numbering.html#Line-Numbering" title="Line Numbering">
 <link rel="next" href="Files.html#Files" title="Files">
@@ -60,16 +60,16 @@ pair, but whitespace and comments are permitted.
 
      <li>There must be no directives outside the controlling directive pair, but
 the <dfn>null directive</dfn> (a line containing nothing other than a single
-&lsquo;<samp><span class="samp">#</span></samp>&rsquo; and possibly whitespace) is permitted.
+`<samp><span class="samp">#</span></samp>' and possibly whitespace) is permitted.
 
      <li>The opening directive must be of the form
 
      <pre class="smallexample">          #ifndef FOO
-</pre>
+     </pre>
      <p>or
 
      <pre class="smallexample">          #if !defined FOO     [equivalently, #if !defined(FOO)]
-</pre>
+     </pre>
      <li>In the second form above, the tokens forming the <code>#if</code> expression
 must have come directly from the source file&mdash;no macro expansion must
 have been involved.  This is because macro definitions can change, and
@@ -132,8 +132,8 @@ the optimization.
 <pre class="smallexample">     #if !defined FOO
 </pre>
    <p class="noindent">case.  <code>_cpp_parse_expr</code> and <code>parse_defined</code> take steps to see
-whether the three stages &lsquo;<samp><span class="samp">!</span></samp>&rsquo;, &lsquo;<samp><span class="samp">defined-expression</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">end-of-directive</span></samp>&rsquo; occur in order in a <code>#if</code> expression.  If
+whether the three stages `<samp><span class="samp">!</span></samp>', `<samp><span class="samp">defined-expression</span></samp>' and
+`<samp><span class="samp">end-of-directive</span></samp>' occur in order in a <code>#if</code> expression.  If
 so, they return the guard macro to <code>do_if</code> in the variable
 <code>mi_ind_cmacro</code>, and otherwise set it to <code>NULL</code>. 
 <code>enter_macro_context</code> sets <code>mi_valid</code> to false, so if a macro

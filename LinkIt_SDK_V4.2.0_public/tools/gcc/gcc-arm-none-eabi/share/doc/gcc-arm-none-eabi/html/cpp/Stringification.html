@@ -3,7 +3,7 @@
 <title>Stringification - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Macros.html#Macros" title="Macros">
 <link rel="prev" href="Macro-Arguments.html#Macro-Arguments" title="Macro Arguments">
@@ -59,8 +59,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Macros.html#Macros">Macros</a>
 <p><a name="index-stringification-50"></a><a name="index-g_t_0040samp_007b_0023_007d-operator-51"></a>
 Sometimes you may want to convert a macro argument into a string
 constant.  Parameters are not replaced inside string constants, but you
-can use the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; preprocessing operator instead.  When a macro
-parameter is used with a leading &lsquo;<samp><span class="samp">#</span></samp>&rsquo;, the preprocessor replaces it
+can use the `<samp><span class="samp">#</span></samp>' preprocessing operator instead.  When a macro
+parameter is used with a leading `<samp><span class="samp">#</span></samp>', the preprocessor replaces it
 with the literal text of the actual argument, converted to a string
 constant.  Unlike normal parameter replacement, the argument is not
 macro-expanded first.  This is called <dfn>stringification</dfn>.
@@ -98,7 +98,7 @@ surrounding embedded string constants, and all backslashes within string and
 character constants, in order to get a valid C string constant with the
 proper contents.  Thus, stringifying <code>p&nbsp;=&nbsp;"foo\n";<!-- /@w --></code> results in
 <tt>"p&nbsp;=&nbsp;\"foo\\n\";"<!-- /@w --></tt>.  However, backslashes that are not inside string
-or character constants are not duplicated: &lsquo;<samp><span class="samp">\n</span></samp>&rsquo; by itself
+or character constants are not duplicated: `<samp><span class="samp">\n</span></samp>' by itself
 stringifies to <tt>"\n"</tt>.
 
    <p>All leading and trailing whitespace in text being stringified is

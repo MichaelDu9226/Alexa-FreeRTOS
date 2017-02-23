@@ -3,7 +3,7 @@
 <title>D10V-Opts - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="D10V_002dDependent.html#D10V_002dDependent" title="D10V-Dependent">
 <link rel="next" href="D10V_002dSyntax.html#D10V_002dSyntax" title="D10V-Syntax">
@@ -52,16 +52,16 @@ Up:&nbsp;<a rel="up" accesskey="u" href="D10V_002dDependent.html#D10V_002dDepend
 dependent options.
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">-O</span></samp>&rsquo;<dd>The D10V can often execute two sub-instructions in parallel. When this option
+<dt>`<samp><span class="samp">-O</span></samp>'<dd>The D10V can often execute two sub-instructions in parallel. When this option
 is used, <code>as</code> will attempt to optimize its output by detecting when
 instructions can be executed in parallel. 
-<br><dt>&lsquo;<samp><span class="samp">--nowarnswap</span></samp>&rsquo;<dd>To optimize execution performance, <code>as</code> will sometimes swap the
+<br><dt>`<samp><span class="samp">--nowarnswap</span></samp>'<dd>To optimize execution performance, <code>as</code> will sometimes swap the
 order of instructions. Normally this generates a warning. When this option
 is used, no warning will be generated when instructions are swapped. 
-<br><dt>&lsquo;<samp><span class="samp">--gstabs-packing</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">--no-gstabs-packing</span></samp>&rsquo;<dd><code>as</code> packs adjacent short instructions into a single packed
-instruction. &lsquo;<samp><span class="samp">--no-gstabs-packing</span></samp>&rsquo; turns instruction packing off if
-&lsquo;<samp><span class="samp">--gstabs</span></samp>&rsquo; is specified as well; &lsquo;<samp><span class="samp">--gstabs-packing</span></samp>&rsquo; (the
-default) turns instruction packing on even when &lsquo;<samp><span class="samp">--gstabs</span></samp>&rsquo; is
+<br><dt>`<samp><span class="samp">--gstabs-packing</span></samp>'<dt>`<samp><span class="samp">--no-gstabs-packing</span></samp>'<dd><code>as</code> packs adjacent short instructions into a single packed
+instruction. `<samp><span class="samp">--no-gstabs-packing</span></samp>' turns instruction packing off if
+`<samp><span class="samp">--gstabs</span></samp>' is specified as well; `<samp><span class="samp">--gstabs-packing</span></samp>' (the
+default) turns instruction packing on even when `<samp><span class="samp">--gstabs</span></samp>' is
 specified. 
 </dl>
 

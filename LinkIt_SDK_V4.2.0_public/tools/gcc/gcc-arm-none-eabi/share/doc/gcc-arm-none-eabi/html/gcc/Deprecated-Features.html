@@ -3,7 +3,7 @@
 <title>Deprecated Features - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C_002b_002b-Extensions.html#C_002b_002b-Extensions" title="C++ Extensions">
 <link rel="prev" href="Java-Exceptions.html#Java-Exceptions" title="Java Exceptions">
@@ -77,13 +77,13 @@ parameters, as C++ demands.  This feature has been removed, except where
 it is required for backwards compatibility.   See <a href="Backwards-Compatibility.html#Backwards-Compatibility">Backwards Compatibility</a>. 
 </dl>
 
- <p>G++ allows a virtual function returning &lsquo;<samp><span class="samp">void *</span></samp>&rsquo; to be overridden
+ <p>G++ allows a virtual function returning `<samp><span class="samp">void *</span></samp>' to be overridden
 by one returning a different pointer type.  This extension to the
 covariant return type rules is now deprecated and will be removed from a
 future version.
 
- <p>The G++ minimum and maximum operators (&lsquo;<samp><span class="samp">&lt;?</span></samp>&rsquo; and &lsquo;<samp><span class="samp">&gt;?</span></samp>&rsquo;) and
-their compound forms (&lsquo;<samp><span class="samp">&lt;?=</span></samp>&rsquo;) and &lsquo;<samp><span class="samp">&gt;?=</span></samp>&rsquo;) have been deprecated
+ <p>The G++ minimum and maximum operators (`<samp><span class="samp">&lt;?</span></samp>' and `<samp><span class="samp">&gt;?</span></samp>') and
+their compound forms (`<samp><span class="samp">&lt;?=</span></samp>') and `<samp><span class="samp">&gt;?=</span></samp>') have been deprecated
 and are now removed from G++.  Code using these operators should be
 modified to use <code>std::min</code> and <code>std::max</code> instead.
 
@@ -104,7 +104,7 @@ and other places where they are not permitted by the standard is
 deprecated and will be removed from a future version of G++.
 
  <p>G++ allows floating-point literals to appear in integral constant expressions,
-e.g. &lsquo;<samp><span class="samp"> enum E { e = int(2.2 * 3.7) } </span></samp>&rsquo;
+e.g. `<samp><span class="samp"> enum E { e = int(2.2 * 3.7) } </span></samp>'
 This extension is deprecated and will be removed from a future version.
 
  <p>G++ allows static data members of const floating-point type to be declared

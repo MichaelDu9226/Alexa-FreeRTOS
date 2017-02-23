@@ -3,7 +3,7 @@
 <title>Expression Section - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Expressions.html#Expressions" title="Expressions">
 <link rel="prev" href="Evaluation.html#Evaluation" title="Evaluation">
@@ -50,7 +50,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Expressions.html#Expressions">Expressio
 
 <p><a name="index-expression-sections-527"></a><a name="index-absolute-expressions-528"></a><a name="index-relative-expressions-529"></a><a name="index-absolute-and-relocatable-symbols-530"></a><a name="index-relocatable-and-absolute-symbols-531"></a><a name="index-symbols_002c-relocatable-and-absolute-532"></a>Addresses and symbols may be section relative, or absolute.  A section
 relative symbol is relocatable.  If you request relocatable output
-using the &lsquo;<samp><span class="samp">-r</span></samp>&rsquo; option, a further link operation may change the
+using the `<samp><span class="samp">-r</span></samp>' option, a further link operation may change the
 value of a section relative symbol.  On the other hand, an absolute
 symbol will retain the same value throughout any further link
 operations.
@@ -107,7 +107,7 @@ address before applying the operator.
 
      <ul>
 <li>An operation involving only numbers results in a number. 
-<li>The result of comparisons, &lsquo;<samp><span class="samp">&amp;&amp;</span></samp>&rsquo; and &lsquo;<samp><span class="samp">||</span></samp>&rsquo; is also a number. 
+<li>The result of comparisons, `<samp><span class="samp">&amp;&amp;</span></samp>' and `<samp><span class="samp">||</span></samp>' is also a number. 
 <li>The result of other binary arithmetic and logical operations on two
 relative addresses in the same section or two absolute addresess
 (after above conversions) is also a number. 
@@ -121,14 +121,14 @@ conversions) is an absolute address.
    <p>You can use the builtin function <code>ABSOLUTE</code> to force an expression
 to be absolute when it would otherwise be relative.  For example, to
 create an absolute symbol set to the address of the end of the output
-section &lsquo;<samp><span class="samp">.data</span></samp>&rsquo;:
+section `<samp><span class="samp">.data</span></samp>':
 <pre class="smallexample">     SECTIONS
        {
          .data : { *(.data) _edata = ABSOLUTE(.); }
        }
 </pre>
-   <p class="noindent">If &lsquo;<samp><span class="samp">ABSOLUTE</span></samp>&rsquo; were not used, &lsquo;<samp><span class="samp">_edata</span></samp>&rsquo; would be relative to the
-&lsquo;<samp><span class="samp">.data</span></samp>&rsquo; section.
+   <p class="noindent">If `<samp><span class="samp">ABSOLUTE</span></samp>' were not used, `<samp><span class="samp">_edata</span></samp>' would be relative to the
+`<samp><span class="samp">.data</span></samp>' section.
 
    <p>Using <code>LOADADDR</code> also forces an expression absolute, since this
 particular builtin function returns an absolute address.

@@ -3,7 +3,7 @@
 <title>MODE_CC Condition Codes - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Condition-Code.html#Condition-Code" title="Condition Code">
 <link rel="prev" href="CC0-Condition-Codes.html#CC0-Condition-Codes" title="CC0 Condition Codes">
@@ -86,7 +86,7 @@ the case of the add on the SPARC discussed above, we have the pattern
                     (const_int 0)))]
             ""
             "...")
-</pre>
+     </pre>
       <p class="noindent">together with a <code>SELECT_CC_MODE</code> that returns <code>CC_NOOVmode</code>
 for comparisons whose argument is a <code>plus</code>:
 
@@ -96,7 +96,7 @@ for comparisons whose argument is a <code>plus</code>:
              : ((GET_CODE (X) == PLUS || GET_CODE (X) == MINUS    \
                  || GET_CODE (X) == NEG) \
                 ? CC_NOOVmode : CCmode))
-</pre>
+     </pre>
       <p>Another reason to use modes is to retain information on which operands
 were used by the comparison; see <code>REVERSIBLE_CC_MODE</code> later in
 this section.
@@ -141,7 +141,7 @@ For example, here is the definition used on the SPARC, where floating-point
 inequality comparisons are always given <code>CCFPEmode</code>:
 
      <pre class="smallexample">          #define REVERSIBLE_CC_MODE(MODE)  ((MODE) != CCFPEmode)
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
@@ -157,7 +157,7 @@ like:
      <pre class="smallexample">          #define REVERSE_CONDITION(CODE, MODE) \
              ((MODE) != CCFPmode ? reverse_condition (CODE) \
               : reverse_condition_maybe_unordered (CODE))
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">

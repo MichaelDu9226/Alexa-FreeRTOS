@@ -3,7 +3,7 @@
 <title>Conditional Init Constructs - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Readline-Init-File.html#Readline-Init-File" title="Readline Init File">
 <link rel="prev" href="Readline-Init-File-Syntax.html#Readline-Init-File-Syntax" title="Readline Init File Syntax">
@@ -62,15 +62,15 @@ no characters are required to isolate it.
 <dt><code>mode</code><dd>The <code>mode=</code> form of the <code>$if</code> directive is used to test
 whether Readline is in <code>emacs</code> or <code>vi</code> mode. 
 This may be used in conjunction
-with the &lsquo;<samp><span class="samp">set keymap</span></samp>&rsquo; command, for instance, to set bindings in
+with the `<samp><span class="samp">set keymap</span></samp>' command, for instance, to set bindings in
 the <code>emacs-standard</code> and <code>emacs-ctlx</code> keymaps only if
 Readline is starting out in <code>emacs</code> mode.
 
           <br><dt><code>term</code><dd>The <code>term=</code> form may be used to include terminal-specific
 key bindings, perhaps to bind the key sequences output by the
 terminal's function keys.  The word on the right side of the
-&lsquo;<samp><span class="samp">=</span></samp>&rsquo; is tested against both the full name of the terminal and
-the portion of the terminal name before the first &lsquo;<samp><span class="samp">-</span></samp>&rsquo;.  This
+`<samp><span class="samp">=</span></samp>' is tested against both the full name of the terminal and
+the portion of the terminal name before the first `<samp><span class="samp">-</span></samp>'.  This
 allows <code>sun</code> to match both <code>sun</code> and <code>sun-cmd</code>,
 for instance.
 
@@ -85,7 +85,7 @@ key sequence that quotes the current or previous word in Bash:
                # Quote the current or previous word
                "\C-xq": "\eb\"\ef\""
                $endif
-</pre>
+          </pre>
           </dl>
 
      <br><dt><code>$endif</code><dd>This command, as seen in the previous example, terminates an
@@ -98,7 +98,7 @@ the test fails.
 and bindings from that file. 
 For example, the following directive reads from <samp><span class="file">/etc/inputrc</span></samp>:
      <pre class="example">          $include /etc/inputrc
-</pre>
+     </pre>
      </dl>
 
    </body></html>

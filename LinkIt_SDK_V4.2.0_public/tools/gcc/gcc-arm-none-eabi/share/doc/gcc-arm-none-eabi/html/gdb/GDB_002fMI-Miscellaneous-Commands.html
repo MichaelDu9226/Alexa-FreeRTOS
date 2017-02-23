@@ -3,7 +3,7 @@
 <title>GDB/MI Miscellaneous Commands - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-File-Transfer-Commands.html#GDB_002fMI-File-Transfer-Commands" title="GDB/MI File Transfer Commands">
@@ -59,7 +59,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>Approximately corresponds to &lsquo;<samp><span class="samp">quit</span></samp>&rsquo;.
+<p>Approximately corresponds to `<samp><span class="samp">quit</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -80,7 +80,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">set</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">set</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -101,7 +101,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">show</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">show</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -123,7 +123,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The <span class="sc">gdb</span> equivalent is &lsquo;<samp><span class="samp">show version</span></samp>&rsquo;.  <span class="sc">gdb</span> by
+<p>The <span class="sc">gdb</span> equivalent is `<samp><span class="samp">show version</span></samp>'.  <span class="sc">gdb</span> by
 default shows this information when you start an interactive session.
 
 <h5 class="subsubheading">Example</h5>
@@ -168,20 +168,20 @@ is given below.
    <p>The current list of features is:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">frozen-varobjs</span></samp>&rsquo;<dd>Indicates support for the <code>-var-set-frozen</code> command, as well
+<dt>`<samp><span class="samp">frozen-varobjs</span></samp>'<dd>Indicates support for the <code>-var-set-frozen</code> command, as well
 as possible presense of the <code>frozen</code> field in the output
 of <code>-varobj-create</code>. 
-<br><dt>&lsquo;<samp><span class="samp">pending-breakpoints</span></samp>&rsquo;<dd>Indicates support for the <samp><span class="option">-f</span></samp> option to the <code>-break-insert</code>
+<br><dt>`<samp><span class="samp">pending-breakpoints</span></samp>'<dd>Indicates support for the <samp><span class="option">-f</span></samp> option to the <code>-break-insert</code>
 command. 
-<br><dt>&lsquo;<samp><span class="samp">python</span></samp>&rsquo;<dd>Indicates Python scripting support, Python-based
+<br><dt>`<samp><span class="samp">python</span></samp>'<dd>Indicates Python scripting support, Python-based
 pretty-printing commands, and possible presence of the
-&lsquo;<samp><span class="samp">display_hint</span></samp>&rsquo; field in the output of <code>-var-list-children</code>
-<br><dt>&lsquo;<samp><span class="samp">thread-info</span></samp>&rsquo;<dd>Indicates support for the <code>-thread-info</code> command. 
-<br><dt>&lsquo;<samp><span class="samp">data-read-memory-bytes</span></samp>&rsquo;<dd>Indicates support for the <code>-data-read-memory-bytes</code> and the
+`<samp><span class="samp">display_hint</span></samp>' field in the output of <code>-var-list-children</code>
+<br><dt>`<samp><span class="samp">thread-info</span></samp>'<dd>Indicates support for the <code>-thread-info</code> command. 
+<br><dt>`<samp><span class="samp">data-read-memory-bytes</span></samp>'<dd>Indicates support for the <code>-data-read-memory-bytes</code> and the
 <code>-data-write-memory-bytes</code> commands. 
-<br><dt>&lsquo;<samp><span class="samp">breakpoint-notifications</span></samp>&rsquo;<dd>Indicates that changes to breakpoints and breakpoints created via the
+<br><dt>`<samp><span class="samp">breakpoint-notifications</span></samp>'<dd>Indicates that changes to breakpoints and breakpoints created via the
 CLI will be announced via async records. 
-<br><dt>&lsquo;<samp><span class="samp">ada-task-info</span></samp>&rsquo;<dd>Indicates support for the <code>-ada-task-info</code> command. 
+<br><dt>`<samp><span class="samp">ada-task-info</span></samp>'<dd>Indicates support for the <code>-ada-task-info</code> command. 
 </dl>
 
 <h4 class="subheading">The <code>-list-target-features</code> Command</h4>
@@ -202,11 +202,11 @@ Example output:
    <p>The current list of features is:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">async</span></samp>&rsquo;<dd>Indicates that the target is capable of asynchronous command
+<dt>`<samp><span class="samp">async</span></samp>'<dd>Indicates that the target is capable of asynchronous command
 execution, which means that <span class="sc">gdb</span> will accept further commands
 while the target is running.
 
-     <br><dt>&lsquo;<samp><span class="samp">reverse</span></samp>&rsquo;<dd>Indicates that the target is capable of reverse execution. 
+     <br><dt>`<samp><span class="samp">reverse</span></samp>'<dd>Indicates that the target is capable of reverse execution. 
 See <a href="Reverse-Execution.html#Reverse-Execution">Reverse Execution</a>, for more information.
 
    </dl>
@@ -226,42 +226,42 @@ thread groups.  Without any parameters, lists information about all
 top-level thread groups.
 
    <p>Normally, thread groups that are being debugged are reported. 
-With the &lsquo;<samp><span class="samp">--available</span></samp>&rsquo; option, <span class="sc">gdb</span> reports thread groups
+With the `<samp><span class="samp">--available</span></samp>' option, <span class="sc">gdb</span> reports thread groups
 available on the target.
 
-   <p>The output of this command may have either a &lsquo;<samp><span class="samp">threads</span></samp>&rsquo; result or
-a &lsquo;<samp><span class="samp">groups</span></samp>&rsquo; result.  The &lsquo;<samp><span class="samp">thread</span></samp>&rsquo; result has a list of tuples
-as value, with each tuple describing a thread (see <a href="GDB_002fMI-Thread-Information.html#GDB_002fMI-Thread-Information">GDB/MI Thread Information</a>).  The &lsquo;<samp><span class="samp">groups</span></samp>&rsquo; result has a list of tuples as value,
+   <p>The output of this command may have either a `<samp><span class="samp">threads</span></samp>' result or
+a `<samp><span class="samp">groups</span></samp>' result.  The `<samp><span class="samp">thread</span></samp>' result has a list of tuples
+as value, with each tuple describing a thread (see <a href="GDB_002fMI-Thread-Information.html#GDB_002fMI-Thread-Information">GDB/MI Thread Information</a>).  The `<samp><span class="samp">groups</span></samp>' result has a list of tuples as value,
 each tuple describing a thread group.  If top-level groups are
 requested (that is, no parameter is passed), or when several groups
-are passed, the output always has a &lsquo;<samp><span class="samp">groups</span></samp>&rsquo; result.  The format
-of the &lsquo;<samp><span class="samp">group</span></samp>&rsquo; result is described below.
+are passed, the output always has a `<samp><span class="samp">groups</span></samp>' result.  The format
+of the `<samp><span class="samp">group</span></samp>' result is described below.
 
    <p>To reduce the number of roundtrips it's possible to list thread groups
-together with their children, by passing the &lsquo;<samp><span class="samp">--recurse</span></samp>&rsquo; option
+together with their children, by passing the `<samp><span class="samp">--recurse</span></samp>' option
 and the recursion depth.  Presently, only recursion depth of 1 is
 permitted.  If this option is present, then every reported thread group
-will also include its children, either as &lsquo;<samp><span class="samp">group</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">threads</span></samp>&rsquo; field.
+will also include its children, either as `<samp><span class="samp">group</span></samp>' or
+`<samp><span class="samp">threads</span></samp>' field.
 
    <p>In general, any combination of option and parameters is permitted, with
 the following caveats:
 
      <ul>
 <li>When a single thread group is passed, the output will typically
-be the &lsquo;<samp><span class="samp">threads</span></samp>&rsquo; result.  Because threads may not contain
-anything, the &lsquo;<samp><span class="samp">recurse</span></samp>&rsquo; option will be ignored.
+be the `<samp><span class="samp">threads</span></samp>' result.  Because threads may not contain
+anything, the `<samp><span class="samp">recurse</span></samp>' option will be ignored.
 
-     <li>When the &lsquo;<samp><span class="samp">--available</span></samp>&rsquo; option is passed, limited information may
+     <li>When the `<samp><span class="samp">--available</span></samp>' option is passed, limited information may
 be available.  In particular, the list of threads of a process might
 be inaccessible.  Further, specifying specific thread groups might
 not give any performance advantage over listing all thread groups. 
-The frontend should assume that &lsquo;<samp><span class="samp">-list-thread-groups --available</span></samp>&rsquo;
+The frontend should assume that `<samp><span class="samp">-list-thread-groups --available</span></samp>'
 is always an expensive operation and cache the results.
 
    </ul>
 
-   <p>The &lsquo;<samp><span class="samp">groups</span></samp>&rsquo; result is a list of tuples, where each tuple may
+   <p>The `<samp><span class="samp">groups</span></samp>' result is a list of tuples, where each tuple may
 have the following fields:
 
      <dl>
@@ -269,17 +269,17 @@ have the following fields:
 The identifier is an opaque string; frontends should not try to
 convert it to an integer, even though it might look like one.
 
-     <br><dt><code>type</code><dd>The type of the thread group.  At present, only &lsquo;<samp><span class="samp">process</span></samp>&rsquo; is a
+     <br><dt><code>type</code><dd>The type of the thread group.  At present, only `<samp><span class="samp">process</span></samp>' is a
 valid type.
 
      <br><dt><code>pid</code><dd>The target-specific process identifier.  This field is only present
-for thread groups of type &lsquo;<samp><span class="samp">process</span></samp>&rsquo; and only if the process exists.
+for thread groups of type `<samp><span class="samp">process</span></samp>' and only if the process exists.
 
      <br><dt><code>num_children</code><dd>The number of children this thread group has.  This field may be
 absent for an available thread group.
 
      <br><dt><code>threads</code><dd>This field has a list of tuples as value, each tuple describing a
-thread.  It may be present if the &lsquo;<samp><span class="samp">--recurse</span></samp>&rsquo; option is
+thread.  It may be present if the `<samp><span class="samp">--recurse</span></samp>' option is
 specified, and it's actually possible to obtain the threads.
 
      <br><dt><code>cores</code><dd>This field is a list of integers, each identifying a core that one
@@ -287,7 +287,7 @@ thread of the group is running on.  This field may be absent if
 such information is not available.
 
      <br><dt><code>executable</code><dd>The name of the executable file that corresponds to this thread group. 
-The field is only present for thread groups of type &lsquo;<samp><span class="samp">process</span></samp>&rsquo;,
+The field is only present for thread groups of type `<samp><span class="samp">process</span></samp>',
 and only if there is a corresponding executable file.
 
    </dl>
@@ -332,7 +332,7 @@ system.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">info os</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">info os</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -394,9 +394,9 @@ popup menu, but is needless clutter on the command line, and
 </pre>
    <p>Creates a new inferior (see <a href="Inferiors-and-Programs.html#Inferiors-and-Programs">Inferiors and Programs</a>).  The created
 inferior is not associated with any executable.  Such association may
-be established with the &lsquo;<samp><span class="samp">-file-exec-and-symbols</span></samp>&rsquo; command
+be established with the `<samp><span class="samp">-file-exec-and-symbols</span></samp>' command
 (see <a href="GDB_002fMI-File-Commands.html#GDB_002fMI-File-Commands">GDB/MI File Commands</a>).  The command response has a single
-field, &lsquo;<samp><span class="samp">thread-group</span></samp>&rsquo;, whose value is the identifier of the
+field, `<samp><span class="samp">thread-group</span></samp>', whose value is the identifier of the
 thread group corresponding to the new inferior.
 
 <h4 class="subheading">Example</h4>
@@ -413,11 +413,13 @@ thread group corresponding to the new inferior.
 
 <pre class="smallexample">     -interpreter-exec <var>interpreter</var> <var>command</var>
 </pre>
-   <p><a name="g_t_002dinterpreter_002dexec"></a>Execute the specified <var>command</var> in the given <var>interpreter</var>.
+   <p><a name="g_t_002dinterpreter_002dexec"></a>
+
+   <p>Execute the specified <var>command</var> in the given <var>interpreter</var>.
 
 <h4 class="subheading"><span class="sc">gdb</span> Command</h4>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">interpreter-exec</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">interpreter-exec</span></samp>'.
 
 <h4 class="subheading">Example</h4>
 
@@ -441,7 +443,7 @@ thread group corresponding to the new inferior.
 
 <h4 class="subheading"><span class="sc">gdb</span> Command</h4>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">set inferior-tty</span></samp>&rsquo; /dev/pts/1.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">set inferior-tty</span></samp>' /dev/pts/1.
 
 <h4 class="subheading">Example</h4>
 
@@ -462,7 +464,7 @@ thread group corresponding to the new inferior.
 
 <h4 class="subheading"><span class="sc">gdb</span> Command</h4>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">show inferior-tty</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">show inferior-tty</span></samp>'.
 
 <h4 class="subheading">Example</h4>
 
@@ -485,7 +487,7 @@ thread group corresponding to the new inferior.
    <p>Toggle the printing of the wallclock, user and system times for an MI
 command as a field in its output.  This command is to help frontend
 developers optimize the performance of their code.  No argument is
-equivalent to &lsquo;<samp><span class="samp">yes</span></samp>&rsquo;.
+equivalent to `<samp><span class="samp">yes</span></samp>'.
 
 <h4 class="subheading"><span class="sc">gdb</span> Command</h4>
 

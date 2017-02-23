@@ -3,7 +3,7 @@
 <title>Optimize Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="Debugging-Options.html#Debugging-Options" title="Debugging Options">
@@ -127,7 +127,7 @@ compilation time.
           -ftree-pta 
           -ftree-ter 
           -funit-at-a-time
-</pre>
+     </pre>
      <p><samp><span class="option">-O</span></samp> also turns on <samp><span class="option">-fomit-frame-pointer</span></samp> on machines
 where doing so does not interfere with debugging.
 
@@ -164,7 +164,7 @@ also turns on the following optimization flags:
           -ftree-switch-conversion -ftree-tail-merge 
           -ftree-pre 
           -ftree-vrp
-</pre>
+     </pre>
      <p>Please note the warning under <samp><span class="option">-fgcse</span></samp> about
 invoking <samp><span class="option">-O2</span></samp> on programs that use computed gotos.
 
@@ -186,7 +186,7 @@ optimizations designed to reduce code size.
      <pre class="smallexample">          -falign-functions  -falign-jumps  -falign-loops 
           -falign-labels  -freorder-blocks  -freorder-blocks-and-partition 
           -fprefetch-loop-arrays  -ftree-vect-loop-version
-</pre>
+     </pre>
      <br><dt><code>-Ofast</code><dd><a name="index-Ofast-739"></a>Disregard strict standards compliance.  <samp><span class="option">-Ofast</span></samp> enables all
 <samp><span class="option">-O3</span></samp> optimizations.  It also enables optimizations that are not
 valid for all standard-compliant programs. 
@@ -207,7 +207,7 @@ the last such option is the one that is effective.
 flags.  Most flags have both positive and negative forms; the negative
 form of <samp><span class="option">-ffoo</span></samp> is <samp><span class="option">-fno-foo</span></samp>.  In the table
 below, only one of the forms is listed&mdash;the one you typically
-use.  You can figure out the other form by either removing &lsquo;<samp><span class="samp">no-</span></samp>&rsquo;
+use.  You can figure out the other form by either removing `<samp><span class="samp">no-</span></samp>'
 or adding it.
 
  <p>The following options control specific optimizations.  They are either
@@ -219,7 +219,7 @@ optimizations to be performed is desired.
 <dt><code>-fno-default-inline</code><dd><a name="index-fno_002ddefault_002dinline-741"></a>Do not make member functions inline by default merely because they are
 defined inside the class scope (C++ only).  Otherwise, when you specify
 <samp><span class="option">-O</span></samp><!-- /@w -->, member functions defined inside class scope are compiled
-inline by default; i.e., you don't need to add &lsquo;<samp><span class="samp">inline</span></samp>&rsquo; in front of
+inline by default; i.e., you don't need to add `<samp><span class="samp">inline</span></samp>' in front of
 the member function name.
 
      <br><dt><code>-fno-defer-pop</code><dd><a name="index-fno_002ddefer_002dpop-742"></a>Always pop the arguments to each function call as soon as that function
@@ -603,8 +603,8 @@ optimization.
      <p>Enabled at levels <samp><span class="option">-O2</span></samp>, <samp><span class="option">-O3</span></samp>, <samp><span class="option">-Os</span></samp>.
 
      <br><dt><code>-fira-algorithm=</code><var>algorithm</var><dd>Use the specified coloring algorithm for the integrated register
-allocator.  The <var>algorithm</var> argument can be &lsquo;<samp><span class="samp">priority</span></samp>&rsquo;, which
-specifies Chow's priority coloring, or &lsquo;<samp><span class="samp">CB</span></samp>&rsquo;, which specifies
+allocator.  The <var>algorithm</var> argument can be `<samp><span class="samp">priority</span></samp>', which
+specifies Chow's priority coloring, or `<samp><span class="samp">CB</span></samp>', which specifies
 Chaitin-Briggs coloring.  Chaitin-Briggs coloring is not implemented
 for all architectures, but for those targets that do support it, it is
 the default because it generates better code.
@@ -613,17 +613,17 @@ the default because it generates better code.
 <var>region</var> argument should be one of the following:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">all</span></samp>&rsquo;<dd>Use all loops as register allocation regions. 
+<dt>`<samp><span class="samp">all</span></samp>'<dd>Use all loops as register allocation regions. 
 This can give the best results for machines with a small and/or
 irregular register set.
 
-          <br><dt>&lsquo;<samp><span class="samp">mixed</span></samp>&rsquo;<dd>Use all loops except for loops with small register pressure
+          <br><dt>`<samp><span class="samp">mixed</span></samp>'<dd>Use all loops except for loops with small register pressure
 as the regions.  This value usually gives
 the best results in most cases and for most architectures,
 and is enabled by default when compiling with optimization for speed
 (<samp><span class="option">-O</span></samp>, <samp><span class="option">-O2</span></samp>, <small class="dots">...</small>).
 
-          <br><dt>&lsquo;<samp><span class="samp">one</span></samp>&rsquo;<dd>Use all functions as a single region. 
+          <br><dt>`<samp><span class="samp">one</span></samp>'<dd>Use all functions as a single region. 
 This typically results in the smallest code size, and is enabled by default for
 <samp><span class="option">-Os</span></samp> or <samp><span class="option">-O0</span></samp>.
 
@@ -928,14 +928,14 @@ loop like:
               A(J, I) = A(J, I) * C
             ENDDO
           ENDDO
-</pre>
+     </pre>
      <p>loop interchange transforms the loop as if it were written:
      <pre class="smallexample">          DO I = 1, N
             DO J = 1, M
               A(J, I) = A(J, I) * C
             ENDDO
           ENDDO
-</pre>
+     </pre>
      <p>which can be beneficial when <code>N</code> is larger than the caches,
 because in Fortran, the elements of an array are stored in memory
 contiguously by column, and the original loop iterates over rows,
@@ -954,14 +954,14 @@ given a loop like:
      <pre class="smallexample">          DO I = 1, N
             A(I) = A(I) + C
           ENDDO
-</pre>
+     </pre>
      <p>loop strip mining transforms the loop as if it were written:
      <pre class="smallexample">          DO II = 1, N, 51
             DO I = II, min (II + 50, N)
               A(I) = A(I) + C
             ENDDO
           ENDDO
-</pre>
+     </pre>
      <p>This optimization applies to all the languages supported by GCC and is
 not limited to Fortran.  To use this code transformation, GCC has to
 be configured with <samp><span class="option">--with-ppl</span></samp> and <samp><span class="option">--with-cloog</span></samp> to
@@ -977,7 +977,7 @@ a loop like:
               A(J, I) = B(I) + C(J)
             ENDDO
           ENDDO
-</pre>
+     </pre>
      <p>loop blocking transforms the loop as if it were written:
      <pre class="smallexample">          DO II = 1, N, 51
             DO JJ = 1, M, 51
@@ -988,7 +988,7 @@ a loop like:
               ENDDO
             ENDDO
           ENDDO
-</pre>
+     </pre>
      <p>which can be beneficial when <code>M</code> is larger than the caches,
 because the innermost loop iterates over a smaller amount of data
 which can be kept in the caches.  This optimization applies to all the
@@ -1030,11 +1030,11 @@ For example,
      <pre class="smallexample">          for (i = 0; i &lt; N; i++)
             if (cond)
               A[i] = expr;
-</pre>
+     </pre>
      <p>is transformed to
      <pre class="smallexample">          for (i = 0; i &lt; N; i++)
             A[i] = cond ? expr : A[i];
-</pre>
+     </pre>
      <p>potentially producing data races.
 
      <br><dt><code>-ftree-loop-distribution</code><dd>Perform loop distribution.  This flag can improve cache performance on
@@ -1044,7 +1044,7 @@ parallelization or vectorization, to take place.  For example, the loop
             A(I) = B(I) + C
             D(I) = E(I) * F
           ENDDO
-</pre>
+     </pre>
      <p>is transformed to
      <pre class="smallexample">          DO I = 1, N
              A(I) = B(I) + C
@@ -1052,7 +1052,7 @@ parallelization or vectorization, to take place.  For example, the loop
           DO I = 1, N
              D(I) = E(I) * F
           ENDDO
-</pre>
+     </pre>
      <br><dt><code>-ftree-loop-distribute-patterns</code><dd>Perform loop distribution of patterns that can be code generated with
 calls to a library.  This flag is enabled by default at <samp><span class="option">-O3</span></samp>.
 
@@ -1062,7 +1062,7 @@ memset zero.  For example, the loop
             A(I) = 0
             B(I) = A(I) + I
           ENDDO
-</pre>
+     </pre>
      <p>is transformed to
      <pre class="smallexample">          DO I = 1, N
              A(I) = 0
@@ -1070,7 +1070,7 @@ memset zero.  For example, the loop
           DO I = 1, N
              B(I) = A(I) + I
           ENDDO
-</pre>
+     </pre>
      <p>and the initialization loop is transformed into a call to memset zero.
 
      <br><dt><code>-ftree-loop-im</code><dd><a name="index-ftree_002dloop_002dim-856"></a>Perform loop invariant motion on trees.  This pass moves only invariants that
@@ -1220,12 +1220,12 @@ other, a few use both.
      <p>GCC uses heuristics to guess branch probabilities if they are
 not provided by profiling feedback (<samp><span class="option">-fprofile-arcs</span></samp>).  These
 heuristics are based on the control flow graph.  If some branch probabilities
-are specified by &lsquo;<samp><span class="samp">__builtin_expect</span></samp>&rsquo;, then the heuristics are
+are specified by `<samp><span class="samp">__builtin_expect</span></samp>', then the heuristics are
 used to guess branch probabilities for the rest of the control flow graph,
-taking the &lsquo;<samp><span class="samp">__builtin_expect</span></samp>&rsquo; info into account.  The interactions
-between the heuristics and &lsquo;<samp><span class="samp">__builtin_expect</span></samp>&rsquo; can be complex, and in
+taking the `<samp><span class="samp">__builtin_expect</span></samp>' info into account.  The interactions
+between the heuristics and `<samp><span class="samp">__builtin_expect</span></samp>' can be complex, and in
 some cases, it may be useful to disable the heuristics so that the effects
-of &lsquo;<samp><span class="samp">__builtin_expect</span></samp>&rsquo; are easier to understand.
+of `<samp><span class="samp">__builtin_expect</span></samp>' are easier to understand.
 
      <p>The default is <samp><span class="option">-fguess-branch-probability</span></samp> at levels
 <samp><span class="option">-O</span></samp>, <samp><span class="option">-O2</span></samp>, <samp><span class="option">-O3</span></samp>, <samp><span class="option">-Os</span></samp>.
@@ -1277,7 +1277,7 @@ type.
             t.d = 3.0;
             return t.i;
           }
-</pre>
+     </pre>
      <p>The practice of reading from a different union member than the one most
 recently written to (called &ldquo;type-punning&rdquo;) is common.  Even with
 <samp><span class="option">-fstrict-aliasing</span></samp>, type-punning is allowed, provided the memory
@@ -1290,7 +1290,7 @@ expected.  See <a href="Structures-unions-enumerations-and-bit_002dfields-implem
             ip = &amp;t.i;
             return *ip;
           }
-</pre>
+     </pre>
      <p>Similarly, access by taking the address, casting the resulting pointer
 and dereferencing the result has undefined behavior, even if the cast
 uses a union type, e.g.:
@@ -1298,7 +1298,7 @@ uses a union type, e.g.:
             double d = 3.0;
             return ((union a_union *) &amp;d)-&gt;i;
           }
-</pre>
+     </pre>
      <p>The <samp><span class="option">-fstrict-aliasing</span></samp> option is enabled at levels
 <samp><span class="option">-O2</span></samp>, <samp><span class="option">-O3</span></samp>, <samp><span class="option">-Os</span></samp>.
 
@@ -1363,7 +1363,7 @@ equivalent and mean that labels are not aligned.
 are greater than this value, then their values are used instead.
 
      <p>If <var>n</var> is not specified or is zero, use a machine-dependent default
-which is very likely to be &lsquo;<samp><span class="samp">1</span></samp>&rsquo;, meaning no alignment.
+which is very likely to be `<samp><span class="samp">1</span></samp>', meaning no alignment.
 
      <p>Enabled at levels <samp><span class="option">-O2</span></samp>, <samp><span class="option">-O3</span></samp>.
 
@@ -1439,7 +1439,7 @@ compile time and during the final link.  For example:
      <pre class="smallexample">          gcc -c -O2 -flto foo.c
           gcc -c -O2 -flto bar.c
           gcc -o myprog -flto -O2 foo.o bar.o
-</pre>
+     </pre>
      <p>The first two invocations to GCC save a bytecode representation
 of GIMPLE into special ELF sections inside <samp><span class="file">foo.o</span></samp> and
 <samp><span class="file">bar.o</span></samp>.  The final invocation reads the GIMPLE bytecode from
@@ -1454,7 +1454,7 @@ for example, that the inliner is able to inline functions in
      <p>Another (simpler) way to enable link-time optimization is:
 
      <pre class="smallexample">          gcc -o myprog -flto -O2 foo.c bar.c
-</pre>
+     </pre>
      <p>The above generates bytecode for <samp><span class="file">foo.c</span></samp> and <samp><span class="file">bar.c</span></samp>,
 merges them together into a single GIMPLE representation and optimizes
 them as usual to produce <samp><span class="file">myprog</span></samp>.
@@ -1486,7 +1486,7 @@ are not necessarily related to those used at link time.  For instance,
      <pre class="smallexample">          gcc -c -O0 -flto foo.c
           gcc -c -O0 -flto bar.c
           gcc -o myprog -flto -O3 foo.o bar.o
-</pre>
+     </pre>
      <p>This produces individual object files with unoptimized assembler
 code, but the resulting binary <samp><span class="file">myprog</span></samp> is optimized at
 <samp><span class="option">-O3</span></samp>.  If, instead, the final binary is generated without
@@ -1528,7 +1528,7 @@ something like this should work:
           g++ -c -flto bar.cc
           gfortran -c -flto baz.f90
           g++ -o myprog -flto -O3 foo.o bar.o baz.o -lgfortran
-</pre>
+     </pre>
      <p>Notice that the final link is done with <samp><span class="command">g++</span></samp> to get the C++
 runtime libraries and <samp><span class="option">-lgfortran</span></samp> is added to get the Fortran
 runtime libraries.  In general, when mixing languages in LTO mode, you
@@ -1542,7 +1542,7 @@ are using a linker with plugin support.  To enable this feature, use
 the flag <samp><span class="option">-fuse-linker-plugin</span></samp> at link time:
 
      <pre class="smallexample">          gcc -o myprog -O2 -flto -fuse-linker-plugin a.o b.o -lfoo
-</pre>
+     </pre>
      <p>With the linker plugin enabled, the linker extracts the needed
 GIMPLE files from <samp><span class="file">libfoo.a</span></samp> and passes them on to the running GCC
 to make them part of the aggregated GIMPLE image to be optimized.
@@ -1580,7 +1580,7 @@ used.  The default value for <var>n</var> is 1.
      <p>You can also specify <samp><span class="option">-flto=jobserver</span></samp> to use GNU make's
 job server mode to determine the number of parallel jobs. This
 is useful when the Makefile calling GCC is already executing in parallel. 
-You must prepend a &lsquo;<samp><span class="samp">+</span></samp>&rsquo; to the command recipe in the parent Makefile
+You must prepend a `<samp><span class="samp">+</span></samp>' to the command recipe in the parent Makefile
 for this to work.  This option likely only works if <samp><span class="env">MAKE</span></samp> is
 GNU make.
 
@@ -1919,10 +1919,10 @@ structure of the generated code, so you must use the same source code
 and the same optimization options for both compilations.
 
      <p>With <samp><span class="option">-fbranch-probabilities</span></samp>, GCC puts a
-&lsquo;<samp><span class="samp">REG_BR_PROB</span></samp>&rsquo; note on each &lsquo;<samp><span class="samp">JUMP_INSN</span></samp>&rsquo; and &lsquo;<samp><span class="samp">CALL_INSN</span></samp>&rsquo;. 
+`<samp><span class="samp">REG_BR_PROB</span></samp>' note on each `<samp><span class="samp">JUMP_INSN</span></samp>' and `<samp><span class="samp">CALL_INSN</span></samp>'. 
 These can be used to improve optimization.  Currently, they are only
 used in one place: in <samp><span class="file">reorg.c</span></samp>, instead of guessing which path a
-branch is most likely to take, the &lsquo;<samp><span class="samp">REG_BR_PROB</span></samp>&rsquo; values are used to
+branch is most likely to take, the `<samp><span class="samp">REG_BR_PROB</span></samp>' values are used to
 exactly determine which path is taken more often.
 
      <br><dt><code>-fprofile-values</code><dd><a name="index-fprofile_002dvalues-921"></a>If combined with <samp><span class="option">-fprofile-arcs</span></samp>, it adds code so that some
@@ -2030,7 +2030,7 @@ targets.
 
      <pre class="smallexample">          static int a, b, c;
           int foo (void) { return a + b + c; }
-</pre>
+     </pre>
      <p class="noindent">usually calculates the addresses of all three variables, but if you
 compile it with <samp><span class="option">-fsection-anchors</span></samp>, it accesses the variables
 from a common anchor point instead.  The effect is similar to the
@@ -2041,7 +2041,7 @@ following pseudocode (which isn't valid C):
             register int *xr = &amp;x;
             return xr[&amp;a - &amp;x] + xr[&amp;b - &amp;x] + xr[&amp;c - &amp;x];
           }
-</pre>
+     </pre>
      <p>Not all targets support this option.
 
      <br><dt><code>--param </code><var>name</var><code>=</code><var>value</var><dd><a name="index-param-938"></a>In some places, GCC uses various constants to control the amount of

@@ -3,7 +3,7 @@
 <title>How do I? - GNU gprof</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU gprof">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Inaccuracy.html#Inaccuracy" title="Inaccuracy">
 <link rel="next" href="Incompatibilities.html#Incompatibilities" title="Incompatibilities">
@@ -55,7 +55,7 @@ Because <code>gprof</code> can only report call times and counts by function,
 the best way to get finer-grained information on where the program
 is spending its time is to re-factor large functions into sequences
 of calls to smaller ones.  Beware however that this can introduce
-artificial hot spots since compiling with &lsquo;<samp><span class="samp">-pg</span></samp>&rsquo; adds a significant
+artificial hot spots since compiling with `<samp><span class="samp">-pg</span></samp>' adds a significant
 overhead to function calls.  An alternative solution is to use a
 non-intrusive profiler, e.g. oprofile.
 
@@ -63,7 +63,7 @@ non-intrusive profiler, e.g. oprofile.
 Use the <code>gcov</code> program.
 
      <br><dt>How do I find which lines in my program called a particular function?<dd>
-Use &lsquo;<samp><span class="samp">gprof -l</span></samp>&rsquo; and lookup the function in the call graph. 
+Use `<samp><span class="samp">gprof -l</span></samp>' and lookup the function in the call graph. 
 The callers will be broken down by function and line number.
 
      <br><dt>How do I analyze a program that runs for less than a second?<dd>
@@ -77,7 +77,7 @@ Try using a shell script like this one:
           gprof -s fastprog gmon.out.*
           
           gprof fastprog gmon.sum
-</pre>
+     </pre>
      <p>If your program is completely deterministic, all the call counts
 will be simple multiples of 100 (i.e., a function called once in
 each run will appear with a call count of 100).

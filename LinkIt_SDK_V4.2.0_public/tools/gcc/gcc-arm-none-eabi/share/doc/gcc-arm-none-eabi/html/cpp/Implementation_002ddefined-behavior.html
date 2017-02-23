@@ -3,7 +3,7 @@
 <title>Implementation-defined behavior - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Implementation-Details.html#Implementation-Details" title="Implementation Details">
 <link rel="next" href="Implementation-limits.html#Implementation-limits" title="Implementation limits">
@@ -72,20 +72,22 @@ be controlled using the <samp><span class="option">-fexec-charset</span></samp> 
 <samp><span class="option">-fwide-exec-charset</span></samp> options.
 
      <li>Identifier characters. 
-<a name="Identifier-characters"></a>The C and C++ standards allow identifiers to be composed of &lsquo;<samp><span class="samp">_</span></samp>&rsquo;
+<a name="Identifier-characters"></a>
+
+     <p>The C and C++ standards allow identifiers to be composed of `<samp><span class="samp">_</span></samp>'
 and the alphanumeric characters.  C++ and C99 also allow universal
 character names, and C99 further permits implementation-defined
 characters.  GCC currently only permits universal character names if
 <samp><span class="option">-fextended-identifiers</span></samp> is used, because the implementation of
 universal character names in identifiers is experimental.
 
-     <p>GCC allows the &lsquo;<samp><span class="samp">$</span></samp>&rsquo; character in identifiers as an extension for
+     <p>GCC allows the `<samp><span class="samp">$</span></samp>' character in identifiers as an extension for
 most targets.  This is true regardless of the <samp><span class="option">std=</span></samp> switch,
 since this extension cannot conflict with standards-conforming
 programs.  When preprocessing assembler, however, dollars are not
 identifier characters by default.
 
-     <p>Currently the targets that by default do not permit &lsquo;<samp><span class="samp">$</span></samp>&rsquo; are AVR,
+     <p>Currently the targets that by default do not permit `<samp><span class="samp">$</span></samp>' are AVR,
 IP2K, MMIX, MIPS Irix 3, ARM aout, and PowerPC targets for the AIX
 operating system.
 
@@ -102,7 +104,7 @@ same column as it did in the original source file.
      <li>The numeric value of character constants in preprocessor expressions.
 
      <p>The preprocessor and compiler interpret character constants in the
-same way; i.e. escape sequences such as &lsquo;<samp><span class="samp">\a</span></samp>&rsquo; are given the
+same way; i.e. escape sequences such as `<samp><span class="samp">\a</span></samp>' are given the
 values they would have on the target machine.
 
      <p>The compiler evaluates a multi-character character constant a character
@@ -117,7 +119,7 @@ compiler issues a warning, and the excess leading characters are
 ignored.
 
      <p>For example, <code>'ab'</code> for a target with an 8-bit <code>char</code> would be
-interpreted as &lsquo;<samp><span class="samp">(int)&nbsp;((unsigned&nbsp;char)&nbsp;'a'&nbsp;*&nbsp;256&nbsp;+&nbsp;(unsigned&nbsp;char)&nbsp;'b')</span></samp>&rsquo;<!-- /@w -->, and <code>'\234a'</code> as &lsquo;<samp><span class="samp">(int)&nbsp;((unsigned&nbsp;char)&nbsp;'\234'&nbsp;*&nbsp;256&nbsp;+&nbsp;(unsigned&nbsp;char)&nbsp;'a')</span></samp>&rsquo;<!-- /@w -->.
+interpreted as `<samp><span class="samp">(int)&nbsp;((unsigned&nbsp;char)&nbsp;'a'&nbsp;*&nbsp;256&nbsp;+&nbsp;(unsigned&nbsp;char)&nbsp;'b')</span></samp>'<!-- /@w -->, and <code>'\234a'</code> as `<samp><span class="samp">(int)&nbsp;((unsigned&nbsp;char)&nbsp;'\234'&nbsp;*&nbsp;256&nbsp;+&nbsp;(unsigned&nbsp;char)&nbsp;'a')</span></samp>'<!-- /@w -->.
 
      <li>Source file inclusion.
 
@@ -125,14 +127,14 @@ interpreted as &lsquo;<samp><span class="samp">(int)&nbsp;((unsigned&nbsp;char)&
 <a href="Include-Operation.html#Include-Operation">Include Operation</a>.
 
      <li>Interpretation of the filename resulting from a macro-expanded
-&lsquo;<samp><span class="samp">#include</span></samp>&rsquo; directive.
+`<samp><span class="samp">#include</span></samp>' directive.
 
      <p>See <a href="Computed-Includes.html#Computed-Includes">Computed Includes</a>.
 
-     <li>Treatment of a &lsquo;<samp><span class="samp">#pragma</span></samp>&rsquo; directive that after macro-expansion
+     <li>Treatment of a `<samp><span class="samp">#pragma</span></samp>' directive that after macro-expansion
 results in a standard pragma.
 
-     <p>No macro expansion occurs on any &lsquo;<samp><span class="samp">#pragma</span></samp>&rsquo; directive line, so the
+     <p>No macro expansion occurs on any `<samp><span class="samp">#pragma</span></samp>' directive line, so the
 question does not arise.
 
      <p>Note that GCC does not yet implement any of the standard

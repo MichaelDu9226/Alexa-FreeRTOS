@@ -3,7 +3,7 @@
 <title>i386-Options - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="i386_002dDependent.html#i386_002dDependent" title="i386-Dependent">
 <link rel="next" href="i386_002dDirectives.html#i386_002dDirectives" title="i386-Directives">
@@ -53,15 +53,15 @@ The i386 version of <code>as</code> has a few machine
 dependent options:
 
 <!-- man begin OPTIONS -->
-     
+
 <a name="index-g_t_0040samp_007b_002d_002d32_007d-option_002c-i386-907"></a>
 <a name="index-g_t_0040samp_007b_002d_002d32_007d-option_002c-x86_002d64-908"></a>
 <a name="index-g_t_0040samp_007b_002d_002dx32_007d-option_002c-i386-909"></a>
 <a name="index-g_t_0040samp_007b_002d_002dx32_007d-option_002c-x86_002d64-910"></a>
 <a name="index-g_t_0040samp_007b_002d_002d64_007d-option_002c-i386-911"></a>
 <a name="index-g_t_0040samp_007b_002d_002d64_007d-option_002c-x86_002d64-912"></a>
-<dl><dt><code>--32 | --x32 | --64</code><dd>Select the word size, either 32 bits or 64 bits.  &lsquo;<samp><span class="samp">--32</span></samp>&rsquo;
-implies Intel i386 architecture, while &lsquo;<samp><span class="samp">--x32</span></samp>&rsquo; and &lsquo;<samp><span class="samp">--64</span></samp>&rsquo;
+<dl><dt><code>--32 | --x32 | --64</code><dd>Select the word size, either 32 bits or 64 bits.  `<samp><span class="samp">--32</span></samp>'
+implies Intel i386 architecture, while `<samp><span class="samp">--x32</span></samp>' and `<samp><span class="samp">--64</span></samp>'
 imply AMD x86-64 architecture with 32-bit or 64-bit word-size
 respectively.
 
@@ -74,11 +74,11 @@ usage and use x86-64 as target platform).
 alignment within code sections with multi-byte nop instructions such
 as leal 0(%esi,1),%esi.  This switch disables the optimization.
 
-     <p><a name="index-g_t_0040samp_007b_002d_002ddivide_007d-option_002c-i386-913"></a><br><dt><code>--divide</code><dd>On SVR4-derived platforms, the character &lsquo;<samp><span class="samp">/</span></samp>&rsquo; is treated as a comment
+     <p><a name="index-g_t_0040samp_007b_002d_002ddivide_007d-option_002c-i386-913"></a><br><dt><code>--divide</code><dd>On SVR4-derived platforms, the character `<samp><span class="samp">/</span></samp>' is treated as a comment
 character, which means that it cannot be used in expressions.  The
-&lsquo;<samp><span class="samp">--divide</span></samp>&rsquo; option turns &lsquo;<samp><span class="samp">/</span></samp>&rsquo; into a normal character.  This does
-not disable &lsquo;<samp><span class="samp">/</span></samp>&rsquo; at the beginning of a line starting a comment, or
-affect using &lsquo;<samp><span class="samp">#</span></samp>&rsquo; for starting a comment.
+`<samp><span class="samp">--divide</span></samp>' option turns `<samp><span class="samp">/</span></samp>' into a normal character.  This does
+not disable `<samp><span class="samp">/</span></samp>' at the beginning of a line starting a comment, or
+affect using `<samp><span class="samp">#</span></samp>' for starting a comment.
 
      <p><a name="index-g_t_0040samp_007b_002dmarch_003d_007d-option_002c-i386-914"></a><a name="index-g_t_0040samp_007b_002dmarch_003d_007d-option_002c-x86_002d64-915"></a><br><dt><code>-march=</code><var>CPU</var><code>[+</code><var>EXTENSION</var><code>...]</code><dd>This option specifies the target processor.  The assembler will
 issue an error message if an attempt is made to assemble an instruction
@@ -210,7 +210,7 @@ take precedent.
 The <code>.att_syntax</code> and <code>.intel_syntax</code> directives will
 take precedent.
 
-     <p><a name="index-g_t_0040samp_007b_002dmnaked_002dreg_007d-option_002c-i386-928"></a><a name="index-g_t_0040samp_007b_002dmnaked_002dreg_007d-option_002c-x86_002d64-929"></a><br><dt><code>-mnaked-reg</code><dd>This opetion specifies that registers don't require a &lsquo;<samp><span class="samp">%</span></samp>&rsquo; prefix. 
+     <p><a name="index-g_t_0040samp_007b_002dmnaked_002dreg_007d-option_002c-i386-928"></a><a name="index-g_t_0040samp_007b_002dmnaked_002dreg_007d-option_002c-x86_002d64-929"></a><br><dt><code>-mnaked-reg</code><dd>This opetion specifies that registers don't require a `<samp><span class="samp">%</span></samp>' prefix. 
 The <code>.att_syntax</code> and <code>.intel_syntax</code> directives will take precedent.
 
    </dl>

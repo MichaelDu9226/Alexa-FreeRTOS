@@ -3,7 +3,7 @@
 <title>Deprecated Options - GNU gprof</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU gprof">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking.html#Invoking" title="Invoking">
 <link rel="prev" href="Miscellaneous-Options.html#Miscellaneous-Options" title="Miscellaneous Options">
@@ -51,37 +51,37 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Invoking.html#Invoking">Invoking</a>
 <p>These options have been replaced with newer versions that use symspecs.
 
      <dl>
-<dt><code>-e </code><var>function_name</var><dd>The &lsquo;<samp><span class="samp">-e </span><var>function</var></samp>&rsquo; option tells <code>gprof</code> to not print
+<dt><code>-e </code><var>function_name</var><dd>The `<samp><span class="samp">-e </span><var>function</var></samp>' option tells <code>gprof</code> to not print
 information about the function <var>function_name</var> (and its
 children<small class="dots">...</small>) in the call graph.  The function will still be listed
 as a child of any functions that call it, but its index number will be
-shown as &lsquo;<samp><span class="samp">[not printed]</span></samp>&rsquo;.  More than one &lsquo;<samp><span class="samp">-e</span></samp>&rsquo; option may be
-given; only one <var>function_name</var> may be indicated with each &lsquo;<samp><span class="samp">-e</span></samp>&rsquo;
+shown as `<samp><span class="samp">[not printed]</span></samp>'.  More than one `<samp><span class="samp">-e</span></samp>' option may be
+given; only one <var>function_name</var> may be indicated with each `<samp><span class="samp">-e</span></samp>'
 option.
 
      <br><dt><code>-E </code><var>function_name</var><dd>The <code>-E </code><var>function</var> option works like the <code>-e</code> option, but
 time spent in the function (and children who were not called from
 anywhere else), will not be used to compute the percentages-of-time for
-the call graph.  More than one &lsquo;<samp><span class="samp">-E</span></samp>&rsquo; option may be given; only one
-<var>function_name</var> may be indicated with each &lsquo;<samp><span class="samp">-E</span></samp>&rsquo; option.
+the call graph.  More than one `<samp><span class="samp">-E</span></samp>' option may be given; only one
+<var>function_name</var> may be indicated with each `<samp><span class="samp">-E</span></samp>' option.
 
-     <br><dt><code>-f </code><var>function_name</var><dd>The &lsquo;<samp><span class="samp">-f </span><var>function</var></samp>&rsquo; option causes <code>gprof</code> to limit the
+     <br><dt><code>-f </code><var>function_name</var><dd>The `<samp><span class="samp">-f </span><var>function</var></samp>' option causes <code>gprof</code> to limit the
 call graph to the function <var>function_name</var> and its children (and
-their children<small class="dots">...</small>).  More than one &lsquo;<samp><span class="samp">-f</span></samp>&rsquo; option may be given;
-only one <var>function_name</var> may be indicated with each &lsquo;<samp><span class="samp">-f</span></samp>&rsquo;
+their children<small class="dots">...</small>).  More than one `<samp><span class="samp">-f</span></samp>' option may be given;
+only one <var>function_name</var> may be indicated with each `<samp><span class="samp">-f</span></samp>'
 option.
 
-     <br><dt><code>-F </code><var>function_name</var><dd>The &lsquo;<samp><span class="samp">-F </span><var>function</var></samp>&rsquo; option works like the <code>-f</code> option, but
+     <br><dt><code>-F </code><var>function_name</var><dd>The `<samp><span class="samp">-F </span><var>function</var></samp>' option works like the <code>-f</code> option, but
 only time spent in the function and its children (and their
 children<small class="dots">...</small>) will be used to determine total-time and
-percentages-of-time for the call graph.  More than one &lsquo;<samp><span class="samp">-F</span></samp>&rsquo; option
+percentages-of-time for the call graph.  More than one `<samp><span class="samp">-F</span></samp>' option
 may be given; only one <var>function_name</var> may be indicated with each
-&lsquo;<samp><span class="samp">-F</span></samp>&rsquo; option.  The &lsquo;<samp><span class="samp">-F</span></samp>&rsquo; option overrides the &lsquo;<samp><span class="samp">-E</span></samp>&rsquo; option.
+`<samp><span class="samp">-F</span></samp>' option.  The `<samp><span class="samp">-F</span></samp>' option overrides the `<samp><span class="samp">-E</span></samp>' option.
 
    </dl>
 
 <!-- man end -->
-   <p>Note that only one function can be specified with each <code>-e</code>,
+<p>Note that only one function can be specified with each <code>-e</code>,
 <code>-E</code>, <code>-f</code> or <code>-F</code> option.  To specify more than one
 function, use multiple options.  For example, this command:
 

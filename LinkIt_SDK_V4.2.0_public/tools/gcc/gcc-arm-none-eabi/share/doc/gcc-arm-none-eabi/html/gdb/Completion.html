@@ -3,7 +3,7 @@
 <title>Completion - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Commands.html#Commands" title="Commands">
 <link rel="prev" href="Command-Syntax.html#Command-Syntax" title="Command Syntax">
@@ -63,16 +63,16 @@ enter it).  For example, if you type
 <!-- replace " @key" by "@key" in the following... -->
 <pre class="smallexample">     (gdb) info bre &lt;TAB&gt;
 </pre>
-   <p class="noindent"><span class="sc">gdb</span> fills in the rest of the word &lsquo;<samp><span class="samp">breakpoints</span></samp>&rsquo;, since that is
-the only <code>info</code> subcommand beginning with &lsquo;<samp><span class="samp">bre</span></samp>&rsquo;:
+   <p class="noindent"><span class="sc">gdb</span> fills in the rest of the word `<samp><span class="samp">breakpoints</span></samp>', since that is
+the only <code>info</code> subcommand beginning with `<samp><span class="samp">bre</span></samp>':
 
 <pre class="smallexample">     (gdb) info breakpoints
 </pre>
    <p class="noindent">You can either press &lt;RET&gt; at this point, to run the <code>info
 breakpoints</code> command, or backspace and enter something else, if
-&lsquo;<samp><span class="samp">breakpoints</span></samp>&rsquo; does not look like the command you expected.  (If you
+`<samp><span class="samp">breakpoints</span></samp>' does not look like the command you expected.  (If you
 were sure you wanted <code>info breakpoints</code> in the first place, you
-might as well just type &lt;RET&gt; immediately after &lsquo;<samp><span class="samp">info bre</span></samp>&rsquo;,
+might as well just type &lt;RET&gt; immediately after `<samp><span class="samp">info bre</span></samp>',
 to exploit command abbreviations rather than command completion).
 
    <p>If there is more than one possibility for the next word when you press
@@ -80,7 +80,7 @@ to exploit command abbreviations rather than command completion).
 characters and try again, or just press &lt;TAB&gt; a second time;
 <span class="sc">gdb</span> displays all the possible completions for that word.  For
 example, you might want to set a breakpoint on a subroutine whose name
-begins with &lsquo;<samp><span class="samp">make_</span></samp>&rsquo;, but when you type <kbd>b make_&lt;TAB&gt;</kbd> <span class="sc">gdb</span>
+begins with `<samp><span class="samp">make_</span></samp>', but when you type <kbd>b make_&lt;TAB&gt;</kbd> <span class="sc">gdb</span>
 just sounds the bell.  Typing &lt;TAB&gt; again displays all the
 function names in your program that begin with those characters, for
 example:
@@ -95,7 +95,7 @@ example:
      (gdb) b make_
 </pre>
    <p class="noindent">After displaying the available possibilities, <span class="sc">gdb</span> copies your
-partial input (&lsquo;<samp><span class="samp">b make_</span></samp>&rsquo; in the example) so you can finish the
+partial input (`<samp><span class="samp">b make_</span></samp>' in the example) so you can finish the
 command.
 
    <p>If you just want to see the list of alternatives in the first place, you
@@ -179,7 +179,7 @@ follows:
 confused by certain kinds of invalid expressions.  Also, it only
 examines the static type of the expression, not the dynamic type.</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

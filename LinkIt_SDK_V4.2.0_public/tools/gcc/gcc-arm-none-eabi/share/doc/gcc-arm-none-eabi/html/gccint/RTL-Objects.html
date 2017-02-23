@@ -3,7 +3,7 @@
 <title>RTL Objects - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="RTL.html#RTL" title="RTL">
 <link rel="next" href="RTL-Classes.html#RTL-Classes" title="RTL Classes">
@@ -90,7 +90,7 @@ need not escape each quote character with a backslash.
  <p>A vector contains an arbitrary number of pointers to expressions.  The
 number of elements in the vector is explicitly present in the vector. 
 The written form of a vector consists of square brackets
-(&lsquo;<samp><span class="samp">[...]</span></samp>&rsquo;) surrounding the elements, in sequence and with
+(`<samp><span class="samp">[...]</span></samp>') surrounding the elements, in sequence and with
 whitespace separating them.  Vectors of length zero are not created;
 null pointers are used instead.
 
@@ -115,7 +115,7 @@ there is one operand, which is to be regarded as a string.
 expression type, its flags and machine mode if any, and then the operands
 of the expression (separated by spaces).
 
- <p>Expression code names in the &lsquo;<samp><span class="samp">md</span></samp>&rsquo; file are written in lowercase,
+ <p>Expression code names in the `<samp><span class="samp">md</span></samp>' file are written in lowercase,
 but when they appear in C code they are written in uppercase.  In this
 manual, they are shown as follows: <code>const_int</code>.
 

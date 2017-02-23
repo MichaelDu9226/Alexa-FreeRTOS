@@ -3,7 +3,7 @@
 <title>Duplication of Side Effects - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Macro-Pitfalls.html#Macro-Pitfalls" title="Macro Pitfalls">
 <link rel="prev" href="Swallowing-the-Semicolon.html#Swallowing-the-Semicolon" title="Swallowing the Semicolon">
@@ -89,7 +89,7 @@ follows:
         typeof (Y) y_ = (Y);          \
         (x_ &lt; y_) ? x_ : y_; })
 </pre>
-   <p>The &lsquo;<samp><span class="samp">({ ... })</span></samp>&rsquo; notation produces a compound statement that
+   <p>The `<samp><span class="samp">({ ... })</span></samp>' notation produces a compound statement that
 acts as an expression.  Its value is the value of its last statement. 
 This permits us to define local variables and assign each argument to
 one.  The local variables have underscores after their names to reduce

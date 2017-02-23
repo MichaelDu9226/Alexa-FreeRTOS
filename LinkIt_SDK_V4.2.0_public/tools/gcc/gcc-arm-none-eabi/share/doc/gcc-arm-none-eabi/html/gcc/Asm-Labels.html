@@ -3,7 +3,7 @@
 <title>Asm Labels - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Constraints.html#Constraints" title="Constraints">
@@ -62,8 +62,8 @@ keyword after the declarator as follows:
 <pre class="smallexample">     int foo asm ("myfoo") = 2;
 </pre>
  <p class="noindent">This specifies that the name to be used for the variable <code>foo</code> in
-the assembler code should be &lsquo;<samp><span class="samp">myfoo</span></samp>&rsquo; rather than the usual
-&lsquo;<samp><span class="samp">_foo</span></samp>&rsquo;.
+the assembler code should be `<samp><span class="samp">myfoo</span></samp>' rather than the usual
+`<samp><span class="samp">_foo</span></samp>'.
 
  <p>On systems where an underscore is normally prepended to the name of a C
 function or variable, this feature allows you to define names for the

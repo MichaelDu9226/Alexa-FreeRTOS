@@ -3,7 +3,7 @@
 <title>Stub Contents - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Stub.html#Remote-Stub" title="Remote Stub">
 <link rel="next" href="Bootstrapping.html#Bootstrapping" title="Bootstrapping">
@@ -76,7 +76,7 @@ pressing the interrupt button transfers control to
 <code>handle_exception</code>&mdash;in effect, to <span class="sc">gdb</span>.  On some machines,
 simply receiving characters on the serial port may also trigger a trap;
 again, in that situation, you don't need to call <code>breakpoint</code> from
-your own program&mdash;simply running &lsquo;<samp><span class="samp">target remote</span></samp>&rsquo; from the host
+your own program&mdash;simply running `<samp><span class="samp">target remote</span></samp>' from the host
 <span class="sc">gdb</span> session gets control.
 
      <p>Call <code>breakpoint</code> if none of these is true, or if you simply want

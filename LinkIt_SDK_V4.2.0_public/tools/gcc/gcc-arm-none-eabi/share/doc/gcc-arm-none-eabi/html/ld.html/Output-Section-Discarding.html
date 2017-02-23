@@ -3,7 +3,7 @@
 <title>Output Section Discarding - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="SECTIONS.html#SECTIONS" title="SECTIONS">
 <link rel="prev" href="Output-Section-Keywords.html#Output-Section-Keywords" title="Output Section Keywords">
@@ -53,8 +53,8 @@ for convenience when referring to input sections that may or may not
 be present in any of the input files.  For example:
 <pre class="smallexample">     .foo : { *(.foo) }
 </pre>
-   <p class="noindent">will only create a &lsquo;<samp><span class="samp">.foo</span></samp>&rsquo; section in the output file if there is a
-&lsquo;<samp><span class="samp">.foo</span></samp>&rsquo; section in at least one input file, and if the input
+   <p class="noindent">will only create a `<samp><span class="samp">.foo</span></samp>' section in the output file if there is a
+`<samp><span class="samp">.foo</span></samp>' section in at least one input file, and if the input
 sections are not all empty.  Other link script directives that allocate
 space in an output section will also create the output section.
 
@@ -64,9 +64,9 @@ symbols in the output section.  In that case the linker will obey
 the address assignments, possibly advancing dot even though the
 section is discarded.
 
-   <p><a name="index-g_t_002fDISCARD_002f-443"></a>The special output section name &lsquo;<samp><span class="samp">/DISCARD/</span></samp>&rsquo; may be used to discard
+   <p><a name="index-g_t_002fDISCARD_002f-443"></a>The special output section name `<samp><span class="samp">/DISCARD/</span></samp>' may be used to discard
 input sections.  Any input sections which are assigned to an output
-section named &lsquo;<samp><span class="samp">/DISCARD/</span></samp>&rsquo; are not included in the output file.
+section named `<samp><span class="samp">/DISCARD/</span></samp>' are not included in the output file.
 
    </body></html>
 

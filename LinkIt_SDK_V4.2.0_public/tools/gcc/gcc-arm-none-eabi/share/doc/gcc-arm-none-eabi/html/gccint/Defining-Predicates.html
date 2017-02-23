@@ -3,7 +3,7 @@
 <title>Defining Predicates - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Predicates.html#Predicates" title="Predicates">
 <link rel="prev" href="Machine_002dIndependent-Predicates.html#Machine_002dIndependent-Predicates" title="Machine-Independent Predicates">
@@ -88,8 +88,8 @@ must be a sequence of digits and/or lowercase letters.  Each character
 indicates a subexpression to extract from the current expression; for
 the first character this is <var>op</var>, for the second and subsequent
 characters it is the result of the previous character.  A digit
-<var>n</var> extracts &lsquo;<samp><span class="samp">XEXP&nbsp;(</span><var>e</var><span class="samp">,&nbsp;</span><var>n</var><span class="samp">)<!-- /@w --></span></samp>&rsquo;; a letter <var>l</var>
-extracts &lsquo;<samp><span class="samp">XVECEXP&nbsp;(</span><var>e</var><span class="samp">,&nbsp;0,&nbsp;</span><var>n</var><span class="samp">)<!-- /@w --></span></samp>&rsquo; where <var>n</var> is the
+<var>n</var> extracts `<samp><span class="samp">XEXP&nbsp;(</span><var>e</var><span class="samp">,&nbsp;</span><var>n</var><span class="samp">)<!-- /@w --></span></samp>'; a letter <var>l</var>
+extracts `<samp><span class="samp">XVECEXP&nbsp;(</span><var>e</var><span class="samp">,&nbsp;0,&nbsp;</span><var>n</var><span class="samp">)<!-- /@w --></span></samp>' where <var>n</var> is the
 alphabetic ordinal of <var>l</var> (0 for `a', 1 for 'b', and so on).  The
 <code>MATCH_CODE</code> then examines the RTX code of the subexpression
 extracted by the complete string.  It is not possible to extract
@@ -102,23 +102,23 @@ available with those names in the C expression.  The <code>MATCH_TEST</code>
 evaluates to true if the C expression evaluates to a nonzero value. 
 <code>MATCH_TEST</code> expressions must not have side effects.
 
-          <br><dt><code>AND</code><dt><code>IOR</code><dt><code>NOT</code><dt><code>IF_THEN_ELSE</code><dd>The basic &lsquo;<samp><span class="samp">MATCH_</span></samp>&rsquo; expressions can be combined using these
+          <br><dt><code>AND</code><dt><code>IOR</code><dt><code>NOT</code><dt><code>IF_THEN_ELSE</code><dd>The basic `<samp><span class="samp">MATCH_</span></samp>' expressions can be combined using these
 logical operators, which have the semantics of the C operators
-&lsquo;<samp><span class="samp">&amp;&amp;</span></samp>&rsquo;, &lsquo;<samp><span class="samp">||</span></samp>&rsquo;, &lsquo;<samp><span class="samp">!</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">?&nbsp;:<!-- /@w --></span></samp>&rsquo; respectively.  As
+`<samp><span class="samp">&amp;&amp;</span></samp>', `<samp><span class="samp">||</span></samp>', `<samp><span class="samp">!</span></samp>', and `<samp><span class="samp">?&nbsp;:<!-- /@w --></span></samp>' respectively.  As
 in Common Lisp, you may give an <code>AND</code> or <code>IOR</code> expression an
 arbitrary number of arguments; this has exactly the same effect as
 writing a chain of two-argument <code>AND</code> or <code>IOR</code> expressions. 
 </dl>
 
      <li>An optional block of C code, which should execute
-&lsquo;<samp><span class="samp">return&nbsp;true<!-- /@w --></span></samp>&rsquo; if the predicate is found to match and
-&lsquo;<samp><span class="samp">return&nbsp;false<!-- /@w --></span></samp>&rsquo; if it does not.  It must not have any side
+`<samp><span class="samp">return&nbsp;true<!-- /@w --></span></samp>' if the predicate is found to match and
+`<samp><span class="samp">return&nbsp;false<!-- /@w --></span></samp>' if it does not.  It must not have any side
 effects.  The predicate arguments, <var>op</var> and <var>mode</var>, are
 available with those names.
 
      <p>If a code block is present in a predicate definition, then the RTL
 expression must evaluate to true <em>and</em> the code block must
-execute &lsquo;<samp><span class="samp">return&nbsp;true<!-- /@w --></span></samp>&rsquo; for the predicate to allow the operand. 
+execute `<samp><span class="samp">return&nbsp;true<!-- /@w --></span></samp>' for the predicate to allow the operand. 
 The RTL expression is evaluated first; do not re-check anything in the
 code block that was checked in the RTL expression. 
 </ul>
@@ -176,5 +176,5 @@ to declare these predicates in <samp><var>cpu</var><span class="file">-protos.h<
 <!-- Most of this node appears by itself (in a different place) even -->
 <!-- when the INTERNALS flag is clear.  Passages that require the internals -->
 <!-- manual's context are conditionalized to appear only in the internals manual. -->
- </body></html>
+</body></html>
 

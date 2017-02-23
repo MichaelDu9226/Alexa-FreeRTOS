@@ -3,7 +3,7 @@
 <title>Other Builtins - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Object-Size-Checking.html#Object-Size-Checking" title="Object Size Checking">
@@ -199,7 +199,7 @@ built-in functions appear both with and without the <code>__builtin_</code> pref
 <div class="defun">
 &mdash; Built-in Function: int <b>__builtin_types_compatible_p</b> (<var>type1, type2</var>)<var><a name="index-g_t_005f_005fbuiltin_005ftypes_005fcompatible_005fp-3375"></a></var><br>
 <blockquote>
-      <p>You can use the built-in function <code>__builtin_types_compatible_p</code> to
+<p>You can use the built-in function <code>__builtin_types_compatible_p</code> to
 determine whether two types are the same.
 
       <p>This built-in function returns 1 if the unqualified versions of the
@@ -241,7 +241,7 @@ depending on the arguments' types.  For example:
                 abort ();                                                 \
               tmp;                                                        \
             })
-</pre>
+     </pre>
       <p><em>Note:</em> This construct is only available for C.
 
       </blockquote></div>
@@ -249,12 +249,12 @@ depending on the arguments' types.  For example:
 <div class="defun">
 &mdash; Built-in Function: <var>type</var> <b>__builtin_choose_expr</b> (<var>const_exp, exp1, exp2</var>)<var><a name="index-g_t_005f_005fbuiltin_005fchoose_005fexpr-3376"></a></var><br>
 <blockquote>
-      <p>You can use the built-in function <code>__builtin_choose_expr</code> to
+<p>You can use the built-in function <code>__builtin_choose_expr</code> to
 evaluate code depending on the value of a constant expression.  This
 built-in function returns <var>exp1</var> if <var>const_exp</var>, which is an
 integer constant expression, is nonzero.  Otherwise it returns <var>exp2</var>.
 
-      <p>This built-in function is analogous to the &lsquo;<samp><span class="samp">? :</span></samp>&rsquo; operator in C,
+      <p>This built-in function is analogous to the `<samp><span class="samp">? :</span></samp>' operator in C,
 except that the expression returned has its type unaltered by promotion
 rules.  Also, the built-in function does not evaluate the expression
 that is not chosen.  For example, if <var>const_exp</var> evaluates to true,
@@ -279,7 +279,7 @@ as <var>exp2</var>.
                 /* <span class="roman">The void expression results in a compile-time error</span>  \
                    <span class="roman">when assigning the result to something.</span>  */          \
                 (void)0))
-</pre>
+     </pre>
       <p><em>Note:</em> This construct is only available for C.  Furthermore, the
 unused expression (<var>exp1</var> or <var>exp2</var> depending on the value of
 <var>const_exp</var>) may still generate syntax errors.  This may change in
@@ -290,12 +290,12 @@ future revisions.
 <div class="defun">
 &mdash; Built-in Function: <var>type</var> <b>__builtin_complex</b> (<var>real, imag</var>)<var><a name="index-g_t_005f_005fbuiltin_005fcomplex-3377"></a></var><br>
 <blockquote>
-      <p>The built-in function <code>__builtin_complex</code> is provided for use in
+<p>The built-in function <code>__builtin_complex</code> is provided for use in
 implementing the ISO C11 macros <code>CMPLXF</code>, <code>CMPLX</code> and
 <code>CMPLXL</code>.  <var>real</var> and <var>imag</var> must have the same type, a
 real binary floating-point type, and the result has the corresponding
 complex type with real and imaginary parts <var>real</var> and <var>imag</var>. 
-Unlike &lsquo;<samp><var>real</var><span class="samp"> + I * </span><var>imag</var></samp>&rsquo;, this works even when
+Unlike `<samp><var>real</var><span class="samp"> + I * </span><var>imag</var></samp>', this works even when
 infinities, NaNs and negative zeros are involved.
 
       </blockquote></div>
@@ -320,7 +320,7 @@ a function if it does not.  For example:
      <pre class="smallexample">          #define Scale_Value(X)      \
             (__builtin_constant_p (X) \
             ? ((X) * SCALE + OFFSET) : Scale (X))
-</pre>
+     </pre>
       <p>You may use this built-in function in either a macro or an inline
 function.  However, if you use it in an inlined function and pass an
 argument of the function as the argument to the built-in, GCC
@@ -336,7 +336,7 @@ data.  For instance, you can write
              __builtin_constant_p (EXPRESSION) ? (EXPRESSION) : -1,
              /* <span class="roman">...</span> */
           };
-</pre>
+     </pre>
       <p class="noindent">This is an acceptable initializer even if <var>EXPRESSION</var> is not a
 constant expression, including the case where
 <code>__builtin_constant_p</code> returns 1 because <var>EXPRESSION</var> can be
@@ -366,14 +366,14 @@ expression.  The semantics of the built-in are that it is expected that
 
      <pre class="smallexample">          if (__builtin_expect (x, 0))
             foo ();
-</pre>
+     </pre>
       <p class="noindent">indicates that we do not expect to call <code>foo</code>, since
 we expect <code>x</code> to be zero.  Since you are limited to integral
 expressions for <var>exp</var>, you should use constructions such as
 
      <pre class="smallexample">          if (__builtin_expect (ptr != NULL, 1))
             foo (*ptr);
-</pre>
+     </pre>
       <p class="noindent">when testing pointer or floating-point values. 
 </p></blockquote></div>
 
@@ -411,7 +411,7 @@ to return after the <code>asm</code>.
                 __builtin_unreachable ();
               }
           }
-</pre>
+     </pre>
       <p class="noindent">Because the <code>asm</code> statement unconditionally transfers control out
 of the function, control never reaches the end of the function
 body.  The <code>__builtin_unreachable</code> is in fact unreachable and
@@ -435,7 +435,7 @@ function that never returns but that is not declared
                 __builtin_unreachable ();
               }
           }
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
@@ -447,12 +447,12 @@ if it has three, the third argument should have integer type, and
 if it is nonzero means misalignment offset.  For example:
 
      <pre class="smallexample">          void *x = __builtin_assume_aligned (arg, 16);
-</pre>
+     </pre>
       <p class="noindent">means that the compiler can assume <code>x</code>, set to <code>arg</code>, is at least
 16-byte aligned, while:
 
      <pre class="smallexample">          void *x = __builtin_assume_aligned (arg, 32, 8);
-</pre>
+     </pre>
       <p class="noindent">means that the compiler can assume for <code>x</code>, set to <code>arg</code>, that
 <code>(char *) x - 8</code> is 32-byte aligned. 
 </p></blockquote></div>
@@ -519,7 +519,7 @@ default is three.
               __builtin_prefetch (&amp;b[i+j], 0, 1);
               /* <span class="roman">...</span> */
             }
-</pre>
+     </pre>
       <p>Data prefetch does not generate faults if <var>addr</var> is invalid, but
 the address expression itself must be valid.  For example, a prefetch
 of <code>p-&gt;next</code> does not fault if <code>p-&gt;next</code> is not a valid
@@ -609,7 +609,7 @@ does not do default promotion from float to double.
       <p>Since ISO C99 defines this function in terms of <code>strtod</code>, which we
 do not implement, a description of the parsing is in order.  The string
 is parsed as by <code>strtol</code>; that is, the base is recognized by
-leading &lsquo;<samp><span class="samp">0</span></samp>&rsquo; or &lsquo;<samp><span class="samp">0x</span></samp>&rsquo; prefixes.  The number parsed is placed
+leading `<samp><span class="samp">0</span></samp>' or `<samp><span class="samp">0x</span></samp>' prefixes.  The number parsed is placed
 in the significand such that the least significant bit of the number
 is at the least significant bit of the significand.  The number is
 truncated to fit the significand field provided.  The significand is

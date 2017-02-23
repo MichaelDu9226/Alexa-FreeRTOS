@@ -3,7 +3,7 @@
 <title>Commands In Python - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Python-API.html#Python-API" title="Python API">
 <link rel="prev" href="Threads-In-Python.html#Threads-In-Python" title="Threads In Python">
@@ -64,12 +64,12 @@ an exception is raised.
 
         <p>There is no support for multi-line commands.
 
-        <p><var>command_class</var> should be one of the &lsquo;<samp><span class="samp">COMMAND_</span></samp>&rsquo; constants
+        <p><var>command_class</var> should be one of the `<samp><span class="samp">COMMAND_</span></samp>' constants
 defined below.  This argument tells <span class="sc">gdb</span> how to categorize the
 new command in the help system.
 
         <p><var>completer_class</var> is an optional argument.  If given, it should be
-one of the &lsquo;<samp><span class="samp">COMPLETE_</span></samp>&rsquo; constants defined below.  This argument
+one of the `<samp><span class="samp">COMPLETE_</span></samp>' constants defined below.  This argument
 tells <span class="sc">gdb</span> how to perform completion for this command.  If not
 given, <span class="sc">gdb</span> will attempt to complete using the object's
 <code>complete</code> method (see below); if no such method is found, an
@@ -118,7 +118,7 @@ Example:
 
      <pre class="smallexample">          print gdb.string_to_argv ("1 2\ \\\"3 '4 \"5' \"6 '7\"")
           ['1', '2 "3', '4 "5', "6 '7"]
-</pre>
+     </pre>
         </blockquote></div>
 
    <p><a name="index-completion-of-Python-commands-1914"></a>
@@ -144,7 +144,7 @@ allowed, it means that there were no completions available.  Only
 string elements of the sequence are used; other elements in the
 sequence are ignored.
 
-          <li>If the return value is one of the &lsquo;<samp><span class="samp">COMPLETE_</span></samp>&rsquo; constants defined
+          <li>If the return value is one of the `<samp><span class="samp">COMPLETE_</span></samp>' constants defined
 below, then the corresponding <span class="sc">gdb</span>-internal completion
 function is invoked, and its result is used.
 
@@ -193,7 +193,7 @@ but not related to the state of the inferior.  For example,
 <kbd>help support</kbd> at the <span class="sc">gdb</span> prompt to see a list of
 commands in this category.
 
-     <p><a name="index-COMMAND_005fSTATUS-1928"></a><a name="index-gdb_002eCOMMAND_005fSTATUS-1929"></a><br><dt><code>gdb.COMMAND_STATUS</code><dd>The command is an &lsquo;<samp><span class="samp">info</span></samp>&rsquo;-related command, that is, related to the
+     <p><a name="index-COMMAND_005fSTATUS-1928"></a><a name="index-gdb_002eCOMMAND_005fSTATUS-1929"></a><br><dt><code>gdb.COMMAND_STATUS</code><dd>The command is an `<samp><span class="samp">info</span></samp>'-related command, that is, related to the
 state of <span class="sc">gdb</span> itself.  For example, <code>info</code>, <code>macro</code>,
 and <code>show</code> are in this category.  Type <kbd>help status</kbd> at the
 <span class="sc">gdb</span> prompt to see a list of commands in this category.

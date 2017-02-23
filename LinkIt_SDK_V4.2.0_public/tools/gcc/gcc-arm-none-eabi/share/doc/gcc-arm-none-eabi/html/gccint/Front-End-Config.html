@@ -3,7 +3,7 @@
 <title>Front End Config - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Front-End.html#Front-End" title="Front End">
 <link rel="prev" href="Front-End-Directory.html#Front-End-Directory" title="Front End Directory">
@@ -65,28 +65,28 @@ for some purposes such as arguments to <samp><span class="option">--enable-langu
 other than C that this front end requires to be enabled (with the
 names given being their <code>language</code> settings).  For example, the
 Java front end depends on the C++ front end, so sets
-&lsquo;<samp><span class="samp">lang_requires=c++</span></samp>&rsquo;. 
+`<samp><span class="samp">lang_requires=c++</span></samp>'. 
 <br><dt><code>subdir_requires</code><dd>If defined, this variable lists (space-separated) front end directories
 other than C that this front end requires to be present.  For example,
 the Objective-C++ front end uses source files from the C++ and
-Objective-C front ends, so sets &lsquo;<samp><span class="samp">subdir_requires="cp objc"</span></samp>&rsquo;. 
+Objective-C front ends, so sets `<samp><span class="samp">subdir_requires="cp objc"</span></samp>'. 
 <br><dt><code>target_libs</code><dd>If defined, this variable lists (space-separated) targets in the top
 level <samp><span class="file">Makefile</span></samp> to build the runtime libraries for this
 language, such as <code>target-libobjc</code>. 
 <br><dt><code>lang_dirs</code><dd>If defined, this variable lists (space-separated) top level
 directories (parallel to <samp><span class="file">gcc</span></samp>), apart from the runtime libraries,
 that should not be configured if this front end is not built. 
-<br><dt><code>build_by_default</code><dd>If defined to &lsquo;<samp><span class="samp">no</span></samp>&rsquo;, this language front end is not built unless
+<br><dt><code>build_by_default</code><dd>If defined to `<samp><span class="samp">no</span></samp>', this language front end is not built unless
 enabled in a <samp><span class="option">--enable-languages</span></samp> argument.  Otherwise, front
 ends are built by default, subject to any special logic in
 <samp><span class="file">configure.ac</span></samp> (as is present to disable the Ada front end if the
 Ada compiler is not already installed). 
-<br><dt><code>boot_language</code><dd>If defined to &lsquo;<samp><span class="samp">yes</span></samp>&rsquo;, this front end is built in stage1 of the
+<br><dt><code>boot_language</code><dd>If defined to `<samp><span class="samp">yes</span></samp>', this front end is built in stage1 of the
 bootstrap.  This is only relevant to front ends written in their own
 languages. 
 <br><dt><code>compilers</code><dd>If defined, a space-separated list of compiler executables that will
 be run by the driver.  The names here will each end
-with &lsquo;<samp><span class="samp">\$(exeext)</span></samp>&rsquo;. 
+with `<samp><span class="samp">\$(exeext)</span></samp>'. 
 <br><dt><code>outputs</code><dd>If defined, a space-separated list of files that should be generated
 by <samp><span class="file">configure</span></samp> substituting values in them.  This mechanism can
 be used to create a file <samp><var>language</var><span class="file">/Makefile</span></samp> from

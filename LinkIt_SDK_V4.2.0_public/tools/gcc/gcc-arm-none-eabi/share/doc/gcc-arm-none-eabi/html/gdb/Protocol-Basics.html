@@ -3,7 +3,7 @@
 <title>Protocol Basics - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="File_002dI_002fO-Remote-Protocol-Extension.html#File_002dI_002fO-Remote-Protocol-Extension" title="File-I/O Remote Protocol Extension">
 <link rel="prev" href="File_002dI_002fO-Overview.html#File_002dI_002fO-Overview" title="File-I/O Overview">
@@ -52,7 +52,7 @@ The File-I/O protocol uses the <code>F</code> packet as the request as well
 as reply packet.  Since a File-I/O system call can only occur when
 <span class="sc">gdb</span> is waiting for a response from the continuing or stepping target,
 the File-I/O request is a reply that <span class="sc">gdb</span> has to expect as a result
-of a previous &lsquo;<samp><span class="samp">C</span></samp>&rsquo;, &lsquo;<samp><span class="samp">c</span></samp>&rsquo;, &lsquo;<samp><span class="samp">S</span></samp>&rsquo; or &lsquo;<samp><span class="samp">s</span></samp>&rsquo; packet. 
+of a previous `<samp><span class="samp">C</span></samp>', `<samp><span class="samp">c</span></samp>', `<samp><span class="samp">S</span></samp>' or `<samp><span class="samp">s</span></samp>' packet. 
 This <code>F</code> packet contains all information needed to allow <span class="sc">gdb</span>
 to call the appropriate host system call:
 

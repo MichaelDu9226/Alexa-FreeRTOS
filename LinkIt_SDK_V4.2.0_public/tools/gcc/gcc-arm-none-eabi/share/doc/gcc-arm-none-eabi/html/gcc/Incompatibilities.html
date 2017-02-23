@@ -3,7 +3,7 @@
 <title>Incompatibilities - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Trouble.html#Trouble" title="Trouble">
 <link rel="prev" href="Interoperation.html#Interoperation" title="Interoperation">
@@ -89,7 +89,7 @@ Negating this value yields 2147483648 again.
 string constants.  For example, the following macro in GCC
 
      <pre class="smallexample">          #define foo(a) "a"
-</pre>
+     </pre>
      <p class="noindent">will produce output <code>"a"</code> regardless of what the argument <var>a</var> is.
 
      <p><a name="index-g_t_0040code_007bsetjmp_007d-incompatibilities-3572"></a><a name="index-g_t_0040code_007blongjmp_007d-incompatibilities-3573"></a><li>When you use <code>setjmp</code> and <code>longjmp</code>, the only automatic
@@ -111,7 +111,7 @@ allocation.  Consider this function:
             /* <code>longjmp (j)</code><span class="roman"> may occur in </span><code>fun3</code><span class="roman">.</span> */
             return a + fun3 ();
           }
-</pre>
+     </pre>
      <p>Here <code>a</code> may or may not be restored to its first value when the
 <code>longjmp</code> occurs.  If <code>a</code> is allocated in a register, then
 its first value is restored; otherwise, it keeps the last value stored
@@ -127,7 +127,7 @@ will not work:
      <pre class="smallexample">          foobar (
           #define luser
                   hack)
-</pre>
+     </pre>
      <p>ISO C does not permit such a construct.
 
      <li>K&amp;R compilers allow comments to cross over an inclusion boundary
@@ -145,7 +145,7 @@ as shown here:
 
      <pre class="smallexample">          typedef int foo;
           typedef long foo bar;
-</pre>
+     </pre>
      <p>In ISO C, this is not allowed: <code>long</code> and other type modifiers
 require an explicit <code>int</code>.
 
@@ -156,7 +156,7 @@ appear together in a given scope:
 
      <pre class="smallexample">          typedef int foo;
           typedef foo foo;
-</pre>
+     </pre>
      <li>GCC treats all characters of identifiers as significant.  According to
 K&amp;R-1 (2.2), &ldquo;No more than the first eight characters are significant,
 although more may be used.&rdquo;.  Also according to K&amp;R-1 (2.2), &ldquo;An
@@ -165,7 +165,7 @@ be a letter.  The underscore _ counts as a letter.&rdquo;, but GCC also
 allows dollar signs in identifiers.
 
      <p><a name="index-whitespace-3579"></a><li>PCC allows whitespace in the middle of compound assignment operators
-such as &lsquo;<samp><span class="samp">+=</span></samp>&rsquo;.  GCC, following the ISO standard, does not
+such as `<samp><span class="samp">+=</span></samp>'.  GCC, following the ISO standard, does not
 allow this.
 
      <p><a name="index-apostrophes-3580"></a><a name="index-g_t_0040code_007b_0027_007d-3581"></a><li>GCC complains about unterminated character constants inside of
@@ -177,16 +177,16 @@ example, this code would produce an error:
      <pre class="smallexample">          #if 0
           You can't expect this to work.
           #endif
-</pre>
+     </pre>
      <p>The best solution to such a problem is to put the text into an actual
-C comment delimited by &lsquo;<samp><span class="samp">/*...*/</span></samp>&rsquo;.
+C comment delimited by `<samp><span class="samp">/*...*/</span></samp>'.
 
-     <li>Many user programs contain the declaration &lsquo;<samp><span class="samp">long time ();</span></samp>&rsquo;.  In the
+     <li>Many user programs contain the declaration `<samp><span class="samp">long time ();</span></samp>'.  In the
 past, the system header files on many systems did not actually declare
 <code>time</code>, so it did not matter what type your program declared it to
 return.  But in systems with ISO C headers, <code>time</code> is declared to
 return <code>time_t</code>, and if that is not the same as <code>long</code>, then
-&lsquo;<samp><span class="samp">long time ();</span></samp>&rsquo; is erroneous.
+`<samp><span class="samp">long time ();</span></samp>' is erroneous.
 
      <p>The solution is to change your program to use appropriate system headers
 (<code>&lt;time.h&gt;</code> on systems with ISO C headers) and not to declare
@@ -225,7 +225,7 @@ but still returns small structures and unions in registers.
      <p><a name="index-fpcc_002dstruct_002dreturn-3585"></a>You can tell GCC to use a compatible convention for all structure and
 union returning with the option <samp><span class="option">-fpcc-struct-return</span></samp>.
 
-     <p><a name="index-preprocessing-tokens-3586"></a><a name="index-preprocessing-numbers-3587"></a><li>GCC complains about program fragments such as &lsquo;<samp><span class="samp">0x74ae-0x4000</span></samp>&rsquo;
+     <p><a name="index-preprocessing-tokens-3586"></a><a name="index-preprocessing-numbers-3587"></a><li>GCC complains about program fragments such as `<samp><span class="samp">0x74ae-0x4000</span></samp>'
 which appear to be two hexadecimal constants separated by the minus
 operator.  Actually, this string is a single <dfn>preprocessing token</dfn>. 
 Each such token must correspond to one token in C.  Since this does not,
@@ -235,9 +235,9 @@ requires that this be treated as erroneous.
 
      <p>A <dfn>preprocessing token</dfn> is a <dfn>preprocessing number</dfn> if it
 begins with a digit and is followed by letters, underscores, digits,
-periods and &lsquo;<samp><span class="samp">e+</span></samp>&rsquo;, &lsquo;<samp><span class="samp">e-</span></samp>&rsquo;, &lsquo;<samp><span class="samp">E+</span></samp>&rsquo;, &lsquo;<samp><span class="samp">E-</span></samp>&rsquo;, &lsquo;<samp><span class="samp">p+</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">p-</span></samp>&rsquo;, &lsquo;<samp><span class="samp">P+</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">P-</span></samp>&rsquo; character sequences.  (In strict C90
-mode, the sequences &lsquo;<samp><span class="samp">p+</span></samp>&rsquo;, &lsquo;<samp><span class="samp">p-</span></samp>&rsquo;, &lsquo;<samp><span class="samp">P+</span></samp>&rsquo; and &lsquo;<samp><span class="samp">P-</span></samp>&rsquo; cannot
+periods and `<samp><span class="samp">e+</span></samp>', `<samp><span class="samp">e-</span></samp>', `<samp><span class="samp">E+</span></samp>', `<samp><span class="samp">E-</span></samp>', `<samp><span class="samp">p+</span></samp>',
+`<samp><span class="samp">p-</span></samp>', `<samp><span class="samp">P+</span></samp>', or `<samp><span class="samp">P-</span></samp>' character sequences.  (In strict C90
+mode, the sequences `<samp><span class="samp">p+</span></samp>', `<samp><span class="samp">p-</span></samp>', `<samp><span class="samp">P+</span></samp>' and `<samp><span class="samp">P-</span></samp>' cannot
 appear in preprocessing numbers.)
 
      <p>To make the above program fragment valid, place whitespace in front of

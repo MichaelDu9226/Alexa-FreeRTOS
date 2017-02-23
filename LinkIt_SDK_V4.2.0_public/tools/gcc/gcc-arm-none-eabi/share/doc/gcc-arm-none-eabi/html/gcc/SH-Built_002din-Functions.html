@@ -3,7 +3,7 @@
 <title>SH Built-in Functions - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Builtins.html#Target-Builtins" title="Target Builtins">
 <link rel="prev" href="S_002f390-System-z-Built_002din-Functions.html#S_002f390-System-z-Built_002din-Functions" title="S/390 System z Built-in Functions">
@@ -60,20 +60,20 @@ families of processors:
 
 <div class="defun">
 &mdash; Built-in Function: void <b>__builtin_set_thread_pointer</b> (<var>void *ptr</var>)<var><a name="index-g_t_005f_005fbuiltin_005fset_005fthread_005fpointer-3475"></a></var><br>
-<blockquote><p>Sets the &lsquo;<samp><span class="samp">GBR</span></samp>&rsquo; register to the specified value <var>ptr</var>.  This is usually
+<blockquote><p>Sets the `<samp><span class="samp">GBR</span></samp>' register to the specified value <var>ptr</var>.  This is usually
 used by system code that manages threads and execution contexts.  The compiler
-normally does not generate code that modifies the contents of &lsquo;<samp><span class="samp">GBR</span></samp>&rsquo; and
-thus the value is preserved across function calls.  Changing the &lsquo;<samp><span class="samp">GBR</span></samp>&rsquo;
+normally does not generate code that modifies the contents of `<samp><span class="samp">GBR</span></samp>' and
+thus the value is preserved across function calls.  Changing the `<samp><span class="samp">GBR</span></samp>'
 value in user code must be done with caution, since the compiler might use
-&lsquo;<samp><span class="samp">GBR</span></samp>&rsquo; in order to access thread local variables.
+`<samp><span class="samp">GBR</span></samp>' in order to access thread local variables.
 
       </blockquote></div>
 
 <div class="defun">
 &mdash; Built-in Function: void * <b>__builtin_thread_pointer</b> (<var>void</var>)<var><a name="index-g_t_005f_005fbuiltin_005fthread_005fpointer-3476"></a></var><br>
-<blockquote><p>Returns the value that is currently set in the &lsquo;<samp><span class="samp">GBR</span></samp>&rsquo; register. 
+<blockquote><p>Returns the value that is currently set in the `<samp><span class="samp">GBR</span></samp>' register. 
 Memory loads and stores that use the thread pointer as a base address are
-turned into &lsquo;<samp><span class="samp">GBR</span></samp>&rsquo; based displacement loads and stores, if possible. 
+turned into `<samp><span class="samp">GBR</span></samp>' based displacement loads and stores, if possible. 
 For example:
      <pre class="smallexample">          struct my_tcb
           {
@@ -82,11 +82,11 @@ For example:
           
           int get_tcb_value (void)
           {
-            // Generate &lsquo;<samp><span class="samp">mov.l @(8,gbr),r0</span></samp>&rsquo; instruction
+            // Generate `<samp><span class="samp">mov.l @(8,gbr),r0</span></samp>' instruction
             return ((my_tcb*)__builtin_thread_pointer ())-&gt;c;
           }
           
-</pre>
+     </pre>
       </blockquote></div>
 
  </body></html>

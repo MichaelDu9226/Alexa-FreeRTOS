@@ -3,7 +3,7 @@
 <title>Literal Directive - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Xtensa-Directives.html#Xtensa-Directives" title="Xtensa Directives">
 <link rel="prev" href="Transform-Directive.html#Transform-Directive" title="Transform Directive">
@@ -72,13 +72,13 @@ identical literals.  For example, the code:
 the data in a literal pool.
 
    <p>Literal pools are placed by default in separate literal sections;
-however, when using the &lsquo;<samp><span class="samp">--text-section-literals</span></samp>&rsquo;
+however, when using the `<samp><span class="samp">--text-section-literals</span></samp>'
 option (see <a href="Xtensa-Options.html#Xtensa-Options">Command Line Options</a>), the literal
 pools for PC-relative mode <code>L32R</code> instructions
 are placed in the current section.<a rel="footnote" href="#fn-1" name="fnd-1"><sup>1</sup></a>
 These text section literal
 pools are created automatically before <code>ENTRY</code> instructions and
-manually after &lsquo;<samp><span class="samp">.literal_position</span></samp>&rsquo; directives (see <a href="Literal-Position-Directive.html#Literal-Position-Directive">literal_position</a>).  If there are no preceding
+manually after `<samp><span class="samp">.literal_position</span></samp>' directives (see <a href="Literal-Position-Directive.html#Literal-Position-Directive">literal_position</a>).  If there are no preceding
 <code>ENTRY</code> instructions, explicit <code>.literal_position</code> directives
 must be used to place the text section literal pools; otherwise,
 <samp><span class="command">as</span></samp> will report an error.
@@ -122,9 +122,9 @@ suffix to the current section name (or <code>literal_prefix</code> value).
 <hr>
 <h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="#fnd-1">1</a>]</small> Literals for the
 <code>.init</code> and <code>.fini</code> sections are always placed in separate
-sections, even when &lsquo;<samp><span class="samp">--text-section-literals</span></samp>&rsquo; is enabled.</p>
+sections, even when `<samp><span class="samp">--text-section-literals</span></samp>' is enabled.</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

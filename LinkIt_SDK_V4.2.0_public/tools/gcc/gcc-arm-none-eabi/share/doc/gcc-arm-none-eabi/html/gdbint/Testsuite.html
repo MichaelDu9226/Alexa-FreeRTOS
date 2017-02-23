@@ -3,7 +3,7 @@
 <title>Testsuite - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Releasing-GDB.html#Releasing-GDB" title="Releasing GDB">
 <link rel="next" href="Hints.html#Hints" title="Hints">
@@ -150,7 +150,7 @@ line of the transcript file will show how <span class="sc">gdb</span> was invoke
 each subsequent line is a command sent as input to <span class="sc">gdb</span>.
 
      <pre class="smallexample">          make check RUNTESTFLAGS=TRANSCRIPT=y
-</pre>
+     </pre>
      <p>Note that the transcript is not always complete.  In particular, tests
 of completion can yield partial command lines.
 
@@ -161,24 +161,24 @@ directory.  For example, one may wish to run the testsuite on
 <samp><span class="file">/usr/bin/gdb</span></samp>.
 
      <pre class="smallexample">          make check RUNTESTFLAGS=GDB=/usr/bin/gdb
-</pre>
+     </pre>
      <li><code>GDBSERVER</code>
 
      <p>When testing a different <span class="sc">gdb</span>, it is often useful to also test a
 different gdbserver.
 
      <pre class="smallexample">          make check RUNTESTFLAGS="GDB=/usr/bin/gdb GDBSERVER=/usr/bin/gdbserver"
-</pre>
+     </pre>
      <li><code>INTERNAL_GDBFLAGS</code>
 
      <p>When running the testsuite normally one doesn't want whatever is in
 <samp><span class="file">~/.gdbinit</span></samp> to interfere with the tests, therefore the test harness
 passes <samp><span class="option">-nx</span></samp> to <span class="sc">gdb</span>.  One also doesn't want any windowed
-version of <span class="sc">gdb</span>, e.g., &lsquo;<samp><span class="samp">gdb -tui</span></samp>&rsquo;, to run. 
+version of <span class="sc">gdb</span>, e.g., `<samp><span class="samp">gdb -tui</span></samp>', to run. 
 This is achieved via <code>INTERNAL_GDBFLAGS</code>.
 
      <pre class="smallexample">          set INTERNAL_GDBFLAGS "-nw -nx"
-</pre>
+     </pre>
      <p>This is all well and good, except when testing an installed <span class="sc">gdb</span>
 that has been configured with <samp><span class="option">--with-system-gdbinit</span></samp>.  Here one
 does not want <samp><span class="file">~/.gdbinit</span></samp> loaded but one may want the system
@@ -191,12 +191,12 @@ at a directory without a <samp><span class="file">.gdbinit</span></samp> and by 
             GDB=/usr/bin/gdb \
             GDBSERVER=/usr/bin/gdbserver \
             INTERNAL_GDBFLAGS=-nw
-</pre>
+     </pre>
      </ul>
 
    <p>There are two ways to run the testsuite and pass additional parameters
 to DejaGnu.  The first is with <kbd>make check</kbd> and specifying the
-makefile variable &lsquo;<samp><span class="samp">RUNTESTFLAGS</span></samp>&rsquo;.
+makefile variable `<samp><span class="samp">RUNTESTFLAGS</span></samp>'.
 
 <pre class="smallexample">     make check RUNTESTFLAGS=TRANSCRIPT=y
 </pre>
@@ -320,11 +320,11 @@ uniformly.
 <dt><code>KFAIL</code><dd>Known problem of <span class="sc">gdb</span> itself.  You must specify the <span class="sc">gdb</span> bug
 report number like in these sample tests:
      <pre class="smallexample">          kfail "gdb/13392" "continue to marker 2"
-</pre>
+     </pre>
      <p>or
      <pre class="smallexample">          setup_kfail gdb/13392 "*-*-*"
           kfail "continue to marker 2"
-</pre>
+     </pre>
      <br><dt><code>XFAIL</code><dd>Known problem of environment.  This typically includes <span class="sc">gcc</span> but it
 includes also many other system components which cannot be fixed in the
 <span class="sc">gdb</span> project.  Sample test with sanity check not knowing the specific
@@ -334,7 +334,7 @@ cause of the problem:
               xfail "stub size $stub_size is too large"
               return
           }
-</pre>
+     </pre>
      <p>You should provide bug report number for the failing component of the
 environment, if such bug report is available:
      <pre class="smallexample">          if {[test_compiler_info {gcc-[0-3]-*}]
@@ -342,7 +342,7 @@ environment, if such bug report is available:
              setup_xfail "gcc/46955" *-*-*
           }
           gdb_test "python print ttype.template_argument(2)" "&amp;C::c"
-</pre>
+     </pre>
      </dl>
 
 <h3 class="section">22.6 Board settings</h3>
@@ -387,7 +387,7 @@ either  absolute or relative to testsuite subdirectory in build directory.
 <h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="#fnd-1">1</a>]</small> If you are using a board file, it could override
 the test-suite default; search the board file for "timeout".</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

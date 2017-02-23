@@ -3,7 +3,7 @@
 <title>GDB/MI Stack Manipulation - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-Program-Execution.html#GDB_002fMI-Program-Execution" title="GDB/MI Program Execution">
@@ -60,7 +60,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">info frame</span></samp>&rsquo; or &lsquo;<samp><span class="samp">frame</span></samp>&rsquo;
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">info frame</span></samp>' or `<samp><span class="samp">frame</span></samp>'
 (without arguments).
 
 <h5 class="subsubheading">Example</h5>
@@ -133,13 +133,13 @@ type and value for simple data types, and the name and type for arrays,
 structures and unions.
 
    <p>Use of this command to obtain arguments in a single frame is
-deprecated in favor of the &lsquo;<samp><span class="samp">-stack-list-variables</span></samp>&rsquo; command.
+deprecated in favor of the `<samp><span class="samp">-stack-list-variables</span></samp>' command.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
 <p><span class="sc">gdb</span> does not have an equivalent command.  <code>gdbtk</code> has a
-&lsquo;<samp><span class="samp">gdb_get_args</span></samp>&rsquo; command which partially overlaps with the
-functionality of &lsquo;<samp><span class="samp">-stack-list-arguments</span></samp>&rsquo;.
+`<samp><span class="samp">gdb_get_args</span></samp>' command which partially overlaps with the
+functionality of `<samp><span class="samp">-stack-list-arguments</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -209,13 +209,13 @@ functionality of &lsquo;<samp><span class="samp">-stack-list-arguments</span></s
 following info:
 
      <dl>
-<dt>&lsquo;<samp><var>level</var></samp>&rsquo;<dd>The frame number, 0 being the topmost frame, i.e., the innermost function. 
-<br><dt>&lsquo;<samp><var>addr</var></samp>&rsquo;<dd>The <code>$pc</code> value for that frame. 
-<br><dt>&lsquo;<samp><var>func</var></samp>&rsquo;<dd>Function name. 
-<br><dt>&lsquo;<samp><var>file</var></samp>&rsquo;<dd>File name of the source file where the function lives. 
-<br><dt>&lsquo;<samp><var>fullname</var></samp>&rsquo;<dd>The full file name of the source file where the function lives. 
-<br><dt>&lsquo;<samp><var>line</var></samp>&rsquo;<dd>Line number corresponding to the <code>$pc</code>. 
-<br><dt>&lsquo;<samp><var>from</var></samp>&rsquo;<dd>The shared library where this function is defined.  This is only given
+<dt>`<samp><var>level</var></samp>'<dd>The frame number, 0 being the topmost frame, i.e., the innermost function. 
+<br><dt>`<samp><var>addr</var></samp>'<dd>The <code>$pc</code> value for that frame. 
+<br><dt>`<samp><var>func</var></samp>'<dd>Function name. 
+<br><dt>`<samp><var>file</var></samp>'<dd>File name of the source file where the function lives. 
+<br><dt>`<samp><var>fullname</var></samp>'<dd>The full file name of the source file where the function lives. 
+<br><dt>`<samp><var>line</var></samp>'<dd>Line number corresponding to the <code>$pc</code>. 
+<br><dt>`<samp><var>from</var></samp>'<dd>The shared library where this function is defined.  This is only given
 if the frame's function is not known. 
 </dl>
 
@@ -229,7 +229,7 @@ actual number of frames, in which case only existing frames will be returned.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> commands are &lsquo;<samp><span class="samp">backtrace</span></samp>&rsquo; and &lsquo;<samp><span class="samp">where</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> commands are `<samp><span class="samp">backtrace</span></samp>' and `<samp><span class="samp">where</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -305,11 +305,11 @@ other data types when the user wishes to explore their values in
 more detail.
 
    <p>This command is deprecated in favor of the
-&lsquo;<samp><span class="samp">-stack-list-variables</span></samp>&rsquo; command.
+`<samp><span class="samp">-stack-list-variables</span></samp>' command.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>&lsquo;<samp><span class="samp">info locals</span></samp>&rsquo; in <span class="sc">gdb</span>, &lsquo;<samp><span class="samp">gdb_get_locals</span></samp>&rsquo; in <code>gdbtk</code>.
+<p>`<samp><span class="samp">info locals</span></samp>' in <span class="sc">gdb</span>, `<samp><span class="samp">gdb_get_locals</span></samp>' in <code>gdbtk</code>.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -358,13 +358,13 @@ structures and unions.
    <p>Change the selected frame.  Select a different frame <var>framenum</var> on
 the stack.
 
-   <p>This command in deprecated in favor of passing the &lsquo;<samp><span class="samp">--frame</span></samp>&rsquo;
+   <p>This command in deprecated in favor of passing the `<samp><span class="samp">--frame</span></samp>'
 option to every command.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> commands are &lsquo;<samp><span class="samp">frame</span></samp>&rsquo;, &lsquo;<samp><span class="samp">up</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">down</span></samp>&rsquo;, &lsquo;<samp><span class="samp">select-frame</span></samp>&rsquo;, &lsquo;<samp><span class="samp">up-silent</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">down-silent</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> commands are `<samp><span class="samp">frame</span></samp>', `<samp><span class="samp">up</span></samp>',
+`<samp><span class="samp">down</span></samp>', `<samp><span class="samp">select-frame</span></samp>', `<samp><span class="samp">up-silent</span></samp>', and `<samp><span class="samp">down-silent</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -374,5 +374,5 @@ option to every command.
      (gdb)
 </pre>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-   </body></html>
+</body></html>
 

@@ -3,7 +3,7 @@
 <title>Final Actions - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Test-Directives.html#Test-Directives" title="Test Directives">
 <link rel="prev" href="Require-Support.html#Require-Support" title="Require Support">
@@ -151,7 +151,7 @@ has been executed.
           end module mod4
           ! { dg-final { cleanup-modules "mod1 mod2" } } ! redundant
           ! { dg-final { keep-modules "mod3 mod4" } }
-</pre>
+     </pre>
      <br><dt><code>keep-modules "</code><var>list-of-modules-not-to-delete</var><code>"</code><dd>Whitespace separated list of module names that should not be deleted by
 cleanup-modules. 
 If the list of modules is empty, all modules defined in this file are kept.
@@ -163,7 +163,7 @@ If the list of modules is empty, all modules defined in this file are kept.
           end module keep2
           ! { dg-final { keep-modules "keep1 keep2" } } ! just keep these two
           ! { dg-final { keep-modules "" } } ! keep all
-</pre>
+     </pre>
      <br><dt><code>cleanup-profile-file</code><dd>Removes profiling files generated for this test.
 
      <br><dt><code>cleanup-repo-files</code><dd>Removes files generated for this test for <samp><span class="option">-frepo</span></samp>.

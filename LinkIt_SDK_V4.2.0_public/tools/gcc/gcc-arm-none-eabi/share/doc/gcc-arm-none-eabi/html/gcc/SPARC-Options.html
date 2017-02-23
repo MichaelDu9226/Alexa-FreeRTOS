@@ -3,7 +3,7 @@
 <title>SPARC Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="Solaris-2-Options.html#Solaris-2-Options" title="Solaris 2 Options">
@@ -55,7 +55,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
 <h4 class="subsection">3.17.40 SPARC Options</h4>
 
 <p><a name="index-SPARC-options-2202"></a>
-These &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; options are supported on the SPARC:
+These `<samp><span class="samp">-m</span></samp>' options are supported on the SPARC:
 
      <dl>
 <dt><code>-mno-app-regs</code><dt><code>-mapp-regs</code><dd><a name="index-mno_002dapp_002dregs-2203"></a><a name="index-mapp_002dregs-2204"></a>Specify <samp><span class="option">-mapp-regs</span></samp> to generate output using the global registers
@@ -84,8 +84,8 @@ default.
 targets.  Normally the facilities of the machine's usual C compiler are
 used, but this cannot be done directly in cross-compilation.  You must make
 your own arrangements to provide suitable library functions for
-cross-compilation.  The embedded targets &lsquo;<samp><span class="samp">sparc-*-aout</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">sparclite-*-*</span></samp>&rsquo; do provide software floating-point support.
+cross-compilation.  The embedded targets `<samp><span class="samp">sparc-*-aout</span></samp>' and
+`<samp><span class="samp">sparclite-*-*</span></samp>' do provide software floating-point support.
 
      <p><samp><span class="option">-msoft-float</span></samp> changes the calling convention in the output file;
 therefore, it is only useful if you compile <em>all</em> of a program with
@@ -131,20 +131,20 @@ the rules of the ABI.
 
      <br><dt><code>-mcpu=</code><var>cpu_type</var><dd><a name="index-mcpu-2219"></a>Set the instruction set, register set, and instruction scheduling parameters
 for machine type <var>cpu_type</var>.  Supported values for <var>cpu_type</var> are
-&lsquo;<samp><span class="samp">v7</span></samp>&rsquo;, &lsquo;<samp><span class="samp">cypress</span></samp>&rsquo;, &lsquo;<samp><span class="samp">v8</span></samp>&rsquo;, &lsquo;<samp><span class="samp">supersparc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">hypersparc</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">leon</span></samp>&rsquo;, &lsquo;<samp><span class="samp">leon3</span></samp>&rsquo;, &lsquo;<samp><span class="samp">sparclite</span></samp>&rsquo;, &lsquo;<samp><span class="samp">f930</span></samp>&rsquo;, &lsquo;<samp><span class="samp">f934</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">sparclite86x</span></samp>&rsquo;, &lsquo;<samp><span class="samp">sparclet</span></samp>&rsquo;, &lsquo;<samp><span class="samp">tsc701</span></samp>&rsquo;, &lsquo;<samp><span class="samp">v9</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">ultrasparc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">ultrasparc3</span></samp>&rsquo;, &lsquo;<samp><span class="samp">niagara</span></samp>&rsquo;, &lsquo;<samp><span class="samp">niagara2</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">niagara3</span></samp>&rsquo; and &lsquo;<samp><span class="samp">niagara4</span></samp>&rsquo;.
+`<samp><span class="samp">v7</span></samp>', `<samp><span class="samp">cypress</span></samp>', `<samp><span class="samp">v8</span></samp>', `<samp><span class="samp">supersparc</span></samp>', `<samp><span class="samp">hypersparc</span></samp>',
+`<samp><span class="samp">leon</span></samp>', `<samp><span class="samp">leon3</span></samp>', `<samp><span class="samp">sparclite</span></samp>', `<samp><span class="samp">f930</span></samp>', `<samp><span class="samp">f934</span></samp>',
+`<samp><span class="samp">sparclite86x</span></samp>', `<samp><span class="samp">sparclet</span></samp>', `<samp><span class="samp">tsc701</span></samp>', `<samp><span class="samp">v9</span></samp>',
+`<samp><span class="samp">ultrasparc</span></samp>', `<samp><span class="samp">ultrasparc3</span></samp>', `<samp><span class="samp">niagara</span></samp>', `<samp><span class="samp">niagara2</span></samp>',
+`<samp><span class="samp">niagara3</span></samp>' and `<samp><span class="samp">niagara4</span></samp>'.
 
-     <p>Native Solaris and GNU/Linux toolchains also support the value &lsquo;<samp><span class="samp">native</span></samp>&rsquo;,
+     <p>Native Solaris and GNU/Linux toolchains also support the value `<samp><span class="samp">native</span></samp>',
 which selects the best architecture option for the host processor. 
 <samp><span class="option">-mcpu=native</span></samp> has no effect if GCC does not recognize
 the processor.
 
      <p>Default instruction scheduling parameters are used for values that select
-an architecture and not an implementation.  These are &lsquo;<samp><span class="samp">v7</span></samp>&rsquo;, &lsquo;<samp><span class="samp">v8</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">sparclite</span></samp>&rsquo;, &lsquo;<samp><span class="samp">sparclet</span></samp>&rsquo;, &lsquo;<samp><span class="samp">v9</span></samp>&rsquo;.
+an architecture and not an implementation.  These are `<samp><span class="samp">v7</span></samp>', `<samp><span class="samp">v8</span></samp>',
+`<samp><span class="samp">sparclite</span></samp>', `<samp><span class="samp">sparclet</span></samp>', `<samp><span class="samp">v9</span></samp>'.
 
      <p>Here is a list of each supported architecture and their supported
 implementations.
@@ -208,11 +208,11 @@ option <samp><span class="option">-mcpu=</span><var>cpu_type</var></samp> does.
 
      <p>The same values for <samp><span class="option">-mcpu=</span><var>cpu_type</var></samp> can be used for
 <samp><span class="option">-mtune=</span><var>cpu_type</var></samp>, but the only useful values are those
-that select a particular CPU implementation.  Those are &lsquo;<samp><span class="samp">cypress</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">supersparc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">hypersparc</span></samp>&rsquo;, &lsquo;<samp><span class="samp">leon</span></samp>&rsquo;, &lsquo;<samp><span class="samp">leon3</span></samp>&rsquo;, &lsquo;<samp><span class="samp">f930</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">f934</span></samp>&rsquo;, &lsquo;<samp><span class="samp">sparclite86x</span></samp>&rsquo;, &lsquo;<samp><span class="samp">tsc701</span></samp>&rsquo;, &lsquo;<samp><span class="samp">ultrasparc</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">ultrasparc3</span></samp>&rsquo;, &lsquo;<samp><span class="samp">niagara</span></samp>&rsquo;, &lsquo;<samp><span class="samp">niagara2</span></samp>&rsquo;, &lsquo;<samp><span class="samp">niagara3</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">niagara4</span></samp>&rsquo;.  With native Solaris and GNU/Linux toolchains, &lsquo;<samp><span class="samp">native</span></samp>&rsquo;
+that select a particular CPU implementation.  Those are `<samp><span class="samp">cypress</span></samp>',
+`<samp><span class="samp">supersparc</span></samp>', `<samp><span class="samp">hypersparc</span></samp>', `<samp><span class="samp">leon</span></samp>', `<samp><span class="samp">leon3</span></samp>', `<samp><span class="samp">f930</span></samp>',
+`<samp><span class="samp">f934</span></samp>', `<samp><span class="samp">sparclite86x</span></samp>', `<samp><span class="samp">tsc701</span></samp>', `<samp><span class="samp">ultrasparc</span></samp>',
+`<samp><span class="samp">ultrasparc3</span></samp>', `<samp><span class="samp">niagara</span></samp>', `<samp><span class="samp">niagara2</span></samp>', `<samp><span class="samp">niagara3</span></samp>' and
+`<samp><span class="samp">niagara4</span></samp>'.  With native Solaris and GNU/Linux toolchains, `<samp><span class="samp">native</span></samp>'
 can also be used.
 
      <br><dt><code>-mv8plus</code><dt><code>-mno-v8plus</code><dd><a name="index-mv8plus-2221"></a><a name="index-mno_002dv8plus-2222"></a>With <samp><span class="option">-mv8plus</span></samp>, GCC generates code for the SPARC-V8+ ABI.  The
@@ -257,7 +257,7 @@ processor (which corresponds to erratum #13 of the AT697E processor).
 cache nullify errata of the UT699 processor. 
 </dl>
 
- <p>These &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; options are supported in addition to the above
+ <p>These `<samp><span class="samp">-m</span></samp>' options are supported in addition to the above
 on SPARC-V9 processors in 64-bit environments:
 
      <dl>
@@ -269,21 +269,21 @@ to 64 bits.
      <br><dt><code>-mcmodel=</code><var>which</var><dd><a name="index-mcmodel-2239"></a>Set the code model to one of
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">medlow</span></samp>&rsquo;<dd>The Medium/Low code model: 64-bit addresses, programs
+<dt>`<samp><span class="samp">medlow</span></samp>'<dd>The Medium/Low code model: 64-bit addresses, programs
 must be linked in the low 32 bits of memory.  Programs can be statically
 or dynamically linked.
 
-          <br><dt>&lsquo;<samp><span class="samp">medmid</span></samp>&rsquo;<dd>The Medium/Middle code model: 64-bit addresses, programs
+          <br><dt>`<samp><span class="samp">medmid</span></samp>'<dd>The Medium/Middle code model: 64-bit addresses, programs
 must be linked in the low 44 bits of memory, the text and data segments must
 be less than 2GB in size and the data segment must be located within 2GB of
 the text segment.
 
-          <br><dt>&lsquo;<samp><span class="samp">medany</span></samp>&rsquo;<dd>The Medium/Anywhere code model: 64-bit addresses, programs
+          <br><dt>`<samp><span class="samp">medany</span></samp>'<dd>The Medium/Anywhere code model: 64-bit addresses, programs
 may be linked anywhere in memory, the text and data segments must be less
 than 2GB in size and the data segment must be located within 2GB of the
 text segment.
 
-          <br><dt>&lsquo;<samp><span class="samp">embmedany</span></samp>&rsquo;<dd>The Medium/Anywhere code model for embedded systems:
+          <br><dt>`<samp><span class="samp">embmedany</span></samp>'<dd>The Medium/Anywhere code model for embedded systems:
 64-bit addresses, the text and data segments must be less than 2GB in
 size, both starting anywhere in memory (determined at link time).  The
 global register %g4 points to the base of the data segment.  Programs
@@ -293,15 +293,15 @@ are statically linked and PIC is not supported.
      <br><dt><code>-mmemory-model=</code><var>mem-model</var><dd><a name="index-mmemory_002dmodel-2240"></a>Set the memory model in force on the processor to one of
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">default</span></samp>&rsquo;<dd>The default memory model for the processor and operating system.
+<dt>`<samp><span class="samp">default</span></samp>'<dd>The default memory model for the processor and operating system.
 
-          <br><dt>&lsquo;<samp><span class="samp">rmo</span></samp>&rsquo;<dd>Relaxed Memory Order
+          <br><dt>`<samp><span class="samp">rmo</span></samp>'<dd>Relaxed Memory Order
 
-          <br><dt>&lsquo;<samp><span class="samp">pso</span></samp>&rsquo;<dd>Partial Store Order
+          <br><dt>`<samp><span class="samp">pso</span></samp>'<dd>Partial Store Order
 
-          <br><dt>&lsquo;<samp><span class="samp">tso</span></samp>&rsquo;<dd>Total Store Order
+          <br><dt>`<samp><span class="samp">tso</span></samp>'<dd>Total Store Order
 
-          <br><dt>&lsquo;<samp><span class="samp">sc</span></samp>&rsquo;<dd>Sequential Consistency
+          <br><dt>`<samp><span class="samp">sc</span></samp>'<dd>Sequential Consistency
 </dl>
 
      <p>These memory models are formally defined in Appendix D of the Sparc V9

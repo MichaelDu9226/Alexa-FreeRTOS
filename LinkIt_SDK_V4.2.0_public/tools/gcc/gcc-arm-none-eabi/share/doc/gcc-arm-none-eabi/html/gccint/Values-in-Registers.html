@@ -3,7 +3,7 @@
 <title>Values in Registers - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Registers.html#Registers" title="Registers">
 <link rel="prev" href="Allocation-Order.html#Allocation-Order" title="Allocation Order">
@@ -72,7 +72,7 @@ definition of this macro is
      <pre class="smallexample">          #define HARD_REGNO_NREGS(REGNO, MODE)            \
              ((GET_MODE_SIZE (MODE) + UNITS_PER_WORD - 1)  \
               / UNITS_PER_WORD)
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
@@ -122,7 +122,7 @@ registers starting with that one).  For a machine where all registers
 are equivalent, a suitable definition is
 
      <pre class="smallexample">          #define HARD_REGNO_MODE_OK(REGNO, MODE) 1
-</pre>
+     </pre>
       <p>You need not include code to check for the numbers of fixed registers,
 because the allocation mechanism considers them to be always occupied.
 
@@ -131,14 +131,14 @@ register pairs.  You can implement that by defining this macro to reject
 odd register numbers for such modes.
 
       <p>The minimum requirement for a mode to be OK in a register is that the
-&lsquo;<samp><span class="samp">mov</span><var>mode</var></samp>&rsquo; instruction pattern support moves between the
+`<samp><span class="samp">mov</span><var>mode</var></samp>' instruction pattern support moves between the
 register and other hard register in the same class and that moving a
 value into the register and back out not alter it.
 
       <p>Since the same instruction used to move <code>word_mode</code> will work for
 all narrower integer modes, it is not necessary on any machine for
 <code>HARD_REGNO_MODE_OK</code> to distinguish between these modes, provided
-you define patterns &lsquo;<samp><span class="samp">movhi</span></samp>&rsquo;, etc., to take advantage of this.  This
+you define patterns `<samp><span class="samp">movhi</span></samp>', etc., to take advantage of this.  This
 is useful because of the interaction between <code>HARD_REGNO_MODE_OK</code>
 and <code>MODES_TIEABLE_P</code>; it is very desirable for all integer modes
 to be tieable.

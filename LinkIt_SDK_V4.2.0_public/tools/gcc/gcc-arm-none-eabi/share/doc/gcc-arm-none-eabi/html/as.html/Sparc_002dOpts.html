@@ -3,7 +3,7 @@
 <title>Sparc-Opts - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Sparc_002dDependent.html#Sparc_002dDependent" title="Sparc-Dependent">
 <link rel="next" href="Sparc_002dAligned_002dData.html#Sparc_002dAligned_002dData" title="Sparc-Aligned-Data">
@@ -68,7 +68,7 @@ is explicitly requested.  SPARC v9 is always incompatible with sparclite.
 
 <!-- The order here is the same as the order of enum sparc_opcode_arch_val -->
 <!-- to give the user a sense of the order of the "bumping". -->
-     
+
 <a name="index-g_t_002dAv6-1794"></a>
 <a name="index-g_t_002dAv7-1795"></a>
 <a name="index-g_t_002dAv8-1796"></a>
@@ -87,55 +87,55 @@ is explicitly requested.  SPARC v9 is always incompatible with sparclite.
 <a name="index-g_t_002dAsparcima-1809"></a>
 <a name="index-g_t_002dAsparcvis3-1810"></a>
 <a name="index-g_t_002dAsparcvis3r-1811"></a>
-<dl><dt><code>-Av6 | -Av7 | -Av8 | -Asparclet | -Asparclite</code><dt><code>-Av8plus | -Av8plusa | -Av8plusb | -Av8plusc | -Av8plusd | -Av8plusv</code><dt><code>-Av9 | -Av9a | -Av9b | -Av9c | -Av9d | -Av9v</code><dt><code>-Asparc | -Asparcvis | -Asparcvis2 | -Asparcfmaf | -Asparcima</code><dt><code>-Asparcvis3 | -Asparcvis3r</code><dd>Use one of the &lsquo;<samp><span class="samp">-A</span></samp>&rsquo; options to select one of the SPARC
+<dl><dt><code>-Av6 | -Av7 | -Av8 | -Asparclet | -Asparclite</code><dt><code>-Av8plus | -Av8plusa | -Av8plusb | -Av8plusc | -Av8plusd | -Av8plusv</code><dt><code>-Av9 | -Av9a | -Av9b | -Av9c | -Av9d | -Av9v</code><dt><code>-Asparc | -Asparcvis | -Asparcvis2 | -Asparcfmaf | -Asparcima</code><dt><code>-Asparcvis3 | -Asparcvis3r</code><dd>Use one of the `<samp><span class="samp">-A</span></samp>' options to select one of the SPARC
 architectures explicitly.  If you select an architecture explicitly,
 <code>as</code> reports a fatal error if it encounters an instruction
 or feature requiring an incompatible or higher level.
 
-     <p>&lsquo;<samp><span class="samp">-Av8plus</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-Av8plusa</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-Av8plusb</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-Av8plusc</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">-Av8plusd</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">-Av8plusv</span></samp>&rsquo; select a 32 bit environment.
+     <p>`<samp><span class="samp">-Av8plus</span></samp>', `<samp><span class="samp">-Av8plusa</span></samp>', `<samp><span class="samp">-Av8plusb</span></samp>', `<samp><span class="samp">-Av8plusc</span></samp>',
+`<samp><span class="samp">-Av8plusd</span></samp>', and `<samp><span class="samp">-Av8plusv</span></samp>' select a 32 bit environment.
 
-     <p>&lsquo;<samp><span class="samp">-Av9</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-Av9a</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-Av9b</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-Av9c</span></samp>&rsquo;, &lsquo;<samp><span class="samp">-Av9d</span></samp>&rsquo;, and
-&lsquo;<samp><span class="samp">-Av9v</span></samp>&rsquo; select a 64 bit environment and are not available unless GAS
+     <p>`<samp><span class="samp">-Av9</span></samp>', `<samp><span class="samp">-Av9a</span></samp>', `<samp><span class="samp">-Av9b</span></samp>', `<samp><span class="samp">-Av9c</span></samp>', `<samp><span class="samp">-Av9d</span></samp>', and
+`<samp><span class="samp">-Av9v</span></samp>' select a 64 bit environment and are not available unless GAS
 is explicitly configured with 64 bit environment support.
 
-     <p>&lsquo;<samp><span class="samp">-Av8plusa</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-Av9a</span></samp>&rsquo; enable the SPARC V9 instruction set with
+     <p>`<samp><span class="samp">-Av8plusa</span></samp>' and `<samp><span class="samp">-Av9a</span></samp>' enable the SPARC V9 instruction set with
 UltraSPARC VIS 1.0 extensions.
 
-     <p>&lsquo;<samp><span class="samp">-Av8plusb</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-Av9b</span></samp>&rsquo; enable the UltraSPARC VIS 2.0 instructions,
-as well as the instructions enabled by &lsquo;<samp><span class="samp">-Av8plusa</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-Av9a</span></samp>&rsquo;.
+     <p>`<samp><span class="samp">-Av8plusb</span></samp>' and `<samp><span class="samp">-Av9b</span></samp>' enable the UltraSPARC VIS 2.0 instructions,
+as well as the instructions enabled by `<samp><span class="samp">-Av8plusa</span></samp>' and `<samp><span class="samp">-Av9a</span></samp>'.
 
-     <p>&lsquo;<samp><span class="samp">-Av8plusc</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-Av9c</span></samp>&rsquo; enable the UltraSPARC Niagara instructions,
-as well as the instructions enabled by &lsquo;<samp><span class="samp">-Av8plusb</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-Av9b</span></samp>&rsquo;.
+     <p>`<samp><span class="samp">-Av8plusc</span></samp>' and `<samp><span class="samp">-Av9c</span></samp>' enable the UltraSPARC Niagara instructions,
+as well as the instructions enabled by `<samp><span class="samp">-Av8plusb</span></samp>' and `<samp><span class="samp">-Av9b</span></samp>'.
 
-     <p>&lsquo;<samp><span class="samp">-Av8plusd</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-Av9d</span></samp>&rsquo; enable the floating point fused
+     <p>`<samp><span class="samp">-Av8plusd</span></samp>' and `<samp><span class="samp">-Av9d</span></samp>' enable the floating point fused
 multiply-add, VIS 3.0, and HPC extension instructions, as well as the
-instructions enabled by &lsquo;<samp><span class="samp">-Av8plusc</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-Av9c</span></samp>&rsquo;.
+instructions enabled by `<samp><span class="samp">-Av8plusc</span></samp>' and `<samp><span class="samp">-Av9c</span></samp>'.
 
-     <p>&lsquo;<samp><span class="samp">-Av8plusv</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-Av9v</span></samp>&rsquo; enable the 'random', transactional
+     <p>`<samp><span class="samp">-Av8plusv</span></samp>' and `<samp><span class="samp">-Av9v</span></samp>' enable the 'random', transactional
 memory, floating point unfused multiply-add, integer multiply-add, and
 cache sparing store instructions, as well as the instructions enabled
-by &lsquo;<samp><span class="samp">-Av8plusd</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-Av9d</span></samp>&rsquo;.
+by `<samp><span class="samp">-Av8plusd</span></samp>' and `<samp><span class="samp">-Av9d</span></samp>'.
 
-     <p>&lsquo;<samp><span class="samp">-Asparc</span></samp>&rsquo; specifies a v9 environment.  It is equivalent to
-&lsquo;<samp><span class="samp">-Av9</span></samp>&rsquo; if the word size is 64-bit, and &lsquo;<samp><span class="samp">-Av8plus</span></samp>&rsquo; otherwise.
+     <p>`<samp><span class="samp">-Asparc</span></samp>' specifies a v9 environment.  It is equivalent to
+`<samp><span class="samp">-Av9</span></samp>' if the word size is 64-bit, and `<samp><span class="samp">-Av8plus</span></samp>' otherwise.
 
-     <p>&lsquo;<samp><span class="samp">-Asparcvis</span></samp>&rsquo; specifies a v9a environment.  It is equivalent to
-&lsquo;<samp><span class="samp">-Av9a</span></samp>&rsquo; if the word size is 64-bit, and &lsquo;<samp><span class="samp">-Av8plusa</span></samp>&rsquo; otherwise.
+     <p>`<samp><span class="samp">-Asparcvis</span></samp>' specifies a v9a environment.  It is equivalent to
+`<samp><span class="samp">-Av9a</span></samp>' if the word size is 64-bit, and `<samp><span class="samp">-Av8plusa</span></samp>' otherwise.
 
-     <p>&lsquo;<samp><span class="samp">-Asparcvis2</span></samp>&rsquo; specifies a v9b environment.  It is equivalent to
-&lsquo;<samp><span class="samp">-Av9b</span></samp>&rsquo; if the word size is 64-bit, and &lsquo;<samp><span class="samp">-Av8plusb</span></samp>&rsquo; otherwise.
+     <p>`<samp><span class="samp">-Asparcvis2</span></samp>' specifies a v9b environment.  It is equivalent to
+`<samp><span class="samp">-Av9b</span></samp>' if the word size is 64-bit, and `<samp><span class="samp">-Av8plusb</span></samp>' otherwise.
 
-     <p>&lsquo;<samp><span class="samp">-Asparcfmaf</span></samp>&rsquo; specifies a v9b environment with the floating point
+     <p>`<samp><span class="samp">-Asparcfmaf</span></samp>' specifies a v9b environment with the floating point
 fused multiply-add instructions enabled.
 
-     <p>&lsquo;<samp><span class="samp">-Asparcima</span></samp>&rsquo; specifies a v9b environment with the integer
+     <p>`<samp><span class="samp">-Asparcima</span></samp>' specifies a v9b environment with the integer
 multiply-add instructions enabled.
 
-     <p>&lsquo;<samp><span class="samp">-Asparcvis3</span></samp>&rsquo; specifies a v9b environment with the VIS 3.0,
+     <p>`<samp><span class="samp">-Asparcvis3</span></samp>' specifies a v9b environment with the VIS 3.0,
 HPC , and floating point fused multiply-add instructions enabled.
 
-     <p>&lsquo;<samp><span class="samp">-Asparcvis3r</span></samp>&rsquo; specifies a v9b environment with the VIS 3.0,
+     <p>`<samp><span class="samp">-Asparcvis3r</span></samp>' specifies a v9b environment with the VIS 3.0,
 HPC, transactional memory, random, and floating point unfused multiply-add
 instructions enabled.
 

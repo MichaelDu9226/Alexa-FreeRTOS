@@ -3,7 +3,7 @@
 <title>Traditional miscellany - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Traditional-Mode.html#Traditional-Mode" title="Traditional Mode">
 <link rel="prev" href="Traditional-macros.html#Traditional-macros" title="Traditional macros">
@@ -61,15 +61,15 @@ preprocessor.
 
      <ul>
 <li>Preprocessing directives are recognized only when their leading
-&lsquo;<samp><span class="samp">#</span></samp>&rsquo; appears in the first column.  There can be no whitespace
-between the beginning of the line and the &lsquo;<samp><span class="samp">#</span></samp>&rsquo;, but whitespace can
-follow the &lsquo;<samp><span class="samp">#</span></samp>&rsquo;.
+`<samp><span class="samp">#</span></samp>' appears in the first column.  There can be no whitespace
+between the beginning of the line and the `<samp><span class="samp">#</span></samp>', but whitespace can
+follow the `<samp><span class="samp">#</span></samp>'.
 
-     <li>A true traditional C preprocessor does not recognize &lsquo;<samp><span class="samp">#error</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">#pragma</span></samp>&rsquo;, and may not recognize &lsquo;<samp><span class="samp">#elif</span></samp>&rsquo;.  CPP supports all
+     <li>A true traditional C preprocessor does not recognize `<samp><span class="samp">#error</span></samp>' or
+`<samp><span class="samp">#pragma</span></samp>', and may not recognize `<samp><span class="samp">#elif</span></samp>'.  CPP supports all
 the directives in traditional mode that it supports in ISO mode,
 including extensions, with the exception that the effects of
-&lsquo;<samp><span class="samp">#pragma GCC poison</span></samp>&rsquo; are undefined.
+`<samp><span class="samp">#pragma GCC poison</span></samp>' are undefined.
 
      <li>__STDC__ is not defined.
 

@@ -3,7 +3,7 @@
 <title>Messages/Warnings - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Controlling-GDB.html#Controlling-GDB" title="Controlling GDB">
 <link rel="prev" href="Auto_002dloading.html#Auto_002dloading" title="Auto-loading">
@@ -81,7 +81,8 @@ to prevent complaints from being suppressed.
 
    </dl>
 
-   <p><a name="confirmation-requests"></a>By default, <span class="sc">gdb</span> is cautious, and asks what sometimes seems to be a
+   <p><a name="confirmation-requests"></a>
+By default, <span class="sc">gdb</span> is cautious, and asks what sometimes seems to be a
 lot of stupid questions to confirm certain commands.  For example, if
 you try to run a program which is already running:
 
@@ -109,7 +110,7 @@ automatically disables confirmation requests.
 
    <p><a name="index-command-tracing-1621"></a>If you need to debug user-defined commands or sourced files you may find it
 useful to enable <dfn>command tracing</dfn>.  In this mode each command will be
-printed as it is executed, prefixed with one or more &lsquo;<samp><span class="samp">+</span></samp>&rsquo; symbols, the
+printed as it is executed, prefixed with one or more `<samp><span class="samp">+</span></samp>' symbols, the
 quantity denoting the call depth of each command.
 
      

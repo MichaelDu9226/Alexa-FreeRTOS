@@ -3,7 +3,7 @@
 <title>HPPA ELF32 - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Dependent.html#Machine-Dependent" title="Machine Dependent">
 <link rel="prev" href="ARM.html#ARM" title="ARM">
@@ -50,26 +50,26 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Machine-Dependent.html#Machine-Dependen
 
 <p><a name="index-HPPA-multiple-sub_002dspace-stubs-617"></a><a name="index-g_t_002d_002dmulti_002dsubspace-618"></a>When generating a shared library, <samp><span class="command">ld</span></samp> will by default generate
 import stubs suitable for use with a single sub-space application. 
-The &lsquo;<samp><span class="samp">--multi-subspace</span></samp>&rsquo; switch causes <samp><span class="command">ld</span></samp> to generate export
+The `<samp><span class="samp">--multi-subspace</span></samp>' switch causes <samp><span class="command">ld</span></samp> to generate export
 stubs, and different (larger) import stubs suitable for use with
 multiple sub-spaces.
 
    <p><a name="index-HPPA-stub-grouping-619"></a><a name="index-g_t_002d_002dstub_002dgroup_002dsize_003d_0040var_007bN_007d-620"></a>Long branch stubs and import/export stubs are placed by <samp><span class="command">ld</span></samp> in
 stub sections located between groups of input sections. 
-&lsquo;<samp><span class="samp">--stub-group-size</span></samp>&rsquo; specifies the maximum size of a group of input
+`<samp><span class="samp">--stub-group-size</span></samp>' specifies the maximum size of a group of input
 sections handled by one stub section.  Since branch offsets are signed,
 a stub section may serve two groups of input sections, one group before
 the stub section, and one group after it.  However, when using
 conditional branches that require stubs, it may be better (for branch
 prediction) that stub sections only serve one group of input sections. 
-A negative value for &lsquo;<samp><span class="samp">N</span></samp>&rsquo; chooses this scheme, ensuring that
+A negative value for `<samp><span class="samp">N</span></samp>' chooses this scheme, ensuring that
 branches to stubs always use a negative offset.  Two special values of
-&lsquo;<samp><span class="samp">N</span></samp>&rsquo; are recognized, &lsquo;<samp><span class="samp">1</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-1</span></samp>&rsquo;.  These both instruct
+`<samp><span class="samp">N</span></samp>' are recognized, `<samp><span class="samp">1</span></samp>' and `<samp><span class="samp">-1</span></samp>'.  These both instruct
 <samp><span class="command">ld</span></samp> to automatically size input section groups for the branch types
 detected, with the same behaviour regarding stub placement as other
-positive or negative values of &lsquo;<samp><span class="samp">N</span></samp>&rsquo; respectively.
+positive or negative values of `<samp><span class="samp">N</span></samp>' respectively.
 
-   <p>Note that &lsquo;<samp><span class="samp">--stub-group-size</span></samp>&rsquo; does not split input sections.  A
+   <p>Note that `<samp><span class="samp">--stub-group-size</span></samp>' does not split input sections.  A
 single input section larger than the group size specified will of course
 create a larger group (of one section).  If input sections are too
 large, it may not be possible for a branch to reach its stub.

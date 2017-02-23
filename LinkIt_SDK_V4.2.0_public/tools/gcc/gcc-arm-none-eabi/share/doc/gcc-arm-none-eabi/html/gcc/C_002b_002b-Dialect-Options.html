@@ -3,7 +3,7 @@
 <title>C++ Dialect Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="C-Dialect-Options.html#C-Dialect-Options" title="C Dialect Options">
@@ -104,11 +104,11 @@ around bugs in the access control code.
 before attempting to modify the storage allocated.  This check is
 normally unnecessary because the C++ standard specifies that
 <code>operator new</code> only returns <code>0</code> if it is declared
-&lsquo;<samp><span class="samp">throw()</span></samp>&rsquo;, in which case the compiler always checks the
+`<samp><span class="samp">throw()</span></samp>', in which case the compiler always checks the
 return value even without this option.  In all other cases, when
 <code>operator new</code> has a non-empty exception specification, memory
 exhaustion is signalled by throwing <code>std::bad_alloc</code>.  See also
-&lsquo;<samp><span class="samp">new (nothrow)</span></samp>&rsquo;.
+`<samp><span class="samp">new (nothrow)</span></samp>'.
 
      <br><dt><code>-fconstexpr-depth=</code><var>n</var><dd><a name="index-fconstexpr_002ddepth-139"></a>Set the maximum nested evaluation depth for C++11 constexpr functions
 to <var>n</var>.  A limit is needed to detect endless recursion during
@@ -127,7 +127,7 @@ is 512.
           {
             forward({1,2}); // call forward&lt;std::initializer_list&lt;int&gt;&gt;
           }
-</pre>
+     </pre>
      <p>This deduction was implemented as a possible extension to the
 originally proposed semantics for the C++11 standard, but was not part
 of the final standard, so it is disabled by default.  This option is
@@ -153,13 +153,13 @@ call the copy constructor in all cases.
      <br><dt><code>-fno-enforce-eh-specs</code><dd><a name="index-fno_002denforce_002deh_002dspecs-143"></a>Don't generate code to check for violation of exception specifications
 at run time.  This option violates the C++ standard, but may be useful
 for reducing code size in production builds, much like defining
-&lsquo;<samp><span class="samp">NDEBUG</span></samp>&rsquo;.  This does not give user code permission to throw
+`<samp><span class="samp">NDEBUG</span></samp>'.  This does not give user code permission to throw
 exceptions in violation of the exception specifications; the compiler
 still optimizes based on the specifications, so throwing an
 unexpected exception results in undefined behavior at run time.
 
-     <br><dt><code>-fextern-tls-init</code><dt><code>-fno-extern-tls-init</code><dd><a name="index-fextern_002dtls_002dinit-144"></a><a name="index-fno_002dextern_002dtls_002dinit-145"></a>The C++11 and OpenMP standards allow &lsquo;<samp><span class="samp">thread_local</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">threadprivate</span></samp>&rsquo; variables to have dynamic (runtime)
+     <br><dt><code>-fextern-tls-init</code><dt><code>-fno-extern-tls-init</code><dd><a name="index-fextern_002dtls_002dinit-144"></a><a name="index-fno_002dextern_002dtls_002dinit-145"></a>The C++11 and OpenMP standards allow `<samp><span class="samp">thread_local</span></samp>' and
+`<samp><span class="samp">threadprivate</span></samp>' variables to have dynamic (runtime)
 initialization.  To support this, any use of such a variable goes
 through a wrapper function that performs any necessary initialization. 
 When the use and definition of the variable are in the same
@@ -178,7 +178,7 @@ another TU), they can avoid this overhead with the
 aliases, the default is <samp><span class="option">-fno-extern-tls-init</span></samp>.
 
      <br><dt><code>-ffor-scope</code><dt><code>-fno-for-scope</code><dd><a name="index-ffor_002dscope-146"></a><a name="index-fno_002dfor_002dscope-147"></a>If <samp><span class="option">-ffor-scope</span></samp> is specified, the scope of variables declared in
-a <i>for-init-statement</i> is limited to the &lsquo;<samp><span class="samp">for</span></samp>&rsquo; loop itself,
+a <i>for-init-statement</i> is limited to the `<samp><span class="samp">for</span></samp>' loop itself,
 as specified by the C++ standard. 
 If <samp><span class="option">-fno-for-scope</span></samp> is specified, the scope of variables declared in
 a <i>for-init-statement</i> extends to the end of the enclosing scope,
@@ -202,7 +202,7 @@ The default is to handle inlines differently so that compiles with and
 without optimization need the same set of explicit instantiations.
 
      <br><dt><code>-fno-implement-inlines</code><dd><a name="index-fno_002dimplement_002dinlines-151"></a>To save space, do not emit out-of-line copies of inline functions
-controlled by &lsquo;<samp><span class="samp">#pragma implementation</span></samp>&rsquo;.  This causes linker
+controlled by `<samp><span class="samp">#pragma implementation</span></samp>'.  This causes linker
 errors if these functions are not inlined everywhere they are called.
 
      <br><dt><code>-fms-extensions</code><dd><a name="index-fms_002dextensions-152"></a>Disable Wpedantic warnings about constructs used in MFC, such as implicit
@@ -250,10 +250,10 @@ implies <samp><span class="option">-fno-implicit-templates</span></samp>.  See <
 
      <br><dt><code>-fno-rtti</code><dd><a name="index-fno_002drtti-160"></a>Disable generation of information about every class with virtual
 functions for use by the C++ run-time type identification features
-(&lsquo;<samp><span class="samp">dynamic_cast</span></samp>&rsquo; and &lsquo;<samp><span class="samp">typeid</span></samp>&rsquo;).  If you don't use those parts
+(`<samp><span class="samp">dynamic_cast</span></samp>' and `<samp><span class="samp">typeid</span></samp>').  If you don't use those parts
 of the language, you can save some space by using this flag.  Note that
 exception handling uses the same information, but G++ generates it as
-needed. The &lsquo;<samp><span class="samp">dynamic_cast</span></samp>&rsquo; operator can still be used for casts that
+needed. The `<samp><span class="samp">dynamic_cast</span></samp>' operator can still be used for casts that
 do not require run-time type information, i.e. casts to <code>void *</code> or to
 unambiguous base classes.
 
@@ -362,7 +362,7 @@ is used when building the C++ library.)
 have meanings only for C++ programs:
 
      <dl>
-<dt><code>-fno-default-inline</code><dd><a name="index-fno_002ddefault_002dinline-172"></a>Do not assume &lsquo;<samp><span class="samp">inline</span></samp>&rsquo; for functions defined inside a class scope. 
+<dt><code>-fno-default-inline</code><dd><a name="index-fno_002ddefault_002dinline-172"></a>Do not assume `<samp><span class="samp">inline</span></samp>' for functions defined inside a class scope. 
 See <a href="Optimize-Options.html#Optimize-Options">Options That Control Optimization</a>.  Note that these
 functions have linkage like inline functions; they just aren't
 inlined by default.
@@ -386,7 +386,7 @@ mangled incorrectly:
           <pre class="smallexample">               extern int N;
                template &lt;int &amp;&gt; struct S {};
                void n (S&lt;N&gt;) {2}
-</pre>
+          </pre>
           <p>This is fixed in <samp><span class="option">-fabi-version=3</span></samp>.
 
           <li>SIMD vector types declared using <code>__attribute ((vector_size))</code> are
@@ -404,7 +404,7 @@ pack data into the same byte as a base class.  For example:
 
           <pre class="smallexample">               struct A { virtual void f(); int f1 : 1; };
                struct B : public A { int f2 : 1; };
-</pre>
+          </pre>
           <p class="noindent">In this case, G++ places <code>B::f2</code> into the same byte
 as <code>A::f1</code>; other compilers do not.  You can avoid this problem
 by explicitly padding <code>A</code> so that its size is a multiple of the
@@ -417,7 +417,7 @@ tail padding when laying out virtual bases.  For example:
           <pre class="smallexample">               struct A { virtual void f(); char c1; };
                struct B { B(); char c2; };
                struct C : public A, public virtual B {};
-</pre>
+          </pre>
           <p class="noindent">In this case, G++ does not place <code>B</code> into the tail-padding for
 <code>A</code>; other compilers do.  You can avoid this problem by
 explicitly padding <code>A</code> so that its size is a multiple of its
@@ -429,7 +429,7 @@ of their underlying types, when the bit-fields appear in a union.  For
 example:
 
           <pre class="smallexample">               union U { int i : 4096; };
-</pre>
+          </pre>
           <p class="noindent">Assuming that an <code>int</code> does not have 4096 bits, G++ makes the
 union too small by the number of bits in an <code>int</code>.
 
@@ -443,7 +443,7 @@ union too small by the number of bits in an <code>int</code>.
                };
                
                struct C : public B, public A {};
-</pre>
+          </pre>
           <p class="noindent">G++ places the <code>A</code> base class of <code>C</code> at a nonzero offset;
 it should be placed at offset zero.  G++ mistakenly believes that the
 <code>A</code> data member of <code>B</code> is already at offset zero.
@@ -456,7 +456,7 @@ template template parameters can be mangled incorrectly.
                
                template &lt;template &lt;typename&gt; class Q&gt;
                void f(typename Q&lt;int&gt;::X) {}
-</pre>
+          </pre>
           <p class="noindent">Instantiations of these templates may be mangled incorrectly.
 
      </ul>
@@ -472,7 +472,7 @@ passed in memory as specified in psABI.  For example:
                  long double ld;
                  int i;
                };
-</pre>
+          </pre>
           <p class="noindent"><code>union U</code> is always passed in memory.
 
      </ul>
@@ -483,7 +483,7 @@ public static member functions.  Also warn if there are no non-private
 methods, and there's at least one private member function that isn't
 a constructor or destructor.
 
-     <br><dt><code>-Wdelete-non-virtual-dtor </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Wdelete_002dnon_002dvirtual_002ddtor-177"></a><a name="index-Wno_002ddelete_002dnon_002dvirtual_002ddtor-178"></a>Warn when &lsquo;<samp><span class="samp">delete</span></samp>&rsquo; is used to destroy an instance of a class that
+     <br><dt><code>-Wdelete-non-virtual-dtor </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Wdelete_002dnon_002dvirtual_002ddtor-177"></a><a name="index-Wno_002ddelete_002dnon_002dvirtual_002ddtor-178"></a>Warn when `<samp><span class="samp">delete</span></samp>' is used to destroy an instance of a class that
 has virtual functions and non-virtual destructor. It is unsafe to delete
 an instance of a derived class through a pointer to a base class if the
 base class does not have a virtual destructor.  This warning is enabled
@@ -503,16 +503,16 @@ For example:
             int64_t i64 = 123;
             printf("My int64: %"PRId64"\n", i64);
           }
-</pre>
+     </pre>
      <p>In this case, <code>PRId64</code> is treated as a separate preprocessing token.
 
      <p>This warning is enabled by default.
 
      <br><dt><code>-Wnarrowing </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Wnarrowing-181"></a><a name="index-Wno_002dnarrowing-182"></a>Warn when a narrowing conversion prohibited by C++11 occurs within
-&lsquo;<samp><span class="samp">{ }</span></samp>&rsquo;, e.g.
+`<samp><span class="samp">{ }</span></samp>', e.g.
 
      <pre class="smallexample">          int i = { 2.2 }; // error: narrowing from double to int
-</pre>
+     </pre>
      <p>This flag is included in <samp><span class="option">-Wall</span></samp> and <samp><span class="option">-Wc++11-compat</span></samp>.
 
      <p>With <samp><span class="option">-std=c++11</span></samp>, <samp><span class="option">-Wno-narrowing</span></samp> suppresses the diagnostic
@@ -522,7 +522,7 @@ ill-formed in SFINAE context.
 
      <br><dt><code>-Wnoexcept </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Wnoexcept-183"></a><a name="index-Wno_002dnoexcept-184"></a>Warn when a noexcept-expression evaluates to false because of a call
 to a function that does not have a non-throwing exception
-specification (i.e. &lsquo;<samp><span class="samp">throw()</span></samp>&rsquo; or &lsquo;<samp><span class="samp">noexcept</span></samp>&rsquo;) but is known by
+specification (i.e. `<samp><span class="samp">throw()</span></samp>' or `<samp><span class="samp">noexcept</span></samp>') but is known by
 the compiler to never throw an exception.
 
      <br><dt><code>-Wnon-virtual-dtor </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Wnon_002dvirtual_002ddtor-185"></a><a name="index-Wno_002dnon_002dvirtual_002ddtor-186"></a>Warn when a class has virtual functions and an accessible non-virtual
@@ -538,9 +538,9 @@ match the order in which they must be executed.  For instance:
             int j;
             A(): j (0), i (1) { }
           };
-</pre>
-     <p class="noindent">The compiler rearranges the member initializers for &lsquo;<samp><span class="samp">i</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">j</span></samp>&rsquo; to match the declaration order of the members, emitting
+     </pre>
+     <p class="noindent">The compiler rearranges the member initializers for `<samp><span class="samp">i</span></samp>'
+and `<samp><span class="samp">j</span></samp>' to match the declaration order of the members, emitting
 a warning to that effect.  This warning is enabled by <samp><span class="option">-Wall</span></samp>.
 
      <br><dt><code>-fext-numeric-literals </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-fext_002dnumeric_002dliterals-191"></a><a name="index-fno_002dext_002dnumeric_002dliterals-192"></a>Accept imaginary, fixed-point, or machine-defined
@@ -586,7 +586,7 @@ decrement operators.
      </ul>
 
      <p>When selecting this option, be aware that the standard library
-headers do not obey all of these guidelines; use &lsquo;<samp><span class="samp">grep -v</span></samp>&rsquo;
+headers do not obey all of these guidelines; use `<samp><span class="samp">grep -v</span></samp>'
 to filter out those warnings.
 
      <br><dt><code>-Wstrict-null-sentinel </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Wstrict_002dnull_002dsentinel-195"></a><a name="index-Wno_002dstrict_002dnull_002dsentinel-196"></a>Warn about the use of an uncasted <code>NULL</code> as sentinel.  When
@@ -598,7 +598,7 @@ But this use is not portable across different compilers.
      <br><dt><code>-Wno-non-template-friend </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Wno_002dnon_002dtemplate_002dfriend-197"></a><a name="index-Wnon_002dtemplate_002dfriend-198"></a>Disable warnings when non-templatized friend functions are declared
 within a template.  Since the advent of explicit template specification
 support in G++, if the name of the friend is an unqualified-id (i.e.,
-&lsquo;<samp><span class="samp">friend foo(int)</span></samp>&rsquo;), the C++ language specification demands that the
+`<samp><span class="samp">friend foo(int)</span></samp>'), the C++ language specification demands that the
 friend declare or define an ordinary, nontemplate function.  (Section
 14.5.3).  Before G++ implemented explicit specification, unqualified-ids
 could be interpreted as a particular specialization of a templatized
@@ -610,8 +610,8 @@ This new compiler behavior can be turned off with
 but disables the helpful warning.
 
      <br><dt><code>-Wold-style-cast </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Wold_002dstyle_002dcast-199"></a><a name="index-Wno_002dold_002dstyle_002dcast-200"></a>Warn if an old-style (C-style) cast to a non-void type is used within
-a C++ program.  The new-style casts (&lsquo;<samp><span class="samp">dynamic_cast</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">static_cast</span></samp>&rsquo;, &lsquo;<samp><span class="samp">reinterpret_cast</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">const_cast</span></samp>&rsquo;) are
+a C++ program.  The new-style casts (`<samp><span class="samp">dynamic_cast</span></samp>',
+`<samp><span class="samp">static_cast</span></samp>', `<samp><span class="samp">reinterpret_cast</span></samp>', and `<samp><span class="samp">const_cast</span></samp>') are
 less vulnerable to unintended effects and much easier to search for.
 
      <br><dt><code>-Woverloaded-virtual </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Woverloaded_002dvirtual-201"></a><a name="index-Wno_002doverloaded_002dvirtual-202"></a><a name="index-overloaded-virtual-function_002c-warning-203"></a><a name="index-warning-for-overloaded-virtual-function-204"></a>Warn when a function declaration hides virtual functions from a
@@ -624,13 +624,13 @@ base class.  For example, in:
           struct B: public A {
             void f(int);
           };
-</pre>
+     </pre>
      <p>the <code>A</code> class version of <code>f</code> is hidden in <code>B</code>, and code
 like:
 
      <pre class="smallexample">          B* b;
           b-&gt;f();
-</pre>
+     </pre>
      <p class="noindent">fails to compile.
 
      <br><dt><code>-Wno-pmf-conversions </code><span class="roman">(C++ and Objective-C++ only)</span><dd><a name="index-Wno_002dpmf_002dconversions-205"></a><a name="index-Wpmf_002dconversions-206"></a>Disable the diagnostic for converting a bound pointer to member function

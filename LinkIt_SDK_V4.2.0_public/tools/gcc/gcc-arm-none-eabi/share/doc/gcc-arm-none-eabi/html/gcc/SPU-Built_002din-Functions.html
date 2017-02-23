@@ -3,7 +3,7 @@
 <title>SPU Built-in Functions - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Builtins.html#Target-Builtins" title="Target Builtins">
 <link rel="prev" href="SPARC-VIS-Built_002din-Functions.html#SPARC-VIS-Built_002din-Functions" title="SPARC VIS Built-in Functions">
@@ -84,7 +84,7 @@ vector type.
 does not work:
 
      <pre class="smallexample">            spu_add ((vector signed int){1, 2, 3, 4}, foo);
-</pre>
+     </pre>
      <p class="noindent">Since <code>spu_add</code> is a macro, the vector constant in the example
 is treated as four separate arguments.  Wrap the entire argument in
 parentheses for this to work.

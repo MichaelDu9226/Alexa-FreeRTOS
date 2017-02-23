@@ -3,7 +3,7 @@
 <title>Output Section Type - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Output-Section-Attributes.html#Output-Section-Attributes" title="Output Section Attributes">
 <link rel="next" href="Output-Section-LMA.html#Output-Section-LMA" title="Output Section LMA">
@@ -61,7 +61,7 @@ section when the program is run.
    <p><a name="index-NOLOAD-445"></a><a name="index-prevent-unnecessary-loading-446"></a><a name="index-loading_002c-preventing-447"></a>The linker normally sets the attributes of an output section based on
 the input sections which map into it.  You can override this by using
 the section type.  For example, in the script sample below, the
-&lsquo;<samp><span class="samp">ROM</span></samp>&rsquo; section is addressed at memory location &lsquo;<samp><span class="samp">0</span></samp>&rsquo; and does not
+`<samp><span class="samp">ROM</span></samp>' section is addressed at memory location `<samp><span class="samp">0</span></samp>' and does not
 need to be loaded when the program is run.
 <pre class="smallexample">     SECTIONS {
        ROM 0 (NOLOAD) : { ... }

@@ -3,7 +3,7 @@
 <title>Notification Packets - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Protocol.html#Remote-Protocol" title="Remote Protocol">
 <link rel="prev" href="Interrupts.html#Interrupts" title="Interrupts">
@@ -56,12 +56,12 @@ without incurring the round-trip latency of an acknowledgment, and so
 are useful for low-impact communications where occasional packet loss
 is not a problem.
 
-   <p>A notification packet has the form &lsquo;<samp><span class="samp">% </span><var>data</var><span class="samp"> #
-</span><var>checksum</var></samp>&rsquo;, where <var>data</var> is the content of the notification,
+   <p>A notification packet has the form `<samp><span class="samp">% </span><var>data</var><span class="samp"> #
+</span><var>checksum</var></samp>', where <var>data</var> is the content of the notification,
 and <var>checksum</var> is a checksum of <var>data</var>, computed and formatted
 as for ordinary <span class="sc">gdb</span> packets.  A notification's <var>data</var>
-never contains &lsquo;<samp><span class="samp">$</span></samp>&rsquo;, &lsquo;<samp><span class="samp">%</span></samp>&rsquo; or &lsquo;<samp><span class="samp">#</span></samp>&rsquo; characters.  Upon
-receiving a notification, the recipient sends no &lsquo;<samp><span class="samp">+</span></samp>&rsquo; or &lsquo;<samp><span class="samp">-</span></samp>&rsquo;
+never contains `<samp><span class="samp">$</span></samp>', `<samp><span class="samp">%</span></samp>' or `<samp><span class="samp">#</span></samp>' characters.  Upon
+receiving a notification, the recipient sends no `<samp><span class="samp">+</span></samp>' or `<samp><span class="samp">-</span></samp>'
 to acknowledge the notification's receipt or to report its corruption.
 
    <p>Every notification's <var>data</var> begins with a name, which contains no
@@ -79,18 +79,18 @@ new contexts; this rule helps older senders avoid confusing newer
 recipients.
 
    <p>(Older versions of <span class="sc">gdb</span> ignore bytes received until they see
-the &lsquo;<samp><span class="samp">$</span></samp>&rsquo; byte that begins an ordinary packet, so new stubs may
+the `<samp><span class="samp">$</span></samp>' byte that begins an ordinary packet, so new stubs may
 transmit notifications without fear of confusing older clients.  There
 are no notifications defined for <span class="sc">gdb</span> to send at the moment, but we
 assume that most older stubs would ignore them, as well.)
 
    <p>Each notification is comprised of three parts:
      <dl>
-<dt>&lsquo;<samp><var>name</var><span class="samp">:</span><var>event</var></samp>&rsquo;<dd>The notification packet is sent by the side that initiates the
+<dt>`<samp><var>name</var><span class="samp">:</span><var>event</var></samp>'<dd>The notification packet is sent by the side that initiates the
 exchange (currently, only the stub does that), with <var>event</var>
 carrying the specific information about the notification. 
 <var>name</var> is the name of the notification. 
-<br><dt>&lsquo;<samp><var>ack</var></samp>&rsquo;<dd>The acknowledge sent by the other side, usually <span class="sc">gdb</span>, to
+<br><dt>`<samp><var>ack</var></samp>'<dd>The acknowledge sent by the other side, usually <span class="sc">gdb</span>, to
 acknowledge the exchange and request the event. 
 </dl>
 
@@ -111,7 +111,7 @@ the stub is permitted to resend a notification if it believes
    <p>Specifically, notifications may appear when <span class="sc">gdb</span> is not
 otherwise reading input from the stub, or when <span class="sc">gdb</span> is
 expecting to read a normal synchronous response or a
-&lsquo;<samp><span class="samp">+</span></samp>&rsquo;/&lsquo;<samp><span class="samp">-</span></samp>&rsquo; acknowledgment to a packet it has sent. 
+`<samp><span class="samp">+</span></samp>'/`<samp><span class="samp">-</span></samp>' acknowledgment to a packet it has sent. 
 Notification packets are distinct from any other communication from
 the stub so there is no ambiguity.
 
@@ -129,10 +129,10 @@ other, unrelated packets as well which the stub should process
 normally.
 
    <p>If the stub receives a <var>ack</var> packet and there are no additional
-<var>event</var> to report, the stub shall return an &lsquo;<samp><span class="samp">OK</span></samp>&rsquo; response. 
+<var>event</var> to report, the stub shall return an `<samp><span class="samp">OK</span></samp>' response. 
 At this point, <span class="sc">gdb</span> has finished processing a notification
 and the stub has completed sending any queued events.  <span class="sc">gdb</span>
-won't accept any new notifications until the final &lsquo;<samp><span class="samp">OK</span></samp>&rsquo; is
+won't accept any new notifications until the final `<samp><span class="samp">OK</span></samp>' is
 received .  If further notification events occur, the stub shall send
 a new notification, <span class="sc">gdb</span> shall accept the notification, and
 the process shall be repeated.

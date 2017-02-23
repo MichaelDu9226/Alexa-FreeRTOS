@@ -3,7 +3,7 @@
 <title>Edges - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Control-Flow.html#Control-Flow" title="Control Flow">
 <link rel="prev" href="Basic-Blocks.html#Basic-Blocks" title="Basic Blocks">
@@ -185,7 +185,7 @@ series of jumps,
           
             goto *x;
             [ ... ]
-</pre>
+     </pre>
      <p class="noindent">factoring the computed jumps results in the following code sequence
 which has a much simpler flow graph:
 
@@ -200,7 +200,7 @@ which has a much simpler flow graph:
           
           y:
             goto *x;
-</pre>
+     </pre>
      <p><a name="index-pass_005fduplicate_005fcomputed_005fgotos-3157"></a>However, the classic problem with this transformation is that it has a
 runtime cost in there resulting code: An extra jump.  Therefore, the
 computed jumps are un-factored in the later passes of the compiler

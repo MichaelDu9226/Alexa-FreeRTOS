@@ -3,7 +3,7 @@
 <title>Output Section Keywords - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="SECTIONS.html#SECTIONS" title="SECTIONS">
 <link rel="prev" href="Output-Section-Data.html#Output-Section-Data" title="Output Section Data">
@@ -103,15 +103,15 @@ runtime code expects to see.
                 *(.dtors)
                 LONG(0)
                 __DTOR_END__ = .;
-</pre>
+     </pre>
      <p>If you are using the <span class="sc">gnu</span> C++ support for initialization priority,
 which provides some control over the order in which global constructors
 are run, you must sort the constructors at link time to ensure that they
 are executed in the correct order.  When using the <code>CONSTRUCTORS</code>
-command, use &lsquo;<samp><span class="samp">SORT_BY_NAME(CONSTRUCTORS)</span></samp>&rsquo; instead.  When using the
-<code>.ctors</code> and <code>.dtors</code> sections, use &lsquo;<samp><span class="samp">*(SORT_BY_NAME(.ctors))</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">*(SORT_BY_NAME(.dtors))</span></samp>&rsquo; instead of just &lsquo;<samp><span class="samp">*(.ctors)</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">*(.dtors)</span></samp>&rsquo;.
+command, use `<samp><span class="samp">SORT_BY_NAME(CONSTRUCTORS)</span></samp>' instead.  When using the
+<code>.ctors</code> and <code>.dtors</code> sections, use `<samp><span class="samp">*(SORT_BY_NAME(.ctors))</span></samp>' and
+`<samp><span class="samp">*(SORT_BY_NAME(.dtors))</span></samp>' instead of just `<samp><span class="samp">*(.ctors)</span></samp>' and
+`<samp><span class="samp">*(.dtors)</span></samp>'.
 
      <p>Normally the compiler and linker will handle these issues automatically,
 and you will not need to concern yourself with them.  However, you may

@@ -3,7 +3,7 @@
 <title>Memory Map Format - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Protocol.html#Remote-Protocol" title="Remote Protocol">
 <link rel="prev" href="Library-List-Format-for-SVR4-Targets.html#Library-List-Format-for-SVR4-Targets" title="Library List Format for SVR4 Targets">
@@ -52,7 +52,7 @@ To be able to write into flash memory, <span class="sc">gdb</span> needs to obta
 memory map from the target.  This section describes the format of the
 memory map.
 
-   <p>The memory map is obtained using the &lsquo;<samp><span class="samp">qXfer:memory-map:read</span></samp>&rsquo;
+   <p>The memory map is obtained using the `<samp><span class="samp">qXfer:memory-map:read</span></samp>'
 (see <a href="qXfer-memory-map-read.html#qXfer-memory-map-read">qXfer memory map read</a>) packet and is an XML document that
 lists memory regions.
 
@@ -76,22 +76,22 @@ memory maps.  See <a href="Expat.html#Expat">Expat</a>.
 bytes from there:
 
      <pre class="smallexample">          &lt;memory type="ram" start="<var>addr</var>" length="<var>length</var>"/&gt;
-</pre>
+     </pre>
      <li>A region of read-only memory:
 
      <pre class="smallexample">          &lt;memory type="rom" start="<var>addr</var>" length="<var>length</var>"/&gt;
-</pre>
+     </pre>
      <li>A region of flash memory, with erasure blocks <var>blocksize</var>
 bytes in length:
 
      <pre class="smallexample">          &lt;memory type="flash" start="<var>addr</var>" length="<var>length</var>"&gt;
             &lt;property name="blocksize"&gt;<var>blocksize</var>&lt;/property&gt;
           &lt;/memory&gt;
-</pre>
+     </pre>
      </ul>
 
    <p>Regions must not overlap.  <span class="sc">gdb</span> assumes that areas of memory not covered
-by the memory map are RAM, and uses the ordinary &lsquo;<samp><span class="samp">M</span></samp>&rsquo; and &lsquo;<samp><span class="samp">X</span></samp>&rsquo;
+by the memory map are RAM, and uses the ordinary `<samp><span class="samp">M</span></samp>' and `<samp><span class="samp">X</span></samp>'
 packets to write to addresses in such ranges.
 
    <p>The formal DTD for memory map format is given below:

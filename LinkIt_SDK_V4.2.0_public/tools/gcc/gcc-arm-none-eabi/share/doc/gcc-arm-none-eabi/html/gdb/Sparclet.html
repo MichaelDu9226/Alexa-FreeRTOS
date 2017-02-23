@@ -3,7 +3,7 @@
 <title>Sparclet - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Embedded-Processors.html#Embedded-Processors" title="Embedded Processors">
 <link rel="prev" href="PA.html#PA" title="PA">
@@ -60,10 +60,10 @@ This option is set by the user, and  <var>args</var> represents the number of
 seconds <span class="sc">gdb</span> waits for responses. 
 </dl>
 
-   <p><a name="index-compiling_002c-on-Sparclet-1480"></a>When compiling for debugging, include the options &lsquo;<samp><span class="samp">-g</span></samp>&rsquo; to get debug
-information and &lsquo;<samp><span class="samp">-Ttext</span></samp>&rsquo; to relocate the program to where you wish to
-load it on the target.  You may also want to add the options &lsquo;<samp><span class="samp">-n</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">-N</span></samp>&rsquo; in order to reduce the size of the sections.  Example:
+   <p><a name="index-compiling_002c-on-Sparclet-1480"></a>When compiling for debugging, include the options `<samp><span class="samp">-g</span></samp>' to get debug
+information and `<samp><span class="samp">-Ttext</span></samp>' to relocate the program to where you wish to
+load it on the target.  You may also want to add the options `<samp><span class="samp">-n</span></samp>' or
+`<samp><span class="samp">-N</span></samp>' in order to reduce the size of the sections.  Example:
 
 <pre class="smallexample">     sparclet-aout-gcc prog.c -Ttext 0x12010000 -g -o prog -N
 </pre>

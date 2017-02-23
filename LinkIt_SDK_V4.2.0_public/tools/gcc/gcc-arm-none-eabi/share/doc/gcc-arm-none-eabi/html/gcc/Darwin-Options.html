@@ -3,7 +3,7 @@
 <title>Darwin Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="CR16-Options.html#CR16-Options" title="CR16 Options">
@@ -65,19 +65,19 @@ target.  Apple's GCC on Darwin does create &ldquo;fat&rdquo; files if multiple
 linker multiple times and joining the results together with
 <samp><span class="file">lipo</span></samp>.
 
- <p>The subtype of the file created (like &lsquo;<samp><span class="samp">ppc7400</span></samp>&rsquo; or &lsquo;<samp><span class="samp">ppc970</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">i686</span></samp>&rsquo;) is determined by the flags that specify the ISA
+ <p>The subtype of the file created (like `<samp><span class="samp">ppc7400</span></samp>' or `<samp><span class="samp">ppc970</span></samp>' or
+`<samp><span class="samp">i686</span></samp>') is determined by the flags that specify the ISA
 that GCC is targeting, like <samp><span class="option">-mcpu</span></samp> or <samp><span class="option">-march</span></samp>.  The
 <samp><span class="option">-force_cpusubtype_ALL</span></samp> option can be used to override this.
 
  <p>The Darwin tools vary in their behavior when presented with an ISA
 mismatch.  The assembler, <samp><span class="file">as</span></samp>, only permits instructions to
 be used that are valid for the subtype of the file it is generating,
-so you cannot put 64-bit instructions in a &lsquo;<samp><span class="samp">ppc750</span></samp>&rsquo; object file. 
+so you cannot put 64-bit instructions in a `<samp><span class="samp">ppc750</span></samp>' object file. 
 The linker for shared libraries, <samp><span class="file">/usr/bin/libtool</span></samp>, fails
 and prints an error if asked to create a shared library with a less
 restrictive subtype than its input files (for instance, trying to put
-a &lsquo;<samp><span class="samp">ppc970</span></samp>&rsquo; object file in a &lsquo;<samp><span class="samp">ppc7400</span></samp>&rsquo; library).  The linker
+a `<samp><span class="samp">ppc970</span></samp>' object file in a `<samp><span class="samp">ppc7400</span></samp>' library).  The linker
 for executables, <samp><span class="command">ld</span></samp>, quietly gives the executable the most
 restrictive subtype of any of its input files.
 
@@ -137,9 +137,9 @@ applicable.  This mode also sets <samp><span class="option">-mno-altivec</span><
 <samp><span class="option">-msoft-float</span></samp>, <samp><span class="option">-fno-builtin</span></samp> and
 <samp><span class="option">-mlong-branch</span></samp> for PowerPC targets.
 
-     <br><dt><code>-mone-byte-bool</code><dd><a name="index-mone_002dbyte_002dbool-1249"></a>Override the defaults for &lsquo;<samp><span class="samp">bool</span></samp>&rsquo; so that &lsquo;<samp><span class="samp">sizeof(bool)==1</span></samp>&rsquo;. 
-By default &lsquo;<samp><span class="samp">sizeof(bool)</span></samp>&rsquo; is &lsquo;<samp><span class="samp">4</span></samp>&rsquo; when compiling for
-Darwin/PowerPC and &lsquo;<samp><span class="samp">1</span></samp>&rsquo; when compiling for Darwin/x86, so this
+     <br><dt><code>-mone-byte-bool</code><dd><a name="index-mone_002dbyte_002dbool-1249"></a>Override the defaults for `<samp><span class="samp">bool</span></samp>' so that `<samp><span class="samp">sizeof(bool)==1</span></samp>'. 
+By default `<samp><span class="samp">sizeof(bool)</span></samp>' is `<samp><span class="samp">4</span></samp>' when compiling for
+Darwin/PowerPC and `<samp><span class="samp">1</span></samp>' when compiling for Darwin/x86, so this
 option has no effect on x86.
 
      <p><strong>Warning:</strong> The <samp><span class="option">-mone-byte-bool</span></samp> switch causes GCC

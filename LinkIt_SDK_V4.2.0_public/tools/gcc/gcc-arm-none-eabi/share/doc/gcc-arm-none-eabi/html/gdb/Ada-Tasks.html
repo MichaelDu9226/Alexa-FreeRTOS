@@ -3,7 +3,7 @@
 <title>Ada Tasks - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Ada.html#Ada" title="Ada">
 <link rel="prev" href="Stopping-Before-Main-Program.html#Stopping-Before-Main-Program" title="Stopping Before Main Program">
@@ -62,7 +62,7 @@ Support for Ada tasks is analogous to that for threads (see <a href="Threads.htm
              3   809a800   1   15 Child Activation Wait a
           *  4   80ae800   3   15 Runnable              c
           
-</pre>
+     </pre>
      <p class="noindent">In this listing, the asterisk before the last task indicates it to be the
 task currently being inspected.
 
@@ -127,7 +127,7 @@ the following example:
           Parent: 1 (main_task)
           Base Priority: 15
           State: Runnable
-</pre>
+     </pre>
      <br><dt><code>task</code><dd><a name="index-task_0040r_007b-_0028Ada_0029_007d-952"></a><a name="index-current-Ada-task-ID-953"></a>This command prints the ID of the current task.
 
      <pre class="smallexample">          (gdb) info tasks
@@ -136,7 +136,7 @@ the following example:
           *  2   807c458    1  15 Runnable               t
           (gdb) task
           [Current task is 2]
-</pre>
+     </pre>
      <br><dt><code>task </code><var>taskno</var><dd><a name="index-Ada-task-switching-954"></a>This command is like the <code>thread </code><var>threadno</var>
 command (see <a href="Threads.html#Threads">Threads</a>).  It switches the context of debugging
 from the current task to the given task.
@@ -154,24 +154,24 @@ from the current task to the given task.
           #2  0x805cb63 in system.task_primitives.operations.sleep ()
           #3  0x806153e in system.tasking.stages.activate_tasks ()
           #4  0x804aacc in un () at un.adb:5
-</pre>
+     </pre>
      <br><dt><code>break </code><var>linespec</var><code> task </code><var>taskno</var><dt><code>break </code><var>linespec</var><code> task </code><var>taskno</var><code> if ...</code><dd><a name="index-breakpoints-and-tasks_002c-in-Ada-955"></a><a name="index-task-breakpoints_002c-in-Ada-956"></a><a name="index-break-_0040dots_007b_007d-task-_0040var_007btaskno_007d_0040r_007b-_0028Ada_0029_007d-957"></a>These commands are like the <code>break ... thread ...</code>
 command (see <a href="Thread-Stops.html#Thread-Stops">Thread Stops</a>). 
 <var>linespec</var> specifies source lines, as described
 in <a href="Specify-Location.html#Specify-Location">Specify Location</a>.
 
-     <p>Use the qualifier &lsquo;<samp><span class="samp">task </span><var>taskno</var></samp>&rsquo; with a breakpoint command
+     <p>Use the qualifier `<samp><span class="samp">task </span><var>taskno</var></samp>' with a breakpoint command
 to specify that you only want <span class="sc">gdb</span> to stop the program when a
 particular Ada task reaches this breakpoint.  <var>taskno</var> is one of the
 numeric task identifiers assigned by <span class="sc">gdb</span>, shown in the first
-column of the &lsquo;<samp><span class="samp">info tasks</span></samp>&rsquo; display.
+column of the `<samp><span class="samp">info tasks</span></samp>' display.
 
-     <p>If you do not specify &lsquo;<samp><span class="samp">task </span><var>taskno</var></samp>&rsquo; when you set a
+     <p>If you do not specify `<samp><span class="samp">task </span><var>taskno</var></samp>' when you set a
 breakpoint, the breakpoint applies to <em>all</em> tasks of your
 program.
 
      <p>You can use the <code>task</code> qualifier on conditional breakpoints as
-well; in this case, place &lsquo;<samp><span class="samp">task </span><var>taskno</var></samp>&rsquo; before the
+well; in this case, place `<samp><span class="samp">task </span><var>taskno</var></samp>' before the
 breakpoint condition (before the <code>if</code>).
 
      <p>For example,
@@ -197,7 +197,7 @@ breakpoint condition (before the <code>if</code>).
           *  2 140045060   1   15 Runnable              t2
              3 140044840   1   15 Runnable              t1
              4 140056040   1   15 Delay Sleep           t3
-</pre>
+     </pre>
      </dl>
 
    </body></html>

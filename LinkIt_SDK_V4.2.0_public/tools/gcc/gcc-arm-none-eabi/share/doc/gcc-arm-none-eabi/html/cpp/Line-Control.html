@@ -3,7 +3,7 @@
 <title>Line Control - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Diagnostics.html#Diagnostics" title="Diagnostics">
 <link rel="next" href="Pragmas.html#Pragmas" title="Pragmas">
@@ -71,10 +71,10 @@ from a standard parser file.  The rest are copied verbatim from
 symbolic debuggers to be able to refer to <code>bison</code>'s input file.
 
    <p><a name="index-g_t_0023line-99"></a><samp><span class="command">bison</span></samp> or any such program can arrange this by writing
-&lsquo;<samp><span class="samp">#line</span></samp>&rsquo; directives into the output file.  &lsquo;<samp><span class="samp">#line</span></samp>&rsquo; is a
+`<samp><span class="samp">#line</span></samp>' directives into the output file.  `<samp><span class="samp">#line</span></samp>' is a
 directive that specifies the original line number and source file name
 for subsequent input in the current preprocessor input file. 
-&lsquo;<samp><span class="samp">#line</span></samp>&rsquo; has three variants:
+`<samp><span class="samp">#line</span></samp>' has three variants:
 
      <dl>
 <dt><code>#line </code><var>linenum</var><dd><var>linenum</var> is a non-negative decimal integer constant.  It specifies
@@ -87,9 +87,9 @@ following line and all subsequent lines are reported to come from the
 file it specifies, until something else happens to change that. 
 <var>filename</var> is interpreted according to the normal rules for a string
 constant: backslash escapes are interpreted.  This is different from
-&lsquo;<samp><span class="samp">#include</span></samp>&rsquo;.
+`<samp><span class="samp">#include</span></samp>'.
 
-     <p>Previous versions of CPP did not interpret escapes in &lsquo;<samp><span class="samp">#line</span></samp>&rsquo;;
+     <p>Previous versions of CPP did not interpret escapes in `<samp><span class="samp">#line</span></samp>';
 we have changed it because the standard requires they be interpreted,
 and most other compilers do.
 
@@ -97,8 +97,8 @@ and most other compilers do.
 The result should match one of the above two forms. 
 </dl>
 
-   <p>&lsquo;<samp><span class="samp">#line</span></samp>&rsquo; directives alter the results of the <code>__FILE__</code> and
-<code>__LINE__</code> predefined macros from that point on.  See <a href="Standard-Predefined-Macros.html#Standard-Predefined-Macros">Standard Predefined Macros</a>.  They do not have any effect on &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;'s
+   <p>`<samp><span class="samp">#line</span></samp>' directives alter the results of the <code>__FILE__</code> and
+<code>__LINE__</code> predefined macros from that point on.  See <a href="Standard-Predefined-Macros.html#Standard-Predefined-Macros">Standard Predefined Macros</a>.  They do not have any effect on `<samp><span class="samp">#include</span></samp>''s
 idea of the directory containing the current file.  This is a change
 from GCC 2.95.  Previously, a file reading
 
@@ -107,14 +107,14 @@ from GCC 2.95.  Previously, a file reading
 </pre>
    <p>would search for <samp><span class="file">gram.h</span></samp> in <samp><span class="file">../src</span></samp>, then the <samp><span class="option">-I</span></samp>
 chain; the directory containing the physical source file would not be
-searched.  In GCC 3.0 and later, the &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; is not affected by
-the presence of a &lsquo;<samp><span class="samp">#line</span></samp>&rsquo; referring to a different directory.
+searched.  In GCC 3.0 and later, the `<samp><span class="samp">#include</span></samp>' is not affected by
+the presence of a `<samp><span class="samp">#line</span></samp>' referring to a different directory.
 
    <p>We made this change because the old behavior caused problems when
 generated source files were transported between machines.  For instance,
 it is common practice to ship generated parsers with a source release,
 so that people building the distribution do not need to have yacc or
-Bison installed.  These files frequently have &lsquo;<samp><span class="samp">#line</span></samp>&rsquo; directives
+Bison installed.  These files frequently have `<samp><span class="samp">#line</span></samp>' directives
 referring to the directory tree of the system where the distribution was
 created.  If GCC tries to search for headers in those directories, the
 build is likely to fail.

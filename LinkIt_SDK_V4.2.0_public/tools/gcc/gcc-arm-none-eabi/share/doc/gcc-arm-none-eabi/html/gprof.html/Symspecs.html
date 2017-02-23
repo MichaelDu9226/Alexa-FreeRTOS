@@ -3,7 +3,7 @@
 <title>Symspecs - GNU gprof</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU gprof">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking.html#Invoking" title="Invoking">
 <link rel="prev" href="Deprecated-Options.html#Deprecated-Options" title="Deprecated Options">
@@ -58,15 +58,15 @@ following syntax:
    <p>Here are some sample symspecs:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">main.c</span></samp>&rsquo;<dd>Selects everything in file <samp><span class="file">main.c</span></samp>&mdash;the
+<dt>`<samp><span class="samp">main.c</span></samp>'<dd>Selects everything in file <samp><span class="file">main.c</span></samp>&mdash;the
 dot in the string tells <code>gprof</code> to interpret
 the string as a filename, rather than as
 a function name.  To select a file whose
 name does not contain a dot, a trailing colon
-should be specified.  For example, &lsquo;<samp><span class="samp">odd:</span></samp>&rsquo; is
+should be specified.  For example, `<samp><span class="samp">odd:</span></samp>' is
 interpreted as the file named <samp><span class="file">odd</span></samp>.
 
-     <br><dt>&lsquo;<samp><span class="samp">main</span></samp>&rsquo;<dd>Selects all functions named &lsquo;<samp><span class="samp">main</span></samp>&rsquo;.
+     <br><dt>`<samp><span class="samp">main</span></samp>'<dd>Selects all functions named `<samp><span class="samp">main</span></samp>'.
 
      <p>Note that there may be multiple instances of the same function name
 because some of the definitions may be local (i.e., static).  Unless a
@@ -74,20 +74,20 @@ function name is unique in a program, you must use the colon notation
 explained below to specify a function from a specific source file.
 
      <p>Sometimes, function names contain dots.  In such cases, it is necessary
-to add a leading colon to the name.  For example, &lsquo;<samp><span class="samp">:.mul</span></samp>&rsquo; selects
-function &lsquo;<samp><span class="samp">.mul</span></samp>&rsquo;.
+to add a leading colon to the name.  For example, `<samp><span class="samp">:.mul</span></samp>' selects
+function `<samp><span class="samp">.mul</span></samp>'.
 
      <p>In some object file formats, symbols have a leading underscore. 
 <code>gprof</code> will normally not print these underscores.  When you name a
 symbol in a symspec, you should type it exactly as <code>gprof</code> prints
 it in its output.  For example, if the compiler produces a symbol
-&lsquo;<samp><span class="samp">_main</span></samp>&rsquo; from your <code>main</code> function, <code>gprof</code> still prints
-it as &lsquo;<samp><span class="samp">main</span></samp>&rsquo; in its output, so you should use &lsquo;<samp><span class="samp">main</span></samp>&rsquo; in
+`<samp><span class="samp">_main</span></samp>' from your <code>main</code> function, <code>gprof</code> still prints
+it as `<samp><span class="samp">main</span></samp>' in its output, so you should use `<samp><span class="samp">main</span></samp>' in
 symspecs.
 
-     <br><dt>&lsquo;<samp><span class="samp">main.c:main</span></samp>&rsquo;<dd>Selects function &lsquo;<samp><span class="samp">main</span></samp>&rsquo; in file <samp><span class="file">main.c</span></samp>.
+     <br><dt>`<samp><span class="samp">main.c:main</span></samp>'<dd>Selects function `<samp><span class="samp">main</span></samp>' in file <samp><span class="file">main.c</span></samp>.
 
-     <br><dt>&lsquo;<samp><span class="samp">main.c:134</span></samp>&rsquo;<dd>Selects line 134 in file <samp><span class="file">main.c</span></samp>. 
+     <br><dt>`<samp><span class="samp">main.c:134</span></samp>'<dd>Selects line 134 in file <samp><span class="file">main.c</span></samp>. 
 </dl>
 
    </body></html>

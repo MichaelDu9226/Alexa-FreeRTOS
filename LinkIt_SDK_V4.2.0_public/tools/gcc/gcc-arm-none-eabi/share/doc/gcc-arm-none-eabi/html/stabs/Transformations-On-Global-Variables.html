@@ -3,7 +3,7 @@
 <title>Transformations On Global Variables - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Transformations-On-Symbol-Tables.html#Transformations-On-Symbol-Tables" title="Transformations On Symbol Tables">
 <link rel="prev" href="Transformations-On-Static-Variables.html#Transformations-On-Static-Variables" title="Transformations On Static Variables">
@@ -57,7 +57,7 @@ linker symbol table entry describing the variable.  The source line:
 </pre>
    <p>The variable is represented by two symbol table entries in the object
 file (see below).  The first one originated as a stab.  The second one
-is an external symbol.  The upper case &lsquo;<samp><span class="samp">D</span></samp>&rsquo; signifies that the
+is an external symbol.  The upper case `<samp><span class="samp">D</span></samp>' signifies that the
 <code>n_type</code> field of the symbol table contains 7, <code>N_DATA</code> with
 local linkage.  The stab's value is zero since the value is not used for
 <code>N_GSYM</code> stabs.  The value of the linker symbol is the relocatable

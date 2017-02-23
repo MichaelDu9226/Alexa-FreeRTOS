@@ -3,7 +3,7 @@
 <title>Example - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Desc.html#Machine-Desc" title="Machine Desc">
 <link rel="prev" href="Patterns.html#Patterns" title="Patterns">
@@ -83,7 +83,7 @@ Here is an actual example of an instruction pattern, for the 68000/68020.
  <p>This is an instruction that sets the condition codes based on the value of
 a general operand.  It has no condition, so any insn whose RTL description
 has the form shown may be handled according to this pattern.  The name
-&lsquo;<samp><span class="samp">tstsi</span></samp>&rsquo; means &ldquo;test a <code>SImode</code> value&rdquo; and tells the RTL generation
+`<samp><span class="samp">tstsi</span></samp>' means &ldquo;test a <code>SImode</code> value&rdquo; and tells the RTL generation
 pass that, when it is necessary to test such a value, an insn to do so
 can be constructed using this pattern.
 
@@ -91,7 +91,7 @@ can be constructed using this pattern.
 output template to return based on the kind of operand and the specific
 type of CPU for which code is being generated.
 
- <p>&lsquo;<samp><span class="samp">"rm"</span></samp>&rsquo; is an operand constraint.  Its meaning is explained below.
+ <p>`<samp><span class="samp">"rm"</span></samp>' is an operand constraint.  Its meaning is explained below.
 
  </body></html>
 

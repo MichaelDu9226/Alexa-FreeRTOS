@@ -3,7 +3,7 @@
 <title>File-I/O Overview - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="File_002dI_002fO-Remote-Protocol-Extension.html#File_002dI_002fO-Remote-Protocol-Extension" title="File-I/O Remote Protocol Extension">
 <link rel="next" href="Protocol-Basics.html#Protocol-Basics" title="Protocol Basics">
@@ -61,15 +61,15 @@ translating the system-dependent value representations into the internal
 protocol representations when data is transmitted.
 
    <p>The communication is synchronous.  A system call is possible only when
-<span class="sc">gdb</span> is waiting for a response from the &lsquo;<samp><span class="samp">C</span></samp>&rsquo;, &lsquo;<samp><span class="samp">c</span></samp>&rsquo;, &lsquo;<samp><span class="samp">S</span></samp>&rsquo;
-or &lsquo;<samp><span class="samp">s</span></samp>&rsquo; packets.  While <span class="sc">gdb</span> handles the request for a system call,
+<span class="sc">gdb</span> is waiting for a response from the `<samp><span class="samp">C</span></samp>', `<samp><span class="samp">c</span></samp>', `<samp><span class="samp">S</span></samp>'
+or `<samp><span class="samp">s</span></samp>' packets.  While <span class="sc">gdb</span> handles the request for a system call,
 the target is stopped to allow deterministic access to the target's
 memory.  Therefore File-I/O is not interruptible by target signals.  On
 the other hand, it is possible to interrupt File-I/O by a user interrupt
-(&lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;) within <span class="sc">gdb</span>.
+(`<samp><span class="samp">Ctrl-C</span></samp>') within <span class="sc">gdb</span>.
 
    <p>The target's request to perform a host system call does not finish
-the latest &lsquo;<samp><span class="samp">C</span></samp>&rsquo;, &lsquo;<samp><span class="samp">c</span></samp>&rsquo;, &lsquo;<samp><span class="samp">S</span></samp>&rsquo; or &lsquo;<samp><span class="samp">s</span></samp>&rsquo; action.  That means,
+the latest `<samp><span class="samp">C</span></samp>', `<samp><span class="samp">c</span></samp>', `<samp><span class="samp">S</span></samp>' or `<samp><span class="samp">s</span></samp>' action.  That means,
 after finishing the system call, the target returns to continuing the
 previous activity (continue, step).  No additional continue or step
 request from <span class="sc">gdb</span> is required.

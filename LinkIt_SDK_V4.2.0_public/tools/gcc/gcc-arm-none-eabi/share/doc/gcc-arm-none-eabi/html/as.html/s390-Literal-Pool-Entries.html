@@ -3,7 +3,7 @@
 <title>s390 Literal Pool Entries - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="s390-Syntax.html#s390-Syntax" title="s390 Syntax">
 <link rel="prev" href="s390-Instruction-Marker.html#s390-Instruction-Marker" title="s390 Instruction Marker">
@@ -60,22 +60,22 @@ operand is replaced with the offset to the literal in the literal pool.
 <dt><code>:lit1</code><dd>The literal pool entry is created as an 8-bit value. An operand modifier
 must not be used for the original expression. 
 <br><dt><code>:lit2</code><dd>The literal pool entry is created as a 16 bit value. The operand modifier
-@got may be used in the original expression. The term &lsquo;<samp><span class="samp">x@got:lit2</span></samp>&rsquo;
+@got may be used in the original expression. The term `<samp><span class="samp">x@got:lit2</span></samp>'
 will put the got offset for the global symbol x to the literal pool as
 16 bit value. 
 <br><dt><code>:lit4</code><dd>The literal pool entry is created as a 32-bit value. The operand modifier
 @got and @plt may be used in the original expression. The term
-&lsquo;<samp><span class="samp">x@got:lit4</span></samp>&rsquo; will put the got offset for the global symbol x to the
-literal pool as a 32-bit value. The term &lsquo;<samp><span class="samp">x@plt:lit4</span></samp>&rsquo; will put the
+`<samp><span class="samp">x@got:lit4</span></samp>' will put the got offset for the global symbol x to the
+literal pool as a 32-bit value. The term `<samp><span class="samp">x@plt:lit4</span></samp>' will put the
 plt offset for the global symbol x to the literal pool as a 32-bit value. 
 <br><dt><code>:lit8</code><dd>The literal pool entry is created as a 64-bit value. The operand modifier
 @got and @plt may be used in the original expression. The term
-&lsquo;<samp><span class="samp">x@got:lit8</span></samp>&rsquo; will put the got offset for the global symbol x to the
-literal pool as a 64-bit value. The term &lsquo;<samp><span class="samp">x@plt:lit8</span></samp>&rsquo; will put the
+`<samp><span class="samp">x@got:lit8</span></samp>' will put the got offset for the global symbol x to the
+literal pool as a 64-bit value. The term `<samp><span class="samp">x@plt:lit8</span></samp>' will put the
 plt offset for the global symbol x to the literal pool as a 64-bit value. 
 </dl>
 
-   <p>The assembler directive &lsquo;<samp><span class="samp">.ltorg</span></samp>&rsquo; is used to emit all literal pool
+   <p>The assembler directive `<samp><span class="samp">.ltorg</span></samp>' is used to emit all literal pool
 entries to the current position.
 
    </body></html>

@@ -3,7 +3,7 @@
 <title>Annotations Overview - GDB's Obsolete Annotations</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB's Obsolete Annotations">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="index.html#Top" title="Top">
 <link rel="next" href="Limitations.html#Limitations" title="Limitations">
@@ -47,7 +47,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 To produce obsolete level two annotations, start <span class="sc">gdb</span> with the
 <code>--annotate=2</code> option.
 
-   <p>Annotations start with a newline character, two &lsquo;<samp><span class="samp">control-z</span></samp>&rsquo;
+   <p>Annotations start with a newline character, two `<samp><span class="samp">control-z</span></samp>'
 characters, and the name of the annotation.  If there is no additional
 information associated with this annotation, the name of the annotation
 is followed immediately by a newline.  If there is additional
@@ -55,11 +55,11 @@ information, the name of the annotation is followed by a space, the
 additional information, and a newline.  The additional information
 cannot contain newline characters.
 
-   <p>Any output not beginning with a newline and two &lsquo;<samp><span class="samp">control-z</span></samp>&rsquo;
+   <p>Any output not beginning with a newline and two `<samp><span class="samp">control-z</span></samp>'
 characters denotes literal output from <span class="sc">gdb</span>.  Currently there is
 no need for <span class="sc">gdb</span> to output a newline followed by two
-&lsquo;<samp><span class="samp">control-z</span></samp>&rsquo; characters, but if there was such a need, the
-annotations could be extended with an &lsquo;<samp><span class="samp">escape</span></samp>&rsquo; annotation which
+`<samp><span class="samp">control-z</span></samp>' characters, but if there was such a need, the
+annotations could be extended with an `<samp><span class="samp">escape</span></samp>' annotation which
 means those three characters as output.
 
    <p>A simple example of starting up <span class="sc">gdb</span> with annotations is:
@@ -83,9 +83,9 @@ means those three characters as output.
      ^Z^Zpost-prompt
      $
 </pre>
-   <p>Here &lsquo;<samp><span class="samp">quit</span></samp>&rsquo; is input to <span class="sc">gdb</span>; the rest is output from
-<span class="sc">gdb</span>.  The three lines beginning &lsquo;<samp><span class="samp">^Z^Z</span></samp>&rsquo; (where &lsquo;<samp><span class="samp">^Z</span></samp>&rsquo;
-denotes a &lsquo;<samp><span class="samp">control-z</span></samp>&rsquo; character) are annotations; the rest is
+   <p>Here `<samp><span class="samp">quit</span></samp>' is input to <span class="sc">gdb</span>; the rest is output from
+<span class="sc">gdb</span>.  The three lines beginning `<samp><span class="samp">^Z^Z</span></samp>' (where `<samp><span class="samp">^Z</span></samp>'
+denotes a `<samp><span class="samp">control-z</span></samp>' character) are annotations; the rest is
 output from <span class="sc">gdb</span>.
 
    </body></html>

@@ -3,7 +3,7 @@
 <title>Storage References - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Expression-trees.html#Expression-trees" title="Expression trees">
 <link rel="prev" href="Constant-expressions.html#Constant-expressions" title="Constant expressions">
@@ -83,7 +83,7 @@ does not appear in the address.  Address of the <code>TARGET_MEM_REF</code>
 is determined in the following way.
 
      <pre class="smallexample">          &amp;TMR_SYMBOL + TMR_BASE + TMR_INDEX * TMR_STEP + TMR_OFFSET
-</pre>
+     </pre>
      <p>The sixth argument is the reference to the original memory access, which
 is preserved for the purposes of the RTL alias analysis.  The seventh
 argument is a tag representing the results of tree level alias analysis.

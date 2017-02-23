@@ -3,7 +3,7 @@
 <title>Omissions from Ada - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Ada.html#Ada" title="Ada">
 <link rel="prev" href="Ada-Mode-Intro.html#Ada-Mode-Intro" title="Ada Mode Intro">
@@ -77,7 +77,7 @@ operand of the membership (<code>in</code>) operator.
 concatenation is not implemented.  Thus, escape characters in strings are
 not currently available.
 
-     <li>Equality tests (&lsquo;<samp><span class="samp">=</span></samp>&rsquo; and &lsquo;<samp><span class="samp">/=</span></samp>&rsquo;) on arrays test for bitwise
+     <li>Equality tests (`<samp><span class="samp">=</span></samp>' and `<samp><span class="samp">/=</span></samp>') on arrays test for bitwise
 equality of representations.  They will generally work correctly
 for strings and arrays whose elements have integer or enumeration types. 
 They may not work correctly for arrays whose element
@@ -99,7 +99,7 @@ permitted only on the right sides of assignments, as in these examples:
           (gdb) set A_2D_Array := ((1, 2, 3), (4, 5, 6), (7, 8, 9))
           (gdb) set A_Record := (1, "Peter", True);
           (gdb) set A_Record := (Name =&gt; "Peter", Id =&gt; 1, Alive =&gt; True)
-</pre>
+     </pre>
      <p>Changing a
 discriminant's value by assigning an aggregate has an
 undefined effect if that discriminant is used within the record. 
@@ -112,13 +112,13 @@ declared to have a type such as:
               Id : Integer;
               Vals : IntArray (1 .. Len);
           end record;
-</pre>
+     </pre>
      <p>you can assign a value with a different size of <code>Vals</code> with two
 assignments:
 
      <pre class="smallexample">          (gdb) set A_Rec.Len := 4
           (gdb) set A_Rec := (Id =&gt; 42, Vals =&gt; (1, 2, 3, 4))
-</pre>
+     </pre>
      <p>As this example also illustrates, <span class="sc">gdb</span> is very loose about the usual
 rules concerning aggregates.  You may leave out some of the
 components of an array or record aggregate (such as the <code>Len</code>

@@ -3,7 +3,7 @@
 <title>s390 Mnemonics - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="s390-Syntax.html#s390-Syntax" title="s390 Syntax">
 <link rel="prev" href="s390-Register.html#s390-Register" title="s390 Register">
@@ -54,32 +54,32 @@ All instructions documented in the Principles of Operation are supported
 with the mnemonic and order of operands as described. 
 The instruction mnemonic identifies the instruction format
 (<a href="s390-Formats.html#s390-Formats">s390 Formats</a>) and the specific operation code for the instruction. 
-For example, the &lsquo;<samp><span class="samp">lr</span></samp>&rsquo; mnemonic denotes the instruction format &lsquo;<samp><span class="samp">RR</span></samp>&rsquo;
-with the operation code &lsquo;<samp><span class="samp">0x18</span></samp>&rsquo;.
+For example, the `<samp><span class="samp">lr</span></samp>' mnemonic denotes the instruction format `<samp><span class="samp">RR</span></samp>'
+with the operation code `<samp><span class="samp">0x18</span></samp>'.
 
    <p>The definition of the various mnemonics follows a scheme, where the first
 character usually hint at the type of the instruction:
 
 <pre class="display">
-     <p><table summary=""><tr align="left"><td valign="top">a </td><td valign="top">add instruction, for example &lsquo;<samp><span class="samp">al</span></samp>&rsquo; for add logical 32-bit
-     <br></td></tr><tr align="left"><td valign="top">b </td><td valign="top">branch instruction, for example &lsquo;<samp><span class="samp">bc</span></samp>&rsquo; for branch on condition
-     <br></td></tr><tr align="left"><td valign="top">c </td><td valign="top">compare or convert instruction, for example &lsquo;<samp><span class="samp">cr</span></samp>&rsquo; for compare
+     <p><table summary=""><tr align="left"><td valign="top">a </td><td valign="top">add instruction, for example `<samp><span class="samp">al</span></samp>' for add logical 32-bit
+     <br></td></tr><tr align="left"><td valign="top">b </td><td valign="top">branch instruction, for example `<samp><span class="samp">bc</span></samp>' for branch on condition
+     <br></td></tr><tr align="left"><td valign="top">c </td><td valign="top">compare or convert instruction, for example `<samp><span class="samp">cr</span></samp>' for compare
      register 32-bit
-     <br></td></tr><tr align="left"><td valign="top">d </td><td valign="top">divide instruction, for example &lsquo;<samp><span class="samp">dlr</span></samp>&rsquo; devide logical register
+     <br></td></tr><tr align="left"><td valign="top">d </td><td valign="top">divide instruction, for example `<samp><span class="samp">dlr</span></samp>' devide logical register
      64-bit to 32-bit
-     <br></td></tr><tr align="left"><td valign="top">i </td><td valign="top">insert instruction, for example &lsquo;<samp><span class="samp">ic</span></samp>&rsquo; insert character
-     <br></td></tr><tr align="left"><td valign="top">l </td><td valign="top">load instruction, for example &lsquo;<samp><span class="samp">ltr</span></samp>&rsquo; load and test register
-     <br></td></tr><tr align="left"><td valign="top">mv </td><td valign="top">move instruction, for example &lsquo;<samp><span class="samp">mvc</span></samp>&rsquo; move character
-     <br></td></tr><tr align="left"><td valign="top">m </td><td valign="top">multiply instruction, for example &lsquo;<samp><span class="samp">mh</span></samp>&rsquo; multiply halfword
-     <br></td></tr><tr align="left"><td valign="top">n </td><td valign="top">and instruction, for example &lsquo;<samp><span class="samp">ni</span></samp>&rsquo; and immediate
-     <br></td></tr><tr align="left"><td valign="top">o </td><td valign="top">or instruction, for example &lsquo;<samp><span class="samp">oc</span></samp>&rsquo; or character
+     <br></td></tr><tr align="left"><td valign="top">i </td><td valign="top">insert instruction, for example `<samp><span class="samp">ic</span></samp>' insert character
+     <br></td></tr><tr align="left"><td valign="top">l </td><td valign="top">load instruction, for example `<samp><span class="samp">ltr</span></samp>' load and test register
+     <br></td></tr><tr align="left"><td valign="top">mv </td><td valign="top">move instruction, for example `<samp><span class="samp">mvc</span></samp>' move character
+     <br></td></tr><tr align="left"><td valign="top">m </td><td valign="top">multiply instruction, for example `<samp><span class="samp">mh</span></samp>' multiply halfword
+     <br></td></tr><tr align="left"><td valign="top">n </td><td valign="top">and instruction, for example `<samp><span class="samp">ni</span></samp>' and immediate
+     <br></td></tr><tr align="left"><td valign="top">o </td><td valign="top">or instruction, for example `<samp><span class="samp">oc</span></samp>' or character
      <br></td></tr><tr align="left"><td valign="top">sla, sll </td><td valign="top">shift left single instruction
      <br></td></tr><tr align="left"><td valign="top">sra, srl </td><td valign="top">shift right single instruction
-     <br></td></tr><tr align="left"><td valign="top">st </td><td valign="top">store instruction, for example &lsquo;<samp><span class="samp">stm</span></samp>&rsquo; store multiple
-     <br></td></tr><tr align="left"><td valign="top">s </td><td valign="top">subtract instruction, for example &lsquo;<samp><span class="samp">slr</span></samp>&rsquo; subtract
+     <br></td></tr><tr align="left"><td valign="top">st </td><td valign="top">store instruction, for example `<samp><span class="samp">stm</span></samp>' store multiple
+     <br></td></tr><tr align="left"><td valign="top">s </td><td valign="top">subtract instruction, for example `<samp><span class="samp">slr</span></samp>' subtract
      logical 32-bit
-     <br></td></tr><tr align="left"><td valign="top">t </td><td valign="top">test or translate instruction, of example &lsquo;<samp><span class="samp">tm</span></samp>&rsquo; test under mask
-     <br></td></tr><tr align="left"><td valign="top">x </td><td valign="top">exclusive or instruction, for example &lsquo;<samp><span class="samp">xc</span></samp>&rsquo; exclusive or
+     <br></td></tr><tr align="left"><td valign="top">t </td><td valign="top">test or translate instruction, of example `<samp><span class="samp">tm</span></samp>' test under mask
+     <br></td></tr><tr align="left"><td valign="top">x </td><td valign="top">exclusive or instruction, for example `<samp><span class="samp">xc</span></samp>' exclusive or
      character
      <br></td></tr></table>
 </pre>
@@ -100,7 +100,7 @@ of the instruction:
 </pre>
    <p>There are many exceptions to the scheme outlined in the above lists, in
 particular for the priviledged instructions. For non-priviledged
-instruction it works quite well, for example the instruction &lsquo;<samp><span class="samp">clgfr</span></samp>&rsquo;
+instruction it works quite well, for example the instruction `<samp><span class="samp">clgfr</span></samp>'
 c: compare instruction, l: unsigned operands, g: 64-bit operands,
 f: 32- to 64-bit extension, r: register operands. The instruction compares
 an 64-bit value in a register with the zero extended 32-bit value from

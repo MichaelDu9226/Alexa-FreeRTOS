@@ -3,7 +3,7 @@
 <title>CRIS Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="C6X-Options.html#C6X-Options" title="C6X Options">
@@ -59,10 +59,10 @@ These options are defined specifically for the CRIS ports.
 
      <dl>
 <dt><code>-march=</code><var>architecture-type</var><dt><code>-mcpu=</code><var>architecture-type</var><dd><a name="index-march-1207"></a><a name="index-mcpu-1208"></a>Generate code for the specified architecture.  The choices for
-<var>architecture-type</var> are &lsquo;<samp><span class="samp">v3</span></samp>&rsquo;, &lsquo;<samp><span class="samp">v8</span></samp>&rsquo; and &lsquo;<samp><span class="samp">v10</span></samp>&rsquo; for
+<var>architecture-type</var> are `<samp><span class="samp">v3</span></samp>', `<samp><span class="samp">v8</span></samp>' and `<samp><span class="samp">v10</span></samp>' for
 respectively ETRAX&nbsp;<!-- /@w -->4, ETRAX&nbsp;<!-- /@w -->100, and ETRAX&nbsp;<!-- /@w -->100&nbsp;<!-- /@w -->LX. 
-Default is &lsquo;<samp><span class="samp">v0</span></samp>&rsquo; except for cris-axis-linux-gnu, where the default is
-&lsquo;<samp><span class="samp">v10</span></samp>&rsquo;.
+Default is `<samp><span class="samp">v0</span></samp>' except for cris-axis-linux-gnu, where the default is
+`<samp><span class="samp">v10</span></samp>'.
 
      <br><dt><code>-mtune=</code><var>architecture-type</var><dd><a name="index-mtune-1209"></a>Tune to <var>architecture-type</var> everything applicable about the generated
 code, except for the ABI and the set of available instructions.  The
@@ -78,7 +78,7 @@ choices for <var>architecture-type</var> are the same as for
 models where it applies.  This option is active by default.
 
      <br><dt><code>-mpdebug</code><dd><a name="index-mpdebug-1215"></a>Enable CRIS-specific verbose debug-related information in the assembly
-code.  This option also has the effect of turning off the &lsquo;<samp><span class="samp">#NO_APP</span></samp>&rsquo;
+code.  This option also has the effect of turning off the `<samp><span class="samp">#NO_APP</span></samp>'
 formatted-code indicator to the assembler at the beginning of the
 assembly file.
 
@@ -88,7 +88,7 @@ compare and test instructions before use of condition codes.
      <br><dt><code>-mno-side-effects</code><dd><a name="index-mno_002dside_002deffects-1217"></a>Do not emit instructions with side effects in addressing modes other than
 post-increment.
 
-     <br><dt><code>-mstack-align</code><dt><code>-mno-stack-align</code><dt><code>-mdata-align</code><dt><code>-mno-data-align</code><dt><code>-mconst-align</code><dt><code>-mno-const-align</code><dd><a name="index-mstack_002dalign-1218"></a><a name="index-mno_002dstack_002dalign-1219"></a><a name="index-mdata_002dalign-1220"></a><a name="index-mno_002ddata_002dalign-1221"></a><a name="index-mconst_002dalign-1222"></a><a name="index-mno_002dconst_002dalign-1223"></a>These options (&lsquo;<samp><span class="samp">no-</span></samp>&rsquo; options) arrange (eliminate arrangements) for the
+     <br><dt><code>-mstack-align</code><dt><code>-mno-stack-align</code><dt><code>-mdata-align</code><dt><code>-mno-data-align</code><dt><code>-mconst-align</code><dt><code>-mno-const-align</code><dd><a name="index-mstack_002dalign-1218"></a><a name="index-mno_002dstack_002dalign-1219"></a><a name="index-mdata_002dalign-1220"></a><a name="index-mno_002ddata_002dalign-1221"></a><a name="index-mconst_002dalign-1222"></a><a name="index-mno_002dconst_002dalign-1223"></a>These options (`<samp><span class="samp">no-</span></samp>' options) arrange (eliminate arrangements) for the
 stack frame, individual data and constants to be aligned for the maximum
 single data access size for the chosen CPU model.  The default is to
 arrange for 32-bit alignment.  ABI details such as structure layout are

@@ -3,7 +3,7 @@
 <title>ARM-Neon-Alignment - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="ARM-Syntax.html#ARM-Syntax" title="ARM Syntax">
 <link rel="prev" href="ARM_002dRelocations.html#ARM_002dRelocations" title="ARM-Relocations">
@@ -51,9 +51,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="ARM-Syntax.html#ARM-Syntax">ARM Syntax<
 <p><a name="index-alignment-for-NEON-instructions-645"></a>Some NEON load/store instructions allow an optional address
 alignment qualifier. 
 The ARM documentation specifies that this is indicated by
-&lsquo;<samp><span class="samp">@ </span><var>align</var></samp>&rsquo;. However GAS already interprets
-the &lsquo;<samp><span class="samp">@</span></samp>&rsquo; character as a "line comment" start,
-so &lsquo;<samp><span class="samp">: </span><var>align</var></samp>&rsquo; is used instead.  For example:
+`<samp><span class="samp">@ </span><var>align</var></samp>'. However GAS already interprets
+the `<samp><span class="samp">@</span></samp>' character as a "line comment" start,
+so `<samp><span class="samp">: </span><var>align</var></samp>' is used instead.  For example:
 
 <pre class="smallexample">             vld1.8 {q0}, [r0, :128]
 </pre>

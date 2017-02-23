@@ -3,7 +3,7 @@
 <title>D30V-Chars - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="D30V_002dSyntax.html#D30V_002dSyntax" title="D30V-Syntax">
 <link rel="prev" href="D30V_002dSubs.html#D30V_002dSubs" title="D30V-Subs">
@@ -50,25 +50,25 @@ Up:&nbsp;<a rel="up" accesskey="u" href="D30V_002dSyntax.html#D30V_002dSyntax">D
 
 <h5 class="subsubsection">9.10.2.3 Special Characters</h5>
 
-<p><a name="index-line-comment-character_002c-D30V-834"></a><a name="index-D30V-line-comment-character-835"></a>A semicolon (&lsquo;<samp><span class="samp">;</span></samp>&rsquo;) can be used anywhere on a line to start a
+<p><a name="index-line-comment-character_002c-D30V-834"></a><a name="index-D30V-line-comment-character-835"></a>A semicolon (`<samp><span class="samp">;</span></samp>') can be used anywhere on a line to start a
 comment that extends to the end of the line.
 
-   <p>If a &lsquo;<samp><span class="samp">#</span></samp>&rsquo; appears as the first character of a line, the whole line
+   <p>If a `<samp><span class="samp">#</span></samp>' appears as the first character of a line, the whole line
 is treated as a comment, but in this case the line could also be a
 logical line number directive (see <a href="Comments.html#Comments">Comments</a>) or a preprocessor
 control command (see <a href="Preprocessing.html#Preprocessing">Preprocessing</a>).
 
    <p><a name="index-sub_002dinstruction-ordering_002c-D30V-836"></a><a name="index-D30V-sub_002dinstruction-ordering-837"></a>Sub-instructions may be executed in order, in reverse-order, or in parallel. 
 Instructions listed in the standard one-per-line format will be executed
-sequentially unless you use the &lsquo;<samp><span class="samp">-O</span></samp>&rsquo; option.
+sequentially unless you use the `<samp><span class="samp">-O</span></samp>' option.
 
    <p>To specify the executing order, use the following symbols:
      <dl>
-<dt>&lsquo;<samp><span class="samp">-&gt;</span></samp>&rsquo;<dd>Sequential with instruction on the left first.
+<dt>`<samp><span class="samp">-&gt;</span></samp>'<dd>Sequential with instruction on the left first.
 
-     <br><dt>&lsquo;<samp><span class="samp">&lt;-</span></samp>&rsquo;<dd>Sequential with instruction on the right first.
+     <br><dt>`<samp><span class="samp">&lt;-</span></samp>'<dd>Sequential with instruction on the right first.
 
-     <br><dt>&lsquo;<samp><span class="samp">||</span></samp>&rsquo;<dd>Parallel
+     <br><dt>`<samp><span class="samp">||</span></samp>'<dd>Parallel
 </dl>
 
    <p>The D30V syntax allows either one instruction per line, one instruction per line with
@@ -84,25 +84,25 @@ container, and is executed first.
 
      <br><dt><code>ldw r2,@(r3,r4) ||</code><dt><code>mulx r6,r8,r9</code><dd>Two-line format. Execute these in parallel.
 
-     <br><dt><code>mulx a0,r8,r9</code><dt><code>stw r2,@(r3,r4)</code><dd>Two-line format. Execute these sequentially unless &lsquo;<samp><span class="samp">-O</span></samp>&rsquo; option is
-used.  If the &lsquo;<samp><span class="samp">-O</span></samp>&rsquo; option is used, the assembler will determine if
+     <br><dt><code>mulx a0,r8,r9</code><dt><code>stw r2,@(r3,r4)</code><dd>Two-line format. Execute these sequentially unless `<samp><span class="samp">-O</span></samp>' option is
+used.  If the `<samp><span class="samp">-O</span></samp>' option is used, the assembler will determine if
 the instructions could be done in parallel (the above two instructions
 can be done in parallel), and if so, emit them as parallel instructions. 
 The assembler will put them in the proper containers.  In the above
-example, the assembler will put the &lsquo;<samp><span class="samp">stw</span></samp>&rsquo; instruction in left
-container and the &lsquo;<samp><span class="samp">mulx</span></samp>&rsquo; instruction in the right container.
+example, the assembler will put the `<samp><span class="samp">stw</span></samp>' instruction in left
+container and the `<samp><span class="samp">mulx</span></samp>' instruction in the right container.
 
-     <br><dt><code>stw r2,@(r3,r4) -&gt;</code><dt><code>mulx a0,r8,r9</code><dd>Two-line format.  Execute the &lsquo;<samp><span class="samp">stw</span></samp>&rsquo; instruction followed by the
-&lsquo;<samp><span class="samp">mulx</span></samp>&rsquo; instruction sequentially.  The first instruction goes in the
+     <br><dt><code>stw r2,@(r3,r4) -&gt;</code><dt><code>mulx a0,r8,r9</code><dd>Two-line format.  Execute the `<samp><span class="samp">stw</span></samp>' instruction followed by the
+`<samp><span class="samp">mulx</span></samp>' instruction sequentially.  The first instruction goes in the
 left container and the second instruction goes into right container. 
 The assembler will give an error if the machine ordering constraints are
 violated.
 
-     <br><dt><code>stw r2,@(r3,r4) &lt;-</code><dt><code>mulx a0,r8,r9</code><dd>Same as previous example, except that the &lsquo;<samp><span class="samp">mulx</span></samp>&rsquo; instruction is
-executed before the &lsquo;<samp><span class="samp">stw</span></samp>&rsquo; instruction. 
+     <br><dt><code>stw r2,@(r3,r4) &lt;-</code><dt><code>mulx a0,r8,r9</code><dd>Same as previous example, except that the `<samp><span class="samp">mulx</span></samp>' instruction is
+executed before the `<samp><span class="samp">stw</span></samp>' instruction. 
 </dl>
 
-   <p><a name="index-symbol-names_002c-_0040samp_007b_0024_007d-in-838"></a><a name="index-g_t_0040code_007b_0024_007d-in-symbol-names-839"></a>Since &lsquo;<samp><span class="samp">$</span></samp>&rsquo; has no special meaning, you may use it in symbol names.
+   <p><a name="index-symbol-names_002c-_0040samp_007b_0024_007d-in-838"></a><a name="index-g_t_0040code_007b_0024_007d-in-symbol-names-839"></a>Since `<samp><span class="samp">$</span></samp>' has no special meaning, you may use it in symbol names.
 
    </body></html>
 

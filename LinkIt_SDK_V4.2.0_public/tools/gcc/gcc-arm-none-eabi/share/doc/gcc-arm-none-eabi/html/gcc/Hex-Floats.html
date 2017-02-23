@@ -3,7 +3,7 @@
 <title>Hex Floats - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Decimal-Float.html#Decimal-Float" title="Decimal Float">
@@ -60,17 +60,17 @@ decimal notation, such as <code>1.55e1</code>, but also numbers such as
 <code>0x1.fp3</code> written in hexadecimal format.  As a GNU extension, GCC
 supports this in C90 mode (except in some cases when strictly
 conforming) and in C++.  In that format the
-&lsquo;<samp><span class="samp">0x</span></samp>&rsquo; hex introducer and the &lsquo;<samp><span class="samp">p</span></samp>&rsquo; or &lsquo;<samp><span class="samp">P</span></samp>&rsquo; exponent field are
+`<samp><span class="samp">0x</span></samp>' hex introducer and the `<samp><span class="samp">p</span></samp>' or `<samp><span class="samp">P</span></samp>' exponent field are
 mandatory.  The exponent is a decimal number that indicates the power of
-2 by which the significant part is multiplied.  Thus &lsquo;<samp><span class="samp">0x1.f</span></samp>&rsquo; is
+2 by which the significant part is multiplied.  Thus `<samp><span class="samp">0x1.f</span></samp>' is
 1 15/16,
-&lsquo;<samp><span class="samp">p3</span></samp>&rsquo; multiplies it by 8, and the value of <code>0x1.fp3</code>
+`<samp><span class="samp">p3</span></samp>' multiplies it by 8, and the value of <code>0x1.fp3</code>
 is the same as <code>1.55e1</code>.
 
  <p>Unlike for floating-point numbers in the decimal notation the exponent
 is always required in the hexadecimal notation.  Otherwise the compiler
 would not be able to resolve the ambiguity of, e.g., <code>0x1.f</code>.  This
-could mean <code>1.0f</code> or <code>1.9375</code> since &lsquo;<samp><span class="samp">f</span></samp>&rsquo; is also the
+could mean <code>1.0f</code> or <code>1.9375</code> since `<samp><span class="samp">f</span></samp>' is also the
 extension for floating-point constants of type <code>float</code>.
 
  </body></html>

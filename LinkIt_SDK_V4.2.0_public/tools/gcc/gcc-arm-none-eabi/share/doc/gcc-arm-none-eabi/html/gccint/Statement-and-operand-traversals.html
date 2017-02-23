@@ -3,7 +3,7 @@
 <title>Statement and operand traversals - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GIMPLE.html#GIMPLE" title="GIMPLE">
 <link rel="prev" href="Adding-a-new-GIMPLE-statement-code.html#Adding-a-new-GIMPLE-statement-code" title="Adding a new GIMPLE statement code">
@@ -89,7 +89,7 @@ Additional parameters to <code>walk_tree</code> must be stored in <code>WI</code
 each operand <code>OP</code>, <code>walk_tree</code> is called as:
 
      <pre class="smallexample">          walk_tree (&amp;<code>OP</code>, <code>CALLBACK_OP</code>, <code>WI</code>, <code>PSET</code>)
-</pre>
+     </pre>
       <p>If <code>CALLBACK_OP</code> returns non-<code>NULL</code> for an operand, the remaining
 operands are not scanned.  The return value is that returned by
 the last call to <code>walk_tree</code>, or <code>NULL_TREE</code> if no <code>CALLBACK_OP</code> is
@@ -111,5 +111,5 @@ are walked and <code>NULL_TREE</code> returned.
 <!--  -->
 <!-- Tree SSA -->
 <!--  -->
- </body></html>
+</body></html>
 

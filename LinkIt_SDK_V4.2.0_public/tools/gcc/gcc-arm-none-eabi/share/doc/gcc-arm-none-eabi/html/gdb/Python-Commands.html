@@ -3,7 +3,7 @@
 <title>Python Commands - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Python.html#Python" title="Python">
 <link rel="next" href="Python-API.html#Python-API" title="Python API">
@@ -62,7 +62,7 @@ will be printed; otherwise, nothing will be printed.  For example:
 
      <pre class="smallexample">          (gdb) python-interactive 2 + 3
           5
-</pre>
+     </pre>
      <p><a name="index-python-1711"></a><a name="index-py-1712"></a><br><dt><code>python </code><span class="roman">[</span><var>command</var><span class="roman">]</span><dt><code>py </code><span class="roman">[</span><var>command</var><span class="roman">]</span><dd>The <code>python</code> command can be used to evaluate Python code.
 
      <p>If given an argument, the <code>python</code> command will evaluate the
@@ -70,7 +70,7 @@ argument as a Python command.  For example:
 
      <pre class="smallexample">          (gdb) python print 23
           23
-</pre>
+     </pre>
      <p>If you do not provide an argument to <code>python</code>, it will act as a
 multi-line command, like <code>define</code>.  In this case, the Python
 script is made up of subsequent command lines, given after the
@@ -83,7 +83,7 @@ containing <code>end</code>.  For example:
           &gt;print 23
           &gt;end
           23
-</pre>
+     </pre>
      <p><a name="index-set-python-print_002dstack-1713"></a><br><dt><code>set python print-stack</code><dd>By default, <span class="sc">gdb</span> will print only the message component of a
 Python exception when an error occurs in a Python script.  This can be
 controlled using <code>set python print-stack</code>: if <code>full</code>, then
@@ -96,7 +96,7 @@ the message component of the error is printed.
 interpreter:
 
      <dl>
-<dt><code>source </code><samp><span class="file">script-name</span></samp><dd>The script name must end with &lsquo;<samp><span class="samp">.py</span></samp>&rsquo; and <span class="sc">gdb</span> must be configured
+<dt><code>source <samp></code><span class="file">script-name</span><code></samp></code><dd>The script name must end with `<samp><span class="samp">.py</span></samp>' and <span class="sc">gdb</span> must be configured
 to recognize the script language based on filename extension using
 the <code>script-extension</code> setting.  See <a href="Extending-GDB.html#Extending-GDB">Extending GDB</a>.
 

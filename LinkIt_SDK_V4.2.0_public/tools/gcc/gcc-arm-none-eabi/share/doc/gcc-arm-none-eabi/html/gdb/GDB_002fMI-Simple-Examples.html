@@ -3,7 +3,7 @@
 <title>GDB/MI Simple Examples - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-Output-Records.html#GDB_002fMI-Output-Records" title="GDB/MI Output Records">
@@ -50,8 +50,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>
 
 <p><a name="index-g_t_0040sc_007bgdb_002fmi_007d_002c-simple-examples-2261"></a>
 This subsection presents several simple examples of interaction using
-the <span class="sc">gdb/mi</span> interface.  In these examples, &lsquo;<samp><span class="samp">-&gt;</span></samp>&rsquo; means that the
-following line is passed to <span class="sc">gdb/mi</span> as input, while &lsquo;<samp><span class="samp">&lt;-</span></samp>&rsquo; means
+the <span class="sc">gdb/mi</span> interface.  In these examples, `<samp><span class="samp">-&gt;</span></samp>' means that the
+following line is passed to <span class="sc">gdb/mi</span> as input, while `<samp><span class="samp">&lt;-</span></samp>' means
 the output received from <span class="sc">gdb/mi</span>.
 
    <p>Note the line breaks shown in the examples are here only for
@@ -90,13 +90,13 @@ reason that execution stopped.
 </pre>
    <h4 class="subheading">Quitting <span class="sc">gdb</span></h4>
 
-<p>Quitting <span class="sc">gdb</span> just prints the result class &lsquo;<samp><span class="samp">^exit</span></samp>&rsquo;.
+<p>Quitting <span class="sc">gdb</span> just prints the result class `<samp><span class="samp">^exit</span></samp>'.
 
 <pre class="smallexample">     -&gt; (gdb)
      &lt;- -gdb-exit
      &lt;- ^exit
 </pre>
-   <p>Please note that &lsquo;<samp><span class="samp">^exit</span></samp>&rsquo; is printed immediately, but it might
+   <p>Please note that `<samp><span class="samp">^exit</span></samp>' is printed immediately, but it might
 take some time for <span class="sc">gdb</span> to actually exit.  During that time, <span class="sc">gdb</span>
 performs necessary cleanups, including killing programs being debugged
 or disconnecting from debug hardware, so the frontend should wait till
@@ -112,5 +112,5 @@ fails to exit in reasonable time.
      &lt;- (gdb)
 </pre>
    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-   </body></html>
+</body></html>
 

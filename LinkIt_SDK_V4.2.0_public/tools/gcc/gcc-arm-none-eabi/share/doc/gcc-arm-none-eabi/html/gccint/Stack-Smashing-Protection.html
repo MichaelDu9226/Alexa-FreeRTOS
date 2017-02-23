@@ -3,7 +3,7 @@
 <title>Stack Smashing Protection - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stack-and-Calling.html#Stack-and-Calling" title="Stack and Calling">
 <link rel="prev" href="Tail-Calls.html#Tail-Calls" title="Tail Calls">
@@ -63,7 +63,7 @@ that is placed at the top of the local stack frame.  The type of this
 variable must be <code>ptr_type_node</code>.
 
       <p>The default version of this hook creates a variable called
-&lsquo;<samp><span class="samp">__stack_chk_guard</span></samp>&rsquo;, which is normally defined in <samp><span class="file">libgcc2.c</span></samp>. 
+`<samp><span class="samp">__stack_chk_guard</span></samp>', which is normally defined in <samp><span class="file">libgcc2.c</span></samp>. 
 </p></blockquote></div>
 
 <div class="defun">
@@ -73,7 +73,7 @@ stack protect guard variable has been modified.  This expression should
 involve a call to a <code>noreturn</code> function.
 
       <p>The default version of this hook invokes a function called
-&lsquo;<samp><span class="samp">__stack_chk_fail</span></samp>&rsquo;, taking no arguments.  This function is
+`<samp><span class="samp">__stack_chk_fail</span></samp>', taking no arguments.  This function is
 normally defined in <samp><span class="file">libgcc2.c</span></samp>. 
 </p></blockquote></div>
 

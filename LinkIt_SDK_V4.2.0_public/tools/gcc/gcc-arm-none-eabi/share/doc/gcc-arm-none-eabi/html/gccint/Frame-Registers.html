@@ -3,7 +3,7 @@
 <title>Frame Registers - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stack-and-Calling.html#Stack-and-Calling" title="Stack and Calling">
 <link rel="prev" href="Stack-Checking.html#Stack-Checking" title="Stack Checking">
@@ -111,8 +111,8 @@ pointer register, then you must mark it as a fixed register according to
 &mdash; Macro: <b>HARD_FRAME_POINTER_IS_FRAME_POINTER</b><var><a name="index-HARD_005fFRAME_005fPOINTER_005fIS_005fFRAME_005fPOINTER-4146"></a></var><br>
 <blockquote><p>Define this to a preprocessor constant that is nonzero if
 <code>hard_frame_pointer_rtx</code> and <code>frame_pointer_rtx</code> should be
-the same.  The default definition is &lsquo;<samp><span class="samp">(HARD_FRAME_POINTER_REGNUM
-== FRAME_POINTER_REGNUM)</span></samp>&rsquo;; you only need to define this macro if that
+the same.  The default definition is `<samp><span class="samp">(HARD_FRAME_POINTER_REGNUM
+== FRAME_POINTER_REGNUM)</span></samp>'; you only need to define this macro if that
 definition is not suitable for use in preprocessor conditionals. 
 </p></blockquote></div>
 
@@ -120,8 +120,8 @@ definition is not suitable for use in preprocessor conditionals.
 &mdash; Macro: <b>HARD_FRAME_POINTER_IS_ARG_POINTER</b><var><a name="index-HARD_005fFRAME_005fPOINTER_005fIS_005fARG_005fPOINTER-4147"></a></var><br>
 <blockquote><p>Define this to a preprocessor constant that is nonzero if
 <code>hard_frame_pointer_rtx</code> and <code>arg_pointer_rtx</code> should be the
-same.  The default definition is &lsquo;<samp><span class="samp">(HARD_FRAME_POINTER_REGNUM ==
-ARG_POINTER_REGNUM)</span></samp>&rsquo;; you only need to define this macro if that
+same.  The default definition is `<samp><span class="samp">(HARD_FRAME_POINTER_REGNUM ==
+ARG_POINTER_REGNUM)</span></samp>'; you only need to define this macro if that
 definition is not suitable for use in preprocessor conditionals. 
 </p></blockquote></div>
 
@@ -195,7 +195,7 @@ registers that are not call-saved.
 <div class="defun">
 &mdash; Macro: <b>PRE_GCC3_DWARF_FRAME_REGISTERS</b><var><a name="index-PRE_005fGCC3_005fDWARF_005fFRAME_005fREGISTERS-4156"></a></var><br>
 <blockquote>
-      <p>This macro is similar to <code>DWARF_FRAME_REGISTERS</code>, but is provided
+<p>This macro is similar to <code>DWARF_FRAME_REGISTERS</code>, but is provided
 for backward compatibility in pre GCC 3.0 compiled code.
 
       <p>If this macro is not defined, it defaults to
@@ -205,7 +205,7 @@ for backward compatibility in pre GCC 3.0 compiled code.
 <div class="defun">
 &mdash; Macro: <b>DWARF_REG_TO_UNWIND_COLUMN</b> (<var>regno</var>)<var><a name="index-DWARF_005fREG_005fTO_005fUNWIND_005fCOLUMN-4157"></a></var><br>
 <blockquote>
-      <p>Define this macro if the target's representation for dwarf registers
+<p>Define this macro if the target's representation for dwarf registers
 is different than the internal representation for unwind column. 
 Given a dwarf register, this macro should return the internal unwind
 column number to use instead.
@@ -216,7 +216,7 @@ column number to use instead.
 <div class="defun">
 &mdash; Macro: <b>DWARF_FRAME_REGNUM</b> (<var>regno</var>)<var><a name="index-DWARF_005fFRAME_005fREGNUM-4158"></a></var><br>
 <blockquote>
-      <p>Define this macro if the target's representation for dwarf registers
+<p>Define this macro if the target's representation for dwarf registers
 used in .eh_frame or .debug_frame is different from that used in other
 debug info sections.  Given a GCC hard register number, this macro
 should return the .eh_frame register number.  The default is
@@ -227,7 +227,7 @@ should return the .eh_frame register number.  The default is
 <div class="defun">
 &mdash; Macro: <b>DWARF2_FRAME_REG_OUT</b> (<var>regno, for_eh</var>)<var><a name="index-DWARF2_005fFRAME_005fREG_005fOUT-4159"></a></var><br>
 <blockquote>
-      <p>Define this macro to map register numbers held in the call frame info
+<p>Define this macro to map register numbers held in the call frame info
 that GCC has collected using <code>DWARF_FRAME_REGNUM</code> to those that
 should be output in .debug_frame (<var>for_eh</var> is zero) and
 .eh_frame (<var>for_eh</var> is nonzero).  The default is to
@@ -238,7 +238,7 @@ return <var>regno</var>.
 <div class="defun">
 &mdash; Macro: <b>REG_VALUE_IN_UNWIND_CONTEXT</b><var><a name="index-REG_005fVALUE_005fIN_005fUNWIND_005fCONTEXT-4160"></a></var><br>
 <blockquote>
-      <p>Define this macro if the target stores register values as
+<p>Define this macro if the target stores register values as
 <code>_Unwind_Word</code> type in unwind context.  It should be defined if
 target register size is larger than the size of <code>void *</code>.  The
 default is to store register values as <code>void *</code> type.
@@ -248,7 +248,7 @@ default is to store register values as <code>void *</code> type.
 <div class="defun">
 &mdash; Macro: <b>ASSUME_EXTENDED_UNWIND_CONTEXT</b><var><a name="index-ASSUME_005fEXTENDED_005fUNWIND_005fCONTEXT-4161"></a></var><br>
 <blockquote>
-      <p>Define this macro to be 1 if the target always uses extended unwind
+<p>Define this macro to be 1 if the target always uses extended unwind
 context with version, args_size and by_value fields.  If it is undefined,
 it will be defined to 1 when <code>REG_VALUE_IN_UNWIND_CONTEXT</code> is
 defined and 0 otherwise.

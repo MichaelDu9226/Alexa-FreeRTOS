@@ -3,7 +3,7 @@
 <title>Initial processing - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Overview.html#Overview" title="Overview">
 <link rel="prev" href="Character-sets.html#Character-sets" title="Character sets">
@@ -88,10 +88,10 @@ but if you request a strictly conforming mode with the <samp><span class="option
 option, or you specify the <samp><span class="option">-trigraphs</span></samp> option, then it
 converts them.
 
-     <p>These are nine three-character sequences, all starting with &lsquo;<samp><span class="samp">??</span></samp>&rsquo;,
+     <p>These are nine three-character sequences, all starting with `<samp><span class="samp">??</span></samp>',
 that are defined by ISO C to stand for single characters.  They permit
 obsolete systems that lack some of C's punctuation to use C.  For
-example, &lsquo;<samp><span class="samp">??/</span></samp>&rsquo; stands for &lsquo;<samp><span class="samp">\</span></samp>&rsquo;, so <tt>'??/n'</tt> is a character
+example, `<samp><span class="samp">??/</span></samp>' stands for `<samp><span class="samp">\</span></samp>', so <tt>'??/n'</tt> is a character
 constant for a newline.
 
      <p>Trigraphs are not popular and many compilers implement them
@@ -104,17 +104,17 @@ converted.  See <a href="Wtrigraphs.html#Wtrigraphs">Wtrigraphs</a>.
 from being confused with a trigraph by inserting a backslash between
 the question marks, or by separating the string literal at the
 trigraph and making use of string literal concatenation.  <tt>"(??\?)"</tt>
-is the string &lsquo;<samp><span class="samp">(???)</span></samp>&rsquo;, not &lsquo;<samp><span class="samp">(?]</span></samp>&rsquo;.  Traditional C compilers
+is the string `<samp><span class="samp">(???)</span></samp>', not `<samp><span class="samp">(?]</span></samp>'.  Traditional C compilers
 do not recognize these idioms.
 
      <p>The nine trigraphs and their replacements are
 
      <pre class="smallexample">          Trigraph:       ??(  ??)  ??&lt;  ??&gt;  ??=  ??/  ??'  ??!  ??-
           Replacement:      [    ]    {    }    #    \    ^    |    ~
-</pre>
+     </pre>
      <li><a name="index-continued-lines-3"></a><a name="index-backslash_002dnewline-4"></a>Continued lines are merged into one long line.
 
-     <p>A continued line is a line which ends with a backslash, &lsquo;<samp><span class="samp">\</span></samp>&rsquo;.  The
+     <p>A continued line is a line which ends with a backslash, `<samp><span class="samp">\</span></samp>'.  The
 backslash is removed and the following line is joined with the current
 one.  No space is inserted, so you may split a line anywhere, even in
 the middle of a word.  (It is generally more readable to split lines
@@ -131,18 +131,18 @@ line, GCC will warn you about it.
      <li><a name="index-comments-5"></a><a name="index-line-comments-6"></a><a name="index-block-comments-7"></a>All comments are replaced with single spaces.
 
      <p>There are two kinds of comments.  <dfn>Block comments</dfn> begin with
-&lsquo;<samp><span class="samp">/*</span></samp>&rsquo; and continue until the next &lsquo;<samp><span class="samp">*/</span></samp>&rsquo;.  Block comments do not
+`<samp><span class="samp">/*</span></samp>' and continue until the next `<samp><span class="samp">*/</span></samp>'.  Block comments do not
 nest:
 
      <pre class="smallexample">          /* <span class="roman">this is</span> /* <span class="roman">one comment</span> */ <span class="roman">text outside comment</span>
-</pre>
-     <p><dfn>Line comments</dfn> begin with &lsquo;<samp><span class="samp">//</span></samp>&rsquo; and continue to the end of the
+     </pre>
+     <p><dfn>Line comments</dfn> begin with `<samp><span class="samp">//</span></samp>' and continue to the end of the
 current line.  Line comments do not nest either, but it does not matter,
 because they would end in the same place anyway.
 
      <pre class="smallexample">          // <span class="roman">this is</span> // <span class="roman">one comment</span>
           <span class="roman">text outside comment</span>
-</pre>
+     </pre>
      </ol>
 
    <p>It is safe to put line comments inside block comments, or vice versa.
@@ -161,7 +161,7 @@ comment.
          <span class="roman">oops! this isn't a comment anymore</span> */
 </pre>
    <p>Comments are not recognized within string literals. 
-<tt>"/*&nbsp;blah&nbsp;*/"<!-- /@w --></tt> is the string constant &lsquo;<samp><span class="samp">/*&nbsp;blah&nbsp;*/<!-- /@w --></span></samp>&rsquo;, not
+<tt>"/*&nbsp;blah&nbsp;*/"<!-- /@w --></tt> is the string constant `<samp><span class="samp">/*&nbsp;blah&nbsp;*/<!-- /@w --></span></samp>', not
 an empty string.
 
    <p>Line comments are not in the 1989 edition of the C standard, but they
@@ -171,8 +171,8 @@ of the C standard, they are an official part of the language.
    <p>Since these transformations happen before all other processing, you can
 split a line mechanically with backslash-newline anywhere.  You can
 comment out the end of a line.  You can continue a line comment onto the
-next line with backslash-newline.  You can even split &lsquo;<samp><span class="samp">/*</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">*/</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">//</span></samp>&rsquo; onto multiple lines with backslash-newline. 
+next line with backslash-newline.  You can even split `<samp><span class="samp">/*</span></samp>',
+`<samp><span class="samp">*/</span></samp>', and `<samp><span class="samp">//</span></samp>' onto multiple lines with backslash-newline. 
 For example:
 
 <pre class="smallexample">     /\

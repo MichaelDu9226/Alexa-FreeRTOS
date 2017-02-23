@@ -3,7 +3,7 @@
 <title>Sample Session - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Summary.html#Summary" title="Summary">
 <link rel="next" href="Invocation.html#Invocation" title="Invocation">
@@ -52,7 +52,7 @@ debugger.  This chapter illustrates those commands.
 
 <!-- FIXME: this example may not be appropriate for some configs, where -->
 <!-- FIXME...primary interest is in remote use. -->
-   <p>One of the preliminary versions of <span class="sc">gnu</span> <code>m4</code> (a generic macro
+<p>One of the preliminary versions of <span class="sc">gnu</span> <code>m4</code> (a generic macro
 processor) exhibits the following bug: sometimes, when we change its
 quote strings from the default, the commands used to capture one macro
 definition within another stop working.  In the following short <code>m4</code>
@@ -165,7 +165,7 @@ stack frame for each active subroutine.
      #5  0x2930 in main (argc=0, argv=0xf7fffb20) at m4.c:195
 </pre>
    <p class="noindent">We step through a few more lines to see what happens.  The first two
-times, we can use &lsquo;<samp><span class="samp">s</span></samp>&rsquo;; the next two times we use <code>n</code> to avoid
+times, we can use `<samp><span class="samp">s</span></samp>'; the next two times we use <code>n</code> to avoid
 falling into the <code>xstrdup</code> subroutine.
 
 <pre class="smallexample">     (gdb) <b>s</b>
@@ -251,7 +251,7 @@ lengths.  We allow <code>m4</code> exit by giving it an EOF as input:
 <pre class="smallexample">     <b>Ctrl-d</b>
      Program exited normally.
 </pre>
-   <p class="noindent">The message &lsquo;<samp><span class="samp">Program exited normally.</span></samp>&rsquo; is from <span class="sc">gdb</span>; it
+   <p class="noindent">The message `<samp><span class="samp">Program exited normally.</span></samp>' is from <span class="sc">gdb</span>; it
 indicates <code>m4</code> has finished executing.  We can end our <span class="sc">gdb</span>
 session with the <span class="sc">gdb</span> <code>quit</code> command.
 

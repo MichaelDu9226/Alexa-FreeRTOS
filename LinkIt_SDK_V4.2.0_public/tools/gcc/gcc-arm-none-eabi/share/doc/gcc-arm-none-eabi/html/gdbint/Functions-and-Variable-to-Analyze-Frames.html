@@ -3,7 +3,7 @@
 <title>Functions and Variable to Analyze Frames - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Frame-Interpretation.html#Frame-Interpretation" title="Frame Interpretation">
 <link rel="prev" href="Prologue-Caches.html#Prologue-Caches" title="Prologue Caches">
@@ -52,7 +52,7 @@ required.
 <div class="defun">
 &mdash; Architecture Function: CORE_ADDR <b>skip_prologue</b> (<var>struct gdbarch *gdbarch, CORE_ADDR pc</var>)<var><a name="index-skip_005fprologue-337"></a></var><br>
 <blockquote>
-        <p>The prologue of a function is the code at the beginning of the
+<p>The prologue of a function is the code at the beginning of the
 function which sets up the stack frame, saves the return address
 etc.  The code representing the behavior of the function starts after
 the prologue.
@@ -113,7 +113,7 @@ implementation of this function.
 <div class="defun">
 &mdash; Architecture Variable: int <b>frame_red_zone_size</b><var><a name="index-frame_005fred_005fzone_005fsize-344"></a></var><br>
 <blockquote>
-        <p>Some ABIs reserve space beyond the end of the stack for use by leaf
+<p>Some ABIs reserve space beyond the end of the stack for use by leaf
 functions without prologue or epilogue or by exception handlers (for
 example the OpenRISC 1000).
 

@@ -3,7 +3,7 @@
 <title>Effective-Target Keywords - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Test-Directives.html#Test-Directives" title="Test Directives">
 <link rel="prev" href="Selectors.html#Selectors" title="Selectors">
@@ -64,7 +64,7 @@ are expected to fail some tests.
 the GCC testsuite, with the exception of those that are documented as
 being local to a particular test directory.
 
- <p>The &lsquo;<samp><span class="samp">effective target</span></samp>&rsquo; takes into account all of the compiler options
+ <p>The `<samp><span class="samp">effective target</span></samp>' takes into account all of the compiler options
 with which the test will be compiled, including the multilib options. 
 By convention, keywords ending in <code>_nocache</code> can also include options
 specified for the particular test in an earlier <code>dg-options</code> or
@@ -253,13 +253,16 @@ Some multilibs may be incompatible with this option.
 
      <br><dt><code>arm_neonv2_hw</code><dd>Test system supports executing NEON v2 instructions.
 
-     <br><dt><code>arm_neon_ok</code><dd><a name="arm_005fneon_005fok"></a>ARM Target supports <code>-mfpu=neon -mfloat-abi=softfp</code> or compatible
+     <br><dt><code>arm_neon_ok</code><dd><a name="arm_005fneon_005fok"></a>
+ARM Target supports <code>-mfpu=neon -mfloat-abi=softfp</code> or compatible
 options.  Some multilibs may be incompatible with these options.
 
-     <br><dt><code>arm_neonv2_ok</code><dd><a name="arm_005fneonv2_005fok"></a>ARM Target supports <code>-mfpu=neon-vfpv4 -mfloat-abi=softfp</code> or compatible
+     <br><dt><code>arm_neonv2_ok</code><dd><a name="arm_005fneonv2_005fok"></a>
+ARM Target supports <code>-mfpu=neon-vfpv4 -mfloat-abi=softfp</code> or compatible
 options.  Some multilibs may be incompatible with these options.
 
-     <br><dt><code>arm_neon_fp16_ok</code><dd><a name="arm_005fneon_005ffp16_005fok"></a>ARM Target supports <code>-mfpu=neon-fp16 -mfloat-abi=softfp</code> or compatible
+     <br><dt><code>arm_neon_fp16_ok</code><dd><a name="arm_005fneon_005ffp16_005fok"></a>
+ARM Target supports <code>-mfpu=neon-fp16 -mfloat-abi=softfp</code> or compatible
 options.  Some multilibs may be incompatible with these options.
 
      <br><dt><code>arm_thumb1_ok</code><dd>ARM target generates Thumb-1 code for <code>-mthumb</code>.
@@ -396,7 +399,7 @@ overloads for <code>strchr</code> etc. functions.
 <samp><span class="file">libgfortran/io/unix.c:fd_truncate</span></samp>; i.e. <code>ftruncate</code> or
 <code>chsize</code>.
 
-     <br><dt><code>freestanding</code><dd>Target is &lsquo;<samp><span class="samp">freestanding</span></samp>&rsquo; as defined in section 4 of the C99 standard. 
+     <br><dt><code>freestanding</code><dd>Target is `<samp><span class="samp">freestanding</span></samp>' as defined in section 4 of the C99 standard. 
 Effectively, it is a target which supports no extra headers or libraries
 other than what is considered essential.
 
@@ -500,7 +503,7 @@ all targets.
 
      <br><dt><code>static</code><dd>Target supports <samp><span class="option">-static</span></samp>.
 
-     <br><dt><code>static_libgfortran</code><dd>Target supports statically linking &lsquo;<samp><span class="samp">libgfortran</span></samp>&rsquo;.
+     <br><dt><code>static_libgfortran</code><dd>Target supports statically linking `<samp><span class="samp">libgfortran</span></samp>'.
 
      <br><dt><code>string_merging</code><dd>Target supports merging string constants at link time.
 

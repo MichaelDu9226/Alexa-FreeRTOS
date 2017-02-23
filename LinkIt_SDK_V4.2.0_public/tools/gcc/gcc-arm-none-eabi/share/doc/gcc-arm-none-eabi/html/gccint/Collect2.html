@@ -3,7 +3,7 @@
 <title>Collect2 - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Fragments.html#Fragments" title="Fragments">
 <link rel="next" href="Header-Dirs.html#Header-Dirs" title="Header Dirs">
@@ -59,7 +59,7 @@ to call various initialization functions at start time.
  <p>The program <code>collect2</code> works by linking the program once and
 looking through the linker output file for symbols with particular names
 indicating they are constructor functions.  If it finds any, it
-creates a new temporary &lsquo;<samp><span class="samp">.c</span></samp>&rsquo; file containing a table of them,
+creates a new temporary `<samp><span class="samp">.c</span></samp>' file containing a table of them,
 compiles it, and links the program a second time including that file.
 
  <p><a name="index-g_t_005f_005fmain-4985"></a><a name="index-constructors_002c-automatic-calls-4986"></a>The actual calls to the constructors are carried out by a subroutine
@@ -126,5 +126,5 @@ using the same algorithm as above for <code>ld</code>.
 <!-- Copyright (C) 1988-2013 Free Software Foundation, Inc. -->
 <!-- This is part of the GCC manual. -->
 <!-- For copying conditions, see the file gcc.texi. -->
- </body></html>
+</body></html>
 

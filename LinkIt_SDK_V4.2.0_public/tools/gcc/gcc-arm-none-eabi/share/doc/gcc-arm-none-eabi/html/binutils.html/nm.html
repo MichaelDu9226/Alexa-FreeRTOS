@@ -3,7 +3,7 @@
 <title>nm - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="ar.html#ar" title="ar">
 <link rel="next" href="objcopy.html#objcopy" title="objcopy">
@@ -65,7 +65,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
      <!-- man end -->
 </pre>
    <!-- man begin DESCRIPTION nm -->
-   <p><span class="sc">gnu</span> <samp><span class="command">nm</span></samp> lists the symbols from object files <var>objfile</var><small class="dots">...</small>. 
+<p><span class="sc">gnu</span> <samp><span class="command">nm</span></samp> lists the symbols from object files <var>objfile</var><small class="dots">...</small>. 
 If no object files are listed as arguments, <samp><span class="command">nm</span></samp> assumes the file
 <samp><span class="file">a.out</span></samp>.
 
@@ -82,8 +82,8 @@ are however a few lowercase symbols that are shown for special global
 symbols (<code>u</code>, <code>v</code> and <code>w</code>).
 
      <!-- Some more detail on exactly what these symbol types are used for -->
-     <!-- would be nice. -->
-          <dl>
+<!-- would be nice. -->
+<dl>
 <dt><code>A</code><dd>The symbol's value is absolute, and will not be changed by further
 linking.
 
@@ -154,7 +154,7 @@ For more information, see <a href="../stabs/index.html#Top">Stabs</a>.
 
 <!-- man end -->
 <!-- man begin OPTIONS nm -->
-   <p>The long and short forms of options, shown here as alternatives, are
+<p>The long and short forms of options, shown here as alternatives, are
 equivalent.
 
      <dl>
@@ -204,11 +204,11 @@ by their names.
 encountered.
 
      <br><dt><samp><span class="env">-P</span></samp><dt><samp><span class="env">--portability</span></samp><dd>Use the POSIX.2 standard output format instead of the default format. 
-Equivalent to &lsquo;<samp><span class="samp">-f posix</span></samp>&rsquo;.
+Equivalent to `<samp><span class="samp">-f posix</span></samp>'.
 
      <br><dt><samp><span class="env">-S</span></samp><dt><samp><span class="env">--print-size</span></samp><dd>Print both value and size of defined symbols for the <code>bsd</code> output style. 
 This option has no effect for object formats that do not record symbol
-sizes, unless &lsquo;<samp><span class="samp">--size-sort</span></samp>&rsquo; is also used in which case a
+sizes, unless `<samp><span class="samp">--size-sort</span></samp>' is also used in which case a
 calculated size is displayed.
 
      <br><dt><samp><span class="env">-s</span></samp><dt><samp><span class="env">--print-armap</span></samp><dd><a name="index-symbol-index_002c-listing-52"></a>When listing symbols from archive members, include the index: a mapping
@@ -221,7 +221,7 @@ last come first.
      <br><dt><samp><span class="env">--size-sort</span></samp><dd>Sort symbols by size.  The size is computed as the difference between
 the value of the symbol and the value of the symbol with the next higher
 value.  If the <code>bsd</code> output format is used the size of the symbol
-is printed, rather than the value, and &lsquo;<samp><span class="samp">-S</span></samp>&rsquo; must be used in order
+is printed, rather than the value, and `<samp><span class="samp">-S</span></samp>' must be used in order
 both size and value to be printed.
 
      <br><dt><samp><span class="env">--special-syms</span></samp><dd>Display symbols which have a target-specific special meaning.  These
@@ -232,7 +232,7 @@ symbols used to mark transitions between ARM code, THUMB code and
 data.
 
      <br><dt><samp><span class="env">-t </span><var>radix</var></samp><dt><samp><span class="env">--radix=</span><var>radix</var></samp><dd>Use <var>radix</var> as the radix for printing the symbol values.  It must be
-&lsquo;<samp><span class="samp">d</span></samp>&rsquo; for decimal, &lsquo;<samp><span class="samp">o</span></samp>&rsquo; for octal, or &lsquo;<samp><span class="samp">x</span></samp>&rsquo; for hexadecimal.
+`<samp><span class="samp">d</span></samp>' for decimal, `<samp><span class="samp">o</span></samp>' for octal, or `<samp><span class="samp">x</span></samp>' for hexadecimal.
 
      <br><dt><samp><span class="env">--target=</span><var>bfdname</var></samp><dd><a name="index-object-code-format-53"></a>Specify an object code format other than your system's default format. 
 See <a href="Target-Selection.html#Target-Selection">Target Selection</a>, for more information.
@@ -252,5 +252,5 @@ to <samp><span class="option">-X 32</span></samp>, which is not supported by <sp
 </dl>
 
 <!-- man end -->
-   </body></html>
+</body></html>
 

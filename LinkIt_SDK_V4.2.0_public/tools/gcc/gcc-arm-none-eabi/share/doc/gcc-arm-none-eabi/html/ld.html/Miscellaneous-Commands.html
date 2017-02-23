@@ -3,7 +3,7 @@
 <title>Miscellaneous Commands - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Simple-Commands.html#Simple-Commands" title="Simple Commands">
 <link rel="prev" href="REGION_005fALIAS.html#REGION_005fALIAS" title="REGION_ALIAS">
@@ -56,29 +56,29 @@ with an error code, and print <var>message</var>.
 symbol.  Doing this may, for example, trigger linking of additional
 modules from standard libraries.  You may list several <var>symbol</var>s for
 each <code>EXTERN</code>, and you may use <code>EXTERN</code> multiple times.  This
-command has the same effect as the &lsquo;<samp><span class="samp">-u</span></samp>&rsquo; command-line option.
+command has the same effect as the `<samp><span class="samp">-u</span></samp>' command-line option.
 
-     <br><dt><code>FORCE_COMMON_ALLOCATION</code><dd><a name="index-FORCE_005fCOMMON_005fALLOCATION-381"></a><a name="index-common-allocation-in-linker-script-382"></a>This command has the same effect as the &lsquo;<samp><span class="samp">-d</span></samp>&rsquo; command-line option:
+     <br><dt><code>FORCE_COMMON_ALLOCATION</code><dd><a name="index-FORCE_005fCOMMON_005fALLOCATION-381"></a><a name="index-common-allocation-in-linker-script-382"></a>This command has the same effect as the `<samp><span class="samp">-d</span></samp>' command-line option:
 to make <samp><span class="command">ld</span></samp> assign space to common symbols even if a relocatable
-output file is specified (&lsquo;<samp><span class="samp">-r</span></samp>&rsquo;).
+output file is specified (`<samp><span class="samp">-r</span></samp>').
 
-     <br><dt><code>INHIBIT_COMMON_ALLOCATION</code><dd><a name="index-INHIBIT_005fCOMMON_005fALLOCATION-383"></a><a name="index-common-allocation-in-linker-script-384"></a>This command has the same effect as the &lsquo;<samp><span class="samp">--no-define-common</span></samp>&rsquo;
+     <br><dt><code>INHIBIT_COMMON_ALLOCATION</code><dd><a name="index-INHIBIT_005fCOMMON_005fALLOCATION-383"></a><a name="index-common-allocation-in-linker-script-384"></a>This command has the same effect as the `<samp><span class="samp">--no-define-common</span></samp>'
 command-line option: to make <code>ld</code> omit the assignment of addresses
 to common symbols even for a non-relocatable output file.
 
-     <br><dt><code>INSERT [ AFTER | BEFORE ] </code><var>output_section</var><dd><a name="index-INSERT-385"></a><a name="index-insert-user-script-into-default-script-386"></a>This command is typically used in a script specified by &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; to
+     <br><dt><code>INSERT [ AFTER | BEFORE ] </code><var>output_section</var><dd><a name="index-INSERT-385"></a><a name="index-insert-user-script-into-default-script-386"></a>This command is typically used in a script specified by `<samp><span class="samp">-T</span></samp>' to
 augment the default <code>SECTIONS</code> with, for example, overlays.  It
 inserts all prior linker script statements after (or before)
-<var>output_section</var>, and also causes &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; to not override the
+<var>output_section</var>, and also causes `<samp><span class="samp">-T</span></samp>' to not override the
 default linker script.  The exact insertion point is as for orphan
 sections.  See <a href="Location-Counter.html#Location-Counter">Location Counter</a>.  The insertion happens after the
 linker has mapped input sections to output sections.  Prior to the
-insertion, since &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; scripts are parsed before the default
-linker script, statements in the &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; script occur before the
+insertion, since `<samp><span class="samp">-T</span></samp>' scripts are parsed before the default
+linker script, statements in the `<samp><span class="samp">-T</span></samp>' script occur before the
 default linker script statements in the internal linker representation
 of the script.  In particular, input section assignments will be made
-to &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; output sections before those in the default script.  Here
-is an example of how a &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; script using <code>INSERT</code> might look:
+to `<samp><span class="samp">-T</span></samp>' output sections before those in the default script.  Here
+is an example of how a `<samp><span class="samp">-T</span></samp>' script using <code>INSERT</code> might look:
 
      <pre class="smallexample">          SECTIONS
           {
@@ -89,7 +89,7 @@ is an example of how a &lsquo;<samp><span class="samp">-T</span></samp>&rsquo; s
             }
           }
           INSERT AFTER .text;
-</pre>
+     </pre>
      <br><dt><code>NOCROSSREFS(</code><var>section</var> <var>section</var><code> ...)</code><dd><a name="index-NOCROSSREFS_0028_0040var_007bsections_007d_0029-387"></a><a name="index-cross-references-388"></a>This command may be used to tell <samp><span class="command">ld</span></samp> to issue an error about any
 references among certain output sections.
 
@@ -108,7 +108,7 @@ names.
      <br><dt><code>OUTPUT_ARCH(</code><var>bfdarch</var><code>)</code><dd><a name="index-OUTPUT_005fARCH_0028_0040var_007bbfdarch_007d_0029-389"></a><a name="index-machine-architecture-390"></a><a name="index-architecture-391"></a>Specify a particular output machine architecture.  The argument is one
 of the names used by the BFD library (see <a href="BFD.html#BFD">BFD</a>).  You can see the
 architecture of an object file by using the <code>objdump</code> program with
-the &lsquo;<samp><span class="samp">-f</span></samp>&rsquo; option.
+the `<samp><span class="samp">-f</span></samp>' option.
 
      <br><dt><code>LD_FEATURE(</code><var>string</var><code>)</code><dd><a name="index-LD_005fFEATURE_0028_0040var_007bstring_007d_0029-392"></a>This command may be used to modify <samp><span class="command">ld</span></samp> behavior.  If
 <var>string</var> is <code>"SANE_EXPR"</code> then absolute symbols and numbers

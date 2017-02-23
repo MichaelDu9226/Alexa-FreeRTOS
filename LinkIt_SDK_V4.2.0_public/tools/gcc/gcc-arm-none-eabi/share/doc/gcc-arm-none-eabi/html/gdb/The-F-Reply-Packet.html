@@ -3,7 +3,7 @@
 <title>The F Reply Packet - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="File_002dI_002fO-Remote-Protocol-Extension.html#File_002dI_002fO-Remote-Protocol-Extension" title="File-I/O Remote Protocol Extension">
 <link rel="prev" href="The-F-Request-Packet.html#The-F-Request-Packet" title="The F Request Packet">
@@ -51,7 +51,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="File_002dI_002fO-Remote-Protocol-Extens
 The <code>F</code> reply packet has the following format:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">F</span><var>retcode</var><span class="samp">,</span><var>errno</var><span class="samp">,</span><var>Ctrl-C flag</var><span class="samp">;</span><var>call-specific attachment</var></samp>&rsquo;<dd>
+<dt>`<samp><span class="samp">F</span><var>retcode</var><span class="samp">,</span><var>errno</var><span class="samp">,</span><var>Ctrl-C flag</var><span class="samp">;</span><var>call-specific attachment</var></samp>'<dd>
 <var>retcode</var> is the return code of the system call as hexadecimal value.
 
      <p><var>errno</var> is the <code>errno</code> set by the call, in protocol-specific
@@ -60,14 +60,14 @@ This parameter can be omitted if the call was successful.
 
      <p><var>Ctrl-C flag</var> is only sent if the user requested a break.  In this
 case, <var>errno</var> must be sent as well, even if the call was successful. 
-The <var>Ctrl-C flag</var> itself consists of the character &lsquo;<samp><span class="samp">C</span></samp>&rsquo;:
+The <var>Ctrl-C flag</var> itself consists of the character `<samp><span class="samp">C</span></samp>':
 
      <pre class="smallexample">          F0,0,C
-</pre>
+     </pre>
      <p class="noindent">or, if the call was interrupted before the host call has been performed:
 
      <pre class="smallexample">          F-1,4,C
-</pre>
+     </pre>
      <p class="noindent">assuming 4 is the protocol-specific representation of <code>EINTR</code>.
 
    </dl>

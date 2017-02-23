@@ -3,7 +3,7 @@
 <title>MMIX - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Dependent.html#Machine-Dependent" title="Machine Dependent">
 <link rel="prev" href="M68K.html#M68K" title="M68K">
@@ -53,11 +53,11 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Machine-Dependent.html#Machine-Dependen
 understands the <code>mmo</code> format.  The binutils <code>objcopy</code> utility
 can translate between the two formats.
 
-   <p>There is one special section, the &lsquo;<samp><span class="samp">.MMIX.reg_contents</span></samp>&rsquo; section. 
+   <p>There is one special section, the `<samp><span class="samp">.MMIX.reg_contents</span></samp>' section. 
 Contents in this section is assumed to correspond to that of global
 registers, and symbols referring to it are translated to special symbols,
 equal to registers.  In a final link, the start address of the
-&lsquo;<samp><span class="samp">.MMIX.reg_contents</span></samp>&rsquo; section corresponds to the first allocated
+`<samp><span class="samp">.MMIX.reg_contents</span></samp>' section corresponds to the first allocated
 global register multiplied by 8.  Register <code>$255</code> is not included in
 this section; it is always set to the program entry, which is at the
 symbol <code>Main</code> for <code>mmo</code> files.

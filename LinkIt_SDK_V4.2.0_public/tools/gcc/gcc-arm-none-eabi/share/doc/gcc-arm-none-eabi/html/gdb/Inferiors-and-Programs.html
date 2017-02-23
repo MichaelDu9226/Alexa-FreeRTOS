@@ -3,7 +3,7 @@
 <title>Inferiors and Programs - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Running.html#Running" title="Running">
 <link rel="prev" href="Kill-Process.html#Kill-Process" title="Kill Process">
@@ -82,7 +82,7 @@ threads running in it.
 
           </ol>
 
-     <p class="noindent">An asterisk &lsquo;<samp><span class="samp">*</span></samp>&rsquo; preceding the <span class="sc">gdb</span> inferior number
+     <p class="noindent">An asterisk `<samp><span class="samp">*</span></samp>' preceding the <span class="sc">gdb</span> inferior number
 indicates the current inferior.
 
      <p>For example,
@@ -100,7 +100,7 @@ indicates the current inferior.
 <a name="index-inferior-_0040var_007binfno_007d-145"></a>
 <dl><dt><code>inferior </code><var>infno</var><dd>Make inferior number <var>infno</var> the current inferior.  The argument
 <var>infno</var> is the inferior number assigned by <span class="sc">gdb</span>, as shown
-in the first field of the &lsquo;<samp><span class="samp">info inferiors</span></samp>&rsquo; display. 
+in the first field of the `<samp><span class="samp">info inferiors</span></samp>' display. 
 </dl>
 
    <p>You can get multiple executables into a debugging session via the
@@ -133,7 +133,7 @@ want to run another instance of the inferior you are debugging.
             Num  Description       Executable
             2    &lt;null&gt;            helloworld
           * 1    process 29964     helloworld
-</pre>
+     </pre>
      <p>You can now simply switch focus to inferior 2 and run it.
 
      <p><a name="index-remove_002dinferiors-148"></a><br><dt><code>remove-inferiors </code><var>infno</var><code>...</code><dd>Removes the inferior or inferiors <var>infno</var><small class="dots">...</small>.  It is not
@@ -151,12 +151,12 @@ using the <code>kill&nbsp;inferiors</code><!-- /@w --> command:
 <dl><dt><code>detach inferior </code><var>infno</var><code>...</code><dd>Detach from the inferior or inferiors identified by <span class="sc">gdb</span>
 inferior number(s) <var>infno</var><small class="dots">...</small>.  Note that the inferior's entry
 still stays on the list of inferiors shown by <code>info inferiors</code>,
-but its Description will show &lsquo;<samp><span class="samp">&lt;null&gt;</span></samp>&rsquo;.
+but its Description will show `<samp><span class="samp">&lt;null&gt;</span></samp>'.
 
      <p><a name="index-kill-inferiors-_0040var_007binfno_007d_0040dots_007b_007d-150"></a><br><dt><code>kill inferiors </code><var>infno</var><code>...</code><dd>Kill the inferior or inferiors identified by <span class="sc">gdb</span> inferior
 number(s) <var>infno</var><small class="dots">...</small>.  Note that the inferior's entry still
 stays on the list of inferiors shown by <code>info inferiors</code>, but its
-Description will show &lsquo;<samp><span class="samp">&lt;null&gt;</span></samp>&rsquo;. 
+Description will show `<samp><span class="samp">&lt;null&gt;</span></samp>'. 
 </dl>
 
    <p>After the successful completion of a command such as <code>detach</code>,
@@ -202,7 +202,7 @@ the <code>file</code> command.
 
           </ol>
 
-     <p class="noindent">An asterisk &lsquo;<samp><span class="samp">*</span></samp>&rsquo; preceding the <span class="sc">gdb</span> program space number
+     <p class="noindent">An asterisk `<samp><span class="samp">*</span></samp>' preceding the <span class="sc">gdb</span> program space number
 indicates the current program space.
 
      <p>In addition, below each program space line, <span class="sc">gdb</span> prints extra
@@ -214,7 +214,7 @@ example, the list of inferiors bound to the program space.
             2    goodbye
                   Bound inferiors: ID 1 (process 21561)
           * 1    hello
-</pre>
+     </pre>
      <p>Here we can see that no inferior is running the program <code>hello</code>,
 while <code>process 21561</code> is running the program <code>goodbye</code>.  On
 some targets, it is possible that multiple inferiors are bound to the
@@ -225,7 +225,7 @@ the parent and child processes of a <code>vfork</code> call.  For example,
             Id   Executable
           * 1    vfork-test
                   Bound inferiors: ID 2 (process 18050), ID 1 (process 18045)
-</pre>
+     </pre>
      <p>Here, both inferior 2 and inferior 1 are running in the same program
 space as a result of inferior 1 having executed a <code>vfork</code> call. 
 </dl>

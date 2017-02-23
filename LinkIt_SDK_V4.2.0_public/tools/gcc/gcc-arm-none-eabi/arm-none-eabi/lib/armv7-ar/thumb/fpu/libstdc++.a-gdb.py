@@ -19,8 +19,8 @@ import gdb
 import os
 import os.path
 
-pythondir = '/home/build/work/GCC-4-8-build/install-native/share/gcc-arm-none-eabi'
-libdir = '/home/build/work/GCC-4-8-build/install-native/arm-none-eabi/lib/armv7-ar/thumb/fpu'
+pythondir = '/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/install-native/share/gcc-arm-none-eabi'
+libdir = '/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/install-native/arm-none-eabi/lib/armv7-ar/thumb/fpu'
 
 # This file might be loaded when there is no current objfile.  This
 # can happen if the user loads it manually.  In this case we don't

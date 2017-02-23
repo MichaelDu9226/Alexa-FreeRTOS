@@ -3,7 +3,7 @@
 <title>Sections - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Scheduling.html#Scheduling" title="Scheduling">
@@ -296,7 +296,7 @@ it is unlikely to be called.
 <div class="defun">
 &mdash; Target Hook: void <b>TARGET_ASM_UNIQUE_SECTION</b> (<var>tree decl, int reloc</var>)<var><a name="index-TARGET_005fASM_005fUNIQUE_005fSECTION-4479"></a></var><br>
 <blockquote><p>Build up a unique section name, expressed as a <code>STRING_CST</code> node,
-and assign it to &lsquo;<samp><span class="samp">DECL_SECTION_NAME (</span><var>decl</var><span class="samp">)</span></samp>&rsquo;. 
+and assign it to `<samp><span class="samp">DECL_SECTION_NAME (</span><var>decl</var><span class="samp">)</span></samp>'. 
 As with <code>TARGET_ASM_SELECT_SECTION</code>, <var>reloc</var> indicates whether
 the initial value of <var>exp</var> requires link-time relocations.
 
@@ -309,7 +309,7 @@ Whatever the actual target object format, this is often good enough.
 <div class="defun">
 &mdash; Target Hook: section * <b>TARGET_ASM_FUNCTION_RODATA_SECTION</b> (<var>tree decl</var>)<var><a name="index-TARGET_005fASM_005fFUNCTION_005fRODATA_005fSECTION-4480"></a></var><br>
 <blockquote><p>Return the readonly data section associated with
-&lsquo;<samp><span class="samp">DECL_SECTION_NAME (</span><var>decl</var><span class="samp">)</span></samp>&rsquo;. 
+`<samp><span class="samp">DECL_SECTION_NAME (</span><var>decl</var><span class="samp">)</span></samp>'. 
 The default version of this function selects <code>.gnu.linkonce.r.name</code> if
 the function's section is <code>.gnu.linkonce.t.name</code>, <code>.rodata.name</code>
 if function is in <code>.text.name</code>, and the normal readonly-data section

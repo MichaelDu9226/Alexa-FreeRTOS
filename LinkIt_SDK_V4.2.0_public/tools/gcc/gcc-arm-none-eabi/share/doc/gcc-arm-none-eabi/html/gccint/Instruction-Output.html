@@ -3,7 +3,7 @@
 <title>Instruction Output - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Assembler-Format.html#Assembler-Format" title="Assembler Format">
 <link rel="prev" href="Macros-for-Initialization.html#Macros-for-Initialization" title="Macros for Initialization">
@@ -105,7 +105,7 @@ so that it will not be output twice.
 
       <p>In fact, your macro definition may process less than the entire opcode
 name, or more than the opcode name; but if you want to process text
-that includes &lsquo;<samp><span class="samp">%</span></samp>&rsquo;-sequences to substitute operands, you must take
+that includes `<samp><span class="samp">%</span></samp>'-sequences to substitute operands, you must take
 care of the substitution yourself.  Just be sure to increment
 <var>ptr</var> over whatever text should not be output normally.
 
@@ -162,18 +162,18 @@ RTL expression.
       <p><var>code</var> is a value that can be used to specify one of several ways
 of printing the operand.  It is used when identical operands must be
 printed differently depending on the context.  <var>code</var> comes from
-the &lsquo;<samp><span class="samp">%</span></samp>&rsquo; specification that was used to request printing of the
-operand.  If the specification was just &lsquo;<samp><span class="samp">%</span><var>digit</var></samp>&rsquo; then
-<var>code</var> is 0; if the specification was &lsquo;<samp><span class="samp">%</span><var>ltr</var>
-<var>digit</var></samp>&rsquo; then <var>code</var> is the ASCII code for <var>ltr</var>.
+the `<samp><span class="samp">%</span></samp>' specification that was used to request printing of the
+operand.  If the specification was just `<samp><span class="samp">%</span><var>digit</var></samp>' then
+<var>code</var> is 0; if the specification was `<samp><span class="samp">%</span><var>ltr</var>
+<var>digit</var></samp>' then <var>code</var> is the ASCII code for <var>ltr</var>.
 
       <p><a name="index-reg_005fnames-4636"></a>If <var>x</var> is a register, this macro should print the register's name. 
 The names can be found in an array <code>reg_names</code> whose type is
 <code>char *[]</code>.  <code>reg_names</code> is initialized from
 <code>REGISTER_NAMES</code>.
 
-      <p>When the machine description has a specification &lsquo;<samp><span class="samp">%</span><var>punct</var></samp>&rsquo;
-(a &lsquo;<samp><span class="samp">%</span></samp>&rsquo; followed by a punctuation character), this macro is called
+      <p>When the machine description has a specification `<samp><span class="samp">%</span><var>punct</var></samp>'
+(a `<samp><span class="samp">%</span></samp>' followed by a punctuation character), this macro is called
 with a null pointer for <var>x</var> and the punctuation character for
 <var>code</var>. 
 </p></blockquote></div>
@@ -183,7 +183,7 @@ with a null pointer for <var>x</var> and the punctuation character for
 <blockquote><p>A C expression which evaluates to true if <var>code</var> is a valid
 punctuation character for use in the <code>PRINT_OPERAND</code> macro.  If
 <code>PRINT_OPERAND_PUNCT_VALID_P</code> is not defined, it means that no
-punctuation characters (except for the standard one, &lsquo;<samp><span class="samp">%</span></samp>&rsquo;) are used
+punctuation characters (except for the standard one, `<samp><span class="samp">%</span></samp>') are used
 in this way. 
 </p></blockquote></div>
 
@@ -228,8 +228,8 @@ being output.
 &mdash; Macro: <b>LOCAL_LABEL_PREFIX</b><var><a name="index-LOCAL_005fLABEL_005fPREFIX-4645"></a></var><br>
 &mdash; Macro: <b>USER_LABEL_PREFIX</b><var><a name="index-USER_005fLABEL_005fPREFIX-4646"></a></var><br>
 &mdash; Macro: <b>IMMEDIATE_PREFIX</b><var><a name="index-IMMEDIATE_005fPREFIX-4647"></a></var><br>
-<blockquote><p>If defined, C string expressions to be used for the &lsquo;<samp><span class="samp">%R</span></samp>&rsquo;, &lsquo;<samp><span class="samp">%L</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">%U</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">%I</span></samp>&rsquo; options of <code>asm_fprintf</code> (see
+<blockquote><p>If defined, C string expressions to be used for the `<samp><span class="samp">%R</span></samp>', `<samp><span class="samp">%L</span></samp>',
+`<samp><span class="samp">%U</span></samp>', and `<samp><span class="samp">%I</span></samp>' options of <code>asm_fprintf</code> (see
 <samp><span class="file">final.c</span></samp>).  These are useful when a single <samp><span class="file">md</span></samp> file must
 support multiple assembler formats.  In that case, the various <samp><span class="file">tm.h</span></samp>
 files can define these macros differently. 
@@ -257,24 +257,24 @@ numeric index of the assembler language dialect to use, with zero as the
 first variant.
 
       <p>If this macro is defined, you may use constructs of the form
-     <pre class="smallexample">          &lsquo;<samp><span class="samp">{option0|option1|option2...}</span></samp>&rsquo;
-</pre>
+     <pre class="smallexample">          `<samp><span class="samp">{option0|option1|option2...}</span></samp>'
+     </pre>
       <p class="noindent">in the output templates of patterns (see <a href="Output-Template.html#Output-Template">Output Template</a>) or in the
 first argument of <code>asm_fprintf</code>.  This construct outputs
-&lsquo;<samp><span class="samp">option0</span></samp>&rsquo;, &lsquo;<samp><span class="samp">option1</span></samp>&rsquo;, &lsquo;<samp><span class="samp">option2</span></samp>&rsquo;, etc., if the value of
+`<samp><span class="samp">option0</span></samp>', `<samp><span class="samp">option1</span></samp>', `<samp><span class="samp">option2</span></samp>', etc., if the value of
 <code>ASSEMBLER_DIALECT</code> is zero, one, two, etc.  Any special characters
 within these strings retain their usual meaning.  If there are fewer
 alternatives within the braces than the value of
 <code>ASSEMBLER_DIALECT</code>, the construct outputs nothing.
 
-      <p>If you do not define this macro, the characters &lsquo;<samp><span class="samp">{</span></samp>&rsquo;, &lsquo;<samp><span class="samp">|</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">}</span></samp>&rsquo; do not have any special meaning when used in templates or
+      <p>If you do not define this macro, the characters `<samp><span class="samp">{</span></samp>', `<samp><span class="samp">|</span></samp>' and
+`<samp><span class="samp">}</span></samp>' do not have any special meaning when used in templates or
 operands to <code>asm_fprintf</code>.
 
       <p>Define the macros <code>REGISTER_PREFIX</code>, <code>LOCAL_LABEL_PREFIX</code>,
 <code>USER_LABEL_PREFIX</code> and <code>IMMEDIATE_PREFIX</code> if you can express
 the variations in assembler language syntax with that mechanism.  Define
-<code>ASSEMBLER_DIALECT</code> and use the &lsquo;<samp><span class="samp">{option0|option1}</span></samp>&rsquo; syntax
+<code>ASSEMBLER_DIALECT</code> and use the `<samp><span class="samp">{option0|option1}</span></samp>' syntax
 if the syntax variant are larger and involve such things as different
 opcodes or operand order. 
 </p></blockquote></div>

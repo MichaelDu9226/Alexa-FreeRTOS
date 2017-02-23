@@ -3,7 +3,7 @@
 <title>Running Configure - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Installing-GDB.html#Installing-GDB" title="Installing GDB">
 <link rel="prev" href="Requirements.html#Requirements" title="Requirements">
@@ -53,7 +53,7 @@ build the <code>gdb</code> program.
 
    <p>The <span class="sc">gdb</span> distribution includes all the source code you need for
 <span class="sc">gdb</span> in a single directory, whose name is usually composed by
-appending the version number to &lsquo;<samp><span class="samp">gdb</span></samp>&rsquo;.
+appending the version number to `<samp><span class="samp">gdb</span></samp>'.
 
    <p>For example, the <span class="sc">gdb</span> version 7.6.0.20140731-cvs distribution is in the
 <samp><span class="file">gdb-7.6.0.20140731-cvs</span></samp> directory.  That directory contains:
@@ -67,7 +67,7 @@ appending the version number to &lsquo;<samp><span class="samp">gdb</span></samp
 
      <br><dt><code>gdb-7.6.0.20140731-cvs/include</code><dd><span class="sc">gnu</span> include files
 
-     <br><dt><code>gdb-7.6.0.20140731-cvs/libiberty</code><dd>source for the &lsquo;<samp><span class="samp">-liberty</span></samp>&rsquo; free software library
+     <br><dt><code>gdb-7.6.0.20140731-cvs/libiberty</code><dd>source for the `<samp><span class="samp">-liberty</span></samp>' free software library
 
      <br><dt><code>gdb-7.6.0.20140731-cvs/opcodes</code><dd>source for the library of opcode tables and disassemblers
 
@@ -93,12 +93,12 @@ argument.
      ./configure <var>host</var>
      make
 </pre>
-   <p class="noindent">where <var>host</var> is an identifier such as &lsquo;<samp><span class="samp">sun4</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">decstation</span></samp>&rsquo;, that identifies the platform where <span class="sc">gdb</span> will run. 
+   <p class="noindent">where <var>host</var> is an identifier such as `<samp><span class="samp">sun4</span></samp>' or
+`<samp><span class="samp">decstation</span></samp>', that identifies the platform where <span class="sc">gdb</span> will run. 
 (You can often leave off <var>host</var>; <samp><span class="file">configure</span></samp> tries to guess the
 correct value by examining your system.)
 
-   <p>Running &lsquo;<samp><span class="samp">configure </span><var>host</var></samp>&rsquo; and then running <code>make</code> builds the
+   <p>Running `<samp><span class="samp">configure </span><var>host</var></samp>' and then running <code>make</code> builds the
 <samp><span class="file">bfd</span></samp>, <samp><span class="file">readline</span></samp>, <samp><span class="file">mmalloc</span></samp>, and <samp><span class="file">libiberty</span></samp>
 libraries, then <code>gdb</code> itself.  The configured source files, and the
 binaries, are left in the corresponding source directories.
@@ -114,7 +114,7 @@ directories for multiple libraries or programs, such as the
 <samp><span class="file">gdb-7.6.0.20140731-cvs</span></samp> source directory for version 7.6.0.20140731-cvs,
 <samp><span class="file">configure</span></samp>
 creates configuration files for every directory level underneath (unless
-you tell it not to, with the &lsquo;<samp><span class="samp">--norecursion</span></samp>&rsquo; option).
+you tell it not to, with the `<samp><span class="samp">--norecursion</span></samp>' option).
 
    <p>You should run the <samp><span class="file">configure</span></samp> script from the top directory in the
 source tree, the <samp><span class="file">gdb-</span><var>version-number</var></samp> directory.  If you run
@@ -128,7 +128,7 @@ about missing include files such as <samp><span class="file">bfd/bfd.h</span></s
 
    <p>You can install <code>gdb</code> anywhere; it has no hardwired paths. 
 However, you should make sure that the shell on your path (named by
-the &lsquo;<samp><span class="samp">SHELL</span></samp>&rsquo; environment variable) is publicly readable.  Remember
+the `<samp><span class="samp">SHELL</span></samp>' environment variable) is publicly readable.  Remember
 that <span class="sc">gdb</span> uses the shell to start your program&mdash;some systems refuse to
 let <span class="sc">gdb</span> debug child processes whose programs are not readable.
 

@@ -3,7 +3,7 @@
 <title>Environment Variables - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Invocation.html#Invocation" title="Invocation">
 <link rel="next" href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-License" title="GNU Free Documentation License">
@@ -75,7 +75,7 @@ configuration of GCC.
 <!--  -->
 <!-- If this file is included with the flag ``cppmanual'' set, it is -->
 <!-- formatted for inclusion in the CPP manual; otherwise the main GCC manual. -->
-     <dl>
+<dl>
 <dt><samp><span class="env">CPATH</span></samp><a name="index-CPATH-204"></a><dt><samp><span class="env">C_INCLUDE_PATH</span></samp><a name="index-C_005fINCLUDE_005fPATH-205"></a><dt><samp><span class="env">CPLUS_INCLUDE_PATH</span></samp><a name="index-CPLUS_005fINCLUDE_005fPATH-206"></a><dt><samp><span class="env">OBJC_INCLUDE_PATH</span></samp><a name="index-OBJC_005fINCLUDE_005fPATH-207"></a><dd><!-- Commented out until ObjC++ is part of GCC: -->
 <!-- @itemx OBJCPLUS_INCLUDE_PATH -->
 Each variable's value is a list of directories separated by a special
@@ -98,10 +98,10 @@ paths given with <samp><span class="option">-isystem</span></samp> options on th
 search its current working directory.  Empty elements can appear at the
 beginning or end of a path.  For instance, if the value of
 <samp><span class="env">CPATH</span></samp> is <code>:/special/include</code>, that has the same
-effect as &lsquo;<samp><span class="samp">-I.&nbsp;-I/special/include<!-- /@w --></span></samp>&rsquo;.
+effect as `<samp><span class="samp">-I.&nbsp;-I/special/include<!-- /@w --></span></samp>'.
 
      <!-- man end -->
-     <p>See also <a href="Search-Path.html#Search-Path">Search Path</a>. 
+<p>See also <a href="Search-Path.html#Search-Path">Search Path</a>. 
 <!-- man begin ENVIRONMENT -->
 
      <br><dt><samp><span class="env">DEPENDENCIES_OUTPUT</span></samp><a name="index-DEPENDENCIES_005fOUTPUT-208"></a><dd><a name="index-dependencies-for-make-as-output-209"></a>If this variable is set, its value specifies how to output
@@ -112,7 +112,7 @@ output.
      <p>The value of <samp><span class="env">DEPENDENCIES_OUTPUT</span></samp> can be just a file name, in
 which case the Make rules are written to that file, guessing the target
 name from the source file name.  Or the value can have the form
-&lsquo;<samp><var>file</var> <var>target</var></samp>&rsquo;, in which case the rules are written to
+`<samp><var>file</var> <var>target</var></samp>', in which case the rules are written to
 file <var>file</var> using <var>target</var> as the target name.
 
      <p>In other words, this environment variable is equivalent to combining
@@ -130,5 +130,5 @@ See <a href="Invocation.html#Invocation">Invocation</a>.
 
 <!-- Special handling for inclusion in the install manual. -->
 <!-- man begin DESCRIPTION -->
-   </body></html>
+</body></html>
 

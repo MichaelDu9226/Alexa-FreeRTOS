@@ -3,7 +3,7 @@
 <title>Compilation - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Running.html#Running" title="Running">
 <link rel="next" href="Starting.html#Starting" title="Starting">
@@ -51,23 +51,23 @@ is stored in the object file; it describes the data type of each
 variable or function and the correspondence between source line numbers
 and addresses in the executable code.
 
-   <p>To request debugging information, specify the &lsquo;<samp><span class="samp">-g</span></samp>&rsquo; option when you run
+   <p>To request debugging information, specify the `<samp><span class="samp">-g</span></samp>' option when you run
 the compiler.
 
    <p>Programs that are to be shipped to your customers are compiled with
-optimizations, using the &lsquo;<samp><span class="samp">-O</span></samp>&rsquo; compiler option.  However, some
-compilers are unable to handle the &lsquo;<samp><span class="samp">-g</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-O</span></samp>&rsquo; options
+optimizations, using the `<samp><span class="samp">-O</span></samp>' compiler option.  However, some
+compilers are unable to handle the `<samp><span class="samp">-g</span></samp>' and `<samp><span class="samp">-O</span></samp>' options
 together.  Using those compilers, you cannot generate optimized
 executables containing debugging information.
 
-   <p><span class="sc">gcc</span>, the <span class="sc">gnu</span> C/C<tt>++</tt> compiler, supports &lsquo;<samp><span class="samp">-g</span></samp>&rsquo; with or
-without &lsquo;<samp><span class="samp">-O</span></samp>&rsquo;, making it possible to debug optimized code.  We
-recommend that you <em>always</em> use &lsquo;<samp><span class="samp">-g</span></samp>&rsquo; whenever you compile a
+   <p><span class="sc">gcc</span>, the <span class="sc">gnu</span> C/C<tt>++</tt> compiler, supports `<samp><span class="samp">-g</span></samp>' with or
+without `<samp><span class="samp">-O</span></samp>', making it possible to debug optimized code.  We
+recommend that you <em>always</em> use `<samp><span class="samp">-g</span></samp>' whenever you compile a
 program.  You may think your program is correct, but there is no sense
 in pushing your luck.  For more information, see <a href="Optimized-Code.html#Optimized-Code">Optimized Code</a>.
 
    <p>Older versions of the <span class="sc">gnu</span> C compiler permitted a variant option
-&lsquo;<samp><span class="samp">-gg</span></samp>&rsquo;<!-- /@w --> for debugging information.  <span class="sc">gdb</span> no longer supports this
+`<samp><span class="samp">-gg</span></samp>'<!-- /@w --> for debugging information.  <span class="sc">gdb</span> no longer supports this
 format; if your <span class="sc">gnu</span> C compiler has this option, do not use it.
 
    <p><span class="sc">gdb</span> knows about preprocessor macros and can show you their

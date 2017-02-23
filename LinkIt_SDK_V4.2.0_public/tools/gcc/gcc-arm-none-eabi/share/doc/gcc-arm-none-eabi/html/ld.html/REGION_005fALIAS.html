@@ -3,7 +3,7 @@
 <title>REGION_ALIAS - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Simple-Commands.html#Simple-Commands" title="Simple Commands">
 <link rel="prev" href="Format-Commands.html#Format-Commands" title="Format Commands">
@@ -133,7 +133,7 @@ variants <code>A</code>, <code>B</code> and <code>C</code>:
           REGION_ALIAS("REGION_RODATA", RAM);
           REGION_ALIAS("REGION_DATA", RAM);
           REGION_ALIAS("REGION_BSS", RAM);
-</pre>
+     </pre>
      <br><dt><code>B</code><dd>Program code and read-only data go into the <code>ROM</code>.  Read-write data goes
 into the <code>RAM</code>.  An image of the initialized data is loaded into the
 <code>ROM</code> and will be copied during system start into the <code>RAM</code>.
@@ -147,7 +147,7 @@ into the <code>RAM</code>.  An image of the initialized data is loaded into the
           REGION_ALIAS("REGION_RODATA", ROM);
           REGION_ALIAS("REGION_DATA", RAM);
           REGION_ALIAS("REGION_BSS", RAM);
-</pre>
+     </pre>
      <br><dt><code>C</code><dd>Program code goes into the <code>ROM</code>.  Read-only data goes into the
 <code>ROM2</code>.  Read-write data goes into the <code>RAM</code>.  An image of the
 initialized data is loaded into the <code>ROM2</code> and will be copied during
@@ -163,7 +163,7 @@ system start into the <code>RAM</code>.
           REGION_ALIAS("REGION_RODATA", ROM2);
           REGION_ALIAS("REGION_DATA", RAM);
           REGION_ALIAS("REGION_BSS", RAM);
-</pre>
+     </pre>
      </dl>
 
    <p>It is possible to write a common system initialization routine to copy the

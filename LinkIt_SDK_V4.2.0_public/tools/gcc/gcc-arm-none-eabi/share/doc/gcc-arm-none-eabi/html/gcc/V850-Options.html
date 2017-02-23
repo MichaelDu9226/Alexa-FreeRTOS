@@ -3,7 +3,7 @@
 <title>V850 Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="TILEPro-Options.html#TILEPro-Options" title="TILEPro Options">
@@ -55,7 +55,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
 <h4 class="subsection">3.17.45 V850 Options</h4>
 
 <p><a name="index-V850-Options-2278"></a>
-These &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; options are defined for V850 implementations:
+These `<samp><span class="samp">-m</span></samp>' options are defined for V850 implementations:
 
      <dl>
 <dt><code>-mlong-calls</code><dt><code>-mno-long-calls</code><dd><a name="index-mlong_002dcalls-2279"></a><a name="index-mno_002dlong_002dcalls-2280"></a>Treat all calls as being far away (near).  If calls are assumed to be
@@ -90,33 +90,33 @@ the first 32 kilobytes of memory.
      <br><dt><code>-mv850</code><dd><a name="index-mv850-2289"></a>Specify that the target processor is the V850.
 
      <br><dt><code>-mv850e3v5</code><dd><a name="index-mv850e3v5-2290"></a>Specify that the target processor is the V850E3V5.  The preprocessor
-constant &lsquo;<samp><span class="samp">__v850e3v5__</span></samp>&rsquo; is defined if this option is used.
+constant `<samp><span class="samp">__v850e3v5__</span></samp>' is defined if this option is used.
 
      <br><dt><code>-mv850e2v4</code><dd><a name="index-mv850e2v4-2291"></a>Specify that the target processor is the V850E3V5.  This is an alias for
 the <samp><span class="option">-mv850e3v5</span></samp> option.
 
      <br><dt><code>-mv850e2v3</code><dd><a name="index-mv850e2v3-2292"></a>Specify that the target processor is the V850E2V3.  The preprocessor
-constant &lsquo;<samp><span class="samp">__v850e2v3__</span></samp>&rsquo; is defined if this option is used.
+constant `<samp><span class="samp">__v850e2v3__</span></samp>' is defined if this option is used.
 
      <br><dt><code>-mv850e2</code><dd><a name="index-mv850e2-2293"></a>Specify that the target processor is the V850E2.  The preprocessor
-constant &lsquo;<samp><span class="samp">__v850e2__</span></samp>&rsquo; is defined if this option is used.
+constant `<samp><span class="samp">__v850e2__</span></samp>' is defined if this option is used.
 
      <br><dt><code>-mv850e1</code><dd><a name="index-mv850e1-2294"></a>Specify that the target processor is the V850E1.  The preprocessor
-constants &lsquo;<samp><span class="samp">__v850e1__</span></samp>&rsquo; and &lsquo;<samp><span class="samp">__v850e__</span></samp>&rsquo; are defined if
+constants `<samp><span class="samp">__v850e1__</span></samp>' and `<samp><span class="samp">__v850e__</span></samp>' are defined if
 this option is used.
 
      <br><dt><code>-mv850es</code><dd><a name="index-mv850es-2295"></a>Specify that the target processor is the V850ES.  This is an alias for
 the <samp><span class="option">-mv850e1</span></samp> option.
 
      <br><dt><code>-mv850e</code><dd><a name="index-mv850e-2296"></a>Specify that the target processor is the V850E.  The preprocessor
-constant &lsquo;<samp><span class="samp">__v850e__</span></samp>&rsquo; is defined if this option is used.
+constant `<samp><span class="samp">__v850e__</span></samp>' is defined if this option is used.
 
      <p>If neither <samp><span class="option">-mv850</span></samp> nor <samp><span class="option">-mv850e</span></samp> nor <samp><span class="option">-mv850e1</span></samp>
 nor <samp><span class="option">-mv850e2</span></samp> nor <samp><span class="option">-mv850e2v3</span></samp> nor <samp><span class="option">-mv850e3v5</span></samp>
 are defined then a default target processor is chosen and the
-relevant &lsquo;<samp><span class="samp">__v850*__</span></samp>&rsquo; preprocessor constant is defined.
+relevant `<samp><span class="samp">__v850*__</span></samp>' preprocessor constant is defined.
 
-     <p>The preprocessor constants &lsquo;<samp><span class="samp">__v850</span></samp>&rsquo; and &lsquo;<samp><span class="samp">__v851__</span></samp>&rsquo; are always
+     <p>The preprocessor constants `<samp><span class="samp">__v850</span></samp>' and `<samp><span class="samp">__v851__</span></samp>' are always
 defined, regardless of which processor variant is the target.
 
      <br><dt><code>-mdisable-callt</code><dt><code>-mno-disable-callt</code><dd><a name="index-mdisable_002dcallt-2297"></a><a name="index-mno_002ddisable_002dcallt-2298"></a>This option suppresses generation of the <code>CALLT</code> instruction for the
@@ -135,7 +135,7 @@ to the assembler.
 
      <br><dt><code>-msoft-float</code><dt><code>-mhard-float</code><dd><a name="index-msoft_002dfloat-2303"></a><a name="index-mhard_002dfloat-2304"></a>Disable (or re-enable) the generation of hardware floating point
 instructions.  This option is only significant when the target
-architecture is &lsquo;<samp><span class="samp">V850E2V3</span></samp>&rsquo; or higher.  If hardware floating point
+architecture is `<samp><span class="samp">V850E2V3</span></samp>' or higher.  If hardware floating point
 instructions are being generated then the C preprocessor symbol
 <code>__FPU_OK__</code> will be defined, otherwise the symbol
 <code>__NO_FPU__</code> will be defined.

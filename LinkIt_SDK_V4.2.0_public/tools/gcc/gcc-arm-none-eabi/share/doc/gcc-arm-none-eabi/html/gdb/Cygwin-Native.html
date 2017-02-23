@@ -3,7 +3,7 @@
 <title>Cygwin Native - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Native.html#Native" title="Native">
 <link rel="prev" href="DJGPP-Native.html#DJGPP-Native" title="DJGPP Native">
@@ -52,7 +52,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Native.html#Native">Native</a>
 DLLs with and without symbolic debugging information.
 
    <p><a name="index-Ctrl_002dBREAK_002c-MS_002dWindows-1319"></a><a name="index-interrupt-debuggee-on-MS_002dWindows-1320"></a>MS-Windows programs that call <code>SetConsoleMode</code> to switch off the
-special meaning of the &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo; keystroke cannot be interrupted
+special meaning of the `<samp><span class="samp">Ctrl-C</span></samp>' keystroke cannot be interrupted
 by typing <kbd>C-c</kbd>.  For this reason, <span class="sc">gdb</span> on MS-Windows
 supports <kbd>C-&lt;BREAK&gt;</kbd> as an alternative interrupt key
 sequence, which can be used to interrupt the debuggee even if it
@@ -105,7 +105,7 @@ when the debuggee is started.
      <p><a name="index-set-new_002dgroup-1330"></a><br><dt><code>set new-group </code><var>mode</var><dd>This boolean value controls whether the debuggee should
 start a new group or stay in the same group as the debugger. 
 This affects the way the Windows OS handles
-&lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;.
+`<samp><span class="samp">Ctrl-C</span></samp>'.
 
      <p><a name="index-show-new_002dgroup-1331"></a><br><dt><code>show new-group</code><dd>Displays current value of new-group boolean.
 

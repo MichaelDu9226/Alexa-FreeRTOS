@@ -3,7 +3,7 @@
 <title>Register Classes - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Registers.html#Registers" title="Registers">
@@ -71,7 +71,7 @@ union of two classes will be another class; however, this is not required.
 
  <p><a name="index-GENERAL_005fREGS-4048"></a>One of the classes must be named <code>GENERAL_REGS</code>.  There is nothing
 terribly special about the name, but the operand constraint letters
-&lsquo;<samp><span class="samp">r</span></samp>&rsquo; and &lsquo;<samp><span class="samp">g</span></samp>&rsquo; specify this class.  If <code>GENERAL_REGS</code> is
+`<samp><span class="samp">r</span></samp>' and `<samp><span class="samp">g</span></samp>' specify this class.  If <code>GENERAL_REGS</code> is
 the same as <code>ALL_REGS</code>, just define it as a macro which expands
 to <code>ALL_REGS</code>.
 
@@ -136,7 +136,7 @@ in many of the tables described below.
 <blockquote><p>The number of distinct register classes, defined as follows:
 
      <pre class="smallexample">          #define N_REG_CLASSES (int) LIM_REG_CLASSES
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
@@ -292,9 +292,9 @@ another, smaller class.
 
       <p>Sometimes returning a more restrictive class makes better code.  For
 example, on the 68000, when <var>x</var> is an integer constant that is in range
-for a &lsquo;<samp><span class="samp">moveq</span></samp>&rsquo; instruction, the value of this macro is always
+for a `<samp><span class="samp">moveq</span></samp>' instruction, the value of this macro is always
 <code>DATA_REGS</code> as long as <var>rclass</var> includes the data registers. 
-Requiring a data register guarantees that a &lsquo;<samp><span class="samp">moveq</span></samp>&rsquo; will be used.
+Requiring a data register guarantees that a `<samp><span class="samp">moveq</span></samp>' will be used.
 
       <p>One case where <code>TARGET_PREFERRED_RELOAD_CLASS</code> must not return
 <var>rclass</var> is if <var>x</var> is a legitimate constant which cannot be
@@ -325,12 +325,12 @@ another, smaller class.  On many machines, the following definition is
 safe:
 
      <pre class="smallexample">          #define PREFERRED_RELOAD_CLASS(X,CLASS) CLASS
-</pre>
+     </pre>
       <p>Sometimes returning a more restrictive class makes better code.  For
 example, on the 68000, when <var>x</var> is an integer constant that is in range
-for a &lsquo;<samp><span class="samp">moveq</span></samp>&rsquo; instruction, the value of this macro is always
+for a `<samp><span class="samp">moveq</span></samp>' instruction, the value of this macro is always
 <code>DATA_REGS</code> as long as <var>class</var> includes the data registers. 
-Requiring a data register guarantees that a &lsquo;<samp><span class="samp">moveq</span></samp>&rsquo; will be used.
+Requiring a data register guarantees that a `<samp><span class="samp">moveq</span></samp>' will be used.
 
       <p>One case where <code>PREFERRED_RELOAD_CLASS</code> must not return
 <var>class</var> is if <var>x</var> is a legitimate constant which cannot be
@@ -385,7 +385,7 @@ require the macro to do something nontrivial.
 &mdash; Target Hook: reg_class_t <b>TARGET_SECONDARY_RELOAD</b> (<var>bool in_p, rtx x, reg_class_t reload_class, enum machine_mode reload_mode, secondary_reload_info *sri</var>)<var><a name="index-TARGET_005fSECONDARY_005fRELOAD-4069"></a></var><br>
 <blockquote><p>Many machines have some registers that cannot be copied directly to or
 from memory or even from other types of registers.  An example is the
-&lsquo;<samp><span class="samp">MQ</span></samp>&rsquo; register, which on most machines, can only be copied to or
+`<samp><span class="samp">MQ</span></samp>' register, which on most machines, can only be copied to or
 from general registers, but not memory.  Below, we shall be using the
 term 'intermediate register' when a move operation cannot be performed
 directly, but has to be done by copying the source into the intermediate
@@ -442,14 +442,14 @@ register to/from the reload operand <var>x</var>, so your hook must also
 have code to handle the register class of the intermediate operand.
 
      <!-- [For later: maybe we'll allow multi-alternative reload patterns - -->
-     <!-- the port maintainer could name a mov<mode> pattern that has clobbers - -->
-     <!-- and match the constraints of input and output to determine the required -->
-     <!-- alternative.  A restriction would be that constraints used to match -->
-     <!-- against reloads registers would have to be written as register class -->
-     <!-- constraints, or we need a new target macro / hook that tells us if an -->
-     <!-- arbitrary constraint can match an unknown register of a given class. -->
-     <!-- Such a macro / hook would also be useful in other places.] -->
-      <p><var>x</var> might be a pseudo-register or a <code>subreg</code> of a
+<!-- the port maintainer could name a mov<mode> pattern that has clobbers - -->
+<!-- and match the constraints of input and output to determine the required -->
+<!-- alternative.  A restriction would be that constraints used to match -->
+<!-- against reloads registers would have to be written as register class -->
+<!-- constraints, or we need a new target macro / hook that tells us if an -->
+<!-- arbitrary constraint can match an unknown register of a given class. -->
+<!-- Such a macro / hook would also be useful in other places.] -->
+<p><var>x</var> might be a pseudo-register or a <code>subreg</code> of a
 pseudo-register, which could either be in a hard register or in memory. 
 Use <code>true_regnum</code> to find out; it will return &minus;1 if the pseudo is
 in memory and the hard register number if it is in a register.
@@ -499,10 +499,10 @@ macro if it would always return <code>NO_REGS</code>.
 
       <p>If a scratch register is required (either with or without an
 intermediate register), you were supposed to define patterns for
-&lsquo;<samp><span class="samp">reload_in</span><var>m</var></samp>&rsquo; or &lsquo;<samp><span class="samp">reload_out</span><var>m</var></samp>&rsquo;, as required
+`<samp><span class="samp">reload_in</span><var>m</var></samp>' or `<samp><span class="samp">reload_out</span><var>m</var></samp>', as required
 (see <a href="Standard-Names.html#Standard-Names">Standard Names</a>.  These patterns, which were normally
 implemented with a <code>define_expand</code>, should be similar to the
-&lsquo;<samp><span class="samp">mov</span><var>m</var></samp>&rsquo; patterns, except that operand 2 is the scratch
+`<samp><span class="samp">mov</span><var>m</var></samp>' patterns, except that operand 2 is the scratch
 register.
 
       <p>These patterns need constraints for the reload register and scratch
@@ -639,7 +639,7 @@ as below:
      <pre class="smallexample">          #define CANNOT_CHANGE_MODE_CLASS(FROM, TO, CLASS) \
             (GET_MODE_SIZE (FROM) != GET_MODE_SIZE (TO) \
              ? reg_classes_intersect_p (FLOAT_REGS, (CLASS)) : 0)
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">

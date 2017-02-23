@@ -3,7 +3,7 @@
 <title>Aliases - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Extending-GDB.html#Extending-GDB" title="Extending GDB">
 <link rel="prev" href="Python.html#Python" title="Python">
@@ -51,15 +51,15 @@ For example, if a new <span class="sc">gdb</span> command defined in Python has
 a long name to type, it is handy to have an abbreviated version of it
 that involves less typing.
 
-   <p><span class="sc">gdb</span> itself uses aliases.  For example &lsquo;<samp><span class="samp">s</span></samp>&rsquo; is an alias
-of the &lsquo;<samp><span class="samp">step</span></samp>&rsquo; command even though it is otherwise an ambiguous
-abbreviation of other commands like &lsquo;<samp><span class="samp">set</span></samp>&rsquo; and &lsquo;<samp><span class="samp">show</span></samp>&rsquo;.
+   <p><span class="sc">gdb</span> itself uses aliases.  For example `<samp><span class="samp">s</span></samp>' is an alias
+of the `<samp><span class="samp">step</span></samp>' command even though it is otherwise an ambiguous
+abbreviation of other commands like `<samp><span class="samp">set</span></samp>' and `<samp><span class="samp">show</span></samp>'.
 
    <p>Aliases are also used to provide shortened or more common versions
 of multi-word commands.  For example, <span class="sc">gdb</span> provides the
-&lsquo;<samp><span class="samp">tty</span></samp>&rsquo; alias of the &lsquo;<samp><span class="samp">set inferior-tty</span></samp>&rsquo; command.
+`<samp><span class="samp">tty</span></samp>' alias of the `<samp><span class="samp">set inferior-tty</span></samp>' command.
 
-   <p>You can define a new alias with the &lsquo;<samp><span class="samp">alias</span></samp>&rsquo; command.
+   <p>You can define a new alias with the `<samp><span class="samp">alias</span></samp>' command.
 
      
 <a name="index-alias-2181"></a>
@@ -73,29 +73,29 @@ underscores.
    <p><var>COMMAND</var> specifies the name of an existing command
 that is being aliased.
 
-   <p>The &lsquo;<samp><span class="samp">-a</span></samp>&rsquo; option specifies that the new alias is an abbreviation
+   <p>The `<samp><span class="samp">-a</span></samp>' option specifies that the new alias is an abbreviation
 of the command.  Abbreviations are not shown in command
-lists displayed by the &lsquo;<samp><span class="samp">help</span></samp>&rsquo; command.
+lists displayed by the `<samp><span class="samp">help</span></samp>' command.
 
-   <p>The &lsquo;<samp><span class="samp">--</span></samp>&rsquo; option specifies the end of options,
+   <p>The `<samp><span class="samp">--</span></samp>' option specifies the end of options,
 and is useful when <var>ALIAS</var> begins with a dash.
 
    <p>Here is a simple example showing how to make an abbreviation
 of a command so that there is less to type. 
-Suppose you were tired of typing &lsquo;<samp><span class="samp">disas</span></samp>&rsquo;, the current
-shortest unambiguous abbreviation of the &lsquo;<samp><span class="samp">disassemble</span></samp>&rsquo; command
-and you wanted an even shorter version named &lsquo;<samp><span class="samp">di</span></samp>&rsquo;. 
+Suppose you were tired of typing `<samp><span class="samp">disas</span></samp>', the current
+shortest unambiguous abbreviation of the `<samp><span class="samp">disassemble</span></samp>' command
+and you wanted an even shorter version named `<samp><span class="samp">di</span></samp>'. 
 The following will accomplish this.
 
 <pre class="smallexample">     (gdb) alias -a di = disas
 </pre>
    <p>Note that aliases are different from user-defined commands. 
 With a user-defined command, you also need to write documentation
-for it with the &lsquo;<samp><span class="samp">document</span></samp>&rsquo; command. 
+for it with the `<samp><span class="samp">document</span></samp>' command. 
 An alias automatically picks up the documentation of the existing command.
 
-   <p>Here is an example where we make &lsquo;<samp><span class="samp">elms</span></samp>&rsquo; an abbreviation of
-&lsquo;<samp><span class="samp">elements</span></samp>&rsquo; in the &lsquo;<samp><span class="samp">set print elements</span></samp>&rsquo; command. 
+   <p>Here is an example where we make `<samp><span class="samp">elms</span></samp>' an abbreviation of
+`<samp><span class="samp">elements</span></samp>' in the `<samp><span class="samp">set print elements</span></samp>' command. 
 This is to show that you can make an abbreviation of any part
 of a command.
 
@@ -105,8 +105,8 @@ of a command.
      (gdb) show p elms
      Limit on string chars or array elements to print is 200.
 </pre>
-   <p>Note that if you are defining an alias of a &lsquo;<samp><span class="samp">set</span></samp>&rsquo; command,
-and you want to have an alias for the corresponding &lsquo;<samp><span class="samp">show</span></samp>&rsquo;
+   <p>Note that if you are defining an alias of a `<samp><span class="samp">set</span></samp>' command,
+and you want to have an alias for the corresponding `<samp><span class="samp">show</span></samp>'
 command, then you need to define the latter separately.
 
    <p>Unambiguously abbreviated commands are allowed in <var>COMMAND</var> and
@@ -116,7 +116,7 @@ command, then you need to define the latter separately.
 </pre>
    <p>Finally, here is an example showing the creation of a one word
 alias for a more complex command. 
-This creates alias &lsquo;<samp><span class="samp">spe</span></samp>&rsquo; of the command &lsquo;<samp><span class="samp">set print elements</span></samp>&rsquo;.
+This creates alias `<samp><span class="samp">spe</span></samp>' of the command `<samp><span class="samp">set print elements</span></samp>'.
 
 <pre class="smallexample">     (gdb) alias spe = set print elements
      (gdb) spe 20

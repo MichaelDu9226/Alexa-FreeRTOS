@@ -3,7 +3,7 @@
 <title>Getting Started - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Hints.html#Hints" title="Hints">
 <link rel="next" href="Debugging-GDB.html#Debugging-GDB" title="Debugging GDB">
@@ -106,8 +106,8 @@ single-stepping works.  As a <span class="sc">gdb</span> user, you know that the
 <code>step</code> command invokes single-stepping.  The command is invoked
 via command tables (see <samp><span class="file">command.h</span></samp>); by convention the function
 which actually performs the command is formed by taking the name of
-the command and adding &lsquo;<samp><span class="samp">_command</span></samp>&rsquo;, or in the case of an
-<code>info</code> subcommand, &lsquo;<samp><span class="samp">_info</span></samp>&rsquo;.  For example, the <code>step</code>
+the command and adding `<samp><span class="samp">_command</span></samp>', or in the case of an
+<code>info</code> subcommand, `<samp><span class="samp">_info</span></samp>'.  For example, the <code>step</code>
 command invokes the <code>step_command</code> function and the <code>info
 display</code> command invokes <code>display_info</code>.  When this convention is
 not followed, you might have to use <code>grep</code> or <kbd>M-x

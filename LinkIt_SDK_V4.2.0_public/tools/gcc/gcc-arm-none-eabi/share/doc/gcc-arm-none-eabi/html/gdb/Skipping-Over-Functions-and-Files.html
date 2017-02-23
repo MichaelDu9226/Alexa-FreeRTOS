@@ -3,7 +3,7 @@
 <title>Skipping Over Functions and Files - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stopping.html#Stopping" title="Stopping">
 <link rel="prev" href="Continuing-and-Stepping.html#Continuing-and-Stepping" title="Continuing and Stepping">
@@ -107,11 +107,11 @@ print a table with details about all functions and files marked for skipping.
 
           <dl>
 <dt><em>Identifier</em><dd>A number identifying this skip. 
-<br><dt><em>Type</em><dd>The type of this skip, either &lsquo;<samp><span class="samp">function</span></samp>&rsquo; or &lsquo;<samp><span class="samp">file</span></samp>&rsquo;. 
-<br><dt><em>Enabled or Disabled</em><dd>Enabled skips are marked with &lsquo;<samp><span class="samp">y</span></samp>&rsquo;.  Disabled skips are marked with &lsquo;<samp><span class="samp">n</span></samp>&rsquo;. 
+<br><dt><em>Type</em><dd>The type of this skip, either `<samp><span class="samp">function</span></samp>' or `<samp><span class="samp">file</span></samp>'. 
+<br><dt><em>Enabled or Disabled</em><dd>Enabled skips are marked with `<samp><span class="samp">y</span></samp>'.  Disabled skips are marked with `<samp><span class="samp">n</span></samp>'. 
 <br><dt><em>Address</em><dd>For function skips, this column indicates the address in memory of the function
 being skipped.  If you've set a function skip on a function which has not yet
-been loaded, this field will contain &lsquo;<samp><span class="samp">&lt;PENDING&gt;</span></samp>&rsquo;.  Once a shared library
+been loaded, this field will contain `<samp><span class="samp">&lt;PENDING&gt;</span></samp>'.  Once a shared library
 which has the function is loaded, <code>info skip</code> will show the function's
 address here. 
 <br><dt><em>What</em><dd>For file skips, this field contains the filename being skipped.  For functions

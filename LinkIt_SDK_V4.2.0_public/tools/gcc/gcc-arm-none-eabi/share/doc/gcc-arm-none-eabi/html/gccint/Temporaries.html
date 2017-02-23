@@ -3,7 +3,7 @@
 <title>Temporaries - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GIMPLE.html#GIMPLE" title="GIMPLE">
 <link rel="prev" href="GIMPLE-Exception-Handling.html#GIMPLE-Exception-Handling" title="GIMPLE Exception Handling">
@@ -59,7 +59,7 @@ When gimplification encounters a subexpression that is too
 complex, it creates a new temporary variable to hold the value of
 the subexpression, and adds a new statement to initialize it
 before the current statement. These special temporaries are known
-as &lsquo;<samp><span class="samp">expression temporaries</span></samp>&rsquo;, and are allocated using
+as `<samp><span class="samp">expression temporaries</span></samp>', and are allocated using
 <code>get_formal_tmp_var</code>.  The compiler tries to always evaluate
 identical expressions into the same temporary, to simplify
 elimination of redundant calculations.
@@ -85,7 +85,7 @@ temporary.
 <h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="#fnd-1">1</a>]</small> These restrictions are derived
 from those in Morgan 4.8.</p>
 
- <hr></div>
+ <p><hr></div>
 
  </body></html>
 

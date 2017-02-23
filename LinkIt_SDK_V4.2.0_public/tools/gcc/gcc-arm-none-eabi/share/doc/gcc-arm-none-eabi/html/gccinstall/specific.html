@@ -3,7 +3,7 @@
 <title>Host/Target specific installation notes for GCC</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Host/Target specific installation notes for GCC">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="top" href="#Top">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
@@ -153,7 +153,7 @@ are the versions which identify themselves as DEC OSF/1.)
 
 <h3 class="heading"><a name="TOC2"></a><a name="amd64_002dx_002dsolaris210"></a>amd64-*-solaris2.1[0-9]*</h3>
 
-<p>This is a synonym for &lsquo;<samp><span class="samp">x86_64-*-solaris2.1[0-9]*</span></samp>&rsquo;.
+<p>This is a synonym for `<samp><span class="samp">x86_64-*-solaris2.1[0-9]*</span></samp>'.
 
    <p><hr />
 
@@ -173,7 +173,7 @@ applications.  There are no standard Unix configurations.
 See &ldquo;AVR Options&rdquo; in the main manual
 for the list of supported MCU types.
 
-   <p>Use &lsquo;<samp><span class="samp">configure --target=avr --enable-languages="c"</span></samp>&rsquo; to configure GCC.
+   <p>Use `<samp><span class="samp">configure --target=avr --enable-languages="c"</span></samp>' to configure GCC.
 
    <p>Further installation notes and other useful information about AVR tools
 can also be obtained from:
@@ -209,10 +209,10 @@ used in embedded applications.
 
    <p>See &ldquo;CR16 Options&rdquo; in the main manual for a list of CR16-specific options.
 
-   <p>Use &lsquo;<samp><span class="samp">configure --target=cr16-elf --enable-languages=c,c++</span></samp>&rsquo; to configure
+   <p>Use `<samp><span class="samp">configure --target=cr16-elf --enable-languages=c,c++</span></samp>' to configure
 GCC for building a CR16 elf cross-compiler.
 
-   <p>Use &lsquo;<samp><span class="samp">configure --target=cr16-uclinux --enable-languages=c,c++</span></samp>&rsquo; to configure
+   <p>Use `<samp><span class="samp">configure --target=cr16-uclinux --enable-languages=c,c++</span></samp>' to configure
 GCC for building a CR16 uclinux cross-compiler.
 
    <p><hr />
@@ -228,9 +228,9 @@ for a list of CRIS-specific options.
    <p>There are a few different CRIS targets:
      <dl>
 <dt><code>cris-axis-elf</code><dd>Mainly for monolithic embedded systems.  Includes a multilib for the
-&lsquo;<samp><span class="samp">v10</span></samp>&rsquo; core used in &lsquo;<samp><span class="samp">ETRAX 100 LX</span></samp>&rsquo;. 
+`<samp><span class="samp">v10</span></samp>' core used in `<samp><span class="samp">ETRAX 100 LX</span></samp>'. 
 <br><dt><code>cris-axis-linux-gnu</code><dd>A GNU/Linux port for the CRIS architecture, currently targeting
-&lsquo;<samp><span class="samp">ETRAX 100 LX</span></samp>&rsquo; by default. 
+`<samp><span class="samp">ETRAX 100 LX</span></samp>' by default. 
 </dl>
 
    <p>For <code>cris-axis-elf</code> you need binutils 2.11
@@ -330,7 +330,7 @@ many limitations.
 format which GCC does not know about).  It also inserts timestamps
 into each object file it creates, causing the 3-stage comparison test to
 fail during a bootstrap.  You should be able to continue by saying
-&lsquo;<samp><span class="samp">make all-host all-target</span></samp>&rsquo; after getting the failure from &lsquo;<samp><span class="samp">make</span></samp>&rsquo;.
+`<samp><span class="samp">make all-host all-target</span></samp>' after getting the failure from `<samp><span class="samp">make</span></samp>'.
 
    <p>Various GCC features are not supported.  For example, it does not support weak
 symbols or alias definitions.  As a result, explicit template instantiations
@@ -341,7 +341,7 @@ build many C++ applications.
 PROCESSOR_7100LC and PROCESSOR_8000.  They are selected from the pa-risc
 architecture specified for the target machine when configuring. 
 PROCESSOR_8000 is the default.  PROCESSOR_7100LC is selected when
-the target is a &lsquo;<samp><span class="samp">hppa1*</span></samp>&rsquo; machine.
+the target is a `<samp><span class="samp">hppa1*</span></samp>' machine.
 
    <p>The PROCESSOR_8000 model is not well suited to older processors.  Thus,
 it is important to completely specify the machine architecture when
@@ -354,12 +354,12 @@ through 11.00, and the UNIX 98 namespace for HP-UX 11.11 and later.
 This namespace change might cause problems when bootstrapping with
 an earlier version of GCC or the HP compiler as essentially the same
 namespace is required for an entire build.  This problem can be avoided
-in a number of ways.  With HP cc, <samp><span class="env">UNIX_STD</span></samp> can be set to &lsquo;<samp><span class="samp">95</span></samp>&rsquo;
-or &lsquo;<samp><span class="samp">98</span></samp>&rsquo;.  Another way is to add an appropriate set of predefines
+in a number of ways.  With HP cc, <samp><span class="env">UNIX_STD</span></samp> can be set to `<samp><span class="samp">95</span></samp>'
+or `<samp><span class="samp">98</span></samp>'.  Another way is to add an appropriate set of predefines
 to <samp><span class="env">CC</span></samp>.  The description for the <samp><span class="option">munix=</span></samp> option contains
 a list of the predefines used with each standard.
 
-   <p>More specific information to &lsquo;<samp><span class="samp">hppa*-hp-hpux*</span></samp>&rsquo; targets follows.
+   <p>More specific information to `<samp><span class="samp">hppa*-hp-hpux*</span></samp>' targets follows.
 
    <p><hr />
 
@@ -408,9 +408,9 @@ is best not to start from a binary distribution.
 
    <p>On 64-bit capable systems, there are two distinct targets.  Different
 installation prefixes must be used if both are to be installed on
-the same system.  The &lsquo;<samp><span class="samp">hppa[1-2]*-hp-hpux11*</span></samp>&rsquo; target generates code
+the same system.  The `<samp><span class="samp">hppa[1-2]*-hp-hpux11*</span></samp>' target generates code
 for the 32-bit PA-RISC runtime architecture and uses the HP linker. 
-The &lsquo;<samp><span class="samp">hppa64-hp-hpux11*</span></samp>&rsquo; target generates 64-bit code for the
+The `<samp><span class="samp">hppa64-hp-hpux11*</span></samp>' target generates 64-bit code for the
 PA-RISC 2.0 architecture.
 
    <p>The script config.guess now selects the target type based on the compiler
@@ -425,13 +425,13 @@ convenient to place many other compiler options in <samp><span class="env">CC</s
 <samp><span class="env">CC="cc -Ac +DA2.0W -Wp,-H16376 -D_CLASSIC_TYPES -D_HPUX_SOURCE"</span></samp>
 can be used to bootstrap the GCC 3.3 branch with the HP compiler in
 64-bit K&amp;R/bundled mode.  The <samp><span class="option">+DA2.0W</span></samp> option will result in
-the automatic selection of the &lsquo;<samp><span class="samp">hppa64-hp-hpux11*</span></samp>&rsquo; target.  The
+the automatic selection of the `<samp><span class="samp">hppa64-hp-hpux11*</span></samp>' target.  The
 macro definition table of cpp needs to be increased for a successful
 build with the HP compiler.  _CLASSIC_TYPES and _HPUX_SOURCE need to
 be defined when building with the bundled compiler, or when using the
 <samp><span class="option">-Ac</span></samp> option.  These defines aren't necessary with <samp><span class="option">-Ae</span></samp>.
 
-   <p>It is best to explicitly configure the &lsquo;<samp><span class="samp">hppa64-hp-hpux11*</span></samp>&rsquo; target
+   <p>It is best to explicitly configure the `<samp><span class="samp">hppa64-hp-hpux11*</span></samp>' target
 with the <samp><span class="option">--with-ld=...</span></samp> option.  This overrides the standard
 search for ld.  The two linkers supported on this target require different
 commands.  The default linker is determined during configuration.  As a
@@ -464,7 +464,7 @@ problem on the 64-bit port resulting from HP's non-standard use of
 the .init and .fini sections for array initializers and finalizers.
 
    <p>Although the HP and GNU linkers are both supported for the
-&lsquo;<samp><span class="samp">hppa64-hp-hpux11*</span></samp>&rsquo; target, it is strongly recommended that the
+`<samp><span class="samp">hppa64-hp-hpux11*</span></samp>' target, it is strongly recommended that the
 HP linker be used for link editing on this target.
 
    <p>At this time, the GNU linker does not support the creation of long
@@ -512,12 +512,12 @@ recommended to use the GNU assembler instead.  There is no bundled
 version, but the current version, from GNU binutils 2.22, is known to
 work.
 
-   <p>Solaris&nbsp;2/x86 doesn't support the execution of SSE/SSE2 instructions
-before Solaris&nbsp;9 4/04, even if the CPU supports them.  Programs will
+   <p>Solaris&nbsp;<!-- /@w -->2/x86 doesn't support the execution of SSE/SSE2 instructions
+before Solaris&nbsp;<!-- /@w -->9 4/04, even if the CPU supports them.  Programs will
 receive <code>SIGILL</code> if they try.  The fix is available both in
-Solaris&nbsp;9 Update&nbsp;6 and kernel patch 112234-12 or newer.  To
+Solaris&nbsp;<!-- /@w -->9 Update&nbsp;<!-- /@w -->6 and kernel patch 112234-12 or newer.  To
 avoid this problem,
-<samp><span class="option">-march</span></samp> defaults to &lsquo;<samp><span class="samp">pentiumpro</span></samp>&rsquo; on Solaris 9.  If
+<samp><span class="option">-march</span></samp> defaults to `<samp><span class="samp">pentiumpro</span></samp>' on Solaris 9.  If
 you have the patch installed, you can configure GCC with an appropriate
 <samp><span class="option">--with-arch</span></samp> option, but need GNU <samp><span class="command">as</span></samp> for SSE2 support.
 
@@ -526,9 +526,9 @@ you have the patch installed, you can configure GCC with an appropriate
 <h3 class="heading"><a name="TOC18"></a><a name="ix86_002dx_002dsolaris210"></a>i?86-*-solaris2.10</h3>
 
 <p>Use this for Solaris 10 or later on x86 and x86-64 systems.  Starting
-with GCC 4.7, there is also a 64-bit &lsquo;<samp><span class="samp">amd64-*-solaris2.1[0-9]*</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">x86_64-*-solaris2.1[0-9]*</span></samp>&rsquo; configuration that corresponds to
-&lsquo;<samp><span class="samp">sparcv9-sun-solaris2*</span></samp>&rsquo;.
+with GCC 4.7, there is also a 64-bit `<samp><span class="samp">amd64-*-solaris2.1[0-9]*</span></samp>' or
+`<samp><span class="samp">x86_64-*-solaris2.1[0-9]*</span></samp>' configuration that corresponds to
+`<samp><span class="samp">sparcv9-sun-solaris2*</span></samp>'.
 
    <p>It is recommended that you configure GCC to use the GNU assembler, in
 <samp><span class="file">/usr/sfw/bin/gas</span></samp>.  The versions included in Solaris 10, from GNU
@@ -627,7 +627,7 @@ to an incorrect definition of <code>CC</code> in the Makefile or mixing files
 compiled with the native C compiler and GCC.  During the stage1 phase of
 the build, the native AIX compiler <strong>must</strong> be invoked as <samp><span class="command">cc</span></samp>
 (not <samp><span class="command">xlc</span></samp>).  Once <samp><span class="command">configure</span></samp> has been informed of
-<samp><span class="command">xlc</span></samp>, one needs to use &lsquo;<samp><span class="samp">make distclean</span></samp>&rsquo; to remove the
+<samp><span class="command">xlc</span></samp>, one needs to use `<samp><span class="samp">make distclean</span></samp>' to remove the
 configure cache files and ensure that <samp><span class="env">CC</span></samp> environment variable
 does not provide a definition that will confuse <samp><span class="command">configure</span></samp>. 
 If this error occurs during stage2 or later, then the problem most likely
@@ -653,23 +653,23 @@ APAR IY26685 (AIX 4.3) or APAR IY25528 (AIX 5.1).  It also requires a
 fix for another AIX Assembler bug and a co-dependent AIX Archiver fix
 referenced as APAR IY53606 (AIX 5.2) or as APAR IY54774 (AIX 5.1)
 
-   <p>&lsquo;<samp><span class="samp">libstdc++</span></samp>&rsquo; in GCC 3.4 increments the major version number of the
+   <p>`<samp><span class="samp">libstdc++</span></samp>' in GCC 3.4 increments the major version number of the
 shared object and GCC installation places the <samp><span class="file">libstdc++.a</span></samp>
 shared library in a common location which will overwrite the and GCC
 3.3 version of the shared library.  Applications either need to be
 re-linked against the new shared library or the GCC 3.1 and GCC 3.3
-versions of the &lsquo;<samp><span class="samp">libstdc++</span></samp>&rsquo; shared object needs to be available
-to the AIX runtime loader.  The GCC 3.1 &lsquo;<samp><span class="samp">libstdc++.so.4</span></samp>&rsquo;, if
-present, and GCC 3.3 &lsquo;<samp><span class="samp">libstdc++.so.5</span></samp>&rsquo; shared objects can be
+versions of the `<samp><span class="samp">libstdc++</span></samp>' shared object needs to be available
+to the AIX runtime loader.  The GCC 3.1 `<samp><span class="samp">libstdc++.so.4</span></samp>', if
+present, and GCC 3.3 `<samp><span class="samp">libstdc++.so.5</span></samp>' shared objects can be
 installed for runtime dynamic loading using the following steps to set
-the &lsquo;<samp><span class="samp">F_LOADONLY</span></samp>&rsquo; flag in the shared object for <em>each</em>
+the `<samp><span class="samp">F_LOADONLY</span></samp>' flag in the shared object for <em>each</em>
 multilib <samp><span class="file">libstdc++.a</span></samp> installed:
 
    <p>Extract the shared objects from the currently installed
 <samp><span class="file">libstdc++.a</span></samp> archive:
 <pre class="smallexample">     % ar -x libstdc++.a libstdc++.so.4 libstdc++.so.5
 </pre>
-   <p>Enable the &lsquo;<samp><span class="samp">F_LOADONLY</span></samp>&rsquo; flag so that the shared object will be
+   <p>Enable the `<samp><span class="samp">F_LOADONLY</span></samp>' flag so that the shared object will be
 available for runtime dynamic loading, but not linking:
 <pre class="smallexample">     % strip -e libstdc++.so.4 libstdc++.so.5
 </pre>
@@ -716,11 +716,11 @@ website as PTF U453956.  This fix is incorporated in AIX 4.3.1 and above.
 
    <p>AIX provides National Language Support (NLS).  Compilers and assemblers
 use NLS to support locale-specific representations of various data
-formats including floating-point numbers (e.g., &lsquo;<samp><span class="samp">.</span></samp>&rsquo;  vs &lsquo;<samp><span class="samp">,</span></samp>&rsquo; for
+formats including floating-point numbers (e.g., `<samp><span class="samp">.</span></samp>'  vs `<samp><span class="samp">,</span></samp>' for
 separating decimal fractions).  There have been problems reported where
 GCC does not produce the same floating-point formats that the assembler
 expects.  If one encounters this problem, set the <samp><span class="env">LANG</span></samp>
-environment variable to &lsquo;<samp><span class="samp">C</span></samp>&rsquo; or &lsquo;<samp><span class="samp">En_US</span></samp>&rsquo;.
+environment variable to `<samp><span class="samp">C</span></samp>' or `<samp><span class="samp">En_US</span></samp>'.
 
    <p>A default can be specified with the <samp><span class="option">-mcpu=</span><var>cpu_type</var></samp>
 switch and using the configure option <samp><span class="option">--with-cpu-</span><var>cpu_type</var></samp>.
@@ -765,8 +765,8 @@ This configuration is intended for embedded systems.
 <h3 class="heading"><a name="TOC27"></a><a name="m68k_002dx_002dx"></a>m68k-*-*</h3>
 
 <p>By default,
-&lsquo;<samp><span class="samp">m68k-*-elf*</span></samp>&rsquo;, &lsquo;<samp><span class="samp">m68k-*-rtems</span></samp>&rsquo;,  &lsquo;<samp><span class="samp">m68k-*-uclinux</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">m68k-*-linux</span></samp>&rsquo;
+`<samp><span class="samp">m68k-*-elf*</span></samp>', `<samp><span class="samp">m68k-*-rtems</span></samp>',  `<samp><span class="samp">m68k-*-uclinux</span></samp>' and
+`<samp><span class="samp">m68k-*-linux</span></samp>'
 build libraries for both M680x0 and ColdFire processors.  If you only
 need the M680x0 libraries, you can omit the ColdFire ones by passing
 <samp><span class="option">--with-arch=m68k</span></samp> to <samp><span class="command">configure</span></samp>.  Alternatively, you
@@ -775,16 +775,16 @@ can omit the M680x0 libraries by passing <samp><span class="option">--with-arch=
 appropriate for the target system when
 configured with <samp><span class="option">--with-arch=cf</span></samp> and 68020 code otherwise.
 
-   <p>The &lsquo;<samp><span class="samp">m68k-*-netbsd</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">m68k-*-openbsd</span></samp>&rsquo; targets also support the <samp><span class="option">--with-arch</span></samp>
+   <p>The `<samp><span class="samp">m68k-*-netbsd</span></samp>' and
+`<samp><span class="samp">m68k-*-openbsd</span></samp>' targets also support the <samp><span class="option">--with-arch</span></samp>
 option.  They will generate ColdFire CFV4e code when configured with
 <samp><span class="option">--with-arch=cf</span></samp> and 68020 code otherwise.
 
    <p>You can override the default processors listed above by configuring
 with <samp><span class="option">--with-cpu=</span><var>target</var></samp>.  This <var>target</var> can either
 be a <samp><span class="option">-mcpu</span></samp> argument or one of the following values:
-&lsquo;<samp><span class="samp">m68000</span></samp>&rsquo;, &lsquo;<samp><span class="samp">m68010</span></samp>&rsquo;, &lsquo;<samp><span class="samp">m68020</span></samp>&rsquo;, &lsquo;<samp><span class="samp">m68030</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">m68040</span></samp>&rsquo;, &lsquo;<samp><span class="samp">m68060</span></samp>&rsquo;, &lsquo;<samp><span class="samp">m68020-40</span></samp>&rsquo; and &lsquo;<samp><span class="samp">m68020-60</span></samp>&rsquo;.
+`<samp><span class="samp">m68000</span></samp>', `<samp><span class="samp">m68010</span></samp>', `<samp><span class="samp">m68020</span></samp>', `<samp><span class="samp">m68030</span></samp>',
+`<samp><span class="samp">m68040</span></samp>', `<samp><span class="samp">m68060</span></samp>', `<samp><span class="samp">m68020-40</span></samp>' and `<samp><span class="samp">m68020-60</span></samp>'.
 
    <p>GCC requires at least binutils version 2.17 on these targets.
 
@@ -793,7 +793,7 @@ be a <samp><span class="option">-mcpu</span></samp> argument or one of the follo
 <h3 class="heading"><a name="TOC28"></a><a name="m68k_002dx_002duclinux"></a>m68k-*-uclinux</h3>
 
 <p>GCC 4.3 changed the uClinux configuration so that it uses the
-&lsquo;<samp><span class="samp">m68k-linux-gnu</span></samp>&rsquo; ABI rather than the &lsquo;<samp><span class="samp">m68k-elf</span></samp>&rsquo; ABI. 
+`<samp><span class="samp">m68k-linux-gnu</span></samp>' ABI rather than the `<samp><span class="samp">m68k-elf</span></samp>' ABI. 
 It also added improved support for C++ and flat shared libraries,
 both of which were ABI changes.
 
@@ -826,19 +826,19 @@ optional, and there should not be a warning about their absence.
 
    <p>The libstdc++ atomic locking routines for MIPS targets requires MIPS II
 and later.  A patch went in just after the GCC 3.3 release to
-make &lsquo;<samp><span class="samp">mips*-*-*</span></samp>&rsquo; use the generic implementation instead.  You can also
-configure for &lsquo;<samp><span class="samp">mipsel-elf</span></samp>&rsquo; as a workaround.  The
-&lsquo;<samp><span class="samp">mips*-*-linux*</span></samp>&rsquo; target continues to use the MIPS II routines.  More
+make `<samp><span class="samp">mips*-*-*</span></samp>' use the generic implementation instead.  You can also
+configure for `<samp><span class="samp">mipsel-elf</span></samp>' as a workaround.  The
+`<samp><span class="samp">mips*-*-linux*</span></samp>' target continues to use the MIPS II routines.  More
 work on this is expected in future releases.
 
 <!-- If you make -with-llsc the default for another target, please also -->
 <!-- update the description of the -with-llsc option. -->
-   <p>The built-in <code>__sync_*</code> functions are available on MIPS II and
-later systems and others that support the &lsquo;<samp><span class="samp">ll</span></samp>&rsquo;, &lsquo;<samp><span class="samp">sc</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">sync</span></samp>&rsquo; instructions.  This can be overridden by passing
+<p>The built-in <code>__sync_*</code> functions are available on MIPS II and
+later systems and others that support the `<samp><span class="samp">ll</span></samp>', `<samp><span class="samp">sc</span></samp>' and
+`<samp><span class="samp">sync</span></samp>' instructions.  This can be overridden by passing
 <samp><span class="option">--with-llsc</span></samp> or <samp><span class="option">--without-llsc</span></samp> when configuring GCC. 
 Since the Linux kernel emulates these instructions if they are
-missing, the default for &lsquo;<samp><span class="samp">mips*-*-linux*</span></samp>&rsquo; targets is
+missing, the default for `<samp><span class="samp">mips*-*-linux*</span></samp>' targets is
 <samp><span class="option">--with-llsc</span></samp>.  The <samp><span class="option">--with-llsc</span></samp> and
 <samp><span class="option">--without-llsc</span></samp> configure options may be overridden at compile
 time by passing the <samp><span class="option">-mllsc</span></samp> or <samp><span class="option">-mno-llsc</span></samp> options to
@@ -1011,7 +1011,7 @@ you can install a pre-built GCC to bootstrap and install GCC.  See the
 <a href="binaries.html">binaries page</a> for details.
 
    <p>The Solaris 2 <samp><span class="command">/bin/sh</span></samp> will often fail to configure
-&lsquo;<samp><span class="samp">libstdc++-v3</span></samp>&rsquo;, &lsquo;<samp><span class="samp">boehm-gc</span></samp>&rsquo; or &lsquo;<samp><span class="samp">libjava</span></samp>&rsquo;.  We therefore
+`<samp><span class="samp">libstdc++-v3</span></samp>', `<samp><span class="samp">boehm-gc</span></samp>' or `<samp><span class="samp">libjava</span></samp>'.  We therefore
 recommend using the following initial sequence of commands
 
 <pre class="smallexample">     % CONFIG_SHELL=/bin/ksh
@@ -1060,9 +1060,9 @@ features, so better stay with Sun <samp><span class="command">ld</span></samp>. 
 plugin (<samp><span class="option">-fuse-linker-plugin</span></samp>) with GNU <samp><span class="command">ld</span></samp>, GNU
 binutils <em>must</em> be configured with <samp><span class="option">--enable-largefile</span></samp>.
 
-   <p>To enable symbol versioning in &lsquo;<samp><span class="samp">libstdc++</span></samp>&rsquo; with Sun <samp><span class="command">ld</span></samp>,
+   <p>To enable symbol versioning in `<samp><span class="samp">libstdc++</span></samp>' with Sun <samp><span class="command">ld</span></samp>,
 you need to have any version of GNU <samp><span class="command">c++filt</span></samp>, which is part of
-GNU binutils.  &lsquo;<samp><span class="samp">libstdc++</span></samp>&rsquo; symbol versioning will be disabled if no
+GNU binutils.  `<samp><span class="samp">libstdc++</span></samp>' symbol versioning will be disabled if no
 appropriate version is found.  Sun <samp><span class="command">c++filt</span></samp> from the Sun Studio
 compilers does <em>not</em> work.
 
@@ -1081,16 +1081,16 @@ testsuite failures appear.
    <p>There are patches for Solaris 9 (117171-11 or newer for
 SPARC, 117172-11 or newer for Intel) that address this problem.
 
-   <p>Thread-local storage (TLS) is supported in Solaris&nbsp;9, but requires
-some patches.  The &lsquo;<samp><span class="samp">libthread</span></samp>&rsquo; patches provide the
+   <p>Thread-local storage (TLS) is supported in Solaris&nbsp;<!-- /@w -->9, but requires
+some patches.  The `<samp><span class="samp">libthread</span></samp>' patches provide the
 <code>__tls_get_addr</code> (SPARC, 64-bit x86) resp. <code>___tls_get_addr</code>
-(32-bit x86) functions.  On Solaris&nbsp;9, the necessary support
+(32-bit x86) functions.  On Solaris&nbsp;<!-- /@w -->9, the necessary support
 on SPARC is present since FCS, while 114432-05 or newer is required on
-Intel.  Additionally, on Solaris&nbsp;9/x86, patch 113986-02 or newer is
+Intel.  Additionally, on Solaris&nbsp;<!-- /@w -->9/x86, patch 113986-02 or newer is
 required for the Sun <samp><span class="command">ld</span></samp> and runtime linker (<samp><span class="command">ld.so.1</span></samp>)
-support, while Solaris&nbsp;9/SPARC works since FCS.  The linker
+support, while Solaris&nbsp;<!-- /@w -->9/SPARC works since FCS.  The linker
 patches must be installed even if GNU <samp><span class="command">ld</span></samp> is used. Sun
-<samp><span class="command">as</span></samp> in Solaris&nbsp;9 doesn't support the necessary
+<samp><span class="command">as</span></samp> in Solaris&nbsp;<!-- /@w -->9 doesn't support the necessary
 relocations, so GNU <samp><span class="command">as</span></samp> must be used.  The <samp><span class="command">configure</span></samp>
 script checks for those prerequisites and automatically enables TLS
 support if they are met.  Although those minimal patch versions should
@@ -1210,7 +1210,7 @@ and <samp><span class="option">-xildoff</span></samp> turns off the incremental 
 
 <h3 class="heading"><a name="TOC56"></a><a name="sparcv9_002dx_002dsolaris2"></a>sparcv9-*-solaris2*</h3>
 
-<p>This is a synonym for &lsquo;<samp><span class="samp">sparc64-*-solaris2*</span></samp>&rsquo;.
+<p>This is a synonym for `<samp><span class="samp">sparc64-*-solaris2*</span></samp>'.
 
    <p><hr />
 
@@ -1281,7 +1281,7 @@ both 64-bit x86-64 and 32-bit x86 code (via the <samp><span class="option">-m32<
 <h3 class="heading"><a name="TOC62"></a><a name="x86_002d64_002dx_002dsolaris210"></a>x86_64-*-solaris2.1[0-9]*</h3>
 
 <p>GCC also supports the x86-64 architecture implemented by the AMD64
-processor (&lsquo;<samp><span class="samp">amd64-*-*</span></samp>&rsquo; is an alias for &lsquo;<samp><span class="samp">x86_64-*-*</span></samp>&rsquo;) on
+processor (`<samp><span class="samp">amd64-*-*</span></samp>' is an alias for `<samp><span class="samp">x86_64-*-*</span></samp>') on
 Solaris 10 or later.  Unlike other systems, without special options a
 bi-arch compiler is built which generates 32-bit code by default, but
 can generate 64-bit x86-64 code with the <samp><span class="option">-m64</span></samp> switch.  Since
@@ -1289,14 +1289,14 @@ GCC 4.7, there is also configuration that defaults to 64-bit code, but
 can generate 32-bit code with <samp><span class="option">-m32</span></samp>.  To configure and build
 this way, you have to provide all support libraries like <samp><span class="file">libgmp</span></samp>
 as 64-bit code, configure with <samp><span class="option">--target=x86_64-pc-solaris2.1x</span></samp>
-and &lsquo;<samp><span class="samp">CC=gcc -m64</span></samp>&rsquo;.
+and `<samp><span class="samp">CC=gcc -m64</span></samp>'.
 
    <p><hr />
 
 <h3 class="heading"><a name="TOC63"></a><a name="xtensa_002dx_002delf"></a>xtensa*-*-elf</h3>
 
 <p>This target is intended for embedded Xtensa systems using the
-&lsquo;<samp><span class="samp">newlib</span></samp>&rsquo; C library.  It uses ELF but does not support shared
+`<samp><span class="samp">newlib</span></samp>' C library.  It uses ELF but does not support shared
 objects.  Designed-defined instructions specified via the
 Tensilica Instruction Extension (TIE) language are only supported
 through inline assembly.
@@ -1317,7 +1317,7 @@ shared objects and the GNU C library (glibc).  It also generates
 position-independent code (PIC) regardless of whether the
 <samp><span class="option">-fpic</span></samp> or <samp><span class="option">-fPIC</span></samp> options are used.  In other
 respects, this target is the same as the
-<a href="#xtensa*-*-elf">&lsquo;<samp><span class="samp">xtensa*-*-elf</span></samp>&rsquo;</a> target.
+<a href="#xtensa*-*-elf">`<samp><span class="samp">xtensa*-*-elf</span></samp>'</a> target.
 
    <p><hr />
 

@@ -3,7 +3,7 @@
 <title>Obsolete Features - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Implementation-Details.html#Implementation-Details" title="Implementation Details">
 <link rel="prev" href="Implementation-limits.html#Implementation-limits" title="Implementation limits">
@@ -89,7 +89,7 @@ redefinition.)  Thus, <code>(x + y)</code> is different from <code>(x+y)</code> 
 equivalent to <code>(&nbsp;x&nbsp;+&nbsp;y&nbsp;)<!-- /@w --></code>.  Parentheses do not nest inside an
 answer.
 
-   <p><a name="index-testing-predicates-115"></a>To test an assertion, you write it in an &lsquo;<samp><span class="samp">#if</span></samp>&rsquo;.  For example, this
+   <p><a name="index-testing-predicates-115"></a>To test an assertion, you write it in an `<samp><span class="samp">#if</span></samp>'.  For example, this
 conditional succeeds if either <code>vax</code> or <code>ns16000</code> has been
 asserted as an answer for <code>machine</code>.
 
@@ -100,8 +100,8 @@ omitting the answer in the conditional:
 
 <pre class="smallexample">     #if #machine
 </pre>
-   <p><a name="index-g_t_0023assert-116"></a>Assertions are made with the &lsquo;<samp><span class="samp">#assert</span></samp>&rsquo; directive.  Its sole
-argument is the assertion to make, without the leading &lsquo;<samp><span class="samp">#</span></samp>&rsquo; that
+   <p><a name="index-g_t_0023assert-116"></a>Assertions are made with the `<samp><span class="samp">#assert</span></samp>' directive.  Its sole
+argument is the assertion to make, without the leading `<samp><span class="samp">#</span></samp>' that
 identifies assertions in conditionals.
 
 <pre class="smallexample">     #assert <var>predicate</var> (<var>answer</var>)
@@ -111,15 +111,15 @@ answers.  Subsequent assertions do not override previous ones for the
 same predicate.  All the answers for any given predicate are
 simultaneously true.
 
-   <p><a name="index-assertions_002c-canceling-117"></a><a name="index-g_t_0023unassert-118"></a>Assertions can be canceled with the &lsquo;<samp><span class="samp">#unassert</span></samp>&rsquo; directive.  It
-has the same syntax as &lsquo;<samp><span class="samp">#assert</span></samp>&rsquo;.  In that form it cancels only the
-answer which was specified on the &lsquo;<samp><span class="samp">#unassert</span></samp>&rsquo; line; other answers
+   <p><a name="index-assertions_002c-canceling-117"></a><a name="index-g_t_0023unassert-118"></a>Assertions can be canceled with the `<samp><span class="samp">#unassert</span></samp>' directive.  It
+has the same syntax as `<samp><span class="samp">#assert</span></samp>'.  In that form it cancels only the
+answer which was specified on the `<samp><span class="samp">#unassert</span></samp>' line; other answers
 for that predicate remain true.  You can cancel an entire predicate by
 leaving out the answer:
 
 <pre class="smallexample">     #unassert <var>predicate</var>
 </pre>
-   <p class="noindent">In either form, if no such assertion has been made, &lsquo;<samp><span class="samp">#unassert</span></samp>&rsquo; has
+   <p class="noindent">In either form, if no such assertion has been made, `<samp><span class="samp">#unassert</span></samp>' has
 no effect.
 
    <p>You can also make or cancel assertions using command line options. 

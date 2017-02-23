@@ -3,7 +3,7 @@
 <title>MSP430-Ext - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="MSP430-Syntax.html#MSP430-Syntax" title="MSP430 Syntax">
 <link rel="prev" href="MSP430_002dRegs.html#MSP430_002dRegs" title="MSP430-Regs">
@@ -50,12 +50,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="MSP430-Syntax.html#MSP430-Syntax">MSP43
 
 <p><a name="index-MSP430-Assembler-Extensions-1511"></a>
      <dl>
-<dt><code>@rN</code><dd>As destination operand being treated as &lsquo;<samp><span class="samp">0(rn)</span></samp>&rsquo;
+<dt><code>@rN</code><dd>As destination operand being treated as `<samp><span class="samp">0(rn)</span></samp>'
 
-     <br><dt><code>0(rN)</code><dd>As source operand being treated as &lsquo;<samp><span class="samp">@rn</span></samp>&rsquo;
+     <br><dt><code>0(rN)</code><dd>As source operand being treated as `<samp><span class="samp">@rn</span></samp>'
 
      <br><dt><code>jCOND +N</code><dd>Skips next N bytes followed by jump instruction and equivalent to
-&lsquo;<samp><span class="samp">jCOND $+N+2</span></samp>&rsquo;
+`<samp><span class="samp">jCOND $+N+2</span></samp>'
 
    </dl>
 
@@ -64,33 +64,33 @@ These are branch instructions, which has different opcodes upon jump distance.
 They all got PC relative addressing mode.
 
      <dl>
-<dt><code>beq label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jeq label</span></samp>&rsquo; in case if jump distance
+<dt><code>beq label</code><dd>A polymorph instruction which is `<samp><span class="samp">jeq label</span></samp>' in case if jump distance
 within allowed range for cpu's jump instruction. If not, this unrolls into
 a sequence of
      <pre class="smallexample">            jne $+6
             br  label
-</pre>
-     <br><dt><code>bne label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jne label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jeq +4; br label</span></samp>&rsquo;
+     </pre>
+     <br><dt><code>bne label</code><dd>A polymorph instruction which is `<samp><span class="samp">jne label</span></samp>' or `<samp><span class="samp">jeq +4; br label</span></samp>'
 
-     <br><dt><code>blt label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jl label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jge +4; br label</span></samp>&rsquo;
+     <br><dt><code>blt label</code><dd>A polymorph instruction which is `<samp><span class="samp">jl label</span></samp>' or `<samp><span class="samp">jge +4; br label</span></samp>'
 
-     <br><dt><code>bltn label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jn label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jn +2; jmp +4; br label</span></samp>&rsquo;
+     <br><dt><code>bltn label</code><dd>A polymorph instruction which is `<samp><span class="samp">jn label</span></samp>' or `<samp><span class="samp">jn +2; jmp +4; br label</span></samp>'
 
-     <br><dt><code>bltu label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jlo label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jhs +2; br label</span></samp>&rsquo;
+     <br><dt><code>bltu label</code><dd>A polymorph instruction which is `<samp><span class="samp">jlo label</span></samp>' or `<samp><span class="samp">jhs +2; br label</span></samp>'
 
-     <br><dt><code>bge label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jge label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jl +4; br label</span></samp>&rsquo;
+     <br><dt><code>bge label</code><dd>A polymorph instruction which is `<samp><span class="samp">jge label</span></samp>' or `<samp><span class="samp">jl +4; br label</span></samp>'
 
-     <br><dt><code>bgeu label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jhs label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jlo +4; br label</span></samp>&rsquo;
+     <br><dt><code>bgeu label</code><dd>A polymorph instruction which is `<samp><span class="samp">jhs label</span></samp>' or `<samp><span class="samp">jlo +4; br label</span></samp>'
 
-     <br><dt><code>bgt label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jeq +2; jge label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jeq +6; jl  +4; br label</span></samp>&rsquo;
+     <br><dt><code>bgt label</code><dd>A polymorph instruction which is `<samp><span class="samp">jeq +2; jge label</span></samp>' or `<samp><span class="samp">jeq +6; jl  +4; br label</span></samp>'
 
-     <br><dt><code>bgtu label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jeq +2; jhs label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jeq +6; jlo +4; br label</span></samp>&rsquo;
+     <br><dt><code>bgtu label</code><dd>A polymorph instruction which is `<samp><span class="samp">jeq +2; jhs label</span></samp>' or `<samp><span class="samp">jeq +6; jlo +4; br label</span></samp>'
 
-     <br><dt><code>bleu label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jeq label; jlo label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jeq +2; jhs +4; br label</span></samp>&rsquo;
+     <br><dt><code>bleu label</code><dd>A polymorph instruction which is `<samp><span class="samp">jeq label; jlo label</span></samp>' or `<samp><span class="samp">jeq +2; jhs +4; br label</span></samp>'
 
-     <br><dt><code>ble label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jeq label; jl  label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">jeq +2; jge +4; br label</span></samp>&rsquo;
+     <br><dt><code>ble label</code><dd>A polymorph instruction which is `<samp><span class="samp">jeq label; jl  label</span></samp>' or `<samp><span class="samp">jeq +2; jge +4; br label</span></samp>'
 
-     <br><dt><code>jump label</code><dd>A polymorph instruction which is &lsquo;<samp><span class="samp">jmp label</span></samp>&rsquo; or &lsquo;<samp><span class="samp">br label</span></samp>&rsquo;
+     <br><dt><code>jump label</code><dd>A polymorph instruction which is `<samp><span class="samp">jmp label</span></samp>' or `<samp><span class="samp">br label</span></samp>'
 </dl>
 
    </body></html>

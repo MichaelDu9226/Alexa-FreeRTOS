@@ -3,7 +3,7 @@
 <title>Unary and Binary Expressions - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Expression-trees.html#Expression-trees" title="Expression trees">
 <link rel="prev" href="Storage-References.html#Storage-References" title="Storage References">
@@ -250,10 +250,10 @@ operand; the right-hand side is the second operand.  The left-hand side
 will be a <code>VAR_DECL</code>, <code>INDIRECT_REF</code>, <code>COMPONENT_REF</code>, or
 other lvalue.
 
-     <p>These nodes are used to represent not only assignment with &lsquo;<samp><span class="samp">=</span></samp>&rsquo; but
-also compound assignments (like &lsquo;<samp><span class="samp">+=</span></samp>&rsquo;), by reduction to &lsquo;<samp><span class="samp">=</span></samp>&rsquo;
-assignment.  In other words, the representation for &lsquo;<samp><span class="samp">i += 3</span></samp>&rsquo; looks
-just like that for &lsquo;<samp><span class="samp">i = i + 3</span></samp>&rsquo;.
+     <p>These nodes are used to represent not only assignment with `<samp><span class="samp">=</span></samp>' but
+also compound assignments (like `<samp><span class="samp">+=</span></samp>'), by reduction to `<samp><span class="samp">=</span></samp>'
+assignment.  In other words, the representation for `<samp><span class="samp">i += 3</span></samp>' looks
+just like that for `<samp><span class="samp">i = i + 3</span></samp>'.
 
      <br><dt><code>INIT_EXPR</code><dd>These nodes are just like <code>MODIFY_EXPR</code>, but are used only when a
 variable is initialized, rather than assigned to subsequently.  This
@@ -307,7 +307,7 @@ You can iterate over the arguments using <code>FOR_EACH_CALL_EXPR_ARG</code>, as
           FOR_EACH_CALL_EXPR_ARG (arg, iter, call)
             /* arg is bound to successive arguments of call.  */
             ...;
-</pre>
+     </pre>
      <p>For non-static
 member functions, there will be an operand corresponding to the
 <code>this</code> pointer.  There will always be expressions corresponding to

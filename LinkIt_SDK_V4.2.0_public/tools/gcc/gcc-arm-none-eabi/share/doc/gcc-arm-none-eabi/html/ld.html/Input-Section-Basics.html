@@ -3,7 +3,7 @@
 <title>Input Section Basics - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Input-Section.html#Input-Section" title="Input Section">
 <link rel="next" href="Input-Section-Wildcards.html#Input-Section-Wildcards" title="Input Section Wildcards">
@@ -54,10 +54,10 @@ describe further below (see <a href="Input-Section-Wildcards.html#Input-Section-
 
    <p>The most common input section description is to include all input
 sections with a particular name in the output section.  For example, to
-include all input &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; sections, you would write:
+include all input `<samp><span class="samp">.text</span></samp>' sections, you would write:
 <pre class="smallexample">     *(.text)
 </pre>
-   <p class="noindent">Here the &lsquo;<samp><span class="samp">*</span></samp>&rsquo; is a wildcard which matches any file name.  To exclude a list
+   <p class="noindent">Here the `<samp><span class="samp">*</span></samp>' is a wildcard which matches any file name.  To exclude a list
 of files from matching the file name wildcard, EXCLUDE_FILE may be used to
 match all files except the ones specified in the EXCLUDE_FILE list.  For
 example:
@@ -70,12 +70,12 @@ example:
 <pre class="smallexample">     *(.text .rdata)
      *(.text) *(.rdata)
 </pre>
-   <p class="noindent">The difference between these is the order in which the &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">.rdata</span></samp>&rsquo; input sections will appear in the output section.  In the
+   <p class="noindent">The difference between these is the order in which the `<samp><span class="samp">.text</span></samp>' and
+`<samp><span class="samp">.rdata</span></samp>' input sections will appear in the output section.  In the
 first example, they will be intermingled, appearing in the same order as
 they are found in the linker input.  In the second example, all
-&lsquo;<samp><span class="samp">.text</span></samp>&rsquo; input sections will appear first, followed by all
-&lsquo;<samp><span class="samp">.rdata</span></samp>&rsquo; input sections.
+`<samp><span class="samp">.text</span></samp>' input sections will appear first, followed by all
+`<samp><span class="samp">.rdata</span></samp>' input sections.
 
    <p>You can specify a file name to include sections from a particular file. 
 You would do this if one or more of your files contain special data that
@@ -92,10 +92,10 @@ of an input section, INPUT_SECTION_FLAGS may be used.
        .text2 :  { INPUT_SECTION_FLAGS (!SHF_WRITE) *(.text) }
      }
 </pre>
-   <p>In this example, the output section &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; will be comprised of any
+   <p>In this example, the output section `<samp><span class="samp">.text</span></samp>' will be comprised of any
 input section matching the name *(.text) whose section header flags
 <code>SHF_MERGE</code> and <code>SHF_STRINGS</code> are set.  The output section
-&lsquo;<samp><span class="samp">.text2</span></samp>&rsquo; will be comprised of any input section matching the name *(.text)
+`<samp><span class="samp">.text2</span></samp>' will be comprised of any input section matching the name *(.text)
 whose section header flag <code>SHF_WRITE</code> is clear.
 
    <p>You can also specify files within archives by writing a pattern
@@ -103,19 +103,19 @@ matching the archive, a colon, then the pattern matching the file,
 with no whitespace around the colon.
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">archive:file</span></samp>&rsquo;<dd>matches file within archive
-<br><dt>&lsquo;<samp><span class="samp">archive:</span></samp>&rsquo;<dd>matches the whole archive
-<br><dt>&lsquo;<samp><span class="samp">:file</span></samp>&rsquo;<dd>matches file but not one in an archive
+<dt>`<samp><span class="samp">archive:file</span></samp>'<dd>matches file within archive
+<br><dt>`<samp><span class="samp">archive:</span></samp>'<dd>matches the whole archive
+<br><dt>`<samp><span class="samp">:file</span></samp>'<dd>matches file but not one in an archive
 </dl>
 
-   <p>Either one or both of &lsquo;<samp><span class="samp">archive</span></samp>&rsquo; and &lsquo;<samp><span class="samp">file</span></samp>&rsquo; can contain shell
+   <p>Either one or both of `<samp><span class="samp">archive</span></samp>' and `<samp><span class="samp">file</span></samp>' can contain shell
 wildcards.  On DOS based file systems, the linker will assume that a
 single letter followed by a colon is a drive specifier, so
-&lsquo;<samp><span class="samp">c:myfile.o</span></samp>&rsquo; is a simple file specification, not &lsquo;<samp><span class="samp">myfile.o</span></samp>&rsquo;
-within an archive called &lsquo;<samp><span class="samp">c</span></samp>&rsquo;.  &lsquo;<samp><span class="samp">archive:file</span></samp>&rsquo; filespecs may
+`<samp><span class="samp">c:myfile.o</span></samp>' is a simple file specification, not `<samp><span class="samp">myfile.o</span></samp>'
+within an archive called `<samp><span class="samp">c</span></samp>'.  `<samp><span class="samp">archive:file</span></samp>' filespecs may
 also be used within an <code>EXCLUDE_FILE</code> list, but may not appear in
 other linker script contexts.  For instance, you cannot extract a file
-from an archive by using &lsquo;<samp><span class="samp">archive:file</span></samp>&rsquo; in an <code>INPUT</code>
+from an archive by using `<samp><span class="samp">archive:file</span></samp>' in an <code>INPUT</code>
 command.
 
    <p>If you use a file name without a list of sections, then all sections in
@@ -123,7 +123,7 @@ the input file will be included in the output section.  This is not
 commonly done, but it may by useful on occasion.  For example:
 <pre class="smallexample">     data.o
 </pre>
-   <p>When you use a file name which is not an &lsquo;<samp><span class="samp">archive:file</span></samp>&rsquo; specifier
+   <p>When you use a file name which is not an `<samp><span class="samp">archive:file</span></samp>' specifier
 and does not contain any wild card
 characters, the linker will first see if you also specified the file
 name on the linker command line or in an <code>INPUT</code> command.  If you

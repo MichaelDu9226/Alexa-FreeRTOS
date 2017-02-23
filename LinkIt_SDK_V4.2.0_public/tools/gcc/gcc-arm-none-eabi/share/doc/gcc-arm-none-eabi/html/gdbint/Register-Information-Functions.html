@@ -3,10 +3,10 @@
 <title>Register Information Functions - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Register-Representation.html#Register-Representation" title="Register Representation">
-<link rel="prev" href="Register-Architecture-Functions-_0026-Variables.html#Register-Architecture-Functions-_0026-Variables" title="Register Architecture Functions &amp; Variables">
+<link rel="prev" href="Register-Architecture-Functions-_0026-Variables.html#Register-Architecture-Functions-_0026-Variables" title="Register Architecture Functions & Variables">
 <link rel="next" href="Register-and-Memory-Data.html#Register-and-Memory-Data" title="Register and Memory Data">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
@@ -51,7 +51,7 @@ These functions return information about registers.
 <div class="defun">
 &mdash; Architecture Function: const char * <b>register_name</b> (<var>struct gdbarch *gdbarch, int regnum</var>)<var><a name="index-register_005fname-285"></a></var><br>
 <blockquote>
-        <p>This function should convert a register number (raw or pseudo) to a
+<p>This function should convert a register number (raw or pseudo) to a
 register name (as a C <code>const char *</code>).  This is used both to
 determine the name of a register for output and to work out the meaning
 of any register names used as input.  The function may also return
@@ -75,7 +75,7 @@ undefined. It should always be defined.
 <div class="defun">
 &mdash; Architecture Function: struct type * <b>register_type</b> (<var>struct gdbarch *gdbarch, int regnum</var>)<var><a name="index-register_005ftype-286"></a></var><br>
 <blockquote>
-        <p>Given a register number, this function identifies the type of data it
+<p>Given a register number, this function identifies the type of data it
 may be holding, specified as a <code>struct type</code>.  <span class="sc">gdb</span> allows
 creation of arbitrary types, but a number of built in types are
 provided (<code>builtin_type_void</code>, <code>builtin_type_int32</code> etc),
@@ -96,7 +96,7 @@ available to guide formatting when displaying registers.
 <div class="defun">
 &mdash; Architecture Function: void <b>print_registers_info</b> (<var>struct gdbarch *gdbarch, struct ui_file *file, struct frame_info *frame, int regnum, int all</var>)<var><a name="index-print_005fregisters_005finfo-287"></a></var><br>
 <blockquote>
-        <p>Define this function to print out one or all of the registers for the
+<p>Define this function to print out one or all of the registers for the
 <span class="sc">gdb</span> <kbd>info registers</kbd> command.  The default value is the
 function <code>default_print_registers_info</code>, which uses the register
 type information (see <code>register_type</code> above) to determine how each
@@ -123,7 +123,7 @@ line, and if <var>all</var> is zero omits floating-point registers.
 <div class="defun">
 &mdash; Architecture Function: void <b>print_float_info</b> (<var>struct gdbarch *gdbarch, struct ui_file *file, struct frame_info *frame, const char *args</var>)<var><a name="index-print_005ffloat_005finfo-288"></a></var><br>
 <blockquote>
-        <p>Define this function to provide output about the floating point unit and
+<p>Define this function to provide output about the floating point unit and
 registers for the <span class="sc">gdb</span> <kbd>info float</kbd> command respectively. 
 The default value is <code>NULL</code> (not defined), meaning no information
 will be provided.
@@ -140,7 +140,7 @@ command.
 <div class="defun">
 &mdash; Architecture Function: void <b>print_vector_info</b> (<var>struct gdbarch *gdbarch, struct ui_file *file, struct frame_info *frame, const char *args</var>)<var><a name="index-print_005fvector_005finfo-289"></a></var><br>
 <blockquote>
-        <p>Define this function to provide output about the vector unit and
+<p>Define this function to provide output about the vector unit and
 registers for the <span class="sc">gdb</span> <kbd>info vector</kbd> command respectively. 
 The default value is <code>NULL</code> (not defined), meaning no information
 will be provided.
@@ -157,7 +157,7 @@ vector</kbd> command.
 <div class="defun">
 &mdash; Architecture Function: int <b>register_reggroup_p</b> (<var>struct gdbarch *gdbarch, int regnum, struct reggroup *group</var>)<var><a name="index-register_005freggroup_005fp-290"></a></var><br>
 <blockquote>
-        <p><span class="sc">gdb</span> groups registers into different categories (general,
+<p><span class="sc">gdb</span> groups registers into different categories (general,
 vector, floating point etc).  This function, given a register,
 <var>regnum</var>, and group, <var>group</var>, returns 1 (true) if the register
 is in the group and 0 (false) otherwise.
@@ -184,7 +184,7 @@ have a frame pointer register, and defines a register or
 pseudo-register with the name <code>"fp"</code>, then that register will be
 used as the value of the <kbd>$fp</kbd> variable.</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

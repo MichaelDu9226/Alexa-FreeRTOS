@@ -3,7 +3,7 @@
 <title>C Operators - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C.html#C" title="C">
 <link rel="next" href="C-Constants.html#C-Constants" title="C Constants">
@@ -124,10 +124,10 @@ operation takes place.
 
      <br><dt><code>&amp;</code><dd>Address operator.  Defined on variables.  Same precedence as <code>++</code>.
 
-     <p>For debugging C<tt>++</tt>, <span class="sc">gdb</span> implements a use of &lsquo;<samp><span class="samp">&amp;</span></samp>&rsquo; beyond what is
-allowed in the C<tt>++</tt> language itself: you can use &lsquo;<samp><span class="samp">&amp;(&amp;</span><var>ref</var><span class="samp">)</span></samp>&rsquo;
+     <p>For debugging C<tt>++</tt>, <span class="sc">gdb</span> implements a use of `<samp><span class="samp">&amp;</span></samp>' beyond what is
+allowed in the C<tt>++</tt> language itself: you can use `<samp><span class="samp">&amp;(&amp;</span><var>ref</var><span class="samp">)</span></samp>'
 to examine the address
-where a C<tt>++</tt> reference variable (declared with &lsquo;<samp><span class="samp">&amp;</span><var>ref</var></samp>&rsquo;) is
+where a C<tt>++</tt> reference variable (declared with `<samp><span class="samp">&amp;</span><var>ref</var></samp>') is
 stored.
 
      <br><dt><code>-</code><dd>Negative.  Defined on integral and floating-point types.  Same

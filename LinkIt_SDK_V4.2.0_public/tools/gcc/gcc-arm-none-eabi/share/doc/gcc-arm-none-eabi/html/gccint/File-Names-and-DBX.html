@@ -3,7 +3,7 @@
 <title>File Names and DBX - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Debugging-Info.html#Debugging-Info" title="Debugging Info">
 <link rel="prev" href="DBX-Hooks.html#DBX-Hooks" title="DBX Hooks">
@@ -68,7 +68,7 @@ This macro is called only once, at the beginning of compilation.
 for DBX debugging information is appropriate.
 
       <p>It may be necessary to refer to a label equal to the beginning of the
-text section.  You can use &lsquo;<samp><span class="samp">assemble_name (stream, ltext_label_name)</span></samp>&rsquo;
+text section.  You can use `<samp><span class="samp">assemble_name (stream, ltext_label_name)</span></samp>'
 to do so.  If you do this, you must also set the variable
 <var>used_ltext_label_name</var> to <code>true</code>. 
 </p></blockquote></div>
@@ -85,7 +85,7 @@ the beginning of the file.
 <blockquote><p>Define this macro, with value 1, if GCC should not emit an indication
 that this object file was compiled by GCC.  The default is to emit
 an <code>N_OPT</code> stab at the beginning of every source file, with
-&lsquo;<samp><span class="samp">gcc2_compiled.</span></samp>&rsquo; for the string and value 0. 
+`<samp><span class="samp">gcc2_compiled.</span></samp>' for the string and value 0. 
 </p></blockquote></div>
 
 <div class="defun">

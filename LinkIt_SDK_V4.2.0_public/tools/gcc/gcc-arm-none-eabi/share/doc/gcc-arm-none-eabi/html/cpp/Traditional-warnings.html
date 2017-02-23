@@ -3,7 +3,7 @@
 <title>Traditional warnings - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Traditional-Mode.html#Traditional-Mode" title="Traditional Mode">
 <link rel="prev" href="Traditional-miscellany.html#Traditional-miscellany" title="Traditional miscellany">
@@ -57,7 +57,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Traditional-Mode.html#Traditional-Mode"
 <p>You can request warnings about features that did not exist, or worked
 differently, in traditional C with the <samp><span class="option">-Wtraditional</span></samp> option. 
 GCC does not warn about features of ISO C which you must use when you
-are using a conforming compiler, such as the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and &lsquo;<samp><span class="samp">##</span></samp>&rsquo;
+are using a conforming compiler, such as the `<samp><span class="samp">#</span></samp>' and `<samp><span class="samp">##</span></samp>'
 operators.
 
    <p>Presently <samp><span class="option">-Wtraditional</span></samp> warns about:
@@ -69,12 +69,12 @@ but does not in ISO C.
 
      <li>In traditional C, some preprocessor directives did not exist. 
 Traditional preprocessors would only consider a line to be a directive
-if the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; appeared in column 1 on the line.  Therefore
+if the `<samp><span class="samp">#</span></samp>' appeared in column 1 on the line.  Therefore
 <samp><span class="option">-Wtraditional</span></samp> warns about directives that traditional C
-understands but would ignore because the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; does not appear as the
+understands but would ignore because the `<samp><span class="samp">#</span></samp>' does not appear as the
 first character on the line.  It also suggests you hide directives like
-&lsquo;<samp><span class="samp">#pragma</span></samp>&rsquo; not understood by traditional C by indenting them.  Some
-traditional implementations would not recognize &lsquo;<samp><span class="samp">#elif</span></samp>&rsquo;, so it
+`<samp><span class="samp">#pragma</span></samp>' not understood by traditional C by indenting them.  Some
+traditional implementations would not recognize `<samp><span class="samp">#elif</span></samp>', so it
 suggests avoiding it altogether.
 
      <li>A function-like macro that appears without an argument list.  In some
@@ -83,8 +83,8 @@ that the macro is not expanded.
 
      <li>The unary plus operator.  This did not exist in traditional C.
 
-     <li>The &lsquo;<samp><span class="samp">U</span></samp>&rsquo; and &lsquo;<samp><span class="samp">LL</span></samp>&rsquo; integer constant suffixes, which were not
-available in traditional C.  (Traditional C does support the &lsquo;<samp><span class="samp">L</span></samp>&rsquo;
+     <li>The `<samp><span class="samp">U</span></samp>' and `<samp><span class="samp">LL</span></samp>' integer constant suffixes, which were not
+available in traditional C.  (Traditional C does support the `<samp><span class="samp">L</span></samp>'
 suffix for simple long integer constants.)  You are not warned about
 uses of these suffixes in macros defined in system headers.  For
 instance, <code>UINT_MAX</code> may well be defined as <code>4294967295U</code>, but

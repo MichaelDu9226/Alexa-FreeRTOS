@@ -3,7 +3,7 @@
 <title>User Interface - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Algorithms.html#Algorithms" title="Algorithms">
 <link rel="next" href="libgdb.html#libgdb" title="libgdb">
@@ -54,8 +54,8 @@ allow for the set of commands to be augmented dynamically, and also
 has a recursive subcommand capability, where the first argument to
 a command may itself direct a lookup on a different command list.
 
-   <p>For instance, the &lsquo;<samp><span class="samp">set</span></samp>&rsquo; command just starts a lookup on the
-<code>setlist</code> command list, while &lsquo;<samp><span class="samp">set thread</span></samp>&rsquo; recurses
+   <p>For instance, the `<samp><span class="samp">set</span></samp>' command just starts a lookup on the
+<code>setlist</code> command list, while `<samp><span class="samp">set thread</span></samp>' recurses
 to the <code>set_thread_cmd_list</code>.
 
    <p><a name="index-add_005fcmd-60"></a><a name="index-add_005fcom-61"></a>To add commands in general, use <code>add_cmd</code>.  <code>add_com</code> adds to
@@ -63,7 +63,7 @@ the main command list, and should be used for those commands.  The usual
 place to add commands is in the <code>_initialize_</code><var>xyz</var> routines at
 the ends of most source files.
 
-   <p><a name="index-add_005fsetshow_005fcmd-62"></a><a name="index-add_005fsetshow_005fcmd_005ffull-63"></a>To add paired &lsquo;<samp><span class="samp">set</span></samp>&rsquo; and &lsquo;<samp><span class="samp">show</span></samp>&rsquo; commands, use
+   <p><a name="index-add_005fsetshow_005fcmd-62"></a><a name="index-add_005fsetshow_005fcmd_005ffull-63"></a>To add paired `<samp><span class="samp">set</span></samp>' and `<samp><span class="samp">show</span></samp>' commands, use
 <code>add_setshow_cmd</code> or <code>add_setshow_cmd_full</code>.  The former is
 a slightly simpler interface which is useful when you don't need to
 further modify the new command structures, while the latter returns
@@ -281,7 +281,7 @@ non-portable<a rel="footnote" href="#fn-1" name="fnd-1"><sup>1</sup></a> code se
           ui_out_tuple_begin (uiout, "...");
           old_cleanup = make_cleanup ((void(*)(void *)) ui_out_tuple_end,
                                       uiout);
-</pre>
+     </pre>
         </blockquote></div>
 
 <div class="defun">
@@ -447,8 +447,8 @@ list.
 &mdash; Function: void <b>ui_out_message</b> (<var>struct ui_out *uiout, int verbosity, const char *format, ...</var>)<var><a name="index-ui_005fout_005fmessage-95"></a></var><br>
 <blockquote><p>This function produces a formatted message, provided that the current
 verbosity level is at least as large as given by <var>verbosity</var>.  The
-current verbosity level is specified by the user with the &lsquo;<samp><span class="samp">set
-verbositylevel</span></samp>&rsquo; command.<a rel="footnote" href="#fn-2" name="fnd-2"><sup>2</sup></a>
+current verbosity level is specified by the user with the `<samp><span class="samp">set
+verbositylevel</span></samp>' command.<a rel="footnote" href="#fn-2" name="fnd-2"><sup>2</sup></a>
 </p></blockquote></div>
 
 <div class="defun">
@@ -680,7 +680,7 @@ setting verbosity level is not yet implemented, and is always returned
 as zero.  So calling <code>ui_out_message</code> with a <var>verbosity</var>
 argument more than zero will cause the message to never be printed.</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

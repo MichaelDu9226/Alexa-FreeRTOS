@@ -3,7 +3,7 @@
 <title>Variadic Macros - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Macros.html#Macros" title="Macros">
 <link rel="prev" href="Concatenation.html#Concatenation" title="Concatenation">
@@ -75,14 +75,14 @@ have this expansion:
 </pre>
    <p>The variable argument is completely macro-expanded before it is inserted
 into the macro expansion, just like an ordinary argument.  You may use
-the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and &lsquo;<samp><span class="samp">##</span></samp>&rsquo; operators to stringify the variable argument
+the `<samp><span class="samp">#</span></samp>' and `<samp><span class="samp">##</span></samp>' operators to stringify the variable argument
 or to paste its leading or trailing token with another token.  (But see
-below for an important special case for &lsquo;<samp><span class="samp">##</span></samp>&rsquo;.)
+below for an important special case for `<samp><span class="samp">##</span></samp>'.)
 
    <p>If your macro is complicated, you may want a more descriptive name for
 the variable argument than <code>__VA_ARGS__<!-- /@w --></code>.  CPP permits
 this, as an extension.  You may write an argument name immediately
-before the &lsquo;<samp><span class="samp">...</span></samp>&rsquo;; that name is used for the variable argument. 
+before the `<samp><span class="samp">...</span></samp>'; that name is used for the variable argument. 
 The <code>eprintf</code> macro above could be written
 
 <pre class="smallexample">     #define eprintf(args...) fprintf (stderr, args)
@@ -111,15 +111,15 @@ you are allowed to leave the variable argument out entirely:
 <pre class="smallexample">     eprintf ("success!\n")
           ==&gt; fprintf(stderr, "success!\n", );
 </pre>
-   <p class="noindent">Second, the &lsquo;<samp><span class="samp">##</span></samp>&rsquo; token paste operator has a special meaning when
+   <p class="noindent">Second, the `<samp><span class="samp">##</span></samp>' token paste operator has a special meaning when
 placed between a comma and a variable argument.  If you write
 
 <pre class="smallexample">     #define eprintf(format, ...) fprintf (stderr, format, ##__VA_ARGS__)
 </pre>
    <p class="noindent">and the variable argument is left out when the <code>eprintf</code> macro is
-used, then the comma before the &lsquo;<samp><span class="samp">##</span></samp>&rsquo; will be deleted.  This does
+used, then the comma before the `<samp><span class="samp">##</span></samp>' will be deleted.  This does
 <em>not</em> happen if you pass an empty argument, nor does it happen if
-the token preceding &lsquo;<samp><span class="samp">##</span></samp>&rsquo; is anything other than a comma.
+the token preceding `<samp><span class="samp">##</span></samp>' is anything other than a comma.
 
 <pre class="smallexample">     eprintf ("success!\n")
           ==&gt; fprintf(stderr, "success!\n");
@@ -141,7 +141,7 @@ purpose.
 
    <p>Variadic macros are a new feature in C99.  GNU CPP has supported them
 for a long time, but only with a named variable argument
-(&lsquo;<samp><span class="samp">args...</span></samp>&rsquo;, not &lsquo;<samp><span class="samp">...</span></samp>&rsquo; and <code>__VA_ARGS__<!-- /@w --></code>).  If you are
+(`<samp><span class="samp">args...</span></samp>', not `<samp><span class="samp">...</span></samp>' and <code>__VA_ARGS__<!-- /@w --></code>).  If you are
 concerned with portability to previous versions of GCC, you should use
 only named variable arguments.  On the other hand, if you are concerned
 with portability to other conforming implementations of C99, you should
@@ -150,7 +150,7 @@ use only <code>__VA_ARGS__<!-- /@w --></code>.
    <p>Previous versions of CPP implemented the comma-deletion extension
 much more generally.  We have restricted it in this release to minimize
 the differences from C99.  To get the same effect with both this and
-previous versions of GCC, the token preceding the special &lsquo;<samp><span class="samp">##</span></samp>&rsquo; must
+previous versions of GCC, the token preceding the special `<samp><span class="samp">##</span></samp>' must
 be a comma, and there must be white space between that comma and
 whatever comes immediately before it:
 

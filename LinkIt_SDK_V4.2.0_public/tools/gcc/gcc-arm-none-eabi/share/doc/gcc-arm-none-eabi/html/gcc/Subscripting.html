@@ -3,7 +3,7 @@
 <title>Subscripting - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Escaped-Newlines.html#Escaped-Newlines" title="Escaped Newlines">
@@ -57,7 +57,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="C-Extensions.html#C-Extensions">C Exten
 <p><a name="index-subscripting-2561"></a><a name="index-arrays_002c-non_002dlvalue-2562"></a>
 <a name="index-subscripting-and-function-values-2563"></a>In ISO C99, arrays that are not lvalues still decay to pointers, and
 may be subscripted, although they may not be modified or used after
-the next sequence point and the unary &lsquo;<samp><span class="samp">&amp;</span></samp>&rsquo; operator may not be
+the next sequence point and the unary `<samp><span class="samp">&amp;</span></samp>' operator may not be
 applied to them.  As an extension, GNU C allows such arrays to be
 subscripted in C90 mode, though otherwise they do not decay to
 pointers outside C99 mode.  For example,

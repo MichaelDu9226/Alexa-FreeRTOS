@@ -3,7 +3,7 @@
 <title>Help - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Commands.html#Commands" title="Commands">
 <link rel="prev" href="Completion.html#Completion" title="Completion">
@@ -77,9 +77,9 @@ display a short list of named classes of commands:
           documentation.
           Command name abbreviations are allowed if unambiguous.
           (gdb)
-</pre>
+     </pre>
      <!-- the above line break eliminates huge line overfull... -->
-     <br><dt><code>help </code><var>class</var><dd>Using one of the general help classes as an argument, you can get a
+<br><dt><code>help </code><var>class</var><dd>Using one of the general help classes as an argument, you can get a
 list of the individual commands in that class.  For example, here is the
 help display for the class <code>status</code>:
 
@@ -99,7 +99,7 @@ help display for the class <code>status</code>:
           documentation.
           Command name abbreviations are allowed if unambiguous.
           (gdb)
-</pre>
+     </pre>
      <br><dt><code>help </code><var>command</var><dd>With a command name as <code>help</code> argument, <span class="sc">gdb</span> displays a
 short paragraph on how to use that command.
 
@@ -108,7 +108,7 @@ commands, and their documentation, for the regular expression specified in
 <var>args</var>.  It prints out all matches found.  For example:
 
      <pre class="smallexample">          apropos alias
-</pre>
+     </pre>
      <p class="noindent">results in:
 
      <pre class="smallexample">          <!-- @group -->
@@ -118,20 +118,20 @@ commands, and their documentation, for the regular expression specified in
           del -- Delete some breakpoints or auto-display expressions
           delete -- Delete some breakpoints or auto-display expressions
           <!-- @end group -->
-</pre>
+     </pre>
      <p><a name="index-complete-93"></a><br><dt><code>complete </code><var>args</var><dd>The <code>complete </code><var>args</var> command lists all the possible completions
 for the beginning of a command.  Use <var>args</var> to specify the beginning of the
 command you want completed.  For example:
 
      <pre class="smallexample">          complete i
-</pre>
+     </pre>
      <p class="noindent">results in:
 
      <pre class="smallexample">          if
           ignore
           info
           inspect
-</pre>
+     </pre>
      <p class="noindent">This is intended for use by <span class="sc">gnu</span> Emacs. 
 </dl>
 
@@ -143,7 +143,7 @@ under <code>info</code> and under <code>show</code> in the Command, Variable, an
 Function Index point to all the sub-commands.  See <a href="Command-and-Variable-Index.html#Command-and-Variable-Index">Command and Variable Index</a>.
 
 <!-- @group -->
-     
+
 <a name="index-info-94"></a>
 <a name="index-i-_0040r_007b_0028_0040code_007binfo_007d_0029_007d-95"></a>
 <dl><dt><code>info</code><dd>This command (abbreviated <code>i</code>) is for describing the state of your

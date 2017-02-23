@@ -3,7 +3,7 @@
 <title>Diagnostic Pragmas - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Pragmas.html#Pragmas" title="Pragmas">
 <link rel="prev" href="Weak-Pragmas.html#Weak-Pragmas" title="Weak Pragmas">
@@ -66,20 +66,20 @@ macros are defined.
 <dt><code>#pragma GCC diagnostic </code><var>kind</var> <var>option</var><dd><a name="index-pragma_002c-diagnostic-3500"></a>
 Modifies the disposition of a diagnostic.  Note that not all
 diagnostics are modifiable; at the moment only warnings (normally
-controlled by &lsquo;<samp><span class="samp">-W...</span></samp>&rsquo;) can be controlled, and not all of them. 
+controlled by `<samp><span class="samp">-W...</span></samp>') can be controlled, and not all of them. 
 Use <samp><span class="option">-fdiagnostics-show-option</span></samp> to determine which diagnostics
 are controllable and which option controls them.
 
-     <p><var>kind</var> is &lsquo;<samp><span class="samp">error</span></samp>&rsquo; to treat this diagnostic as an error,
-&lsquo;<samp><span class="samp">warning</span></samp>&rsquo; to treat it like a warning (even if <samp><span class="option">-Werror</span></samp> is
-in effect), or &lsquo;<samp><span class="samp">ignored</span></samp>&rsquo; if the diagnostic is to be ignored. 
+     <p><var>kind</var> is `<samp><span class="samp">error</span></samp>' to treat this diagnostic as an error,
+`<samp><span class="samp">warning</span></samp>' to treat it like a warning (even if <samp><span class="option">-Werror</span></samp> is
+in effect), or `<samp><span class="samp">ignored</span></samp>' if the diagnostic is to be ignored. 
 <var>option</var> is a double quoted string that matches the command-line
 option.
 
      <pre class="smallexample">          #pragma GCC diagnostic warning "-Wformat"
           #pragma GCC diagnostic error "-Wformat"
           #pragma GCC diagnostic ignored "-Wformat"
-</pre>
+     </pre>
      <p>Note that these pragmas override any command-line options.  GCC keeps
 track of the location of each pragma, and issues diagnostics according
 to the state as of that point in the source file.  Thus, pragmas occurring
@@ -100,7 +100,7 @@ restored.
             foo(c);                       /* error is given for this one */
           #pragma GCC diagnostic pop
             foo(d);                       /* depends on command-line options */
-</pre>
+     </pre>
      </dl>
 
  <p>GCC also offers a simple mechanism for printing messages during
@@ -112,7 +112,7 @@ Prints <var>string</var> as a compiler message on compilation.  The message
 is informational only, and is neither a compilation warning nor an error.
 
      <pre class="smallexample">          #pragma message "Compiling " __FILE__ "..."
-</pre>
+     </pre>
      <p><var>string</var> may be parenthesized, and is printed with location
 information.  For example,
 
@@ -120,9 +120,9 @@ information.  For example,
           #define TODO(x) DO_PRAGMA(message ("TODO - " #x))
           
           TODO(Remember to fix this)
-</pre>
-     <p class="noindent">prints &lsquo;<samp><span class="samp">/tmp/file.c:4: note: #pragma message:
-TODO - Remember to fix this</span></samp>&rsquo;.
+     </pre>
+     <p class="noindent">prints `<samp><span class="samp">/tmp/file.c:4: note: #pragma message:
+TODO - Remember to fix this</span></samp>'.
 
  </dl>
 

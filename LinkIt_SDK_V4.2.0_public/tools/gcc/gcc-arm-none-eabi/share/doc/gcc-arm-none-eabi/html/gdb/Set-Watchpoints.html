@@ -3,7 +3,7 @@
 <title>Set Watchpoints - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Breakpoints.html#Breakpoints" title="Breakpoints">
 <link rel="prev" href="Set-Breaks.html#Set-Breaks" title="Set Breaks">
@@ -57,21 +57,21 @@ as complex as many variables combined by operators.  Examples include:
 <li>A reference to the value of a single variable.
 
      <li>An address cast to an appropriate data type.  For example,
-&lsquo;<samp><span class="samp">*(int *)0x12345678</span></samp>&rsquo; will watch a 4-byte region at the specified
+`<samp><span class="samp">*(int *)0x12345678</span></samp>' will watch a 4-byte region at the specified
 address (assuming an <code>int</code> occupies 4 bytes).
 
-     <li>An arbitrarily complex expression, such as &lsquo;<samp><span class="samp">a*b + c/d</span></samp>&rsquo;.  The
+     <li>An arbitrarily complex expression, such as `<samp><span class="samp">a*b + c/d</span></samp>'.  The
 expression can use any operators valid in the program's native
 language (see <a href="Languages.html#Languages">Languages</a>). 
 </ul>
 
    <p>You can set a watchpoint on an expression even if the expression can
 not be evaluated yet.  For instance, you can set a watchpoint on
-&lsquo;<samp><span class="samp">*global_ptr</span></samp>&rsquo; before &lsquo;<samp><span class="samp">global_ptr</span></samp>&rsquo; is initialized. 
-<span class="sc">gdb</span> will stop when your program sets &lsquo;<samp><span class="samp">global_ptr</span></samp>&rsquo; and
+`<samp><span class="samp">*global_ptr</span></samp>' before `<samp><span class="samp">global_ptr</span></samp>' is initialized. 
+<span class="sc">gdb</span> will stop when your program sets `<samp><span class="samp">global_ptr</span></samp>' and
 the expression produces a valid value.  If the expression becomes
 valid in some other way than changing a variable (e.g. if the memory
-pointed to by &lsquo;<samp><span class="samp">*global_ptr</span></samp>&rsquo; becomes readable as the result of a
+pointed to by `<samp><span class="samp">*global_ptr</span></samp>' becomes readable as the result of a
 <code>malloc</code> call), <span class="sc">gdb</span> may not stop until the next time
 the expression changes.
 
@@ -94,7 +94,7 @@ changes.  The simplest (and the most popular) use of this command is
 to watch the value of a single variable:
 
      <pre class="smallexample">          (gdb) watch foo
-</pre>
+     </pre>
      <p>If the command includes a <span class="roman">[</span><code>thread </code><var>threadnum</var><span class="roman">]</span>
 argument, <span class="sc">gdb</span> breaks only when the thread identified by
 <var>threadnum</var> changes the value of <var>expr</var>.  If any other threads
@@ -124,7 +124,7 @@ Examples:
 
      <pre class="smallexample">          (gdb) watch foo mask 0xffff00ff
           (gdb) watch *0xdeadbeef mask 0xffffff00
-</pre>
+     </pre>
      <p><a name="index-rwatch-251"></a><br><dt><code>rwatch </code><span class="roman">[</span><code>-l</code><span class="roman">|</span><code>-location</code><span class="roman">]</span> <var>expr</var> <span class="roman">[</span><code>thread </code><var>threadnum</var><span class="roman">]</span> <span class="roman">[</span><code>mask </code><var>maskvalue</var><span class="roman">]</span><dd>Set a watchpoint that will break when the value of <var>expr</var> is read
 by the program.
 

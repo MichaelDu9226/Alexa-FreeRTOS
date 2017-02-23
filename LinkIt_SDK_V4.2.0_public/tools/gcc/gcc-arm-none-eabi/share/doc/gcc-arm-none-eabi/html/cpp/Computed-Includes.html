@@ -3,7 +3,7 @@
 <title>Computed Includes - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Header-Files.html#Header-Files" title="Header Files">
 <link rel="prev" href="Alternatives-to-Wrapper-_0023ifndef.html#Alternatives-to-Wrapper-_0023ifndef" title="Alternatives to Wrapper #ifndef">
@@ -73,27 +73,27 @@ systems, for instance.  You could do this with a series of conditionals,
    <p>That rapidly becomes tedious.  Instead, the preprocessor offers the
 ability to use a macro for the header name.  This is called a
 <dfn>computed include</dfn>.  Instead of writing a header name as the direct
-argument of &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;, you simply put a macro name there instead:
+argument of `<samp><span class="samp">#include</span></samp>', you simply put a macro name there instead:
 
 <pre class="smallexample">     #define SYSTEM_H "system_1.h"
      ...
      #include SYSTEM_H
 </pre>
    <p class="noindent"><code>SYSTEM_H</code> will be expanded, and the preprocessor will look for
-<samp><span class="file">system_1.h</span></samp> as if the &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; had been written that way
+<samp><span class="file">system_1.h</span></samp> as if the `<samp><span class="samp">#include</span></samp>' had been written that way
 originally.  <code>SYSTEM_H</code> could be defined by your Makefile with a
 <samp><span class="option">-D</span></samp> option.
 
-   <p>You must be careful when you define the macro.  &lsquo;<samp><span class="samp">#define</span></samp>&rsquo; saves
+   <p>You must be careful when you define the macro.  `<samp><span class="samp">#define</span></samp>' saves
 tokens, not text.  The preprocessor has no way of knowing that the macro
-will be used as the argument of &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;, so it generates
+will be used as the argument of `<samp><span class="samp">#include</span></samp>', so it generates
 ordinary tokens, not a header name.  This is unlikely to cause problems
 if you use double-quote includes, which are close enough to string
 constants.  If you use angle brackets, however, you may have trouble.
 
    <p>The syntax of a computed include is actually a bit more general than the
-above.  If the first non-whitespace character after &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; is
-not &lsquo;<samp><span class="samp">"</span></samp>&rsquo; or &lsquo;<samp><span class="samp">&lt;</span></samp>&rsquo;, then the entire line is macro-expanded
+above.  If the first non-whitespace character after `<samp><span class="samp">#include</span></samp>' is
+not `<samp><span class="samp">"</span></samp>' or `<samp><span class="samp">&lt;</span></samp>', then the entire line is macro-expanded
 like running text would be.
 
    <p>If the line expands to a single string constant, the contents of that
@@ -107,12 +107,12 @@ escapes in the string.  Therefore
    <p class="noindent">looks for a file named <samp><span class="file">a\"b</span></samp>.  CPP searches for the file according
 to the rules for double-quoted includes.
 
-   <p>If the line expands to a token stream beginning with a &lsquo;<samp><span class="samp">&lt;</span></samp>&rsquo; token
-and including a &lsquo;<samp><span class="samp">&gt;</span></samp>&rsquo; token, then the tokens between the &lsquo;<samp><span class="samp">&lt;</span></samp>&rsquo; and
-the first &lsquo;<samp><span class="samp">&gt;</span></samp>&rsquo; are combined to form the filename to be included. 
+   <p>If the line expands to a token stream beginning with a `<samp><span class="samp">&lt;</span></samp>' token
+and including a `<samp><span class="samp">&gt;</span></samp>' token, then the tokens between the `<samp><span class="samp">&lt;</span></samp>' and
+the first `<samp><span class="samp">&gt;</span></samp>' are combined to form the filename to be included. 
 Any whitespace between tokens is reduced to a single space; then any
-space after the initial &lsquo;<samp><span class="samp">&lt;</span></samp>&rsquo; is retained, but a trailing space
-before the closing &lsquo;<samp><span class="samp">&gt;</span></samp>&rsquo; is ignored.  CPP searches for the file
+space after the initial `<samp><span class="samp">&lt;</span></samp>' is retained, but a trailing space
+before the closing `<samp><span class="samp">&gt;</span></samp>' is ignored.  CPP searches for the file
 according to the rules for angle-bracket includes.
 
    <p>In either case, if there are any tokens on the line after the file name,

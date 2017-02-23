@@ -3,7 +3,7 @@
 <title>Evaluation - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Expressions.html#Expressions" title="Expressions">
 <link rel="prev" href="Operators.html#Operators" title="Operators">
@@ -66,7 +66,7 @@ assignments dependent upon these are not performed until after
 allocation.
 
    <p>Some expressions, such as those depending upon the location counter
-&lsquo;<samp><span class="samp">.</span></samp>&rsquo;, must be evaluated during section allocation.
+`<samp><span class="samp">.</span></samp>', must be evaluated during section allocation.
 
    <p>If the result of an expression is required, but the value is not
 available, then an error results.  For example, a script like the
@@ -77,8 +77,8 @@ following
            { *(.text) }
        }
 </pre>
-   <p class="noindent">will cause the error message &lsquo;<samp><span class="samp">non constant expression for initial
-address</span></samp>&rsquo;.
+   <p class="noindent">will cause the error message `<samp><span class="samp">non constant expression for initial
+address</span></samp>'.
 
    </body></html>
 

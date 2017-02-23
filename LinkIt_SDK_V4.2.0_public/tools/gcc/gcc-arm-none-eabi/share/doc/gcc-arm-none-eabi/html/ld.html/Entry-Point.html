@@ -3,7 +3,7 @@
 <title>Entry Point - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Simple-Commands.html#Simple-Commands" title="Simple Commands">
 <link rel="next" href="File-Commands.html#File-Commands" title="File Commands">
@@ -55,12 +55,12 @@ entry point.  The argument is a symbol name:
 entry point by trying each of the following methods in order, and
 stopping when one of them succeeds:
      <ul>
-<li>the &lsquo;<samp><span class="samp">-e</span></samp>&rsquo; <var>entry</var> command-line option;
+<li>the `<samp><span class="samp">-e</span></samp>' <var>entry</var> command-line option;
 <li>the <code>ENTRY(</code><var>symbol</var><code>)</code> command in a linker script;
 <li>the value of a target specific symbol, if it is defined;  For many
 targets this is <code>start</code>, but PE and BeOS based systems for example
 check a list of possible entry symbols, matching the first one found. 
-<li>the address of the first byte of the &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; section, if present;
+<li>the address of the first byte of the `<samp><span class="samp">.text</span></samp>' section, if present;
 <li>The address <code>0</code>. 
 </ul>
 

@@ -3,7 +3,7 @@
 <title>Debugging Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="Warning-Options.html#Warning-Options" title="Warning Options">
@@ -234,11 +234,11 @@ of the final representation and the second compilation, preventing even
 <samp><span class="env">GCC_COMPARE_DEBUG</span></samp> from taking effect.
 
      <p>To verify full coverage during <samp><span class="option">-fcompare-debug</span></samp> testing, set
-<samp><span class="env">GCC_COMPARE_DEBUG</span></samp> to say &lsquo;<samp><span class="samp">-fcompare-debug-not-overridden</span></samp>&rsquo;,
+<samp><span class="env">GCC_COMPARE_DEBUG</span></samp> to say `<samp><span class="samp">-fcompare-debug-not-overridden</span></samp>',
 which GCC rejects as an invalid option in any actual compilation
 (rather than preprocessing, assembly or linking).  To get just a
-warning, setting <samp><span class="env">GCC_COMPARE_DEBUG</span></samp> to &lsquo;<samp><span class="samp">-w%n-fcompare-debug
-not overridden</span></samp>&rsquo; will do.
+warning, setting <samp><span class="env">GCC_COMPARE_DEBUG</span></samp> to `<samp><span class="samp">-w%n-fcompare-debug
+not overridden</span></samp>' will do.
 
      <br><dt><code>-fcompare-debug-second</code><dd><a name="index-fcompare_002ddebug_002dsecond-565"></a>This option is implicitly passed to the compiler for the second
 compilation requested by <samp><span class="option">-fcompare-debug</span></samp>, along with options to
@@ -289,18 +289,18 @@ between different object files within the same program.
 which serves for most needs.
 
      <p>A specification has the syntax<br>
-[&lsquo;<samp><span class="samp">dir:</span></samp>&rsquo;|&lsquo;<samp><span class="samp">ind:</span></samp>&rsquo;][&lsquo;<samp><span class="samp">ord:</span></samp>&rsquo;|&lsquo;<samp><span class="samp">gen:</span></samp>&rsquo;](&lsquo;<samp><span class="samp">any</span></samp>&rsquo;|&lsquo;<samp><span class="samp">sys</span></samp>&rsquo;|&lsquo;<samp><span class="samp">base</span></samp>&rsquo;|&lsquo;<samp><span class="samp">none</span></samp>&rsquo;)
+[`<samp><span class="samp">dir:</span></samp>'|`<samp><span class="samp">ind:</span></samp>'][`<samp><span class="samp">ord:</span></samp>'|`<samp><span class="samp">gen:</span></samp>'](`<samp><span class="samp">any</span></samp>'|`<samp><span class="samp">sys</span></samp>'|`<samp><span class="samp">base</span></samp>'|`<samp><span class="samp">none</span></samp>')
 
      <p>The optional first word limits the specification to
-structs that are used directly (&lsquo;<samp><span class="samp">dir:</span></samp>&rsquo;) or used indirectly (&lsquo;<samp><span class="samp">ind:</span></samp>&rsquo;). 
+structs that are used directly (`<samp><span class="samp">dir:</span></samp>') or used indirectly (`<samp><span class="samp">ind:</span></samp>'). 
 A struct type is used directly when it is the type of a variable, member. 
 Indirect uses arise through pointers to structs. 
 That is, when use of an incomplete struct is valid, the use is indirect. 
 An example is
-&lsquo;<samp><span class="samp">struct one direct; struct two * indirect;</span></samp>&rsquo;.
+`<samp><span class="samp">struct one direct; struct two * indirect;</span></samp>'.
 
      <p>The optional second word limits the specification to
-ordinary structs (&lsquo;<samp><span class="samp">ord:</span></samp>&rsquo;) or generic structs (&lsquo;<samp><span class="samp">gen:</span></samp>&rsquo;). 
+ordinary structs (`<samp><span class="samp">ord:</span></samp>') or generic structs (`<samp><span class="samp">gen:</span></samp>'). 
 Generic structs are a bit complicated to explain. 
 For C++, these are non-explicit specializations of template classes,
 or non-template classes within the above. 
@@ -309,14 +309,14 @@ but <samp><span class="option">-femit-struct-debug-detailed</span></samp> does n
 
      <p>The third word specifies the source files for those
 structs for which the compiler should emit debug information. 
-The values &lsquo;<samp><span class="samp">none</span></samp>&rsquo; and &lsquo;<samp><span class="samp">any</span></samp>&rsquo; have the normal meaning. 
-The value &lsquo;<samp><span class="samp">base</span></samp>&rsquo; means that
+The values `<samp><span class="samp">none</span></samp>' and `<samp><span class="samp">any</span></samp>' have the normal meaning. 
+The value `<samp><span class="samp">base</span></samp>' means that
 the base of name of the file in which the type declaration appears
 must match the base of the name of the main compilation file. 
 In practice, this means that when compiling <samp><span class="file">foo.c</span></samp>, debug information
 is generated for types declared in that file and <samp><span class="file">foo.h</span></samp>,
 but not other header files. 
-The value &lsquo;<samp><span class="samp">sys</span></samp>&rsquo; means those types satisfying &lsquo;<samp><span class="samp">base</span></samp>&rsquo;
+The value `<samp><span class="samp">sys</span></samp>' means those types satisfying `<samp><span class="samp">base</span></samp>'
 or declared in system or compiler headers.
 
      <p>You may need to experiment to determine the best settings for your application.
@@ -521,7 +521,7 @@ of option arguments.
           # enable tree full unroll
              -fenable-tree-unroll
           
-</pre>
+     </pre>
      <br><dt><code>-d</code><var>letters</var><dt><code>-fdump-rtl-</code><var>pass</var><dt><code>-fdump-rtl-</code><var>pass</var><code>=</code><var>filename</var><dd><a name="index-d-592"></a>Says to make debugging dumps during compilation at times specified by
 <var>letters</var>.  This is used for debugging the RTL-based passes of the
 compiler.  The file names for most of the dumps are made by appending
@@ -698,14 +698,14 @@ in a sequence.
      <br><dt><code>-fdump-translation-unit </code><span class="roman">(C++ only)</span><dt><code>-fdump-translation-unit-</code><var>options</var> <span class="roman">(C++ only)</span><dd><a name="index-fdump_002dtranslation_002dunit-671"></a>Dump a representation of the tree structure for the entire translation
 unit to a file.  The file name is made by appending <samp><span class="file">.tu</span></samp> to the
 source file name, and the file is created in the same directory as the
-output file.  If the &lsquo;<samp><span class="samp">-</span><var>options</var></samp>&rsquo; form is used, <var>options</var>
+output file.  If the `<samp><span class="samp">-</span><var>options</var></samp>' form is used, <var>options</var>
 controls the details of the dump as described for the
 <samp><span class="option">-fdump-tree</span></samp> options.
 
      <br><dt><code>-fdump-class-hierarchy </code><span class="roman">(C++ only)</span><dt><code>-fdump-class-hierarchy-</code><var>options</var> <span class="roman">(C++ only)</span><dd><a name="index-fdump_002dclass_002dhierarchy-672"></a>Dump a representation of each class's hierarchy and virtual function
 table layout to a file.  The file name is made by appending
 <samp><span class="file">.class</span></samp> to the source file name, and the file is created in the
-same directory as the output file.  If the &lsquo;<samp><span class="samp">-</span><var>options</var></samp>&rsquo; form
+same directory as the output file.  If the `<samp><span class="samp">-</span><var>options</var></samp>' form
 is used, <var>options</var> controls the details of the dump as described
 for the <samp><span class="option">-fdump-tree</span></samp> options.
 
@@ -716,12 +716,12 @@ in the same directory as the output file.  The following dumps are
 possible:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">all</span></samp>&rsquo;<dd>Enables all inter-procedural analysis dumps.
+<dt>`<samp><span class="samp">all</span></samp>'<dd>Enables all inter-procedural analysis dumps.
 
-          <br><dt>&lsquo;<samp><span class="samp">cgraph</span></samp>&rsquo;<dd>Dumps information about call-graph optimization, unused function removal,
+          <br><dt>`<samp><span class="samp">cgraph</span></samp>'<dd>Dumps information about call-graph optimization, unused function removal,
 and inlining decisions.
 
-          <br><dt>&lsquo;<samp><span class="samp">inline</span></samp>&rsquo;<dd>Dump after function inlining.
+          <br><dt>`<samp><span class="samp">inline</span></samp>'<dd>Dump after function inlining.
 
      </dl>
 
@@ -730,10 +730,10 @@ the current command-line options.
 
      <br><dt><code>-fdump-statistics-</code><var>option</var><dd><a name="index-fdump_002dstatistics-675"></a>Enable and control dumping of pass statistics in a separate file.  The
 file name is generated by appending a suffix ending in
-&lsquo;<samp><span class="samp">.statistics</span></samp>&rsquo; to the source file name, and the file is created in
-the same directory as the output file.  If the &lsquo;<samp><span class="samp">-</span><var>option</var></samp>&rsquo;
-form is used, &lsquo;<samp><span class="samp">-stats</span></samp>&rsquo; causes counters to be summed over the
-whole compilation unit while &lsquo;<samp><span class="samp">-details</span></samp>&rsquo; dumps every event as
+`<samp><span class="samp">.statistics</span></samp>' to the source file name, and the file is created in
+the same directory as the output file.  If the `<samp><span class="samp">-</span><var>option</var></samp>'
+form is used, `<samp><span class="samp">-stats</span></samp>' causes counters to be summed over the
+whole compilation unit while `<samp><span class="samp">-details</span></samp>' dumps every event as
 the passes generate them.  The default with no option is to sum
 counters for each function compiled.
 
@@ -742,20 +742,20 @@ language tree to a file.  The file name is generated by appending a
 switch-specific suffix to the source file name, and the file is
 created in the same directory as the output file. In case of
 <samp><span class="option">=</span><var>filename</var></samp> option, the dump is output on the given file
-instead of the auto named dump files.  If the &lsquo;<samp><span class="samp">-</span><var>options</var></samp>&rsquo;
-form is used, <var>options</var> is a list of &lsquo;<samp><span class="samp">-</span></samp>&rsquo; separated options
+instead of the auto named dump files.  If the `<samp><span class="samp">-</span><var>options</var></samp>'
+form is used, <var>options</var> is a list of `<samp><span class="samp">-</span></samp>' separated options
 which control the details of the dump.  Not all options are applicable
 to all dumps; those that are not meaningful are ignored.  The
 following options are available
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">address</span></samp>&rsquo;<dd>Print the address of each node.  Usually this is not meaningful as it
+<dt>`<samp><span class="samp">address</span></samp>'<dd>Print the address of each node.  Usually this is not meaningful as it
 changes according to the environment and source file.  Its primary use
 is for tying up a dump file with a debug environment. 
-<br><dt>&lsquo;<samp><span class="samp">asmname</span></samp>&rsquo;<dd>If <code>DECL_ASSEMBLER_NAME</code> has been set for a given decl, use that
+<br><dt>`<samp><span class="samp">asmname</span></samp>'<dd>If <code>DECL_ASSEMBLER_NAME</code> has been set for a given decl, use that
 in the dump instead of <code>DECL_NAME</code>.  Its primary use is ease of
 use working backward from mangled names in the assembly file. 
-<br><dt>&lsquo;<samp><span class="samp">slim</span></samp>&rsquo;<dd>When dumping front-end intermediate representations, inhibit dumping
+<br><dt>`<samp><span class="samp">slim</span></samp>'<dd>When dumping front-end intermediate representations, inhibit dumping
 of members of a scope or body of a function merely because that scope
 has been reached.  Only dump such items when they are directly reachable
 by some other path.
@@ -765,14 +765,14 @@ bodies of control structures.
 
           <p>When dumping RTL, print the RTL in slim (condensed) form instead of
 the default LISP-like representation. 
-<br><dt>&lsquo;<samp><span class="samp">raw</span></samp>&rsquo;<dd>Print a raw representation of the tree.  By default, trees are
+<br><dt>`<samp><span class="samp">raw</span></samp>'<dd>Print a raw representation of the tree.  By default, trees are
 pretty-printed into a C-like representation. 
-<br><dt>&lsquo;<samp><span class="samp">details</span></samp>&rsquo;<dd>Enable more detailed dumps (not honored by every dump option). Also
+<br><dt>`<samp><span class="samp">details</span></samp>'<dd>Enable more detailed dumps (not honored by every dump option). Also
 include information from the optimization passes. 
-<br><dt>&lsquo;<samp><span class="samp">stats</span></samp>&rsquo;<dd>Enable dumping various statistics about the pass (not honored by every dump
+<br><dt>`<samp><span class="samp">stats</span></samp>'<dd>Enable dumping various statistics about the pass (not honored by every dump
 option). 
-<br><dt>&lsquo;<samp><span class="samp">blocks</span></samp>&rsquo;<dd>Enable showing basic block boundaries (disabled in raw dumps). 
-<br><dt>&lsquo;<samp><span class="samp">graph</span></samp>&rsquo;<dd>For each of the other indicated dump files (<samp><span class="option">-fdump-rtl-</span><var>pass</var></samp>),
+<br><dt>`<samp><span class="samp">blocks</span></samp>'<dd>Enable showing basic block boundaries (disabled in raw dumps). 
+<br><dt>`<samp><span class="samp">graph</span></samp>'<dd>For each of the other indicated dump files (<samp><span class="option">-fdump-rtl-</span><var>pass</var></samp>),
 dump a representation of the control flow graph suitable for viewing with
 GraphViz to <samp><var>file</var><span class="file">.</span><var>passid</var><span class="file">.</span><var>pass</var><span class="file">.dot</span></samp>.  Each function in
 the file is pretty-printed as a subgraph, so that GraphViz can render them
@@ -780,123 +780,123 @@ all in a single plot.
 
           <p>This option currently only works for RTL dumps, and the RTL is always
 dumped in slim form. 
-<br><dt>&lsquo;<samp><span class="samp">vops</span></samp>&rsquo;<dd>Enable showing virtual operands for every statement. 
-<br><dt>&lsquo;<samp><span class="samp">lineno</span></samp>&rsquo;<dd>Enable showing line numbers for statements. 
-<br><dt>&lsquo;<samp><span class="samp">uid</span></samp>&rsquo;<dd>Enable showing the unique ID (<code>DECL_UID</code>) for each variable. 
-<br><dt>&lsquo;<samp><span class="samp">verbose</span></samp>&rsquo;<dd>Enable showing the tree dump for each statement. 
-<br><dt>&lsquo;<samp><span class="samp">eh</span></samp>&rsquo;<dd>Enable showing the EH region number holding each statement. 
-<br><dt>&lsquo;<samp><span class="samp">scev</span></samp>&rsquo;<dd>Enable showing scalar evolution analysis details. 
-<br><dt>&lsquo;<samp><span class="samp">optimized</span></samp>&rsquo;<dd>Enable showing optimization information (only available in certain
+<br><dt>`<samp><span class="samp">vops</span></samp>'<dd>Enable showing virtual operands for every statement. 
+<br><dt>`<samp><span class="samp">lineno</span></samp>'<dd>Enable showing line numbers for statements. 
+<br><dt>`<samp><span class="samp">uid</span></samp>'<dd>Enable showing the unique ID (<code>DECL_UID</code>) for each variable. 
+<br><dt>`<samp><span class="samp">verbose</span></samp>'<dd>Enable showing the tree dump for each statement. 
+<br><dt>`<samp><span class="samp">eh</span></samp>'<dd>Enable showing the EH region number holding each statement. 
+<br><dt>`<samp><span class="samp">scev</span></samp>'<dd>Enable showing scalar evolution analysis details. 
+<br><dt>`<samp><span class="samp">optimized</span></samp>'<dd>Enable showing optimization information (only available in certain
 passes). 
-<br><dt>&lsquo;<samp><span class="samp">missed</span></samp>&rsquo;<dd>Enable showing missed optimization information (only available in certain
+<br><dt>`<samp><span class="samp">missed</span></samp>'<dd>Enable showing missed optimization information (only available in certain
 passes). 
-<br><dt>&lsquo;<samp><span class="samp">notes</span></samp>&rsquo;<dd>Enable other detailed optimization information (only available in
+<br><dt>`<samp><span class="samp">notes</span></samp>'<dd>Enable other detailed optimization information (only available in
 certain passes). 
-<br><dt>&lsquo;<samp><span class="samp">=</span><var>filename</var></samp>&rsquo;<dd>Instead of an auto named dump file, output into the given file
+<br><dt>`<samp><span class="samp">=</span><var>filename</var></samp>'<dd>Instead of an auto named dump file, output into the given file
 name. The file names <samp><span class="file">stdout</span></samp> and <samp><span class="file">stderr</span></samp> are treated
 specially and are considered already open standard streams. For
 example,
 
           <pre class="smallexample">               gcc -O2 -ftree-vectorize -fdump-tree-vect-blocks=foo.dump
                     -fdump-tree-pre=stderr file.c
-</pre>
+          </pre>
           <p>outputs vectorizer dump into <samp><span class="file">foo.dump</span></samp>, while the PRE dump is
 output on to <samp><span class="file">stderr</span></samp>. If two conflicting dump filenames are
 given for the same pass, then the latter option overrides the earlier
 one.
 
-          <br><dt>&lsquo;<samp><span class="samp">all</span></samp>&rsquo;<dd>Turn on all options, except <samp><span class="option">raw</span></samp>, <samp><span class="option">slim</span></samp>, <samp><span class="option">verbose</span></samp>
+          <br><dt>`<samp><span class="samp">all</span></samp>'<dd>Turn on all options, except <samp><span class="option">raw</span></samp>, <samp><span class="option">slim</span></samp>, <samp><span class="option">verbose</span></samp>
 and <samp><span class="option">lineno</span></samp>.
 
-          <br><dt>&lsquo;<samp><span class="samp">optall</span></samp>&rsquo;<dd>Turn on all optimization options, i.e., <samp><span class="option">optimized</span></samp>,
+          <br><dt>`<samp><span class="samp">optall</span></samp>'<dd>Turn on all optimization options, i.e., <samp><span class="option">optimized</span></samp>,
 <samp><span class="option">missed</span></samp>, and <samp><span class="option">note</span></samp>. 
 </dl>
 
      <p>The following tree dumps are possible:
           <dl>
-<dt>&lsquo;<samp><span class="samp">original</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002doriginal-677"></a>Dump before any tree based optimization, to <samp><var>file</var><span class="file">.original</span></samp>.
+<dt>`<samp><span class="samp">original</span></samp>'<dd><a name="index-fdump_002dtree_002doriginal-677"></a>Dump before any tree based optimization, to <samp><var>file</var><span class="file">.original</span></samp>.
 
-          <br><dt>&lsquo;<samp><span class="samp">optimized</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002doptimized-678"></a>Dump after all tree based optimization, to <samp><var>file</var><span class="file">.optimized</span></samp>.
+          <br><dt>`<samp><span class="samp">optimized</span></samp>'<dd><a name="index-fdump_002dtree_002doptimized-678"></a>Dump after all tree based optimization, to <samp><var>file</var><span class="file">.optimized</span></samp>.
 
-          <br><dt>&lsquo;<samp><span class="samp">gimple</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dgimple-679"></a>Dump each function before and after the gimplification pass to a file.  The
+          <br><dt>`<samp><span class="samp">gimple</span></samp>'<dd><a name="index-fdump_002dtree_002dgimple-679"></a>Dump each function before and after the gimplification pass to a file.  The
 file name is made by appending <samp><span class="file">.gimple</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">cfg</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dcfg-680"></a>Dump the control flow graph of each function to a file.  The file name is
+          <br><dt>`<samp><span class="samp">cfg</span></samp>'<dd><a name="index-fdump_002dtree_002dcfg-680"></a>Dump the control flow graph of each function to a file.  The file name is
 made by appending <samp><span class="file">.cfg</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">ch</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dch-681"></a>Dump each function after copying loop headers.  The file name is made by
+          <br><dt>`<samp><span class="samp">ch</span></samp>'<dd><a name="index-fdump_002dtree_002dch-681"></a>Dump each function after copying loop headers.  The file name is made by
 appending <samp><span class="file">.ch</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">ssa</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dssa-682"></a>Dump SSA related information to a file.  The file name is made by appending
+          <br><dt>`<samp><span class="samp">ssa</span></samp>'<dd><a name="index-fdump_002dtree_002dssa-682"></a>Dump SSA related information to a file.  The file name is made by appending
 <samp><span class="file">.ssa</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">alias</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dalias-683"></a>Dump aliasing information for each function.  The file name is made by
+          <br><dt>`<samp><span class="samp">alias</span></samp>'<dd><a name="index-fdump_002dtree_002dalias-683"></a>Dump aliasing information for each function.  The file name is made by
 appending <samp><span class="file">.alias</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">ccp</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dccp-684"></a>Dump each function after CCP.  The file name is made by appending
+          <br><dt>`<samp><span class="samp">ccp</span></samp>'<dd><a name="index-fdump_002dtree_002dccp-684"></a>Dump each function after CCP.  The file name is made by appending
 <samp><span class="file">.ccp</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">storeccp</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dstoreccp-685"></a>Dump each function after STORE-CCP.  The file name is made by appending
+          <br><dt>`<samp><span class="samp">storeccp</span></samp>'<dd><a name="index-fdump_002dtree_002dstoreccp-685"></a>Dump each function after STORE-CCP.  The file name is made by appending
 <samp><span class="file">.storeccp</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">pre</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dpre-686"></a>Dump trees after partial redundancy elimination.  The file name is made
+          <br><dt>`<samp><span class="samp">pre</span></samp>'<dd><a name="index-fdump_002dtree_002dpre-686"></a>Dump trees after partial redundancy elimination.  The file name is made
 by appending <samp><span class="file">.pre</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">fre</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dfre-687"></a>Dump trees after full redundancy elimination.  The file name is made
+          <br><dt>`<samp><span class="samp">fre</span></samp>'<dd><a name="index-fdump_002dtree_002dfre-687"></a>Dump trees after full redundancy elimination.  The file name is made
 by appending <samp><span class="file">.fre</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">copyprop</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dcopyprop-688"></a>Dump trees after copy propagation.  The file name is made
+          <br><dt>`<samp><span class="samp">copyprop</span></samp>'<dd><a name="index-fdump_002dtree_002dcopyprop-688"></a>Dump trees after copy propagation.  The file name is made
 by appending <samp><span class="file">.copyprop</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">store_copyprop</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dstore_005fcopyprop-689"></a>Dump trees after store copy-propagation.  The file name is made
+          <br><dt>`<samp><span class="samp">store_copyprop</span></samp>'<dd><a name="index-fdump_002dtree_002dstore_005fcopyprop-689"></a>Dump trees after store copy-propagation.  The file name is made
 by appending <samp><span class="file">.store_copyprop</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">dce</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002ddce-690"></a>Dump each function after dead code elimination.  The file name is made by
+          <br><dt>`<samp><span class="samp">dce</span></samp>'<dd><a name="index-fdump_002dtree_002ddce-690"></a>Dump each function after dead code elimination.  The file name is made by
 appending <samp><span class="file">.dce</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">mudflap</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dmudflap-691"></a>Dump each function after adding mudflap instrumentation.  The file name is
+          <br><dt>`<samp><span class="samp">mudflap</span></samp>'<dd><a name="index-fdump_002dtree_002dmudflap-691"></a>Dump each function after adding mudflap instrumentation.  The file name is
 made by appending <samp><span class="file">.mudflap</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">sra</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dsra-692"></a>Dump each function after performing scalar replacement of aggregates.  The
+          <br><dt>`<samp><span class="samp">sra</span></samp>'<dd><a name="index-fdump_002dtree_002dsra-692"></a>Dump each function after performing scalar replacement of aggregates.  The
 file name is made by appending <samp><span class="file">.sra</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">sink</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dsink-693"></a>Dump each function after performing code sinking.  The file name is made
+          <br><dt>`<samp><span class="samp">sink</span></samp>'<dd><a name="index-fdump_002dtree_002dsink-693"></a>Dump each function after performing code sinking.  The file name is made
 by appending <samp><span class="file">.sink</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">dom</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002ddom-694"></a>Dump each function after applying dominator tree optimizations.  The file
+          <br><dt>`<samp><span class="samp">dom</span></samp>'<dd><a name="index-fdump_002dtree_002ddom-694"></a>Dump each function after applying dominator tree optimizations.  The file
 name is made by appending <samp><span class="file">.dom</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">dse</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002ddse-695"></a>Dump each function after applying dead store elimination.  The file
+          <br><dt>`<samp><span class="samp">dse</span></samp>'<dd><a name="index-fdump_002dtree_002ddse-695"></a>Dump each function after applying dead store elimination.  The file
 name is made by appending <samp><span class="file">.dse</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">phiopt</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dphiopt-696"></a>Dump each function after optimizing PHI nodes into straightline code.  The file
+          <br><dt>`<samp><span class="samp">phiopt</span></samp>'<dd><a name="index-fdump_002dtree_002dphiopt-696"></a>Dump each function after optimizing PHI nodes into straightline code.  The file
 name is made by appending <samp><span class="file">.phiopt</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">forwprop</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dforwprop-697"></a>Dump each function after forward propagating single use variables.  The file
+          <br><dt>`<samp><span class="samp">forwprop</span></samp>'<dd><a name="index-fdump_002dtree_002dforwprop-697"></a>Dump each function after forward propagating single use variables.  The file
 name is made by appending <samp><span class="file">.forwprop</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">copyrename</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dcopyrename-698"></a>Dump each function after applying the copy rename optimization.  The file
+          <br><dt>`<samp><span class="samp">copyrename</span></samp>'<dd><a name="index-fdump_002dtree_002dcopyrename-698"></a>Dump each function after applying the copy rename optimization.  The file
 name is made by appending <samp><span class="file">.copyrename</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">nrv</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dnrv-699"></a>Dump each function after applying the named return value optimization on
+          <br><dt>`<samp><span class="samp">nrv</span></samp>'<dd><a name="index-fdump_002dtree_002dnrv-699"></a>Dump each function after applying the named return value optimization on
 generic trees.  The file name is made by appending <samp><span class="file">.nrv</span></samp> to the source
 file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">vect</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dvect-700"></a>Dump each function after applying vectorization of loops.  The file name is
+          <br><dt>`<samp><span class="samp">vect</span></samp>'<dd><a name="index-fdump_002dtree_002dvect-700"></a>Dump each function after applying vectorization of loops.  The file name is
 made by appending <samp><span class="file">.vect</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">slp</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dslp-701"></a>Dump each function after applying vectorization of basic blocks.  The file name
+          <br><dt>`<samp><span class="samp">slp</span></samp>'<dd><a name="index-fdump_002dtree_002dslp-701"></a>Dump each function after applying vectorization of basic blocks.  The file name
 is made by appending <samp><span class="file">.slp</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">vrp</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dvrp-702"></a>Dump each function after Value Range Propagation (VRP).  The file name
+          <br><dt>`<samp><span class="samp">vrp</span></samp>'<dd><a name="index-fdump_002dtree_002dvrp-702"></a>Dump each function after Value Range Propagation (VRP).  The file name
 is made by appending <samp><span class="file">.vrp</span></samp> to the source file name.
 
-          <br><dt>&lsquo;<samp><span class="samp">all</span></samp>&rsquo;<dd><a name="index-fdump_002dtree_002dall-703"></a>Enable all the available tree dumps with the flags provided in this option. 
+          <br><dt>`<samp><span class="samp">all</span></samp>'<dd><a name="index-fdump_002dtree_002dall-703"></a>Enable all the available tree dumps with the flags provided in this option. 
 </dl>
 
      <br><dt><code>-fopt-info</code><dt><code>-fopt-info-</code><var>options</var><dt><code>-fopt-info-</code><var>options</var><code>=</code><var>filename</var><dd><a name="index-fopt_002dinfo-704"></a>Controls optimization dumps from various optimization passes. If the
-&lsquo;<samp><span class="samp">-</span><var>options</var></samp>&rsquo; form is used, <var>options</var> is a list of
-&lsquo;<samp><span class="samp">-</span></samp>&rsquo; separated options to select the dump details and
+`<samp><span class="samp">-</span><var>options</var></samp>' form is used, <var>options</var> is a list of
+`<samp><span class="samp">-</span></samp>' separated options to select the dump details and
 optimizations.  If <var>options</var> is not specified, it defaults to
 <samp><span class="option">all</span></samp> for details and <samp><span class="option">optall</span></samp> for optimization
 groups. If the <var>filename</var> is not specified, it defaults to
@@ -917,20 +917,20 @@ all but the first one are ignored.
      <p>The dump verbosity has the following options
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">optimized</span></samp>&rsquo;<dd>Print information when an optimization is successfully applied. It is
+<dt>`<samp><span class="samp">optimized</span></samp>'<dd>Print information when an optimization is successfully applied. It is
 up to a pass to decide which information is relevant. For example, the
 vectorizer passes print the source location of loops which got
 successfully vectorized. 
-<br><dt>&lsquo;<samp><span class="samp">missed</span></samp>&rsquo;<dd>Print information about missed optimizations. Individual passes
+<br><dt>`<samp><span class="samp">missed</span></samp>'<dd>Print information about missed optimizations. Individual passes
 control which information to include in the output. For example,
 
           <pre class="smallexample">               gcc -O2 -ftree-vectorize -fopt-info-vec-missed
-</pre>
+          </pre>
           <p>will print information about missed optimization opportunities from
 vectorization passes on stderr. 
-<br><dt>&lsquo;<samp><span class="samp">note</span></samp>&rsquo;<dd>Print verbose information about optimizations, such as certain
+<br><dt>`<samp><span class="samp">note</span></samp>'<dd>Print verbose information about optimizations, such as certain
 transformations, more detailed messages about decisions etc. 
-<br><dt>&lsquo;<samp><span class="samp">all</span></samp>&rsquo;<dd>Print detailed optimization information. This includes
+<br><dt>`<samp><span class="samp">all</span></samp>'<dd>Print detailed optimization information. This includes
 <var>optimized</var>, <var>missed</var>, and <var>note</var>. 
 </dl>
 
@@ -938,21 +938,21 @@ transformations, more detailed messages about decisions etc.
 include one or more of the following.
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">ipa</span></samp>&rsquo;<dd>Enable dumps from all interprocedural optimizations. 
-<br><dt>&lsquo;<samp><span class="samp">loop</span></samp>&rsquo;<dd>Enable dumps from all loop optimizations. 
-<br><dt>&lsquo;<samp><span class="samp">inline</span></samp>&rsquo;<dd>Enable dumps from all inlining optimizations. 
-<br><dt>&lsquo;<samp><span class="samp">vec</span></samp>&rsquo;<dd>Enable dumps from all vectorization optimizations. 
+<dt>`<samp><span class="samp">ipa</span></samp>'<dd>Enable dumps from all interprocedural optimizations. 
+<br><dt>`<samp><span class="samp">loop</span></samp>'<dd>Enable dumps from all loop optimizations. 
+<br><dt>`<samp><span class="samp">inline</span></samp>'<dd>Enable dumps from all inlining optimizations. 
+<br><dt>`<samp><span class="samp">vec</span></samp>'<dd>Enable dumps from all vectorization optimizations. 
 </dl>
 
      <p>For example,
      <pre class="smallexample">          gcc -O3 -fopt-info-missed=missed.all
-</pre>
+     </pre>
      <p>outputs missed optimization report from all the passes into
 <samp><span class="file">missed.all</span></samp>.
 
      <p>As another example,
      <pre class="smallexample">          gcc -O3 -fopt-info-inline-optimized-missed=inline.txt
-</pre>
+     </pre>
      <p>will output information about missed optimizations as well as
 optimized locations from all the inlining passes into
 <samp><span class="file">inline.txt</span></samp>.
@@ -965,14 +965,14 @@ available optimization info from all the passes. In the following
 example, all optimization info is output on to <samp><span class="file">stderr</span></samp>.
 
      <pre class="smallexample">          gcc -O3 -fopt-info
-</pre>
+     </pre>
      <p>Note that <samp><span class="option">-fopt-info-vec-missed</span></samp> behaves the same as
 <samp><span class="option">-fopt-info-missed-vec</span></samp>.
 
      <p>As another example, consider
 
      <pre class="smallexample">          gcc -fopt-info-vec-missed=vec.miss -fopt-info-loop-optimized=loop.opt
-</pre>
+     </pre>
      <p>Here the two output filenames <samp><span class="file">vec.miss</span></samp> and <samp><span class="file">loop.opt</span></samp> are
 in conflict since only one output file is allowed. In this case, only
 the first option takes effect and the subsequent options are
@@ -1041,7 +1041,7 @@ other, and overwrite the temporary files.  For instance:
 
      <pre class="smallexample">          gcc -save-temps -o outdir1/foo.o indir1/foo.c&amp;
           gcc -save-temps -o outdir2/foo.o indir2/foo.c&amp;
-</pre>
+     </pre>
      <p>may result in <samp><span class="file">foo.i</span></samp> and <samp><span class="file">foo.o</span></samp> being written to
 simultaneously by both compilers.
 
@@ -1055,7 +1055,7 @@ object file.  If the <samp><span class="option">-o</span></samp> option is not u
      <pre class="smallexample">          gcc -save-temps=obj -c foo.c
           gcc -save-temps=obj -c bar.c -o dir/xbar.o
           gcc -save-temps=obj foobar.c -o dir2/yfoobar
-</pre>
+     </pre>
      <p class="noindent">creates <samp><span class="file">foo.i</span></samp>, <samp><span class="file">foo.s</span></samp>, <samp><span class="file">dir/xbar.i</span></samp>,
 <samp><span class="file">dir/xbar.s</span></samp>, <samp><span class="file">dir2/yfoobar.i</span></samp>, <samp><span class="file">dir2/yfoobar.s</span></samp>, and
 <samp><span class="file">dir2/yfoobar.o</span></samp>.
@@ -1068,7 +1068,7 @@ sequence.  For C source files, this is the compiler proper and assembler
 
      <pre class="smallexample">          # cc1 0.12 0.01
           # as 0.00 0.01
-</pre>
+     </pre>
      <p>The first number on each line is the &ldquo;user time&rdquo;, that is time spent
 executing the program itself.  The second number is &ldquo;system time&rdquo;,
 time spent executing operating system routines on behalf of the program. 
@@ -1079,7 +1079,7 @@ named file, and it looks like this:
 
      <pre class="smallexample">          0.12 0.01 cc1 <var>options</var>
           0.00 0.01 as <var>options</var>
-</pre>
+     </pre>
      <p>The &ldquo;user time&rdquo; and the &ldquo;system time&rdquo; are moved before the program
 name, and the options passed to the program are displayed, so that one
 can later tell what file was being compiled, and with which options.
@@ -1114,8 +1114,8 @@ to exist in <samp><span class="env">GCC_EXEC_PREFIX</span></samp>.
 
      <br><dt><code>-print-multi-lib</code><dd><a name="index-print_002dmulti_002dlib-718"></a>Print the mapping from multilib directory names to compiler switches
 that enable them.  The directory name is separated from the switches by
-&lsquo;<samp><span class="samp">;</span></samp>&rsquo;, and each switch starts with an &lsquo;<samp><span class="samp">@</span></samp>&rsquo; instead of the
-&lsquo;<samp><span class="samp">-</span></samp>&rsquo;, without spaces between multiple switches.  This is supposed to
+`<samp><span class="samp">;</span></samp>', and each switch starts with an `<samp><span class="samp">@</span></samp>' instead of the
+`<samp><span class="samp">-</span></samp>', without spaces between multiple switches.  This is supposed to
 ease shell processing.
 
      <br><dt><code>-print-multi-os-directory</code><dd><a name="index-print_002dmulti_002dos_002ddirectory-719"></a>Print the path to OS libraries for the selected
@@ -1129,7 +1129,7 @@ subdirectories it prints e.g. <samp><span class="file">amd64</span></samp>, <sam
      <br><dt><code>-print-multiarch</code><dd><a name="index-print_002dmultiarch-720"></a>Print the path to OS libraries for the selected multiarch,
 relative to some <samp><span class="file">lib</span></samp> subdirectory.
 
-     <br><dt><code>-print-prog-name=</code><var>program</var><dd><a name="index-print_002dprog_002dname-721"></a>Like <samp><span class="option">-print-file-name</span></samp>, but searches for a program such as &lsquo;<samp><span class="samp">cpp</span></samp>&rsquo;.
+     <br><dt><code>-print-prog-name=</code><var>program</var><dd><a name="index-print_002dprog_002dname-721"></a>Like <samp><span class="option">-print-file-name</span></samp>, but searches for a program such as `<samp><span class="samp">cpp</span></samp>'.
 
      <br><dt><code>-print-libgcc-file-name</code><dd><a name="index-print_002dlibgcc_002dfile_002dname-722"></a>Same as <samp><span class="option">-print-file-name=libgcc.a</span></samp>.
 
@@ -1137,16 +1137,16 @@ relative to some <samp><span class="file">lib</span></samp> subdirectory.
 but you do want to link with <samp><span class="file">libgcc.a</span></samp>.  You can do:
 
      <pre class="smallexample">          gcc -nostdlib <var>files</var>... `gcc -print-libgcc-file-name`
-</pre>
+     </pre>
      <br><dt><code>-print-search-dirs</code><dd><a name="index-print_002dsearch_002ddirs-723"></a>Print the name of the configured installation directory and a list of
 program and library directories <samp><span class="command">gcc</span></samp> searches&mdash;and don't do anything else.
 
      <p>This is useful when <samp><span class="command">gcc</span></samp> prints the error message
-&lsquo;<samp><span class="samp">installation problem, cannot exec cpp0: No such file or directory</span></samp>&rsquo;. 
+`<samp><span class="samp">installation problem, cannot exec cpp0: No such file or directory</span></samp>'. 
 To resolve this you either need to put <samp><span class="file">cpp0</span></samp> and the other compiler
 components where <samp><span class="command">gcc</span></samp> expects to find them, or you can set the environment
 variable <samp><span class="env">GCC_EXEC_PREFIX</span></samp> to the directory where you installed them. 
-Don't forget the trailing &lsquo;<samp><span class="samp">/</span></samp>&rsquo;. 
+Don't forget the trailing `<samp><span class="samp">/</span></samp>'. 
 See <a href="Environment-Variables.html#Environment-Variables">Environment Variables</a>.
 
      <br><dt><code>-print-sysroot</code><dd><a name="index-print_002dsysroot-724"></a>Print the target sysroot directory that is used during
@@ -1160,9 +1160,9 @@ headers, or give an error if the compiler is not configured with such
 a suffix&mdash;and don't do anything else.
 
      <br><dt><code>-dumpmachine</code><dd><a name="index-dumpmachine-726"></a>Print the compiler's target machine (for example,
-&lsquo;<samp><span class="samp">i686-pc-linux-gnu</span></samp>&rsquo;)&mdash;and don't do anything else.
+`<samp><span class="samp">i686-pc-linux-gnu</span></samp>')&mdash;and don't do anything else.
 
-     <br><dt><code>-dumpversion</code><dd><a name="index-dumpversion-727"></a>Print the compiler version (for example, &lsquo;<samp><span class="samp">3.0</span></samp>&rsquo;)&mdash;and don't do
+     <br><dt><code>-dumpversion</code><dd><a name="index-dumpversion-727"></a>Print the compiler version (for example, `<samp><span class="samp">3.0</span></samp>')&mdash;and don't do
 anything else.
 
      <br><dt><code>-dumpspecs</code><dd><a name="index-dumpspecs-728"></a>Print the compiler's built-in specs&mdash;and don't do anything else.  (This

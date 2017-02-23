@@ -3,7 +3,7 @@
 <title>GDB/MI Breakpoint Information - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI-Output-Records.html#GDB_002fMI-Output-Records" title="GDB/MI Output Records">
 <link rel="prev" href="GDB_002fMI-Async-Records.html#GDB_002fMI-Async-Records" title="GDB/MI Async Records">
@@ -55,25 +55,25 @@ following fields:
      <dl>
 <dt><code>number</code><dd>The breakpoint number.  For a breakpoint that represents one location
 of a multi-location breakpoint, this will be a dotted pair, like
-&lsquo;<samp><span class="samp">1.2</span></samp>&rsquo;.
+`<samp><span class="samp">1.2</span></samp>'.
 
      <br><dt><code>type</code><dd>The type of the breakpoint.  For ordinary breakpoints this will be
-&lsquo;<samp><span class="samp">breakpoint</span></samp>&rsquo;, but many values are possible.
+`<samp><span class="samp">breakpoint</span></samp>', but many values are possible.
 
-     <br><dt><code>catch-type</code><dd>If the type of the breakpoint is &lsquo;<samp><span class="samp">catchpoint</span></samp>&rsquo;, then this
+     <br><dt><code>catch-type</code><dd>If the type of the breakpoint is `<samp><span class="samp">catchpoint</span></samp>', then this
 indicates the exact type of catchpoint.
 
-     <br><dt><code>disp</code><dd>This is the breakpoint disposition&mdash;either &lsquo;<samp><span class="samp">del</span></samp>&rsquo;, meaning that
-the breakpoint will be deleted at the next stop, or &lsquo;<samp><span class="samp">keep</span></samp>&rsquo;,
+     <br><dt><code>disp</code><dd>This is the breakpoint disposition&mdash;either `<samp><span class="samp">del</span></samp>', meaning that
+the breakpoint will be deleted at the next stop, or `<samp><span class="samp">keep</span></samp>',
 meaning that the breakpoint will not be deleted.
 
      <br><dt><code>enabled</code><dd>This indicates whether the breakpoint is enabled, in which case the
-value is &lsquo;<samp><span class="samp">y</span></samp>&rsquo;, or disabled, in which case the value is &lsquo;<samp><span class="samp">n</span></samp>&rsquo;. 
+value is `<samp><span class="samp">y</span></samp>', or disabled, in which case the value is `<samp><span class="samp">n</span></samp>'. 
 Note that this is not the same as the field <code>enable</code>.
 
      <br><dt><code>addr</code><dd>The address of the breakpoint.  This may be a hexidecimal number,
-giving the address; or the string &lsquo;<samp><span class="samp">&lt;PENDING&gt;</span></samp>&rsquo;, for a pending
-breakpoint; or the string &lsquo;<samp><span class="samp">&lt;MULTIPLE&gt;</span></samp>&rsquo;, for a breakpoint with
+giving the address; or the string `<samp><span class="samp">&lt;PENDING&gt;</span></samp>', for a pending
+breakpoint; or the string `<samp><span class="samp">&lt;MULTIPLE&gt;</span></samp>', for a breakpoint with
 multiple locations.  This field will not be present if no address can
 be determined.  For example, a watchpoint does not have an address.
 
@@ -96,8 +96,8 @@ by a symbol name.
      <br><dt><code>pending</code><dd>If this breakpoint is pending, this field is present and holds the
 text used to set the breakpoint, as entered by the user.
 
-     <br><dt><code>evaluated-by</code><dd>Where this breakpoint's condition is evaluated, either &lsquo;<samp><span class="samp">host</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">target</span></samp>&rsquo;.
+     <br><dt><code>evaluated-by</code><dd>Where this breakpoint's condition is evaluated, either `<samp><span class="samp">host</span></samp>' or
+`<samp><span class="samp">target</span></samp>'.
 
      <br><dt><code>thread</code><dd>If this is a thread-specific breakpoint, then this identifies the
 thread in which the breakpoint can trigger.
@@ -124,8 +124,8 @@ This field is optional.
 
      <br><dt><code>times</code><dd>The number of times the breakpoint has been hit.
 
-     <br><dt><code>installed</code><dd>This field is only given for tracepoints.  This is either &lsquo;<samp><span class="samp">y</span></samp>&rsquo;,
-meaning that the tracepoint is installed, or &lsquo;<samp><span class="samp">n</span></samp>&rsquo;, meaning that it
+     <br><dt><code>installed</code><dd>This field is only given for tracepoints.  This is either `<samp><span class="samp">y</span></samp>',
+meaning that the tracepoint is installed, or `<samp><span class="samp">n</span></samp>', meaning that it
 is not.
 
      <br><dt><code>what</code><dd>Some extra data, the exact contents of which are type-dependent.

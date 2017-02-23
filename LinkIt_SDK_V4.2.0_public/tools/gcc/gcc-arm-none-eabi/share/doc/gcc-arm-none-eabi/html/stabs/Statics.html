@@ -3,7 +3,7 @@
 <title>Statics - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Variables.html#Variables" title="Variables">
 <link rel="prev" href="Common-Blocks.html#Common-Blocks" title="Common Blocks">
@@ -45,10 +45,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Variables.html#Variables">Variables</a>
 
 <h3 class="section">4.5 Static Variables</h3>
 
-<p>Initialized static variables are represented by the &lsquo;<samp><span class="samp">S</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">V</span></samp>&rsquo; symbol descriptors.  &lsquo;<samp><span class="samp">S</span></samp>&rsquo; means file scope static, and
-&lsquo;<samp><span class="samp">V</span></samp>&rsquo; means procedure scope static.  One exception: in XCOFF, IBM's
-xlc compiler always uses &lsquo;<samp><span class="samp">V</span></samp>&rsquo;, and whether it is file scope or not
+<p>Initialized static variables are represented by the `<samp><span class="samp">S</span></samp>' and
+`<samp><span class="samp">V</span></samp>' symbol descriptors.  `<samp><span class="samp">S</span></samp>' means file scope static, and
+`<samp><span class="samp">V</span></samp>' means procedure scope static.  One exception: in XCOFF, IBM's
+xlc compiler always uses `<samp><span class="samp">V</span></samp>', and whether it is file scope or not
 is distinguished by whether the stab is located within a function.
 
 <!-- This is probably not worth mentioning; it is only true on the sparc -->
@@ -57,7 +57,7 @@ is distinguished by whether the stab is located within a function.
 <!-- (although GCC -->
 <!-- 2.4.5 has a bug in that it uses @code{N_FUN}, so neither dbx nor GDB can -->
 <!-- find the variables) -->
-   <p><a name="index-N_005fSTSYM-37"></a><a name="index-N_005fLCSYM-38"></a><a name="index-N_005fFUN_002c-for-variables-39"></a><a name="index-N_005fROSYM-40"></a>In a.out files, <code>N_STSYM</code> means the data section, <code>N_FUN</code>
+<p><a name="index-N_005fSTSYM-37"></a><a name="index-N_005fLCSYM-38"></a><a name="index-N_005fFUN_002c-for-variables-39"></a><a name="index-N_005fROSYM-40"></a>In a.out files, <code>N_STSYM</code> means the data section, <code>N_FUN</code>
 means the text section, and <code>N_LCSYM</code> means the bss section.  For
 those systems with a read-only data section separate from the text
 section (Solaris), <code>N_ROSYM</code> means the read-only data section.
@@ -79,25 +79,25 @@ section (Solaris), <code>N_ROSYM</code> means the read-only data section.
    <p><a name="index-C_005fSTSYM-41"></a><a name="index-C_005fBSTAT-42"></a><a name="index-C_005fESTAT-43"></a>In XCOFF files, the stab type need not indicate the section;
 <code>C_STSYM</code> can be used for all statics.  Also, each static variable
 is enclosed in a static block.  A <code>C_BSTAT</code> (emitted with a
-&lsquo;<samp><span class="samp">.bs</span></samp>&rsquo; assembler directive) symbol begins the static block; its
+`<samp><span class="samp">.bs</span></samp>' assembler directive) symbol begins the static block; its
 value is the symbol number of the csect symbol whose value is the
 address of the static block, its section is the section of the variables
-in that static block, and its name is &lsquo;<samp><span class="samp">.bs</span></samp>&rsquo;.  A <code>C_ESTAT</code>
-(emitted with a &lsquo;<samp><span class="samp">.es</span></samp>&rsquo; assembler directive) symbol ends the static
-block; its name is &lsquo;<samp><span class="samp">.es</span></samp>&rsquo; and its value and section are ignored.
+in that static block, and its name is `<samp><span class="samp">.bs</span></samp>'.  A <code>C_ESTAT</code>
+(emitted with a `<samp><span class="samp">.es</span></samp>' assembler directive) symbol ends the static
+block; its name is `<samp><span class="samp">.es</span></samp>' and its value and section are ignored.
 
    <p>In ECOFF files, the storage class is used to specify the section, so the
 stab type need not indicate the section.
 
    <p>In ELF files, for the SunPRO compiler version 2.0.1, symbol descriptor
-&lsquo;<samp><span class="samp">S</span></samp>&rsquo; means that the address is absolute (the linker relocates it)
-and symbol descriptor &lsquo;<samp><span class="samp">V</span></samp>&rsquo; means that the address is relative to the
+`<samp><span class="samp">S</span></samp>' means that the address is absolute (the linker relocates it)
+and symbol descriptor `<samp><span class="samp">V</span></samp>' means that the address is relative to the
 start of the relevant section for that compilation unit.  SunPRO has
 plans to have the linker stop relocating stabs; I suspect that their the
 debugger gets the address from the corresponding ELF (not stab) symbol. 
 I'm not sure how to find which symbol of that name is the right one. 
 The clean way to do all this would be to have the value of a symbol
-descriptor &lsquo;<samp><span class="samp">S</span></samp>&rsquo; symbol be an offset relative to the start of the
+descriptor `<samp><span class="samp">S</span></samp>' symbol be an offset relative to the start of the
 file, just like everything else, but that introduces obvious
 compatibility problems.  For more information on linker stab relocation,
 See <a href="ELF-Linker-Relocation.html#ELF-Linker-Relocation">ELF Linker Relocation</a>.

@@ -3,7 +3,7 @@
 <title>ELF Linker Relocation - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stab-Sections.html#Stab-Sections" title="Stab Sections">
 <link rel="prev" href="Stab-Section-Basics.html#Stab-Section-Basics" title="Stab Section Basics">
@@ -71,7 +71,7 @@ do this (to speed up linking), even though the correct way to avoid
 having the linker do these relocations is to have the compiler no longer
 output relocatable values.  Last I heard they had been talked out of the
 linker kludge.  See Sun point patch 101052-01 and Sun bug 1142109.  With
-the Sun compiler this affects &lsquo;<samp><span class="samp">S</span></samp>&rsquo; symbol descriptor stabs
+the Sun compiler this affects `<samp><span class="samp">S</span></samp>' symbol descriptor stabs
 (see <a href="Statics.html#Statics">Statics</a>) and functions (see <a href="Procedures.html#Procedures">Procedures</a>).  In the latter
 case, to adopt the clean solution (making the value of the stab relative
 to the start of the compilation unit), it would be necessary to invent a

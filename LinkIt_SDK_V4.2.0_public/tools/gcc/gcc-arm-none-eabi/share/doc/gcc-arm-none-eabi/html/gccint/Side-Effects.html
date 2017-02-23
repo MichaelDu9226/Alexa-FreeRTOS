@@ -3,7 +3,7 @@
 <title>Side Effects - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="RTL.html#RTL" title="RTL">
 <link rel="prev" href="RTL-Declarations.html#RTL-Declarations" title="RTL Declarations">
@@ -197,7 +197,7 @@ guarantees that the register is unoccupied both before and after that
 insn if it is a hard register clobber.  For pseudo-register clobber,
 the register allocator and the reload pass do not assign the same hard
 register to the clobber and the input operands if there is an insn
-alternative containing the &lsquo;<samp><span class="samp">&amp;</span></samp>&rsquo; constraint (see <a href="Modifiers.html#Modifiers">Modifiers</a>) for
+alternative containing the `<samp><span class="samp">&amp;</span></samp>' constraint (see <a href="Modifiers.html#Modifiers">Modifiers</a>) for
 the clobber and the hard register is in register classes of the
 clobber in the alternative.  You can clobber either a specific hard
 register, a pseudo register, or a <code>scratch</code> expression; in the
@@ -232,7 +232,7 @@ of a special control register:
      <pre class="smallexample">          (parallel [(set (reg:SI 2) (unspec:SI [(reg:SI 3)
                                                  (reg:SI 4)] 0))
                      (use (reg:SI 1))])
-</pre>
+     </pre>
      <p class="noindent">This will not work, several of the optimizers only look at expressions
 locally; it is very likely that if you have multiple insns with
 identical inputs to the <code>unspec</code>, they will be optimized away even
@@ -244,8 +244,8 @@ that the register is live.  You should think twice before adding
 instead.  The <code>use</code> RTX is most commonly useful to describe that
 a fixed register is implicitly used in an insn.  It is also safe to use
 in patterns where the compiler knows for other reasons that the result
-of the whole pattern is variable, such as &lsquo;<samp><span class="samp">movmem</span><var>m</var></samp>&rsquo; or
-&lsquo;<samp><span class="samp">call</span></samp>&rsquo; patterns.
+of the whole pattern is variable, such as `<samp><span class="samp">movmem</span><var>m</var></samp>' or
+`<samp><span class="samp">call</span></samp>' patterns.
 
      <p>During the reload phase, an insn that has a <code>use</code> as pattern
 can carry a reg_equal note.  These <code>use</code> insns will be deleted
@@ -269,7 +269,7 @@ performed.  For example,
 
      <pre class="smallexample">          (parallel [(set (reg:SI 1) (mem:SI (reg:SI 1)))
                      (set (mem:SI (reg:SI 1)) (reg:SI 1))])
-</pre>
+     </pre>
      <p class="noindent">says unambiguously that the values of hard register 1 and the memory
 location addressed by it are interchanged.  In both places where
 <code>(reg:SI 1)</code> appears as a memory address it refers to the value
@@ -285,7 +285,7 @@ instruction this way:
                                   (eq (cc0) (const_int 0))
                                   (label_ref ...)
                                   (pc)))])
-</pre>
+     </pre>
      <p class="noindent">But this is incorrect, because it says that the jump condition depends
 on the condition code value <em>before</em> this instruction, not on the
 new value that is set by this instruction.

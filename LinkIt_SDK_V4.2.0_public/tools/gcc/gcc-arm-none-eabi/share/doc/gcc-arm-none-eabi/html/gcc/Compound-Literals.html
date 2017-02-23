@@ -3,7 +3,7 @@
 <title>Compound Literals - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Initializers.html#Initializers" title="Initializers">
@@ -116,16 +116,16 @@ temporary object, which only lives until the end of its
 full-expression.  As a result, well-defined C code that takes the
 address of a subobject of a compound literal can be undefined in C++. 
 For instance, if the array compound literal example above appeared
-inside a function, any subsequent use of &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; in C++ has
+inside a function, any subsequent use of `<samp><span class="samp">foo</span></samp>' in C++ has
 undefined behavior because the lifetime of the array ends after the
-declaration of &lsquo;<samp><span class="samp">foo</span></samp>&rsquo;.  As a result, the C++ compiler now rejects
+declaration of `<samp><span class="samp">foo</span></samp>'.  As a result, the C++ compiler now rejects
 the conversion of a temporary array to a pointer.
 
  <p>As an optimization, the C++ compiler sometimes gives array compound
 literals longer lifetimes: when the array either appears outside a
-function or has const-qualified type.  If &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; and its
-initializer had elements of &lsquo;<samp><span class="samp">char *const</span></samp>&rsquo; type rather than
-&lsquo;<samp><span class="samp">char *</span></samp>&rsquo;, or if &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; were a global variable, the array
+function or has const-qualified type.  If `<samp><span class="samp">foo</span></samp>' and its
+initializer had elements of `<samp><span class="samp">char *const</span></samp>' type rather than
+`<samp><span class="samp">char *</span></samp>', or if `<samp><span class="samp">foo</span></samp>' were a global variable, the array
 would have static storage duration.  But it is probably safest just to
 avoid the use of array compound literals in code compiled as C++.
 

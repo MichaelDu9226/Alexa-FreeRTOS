@@ -3,7 +3,7 @@
 <title>AVR-Modifiers - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="AVR-Syntax.html#AVR-Syntax" title="AVR Syntax">
 <link rel="prev" href="AVR_002dRegs.html#AVR_002dRegs" title="AVR-Regs">
@@ -64,26 +64,26 @@ an address expression as 8 bit relocatable expression.
      <br><dt><code>hi8</code><dd>
 This modifier allows you to use bits 7 through 15 of an address expression
 as 8 bit relocatable expression.  This is useful with, for example, the
-AVR &lsquo;<samp><span class="samp">ldi</span></samp>&rsquo; instruction and &lsquo;<samp><span class="samp">lo8</span></samp>&rsquo; modifier.
+AVR `<samp><span class="samp">ldi</span></samp>' instruction and `<samp><span class="samp">lo8</span></samp>' modifier.
 
      <p>For example
 
      <pre class="smallexample">          ldi r26, lo8(sym+10)
           ldi r27, hi8(sym+10)
-</pre>
+     </pre>
      <br><dt><code>hh8</code><dd>
 This modifier allows you to use bits 16 through 23 of
 an address expression as 8 bit relocatable expression. 
 Also, can be useful for loading 32 bit constants.
 
      <br><dt><code>hlo8</code><dd>
-Synonym of &lsquo;<samp><span class="samp">hh8</span></samp>&rsquo;.
+Synonym of `<samp><span class="samp">hh8</span></samp>'.
 
      <br><dt><code>hhi8</code><dd>
 This modifier allows you to use bits 24 through 31 of
 an expression as 8 bit expression. This is useful with, for example, the
-AVR &lsquo;<samp><span class="samp">ldi</span></samp>&rsquo; instruction and &lsquo;<samp><span class="samp">lo8</span></samp>&rsquo;, &lsquo;<samp><span class="samp">hi8</span></samp>&rsquo;, &lsquo;<samp><span class="samp">hlo8</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">hhi8</span></samp>&rsquo;, modifier.
+AVR `<samp><span class="samp">ldi</span></samp>' instruction and `<samp><span class="samp">lo8</span></samp>', `<samp><span class="samp">hi8</span></samp>', `<samp><span class="samp">hlo8</span></samp>',
+`<samp><span class="samp">hhi8</span></samp>', modifier.
 
      <p>For example
 
@@ -92,13 +92,13 @@ AVR &lsquo;<samp><span class="samp">ldi</span></samp>&rsquo; instruction and &ls
           ldi r28, hlo8(285774925)
           ldi r29, hhi8(285774925)
           ; r29,r28,r27,r26 = 285774925
-</pre>
+     </pre>
      <br><dt><code>pm_lo8</code><dd>
 This modifier allows you to use bits 0 through 7 of
 an address expression as 8 bit relocatable expression. 
 This modifier useful for addressing data or code from
-Flash/Program memory. The using of &lsquo;<samp><span class="samp">pm_lo8</span></samp>&rsquo; similar
-to &lsquo;<samp><span class="samp">lo8</span></samp>&rsquo;.
+Flash/Program memory. The using of `<samp><span class="samp">pm_lo8</span></samp>' similar
+to `<samp><span class="samp">lo8</span></samp>'.
 
      <br><dt><code>pm_hi8</code><dd>
 This modifier allows you to use bits 8 through 15 of

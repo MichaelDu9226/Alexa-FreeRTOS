@@ -3,7 +3,7 @@
 <title>Directives Within Macro Arguments - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Macros.html#Macros" title="Macros">
 <link rel="prev" href="Undefining-and-Redefining-Macros.html#Undefining-and-Redefining-Macros" title="Undefining and Redefining Macros">
@@ -67,8 +67,8 @@ functions and function-like macros, so it seemed attractive to remove
 this limitation, and people would often be surprised that they could
 not use macros in this way.  Moreover, sometimes people would use
 conditional compilation in the argument list to a normal library
-function like &lsquo;<samp><span class="samp">printf</span></samp>&rsquo;, only to find that after a library upgrade
-&lsquo;<samp><span class="samp">printf</span></samp>&rsquo; had changed to be a function-like macro, and their code
+function like `<samp><span class="samp">printf</span></samp>', only to find that after a library upgrade
+`<samp><span class="samp">printf</span></samp>' had changed to be a function-like macro, and their code
 would no longer compile.  So from version 3.2 we changed CPP to
 successfully process arbitrary directives within macro arguments in
 exactly the same way as it would have processed the directive were the

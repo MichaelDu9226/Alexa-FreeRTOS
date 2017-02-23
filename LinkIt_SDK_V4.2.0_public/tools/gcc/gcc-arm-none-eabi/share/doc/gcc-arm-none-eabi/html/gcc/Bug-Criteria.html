@@ -3,7 +3,7 @@
 <title>Bug Criteria - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Bugs.html#Bugs" title="Bugs">
 <link rel="next" href="Bug-Reporting.html#Bug-Reporting" title="Bug Reporting">
@@ -73,8 +73,8 @@ execute the input source code, that is a compiler bug.
 program whose behavior is undefined, which happened by chance to give
 the desired results with another C or C++ compiler.
 
-     <p>For example, in many nonoptimizing compilers, you can write &lsquo;<samp><span class="samp">x;</span></samp>&rsquo;
-at the end of a function instead of &lsquo;<samp><span class="samp">return x;</span></samp>&rsquo;, with the same
+     <p>For example, in many nonoptimizing compilers, you can write `<samp><span class="samp">x;</span></samp>'
+at the end of a function instead of `<samp><span class="samp">return x;</span></samp>', with the same
 results.  But the value of the function is undefined if <code>return</code>
 is omitted; it is not a bug when GCC produces different results.
 

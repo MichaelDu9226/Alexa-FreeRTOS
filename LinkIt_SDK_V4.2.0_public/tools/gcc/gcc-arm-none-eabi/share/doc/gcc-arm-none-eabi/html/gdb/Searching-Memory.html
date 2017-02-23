@@ -3,7 +3,7 @@
 <title>Searching Memory - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Data.html#Data" title="Data">
 <link rel="prev" href="Caching-Remote-Data.html#Caching-Remote-Data" title="Caching Remote Data">
@@ -78,7 +78,7 @@ value's type in the current language.
 This is useful when one wants to specify the search
 pattern as a mixture of types. 
 Note that this means, for example, that in the case of C-like languages
-a search for an untyped 0x42 will search for &lsquo;<samp><span class="samp">(int) 0x42</span></samp>&rsquo;
+a search for an untyped 0x42 will search for `<samp><span class="samp">(int) 0x42</span></samp>'
 which is typically four bytes.
 
      <br><dt><var>n</var><span class="roman">, maximum number of finds</span><dd>The maximum number of matches to print.  The default is to print all finds. 
@@ -93,8 +93,8 @@ regardless of the endianness of the target and the size specification.
 number of matches found.
 
    <p>The address of the last value found is stored in convenience variable
-&lsquo;<samp><span class="samp">$_</span></samp>&rsquo;. 
-A count of the number of matches is stored in &lsquo;<samp><span class="samp">$numfound</span></samp>&rsquo;.
+`<samp><span class="samp">$_</span></samp>'. 
+A count of the number of matches is stored in `<samp><span class="samp">$numfound</span></samp>'.
 
    <p>For example, if stopped at the <code>printf</code> in this function:
 

@@ -3,7 +3,7 @@
 <title>Line Numbering - The GNU C Preprocessor Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Preprocessor Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Token-Spacing.html#Token-Spacing" title="Token Spacing">
 <link rel="next" href="Guard-Macros.html#Guard-Macros" title="Guard Macros">
@@ -49,9 +49,9 @@ C-style comments.  For example:
      <pre class="smallexample">          foo /* <span class="roman">A long
           comment</span> */ bar \
           baz
-          
+          =&gt;
           foo bar baz
-</pre>
+     </pre>
      <li>If the token results from a macro expansion, the line of the macro name,
 or possibly the line of the closing parenthesis in the case of
 function-like macro expansion. 
@@ -64,7 +64,7 @@ from the replacement list of a macro expansion carries the location of
 the token within the <code>#define</code> directive, because cpplib expands a
 macro by returning pointers to the tokens in its replacement list.  The
 current implementation of cpplib assigns tokens created from built-in
-macros and the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and &lsquo;<samp><span class="samp">##</span></samp>&rsquo; operators the location of the most
+macros and the `<samp><span class="samp">#</span></samp>' and `<samp><span class="samp">##</span></samp>' operators the location of the most
 recently lexed token.  This is a because they are allocated from the
 lexer's token runs, and because of the way the diagnostic routines infer
 the appropriate location to report.

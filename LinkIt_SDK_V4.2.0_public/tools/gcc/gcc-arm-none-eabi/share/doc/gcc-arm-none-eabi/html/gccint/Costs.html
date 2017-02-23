@@ -3,7 +3,7 @@
 <title>Costs - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Condition-Code.html#Condition-Code" title="Condition Code">
@@ -75,7 +75,7 @@ hard registers, and if <code>REGISTER_MOVE_COST</code> applied to their
 classes returns a value of 2, reload does not check to ensure that the
 constraints of the insn are met.  Setting a cost of other than 2 will
 allow reload to verify that the constraints are met.  You should do this
-if the &lsquo;<samp><span class="samp">mov</span><var>m</var></samp>&rsquo; pattern's constraints do not allow such copying.
+if the `<samp><span class="samp">mov</span><var>m</var></samp>' pattern's constraints do not allow such copying.
 
       <p>These macros are obsolete, new ports should use the target hook
 <code>TARGET_REGISTER_MOVE_COST</code> instead. 
@@ -98,7 +98,7 @@ hard registers, and if <code>TARGET_REGISTER_MOVE_COST</code> applied to their
 classes returns a value of 2, reload does not check to ensure that the
 constraints of the insn are met.  Setting a cost of other than 2 will
 allow reload to verify that the constraints are met.  You should do this
-if the &lsquo;<samp><span class="samp">mov</span><var>m</var></samp>&rsquo; pattern's constraints do not allow such copying.
+if the `<samp><span class="samp">mov</span><var>m</var></samp>' pattern's constraints do not allow such copying.
 
       <p>The default version of this function returns 2. 
 </p></blockquote></div>
@@ -356,7 +356,7 @@ function address than to call an address kept in a register.
 <div class="defun">
 &mdash; Macro: <b>LOGICAL_OP_NON_SHORT_CIRCUIT</b><var><a name="index-LOGICAL_005fOP_005fNON_005fSHORT_005fCIRCUIT-4411"></a></var><br>
 <blockquote><p>Define this macro if a non-short-circuit operation produced by
-&lsquo;<samp><span class="samp">fold_range_test ()</span></samp>&rsquo; is optimal.  This macro defaults to true if
+`<samp><span class="samp">fold_range_test ()</span></samp>' is optimal.  This macro defaults to true if
 <code>BRANCH_COST</code> is greater than or equal to the value 2. 
 </p></blockquote></div>
 
@@ -368,9 +368,9 @@ function address than to call an address kept in a register.
 available for examination in <var>x</var>, and the fact that <var>x</var> appears
 as operand <var>opno</var> of an expression with rtx code <var>outer_code</var>. 
 That is, the hook can assume that there is some rtx <var>y</var> such
-that &lsquo;<samp><span class="samp">GET_CODE (</span><var>y</var><span class="samp">) == </span><var>outer_code</var></samp>&rsquo; and such that
-either (a) &lsquo;<samp><span class="samp">XEXP (</span><var>y</var><span class="samp">, </span><var>opno</var><span class="samp">) == </span><var>x</var></samp>&rsquo; or
-(b) &lsquo;<samp><span class="samp">XVEC (</span><var>y</var><span class="samp">, </span><var>opno</var><span class="samp">)</span></samp>&rsquo; contains <var>x</var>.
+that `<samp><span class="samp">GET_CODE (</span><var>y</var><span class="samp">) == </span><var>outer_code</var></samp>' and such that
+either (a) `<samp><span class="samp">XEXP (</span><var>y</var><span class="samp">, </span><var>opno</var><span class="samp">) == </span><var>x</var></samp>' or
+(b) `<samp><span class="samp">XVEC (</span><var>y</var><span class="samp">, </span><var>opno</var><span class="samp">)</span></samp>' contains <var>x</var>.
 
       <p><var>code</var> is <var>x</var>'s expression code&mdash;redundant, since it can be
 obtained with <code>GET_CODE (</code><var>x</var><code>)</code>.

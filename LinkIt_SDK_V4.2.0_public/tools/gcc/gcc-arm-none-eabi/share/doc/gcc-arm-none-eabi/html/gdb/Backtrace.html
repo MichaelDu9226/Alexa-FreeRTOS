@@ -3,7 +3,7 @@
 <title>Backtrace - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stack.html#Stack" title="Stack">
 <link rel="prev" href="Frames.html#Frames" title="Frames">
@@ -88,7 +88,7 @@ counter value is omitted if it is at the beginning of the code for that
 line number.
 
    <p>Here is an example of a backtrace.  It was made with the command
-&lsquo;<samp><span class="samp">bt 3</span></samp>&rsquo;, so it shows the innermost three frames.
+`<samp><span class="samp">bt 3</span></samp>', so it shows the innermost three frames.
 
 <pre class="smallexample">     #0  m4_traceon (obs=0x24eb0, argc=1, argv=0x2b8c8)
          at builtin.c:993
@@ -123,7 +123,7 @@ such a backtrace might look like:
      (More stack frames follow...)
 </pre>
    <p class="noindent">The values of arguments that were not saved in their stack frames are
-shown as &lsquo;<samp><span class="samp">&lt;optimized out&gt;</span></samp>&rsquo;.
+shown as `<samp><span class="samp">&lt;optimized out&gt;</span></samp>'.
 
    <p>If you need to display the values of such optimized-out arguments,
 either deduce that from other variables whose values depend on the one
@@ -181,7 +181,7 @@ Note that embedded programs (the so-called &ldquo;free-standing&rdquo;
 environment) are not required to have a <code>main</code> function as the
 entry point.  They could even have multiple entry points.</p>
 
-   <hr></div>
+   <p><hr></div>
 
    </body></html>
 

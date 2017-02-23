@@ -3,7 +3,7 @@
 <title>VAX-branch - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Vax_002dDependent.html#Vax_002dDependent" title="Vax-Dependent">
 <link rel="prev" href="VAX_002dopcodes.html#VAX_002dopcodes" title="VAX-opcodes">
@@ -53,13 +53,13 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Vax_002dDependent.html#Vax_002dDependen
 <p><a name="index-VAX-branch-improvement-2146"></a><a name="index-branch-improvement_002c-VAX-2147"></a><a name="index-pseudo_002dops-for-branch_002c-VAX-2148"></a>Certain pseudo opcodes are permitted.  They are for branch
 instructions.  They expand to the shortest branch instruction that
 reaches the target.  Generally these mnemonics are made by
-substituting &lsquo;<samp><span class="samp">j</span></samp>&rsquo; for &lsquo;<samp><span class="samp">b</span></samp>&rsquo; at the start of a DEC mnemonic. 
+substituting `<samp><span class="samp">j</span></samp>' for `<samp><span class="samp">b</span></samp>' at the start of a DEC mnemonic. 
 This feature is included both for compatibility and to help
 compilers.  If you do not need this feature, avoid these
 opcodes.  Here are the mnemonics, and the code they can expand into.
 
      <dl>
-<dt><code>jbsb</code><dd>&lsquo;<samp><span class="samp">Jsb</span></samp>&rsquo; is already an instruction mnemonic, so we chose &lsquo;<samp><span class="samp">jbsb</span></samp>&rsquo;.
+<dt><code>jbsb</code><dd>`<samp><span class="samp">Jsb</span></samp>' is already an instruction mnemonic, so we chose `<samp><span class="samp">jbsb</span></samp>'.
           <dl>
 <dt>(byte displacement)<dd><kbd>bsbb ...</kbd>
 <br><dt>(word displacement)<dd><kbd>bsbw ...</kbd>
@@ -92,7 +92,7 @@ opcodes.  Here are the mnemonics, and the code they can expand into.
                brb bar ;
                foo: jmp ... ;
                bar:
-</pre>
+          </pre>
           </dl>
      <br><dt><code>jaob</code><var>YYY</var><dd><var>YYY</var> may be one of <code>lss leq</code>. 
 <br><dt><code>jsob</code><var>ZZZ</var><dd><var>ZZZ</var> may be one of <code>geq gtr</code>.
@@ -103,13 +103,13 @@ opcodes.  Here are the mnemonics, and the code they can expand into.
                brb bar ;
                foo: brw <var>destination</var> ;
                bar:
-</pre>
+          </pre>
           <br><dt>(long displacement)<dd>
           <pre class="example">               <var>OPCODE</var> ..., foo ;
                brb bar ;
                foo: jmp <var>destination</var> ;
                bar:
-</pre>
+          </pre>
           </dl>
      <br><dt><code>aobleq</code><dt><code>aoblss</code><dt><code>sobgeq</code><dt><code>sobgtr</code><dd>
           <dl>
@@ -119,13 +119,13 @@ opcodes.  Here are the mnemonics, and the code they can expand into.
                brb bar ;
                foo: brw <var>destination</var> ;
                bar:
-</pre>
+          </pre>
           <br><dt>(long displacement)<dd>
           <pre class="example">               <var>OPCODE</var> ..., foo ;
                brb bar ;
                foo: jmp <var>destination</var> ;
                bar:
-</pre>
+          </pre>
           </dl>
      </dl>
 

@@ -3,7 +3,7 @@
 <title>Driver - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Target-Structure.html#Target-Structure" title="Target Structure">
@@ -68,7 +68,7 @@ default <samp><span class="file">specs</span></samp> files (but not command-line
 choosing the multilib directory or running any subcommands.  It
 applies them in the order given, so each spec can depend on the
 options added by earlier ones.  It is also possible to remove options
-using &lsquo;<samp><span class="samp">%&lt;</span><var>option</var></samp>&rsquo; in the usual way.
+using `<samp><span class="samp">%&lt;</span><var>option</var></samp>' in the usual way.
 
       <p>This macro can be useful when a port has several interdependent target
 options.  It provides a way of standardizing the command line so
@@ -87,7 +87,7 @@ outermost pair of surrounding braces.
       <p>The first item in the pair is the name of the default.  This must match
 the code in <samp><span class="file">config.gcc</span></samp> for the target.  The second item is a spec
 to apply if a default with this name was specified.  The string
-&lsquo;<samp><span class="samp">%(VALUE)</span></samp>&rsquo; in the spec will be replaced by the value of the default
+`<samp><span class="samp">%(VALUE)</span></samp>' in the spec will be replaced by the value of the default
 everywhere it occurs.
 
       <p>The driver will apply these specs to its own command line between loading
@@ -166,7 +166,7 @@ output of the compiler proper).  This argument is given after any
 
       <p>If you do not define this macro, the assembler is assumed to read its
 standard input if given no non-option arguments.  If your assembler
-cannot read standard input at all, use a &lsquo;<samp><span class="samp">%{pipe:%e}</span></samp>&rsquo; construct;
+cannot read standard input at all, use a `<samp><span class="samp">%{pipe:%e}</span></samp>' construct;
 see <samp><span class="file">mips.h</span></samp> for instance. 
 </p></blockquote></div>
 
@@ -303,7 +303,7 @@ used.
             { "cpp_sysv_default", CPP_SYSV_DEFAULT },
           
           #define CPP_SYS_DEFAULT ""
-</pre>
+     </pre>
       <p>The <samp><span class="file">config/rs6000/sysv.h</span></samp> target file defines:
      <pre class="smallexample">          #undef CPP_SPEC
           #define CPP_SPEC \
@@ -314,13 +314,13 @@ used.
           
           #undef CPP_SYSV_DEFAULT
           #define CPP_SYSV_DEFAULT "-D_CALL_SYSV"
-</pre>
+     </pre>
       <p>while the <samp><span class="file">config/rs6000/eabiaix.h</span></samp> target file defines
 <code>CPP_SYSV_DEFAULT</code> as:
 
      <pre class="smallexample">          #undef CPP_SYSV_DEFAULT
           #define CPP_SYSV_DEFAULT "-D_CALL_AIX"
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
@@ -465,13 +465,13 @@ Each array element should have four elements: the directory name (a
 string constant), the component name (also a string constant), a flag
 for C++-only directories,
 and a flag showing that the includes in the directory don't need to be
-wrapped in <code>extern &lsquo;</code><samp><span class="samp">C</span></samp><code>&rsquo;</code> when compiling C++.  Mark the end of
+wrapped in <code>extern `<samp></code><span class="samp">C</span><code></samp>'</code> when compiling C++.  Mark the end of
 the array with a null element.
 
       <p>The component name denotes what GNU package the include file is part of,
-if any, in all uppercase letters.  For example, it might be &lsquo;<samp><span class="samp">GCC</span></samp>&rsquo;
-or &lsquo;<samp><span class="samp">BINUTILS</span></samp>&rsquo;.  If the package is part of a vendor-supplied
-operating system, code the component name as &lsquo;<samp><span class="samp">0</span></samp>&rsquo;.
+if any, in all uppercase letters.  For example, it might be `<samp><span class="samp">GCC</span></samp>'
+or `<samp><span class="samp">BINUTILS</span></samp>'.  If the package is part of a vendor-supplied
+operating system, code the component name as `<samp><span class="samp">0</span></samp>'.
 
       <p>For example, here is the definition used for VAX/VMS:
 
@@ -483,7 +483,7 @@ operating system, code the component name as &lsquo;<samp><span class="samp">0</
             { ".", 0, 0, 0},                      \
             { 0, 0, 0, 0}                         \
           }
-</pre>
+     </pre>
       </blockquote></div>
 
  <p>Here is the order of prefixes tried for exec files:

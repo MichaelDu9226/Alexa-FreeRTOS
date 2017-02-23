@@ -3,7 +3,7 @@
 <title>VERSION - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Scripts.html#Scripts" title="Scripts">
 <link rel="prev" href="PHDRS.html#PHDRS" title="PHDRS">
@@ -56,7 +56,7 @@ shared library.
 
    <p>You can include a version script directly in the main linker script, or
 you can supply the version script as an implicit linker script.  You can
-also use the &lsquo;<samp><span class="samp">--version-script</span></samp>&rsquo; linker option.
+also use the `<samp><span class="samp">--version-script</span></samp>' linker option.
 
    <p>The syntax of the <code>VERSION</code> command is simply
 <pre class="smallexample">     VERSION { version-script-commands }
@@ -94,28 +94,28 @@ examples.
      } VERS_1.2;
 </pre>
    <p>This example version script defines three version nodes.  The first
-version node defined is &lsquo;<samp><span class="samp">VERS_1.1</span></samp>&rsquo;; it has no other dependencies. 
-The script binds the symbol &lsquo;<samp><span class="samp">foo1</span></samp>&rsquo; to &lsquo;<samp><span class="samp">VERS_1.1</span></samp>&rsquo;.  It reduces
+version node defined is `<samp><span class="samp">VERS_1.1</span></samp>'; it has no other dependencies. 
+The script binds the symbol `<samp><span class="samp">foo1</span></samp>' to `<samp><span class="samp">VERS_1.1</span></samp>'.  It reduces
 a number of symbols to local scope so that they are not visible outside
 of the shared library; this is done using wildcard patterns, so that any
-symbol whose name begins with &lsquo;<samp><span class="samp">old</span></samp>&rsquo;, &lsquo;<samp><span class="samp">original</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">new</span></samp>&rsquo;
+symbol whose name begins with `<samp><span class="samp">old</span></samp>', `<samp><span class="samp">original</span></samp>', or `<samp><span class="samp">new</span></samp>'
 is matched.  The wildcard patterns available are the same as those used
 in the shell when matching filenames (also known as &ldquo;globbing&rdquo;). 
 However, if you specify the symbol name inside double quotes, then the
 name is treated as literal, rather than as a glob pattern.
 
-   <p>Next, the version script defines node &lsquo;<samp><span class="samp">VERS_1.2</span></samp>&rsquo;.  This node
-depends upon &lsquo;<samp><span class="samp">VERS_1.1</span></samp>&rsquo;.  The script binds the symbol &lsquo;<samp><span class="samp">foo2</span></samp>&rsquo;
-to the version node &lsquo;<samp><span class="samp">VERS_1.2</span></samp>&rsquo;.
+   <p>Next, the version script defines node `<samp><span class="samp">VERS_1.2</span></samp>'.  This node
+depends upon `<samp><span class="samp">VERS_1.1</span></samp>'.  The script binds the symbol `<samp><span class="samp">foo2</span></samp>'
+to the version node `<samp><span class="samp">VERS_1.2</span></samp>'.
 
-   <p>Finally, the version script defines node &lsquo;<samp><span class="samp">VERS_2.0</span></samp>&rsquo;.  This node
-depends upon &lsquo;<samp><span class="samp">VERS_1.2</span></samp>&rsquo;.  The scripts binds the symbols &lsquo;<samp><span class="samp">bar1</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">bar2</span></samp>&rsquo; are bound to the version node &lsquo;<samp><span class="samp">VERS_2.0</span></samp>&rsquo;.
+   <p>Finally, the version script defines node `<samp><span class="samp">VERS_2.0</span></samp>'.  This node
+depends upon `<samp><span class="samp">VERS_1.2</span></samp>'.  The scripts binds the symbols `<samp><span class="samp">bar1</span></samp>'
+and `<samp><span class="samp">bar2</span></samp>' are bound to the version node `<samp><span class="samp">VERS_2.0</span></samp>'.
 
    <p>When the linker finds a symbol defined in a library which is not
 specifically bound to a version node, it will effectively bind it to an
 unspecified base version of the library.  You can bind all otherwise
-unspecified symbols to a given version node by using &lsquo;<samp><span class="samp">global: *;</span></samp>&rsquo;
+unspecified symbols to a given version node by using `<samp><span class="samp">global: *;</span></samp>'
 somewhere in the version script.  Note that it's slightly crazy to use
 wildcards in a global spec except on the last version node.  Global
 wildcards elsewhere run the risk of accidentally adding symbols to the
@@ -123,8 +123,8 @@ set exported for an old version.  That's wrong since older versions
 ought to have a fixed set of symbols.
 
    <p>The names of the version nodes have no specific meaning other than what
-they might suggest to the person reading them.  The &lsquo;<samp><span class="samp">2.0</span></samp>&rsquo; version
-could just as well have appeared in between &lsquo;<samp><span class="samp">1.1</span></samp>&rsquo; and &lsquo;<samp><span class="samp">1.2</span></samp>&rsquo;. 
+they might suggest to the person reading them.  The `<samp><span class="samp">2.0</span></samp>' version
+could just as well have appeared in between `<samp><span class="samp">1.1</span></samp>' and `<samp><span class="samp">1.2</span></samp>'. 
 However, this would be a confusing way to write a version script.
 
    <p>Node name can be omitted, provided it is the only version node
@@ -162,10 +162,10 @@ script.  This was done mainly to reduce the burden on the library
 maintainer.  You can do this by putting something like:
 <pre class="smallexample">     __asm__(".symver original_foo,foo@VERS_1.1");
 </pre>
-   <p class="noindent">in the C source file.  This renames the function &lsquo;<samp><span class="samp">original_foo</span></samp>&rsquo; to
-be an alias for &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; bound to the version node &lsquo;<samp><span class="samp">VERS_1.1</span></samp>&rsquo;. 
-The &lsquo;<samp><span class="samp">local:</span></samp>&rsquo; directive can be used to prevent the symbol
-&lsquo;<samp><span class="samp">original_foo</span></samp>&rsquo; from being exported. A &lsquo;<samp><span class="samp">.symver</span></samp>&rsquo; directive
+   <p class="noindent">in the C source file.  This renames the function `<samp><span class="samp">original_foo</span></samp>' to
+be an alias for `<samp><span class="samp">foo</span></samp>' bound to the version node `<samp><span class="samp">VERS_1.1</span></samp>'. 
+The `<samp><span class="samp">local:</span></samp>' directive can be used to prevent the symbol
+`<samp><span class="samp">original_foo</span></samp>' from being exported. A `<samp><span class="samp">.symver</span></samp>' directive
 takes precedence over a version script.
 
    <p>The second GNU extension is to allow multiple versions of the same
@@ -174,7 +174,7 @@ an incompatible change to an interface without increasing the major
 version number of the shared library, while still allowing applications
 linked against the old interface to continue to function.
 
-   <p>To do this, you must use multiple &lsquo;<samp><span class="samp">.symver</span></samp>&rsquo; directives in the
+   <p>To do this, you must use multiple `<samp><span class="samp">.symver</span></samp>' directives in the
 source file.  Here is an example:
 
 <pre class="smallexample">     __asm__(".symver original_foo,foo@");
@@ -182,32 +182,32 @@ source file.  Here is an example:
      __asm__(".symver old_foo1,foo@VERS_1.2");
      __asm__(".symver new_foo,foo@@VERS_2.0");
 </pre>
-   <p>In this example, &lsquo;<samp><span class="samp">foo@</span></samp>&rsquo; represents the symbol &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; bound to the
+   <p>In this example, `<samp><span class="samp">foo@</span></samp>' represents the symbol `<samp><span class="samp">foo</span></samp>' bound to the
 unspecified base version of the symbol.  The source file that contains this
-example would define 4 C functions: &lsquo;<samp><span class="samp">original_foo</span></samp>&rsquo;, &lsquo;<samp><span class="samp">old_foo</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">old_foo1</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">new_foo</span></samp>&rsquo;.
+example would define 4 C functions: `<samp><span class="samp">original_foo</span></samp>', `<samp><span class="samp">old_foo</span></samp>',
+`<samp><span class="samp">old_foo1</span></samp>', and `<samp><span class="samp">new_foo</span></samp>'.
 
    <p>When you have multiple definitions of a given symbol, there needs to be
 some way to specify a default version to which external references to
 this symbol will be bound.  You can do this with the
-&lsquo;<samp><span class="samp">foo@@VERS_2.0</span></samp>&rsquo; type of &lsquo;<samp><span class="samp">.symver</span></samp>&rsquo; directive.  You can only
+`<samp><span class="samp">foo@@VERS_2.0</span></samp>' type of `<samp><span class="samp">.symver</span></samp>' directive.  You can only
 declare one version of a symbol as the default in this manner; otherwise
 you would effectively have multiple definitions of the same symbol.
 
    <p>If you wish to bind a reference to a specific version of the symbol
 within the shared library, you can use the aliases of convenience
-(i.e., &lsquo;<samp><span class="samp">old_foo</span></samp>&rsquo;), or you can use the &lsquo;<samp><span class="samp">.symver</span></samp>&rsquo; directive to
+(i.e., `<samp><span class="samp">old_foo</span></samp>'), or you can use the `<samp><span class="samp">.symver</span></samp>' directive to
 specifically bind to an external version of the function in question.
 
    <p>You can also specify the language in the version script:
 
 <pre class="smallexample">     VERSION extern "lang" { version-script-commands }
 </pre>
-   <p>The supported &lsquo;<samp><span class="samp">lang</span></samp>&rsquo;s are &lsquo;<samp><span class="samp">C</span></samp>&rsquo;, &lsquo;<samp><span class="samp">C++</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">Java</span></samp>&rsquo;. 
+   <p>The supported `<samp><span class="samp">lang</span></samp>'s are `<samp><span class="samp">C</span></samp>', `<samp><span class="samp">C++</span></samp>', and `<samp><span class="samp">Java</span></samp>'. 
 The linker will iterate over the list of symbols at the link time and
-demangle them according to &lsquo;<samp><span class="samp">lang</span></samp>&rsquo; before matching them to the
-patterns specified in &lsquo;<samp><span class="samp">version-script-commands</span></samp>&rsquo;.  The default
-&lsquo;<samp><span class="samp">lang</span></samp>&rsquo; is &lsquo;<samp><span class="samp">C</span></samp>&rsquo;.
+demangle them according to `<samp><span class="samp">lang</span></samp>' before matching them to the
+patterns specified in `<samp><span class="samp">version-script-commands</span></samp>'.  The default
+`<samp><span class="samp">lang</span></samp>' is `<samp><span class="samp">C</span></samp>'.
 
    <p>Demangled names may contains spaces and other special characters.  As
 described above, you can use a glob pattern to match demangled names,

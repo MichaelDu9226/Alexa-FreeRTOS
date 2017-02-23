@@ -3,7 +3,7 @@
 <title>RTL Template - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Desc.html#Machine-Desc" title="Machine Desc">
 <link rel="prev" href="Example.html#Example" title="Example">
@@ -115,7 +115,7 @@ expression.
      <p>When matching patterns, this is equivalent to
 
      <pre class="smallexample">          (match_operand:<var>m</var> <var>n</var> "scratch_operand" <var>pred</var>)
-</pre>
+     </pre>
      <p>but, when generating RTL, it produces a (<code>scratch</code>:<var>m</var>)
 expression.
 
@@ -171,14 +171,14 @@ commutative arithmetic operators of RTL and whose mode is <var>mode</var>:
             return (GET_RTX_CLASS (code) == RTX_COMM_ARITH
                     || code == EQ || code == NE);
           }
-</pre>
+     </pre>
      <p>Then the following pattern will match any RTL expression consisting
 of a commutative operator applied to two general operands:
 
      <pre class="smallexample">          (match_operator:SI 3 "commutative_operator"
             [(match_operand:SI 1 "general_operand" "g")
              (match_operand:SI 2 "general_operand" "g")])
-</pre>
+     </pre>
      <p>Here the vector <code>[</code><var>operands</var><code>...]</code> contains two patterns
 because the expressions to be matched all contain two operands.
 
@@ -247,7 +247,7 @@ in a <code>parallel</code>.  For example,
                 (clobber (reg:SI 179))])]
             ""
             "loadm 0,0,%1,%2")
-</pre>
+     </pre>
      <p>This example comes from <samp><span class="file">a29k.md</span></samp>.  The function
 <code>load_multiple_operation</code> is defined in <samp><span class="file">a29k.c</span></samp> and checks
 that subsequent elements in the <code>parallel</code> are the same as the
@@ -266,7 +266,7 @@ registers and memory locations.
             (set (reg:SI 22)
                  (mem:SI (plus:SI (reg:SI 100)
                                   (const_int 8))))])
-</pre>
+     </pre>
      <p><a name="index-match_005fpar_005fdup-3217"></a><br><dt><code>(match_par_dup </code><var>n</var><code> [</code><var>subpat</var><code>...])</code><dd>Like <code>match_op_dup</code>, but for <code>match_parallel</code> instead of
 <code>match_operator</code>.
 

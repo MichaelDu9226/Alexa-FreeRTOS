@@ -3,7 +3,7 @@
 <title>Output Section Data - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="SECTIONS.html#SECTIONS" title="SECTIONS">
 <link rel="prev" href="Input-Section.html#Input-Section" title="Input Section">
@@ -61,7 +61,7 @@ bytes, the location counter is incremented by the number of bytes
 stored.
 
    <p>For example, this will store the byte 1 followed by the four byte value
-of the symbol &lsquo;<samp><span class="samp">addr</span></samp>&rsquo;:
+of the symbol `<samp><span class="samp">addr</span></samp>':
 <pre class="smallexample">     BYTE(1)
      LONG(addr)
 </pre>
@@ -93,10 +93,10 @@ than one <code>FILL</code> statement, you can have different fill patterns in
 different parts of an output section.
 
    <p>This example shows how to fill unspecified regions of memory with the
-value &lsquo;<samp><span class="samp">0x90</span></samp>&rsquo;:
+value `<samp><span class="samp">0x90</span></samp>':
 <pre class="smallexample">     FILL(0x90909090)
 </pre>
-   <p>The <code>FILL</code> command is similar to the &lsquo;<samp><span class="samp">=</span><var>fillexp</var></samp>&rsquo; output
+   <p>The <code>FILL</code> command is similar to the `<samp><span class="samp">=</span><var>fillexp</var></samp>' output
 section attribute, but it only affects the
 part of the section following the <code>FILL</code> command, rather than the
 entire section.  If both are used, the <code>FILL</code> command takes

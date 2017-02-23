@@ -3,7 +3,7 @@
 <title>nlmconv - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="addr2line.html#addr2line" title="addr2line">
 <link rel="next" href="windres.html#windres" title="windres">
@@ -66,11 +66,11 @@ utilities, since it is only useful for NLM targets.
      <!-- man end -->
 </pre>
    <!-- man begin DESCRIPTION nlmconv -->
-   <p><samp><span class="command">nlmconv</span></samp> converts the relocatable &lsquo;<samp><span class="samp">i386</span></samp>&rsquo; object file
+<p><samp><span class="command">nlmconv</span></samp> converts the relocatable `<samp><span class="samp">i386</span></samp>' object file
 <var>infile</var> into the NetWare Loadable Module <var>outfile</var>, optionally
 reading <var>headerfile</var> for NLM header information.  For instructions
 on writing the NLM command file language used in header files, see the
-&lsquo;<samp><span class="samp">linkers</span></samp>&rsquo; section, &lsquo;<samp><span class="samp">NLMLINK</span></samp>&rsquo; in particular, of the <cite>NLM
+`<samp><span class="samp">linkers</span></samp>' section, `<samp><span class="samp">NLMLINK</span></samp>' in particular, of the <cite>NLM
 Development and Tools Overview</cite>, which is part of the NLM Software
 Developer's Kit (&ldquo;NLM SDK&rdquo;), available from Novell, Inc. 
 <samp><span class="command">nlmconv</span></samp> uses the <span class="sc">gnu</span> Binary File Descriptor library to read
@@ -84,19 +84,19 @@ In this case, <samp><span class="command">nlmconv</span></samp> calls the linker
 
 <!-- man end -->
 <!-- man begin OPTIONS nlmconv -->
-     <dl>
+<dl>
 <dt><samp><span class="env">-I </span><var>bfdname</var></samp><dt><samp><span class="env">--input-target=</span><var>bfdname</var></samp><dd>Object format of the input file.  <samp><span class="command">nlmconv</span></samp> can usually determine
 the format of a given file (so no default is necessary). 
 See <a href="Target-Selection.html#Target-Selection">Target Selection</a>, for more information.
 
      <br><dt><samp><span class="env">-O </span><var>bfdname</var></samp><dt><samp><span class="env">--output-target=</span><var>bfdname</var></samp><dd>Object format of the output file.  <samp><span class="command">nlmconv</span></samp> infers the output
-format based on the input format, e.g. for a &lsquo;<samp><span class="samp">i386</span></samp>&rsquo; input file the
-output format is &lsquo;<samp><span class="samp">nlm32-i386</span></samp>&rsquo;. 
+format based on the input format, e.g. for a `<samp><span class="samp">i386</span></samp>' input file the
+output format is `<samp><span class="samp">nlm32-i386</span></samp>'. 
 See <a href="Target-Selection.html#Target-Selection">Target Selection</a>, for more information.
 
      <br><dt><samp><span class="env">-T </span><var>headerfile</var></samp><dt><samp><span class="env">--header-file=</span><var>headerfile</var></samp><dd>Reads <var>headerfile</var> for NLM header information.  For instructions on
 writing the NLM command file language used in header files, see see the
-&lsquo;<samp><span class="samp">linkers</span></samp>&rsquo; section, of the <cite>NLM Development and Tools
+`<samp><span class="samp">linkers</span></samp>' section, of the <cite>NLM Development and Tools
 Overview</cite>, which is part of the NLM Software Developer's Kit, available
 from Novell, Inc.
 
@@ -111,5 +111,5 @@ relative pathname.
 </dl>
 
 <!-- man end -->
-   </body></html>
+</body></html>
 

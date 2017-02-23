@@ -3,7 +3,7 @@
 <title>Tail Call Frames - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Optimized-Code.html#Optimized-Code" title="Optimized Code">
 <link rel="prev" href="Inline-Functions.html#Inline-Functions" title="Inline Functions">
@@ -61,7 +61,7 @@ some cases <span class="sc">gdb</span> can determine that <code>C</code> was tai
 return address set up as if <code>B</code> called <code>C</code> normally.
 
    <p>This functionality is currently supported only by DWARF 2 debugging format and
-the compiler has to produce &lsquo;<samp><span class="samp">DW_TAG_GNU_call_site</span></samp>&rsquo; tags.  With
+the compiler has to produce `<samp><span class="samp">DW_TAG_GNU_call_site</span></samp>' tags.  With
 <span class="sc">gcc</span>, you need to specify <samp><span class="option">-O -g</span></samp> during compilation, to get
 this information.
 
@@ -86,7 +86,8 @@ tries to show at least all the unambiguous top tail callers and all the
 unambiguous bottom tail calees, if any.
 
      <dl>
-<a name="set-debug-entry_002dvalues"></a><dt><code>set debug entry-values</code><dd><a name="index-set-debug-entry_002dvalues-724"></a>When set to on, enables printing of analysis messages for both frame argument
+<a name="set-debug-entry_002dvalues"></a>
+<dt><code>set debug entry-values</code><dd><a name="index-set-debug-entry_002dvalues-724"></a>When set to on, enables printing of analysis messages for both frame argument
 values at function entry and tail calls.  It will show all the possible valid
 tail calls code paths it has considered.  It will also print the intersection
 of them with the final unambiguous (possibly partial or even empty) code path
@@ -135,7 +136,7 @@ reference by variable <code>x</code>):
      #2  0x0000000000400395 in main () at t.c:9
 </pre>
    <!-- Convert CALLSEQ#A to CALLSEQ#B depending on HAVE_MAKEINFO_CLICK. -->
-   <p>Frames #0 and #2 are real, #1 is a virtual tail call frame. 
+<p>Frames #0 and #2 are real, #1 is a virtual tail call frame. 
 The code can have possible execution paths <code>main-&gt;a-&gt;b-&gt;c-&gt;d-&gt;f</code> or
 <code>main-&gt;a-&gt;b-&gt;e-&gt;f</code>, <span class="sc">gdb</span> cannot find which one from the inferior state.
 

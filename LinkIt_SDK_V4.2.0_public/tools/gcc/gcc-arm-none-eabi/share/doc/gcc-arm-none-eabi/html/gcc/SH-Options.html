@@ -3,7 +3,7 @@
 <title>SH Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="Score-Options.html#Score-Options" title="Score Options">
@@ -54,7 +54,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
 
 <h4 class="subsection">3.17.38 SH Options</h4>
 
-<p>These &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; options are defined for the SH implementations:
+<p>These `<samp><span class="samp">-m</span></samp>' options are defined for the SH implementations:
 
      <dl>
 <dt><code>-m1</code><dd><a name="index-m1-2139"></a>Generate code for the SH1.
@@ -162,33 +162,33 @@ separated list.  For details on the atomic built-in functions see
 <a href="_005f_005fatomic-Builtins.html#g_t_005f_005fatomic-Builtins">__atomic Builtins</a>.  The following models and parameters are supported:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">none</span></samp>&rsquo;<dd>Disable compiler generated atomic sequences and emit library calls for atomic
+<dt>`<samp><span class="samp">none</span></samp>'<dd>Disable compiler generated atomic sequences and emit library calls for atomic
 operations.  This is the default if the target is not <code>sh-*-linux*</code>.
 
-          <br><dt>&lsquo;<samp><span class="samp">soft-gusa</span></samp>&rsquo;<dd>Generate GNU/Linux compatible gUSA software atomic sequences for the atomic
+          <br><dt>`<samp><span class="samp">soft-gusa</span></samp>'<dd>Generate GNU/Linux compatible gUSA software atomic sequences for the atomic
 built-in functions.  The generated atomic sequences require additional support
 from the interrupt/exception handling code of the system and are only suitable
 for SH3* and SH4* single-core systems.  This option is enabled by default when
 the target is <code>sh-*-linux*</code> and SH3* or SH4*.  When the target is SH4A,
 this option will also partially utilize the hardware atomic instructions
 <code>movli.l</code> and <code>movco.l</code> to create more efficient code, unless
-&lsquo;<samp><span class="samp">strict</span></samp>&rsquo; is specified.
+`<samp><span class="samp">strict</span></samp>' is specified.
 
-          <br><dt>&lsquo;<samp><span class="samp">soft-tcb</span></samp>&rsquo;<dd>Generate software atomic sequences that use a variable in the thread control
+          <br><dt>`<samp><span class="samp">soft-tcb</span></samp>'<dd>Generate software atomic sequences that use a variable in the thread control
 block.  This is a variation of the gUSA sequences which can also be used on
 SH1* and SH2* targets.  The generated atomic sequences require additional
 support from the interrupt/exception handling code of the system and are only
-suitable for single-core systems.  When using this model, the &lsquo;<samp><span class="samp">gbr-offset=</span></samp>&rsquo;
+suitable for single-core systems.  When using this model, the `<samp><span class="samp">gbr-offset=</span></samp>'
 parameter has to be specified as well.
 
-          <br><dt>&lsquo;<samp><span class="samp">soft-imask</span></samp>&rsquo;<dd>Generate software atomic sequences that temporarily disable interrupts by
+          <br><dt>`<samp><span class="samp">soft-imask</span></samp>'<dd>Generate software atomic sequences that temporarily disable interrupts by
 setting <code>SR.IMASK = 1111</code>.  This model works only when the program runs
 in privileged mode and is only suitable for single-core systems.  Additional
 support from the interrupt/exception handling code of the system is not
 required.  This model is enabled by default when the target is
 <code>sh-*-linux*</code> and SH1* or SH2*.
 
-          <br><dt>&lsquo;<samp><span class="samp">hard-llcs</span></samp>&rsquo;<dd>Generate hardware atomic sequences using the <code>movli.l</code> and <code>movco.l</code>
+          <br><dt>`<samp><span class="samp">hard-llcs</span></samp>'<dd>Generate hardware atomic sequences using the <code>movli.l</code> and <code>movco.l</code>
 instructions only.  This is only available on SH4A and is suitable for
 multi-core systems.  Since the hardware instructions support only 32 bit atomic
 variables access to 8 or 16 bit variables is emulated with 32 bit accesses. 
@@ -197,13 +197,13 @@ atomic model interrupt/exception handling systems if executed on an SH4A
 system.  Additional support from the interrupt/exception handling code of the
 system is not required for this model.
 
-          <br><dt>&lsquo;<samp><span class="samp">gbr-offset=</span></samp>&rsquo;<dd>This parameter specifies the offset in bytes of the variable in the thread
+          <br><dt>`<samp><span class="samp">gbr-offset=</span></samp>'<dd>This parameter specifies the offset in bytes of the variable in the thread
 control block structure that should be used by the generated atomic sequences
-when the &lsquo;<samp><span class="samp">soft-tcb</span></samp>&rsquo; model has been selected.  For other models this
+when the `<samp><span class="samp">soft-tcb</span></samp>' model has been selected.  For other models this
 parameter is ignored.  The specified value must be an integer multiple of four
 and in the range 0-1020.
 
-          <br><dt>&lsquo;<samp><span class="samp">strict</span></samp>&rsquo;<dd>This parameter prevents mixed usage of multiple atomic models, even though they
+          <br><dt>`<samp><span class="samp">strict</span></samp>'<dd>This parameter prevents mixed usage of multiple atomic models, even though they
 would be compatible, and will make the compiler generate atomic sequences of the
 specified model only.
 
@@ -232,64 +232,64 @@ This is the default when the target is <code>sh-*-linux*</code>.
 For SHmedia <var>strategy</var> can be one of:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">fp</span></samp>&rsquo;<dd>Performs the operation in floating point.  This has a very high latency,
+<dt>`<samp><span class="samp">fp</span></samp>'<dd>Performs the operation in floating point.  This has a very high latency,
 but needs only a few instructions, so it might be a good choice if
 your code has enough easily-exploitable ILP to allow the compiler to
 schedule the floating-point instructions together with other instructions. 
 Division by zero causes a floating-point exception.
 
-          <br><dt>&lsquo;<samp><span class="samp">inv</span></samp>&rsquo;<dd>Uses integer operations to calculate the inverse of the divisor,
+          <br><dt>`<samp><span class="samp">inv</span></samp>'<dd>Uses integer operations to calculate the inverse of the divisor,
 and then multiplies the dividend with the inverse.  This strategy allows
 CSE and hoisting of the inverse calculation.  Division by zero calculates
 an unspecified result, but does not trap.
 
-          <br><dt>&lsquo;<samp><span class="samp">inv:minlat</span></samp>&rsquo;<dd>A variant of &lsquo;<samp><span class="samp">inv</span></samp>&rsquo; where, if no CSE or hoisting opportunities
+          <br><dt>`<samp><span class="samp">inv:minlat</span></samp>'<dd>A variant of `<samp><span class="samp">inv</span></samp>' where, if no CSE or hoisting opportunities
 have been found, or if the entire operation has been hoisted to the same
 place, the last stages of the inverse calculation are intertwined with the
 final multiply to reduce the overall latency, at the expense of using a few
 more instructions, and thus offering fewer scheduling opportunities with
 other code.
 
-          <br><dt>&lsquo;<samp><span class="samp">call</span></samp>&rsquo;<dd>Calls a library function that usually implements the &lsquo;<samp><span class="samp">inv:minlat</span></samp>&rsquo;
+          <br><dt>`<samp><span class="samp">call</span></samp>'<dd>Calls a library function that usually implements the `<samp><span class="samp">inv:minlat</span></samp>'
 strategy. 
 This gives high code density for <code>m5-*media-nofpu</code> compilations.
 
-          <br><dt>&lsquo;<samp><span class="samp">call2</span></samp>&rsquo;<dd>Uses a different entry point of the same library function, where it
+          <br><dt>`<samp><span class="samp">call2</span></samp>'<dd>Uses a different entry point of the same library function, where it
 assumes that a pointer to a lookup table has already been set up, which
 exposes the pointer load to CSE and code hoisting optimizations.
 
-          <br><dt>&lsquo;<samp><span class="samp">inv:call</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">inv:call2</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">inv:fp</span></samp>&rsquo;<dd>Use the &lsquo;<samp><span class="samp">inv</span></samp>&rsquo; algorithm for initial
-code generation, but if the code stays unoptimized, revert to the &lsquo;<samp><span class="samp">call</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">call2</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">fp</span></samp>&rsquo; strategies, respectively.  Note that the
+          <br><dt>`<samp><span class="samp">inv:call</span></samp>'<dt>`<samp><span class="samp">inv:call2</span></samp>'<dt>`<samp><span class="samp">inv:fp</span></samp>'<dd>Use the `<samp><span class="samp">inv</span></samp>' algorithm for initial
+code generation, but if the code stays unoptimized, revert to the `<samp><span class="samp">call</span></samp>',
+`<samp><span class="samp">call2</span></samp>', or `<samp><span class="samp">fp</span></samp>' strategies, respectively.  Note that the
 potentially-trapping side effect of division by zero is carried by a
 separate instruction, so it is possible that all the integer instructions
 are hoisted out, but the marker for the side effect stays where it is. 
 A recombination to floating-point operations or a call is not possible
 in that case.
 
-          <br><dt>&lsquo;<samp><span class="samp">inv20u</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">inv20l</span></samp>&rsquo;<dd>Variants of the &lsquo;<samp><span class="samp">inv:minlat</span></samp>&rsquo; strategy.  In the case
+          <br><dt>`<samp><span class="samp">inv20u</span></samp>'<dt>`<samp><span class="samp">inv20l</span></samp>'<dd>Variants of the `<samp><span class="samp">inv:minlat</span></samp>' strategy.  In the case
 that the inverse calculation is not separated from the multiply, they speed
 up division where the dividend fits into 20 bits (plus sign where applicable)
 by inserting a test to skip a number of operations in this case; this test
-slows down the case of larger dividends.  &lsquo;<samp><span class="samp">inv20u</span></samp>&rsquo; assumes the case of a such
-a small dividend to be unlikely, and &lsquo;<samp><span class="samp">inv20l</span></samp>&rsquo; assumes it to be likely.
+slows down the case of larger dividends.  `<samp><span class="samp">inv20u</span></samp>' assumes the case of a such
+a small dividend to be unlikely, and `<samp><span class="samp">inv20l</span></samp>' assumes it to be likely.
 
      </dl>
 
      <p>For targets other than SHmedia <var>strategy</var> can be one of:
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">call-div1</span></samp>&rsquo;<dd>Calls a library function that uses the single-step division instruction
+<dt>`<samp><span class="samp">call-div1</span></samp>'<dd>Calls a library function that uses the single-step division instruction
 <code>div1</code> to perform the operation.  Division by zero calculates an
 unspecified result and does not trap.  This is the default except for SH4,
 SH2A and SHcompact.
 
-          <br><dt>&lsquo;<samp><span class="samp">call-fp</span></samp>&rsquo;<dd>Calls a library function that performs the operation in double precision
+          <br><dt>`<samp><span class="samp">call-fp</span></samp>'<dd>Calls a library function that performs the operation in double precision
 floating point.  Division by zero causes a floating-point exception.  This is
 the default for SHcompact with FPU.  Specifying this for targets that do not
 have a double precision FPU will default to <code>call-div1</code>.
 
-          <br><dt>&lsquo;<samp><span class="samp">call-table</span></samp>&rsquo;<dd>Calls a library function that uses a lookup table for small divisors and
+          <br><dt>`<samp><span class="samp">call-table</span></samp>'<dd>Calls a library function that uses a lookup table for small divisors and
 the <code>div1</code> instruction with case distinction for larger divisors.  Division
 by zero calculates an unspecified result and does not trap.  This is the default
 for SH4.  Specifying this for targets that do not have dynamic shift
@@ -308,7 +308,7 @@ needed for unwinding to avoid changing the stack frame around conditional code.
 
      <br><dt><code>-mdivsi3_libfunc=</code><var>name</var><dd><a name="index-mdivsi3_005flibfunc_003d_0040var_007bname_007d-2180"></a>Set the name of the library function used for 32-bit signed division to
 <var>name</var>. 
-This only affects the name used in the &lsquo;<samp><span class="samp">call</span></samp>&rsquo; and &lsquo;<samp><span class="samp">inv:call</span></samp>&rsquo;
+This only affects the name used in the `<samp><span class="samp">call</span></samp>' and `<samp><span class="samp">inv:call</span></samp>'
 division strategies, and the compiler still expects the same
 sets of input/output/clobbered registers as if this option were not present.
 

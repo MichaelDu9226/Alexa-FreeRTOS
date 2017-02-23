@@ -3,7 +3,7 @@
 <title>Register and Memory Data - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Register-Representation.html#Register-Representation" title="Register Representation">
 <link rel="prev" href="Register-Information-Functions.html#Register-Information-Functions" title="Register Information Functions">
@@ -74,7 +74,7 @@ between the register and memory representations of a data type:
 <div class="defun">
 &mdash; Architecture Function: int <b>gdbarch_convert_register_p</b> (<var>struct gdbarch *gdbarch, int reg</var>)<var><a name="index-gdbarch_005fconvert_005fregister_005fp-298"></a></var><br>
 <blockquote>
-        <p>Return non-zero (true) if the representation of a data value stored in
+<p>Return non-zero (true) if the representation of a data value stored in
 this register may be different to the representation of that same data
 value when stored in memory.  The default value is <code>NULL</code>
 (undefined).
@@ -91,7 +91,7 @@ type, when no conversion is necessary.
 <div class="defun">
 &mdash; Architecture Function: void <b>gdbarch_register_to_value</b> (<var>struct gdbarch *gdbarch, int reg, struct type *type, char *from, char *to</var>)<var><a name="index-gdbarch_005fregister_005fto_005fvalue-299"></a></var><br>
 <blockquote>
-        <p>Convert the value of register number <var>reg</var> to a data object of
+<p>Convert the value of register number <var>reg</var> to a data object of
 type <var>type</var>.  The buffer at <var>from</var> holds the register's value
 in raw format; the converted value should be placed in the buffer at
 <var>to</var>.
@@ -111,7 +111,7 @@ non-zero value.
 <div class="defun">
 &mdash; Architecture Function: void <b>gdbarch_value_to_register</b> (<var>struct gdbarch *gdbarch, struct type *type, int reg, char *from, char *to</var>)<var><a name="index-gdbarch_005fvalue_005fto_005fregister-300"></a></var><br>
 <blockquote>
-        <p>Convert a data value of type <var>type</var> to register number <var>reg</var>'
+<p>Convert a data value of type <var>type</var> to register number <var>reg</var>'
 raw format.
 
         <blockquote>

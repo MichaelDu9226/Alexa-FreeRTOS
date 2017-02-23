@@ -3,7 +3,7 @@
 <title>Addressing Modes - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Library-Calls.html#Library-Calls" title="Library Calls">
@@ -154,7 +154,7 @@ this hook, the <code>GO_IF_LEGITIMATE_ADDRESS</code> macro.  This macro
 has this syntax:
 
      <pre class="example">          #define GO_IF_LEGITIMATE_ADDRESS (<var>mode</var>, <var>x</var>, <var>label</var>)
-</pre>
+     </pre>
       <p class="noindent">and should <code>goto </code><var>label</var> if the address <var>x</var> is a valid
 address on the target machine for a memory operand of mode <var>mode</var>.
 

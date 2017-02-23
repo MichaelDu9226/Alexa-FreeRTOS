@@ -3,7 +3,7 @@
 <title>Ambiguous Expressions - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Data.html#Data" title="Data">
 <link rel="prev" href="Expressions.html#Expressions" title="Expressions">
@@ -65,11 +65,11 @@ as well.
 
    <p>When an ambiguity that needs to be resolved is detected, the debugger
 has the capability to display a menu of numbered choices for each
-possibility, and then waits for the selection with the prompt &lsquo;<samp><span class="samp">&gt;</span></samp>&rsquo;. 
-The first option is always &lsquo;<samp><span class="samp">[0] cancel</span></samp>&rsquo;, and typing <kbd>0 &lt;RET&gt;</kbd>
+possibility, and then waits for the selection with the prompt `<samp><span class="samp">&gt;</span></samp>'. 
+The first option is always `<samp><span class="samp">[0] cancel</span></samp>', and typing <kbd>0 &lt;RET&gt;</kbd>
 aborts the current command.  If the command in which the expression was
 used allows more than one choice to be selected, the next option in the
-menu is &lsquo;<samp><span class="samp">[1] all</span></samp>&rsquo;, and typing <kbd>1 &lt;RET&gt;</kbd> selects all possible
+menu is `<samp><span class="samp">[1] all</span></samp>', and typing <kbd>1 &lt;RET&gt;</kbd> selects all possible
 choices.
 
    <p>For example, the following session excerpt shows an attempt to set a

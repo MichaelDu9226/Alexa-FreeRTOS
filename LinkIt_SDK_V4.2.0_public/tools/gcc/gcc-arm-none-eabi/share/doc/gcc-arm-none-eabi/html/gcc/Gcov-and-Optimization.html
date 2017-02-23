@@ -3,7 +3,7 @@
 <title>Gcov and Optimization - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Gcov.html#Gcov" title="Gcov">
 <link rel="prev" href="Invoking-Gcov.html#Invoking-Gcov" title="Invoking Gcov">
@@ -56,7 +56,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Gcov.html#Gcov">Gcov</a>
 
 <p>If you plan to use <samp><span class="command">gcov</span></samp> to help optimize your code, you must
 first compile your program with two special GCC options:
-&lsquo;<samp><span class="samp">-fprofile-arcs -ftest-coverage</span></samp>&rsquo;.  Aside from that, you can use any
+`<samp><span class="samp">-fprofile-arcs -ftest-coverage</span></samp>'.  Aside from that, you can use any
 other GCC options; but if you want to prove that every single line
 in your program was executed, you should not compile with optimization
 at the same time.  On some machines the optimizer can eliminate some
@@ -113,5 +113,5 @@ to zero, and calling <code>_gcov_dump(void)</code> will cause the profile inform
 collected at that point to be dumped to <samp><span class="file">.gcda</span></samp> output files.
 
 <!-- man end -->
- </body></html>
+</body></html>
 

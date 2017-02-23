@@ -3,7 +3,7 @@
 <title>Code Gen Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
@@ -61,7 +61,7 @@ used in code generation.
  <p>Most of them have both positive and negative forms; the negative form
 of <samp><span class="option">-ffoo</span></samp> is <samp><span class="option">-fno-foo</span></samp>.  In the table below, only
 one of the forms is listed&mdash;the one that is not the default.  You
-can figure out the other form by either removing &lsquo;<samp><span class="samp">no-</span></samp>&rsquo; or adding
+can figure out the other form by either removing `<samp><span class="samp">no-</span></samp>' or adding
 it.
 
      <dl>
@@ -71,11 +71,11 @@ currently only supported by the Java and Fortran front ends, where
 this option defaults to true and false respectively.
 
      <br><dt><code>-fstack-reuse=</code><var>reuse-level</var><dd><a name="index-fstack_005freuse-2351"></a>This option controls stack space reuse for user declared local/auto variables
-and compiler generated temporaries.  <var>reuse_level</var> can be &lsquo;<samp><span class="samp">all</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">named_vars</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">none</span></samp>&rsquo;. &lsquo;<samp><span class="samp">all</span></samp>&rsquo; enables stack reuse for all
-local variables and temporaries, &lsquo;<samp><span class="samp">named_vars</span></samp>&rsquo; enables the reuse only for
-user defined local variables with names, and &lsquo;<samp><span class="samp">none</span></samp>&rsquo; disables stack reuse
-completely. The default value is &lsquo;<samp><span class="samp">all</span></samp>&rsquo;. The option is needed when the
+and compiler generated temporaries.  <var>reuse_level</var> can be `<samp><span class="samp">all</span></samp>',
+`<samp><span class="samp">named_vars</span></samp>', or `<samp><span class="samp">none</span></samp>'. `<samp><span class="samp">all</span></samp>' enables stack reuse for all
+local variables and temporaries, `<samp><span class="samp">named_vars</span></samp>' enables the reuse only for
+user defined local variables with names, and `<samp><span class="samp">none</span></samp>' disables stack reuse
+completely. The default value is `<samp><span class="samp">all</span></samp>'. The option is needed when the
 program extends the lifetime of a scoped local variable or a compiler generated
 temporary beyond the end point defined by the language.  When a lifetime of
 a variable ends, and if the variable lives in memory, the optimizing compiler
@@ -103,7 +103,7 @@ local lifetime will likely to break with the stack reuse optimization.
                {
           
                }
-</pre>
+     </pre>
      <p>Another example:
      <pre class="smallexample">          
              struct A
@@ -132,7 +132,7 @@ local lifetime will likely to break with the stack reuse optimization.
                              // is reused with a. What is the value of ap-&gt;i?
              }
           
-</pre>
+     </pre>
      <p>The lifetime of a compiler generated temporary is well defined by the C++
 standard. When a lifetime of a temporary ends, and if the temporary lives
 in memory, the optimizing compiler has the freedom to reuse its stack
@@ -244,8 +244,8 @@ Use it to conform to a non-default application binary interface.
 code that is not binary compatible with code generated without that switch. 
 Use it to conform to a non-default application binary interface.
 
-     <br><dt><code>-fshort-wchar</code><dd><a name="index-fshort_002dwchar-2364"></a>Override the underlying type for &lsquo;<samp><span class="samp">wchar_t</span></samp>&rsquo; to be &lsquo;<samp><span class="samp">short
-unsigned int</span></samp>&rsquo; instead of the default for the target.  This option is
+     <br><dt><code>-fshort-wchar</code><dd><a name="index-fshort_002dwchar-2364"></a>Override the underlying type for `<samp><span class="samp">wchar_t</span></samp>' to be `<samp><span class="samp">short
+unsigned int</span></samp>' instead of the default for the target.  This option is
 useful for building programs to run under WINE.
 
      <p><strong>Warning:</strong> the <samp><span class="option">-fshort-wchar</span></samp> switch causes GCC to generate
@@ -272,7 +272,7 @@ it provides better performance, or if you wish to verify that the
 program will work on other systems that always treat uninitialized
 variable declarations this way.
 
-     <br><dt><code>-fno-ident</code><dd><a name="index-fno_002dident-2366"></a>Ignore the &lsquo;<samp><span class="samp">#ident</span></samp>&rsquo; directive.
+     <br><dt><code>-fno-ident</code><dd><a name="index-fno_002dident-2366"></a>Ignore the `<samp><span class="samp">#ident</span></samp>' directive.
 
      <br><dt><code>-finhibit-size-directive</code><dd><a name="index-finhibit_002dsize_002ddirective-2367"></a>Don't output a <code>.size</code> assembler directive, or anything else that
 would cause trouble if the function is split in the middle, and the
@@ -407,7 +407,7 @@ profiling functions otherwise.)
                                          void *call_site);
           void __cyg_profile_func_exit  (void *this_fn,
                                          void *call_site);
-</pre>
+     </pre>
      <p>The first argument is the address of the start of the current function,
 which may be looked up exactly in the symbol table.
 
@@ -416,7 +416,7 @@ functions.  The profiling calls indicate where, conceptually, the
 inline function is entered and exited.  This means that addressable
 versions of such functions must be available.  If all your uses of a
 function are expanded inline, this may mean an additional expansion of
-code size.  If you use &lsquo;<samp><span class="samp">extern inline</span></samp>&rsquo; in your C code, an
+code size.  If you use `<samp><span class="samp">extern inline</span></samp>' in your C code, an
 addressable version of such functions must be provided.  (This is
 normally the case anyway, but if you get lucky and the optimizer always
 expands the functions inline, you might have gotten away without
@@ -440,7 +440,7 @@ considered to be a match.
      <p>For example:
 
      <pre class="smallexample">          -finstrument-functions-exclude-file-list=/bits/stl,include/sys
-</pre>
+     </pre>
      <p class="noindent">excludes any inline function defined in files whose pathnames
 contain <code>/bits/stl</code> or <code>include/sys</code>.
 
@@ -499,7 +499,7 @@ stack is required, a signal is raised at run time.  For most targets,
 the signal is raised before the stack overruns the boundary, so
 it is possible to catch the signal without taking special precautions.
 
-     <p>For instance, if the stack starts at absolute address &lsquo;<samp><span class="samp">0x80000000</span></samp>&rsquo;
+     <p>For instance, if the stack starts at absolute address `<samp><span class="samp">0x80000000</span></samp>'
 and grows downwards, you can use the flags
 <samp><span class="option">-fstack-limit-symbol=__stack_limit</span></samp> and
 <samp><span class="option">-Wl,--defsym,__stack_limit=0x7ffe0000</span></samp> to enforce a stack limit
@@ -568,10 +568,10 @@ identical syntax.  This is a great boon to those working with
 cross-platform projects.
 
      <p>For those adding visibility support to existing code, you may find
-&lsquo;<samp><span class="samp">#pragma GCC visibility</span></samp>&rsquo; of use.  This works by you enclosing
+`<samp><span class="samp">#pragma GCC visibility</span></samp>' of use.  This works by you enclosing
 the declarations you wish to set visibility for with (for example)
-&lsquo;<samp><span class="samp">#pragma GCC visibility push(hidden)</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">#pragma GCC visibility pop</span></samp>&rsquo;. 
+`<samp><span class="samp">#pragma GCC visibility push(hidden)</span></samp>' and
+`<samp><span class="samp">#pragma GCC visibility pop</span></samp>'. 
 Bear in mind that symbol visibility should be viewed <strong>as
 part of the API interface contract</strong> and thus all new code should
 always specify visibility when it is not the default; i.e., declarations
@@ -584,10 +584,10 @@ Note that due to ISO C++ specification requirements, <code>operator new</code> a
      <p>Be aware that headers from outside your project, in particular system
 headers and headers from any other library you use, may not be
 expecting to be compiled with visibility other than the default.  You
-may need to explicitly say &lsquo;<samp><span class="samp">#pragma GCC visibility push(default)</span></samp>&rsquo;
+may need to explicitly say `<samp><span class="samp">#pragma GCC visibility push(default)</span></samp>'
 before including any such headers.
 
-     <p>&lsquo;<samp><span class="samp">extern</span></samp>&rsquo; declarations are not affected by <samp><span class="option">-fvisibility</span></samp>, so
+     <p>`<samp><span class="samp">extern</span></samp>' declarations are not affected by <samp><span class="option">-fvisibility</span></samp>, so
 a lot of code can be recompiled with <samp><span class="option">-fvisibility=hidden</span></samp> with
 no modifications.  However, this means that calls to <code>extern</code>
 functions with no explicit visibility use the PLT, so it is more
@@ -598,7 +598,7 @@ declarations should be treated as hidden.
      <p>Note that <samp><span class="option">-fvisibility</span></samp> does affect C++ vague linkage
 entities. This means that, for instance, an exception class that is
 be thrown between DSOs must be explicitly marked with default
-visibility so that the &lsquo;<samp><span class="samp">type_info</span></samp>&rsquo; nodes are unified between
+visibility so that the `<samp><span class="samp">type_info</span></samp>' nodes are unified between
 the DSOs.
 
      <p>An overview of these techniques, their benefits and how to use them
@@ -640,5 +640,5 @@ the implementation of the <samp><span class="file">libatomic</span></samp> runti
  </dl>
 
 <!-- man end -->
- </body></html>
+</body></html>
 

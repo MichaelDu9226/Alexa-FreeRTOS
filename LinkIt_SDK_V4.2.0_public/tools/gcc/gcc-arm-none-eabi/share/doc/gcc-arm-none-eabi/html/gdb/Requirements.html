@@ -3,7 +3,7 @@
 <title>Requirements - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Installing-GDB.html#Installing-GDB" title="Installing GDB">
 <link rel="next" href="Running-Configure.html#Running-Configure" title="Running Configure">
@@ -60,7 +60,8 @@ working C90 compiler, e.g. GCC.
 <h3 class="heading">Tools/Packages Optional for Building <span class="sc">gdb</span></h3>
 
      <dl>
-<dt>Expat<dd><a name="Expat"></a><span class="sc">gdb</span> can use the Expat XML parsing library.  This library may be
+<dt>Expat<dd><a name="Expat"></a>
+<span class="sc">gdb</span> can use the Expat XML parsing library.  This library may be
 included with your operating system distribution; if it is not, you
 can get the latest version from <a href="http://expat.sourceforge.net">http://expat.sourceforge.net</a>. 
 The <samp><span class="file">configure</span></samp> script will search for this library in several
@@ -79,13 +80,13 @@ or alternatively see <a href="Library-List-Format-for-SVR4-Targets.html#Library-
 <li>Branch trace (see <a href="Branch-Trace-Format.html#Branch-Trace-Format">Branch Trace Format</a>)
 </ul>
 
-     <br><dt>zlib<dd><a name="index-compressed-debug-sections-2559"></a><span class="sc">gdb</span> will use the &lsquo;<samp><span class="samp">zlib</span></samp>&rsquo; library, if available, to read
+     <br><dt>zlib<dd><a name="index-compressed-debug-sections-2559"></a><span class="sc">gdb</span> will use the `<samp><span class="samp">zlib</span></samp>' library, if available, to read
 compressed debug sections.  Some linkers, such as GNU gold, are capable
 of producing binaries with compressed debug sections.  If <span class="sc">gdb</span>
-is compiled with &lsquo;<samp><span class="samp">zlib</span></samp>&rsquo;, it will be able to read the debug
+is compiled with `<samp><span class="samp">zlib</span></samp>', it will be able to read the debug
 information in such binaries.
 
-     <p>The &lsquo;<samp><span class="samp">zlib</span></samp>&rsquo; library is likely included with your operating system
+     <p>The `<samp><span class="samp">zlib</span></samp>' library is likely included with your operating system
 distribution; if it is not, you can get the latest version from
 <a href="http://zlib.net">http://zlib.net</a>.
 
@@ -109,7 +110,7 @@ if the operating system does not provide a suitable <code>iconv</code>
 implementation, then the just-built library will automatically be used
 by <span class="sc">gdb</span>.  One easy way to set this up is to download GNU
 Libiconv, unpack it, and then rename the directory holding the
-Libiconv source code to &lsquo;<samp><span class="samp">libiconv</span></samp>&rsquo;. 
+Libiconv source code to `<samp><span class="samp">libiconv</span></samp>'. 
 </dl>
 
    </body></html>

@@ -3,7 +3,7 @@
 <title>Simple Classes - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Cplusplus.html#Cplusplus" title="Cplusplus">
 <link rel="prev" href="Basic-Cplusplus-Types.html#Basic-Cplusplus-Types" title="Basic Cplusplus Types">
@@ -81,7 +81,7 @@ sometimes extended for member data.
 
    <p>The field part of a C<tt>++</tt> class stab representing a member function
 differs substantially from the field part of a C struct stab.  It
-still begins with &lsquo;<samp><span class="samp">name:</span></samp>&rsquo; but then goes on to define a new type number
+still begins with `<samp><span class="samp">name:</span></samp>' but then goes on to define a new type number
 for the member function, describe its return type, its argument types,
 its protection level, any qualifiers applied to the method definition,
 and whether the method is virtual or not.  If the method is virtual
@@ -92,14 +92,14 @@ method.
    <p>When the field name is a method name it is followed by two colons rather
 than one.  This is followed by a new type definition for the method. 
 This is a number followed by an equal sign and the type of the method. 
-Normally this will be a type declared using the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; type
+Normally this will be a type declared using the `<samp><span class="samp">#</span></samp>' type
 descriptor; see <a href="Method-Type-Descriptor.html#Method-Type-Descriptor">Method Type Descriptor</a>; static member functions
-are declared using the &lsquo;<samp><span class="samp">f</span></samp>&rsquo; type descriptor instead; see
+are declared using the `<samp><span class="samp">f</span></samp>' type descriptor instead; see
 <a href="Function-Types.html#Function-Types">Function Types</a>.
 
    <p>The format of an overloaded operator method name differs from that of
-other methods.  It is &lsquo;<samp><span class="samp">op$::</span><var>operator-name</var><span class="samp">.</span></samp>&rsquo; where
-<var>operator-name</var> is the operator name such as &lsquo;<samp><span class="samp">+</span></samp>&rsquo; or &lsquo;<samp><span class="samp">+=</span></samp>&rsquo;. 
+other methods.  It is `<samp><span class="samp">op$::</span><var>operator-name</var><span class="samp">.</span></samp>' where
+<var>operator-name</var> is the operator name such as `<samp><span class="samp">+</span></samp>' or `<samp><span class="samp">+=</span></samp>'. 
 The name ends with a period, and any characters except the period can
 occur in the <var>operator-name</var> string.
 
@@ -107,13 +107,13 @@ occur in the <var>operator-name</var> string.
 method, preceded by a colon and ending with a semi-colon.  The types of
 the arguments are expressed in the same way argument types are expressed
 in C<tt>++</tt> name mangling.  In this example an <code>int</code> and a <code>char</code>
-map to &lsquo;<samp><span class="samp">ic</span></samp>&rsquo;.
+map to `<samp><span class="samp">ic</span></samp>'.
 
    <p>This is followed by a number, a letter, and an asterisk or period,
 followed by another semicolon.  The number indicates the protections
 that apply to the member function.  Here the 2 means public.  The
 letter encodes any qualifier applied to the method definition.  In
-this case, &lsquo;<samp><span class="samp">A</span></samp>&rsquo; means that it is a normal function definition.  The dot
+this case, `<samp><span class="samp">A</span></samp>' means that it is a normal function definition.  The dot
 shows that the method is not virtual.  The sections that follow
 elaborate further on these fields and describe the additional
 information present for virtual methods.

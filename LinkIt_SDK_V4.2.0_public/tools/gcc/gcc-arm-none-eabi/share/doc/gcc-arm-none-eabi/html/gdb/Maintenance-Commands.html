@@ -3,7 +3,7 @@
 <title>Maintenance Commands - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Installing-GDB.html#Installing-GDB" title="Installing GDB">
 <link rel="next" href="Remote-Protocol.html#Remote-Protocol" title="Remote Protocol">
@@ -58,9 +58,9 @@ messages, see <a href="Debugging-Output.html#Debugging-Output">Debugging Output<
 <a name="index-maint-agent_002deval-2565"></a>
 <dl><dt><code>maint agent </code><span class="roman">[</span><code>-at </code><var>location</var><span class="roman">,</span><span class="roman">]</span> <var>expression</var><dt><code>maint agent-eval </code><span class="roman">[</span><code>-at </code><var>location</var><span class="roman">,</span><span class="roman">]</span> <var>expression</var><dd>Translate the given <var>expression</var> into remote agent bytecodes. 
 This command is useful for debugging the Agent Expression mechanism
-(see <a href="Agent-Expressions.html#Agent-Expressions">Agent Expressions</a>).  The &lsquo;<samp><span class="samp">agent</span></samp>&rsquo; version produces an
+(see <a href="Agent-Expressions.html#Agent-Expressions">Agent Expressions</a>).  The `<samp><span class="samp">agent</span></samp>' version produces an
 expression useful for data collection, such as by tracepoints, while
-&lsquo;<samp><span class="samp">maint agent-eval</span></samp>&rsquo; produces an expression that evaluates directly
+`<samp><span class="samp">maint agent-eval</span></samp>' produces an expression that evaluates directly
 to a result.  For instance, a collection expression for <code>globa +
 globb</code> will include bytecodes to record four bytes of memory at each
 of the addresses of <code>globa</code> and <code>globb</code>, while discarding
@@ -74,7 +74,7 @@ into remote agent bytecodes and display them as a disassembled list.
 This command is useful for debugging the agent version of dynamic
 printf (see <a href="Dynamic-Printf.html#Dynamic-Printf">Dynamic Printf</a>.
 
-     <p><a name="index-maint-info-breakpoints-2567"></a><br><dt><code><a name="maint-info-breakpoints"></a>maint info breakpoints</code><dd>Using the same format as &lsquo;<samp><span class="samp">info breakpoints</span></samp>&rsquo;, display both the
+     <p><a name="index-maint-info-breakpoints-2567"></a><br><dt><code><a name="maint-info-breakpoints"></a>maint info breakpoints</code><dd>Using the same format as `<samp><span class="samp">info breakpoints</span></samp>', display both the
 breakpoints you've set explicitly, and those <span class="sc">gdb</span> is using for
 internal purposes.  Internal breakpoints are shown with negative
 breakpoint numbers.  The type column identifies what kind of breakpoint
@@ -156,7 +156,7 @@ used as the text of the error or warning message.
           Quit this debugging session? (y or n) <kbd>n</kbd>
           Create a core file? (y or n) <kbd>n</kbd>
           (gdb)
-</pre>
+     </pre>
      <p><a name="index-g_t_0040value_007bGDBN_007d-internal-error-2585"></a><a name="index-internal-errors_002c-control-of-_0040value_007bGDBN_007d-behavior-2586"></a>
 <a name="index-maint-set-internal_002derror-2587"></a><a name="index-maint-show-internal_002derror-2588"></a><a name="index-maint-set-internal_002dwarning-2589"></a><a name="index-maint-show-internal_002dwarning-2590"></a><br><dt><code>maint set internal-error </code><var>action</var><code> [ask|yes|no]</code><dt><code>maint show internal-error </code><var>action</var><dt><code>maint set internal-warning </code><var>action</var><code> [ask|yes|no]</code><dt><code>maint show internal-warning </code><var>action</var><dd>When <span class="sc">gdb</span> reports an internal problem (error or warning) it
 gives the user the opportunity to both quit <span class="sc">gdb</span> and create a
@@ -165,17 +165,17 @@ override the default behaviour for each particular <var>action</var>,
 described in the table below.
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">quit</span></samp>&rsquo;<dd>You can specify that <span class="sc">gdb</span> should always (yes) or never (no)
+<dt>`<samp><span class="samp">quit</span></samp>'<dd>You can specify that <span class="sc">gdb</span> should always (yes) or never (no)
 quit.  The default is to ask the user what to do.
 
-          <br><dt>&lsquo;<samp><span class="samp">corefile</span></samp>&rsquo;<dd>You can specify that <span class="sc">gdb</span> should always (yes) or never (no)
+          <br><dt>`<samp><span class="samp">corefile</span></samp>'<dd>You can specify that <span class="sc">gdb</span> should always (yes) or never (no)
 create a core file.  The default is to ask the user what to do. 
 </dl>
 
      <p><a name="index-maint-packet-2591"></a><br><dt><code>maint packet </code><var>text</var><dd>If <span class="sc">gdb</span> is talking to an inferior via the serial protocol,
 then this command sends the string <var>text</var> to the inferior, and
 displays the response packet.  <span class="sc">gdb</span> supplies the initial
-&lsquo;<samp><span class="samp">$</span></samp>&rsquo; character, the terminating &lsquo;<samp><span class="samp">#</span></samp>&rsquo; character, and the
+`<samp><span class="samp">$</span></samp>' character, the terminating `<samp><span class="samp">#</span></samp>' character, and the
 checksum.
 
      <p><a name="index-maint-print-architecture-2592"></a><br><dt><code>maint print architecture </code><span class="roman">[</span><var>file</var><span class="roman">]</span><dd>Print the entire architecture configuration.  The optional argument
@@ -199,7 +199,7 @@ when an XML parser is not available to parse the description.
            top=0x0200bdd4 id={stack=0x200bddc,code=0x101405c}
            call_lo=0x01014000 call_hi=0x01014001
           (gdb)
-</pre>
+     </pre>
      <p>Takes an optional file parameter.
 
      <p><a name="index-maint-print-registers-2595"></a><a name="index-maint-print-raw_002dregisters-2596"></a><a name="index-maint-print-cooked_002dregisters-2597"></a><a name="index-maint-print-register_002dgroups-2598"></a><a name="index-maint-print-remote_002dregisters-2599"></a><br><dt><code>maint print registers </code><span class="roman">[</span><var>file</var><span class="roman">]</span><dt><code>maint print raw-registers </code><span class="roman">[</span><var>file</var><span class="roman">]</span><dt><code>maint print cooked-registers </code><span class="roman">[</span><var>file</var><span class="roman">]</span><dt><code>maint print register-groups </code><span class="roman">[</span><var>file</var><span class="roman">]</span><dt><code>maint print remote-registers </code><span class="roman">[</span><var>file</var><span class="roman">]</span><dd>Print <span class="sc">gdb</span>'s internal register data structures.
@@ -231,7 +231,7 @@ information.
            system     user
            save       internal
            restore    internal
-</pre>
+     </pre>
      <p><a name="index-flushregs-2601"></a><br><dt><code>flushregs</code><dd>This command forces <span class="sc">gdb</span> to flush its internal register cache.
 
      <p><a name="index-maint-print-objfiles-2602"></a><a name="index-info-for-known-object-files-2603"></a><br><dt><code>maint print objfiles</code><dd>Print a dump of all known object files.  For each object file, this
@@ -288,14 +288,14 @@ always see the disassembly form.
      <pre class="smallexample">          (gdb) info addr argc
           Symbol "argc" is a complex DWARF expression:
                1: DW_OP_fbreg 0
-</pre>
+     </pre>
      <p>For more information on these expressions, see
 <a href="http://www.dwarfstd.org/">the DWARF standard</a>.
 
      <p><a name="index-maint-set-dwarf2-max_002dcache_002dage-2614"></a><a name="index-maint-show-dwarf2-max_002dcache_002dage-2615"></a><br><dt><code>maint set dwarf2 max-cache-age</code><dt><code>maint show dwarf2 max-cache-age</code><dd>Control the DWARF 2 compilation unit cache.
 
      <p><a name="index-DWARF-2-compilation-units-cache-2616"></a>In object files with inter-compilation-unit references, such as those
-produced by the GCC option &lsquo;<samp><span class="samp">-feliminate-dwarf2-dups</span></samp>&rsquo;, the DWARF 2
+produced by the GCC option `<samp><span class="samp">-feliminate-dwarf2-dups</span></samp>', the DWARF 2
 reader needs to frequently refer to previously read compilation units. 
 This setting controls how long a compilation unit will remain in the
 cache if it is not referenced.  A higher limit means that cached
@@ -305,7 +305,7 @@ slow down <span class="sc">gdb</span> startup, but reduce memory consumption.
 
      <p><a name="index-maint-set-profile-2617"></a><a name="index-maint-show-profile-2618"></a><a name="index-profiling-GDB-2619"></a><br><dt><code>maint set profile</code><dt><code>maint show profile</code><dd>Control profiling of <span class="sc">gdb</span>.
 
-     <p>Profiling will be disabled until you use the &lsquo;<samp><span class="samp">maint set profile</span></samp>&rsquo;
+     <p>Profiling will be disabled until you use the `<samp><span class="samp">maint set profile</span></samp>'
 command to enable it.  When you enable profiling, the system will begin
 collecting timing and execution count data; when you disable profiling or
 exit <span class="sc">gdb</span>, the results will be written to a log file.  Remember that
@@ -313,8 +313,8 @@ if you use profiling, <span class="sc">gdb</span> will overwrite the profiling l
 (often called <samp><span class="file">gmon.out</span></samp>).  If you have a record of important profiling
 data in a <samp><span class="file">gmon.out</span></samp> file, be sure to move it to a safe location.
 
-     <p>Configuring with &lsquo;<samp><span class="samp">--enable-profiling</span></samp>&rsquo; arranges for <span class="sc">gdb</span> to be
-compiled with the &lsquo;<samp><span class="samp">-pg</span></samp>&rsquo; compiler option.
+     <p>Configuring with `<samp><span class="samp">--enable-profiling</span></samp>' arranges for <span class="sc">gdb</span> to be
+compiled with the `<samp><span class="samp">-pg</span></samp>' compiler option.
 
      <p><a name="index-maint-set-show_002ddebug_002dregs-2620"></a><a name="index-maint-show-show_002ddebug_002dregs-2621"></a><a name="index-hardware-debug-registers-2622"></a><br><dt><code>maint set show-debug-regs</code><dt><code>maint show show-debug-regs</code><dd>Control whether to show variables that mirror the hardware debug
 registers.  Use <code>ON</code> to enable, <code>OFF</code> to disable.  If
@@ -323,7 +323,7 @@ removes a hardware breakpoint or watchpoint, and when the inferior
 triggers a hardware-assisted breakpoint or watchpoint.
 
      <p><a name="index-maint-set-show_002dall_002dtib-2623"></a><a name="index-maint-show-show_002dall_002dtib-2624"></a><br><dt><code>maint set show-all-tib</code><dt><code>maint show show-all-tib</code><dd>Control whether to show all non zero areas within a 1k block starting
-at thread local base, when using the &lsquo;<samp><span class="samp">info w32 thread-information-block</span></samp>&rsquo;
+at thread local base, when using the `<samp><span class="samp">info w32 thread-information-block</span></samp>'
 command.
 
      <p><a name="index-maint-space-2625"></a><a name="index-memory-used-by-commands-2626"></a><br><dt><code>maint space</code><dd>Control whether to display memory usage for each command.  If set to a

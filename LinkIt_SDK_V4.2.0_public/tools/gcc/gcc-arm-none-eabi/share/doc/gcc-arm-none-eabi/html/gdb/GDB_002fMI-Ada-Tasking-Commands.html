@@ -3,7 +3,7 @@
 <title>GDB/MI Ada Tasking Commands - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-Thread-Commands.html#GDB_002fMI-Thread-Commands" title="GDB/MI Thread Commands">
@@ -61,7 +61,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The &lsquo;<samp><span class="samp">info tasks</span></samp>&rsquo; command prints the same information
+<p>The `<samp><span class="samp">info tasks</span></samp>' command prints the same information
 about all Ada tasks (see <a href="Ada-Tasks.html#Ada-Tasks">Ada Tasks</a>).
 
 <h5 class="subsubheading">Result</h5>
@@ -70,27 +70,27 @@ about all Ada tasks (see <a href="Ada-Tasks.html#Ada-Tasks">Ada Tasks</a>).
 defined for each Ada task:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">current</span></samp>&rsquo;<dd>This field exists only for the current thread.  It has the value &lsquo;<samp><span class="samp">*</span></samp>&rsquo;.
+<dt>`<samp><span class="samp">current</span></samp>'<dd>This field exists only for the current thread.  It has the value `<samp><span class="samp">*</span></samp>'.
 
-     <br><dt>&lsquo;<samp><span class="samp">id</span></samp>&rsquo;<dd>The identifier that <span class="sc">gdb</span> uses to refer to the Ada task.
+     <br><dt>`<samp><span class="samp">id</span></samp>'<dd>The identifier that <span class="sc">gdb</span> uses to refer to the Ada task.
 
-     <br><dt>&lsquo;<samp><span class="samp">task-id</span></samp>&rsquo;<dd>The identifier that the target uses to refer to the Ada task.
+     <br><dt>`<samp><span class="samp">task-id</span></samp>'<dd>The identifier that the target uses to refer to the Ada task.
 
-     <br><dt>&lsquo;<samp><span class="samp">thread-id</span></samp>&rsquo;<dd>The identifier of the thread corresponding to the Ada task.
+     <br><dt>`<samp><span class="samp">thread-id</span></samp>'<dd>The identifier of the thread corresponding to the Ada task.
 
      <p>This field should always exist, as Ada tasks are always implemented
 on top of a thread.  But if <span class="sc">gdb</span> cannot find this corresponding
 thread for any reason, the field is omitted.
 
-     <br><dt>&lsquo;<samp><span class="samp">parent-id</span></samp>&rsquo;<dd>This field exists only when the task was created by another task. 
+     <br><dt>`<samp><span class="samp">parent-id</span></samp>'<dd>This field exists only when the task was created by another task. 
 In this case, it provides the ID of the parent task.
 
-     <br><dt>&lsquo;<samp><span class="samp">priority</span></samp>&rsquo;<dd>The base priority of the task.
+     <br><dt>`<samp><span class="samp">priority</span></samp>'<dd>The base priority of the task.
 
-     <br><dt>&lsquo;<samp><span class="samp">state</span></samp>&rsquo;<dd>The current state of the task.  For a detailed description of the
+     <br><dt>`<samp><span class="samp">state</span></samp>'<dd>The current state of the task.  For a detailed description of the
 possible states, see <a href="Ada-Tasks.html#Ada-Tasks">Ada Tasks</a>.
 
-     <br><dt>&lsquo;<samp><span class="samp">name</span></samp>&rsquo;<dd>The name of the task.
+     <br><dt>`<samp><span class="samp">name</span></samp>'<dd>The name of the task.
 
    </dl>
 
@@ -111,5 +111,5 @@ possible states, see <a href="Ada-Tasks.html#Ada-Tasks">Ada Tasks</a>.
      (gdb)
 </pre>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-   </body></html>
+</body></html>
 

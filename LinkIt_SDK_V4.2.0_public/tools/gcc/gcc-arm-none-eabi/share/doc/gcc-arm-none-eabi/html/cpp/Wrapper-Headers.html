@@ -3,7 +3,7 @@
 <title>Wrapper Headers - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Header-Files.html#Header-Files" title="Header Files">
 <link rel="prev" href="Computed-Includes.html#Computed-Includes" title="Computed Includes">
@@ -65,7 +65,7 @@ before the original header.  That works fine as long as you're willing
 to replace the old header entirely.  But what if you want to refer to
 the old header from the new one?
 
-   <p>You cannot simply include the old header with &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;.  That
+   <p>You cannot simply include the old header with `<samp><span class="samp">#include</span></samp>'.  That
 will start from the beginning, and find your new header again.  If your
 header is not protected from multiple inclusion (see <a href="Once_002dOnly-Headers.html#Once_002dOnly-Headers">Once-Only Headers</a>), it will recurse infinitely and cause a fatal error.
 
@@ -76,9 +76,9 @@ header is not protected from multiple inclusion (see <a href="Once_002dOnly-Head
 would have to edit the new headers to match.
 
    <p>There is no way to solve this problem within the C standard, but you can
-use the GNU extension &lsquo;<samp><span class="samp">#include_next</span></samp>&rsquo;.  It means, &ldquo;Include the
+use the GNU extension `<samp><span class="samp">#include_next</span></samp>'.  It means, &ldquo;Include the
 <em>next</em> file with this name&rdquo;.  This directive works like
-&lsquo;<samp><span class="samp">#include</span></samp>&rsquo; except in searching for the specified file: it starts
+`<samp><span class="samp">#include</span></samp>' except in searching for the specified file: it starts
 searching the list of header file directories <em>after</em> the directory
 in which the current file was found.
 
@@ -88,13 +88,13 @@ both directories contain <samp><span class="file">signal.h</span></samp>.  Ordin
 file contains <code>#include_next&nbsp;&lt;signal.h&gt;<!-- /@w --></code>, it starts searching
 after that directory, and finds the file in <samp><span class="file">/usr/include</span></samp>.
 
-   <p>&lsquo;<samp><span class="samp">#include_next</span></samp>&rsquo; does not distinguish between <code>&lt;</code><var>file</var><code>&gt;</code>
+   <p>`<samp><span class="samp">#include_next</span></samp>' does not distinguish between <code>&lt;</code><var>file</var><code>&gt;</code>
 and <code>"</code><var>file</var><code>"</code> inclusion, nor does it check that the file you
 specify has the same name as the current file.  It simply looks for the
 file named, starting with the directory in the search path after the one
 where the current file was found.
 
-   <p>The use of &lsquo;<samp><span class="samp">#include_next</span></samp>&rsquo; can lead to great confusion.  We
+   <p>The use of `<samp><span class="samp">#include_next</span></samp>' can lead to great confusion.  We
 recommend it be used only when there is no other alternative.  In
 particular, it should not be used in the headers belonging to a specific
 program; it should be used only to make global corrections along the

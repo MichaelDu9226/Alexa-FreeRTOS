@@ -3,7 +3,7 @@
 <title>Qualifiers implementation - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Implementation.html#C-Implementation" title="C Implementation">
 <link rel="prev" href="Structures-unions-enumerations-and-bit_002dfields-implementation.html#Structures-unions-enumerations-and-bit_002dfields-implementation" title="Structures unions enumerations and bit-fields implementation">
@@ -65,7 +65,7 @@ and what is a write.  For example
      <pre class="smallexample">          volatile int *dst = <var>somevalue</var>;
           volatile int *src = <var>someothervalue</var>;
           *dst = *src;
-</pre>
+     </pre>
      <p class="noindent">will cause a read of the volatile object pointed to by <var>src</var> and store the
 value into the volatile object pointed to by <var>dst</var>.  There is no
 guarantee that these reads and writes are atomic, especially for objects
@@ -77,7 +77,7 @@ For example
 
      <pre class="smallexample">          volatile int *src = <var>somevalue</var>;
           *src;
-</pre>
+     </pre>
      <p>According to the C standard, such an expression is an rvalue whose type
 is the unqualified version of its original type, i.e. <code>int</code>.  Whether
 GCC interprets this as a read of the volatile object being pointed to or

@@ -3,7 +3,7 @@
 <title>Token Spacing - The GNU C Preprocessor Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Preprocessor Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Macro-Expansion.html#Macro-Expansion" title="Macro Expansion">
 <link rel="next" href="Line-Numbering.html#Line-Numbering" title="Line Numbering">
@@ -60,7 +60,7 @@ to check for accidental token pasting.  We call this <dfn>paste
 avoidance</dfn>.  Token addition and removal can only occur because of macro
 expansion, but accidental pasting can occur in many places: both before
 and after each macro replacement, each argument replacement, and
-additionally each token created by the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and &lsquo;<samp><span class="samp">##</span></samp>&rsquo; operators.
+additionally each token created by the `<samp><span class="samp">#</span></samp>' and `<samp><span class="samp">##</span></samp>' operators.
 
    <p>Look at how the preprocessor gets whitespace output correct
 normally.  The <code>cpp_token</code> structure contains a flags byte, and one
@@ -75,14 +75,14 @@ decide whether to insert a space between tokens in the output.
      sum = add (1,2, 3);
              ==&gt; sum = 1 + 2 +3;
 </pre>
-   <p>The interesting thing here is that the tokens &lsquo;<samp><span class="samp">1</span></samp>&rsquo; and &lsquo;<samp><span class="samp">2</span></samp>&rsquo; are
-output with a preceding space, and &lsquo;<samp><span class="samp">3</span></samp>&rsquo; is output without a
+   <p>The interesting thing here is that the tokens `<samp><span class="samp">1</span></samp>' and `<samp><span class="samp">2</span></samp>' are
+output with a preceding space, and `<samp><span class="samp">3</span></samp>' is output without a
 preceding space, but when lexed none of these tokens had that property. 
-Careful consideration reveals that &lsquo;<samp><span class="samp">1</span></samp>&rsquo; gets its preceding
-whitespace from the space preceding &lsquo;<samp><span class="samp">add</span></samp>&rsquo; in the macro invocation,
-<em>not</em> replacement list.  &lsquo;<samp><span class="samp">2</span></samp>&rsquo; gets its whitespace from the
-space preceding the parameter &lsquo;<samp><span class="samp">y</span></samp>&rsquo; in the macro replacement list,
-and &lsquo;<samp><span class="samp">3</span></samp>&rsquo; has no preceding space because parameter &lsquo;<samp><span class="samp">z</span></samp>&rsquo; has none
+Careful consideration reveals that `<samp><span class="samp">1</span></samp>' gets its preceding
+whitespace from the space preceding `<samp><span class="samp">add</span></samp>' in the macro invocation,
+<em>not</em> replacement list.  `<samp><span class="samp">2</span></samp>' gets its whitespace from the
+space preceding the parameter `<samp><span class="samp">y</span></samp>' in the macro replacement list,
+and `<samp><span class="samp">3</span></samp>' has no preceding space because parameter `<samp><span class="samp">z</span></samp>' has none
 in the replacement list.
 
    <p>Once lexed, tokens are effectively fixed and cannot be altered, since
@@ -94,7 +94,7 @@ the subsequent token is special.  The preprocessor inserts padding
 tokens in front of every macro expansion and expanded macro argument. 
 These point to a <dfn>source token</dfn> from which the subsequent real token
 should inherit its spacing.  In the above example, the source tokens are
-&lsquo;<samp><span class="samp">add</span></samp>&rsquo; in the macro invocation, and &lsquo;<samp><span class="samp">y</span></samp>&rsquo; and &lsquo;<samp><span class="samp">z</span></samp>&rsquo; in the
+`<samp><span class="samp">add</span></samp>' in the macro invocation, and `<samp><span class="samp">y</span></samp>' and `<samp><span class="samp">z</span></samp>' in the
 macro replacement list, respectively.
 
    <p>It is quite easy to get multiple padding tokens in a row, for example if
@@ -105,8 +105,8 @@ a macro's first replacement token expands straight into another macro.
      [foo]
              ==&gt; [baz]
 </pre>
-   <p>Here, two padding tokens are generated with sources the &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; token
-between the brackets, and the &lsquo;<samp><span class="samp">bar</span></samp>&rsquo; token from foo's replacement
+   <p>Here, two padding tokens are generated with sources the `<samp><span class="samp">foo</span></samp>' token
+between the brackets, and the `<samp><span class="samp">bar</span></samp>' token from foo's replacement
 list, respectively.  Clearly the first padding token is the one to
 use, so the output code should contain a rule that the first
 padding token in a sequence is the one that matters.
@@ -120,13 +120,13 @@ example slightly:
      [foo] EMPTY;
              ==&gt; [ baz] ;
 </pre>
-   <p>As shown, now there should be a space before &lsquo;<samp><span class="samp">baz</span></samp>&rsquo; and the
+   <p>As shown, now there should be a space before `<samp><span class="samp">baz</span></samp>' and the
 semicolon in the output.
 
-   <p>The rules we decided above fail for &lsquo;<samp><span class="samp">baz</span></samp>&rsquo;: we generate three
-padding tokens, one per macro invocation, before the token &lsquo;<samp><span class="samp">baz</span></samp>&rsquo;. 
+   <p>The rules we decided above fail for `<samp><span class="samp">baz</span></samp>': we generate three
+padding tokens, one per macro invocation, before the token `<samp><span class="samp">baz</span></samp>'. 
 We would then have it take its spacing from the first of these, which
-carries source token &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; with no leading space.
+carries source token `<samp><span class="samp">foo</span></samp>' with no leading space.
 
    <p>It is vital that cpplib get spacing correct in these examples since any
 of these macro expansions could be stringified, where spacing matters.
@@ -136,7 +136,7 @@ expansions, but leaving them requires special handling too.  I made
 cpplib insert a padding token with a <code>NULL</code> source token when
 leaving macro expansions, as well as after each replaced argument in a
 macro's replacement list.  It also inserts appropriate padding tokens on
-either side of tokens created by the &lsquo;<samp><span class="samp">#</span></samp>&rsquo; and &lsquo;<samp><span class="samp">##</span></samp>&rsquo; operators. 
+either side of tokens created by the `<samp><span class="samp">#</span></samp>' and `<samp><span class="samp">##</span></samp>' operators. 
 I expanded the rule so that, if we see a padding token with a
 <code>NULL</code> source token, <em>and</em> that source token has no leading
 space, then we behave as if we have seen no padding tokens at all.  A

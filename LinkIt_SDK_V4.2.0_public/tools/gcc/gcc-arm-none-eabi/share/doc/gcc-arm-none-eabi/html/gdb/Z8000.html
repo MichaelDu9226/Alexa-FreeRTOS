@@ -3,7 +3,7 @@
 <title>Z8000 - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Embedded-Processors.html#Embedded-Processors" title="Embedded Processors">
 <link rel="prev" href="Sparclite.html#Sparclite" title="Sparclite">
@@ -51,7 +51,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Embedded-Processors.html#Embedded-Proce
 When configured for debugging Zilog Z8000 targets, <span class="sc">gdb</span> includes
 a Z8000 simulator.
 
-   <p>For the Z8000 family, &lsquo;<samp><span class="samp">target sim</span></samp>&rsquo; simulates either the Z8002 (the
+   <p>For the Z8000 family, `<samp><span class="samp">target sim</span></samp>' simulates either the Z8002 (the
 unsegmented variant of the Z8000 architecture) or the Z8001 (the
 segmented variant).  The simulator recognizes which architecture is
 appropriate by inspecting the object code.
@@ -80,7 +80,7 @@ additional items of information as specially named registers:
    </dl>
 
    <p>You can refer to these values in <span class="sc">gdb</span> expressions with the usual
-conventions; for example, &lsquo;<samp><span class="samp">b&nbsp;fputc&nbsp;if&nbsp;$cycles&gt;5000</span></samp>&rsquo;<!-- /@w --> sets a
+conventions; for example, `<samp><span class="samp">b&nbsp;fputc&nbsp;if&nbsp;$cycles&gt;5000</span></samp>'<!-- /@w --> sets a
 conditional breakpoint that suspends only after at least 5000
 simulated clock ticks.
 

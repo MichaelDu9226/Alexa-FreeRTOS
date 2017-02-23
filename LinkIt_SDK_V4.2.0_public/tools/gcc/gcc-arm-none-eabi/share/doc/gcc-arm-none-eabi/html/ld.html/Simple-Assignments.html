@@ -3,7 +3,7 @@
 <title>Simple Assignments - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Assignments.html#Assignments" title="Assignments">
 <link rel="next" href="HIDDEN.html#HIDDEN" title="HIDDEN">
@@ -55,7 +55,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Assignments.html#Assignments">Assignmen
 <var>expression</var>.  In the other cases, <var>symbol</var> must already be
 defined, and the value will be adjusted accordingly.
 
-   <p>The special symbol name &lsquo;<samp><span class="samp">.</span></samp>&rsquo; indicates the location counter.  You
+   <p>The special symbol name `<samp><span class="samp">.</span></samp>' indicates the location counter.  You
 may only use this within a <code>SECTIONS</code> command.  See <a href="Location-Counter.html#Location-Counter">Location Counter</a>.
 
    <p>The semicolon after <var>expression</var> is required.
@@ -84,10 +84,10 @@ assignments may be used:
        .data : { *(.data) }
      }
 </pre>
-   <p class="noindent">In this example, the symbol &lsquo;<samp><span class="samp">floating_point</span></samp>&rsquo; will be defined as
-zero.  The symbol &lsquo;<samp><span class="samp">_etext</span></samp>&rsquo; will be defined as the address following
-the last &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; input section.  The symbol &lsquo;<samp><span class="samp">_bdata</span></samp>&rsquo; will be
-defined as the address following the &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; output section aligned
+   <p class="noindent">In this example, the symbol `<samp><span class="samp">floating_point</span></samp>' will be defined as
+zero.  The symbol `<samp><span class="samp">_etext</span></samp>' will be defined as the address following
+the last `<samp><span class="samp">.text</span></samp>' input section.  The symbol `<samp><span class="samp">_bdata</span></samp>' will be
+defined as the address following the `<samp><span class="samp">.text</span></samp>' output section aligned
 upward to a 4 byte boundary.
 
    </body></html>

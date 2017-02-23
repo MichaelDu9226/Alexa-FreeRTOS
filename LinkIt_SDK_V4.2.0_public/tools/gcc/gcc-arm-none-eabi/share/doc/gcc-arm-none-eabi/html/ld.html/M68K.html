@@ -3,7 +3,7 @@
 <title>M68K - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Dependent.html#Machine-Dependent" title="Machine Dependent">
 <link rel="prev" href="HPPA-ELF32.html#HPPA-ELF32" title="HPPA ELF32">
@@ -48,16 +48,16 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Machine-Dependent.html#Machine-Dependen
 
 <h3 class="section">4.6 <samp><span class="command">ld</span></samp> and the Motorola 68K family</h3>
 
-<p><a name="index-Motorola-68K-GOT-generation-621"></a><a name="index-g_t_002d_002dgot_003d_0040var_007btype_007d-622"></a>The &lsquo;<samp><span class="samp">--got=</span><var>type</var></samp>&rsquo; option lets you choose the GOT generation scheme. 
-The choices are &lsquo;<samp><span class="samp">single</span></samp>&rsquo;, &lsquo;<samp><span class="samp">negative</span></samp>&rsquo;, &lsquo;<samp><span class="samp">multigot</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">target</span></samp>&rsquo;.  When &lsquo;<samp><span class="samp">target</span></samp>&rsquo; is selected the linker chooses
+<p><a name="index-Motorola-68K-GOT-generation-621"></a><a name="index-g_t_002d_002dgot_003d_0040var_007btype_007d-622"></a>The `<samp><span class="samp">--got=</span><var>type</var></samp>' option lets you choose the GOT generation scheme. 
+The choices are `<samp><span class="samp">single</span></samp>', `<samp><span class="samp">negative</span></samp>', `<samp><span class="samp">multigot</span></samp>' and
+`<samp><span class="samp">target</span></samp>'.  When `<samp><span class="samp">target</span></samp>' is selected the linker chooses
 the default GOT generation scheme for the current target. 
-&lsquo;<samp><span class="samp">single</span></samp>&rsquo; tells the linker to generate a single GOT with
+`<samp><span class="samp">single</span></samp>' tells the linker to generate a single GOT with
 entries only at non-negative offsets. 
-&lsquo;<samp><span class="samp">negative</span></samp>&rsquo; instructs the linker to generate a single GOT with
+`<samp><span class="samp">negative</span></samp>' instructs the linker to generate a single GOT with
 entries at both negative and positive offsets.  Not all environments
 support such GOTs. 
-&lsquo;<samp><span class="samp">multigot</span></samp>&rsquo; allows the linker to generate several GOTs in the
+`<samp><span class="samp">multigot</span></samp>' allows the linker to generate several GOTs in the
 output file.  All GOT references from a single input object
 file access the same GOT, but references from different input object
 files might access different GOTs.  Not all environments support such GOTs.

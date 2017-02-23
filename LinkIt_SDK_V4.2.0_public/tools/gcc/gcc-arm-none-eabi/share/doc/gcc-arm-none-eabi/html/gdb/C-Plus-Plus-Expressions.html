@@ -3,7 +3,7 @@
 <title>C Plus Plus Expressions - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C.html#C" title="C">
 <link rel="prev" href="C-Constants.html#C-Constants" title="C Constants">
@@ -65,7 +65,7 @@ code.  See <a href="Compilation.html#Compilation">Compilation</a>.
      <p><a name="index-member-functions-877"></a><li>Member function calls are allowed; you can use expressions like
 
      <pre class="smallexample">          count = aml-&gt;GetOriginal(x, y)
-</pre>
+     </pre>
      <p><a name="index-this_0040r_007b_002c-inside-C_0040t_007b_002b_002b_007d-member-functions_007d-878"></a><a name="index-namespace-in-C_0040t_007b_002b_002b_007d-879"></a><li>While a member function is active (in the selected stack frame), your
 expressions have the same namespace available as the member function;
 that is, <span class="sc">gdb</span> allows implicit references to the class instance
@@ -91,7 +91,7 @@ number of function arguments.
      <p>You must specify <code>set overload-resolution off</code> in order to use an
 explicit function signature to call an overloaded function, as in
      <pre class="smallexample">          p 'foo(char,int)'('x', 13)
-</pre>
+     </pre>
      <p>The <span class="sc">gdb</span> command-completion facility can simplify this;
 see <a href="Completion.html#Completion">Command Completion</a>.
 
@@ -103,13 +103,13 @@ dereferenced.
 reference variables are not displayed (unlike other variables); this
 avoids clutter, since references are often used for large structures. 
 The <em>address</em> of a reference variable is always shown, unless
-you have specified &lsquo;<samp><span class="samp">set print address off</span></samp>&rsquo;.
+you have specified `<samp><span class="samp">set print address off</span></samp>'.
 
      <li><span class="sc">gdb</span> supports the C<tt>++</tt> name resolution operator <code>::</code>&mdash;your
 expressions can use it just as expressions in your program do.  Since
 one scope may be defined in another, you can use <code>::</code> repeatedly if
 necessary, for example in an expression like
-&lsquo;<samp><var>scope1</var><span class="samp">::</span><var>scope2</var><span class="samp">::</span><var>name</var></samp>&rsquo;.  <span class="sc">gdb</span> also allows
+`<samp><var>scope1</var><span class="samp">::</span><var>scope2</var><span class="samp">::</span><var>name</var></samp>'.  <span class="sc">gdb</span> also allows
 resolving name scope by reference to source files, in both C and C<tt>++</tt>
 debugging (see <a href="Variables.html#Variables">Program Variables</a>).
 

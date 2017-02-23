@@ -3,7 +3,7 @@
 <title>Context management - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI-General-Design.html#GDB_002fMI-General-Design" title="GDB/MI General Design">
 <link rel="next" href="Asynchronous-and-non_002dstop-modes.html#Asynchronous-and-non_002dstop-modes" title="Asynchronous and non-stop modes">
@@ -63,8 +63,8 @@ want to access additional threads for internal purposes.  This
 increases the risk that by relying on implicitly selected thread, the
 frontend may be operating on a wrong one.  Therefore, each MI command
 should explicitly specify which thread and frame to operate on.  To
-make it possible, each MI command accepts the &lsquo;<samp><span class="samp">--thread</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">--frame</span></samp>&rsquo; options, the value to each is <span class="sc">gdb</span> identifier
+make it possible, each MI command accepts the `<samp><span class="samp">--thread</span></samp>' and
+`<samp><span class="samp">--frame</span></samp>' options, the value to each is <span class="sc">gdb</span> identifier
 for thread and frame to operate on.
 
    <p>Usually, each top-level window in a frontend allows the user to select
@@ -72,10 +72,10 @@ a thread and a frame, and remembers the user selection for further
 operations.  However, in some cases <span class="sc">gdb</span> may suggest that the
 current thread be changed.  For example, when stopping on a breakpoint
 it is reasonable to switch to the thread where breakpoint is hit.  For
-another example, if the user issues the CLI &lsquo;<samp><span class="samp">thread</span></samp>&rsquo; command via
+another example, if the user issues the CLI `<samp><span class="samp">thread</span></samp>' command via
 the frontend, it is desirable to change the frontend's selected thread to the
 one specified by user.  <span class="sc">gdb</span> communicates the suggestion to
-change current thread using the &lsquo;<samp><span class="samp">=thread-selected</span></samp>&rsquo; notification. 
+change current thread using the `<samp><span class="samp">=thread-selected</span></samp>' notification. 
 No such notification is available for the selected frame at the moment.
 
    <p>Note that historically, MI shares the selected thread with CLI, so
@@ -92,8 +92,8 @@ selected thread, then the behaviour of subsequent commands will
 change.  So, a frontend should either wait for response from such
 problematic commands, or explicitly add <code>-thread-select</code> for
 all subsequent commands.  No frontend is known to do this exactly
-right, so it is suggested to just always pass the &lsquo;<samp><span class="samp">--thread</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">--frame</span></samp>&rsquo; options.
+right, so it is suggested to just always pass the `<samp><span class="samp">--thread</span></samp>' and
+`<samp><span class="samp">--frame</span></samp>' options.
 
    </body></html>
 

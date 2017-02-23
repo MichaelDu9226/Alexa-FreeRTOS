@@ -3,7 +3,7 @@
 <title>C Constants - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C.html#C" title="C">
 <link rel="prev" href="C-Operators.html#C-Operators" title="C Operators">
@@ -53,20 +53,20 @@ following ways:
 
      <ul>
 <li>Integer constants are a sequence of digits.  Octal constants are
-specified by a leading &lsquo;<samp><span class="samp">0</span></samp>&rsquo; (i.e. zero), and hexadecimal constants
-by a leading &lsquo;<samp><span class="samp">0x</span></samp>&rsquo; or &lsquo;<samp><span class="samp">0X</span></samp>&rsquo;.  Constants may also end with a letter
-&lsquo;<samp><span class="samp">l</span></samp>&rsquo;, specifying that the constant should be treated as a
+specified by a leading `<samp><span class="samp">0</span></samp>' (i.e. zero), and hexadecimal constants
+by a leading `<samp><span class="samp">0x</span></samp>' or `<samp><span class="samp">0X</span></samp>'.  Constants may also end with a letter
+`<samp><span class="samp">l</span></samp>', specifying that the constant should be treated as a
 <code>long</code> value.
 
      <li>Floating point constants are a sequence of digits, followed by a decimal
 point, followed by a sequence of digits, and optionally followed by an
 exponent.  An exponent is of the form:
-&lsquo;<samp><span class="samp">e[[+]|-]</span><var>nnn</var><span class="samp"><!-- /@w --></span></samp>&rsquo;, where <var>nnn</var> is another
-sequence of digits.  The &lsquo;<samp><span class="samp">+</span></samp>&rsquo; is optional for positive exponents. 
-A floating-point constant may also end with a letter &lsquo;<samp><span class="samp">f</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">F</span></samp>&rsquo;, specifying that the constant should be treated as being of
+`<samp><span class="samp">e[[+]|-]</span><var>nnn</var><span class="samp"><!-- /@w --></span></samp>', where <var>nnn</var> is another
+sequence of digits.  The `<samp><span class="samp">+</span></samp>' is optional for positive exponents. 
+A floating-point constant may also end with a letter `<samp><span class="samp">f</span></samp>' or
+`<samp><span class="samp">F</span></samp>', specifying that the constant should be treated as being of
 the <code>float</code> (as opposed to the default <code>double</code>) type; or with
-a letter &lsquo;<samp><span class="samp">l</span></samp>&rsquo; or &lsquo;<samp><span class="samp">L</span></samp>&rsquo;, which specifies a <code>long double</code>
+a letter `<samp><span class="samp">l</span></samp>' or `<samp><span class="samp">L</span></samp>', which specifies a <code>long double</code>
 constant.
 
      <li>Enumerated constants consist of enumerated identifiers, or their
@@ -76,33 +76,33 @@ integral equivalents.
 (<code>'</code>), or a number&mdash;the ordinal value of the corresponding character
 (usually its <span class="sc">ascii</span> value).  Within quotes, the single character may
 be represented by a letter or by <dfn>escape sequences</dfn>, which are of
-the form &lsquo;<samp><span class="samp">\</span><var>nnn</var></samp>&rsquo;, where <var>nnn</var> is the octal representation
-of the character's ordinal value; or of the form &lsquo;<samp><span class="samp">\</span><var>x</var></samp>&rsquo;, where
-&lsquo;<samp><var>x</var></samp>&rsquo; is a predefined special character&mdash;for example,
-&lsquo;<samp><span class="samp">\n</span></samp>&rsquo; for newline.
+the form `<samp><span class="samp">\</span><var>nnn</var></samp>', where <var>nnn</var> is the octal representation
+of the character's ordinal value; or of the form `<samp><span class="samp">\</span><var>x</var></samp>', where
+`<samp><var>x</var></samp>' is a predefined special character&mdash;for example,
+`<samp><span class="samp">\n</span></samp>' for newline.
 
      <p>Wide character constants can be written by prefixing a character
-constant with &lsquo;<samp><span class="samp">L</span></samp>&rsquo;, as in C.  For example, &lsquo;<samp><span class="samp">L'x'</span></samp>&rsquo; is the wide
-form of &lsquo;<samp><span class="samp">x</span></samp>&rsquo;.  The target wide character set is used when
+constant with `<samp><span class="samp">L</span></samp>', as in C.  For example, `<samp><span class="samp">L'x'</span></samp>' is the wide
+form of `<samp><span class="samp">x</span></samp>'.  The target wide character set is used when
 computing the value of this constant (see <a href="Character-Sets.html#Character-Sets">Character Sets</a>).
 
      <li>String constants are a sequence of character constants surrounded by
 double quotes (<code>"</code>).  Any valid character constant (as described
 above) may appear.  Double quotes within the string must be preceded by
-a backslash, so for instance &lsquo;<samp><span class="samp">"a\"b'c"</span></samp>&rsquo; is a string of five
+a backslash, so for instance `<samp><span class="samp">"a\"b'c"</span></samp>' is a string of five
 characters.
 
      <p>Wide string constants can be written by prefixing a string constant
-with &lsquo;<samp><span class="samp">L</span></samp>&rsquo;, as in C.  The target wide character set is used when
+with `<samp><span class="samp">L</span></samp>', as in C.  The target wide character set is used when
 computing the value of this constant (see <a href="Character-Sets.html#Character-Sets">Character Sets</a>).
 
      <li>Pointer constants are an integral value.  You can also write pointers
-to constants using the C operator &lsquo;<samp><span class="samp">&amp;</span></samp>&rsquo;.
+to constants using the C operator `<samp><span class="samp">&amp;</span></samp>'.
 
-     <li>Array constants are comma-separated lists surrounded by braces &lsquo;<samp><span class="samp">{</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">}</span></samp>&rsquo;; for example, &lsquo;<samp><span class="samp">{1,2,3}</span></samp>&rsquo; is a three-element array of
-integers, &lsquo;<samp><span class="samp">{{1,2}, {3,4}, {5,6}}</span></samp>&rsquo; is a three-by-two array,
-and &lsquo;<samp><span class="samp">{&amp;"hi", &amp;"there", &amp;"fred"}</span></samp>&rsquo; is a three-element array of pointers. 
+     <li>Array constants are comma-separated lists surrounded by braces `<samp><span class="samp">{</span></samp>'
+and `<samp><span class="samp">}</span></samp>'; for example, `<samp><span class="samp">{1,2,3}</span></samp>' is a three-element array of
+integers, `<samp><span class="samp">{{1,2}, {3,4}, {5,6}}</span></samp>' is a three-by-two array,
+and `<samp><span class="samp">{&amp;"hi", &amp;"there", &amp;"fred"}</span></samp>' is a three-element array of pointers. 
 </ul>
 
    </body></html>

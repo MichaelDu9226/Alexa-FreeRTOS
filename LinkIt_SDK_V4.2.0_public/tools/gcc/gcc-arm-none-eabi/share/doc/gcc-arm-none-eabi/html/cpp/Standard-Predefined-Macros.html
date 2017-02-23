@@ -3,7 +3,7 @@
 <title>Standard Predefined Macros - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Predefined-Macros.html#Predefined-Macros" title="Predefined Macros">
 <link rel="next" href="Common-Predefined-Macros.html#Common-Predefined-Macros" title="Common Predefined Macros">
@@ -63,7 +63,7 @@ them.  Their names all start with double underscores.
      <dl>
 <dt><code>__FILE__</code><dd>This macro expands to the name of the current input file, in the form of
 a C string constant.  This is the path by which the preprocessor opened
-the file, not the short name specified in &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; or as the
+the file, not the short name specified in `<samp><span class="samp">#include</span></samp>' or as the
 input file name argument.  For example,
 <code>"/usr/local/include/myheader.h"</code> is a possible expansion of this
 macro.
@@ -84,15 +84,15 @@ example,
                       "%d at %s, line %d.",
               length, __FILE__, __LINE__);
 </pre>
-   <p>An &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; directive changes the expansions of <code>__FILE__</code>
+   <p>An `<samp><span class="samp">#include</span></samp>' directive changes the expansions of <code>__FILE__</code>
 and <code>__LINE__</code> to correspond to the included file.  At the end of
 that file, when processing resumes on the input file that contained
-the &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; directive, the expansions of <code>__FILE__</code> and
+the `<samp><span class="samp">#include</span></samp>' directive, the expansions of <code>__FILE__</code> and
 <code>__LINE__</code> revert to the values they had before the
-&lsquo;<samp><span class="samp">#include</span></samp>&rsquo; (but <code>__LINE__</code> is then incremented by one as
-processing moves to the line after the &lsquo;<samp><span class="samp">#include</span></samp>&rsquo;).
+`<samp><span class="samp">#include</span></samp>' (but <code>__LINE__</code> is then incremented by one as
+processing moves to the line after the `<samp><span class="samp">#include</span></samp>').
 
-   <p>A &lsquo;<samp><span class="samp">#line</span></samp>&rsquo; directive changes <code>__LINE__</code>, and may change
+   <p>A `<samp><span class="samp">#line</span></samp>' directive changes <code>__LINE__</code>, and may change
 <code>__FILE__</code> as well.  See <a href="Line-Control.html#Line-Control">Line Control</a>.
 
    <p>C99 introduces <code>__func__</code>, and GCC has provided <code>__FUNCTION__</code>

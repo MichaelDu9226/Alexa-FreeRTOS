@@ -3,7 +3,7 @@
 <title>Define Subst Example - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Define-Subst.html#Define-Subst" title="Define Subst">
 <link rel="next" href="Define-Subst-Pattern-Matching.html#Define-Subst-Pattern-Matching" title="Define Subst Pattern Matching">
@@ -89,11 +89,11 @@ subst-attributes are used.  They should be declared in advance:
 
 <pre class="smallexample">     (define_subst_attr "add_clobber_name" "add_clobber_subst" "_noclobber" "_clobber")
 </pre>
- <p>Here &lsquo;<samp><span class="samp">add_clobber_name</span></samp>&rsquo; is the attribute name,
-&lsquo;<samp><span class="samp">add_clobber_subst</span></samp>&rsquo; is the name of the corresponding
-<code>define_subst</code>, the third argument (&lsquo;<samp><span class="samp">_noclobber</span></samp>&rsquo;) is the
+ <p>Here `<samp><span class="samp">add_clobber_name</span></samp>' is the attribute name,
+`<samp><span class="samp">add_clobber_subst</span></samp>' is the name of the corresponding
+<code>define_subst</code>, the third argument (`<samp><span class="samp">_noclobber</span></samp>') is the
 attribute value that would be substituted into the unchanged version of
-the source RTL template, and the last argument (&lsquo;<samp><span class="samp">_clobber</span></samp>&rsquo;) is the
+the source RTL template, and the last argument (`<samp><span class="samp">_clobber</span></samp>') is the
 value that would be substituted into the second, transformed,
 version of the RTL template.
 

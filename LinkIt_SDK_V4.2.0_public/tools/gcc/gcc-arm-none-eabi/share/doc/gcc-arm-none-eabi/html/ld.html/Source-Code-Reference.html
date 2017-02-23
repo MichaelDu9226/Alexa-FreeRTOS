@@ -3,7 +3,7 @@
 <title>Source Code Reference - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Assignments.html#Assignments" title="Assignments">
 <link rel="prev" href="PROVIDE_005fHIDDEN.html#PROVIDE_005fHIDDEN" title="PROVIDE_HIDDEN">
@@ -54,8 +54,8 @@ symbol that does not have a value.
    <p>Before going further, it is important to note that compilers often
 transform names in the source code into different names when they are
 stored in the symbol table.  For example, Fortran compilers commonly
-prepend or append an underscore, and C++ performs extensive &lsquo;<samp><span class="samp">name
-mangling</span></samp>&rsquo;.  Therefore there might be a discrepancy between the name
+prepend or append an underscore, and C++ performs extensive `<samp><span class="samp">name
+mangling</span></samp>'.  Therefore there might be a discrepancy between the name
 of a variable as it is used in source code and the name of the same
 variable as it is defined in a linker script.  For example in C a
 linker script variable might be referred to as:
@@ -79,8 +79,8 @@ value.  So for example the following C declaration, at file scope:
 
 <pre class="smallexample">       int foo = 1000;
 </pre>
-   <p>creates a entry called &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; in the symbol table.  This entry
-holds the address of an &lsquo;<samp><span class="samp">int</span></samp>&rsquo; sized block of memory where the
+   <p>creates a entry called `<samp><span class="samp">foo</span></samp>' in the symbol table.  This entry
+holds the address of an `<samp><span class="samp">int</span></samp>' sized block of memory where the
 number 1000 is initially stored.
 
    <p>When a program references a symbol the compiler generates code that
@@ -90,15 +90,15 @@ So:
 
 <pre class="smallexample">       foo = 1;
 </pre>
-   <p>looks up the symbol &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; in the symbol table, gets the address
+   <p>looks up the symbol `<samp><span class="samp">foo</span></samp>' in the symbol table, gets the address
 associated with this symbol and then writes the value 1 into that
 address.  Whereas:
 
 <pre class="smallexample">       int * a = &amp; foo;
 </pre>
-   <p>looks up the symbol &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; in the symbol table, gets it address
+   <p>looks up the symbol `<samp><span class="samp">foo</span></samp>' in the symbol table, gets it address
 and then copies this address into the block of memory associated with
-the variable &lsquo;<samp><span class="samp">a</span></samp>&rsquo;.
+the variable `<samp><span class="samp">a</span></samp>'.
 
    <p>Linker scripts symbol declarations, by contrast, create an entry in
 the symbol table but do not assign any memory to them.  Thus they are
@@ -106,7 +106,7 @@ an address without a value.  So for example the linker script definition:
 
 <pre class="smallexample">       foo = 1000;
 </pre>
-   <p>creates an entry in the symbol table called &lsquo;<samp><span class="samp">foo</span></samp>&rsquo; which holds
+   <p>creates an entry in the symbol table called `<samp><span class="samp">foo</span></samp>' which holds
 the address of memory location 1000, but nothing special is stored at
 address 1000.  This means that you cannot access the <em>value</em> of a
 linker script defined symbol - it has no value - all you can do is
@@ -128,7 +128,7 @@ linker script contains these declarations:
      
        memcpy (&amp; start_of_FLASH, &amp; start_of_ROM, &amp; end_of_ROM - &amp; start_of_ROM);
 </pre>
-   <p>Note the use of the &lsquo;<samp><span class="samp">&amp;</span></samp>&rsquo; operators.  These are correct.
+   <p>Note the use of the `<samp><span class="samp">&amp;</span></samp>' operators.  These are correct.
 
    </body></html>
 

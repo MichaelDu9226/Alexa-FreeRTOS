@@ -3,7 +3,7 @@
 <title>Constant expressions - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Expression-trees.html#Expression-trees" title="Expression trees">
 <link rel="next" href="Storage-References.html#Storage-References" title="Storage References">
@@ -65,7 +65,7 @@ constants is obtained with <code>TREE_TYPE</code>; they are not always of type
 given by
      <pre class="smallexample">          ((TREE_INT_CST_HIGH (e) &lt;&lt; HOST_BITS_PER_WIDE_INT)
           + TREE_INST_CST_LOW (e))
-</pre>
+     </pre>
      <p class="noindent">HOST_BITS_PER_WIDE_INT is at least thirty-two on all platforms.  Both
 <code>TREE_INT_CST_HIGH</code> and <code>TREE_INT_CST_LOW</code> return a
 <code>HOST_WIDE_INT</code>.  The value of an <code>INTEGER_CST</code> is interpreted

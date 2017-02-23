@@ -3,7 +3,7 @@
 <title>Namespaces - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-and-C_002b_002b-Trees.html#C-and-C_002b_002b-Trees" title="C and C++ Trees">
 <link rel="prev" href="Types-for-C_002b_002b.html#Types-for-C_002b_002b" title="Types for C++">
@@ -72,7 +72,7 @@ rather than the global namespace in particular.
      <dl>
 <dt><code>DECL_NAME</code><a name="index-DECL_005fNAME-2606"></a><dd>This macro is used to obtain the <code>IDENTIFIER_NODE</code> corresponding to
 the unqualified name of the name of the namespace (see <a href="Identifiers.html#Identifiers">Identifiers</a>). 
-The name of the global namespace is &lsquo;<samp><span class="samp">::</span></samp>&rsquo;, even though in C++ the
+The name of the global namespace is `<samp><span class="samp">::</span></samp>', even though in C++ the
 global namespace is unnamed.  However, you should use comparison with
 <code>global_namespace</code>, rather than <code>DECL_NAME</code> to determine
 whether or not a namespace is the global one.  An unnamed namespace
@@ -122,5 +122,5 @@ list.  In particular, no <code>FIELD_DECL</code>, <code>LABEL_DECL</code>, or
 <!--  -->
 <!-- Classes -->
 <!--  -->
- </body></html>
+</body></html>
 

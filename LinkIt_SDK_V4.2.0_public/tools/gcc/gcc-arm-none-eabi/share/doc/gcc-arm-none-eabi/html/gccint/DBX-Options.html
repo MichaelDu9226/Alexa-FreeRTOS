@@ -3,7 +3,7 @@
 <title>DBX Options - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Debugging-Info.html#Debugging-Info" title="Debugging Info">
 <link rel="prev" href="All-Debuggers.html#All-Debuggers" title="All Debuggers">
@@ -112,7 +112,7 @@ macro applies only to DBX debugging information format.
 <div class="defun">
 &mdash; Macro: <b>DBX_NO_XREFS</b><var><a name="index-DBX_005fNO_005fXREFS-4701"></a></var><br>
 <blockquote><p>Define this macro if DBX on your system does not support the construct
-&lsquo;<samp><span class="samp">xs</span><var>tagname</var></samp>&rsquo;.  On some systems, this construct is used to
+`<samp><span class="samp">xs</span><var>tagname</var></samp>'.  On some systems, this construct is used to
 describe a forward reference to a structure named <var>tagname</var>. 
 On other systems, this construct is not supported at all. 
 </p></blockquote></div>
@@ -130,7 +130,7 @@ defining this macro as an expression for the length you desire.
 
 <div class="defun">
 &mdash; Macro: <b>DBX_CONTIN_CHAR</b><var><a name="index-DBX_005fCONTIN_005fCHAR-4703"></a></var><br>
-<blockquote><p>Normally continuation is indicated by adding a &lsquo;<samp><span class="samp">\</span></samp>&rsquo; character to
+<blockquote><p>Normally continuation is indicated by adding a `<samp><span class="samp">\</span></samp>' character to
 the end of a <code>.stabs</code> string when a continuation follows.  To use
 a different character instead, define this macro as a character
 constant for the character you want to use.  Do not define this macro
@@ -140,7 +140,7 @@ if backslash is correct for your system.
 <div class="defun">
 &mdash; Macro: <b>DBX_STATIC_STAB_DATA_SECTION</b><var><a name="index-DBX_005fSTATIC_005fSTAB_005fDATA_005fSECTION-4704"></a></var><br>
 <blockquote><p>Define this macro if it is necessary to go to the data section before
-outputting the &lsquo;<samp><span class="samp">.stabs</span></samp>&rsquo; pseudo-op for a non-global static
+outputting the `<samp><span class="samp">.stabs</span></samp>' pseudo-op for a non-global static
 variable. 
 </p></blockquote></div>
 

@@ -3,7 +3,7 @@
 <title>Misc - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Named-Address-Spaces.html#Named-Address-Spaces" title="Named Address Spaces">
@@ -239,8 +239,8 @@ operating on it as if it had only <var>outprec</var> bits.
       <p>On many machines, this expression can be 1.
 
      <!-- rearranged this, removed the phrase "it is reported that".  this was -->
-     <!-- to fix an overfull hbox.  -mew 10feb93 -->
-      <p>When <code>TRULY_NOOP_TRUNCATION</code> returns 1 for a pair of sizes for
+<!-- to fix an overfull hbox.  -mew 10feb93 -->
+<p>When <code>TRULY_NOOP_TRUNCATION</code> returns 1 for a pair of sizes for
 modes for which <code>MODES_TIEABLE_P</code> is 0, suboptimal code can result. 
 If this is the case, making <code>TRULY_NOOP_TRUNCATION</code> return 0 in
 such cases may improve things. 
@@ -279,8 +279,8 @@ extension.
 &mdash; Macro: <b>STORE_FLAG_VALUE</b><var><a name="index-STORE_005fFLAG_005fVALUE-4848"></a></var><br>
 <blockquote><p>A C expression describing the value returned by a comparison operator
 with an integral mode and stored by a store-flag instruction
-(&lsquo;<samp><span class="samp">cstore</span><var>mode</var><span class="samp">4</span></samp>&rsquo;) when the condition is true.  This description must
-apply to <em>all</em> the &lsquo;<samp><span class="samp">cstore</span><var>mode</var><span class="samp">4</span></samp>&rsquo; patterns and all the
+(`<samp><span class="samp">cstore</span><var>mode</var><span class="samp">4</span></samp>') when the condition is true.  This description must
+apply to <em>all</em> the `<samp><span class="samp">cstore</span><var>mode</var><span class="samp">4</span></samp>' patterns and all the
 comparison operators whose results have a <code>MODE_INT</code> mode.
 
       <p>A value of 1 or &minus;1 means that the instruction implementing the
@@ -289,7 +289,7 @@ and 0 when the comparison is false.  Otherwise, the value indicates
 which bits of the result are guaranteed to be 1 when the comparison is
 true.  This value is interpreted in the mode of the comparison
 operation, which is given by the mode of the first operand in the
-&lsquo;<samp><span class="samp">cstore</span><var>mode</var><span class="samp">4</span></samp>&rsquo; pattern.  Either the low bit or the sign bit of
+`<samp><span class="samp">cstore</span><var>mode</var><span class="samp">4</span></samp>' pattern.  Either the low bit or the sign bit of
 <code>STORE_FLAG_VALUE</code> be on.  Presently, only those bits are used by
 the compiler.
 
@@ -299,15 +299,15 @@ replace comparison operators with equivalent operations if they cause
 the required bits to be set, even if the remaining bits are undefined. 
 For example, on a machine whose comparison operators return an
 <code>SImode</code> value and where <code>STORE_FLAG_VALUE</code> is defined as
-&lsquo;<samp><span class="samp">0x80000000</span></samp>&rsquo;, saying that just the sign bit is relevant, the
+`<samp><span class="samp">0x80000000</span></samp>', saying that just the sign bit is relevant, the
 expression
 
      <pre class="smallexample">          (ne:SI (and:SI <var>x</var> (const_int <var>power-of-2</var>)) (const_int 0))
-</pre>
+     </pre>
       <p class="noindent">can be converted to
 
      <pre class="smallexample">          (ashift:SI <var>x</var> (const_int <var>n</var>))
-</pre>
+     </pre>
       <p class="noindent">where <var>n</var> is the appropriate shift count to move the bit being
 tested into the sign bit.
 
@@ -334,11 +334,11 @@ combine the normalization with other operations.
 slightly preferred on machines with expensive jumps and 1 preferred on
 other machines.
 
-          <li>As a second choice, choose a value of &lsquo;<samp><span class="samp">0x80000001</span></samp>&rsquo; if instructions
+          <li>As a second choice, choose a value of `<samp><span class="samp">0x80000001</span></samp>' if instructions
 exist that set both the sign and low-order bits but do not define the
 others.
 
-          <li>Otherwise, use a value of &lsquo;<samp><span class="samp">0x80000000</span></samp>&rsquo;. 
+          <li>Otherwise, use a value of `<samp><span class="samp">0x80000000</span></samp>'. 
 </ul>
 
       <p>Many machines can produce both the value chosen for
@@ -347,10 +347,10 @@ instructions.  On those machines, you should also define a pattern for
 those cases, e.g., one matching
 
      <pre class="smallexample">          (set <var>A</var> (neg:<var>m</var> (ne:<var>m</var> <var>B</var> <var>C</var>)))
-</pre>
+     </pre>
       <p>Some machines can also perform <code>and</code> or <code>plus</code> operations on
 condition code values with less instructions than the corresponding
-&lsquo;<samp><span class="samp">cstore</span><var>mode</var><span class="samp">4</span></samp>&rsquo; insn followed by <code>and</code> or <code>plus</code>.  On those
+`<samp><span class="samp">cstore</span><var>mode</var><span class="samp">4</span></samp>' insn followed by <code>and</code> or <code>plus</code>.  On those
 machines, define the appropriate patterns.  Use the names <code>incscc</code>
 and <code>decscc</code>, respectively, for the patterns which perform
 <code>plus</code> or <code>minus</code> operations on condition code values.  See
@@ -461,7 +461,7 @@ files <code>__STDC__</code> will always expand to 1.
 <blockquote><p>Define this macro if the system header files support C++ as well as C. 
 This macro inhibits the usual method of using system header files in
 C++, which is to pretend that the file's contents are enclosed in
-&lsquo;<samp><span class="samp">extern "C" {...}</span></samp>&rsquo;. 
+`<samp><span class="samp">extern "C" {...}</span></samp>'. 
 </p></blockquote></div>
 
  <p><a name="index-g_t_0023pragma-4858"></a><a name="index-pragma-4859"></a>
@@ -479,10 +479,10 @@ other compilers for the same target.  In general, we discourage
 definition of target-specific pragmas for GCC.
 
       <p>If the pragma can be implemented by attributes then you should consider
-defining the target hook &lsquo;<samp><span class="samp">TARGET_INSERT_ATTRIBUTES</span></samp>&rsquo; as well.
+defining the target hook `<samp><span class="samp">TARGET_INSERT_ATTRIBUTES</span></samp>' as well.
 
       <p>Preprocessor macros that appear on pragma lines are not expanded.  All
-&lsquo;<samp><span class="samp">#pragma</span></samp>&rsquo; directives that do not match any registered pragma are
+`<samp><span class="samp">#pragma</span></samp>' directives that do not match any registered pragma are
 silently ignored, unless the user specifies <samp><span class="option">-Wunknown-pragmas</span></samp>. 
 </p></blockquote></div>
 
@@ -490,13 +490,13 @@ silently ignored, unless the user specifies <samp><span class="option">-Wunknown
 &mdash; Function: void <b>c_register_pragma</b> (<var>const char *space, const char *name, void </var>(<var>*callback</var>) (<var>struct cpp_reader *</var>))<var><a name="index-c_005fregister_005fpragma-4861"></a></var><br>
 &mdash; Function: void <b>c_register_pragma_with_expansion</b> (<var>const char *space, const char *name, void </var>(<var>*callback</var>) (<var>struct cpp_reader *</var>))<var><a name="index-c_005fregister_005fpragma_005fwith_005fexpansion-4862"></a></var><br>
 <blockquote>
-      <p>Each call to <code>c_register_pragma</code> or
+<p>Each call to <code>c_register_pragma</code> or
 <code>c_register_pragma_with_expansion</code> establishes one pragma.  The
 <var>callback</var> routine will be called when the preprocessor encounters a
 pragma of the form
 
      <pre class="smallexample">          #pragma [<var>space</var>] <var>name</var> ...
-</pre>
+     </pre>
       <p><var>space</var> is the case-sensitive namespace of the pragma, or
 <code>NULL</code> to put the pragma in the global namespace.  The callback
 routine receives <var>pfile</var> as its first argument, which can be passed
@@ -524,7 +524,7 @@ how to build this object file.
 <div class="defun">
 &mdash; Macro: <b>HANDLE_PRAGMA_PACK_WITH_EXPANSION</b><var><a name="index-HANDLE_005fPRAGMA_005fPACK_005fWITH_005fEXPANSION-4863"></a></var><br>
 <blockquote><p>Define this macro if macros should be expanded in the
-arguments of &lsquo;<samp><span class="samp">#pragma pack</span></samp>&rsquo;. 
+arguments of `<samp><span class="samp">#pragma pack</span></samp>'. 
 </p></blockquote></div>
 
 <div class="defun">
@@ -532,13 +532,13 @@ arguments of &lsquo;<samp><span class="samp">#pragma pack</span></samp>&rsquo;.
 <blockquote><p>If your target requires a structure packing default other than 0 (meaning
 the machine default), define this macro to the necessary value (in bytes). 
 This must be a value that would also be valid to use with
-&lsquo;<samp><span class="samp">#pragma pack()</span></samp>&rsquo; (that is, a small power of two). 
+`<samp><span class="samp">#pragma pack()</span></samp>' (that is, a small power of two). 
 </p></blockquote></div>
 
 <div class="defun">
 &mdash; Macro: <b>DOLLARS_IN_IDENTIFIERS</b><var><a name="index-DOLLARS_005fIN_005fIDENTIFIERS-4865"></a></var><br>
-<blockquote><p>Define this macro to control use of the character &lsquo;<samp><span class="samp">$</span></samp>&rsquo; in
-identifier names for the C family of languages.  0 means &lsquo;<samp><span class="samp">$</span></samp>&rsquo; is
+<blockquote><p>Define this macro to control use of the character `<samp><span class="samp">$</span></samp>' in
+identifier names for the C family of languages.  0 means `<samp><span class="samp">$</span></samp>' is
 not allowed by default; 1 means it is allowed.  1 is the default;
 there is no need to define this macro in that case. 
 </p></blockquote></div>
@@ -597,11 +597,11 @@ for overlap with regards to asm-declared registers.
 <div class="defun">
 &mdash; Macro: <b>MATH_LIBRARY</b><var><a name="index-MATH_005fLIBRARY-4870"></a></var><br>
 <blockquote><p>Define this macro as a C string constant for the linker argument to link
-in the system math library, minus the initial &lsquo;<samp><span class="samp">"-l"</span></samp>&rsquo;, or
-&lsquo;<samp><span class="samp">""</span></samp>&rsquo; if the target does not have a
+in the system math library, minus the initial `<samp><span class="samp">"-l"</span></samp>', or
+`<samp><span class="samp">""</span></samp>' if the target does not have a
 separate math library.
 
-      <p>You need only define this macro if the default of &lsquo;<samp><span class="samp">"m"</span></samp>&rsquo; is wrong. 
+      <p>You need only define this macro if the default of `<samp><span class="samp">"m"</span></samp>' is wrong. 
 </p></blockquote></div>
 
 <div class="defun">
@@ -609,7 +609,7 @@ separate math library.
 <blockquote><p>Define this macro as a C string constant for the environment variable that
 specifies where the linker should look for libraries.
 
-      <p>You need only define this macro if the default of &lsquo;<samp><span class="samp">"LIBRARY_PATH"</span></samp>&rsquo;
+      <p>You need only define this macro if the default of `<samp><span class="samp">"LIBRARY_PATH"</span></samp>'
 is wrong. 
 </p></blockquote></div>
 
@@ -626,7 +626,7 @@ for cross-profiling.
 <div class="defun">
 &mdash; Macro: <b>MAX_CONDITIONAL_EXECUTE</b><var><a name="index-MAX_005fCONDITIONAL_005fEXECUTE-4873"></a></var><br>
 <blockquote>
-      <p>A C expression for the maximum number of instructions to execute via
+<p>A C expression for the maximum number of instructions to execute via
 conditional execution instructions instead of a branch.  A value of
 <code>BRANCH_COST</code>+1 is the default if the machine does not use cc0, and
 1 if it does use cc0. 
@@ -713,7 +713,7 @@ instructions or prefetch instructions).
 which is defined by the language front end.  You can use any type nodes set
 up by <code>build_common_tree_nodes</code>;
 only language front ends that use those two functions will call
-&lsquo;<samp><span class="samp">TARGET_INIT_BUILTINS</span></samp>&rsquo;. 
+`<samp><span class="samp">TARGET_INIT_BUILTINS</span></samp>'. 
 </p></blockquote></div>
 
 <div class="defun">
@@ -730,8 +730,8 @@ If <var>code</var> is out of range the function should return
 <div class="defun">
 &mdash; Target Hook: rtx <b>TARGET_EXPAND_BUILTIN</b> (<var>tree exp, rtx target, rtx subtarget, enum machine_mode mode, int ignore</var>)<var><a name="index-TARGET_005fEXPAND_005fBUILTIN-4883"></a></var><br>
 <blockquote>
-      <p>Expand a call to a machine specific built-in function that was set up by
-&lsquo;<samp><span class="samp">TARGET_INIT_BUILTINS</span></samp>&rsquo;.  <var>exp</var> is the expression for the
+<p>Expand a call to a machine specific built-in function that was set up by
+`<samp><span class="samp">TARGET_INIT_BUILTINS</span></samp>'.  <var>exp</var> is the expression for the
 function call; the result should go to <var>target</var> if that is
 convenient, and have mode <var>mode</var> if that is convenient. 
 <var>subtarget</var> may be used as the target for computing one of
@@ -743,20 +743,20 @@ built-in function.
 <div class="defun">
 &mdash; Target Hook: tree <b>TARGET_RESOLVE_OVERLOADED_BUILTIN</b> (<var>unsigned int loc, tree fndecl, void *arglist</var>)<var><a name="index-TARGET_005fRESOLVE_005fOVERLOADED_005fBUILTIN-4884"></a></var><br>
 <blockquote><p>Select a replacement for a machine specific built-in function that
-was set up by &lsquo;<samp><span class="samp">TARGET_INIT_BUILTINS</span></samp>&rsquo;.  This is done
+was set up by `<samp><span class="samp">TARGET_INIT_BUILTINS</span></samp>'.  This is done
 <em>before</em> regular type checking, and so allows the target to
 implement a crude form of function overloading.  <var>fndecl</var> is the
 declaration of the built-in function.  <var>arglist</var> is the list of
 arguments passed to the built-in function.  The result is a
 complete expression that implements the operation, usually
 another <code>CALL_EXPR</code>. 
-<var>arglist</var> really has type &lsquo;<samp><span class="samp">VEC(tree,gc)*</span></samp>&rsquo;
+<var>arglist</var> really has type `<samp><span class="samp">VEC(tree,gc)*</span></samp>'
 </p></blockquote></div>
 
 <div class="defun">
 &mdash; Target Hook: tree <b>TARGET_FOLD_BUILTIN</b> (<var>tree fndecl, int n_args, tree *argp, bool ignore</var>)<var><a name="index-TARGET_005fFOLD_005fBUILTIN-4885"></a></var><br>
 <blockquote><p>Fold a call to a machine specific built-in function that was set up by
-&lsquo;<samp><span class="samp">TARGET_INIT_BUILTINS</span></samp>&rsquo;.  <var>fndecl</var> is the declaration of the
+`<samp><span class="samp">TARGET_INIT_BUILTINS</span></samp>'.  <var>fndecl</var> is the declaration of the
 built-in function.  <var>n_args</var> is the number of arguments passed to
 the function; the arguments themselves are pointed to by <var>argp</var>. 
 The result is another tree containing a simplified expression for the
@@ -792,7 +792,7 @@ body must be generated.
 <div class="defun">
 &mdash; Target Hook: const char * <b>TARGET_INVALID_WITHIN_DOLOOP</b> (<var>const_rtx insn</var>)<var><a name="index-TARGET_005fINVALID_005fWITHIN_005fDOLOOP-4889"></a></var><br>
 <blockquote>
-      <p>Take an instruction in <var>insn</var> and return NULL if it is valid within a
+<p>Take an instruction in <var>insn</var> and return NULL if it is valid within a
 low-overhead loop, otherwise return a string explaining why doloop
 could not be applied.
 
@@ -811,7 +811,7 @@ loops containing function calls or branch on table instructions.
 <div class="defun">
 &mdash; Macro: <b>MD_CAN_REDIRECT_BRANCH</b> (<var>branch1, branch2</var>)<var><a name="index-MD_005fCAN_005fREDIRECT_005fBRANCH-4891"></a></var><br>
 <blockquote>
-      <p>Take a branch insn in <var>branch1</var> and another in <var>branch2</var>. 
+<p>Take a branch insn in <var>branch1</var> and another in <var>branch2</var>. 
 Return true if redirecting <var>branch1</var> to the destination of
 <var>branch2</var> is possible.
 
@@ -836,7 +836,7 @@ of the enclosing rtl, if known, otherwise it is UNKNOWN.
 <div class="defun">
 &mdash; Target Hook: rtx <b>TARGET_ALLOCATE_INITIAL_VALUE</b> (<var>rtx hard_reg</var>)<var><a name="index-TARGET_005fALLOCATE_005fINITIAL_005fVALUE-4894"></a></var><br>
 <blockquote>
-      <p>When the initial value of a hard register has been copied in a pseudo
+<p>When the initial value of a hard register has been copied in a pseudo
 register, it is often not necessary to actually allocate another register
 to this pseudo register, because the original hard register or a stack slot
 it has been saved into can be used.  <code>TARGET_ALLOCATE_INITIAL_VALUE</code>
@@ -890,7 +890,7 @@ outside of any function scope.
 &mdash; Macro: <b>TARGET_OBJECT_SUFFIX</b><var><a name="index-TARGET_005fOBJECT_005fSUFFIX-4897"></a></var><br>
 <blockquote><p>Define this macro to be a C string representing the suffix for object
 files on your target machine.  If you do not define this macro, GCC will
-use &lsquo;<samp><span class="samp">.o</span></samp>&rsquo; as the suffix for object files. 
+use `<samp><span class="samp">.o</span></samp>' as the suffix for object files. 
 </p></blockquote></div>
 
 <div class="defun">
@@ -923,7 +923,7 @@ defined as this expression:
                                         build_tree_list
                                         (get_identifier ("stdcall"),
                                          NULL))
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
@@ -938,7 +938,7 @@ reload, so this target hook should be defined to a function such as:
           {
             return (reload_completed || reload_in_progress);
           }
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">
@@ -957,7 +957,7 @@ registers
 that are not already live during the current function; if this target hook
 returns true, they will be included.  The target code must than make sure
 that all target registers in the class returned by
-&lsquo;<samp><span class="samp">TARGET_BRANCH_TARGET_REGISTER_CLASS</span></samp>&rsquo; that might need saving are
+`<samp><span class="samp">TARGET_BRANCH_TARGET_REGISTER_CLASS</span></samp>' that might need saving are
 saved.  <var>after_prologue_epilogue_gen</var> indicates if prologues and
 epilogues have already been generated.  Note, even if you only return
 true when <var>after_prologue_epilogue_gen</var> is false, you still are likely
@@ -1200,7 +1200,7 @@ down to a multiple of the value of <code>TARGET_CONST_ANCHOR</code>.
 accepted by immediate-add plus one.  We currently assume that the
 value of <code>TARGET_CONST_ANCHOR</code> is a power of 2.  For example, on
 MIPS, where add-immediate takes a 16-bit signed value,
-<code>TARGET_CONST_ANCHOR</code> is set to &lsquo;<samp><span class="samp">0x8000</span></samp>&rsquo;.  The default value
+<code>TARGET_CONST_ANCHOR</code> is set to `<samp><span class="samp">0x8000</span></samp>'.  The default value
 is zero, which disables this optimization. 
 </p></blockquote></div>
 
@@ -1225,5 +1225,5 @@ memory model bits are allowed.
 <!-- Copyright (C) 1988-2013 Free Software Foundation, Inc. -->
 <!-- This is part of the GCC manual. -->
 <!-- For copying conditions, see the file gccint.texi. -->
- </body></html>
+</body></html>
 

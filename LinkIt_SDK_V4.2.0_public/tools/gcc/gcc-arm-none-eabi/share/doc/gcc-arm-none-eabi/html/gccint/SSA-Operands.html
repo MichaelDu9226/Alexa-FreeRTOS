@@ -3,7 +3,7 @@
 <title>SSA Operands - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Tree-SSA.html#Tree-SSA" title="Tree SSA">
 <link rel="prev" href="Annotations.html#Annotations" title="Annotations">
@@ -185,19 +185,19 @@ there is exactly one operand, the operand is returned as either a <code>tree</co
      <pre class="smallexample">          tree t = SINGLE_SSA_TREE_OPERAND (stmt, flags);
           use_operand_p u = SINGLE_SSA_USE_OPERAND (stmt, SSA_ALL_VIRTUAL_USES);
           def_operand_p d = SINGLE_SSA_DEF_OPERAND (stmt, SSA_OP_ALL_DEFS);
-</pre>
+     </pre>
      <li><code>ZERO_SSA_OPERANDS</code>: This macro returns true if there are no
 operands matching the specified flags.
 
      <pre class="smallexample">          if (ZERO_SSA_OPERANDS (stmt, SSA_OP_ALL_VIRTUALS))
             return;
-</pre>
+     </pre>
      <li><code>NUM_SSA_OPERANDS</code>: This macro Returns the number of operands
 matching 'flags'.  This actually executes a loop to perform the count, so
 only use this if it is really needed.
 
      <pre class="smallexample">          int count = NUM_SSA_OPERANDS (stmt, flags)
-</pre>
+     </pre>
      </ol>
 
  <p>If you wish to iterate over some or all operands, use the
@@ -225,7 +225,7 @@ trees, and choose the appropriate macro:
           use_operand_p   FOR_EACH_SSA_USE_OPERAND
           def_operand_p   FOR_EACH_SSA_DEF_OPERAND
           tree            FOR_EACH_SSA_TREE_OPERAND
-</pre>
+     </pre>
      <li>You need to declare a variable of the type you are interested
 in, and an ssa_op_iter structure which serves as the loop controlling
 variable.
@@ -246,7 +246,7 @@ those you are interested in.  They are documented in
           #define SSA_OP_ALL_USES         (SSA_OP_VIRTUAL_USES | SSA_OP_USE)
           #define SSA_OP_ALL_DEFS         (SSA_OP_VIRTUAL_DEFS | SSA_OP_DEF)
           #define SSA_OP_ALL_OPERANDS     (SSA_OP_ALL_USES | SSA_OP_ALL_DEFS)
-</pre>
+     </pre>
      </ol>
 
  <p>So if you want to look at the use pointers for all the <code>USE</code> and

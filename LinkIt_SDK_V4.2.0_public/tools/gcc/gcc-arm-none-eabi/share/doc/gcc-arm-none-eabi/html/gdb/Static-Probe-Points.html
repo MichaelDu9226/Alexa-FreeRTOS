@@ -3,7 +3,7 @@
 <title>Static Probe Points - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Breakpoints.html#Breakpoints" title="Breakpoints">
 <link rel="prev" href="Save-Breakpoints.html#Save-Breakpoints" title="Save Breakpoints">
@@ -64,7 +64,7 @@ in your applications.
 happens automatically if you defined your probe using a DTrace-style
 <samp><span class="file">.d</span></samp> file.  If your probe has a semaphore, <span class="sc">gdb</span> will
 automatically enable it when you specify a breakpoint using the
-&lsquo;<samp><span class="samp">-probe-stap</span></samp>&rsquo; notation.  But, if you put a breakpoint at a probe's
+`<samp><span class="samp">-probe-stap</span></samp>' notation.  But, if you put a breakpoint at a probe's
 location by some other method (e.g., <code>break file:line</code>), then
 <span class="sc">gdb</span> will not automatically set the semaphore.
 
@@ -102,5 +102,5 @@ any location other than a probe point will cause <span class="sc">gdb</span> to 
 an error message.
 
 <!-- @ifclear BARETARGET -->
-   </body></html>
+</body></html>
 

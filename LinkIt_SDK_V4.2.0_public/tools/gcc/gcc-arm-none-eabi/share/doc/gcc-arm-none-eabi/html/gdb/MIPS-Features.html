@@ -3,7 +3,7 @@
 <title>MIPS Features - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Standard-Target-Features.html#Standard-Target-Features" title="Standard Target Features">
 <link rel="prev" href="i386-Features.html#i386-Features" title="i386 Features">
@@ -48,27 +48,27 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Standard-Target-Features.html#Standard-
 <h4 class="subsection">G.4.4 <acronym>MIPS</acronym> Features</h4>
 
 <p><a name="index-target-descriptions_002c-_0040acronym_007bMIPS_007d-features-2856"></a>
-The &lsquo;<samp><span class="samp">org.gnu.gdb.mips.cpu</span></samp>&rsquo; feature is required for <acronym>MIPS</acronym> targets. 
-It should contain registers &lsquo;<samp><span class="samp">r0</span></samp>&rsquo; through &lsquo;<samp><span class="samp">r31</span></samp>&rsquo;, &lsquo;<samp><span class="samp">lo</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">hi</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">pc</span></samp>&rsquo;.  They may be 32-bit or 64-bit depending
+The `<samp><span class="samp">org.gnu.gdb.mips.cpu</span></samp>' feature is required for <acronym>MIPS</acronym> targets. 
+It should contain registers `<samp><span class="samp">r0</span></samp>' through `<samp><span class="samp">r31</span></samp>', `<samp><span class="samp">lo</span></samp>',
+`<samp><span class="samp">hi</span></samp>', and `<samp><span class="samp">pc</span></samp>'.  They may be 32-bit or 64-bit depending
 on the target.
 
-   <p>The &lsquo;<samp><span class="samp">org.gnu.gdb.mips.cp0</span></samp>&rsquo; feature is also required.  It should
-contain at least the &lsquo;<samp><span class="samp">status</span></samp>&rsquo;, &lsquo;<samp><span class="samp">badvaddr</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">cause</span></samp>&rsquo;
+   <p>The `<samp><span class="samp">org.gnu.gdb.mips.cp0</span></samp>' feature is also required.  It should
+contain at least the `<samp><span class="samp">status</span></samp>', `<samp><span class="samp">badvaddr</span></samp>', and `<samp><span class="samp">cause</span></samp>'
 registers.  They may be 32-bit or 64-bit depending on the target.
 
-   <p>The &lsquo;<samp><span class="samp">org.gnu.gdb.mips.fpu</span></samp>&rsquo; feature is currently required, though
+   <p>The `<samp><span class="samp">org.gnu.gdb.mips.fpu</span></samp>' feature is currently required, though
 it may be optional in a future version of <span class="sc">gdb</span>.  It should
-contain registers &lsquo;<samp><span class="samp">f0</span></samp>&rsquo; through &lsquo;<samp><span class="samp">f31</span></samp>&rsquo;, &lsquo;<samp><span class="samp">fcsr</span></samp>&rsquo;, and
-&lsquo;<samp><span class="samp">fir</span></samp>&rsquo;.  They may be 32-bit or 64-bit depending on the target.
+contain registers `<samp><span class="samp">f0</span></samp>' through `<samp><span class="samp">f31</span></samp>', `<samp><span class="samp">fcsr</span></samp>', and
+`<samp><span class="samp">fir</span></samp>'.  They may be 32-bit or 64-bit depending on the target.
 
-   <p>The &lsquo;<samp><span class="samp">org.gnu.gdb.mips.dsp</span></samp>&rsquo; feature is optional.  It should
-contain registers &lsquo;<samp><span class="samp">hi1</span></samp>&rsquo; through &lsquo;<samp><span class="samp">hi3</span></samp>&rsquo;, &lsquo;<samp><span class="samp">lo1</span></samp>&rsquo; through
-&lsquo;<samp><span class="samp">lo3</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">dspctl</span></samp>&rsquo;.  The &lsquo;<samp><span class="samp">dspctl</span></samp>&rsquo; register should
+   <p>The `<samp><span class="samp">org.gnu.gdb.mips.dsp</span></samp>' feature is optional.  It should
+contain registers `<samp><span class="samp">hi1</span></samp>' through `<samp><span class="samp">hi3</span></samp>', `<samp><span class="samp">lo1</span></samp>' through
+`<samp><span class="samp">lo3</span></samp>', and `<samp><span class="samp">dspctl</span></samp>'.  The `<samp><span class="samp">dspctl</span></samp>' register should
 be 32-bit and the rest may be 32-bit or 64-bit depending on the target.
 
-   <p>The &lsquo;<samp><span class="samp">org.gnu.gdb.mips.linux</span></samp>&rsquo; feature is optional.  It should
-contain a single register, &lsquo;<samp><span class="samp">restart</span></samp>&rsquo;, which is used by the
+   <p>The `<samp><span class="samp">org.gnu.gdb.mips.linux</span></samp>' feature is optional.  It should
+contain a single register, `<samp><span class="samp">restart</span></samp>', which is used by the
 Linux kernel to control restartable syscalls.
 
    </body></html>

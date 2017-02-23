@@ -3,7 +3,7 @@
 <title>GDB/MI Target Manipulation - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-File-Commands.html#GDB_002fMI-File-Commands" title="GDB/MI File Commands">
@@ -59,11 +59,11 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>
    <p>Attach to a process <var>pid</var> or a file <var>file</var> outside of
 <span class="sc">gdb</span>, or a thread group <var>gid</var>.  If attaching to a thread
 group, the id previously returned by
-&lsquo;<samp><span class="samp">-list-thread-groups --available</span></samp>&rsquo; must be used.
+`<samp><span class="samp">-list-thread-groups --available</span></samp>' must be used.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">attach</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">attach</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -88,7 +88,7 @@ the specified process, or specified thread group.  There's no output.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">detach</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">detach</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -110,7 +110,7 @@ generally not resumed.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">disconnect</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">disconnect</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -131,11 +131,11 @@ generally not resumed.
 It prints out an update message every half second, which includes the fields:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">section</span></samp>&rsquo;<dd>The name of the section. 
-<br><dt>&lsquo;<samp><span class="samp">section-sent</span></samp>&rsquo;<dd>The size of what has been sent so far for that section. 
-<br><dt>&lsquo;<samp><span class="samp">section-size</span></samp>&rsquo;<dd>The size of the section. 
-<br><dt>&lsquo;<samp><span class="samp">total-sent</span></samp>&rsquo;<dd>The total size of what was sent so far (the current and the previous sections). 
-<br><dt>&lsquo;<samp><span class="samp">total-size</span></samp>&rsquo;<dd>The size of the overall executable to download. 
+<dt>`<samp><span class="samp">section</span></samp>'<dd>The name of the section. 
+<br><dt>`<samp><span class="samp">section-sent</span></samp>'<dd>The size of what has been sent so far for that section. 
+<br><dt>`<samp><span class="samp">section-size</span></samp>'<dd>The size of the section. 
+<br><dt>`<samp><span class="samp">total-sent</span></samp>'<dd>The total size of what was sent so far (the current and the previous sections). 
+<br><dt>`<samp><span class="samp">total-size</span></samp>'<dd>The size of the overall executable to download. 
 </dl>
 
 <p class="noindent">Each message is sent as status record (see <a href="GDB_002fMI-Output-Syntax.html#GDB_002fMI-Output-Syntax"><span class="sc">gdb/mi</span> Output Syntax</a>).
@@ -144,16 +144,16 @@ It prints out an update message every half second, which includes the fields:
 downloaded.  These messages include the following fields:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">section</span></samp>&rsquo;<dd>The name of the section. 
-<br><dt>&lsquo;<samp><span class="samp">section-size</span></samp>&rsquo;<dd>The size of the section. 
-<br><dt>&lsquo;<samp><span class="samp">total-size</span></samp>&rsquo;<dd>The size of the overall executable to download. 
+<dt>`<samp><span class="samp">section</span></samp>'<dd>The name of the section. 
+<br><dt>`<samp><span class="samp">section-size</span></samp>'<dd>The size of the section. 
+<br><dt>`<samp><span class="samp">total-size</span></samp>'<dd>The size of the overall executable to download. 
 </dl>
 
 <p class="noindent">At the end, a summary is printed.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">load</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">load</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -227,8 +227,8 @@ have been broken down so that they can fit onto a page.
    <p>Connect <span class="sc">gdb</span> to the remote target.  This command takes two args:
 
      <dl>
-<dt>&lsquo;<samp><var>type</var></samp>&rsquo;<dd>The type of target, for instance &lsquo;<samp><span class="samp">remote</span></samp>&rsquo;, etc. 
-<br><dt>&lsquo;<samp><var>parameters</var></samp>&rsquo;<dd>Device names, host names and the like.  See <a href="Target-Commands.html#Target-Commands">Commands for Managing Targets</a>, for more details. 
+<dt>`<samp><var>type</var></samp>'<dd>The type of target, for instance `<samp><span class="samp">remote</span></samp>', etc. 
+<br><dt>`<samp><var>parameters</var></samp>'<dd>Device names, host names and the like.  See <a href="Target-Commands.html#Target-Commands">Commands for Managing Targets</a>, for more details. 
 </dl>
 
    <p>The output is a connection notification, followed by the address at
@@ -239,7 +239,7 @@ which the target program is, in the following form:
 </pre>
    <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">target</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">target</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -249,5 +249,5 @@ which the target program is, in the following form:
      (gdb)
 </pre>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-   </body></html>
+</body></html>
 

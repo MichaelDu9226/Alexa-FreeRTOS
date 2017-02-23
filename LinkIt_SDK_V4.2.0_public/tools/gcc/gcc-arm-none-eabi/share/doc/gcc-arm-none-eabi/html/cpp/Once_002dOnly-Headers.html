@@ -3,7 +3,7 @@
 <title>Once-Only Headers - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Header-Files.html#Header-Files" title="Header Files">
 <link rel="prev" href="Search-Path.html#Search-Path" title="Search Path">
@@ -81,8 +81,8 @@ over the entire contents of the file, and the compiler will not see it
 twice.
 
    <p>CPP optimizes even further.  It remembers when a header file has a
-wrapper &lsquo;<samp><span class="samp">#ifndef</span></samp>&rsquo;.  If a subsequent &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; specifies that
-header, and the macro in the &lsquo;<samp><span class="samp">#ifndef</span></samp>&rsquo; is still defined, it does
+wrapper `<samp><span class="samp">#ifndef</span></samp>'.  If a subsequent `<samp><span class="samp">#include</span></samp>' specifies that
+header, and the macro in the `<samp><span class="samp">#ifndef</span></samp>' is still defined, it does
 not bother to rescan the file at all.
 
    <p>You can put comments outside the wrapper.  They will not interfere with
@@ -90,8 +90,8 @@ this optimization.
 
    <p><a name="index-controlling-macro-31"></a><a name="index-guard-macro-32"></a>The macro <code>FILE_FOO_SEEN</code> is called the <dfn>controlling macro</dfn> or
 <dfn>guard macro</dfn>.  In a user header file, the macro name should not
-begin with &lsquo;<samp><span class="samp">_</span></samp>&rsquo;.  In a system header file, it should begin with
-&lsquo;<samp><span class="samp">__</span></samp>&rsquo; to avoid conflicts with user programs.  In any kind of header
+begin with `<samp><span class="samp">_</span></samp>'.  In a system header file, it should begin with
+`<samp><span class="samp">__</span></samp>' to avoid conflicts with user programs.  In any kind of header
 file, the macro name should contain the name of the file and some
 additional text, to avoid conflicts with other header files.
 

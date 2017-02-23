@@ -3,7 +3,7 @@
 <title>C6X Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="Blackfin-Options.html#Blackfin-Options" title="Blackfin Options">
@@ -58,8 +58,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
      <dl>
 <dt><code>-march=</code><var>name</var><dd><a name="index-march-1199"></a>This specifies the name of the target architecture.  GCC uses this
 name to determine what kind of instructions it can emit when generating
-assembly code.  Permissible names are: &lsquo;<samp><span class="samp">c62x</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">c64x</span></samp>&rsquo;, &lsquo;<samp><span class="samp">c64x+</span></samp>&rsquo;, &lsquo;<samp><span class="samp">c67x</span></samp>&rsquo;, &lsquo;<samp><span class="samp">c67x+</span></samp>&rsquo;, &lsquo;<samp><span class="samp">c674x</span></samp>&rsquo;.
+assembly code.  Permissible names are: `<samp><span class="samp">c62x</span></samp>',
+`<samp><span class="samp">c64x</span></samp>', `<samp><span class="samp">c64x+</span></samp>', `<samp><span class="samp">c67x</span></samp>', `<samp><span class="samp">c67x+</span></samp>', `<samp><span class="samp">c674x</span></samp>'.
 
      <br><dt><code>-mbig-endian</code><dd><a name="index-mbig_002dendian-1200"></a>Generate code for a big-endian target.
 
@@ -67,12 +67,12 @@ assembly code.  Permissible names are: &lsquo;<samp><span class="samp">c62x</spa
 
      <br><dt><code>-msim</code><dd><a name="index-msim-1202"></a>Choose startup files and linker script suitable for the simulator.
 
-     <br><dt><code>-msdata=default</code><dd><a name="index-msdata_003ddefault-1203"></a>Put small global and static data in the &lsquo;<samp><span class="samp">.neardata</span></samp>&rsquo; section,
+     <br><dt><code>-msdata=default</code><dd><a name="index-msdata_003ddefault-1203"></a>Put small global and static data in the `<samp><span class="samp">.neardata</span></samp>' section,
 which is pointed to by register <code>B14</code>.  Put small uninitialized
-global and static data in the &lsquo;<samp><span class="samp">.bss</span></samp>&rsquo; section, which is adjacent
-to the &lsquo;<samp><span class="samp">.neardata</span></samp>&rsquo; section.  Put small read-only data into the
-&lsquo;<samp><span class="samp">.rodata</span></samp>&rsquo; section.  The corresponding sections used for large
-pieces of data are &lsquo;<samp><span class="samp">.fardata</span></samp>&rsquo;, &lsquo;<samp><span class="samp">.far</span></samp>&rsquo; and &lsquo;<samp><span class="samp">.const</span></samp>&rsquo;.
+global and static data in the `<samp><span class="samp">.bss</span></samp>' section, which is adjacent
+to the `<samp><span class="samp">.neardata</span></samp>' section.  Put small read-only data into the
+`<samp><span class="samp">.rodata</span></samp>' section.  The corresponding sections used for large
+pieces of data are `<samp><span class="samp">.fardata</span></samp>', `<samp><span class="samp">.far</span></samp>' and `<samp><span class="samp">.const</span></samp>'.
 
      <br><dt><code>-msdata=all</code><dd><a name="index-msdata_003dall-1204"></a>Put all data, not just small objects, into the sections reserved for
 small data, and use addressing relative to the <code>B14</code> register to
@@ -80,8 +80,8 @@ access them.
 
      <br><dt><code>-msdata=none</code><dd><a name="index-msdata_003dnone-1205"></a>Make no use of the sections reserved for small data, and use absolute
 addresses to access all data.  Put all initialized global and static
-data in the &lsquo;<samp><span class="samp">.fardata</span></samp>&rsquo; section, and all uninitialized data in the
-&lsquo;<samp><span class="samp">.far</span></samp>&rsquo; section.  Put all constant data into the &lsquo;<samp><span class="samp">.const</span></samp>&rsquo;
+data in the `<samp><span class="samp">.fardata</span></samp>' section, and all uninitialized data in the
+`<samp><span class="samp">.far</span></samp>' section.  Put all constant data into the `<samp><span class="samp">.const</span></samp>'
 section. 
 </dl>
 

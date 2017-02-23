@@ -3,7 +3,7 @@
 <title>Input Files - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Overview.html#Overview" title="Overview">
 <link rel="prev" href="Command-Line.html#Command-Line" title="Command Line">
@@ -56,11 +56,11 @@ doesn't change the meaning of the source.
 
 <!-- I added "con" prefix to "catenation" just to prove I can overcome my -->
 <!-- APL training...   doc@cygnus.com -->
-   <p>The source program is a concatenation of the text in all the files, in the
+<p>The source program is a concatenation of the text in all the files, in the
 order specified.
 
 <!-- man begin DESCRIPTION -->
-   <p>Each time you run <samp><span class="command">as</span></samp> it assembles exactly one source
+<p>Each time you run <samp><span class="command">as</span></samp> it assembles exactly one source
 program.  The source program is made up of one or more files. 
 (The standard input is also a file.)
 
@@ -74,7 +74,7 @@ from the <samp><span class="command">as</span></samp> standard input, which is n
 may have to type &lt;ctl-D&gt; to tell <samp><span class="command">as</span></samp> there is no more program
 to assemble.
 
-   <p>Use &lsquo;<samp><span class="samp">--</span></samp>&rsquo; if you need to explicitly name the standard input file
+   <p>Use `<samp><span class="samp">--</span></samp>' if you need to explicitly name the standard input file
 in your command line.
 
    <p>If the source is empty, <samp><span class="command">as</span></samp> produces a small, empty object
@@ -95,7 +95,7 @@ to <samp><span class="command">as</span></samp>.
 directives; they bear no relation to physical files.  Logical file names help
 error messages reflect the original source file, when <samp><span class="command">as</span></samp> source
 is itself synthesized from other files.  <samp><span class="command">as</span></samp> understands the
-&lsquo;<samp><span class="samp">#</span></samp>&rsquo; directives emitted by the <code>gcc</code> preprocessor.  See also
+`<samp><span class="samp">#</span></samp>' directives emitted by the <code>gcc</code> preprocessor.  See also
 <a href="File.html#File"><code>.file</code></a>.
 
    </body></html>

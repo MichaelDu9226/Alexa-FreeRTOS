@@ -3,7 +3,7 @@
 <title>Stack Arguments - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stack-and-Calling.html#Stack-and-Calling" title="Stack and Calling">
 <link rel="prev" href="Elimination.html#Elimination" title="Elimination">
@@ -94,13 +94,13 @@ stack when an instruction attempts to push <var>npushed</var> bytes.
       <p>On some machines, the definition
 
      <pre class="smallexample">          #define PUSH_ROUNDING(BYTES) (BYTES)
-</pre>
+     </pre>
       <p class="noindent">will suffice.  But on other machines, instructions that appear
 to push one byte actually push two bytes in an attempt to maintain
 alignment.  Then the definition should be
 
      <pre class="smallexample">          #define PUSH_ROUNDING(BYTES) (((BYTES) + 1) &amp; ~1)
-</pre>
+     </pre>
       <p>If the value of this macro has a type, it should be an unsigned type. 
 </p></blockquote></div>
 

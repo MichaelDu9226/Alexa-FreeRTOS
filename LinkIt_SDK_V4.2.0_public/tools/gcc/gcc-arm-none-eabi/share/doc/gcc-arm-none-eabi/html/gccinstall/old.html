@@ -3,7 +3,7 @@
 <title>Installing GCC: Old documentation</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Installing GCC: Old documentation">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="top" href="#Top">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
@@ -82,19 +82,19 @@ the same as the host machine.
      <p>Here is an example:
 
      <pre class="smallexample">          ./configure --host=sparc-sun-sunos4.1
-</pre>
+     </pre>
      <p>A configuration name may be canonical or it may be more or less
 abbreviated.
 
      <p>A canonical configuration name has three parts, separated by dashes. 
-It looks like this: &lsquo;<samp><var>cpu</var><span class="samp">-</span><var>company</var><span class="samp">-</span><var>system</var></samp>&rsquo;. 
+It looks like this: `<samp><var>cpu</var><span class="samp">-</span><var>company</var><span class="samp">-</span><var>system</var></samp>'. 
 (The three parts may themselves contain dashes; <samp><span class="file">configure</span></samp>
 can figure out which dashes serve which purpose.)  For example,
-&lsquo;<samp><span class="samp">m68k-sun-sunos4.1</span></samp>&rsquo; specifies a Sun 3.
+`<samp><span class="samp">m68k-sun-sunos4.1</span></samp>' specifies a Sun 3.
 
      <p>You can also replace parts of the configuration by nicknames or aliases. 
-For example, &lsquo;<samp><span class="samp">sun3</span></samp>&rsquo; stands for &lsquo;<samp><span class="samp">m68k-sun</span></samp>&rsquo;, so
-&lsquo;<samp><span class="samp">sun3-sunos4.1</span></samp>&rsquo; is another way to specify a Sun 3.
+For example, `<samp><span class="samp">sun3</span></samp>' stands for `<samp><span class="samp">m68k-sun</span></samp>', so
+`<samp><span class="samp">sun3-sunos4.1</span></samp>' is another way to specify a Sun 3.
 
      <p>You can specify a version number after any of the system types, and some
 of the CPU types.  In most cases, the version is irrelevant, and will be
@@ -122,7 +122,7 @@ sparclite, sparc64, v850, vax, we32k.
 abbreviations are used rather than the longer official names.
 
 <!-- What should be done about merlin, tek*, dolphin? -->
-   <blockquote>
+<blockquote>
 acorn, alliant, altos, apollo, apple, att, bull,
 cbm, convergent, convex, crds, dec, dg, dolphin,
 elxsi, encore, harris, hitachi, hp, ibm, intergraph, isi,
@@ -132,8 +132,8 @@ sequent, sgi, sony, sun, tti, unicom, wrs.
 
    <p>The company name is meaningful only to disambiguate when the rest of
 the information supplied is insufficient.  You can omit it, writing
-just &lsquo;<samp><var>cpu</var><span class="samp">-</span><var>system</var></samp>&rsquo;, if it is not needed.  For example,
-&lsquo;<samp><span class="samp">vax-ultrix4.2</span></samp>&rsquo; is equivalent to &lsquo;<samp><span class="samp">vax-dec-ultrix4.2</span></samp>&rsquo;.
+just `<samp><var>cpu</var><span class="samp">-</span><var>system</var></samp>', if it is not needed.  For example,
+`<samp><span class="samp">vax-ultrix4.2</span></samp>' is equivalent to `<samp><span class="samp">vax-dec-ultrix4.2</span></samp>'.
 
    <p>Here is a list of system types:
 
@@ -150,18 +150,18 @@ vxworks, winnt, xenix.
 operating system from the CPU and company.
 
    <p>You can add a version number to the system type; this may or may not
-make a difference.  For example, you can write &lsquo;<samp><span class="samp">bsd4.3</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">bsd4.4</span></samp>&rsquo; to distinguish versions of BSD.  In practice, the version
-number is most needed for &lsquo;<samp><span class="samp">sysv3</span></samp>&rsquo; and &lsquo;<samp><span class="samp">sysv4</span></samp>&rsquo;, which are often
+make a difference.  For example, you can write `<samp><span class="samp">bsd4.3</span></samp>' or
+`<samp><span class="samp">bsd4.4</span></samp>' to distinguish versions of BSD.  In practice, the version
+number is most needed for `<samp><span class="samp">sysv3</span></samp>' and `<samp><span class="samp">sysv4</span></samp>', which are often
 treated differently.
 
-   <p>&lsquo;<samp><span class="samp">linux-gnu</span></samp>&rsquo; is the canonical name for the GNU/Linux target; however
-GCC will also accept &lsquo;<samp><span class="samp">linux</span></samp>&rsquo;.  The version of the kernel in use is
-not relevant on these systems.  A suffix such as &lsquo;<samp><span class="samp">libc1</span></samp>&rsquo; or &lsquo;<samp><span class="samp">aout</span></samp>&rsquo;
+   <p>`<samp><span class="samp">linux-gnu</span></samp>' is the canonical name for the GNU/Linux target; however
+GCC will also accept `<samp><span class="samp">linux</span></samp>'.  The version of the kernel in use is
+not relevant on these systems.  A suffix such as `<samp><span class="samp">libc1</span></samp>' or `<samp><span class="samp">aout</span></samp>'
 distinguishes major versions of the C library; all of the suffixed versions
 are obsolete.
 
-   <p>If you specify an impossible combination such as &lsquo;<samp><span class="samp">i860-dg-vms</span></samp>&rsquo;,
+   <p>If you specify an impossible combination such as `<samp><span class="samp">i860-dg-vms</span></samp>',
 then you may get an error message from <samp><span class="file">configure</span></samp>, or it may
 ignore part of the information and do the best it can with the rest. 
 <samp><span class="file">configure</span></samp> always prints the canonical name for the alternative
@@ -169,7 +169,7 @@ that it used.  GCC does not support all possible alternatives.
 
    <p>Often a particular model of machine has a name.  Many machine names are
 recognized as aliases for CPU/company combinations.  Thus, the machine
-name &lsquo;<samp><span class="samp">sun3</span></samp>&rsquo;, mentioned above, is an alias for &lsquo;<samp><span class="samp">m68k-sun</span></samp>&rsquo;. 
+name `<samp><span class="samp">sun3</span></samp>', mentioned above, is an alias for `<samp><span class="samp">m68k-sun</span></samp>'. 
 Sometimes we accept a company name as a machine name, when the name is
 popularly used for a particular machine.  Here is a table of the known
 machine names:

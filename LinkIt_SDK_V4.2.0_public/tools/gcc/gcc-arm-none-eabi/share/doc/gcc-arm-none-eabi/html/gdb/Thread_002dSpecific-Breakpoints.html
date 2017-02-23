@@ -3,7 +3,7 @@
 <title>Thread-Specific Breakpoints - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Thread-Stops.html#Thread-Stops" title="Thread Stops">
 <link rel="prev" href="Background-Execution.html#Background-Execution" title="Background Execution">
@@ -59,22 +59,22 @@ breakpoints on all threads, or on a particular thread.
 writing them (see <a href="Specify-Location.html#Specify-Location">Specify Location</a>), but the effect is always to
 specify some source line.
 
-     <p>Use the qualifier &lsquo;<samp><span class="samp">thread </span><var>threadno</var></samp>&rsquo; with a breakpoint command
+     <p>Use the qualifier `<samp><span class="samp">thread </span><var>threadno</var></samp>' with a breakpoint command
 to specify that you only want <span class="sc">gdb</span> to stop the program when a
 particular thread reaches this breakpoint.  <var>threadno</var> is one of the
 numeric thread identifiers assigned by <span class="sc">gdb</span>, shown in the first
-column of the &lsquo;<samp><span class="samp">info threads</span></samp>&rsquo; display.
+column of the `<samp><span class="samp">info threads</span></samp>' display.
 
-     <p>If you do not specify &lsquo;<samp><span class="samp">thread </span><var>threadno</var></samp>&rsquo; when you set a
+     <p>If you do not specify `<samp><span class="samp">thread </span><var>threadno</var></samp>' when you set a
 breakpoint, the breakpoint applies to <em>all</em> threads of your
 program.
 
      <p>You can use the <code>thread</code> qualifier on conditional breakpoints as
-well; in this case, place &lsquo;<samp><span class="samp">thread </span><var>threadno</var></samp>&rsquo; before or
+well; in this case, place `<samp><span class="samp">thread </span><var>threadno</var></samp>' before or
 after the breakpoint condition, like this:
 
      <pre class="smallexample">          (gdb) break frik.c:13 thread 28 if bartab &gt; lim
-</pre>
+     </pre>
      </dl>
 
    </body></html>

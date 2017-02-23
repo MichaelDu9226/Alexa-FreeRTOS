@@ -3,7 +3,7 @@
 <title>Predicates - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Desc.html#Machine-Desc" title="Machine Desc">
 <link rel="prev" href="Output-Statement.html#Output-Statement" title="Output Statement">
@@ -61,8 +61,8 @@ surrounding instruction pattern will be used for that combination of
 operands.  GCC has a number of machine-independent predicates, and you
 can define machine-specific predicates as needed.  By convention,
 predicates used with <code>match_operand</code> have names that end in
-&lsquo;<samp><span class="samp">_operand</span></samp>&rsquo;, and those used with <code>match_operator</code> have names
-that end in &lsquo;<samp><span class="samp">_operator</span></samp>&rsquo;.
+`<samp><span class="samp">_operand</span></samp>', and those used with <code>match_operator</code> have names
+that end in `<samp><span class="samp">_operator</span></samp>'.
 
  <p>All predicates are Boolean functions (in the mathematical sense) of
 two arguments: the RTL expression that is being considered at that

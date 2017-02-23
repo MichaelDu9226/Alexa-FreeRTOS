@@ -3,7 +3,7 @@
 <title>Target Selection - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Selecting-the-Target-System.html#Selecting-the-Target-System" title="Selecting the Target System">
 <link rel="next" href="Architecture-Selection.html#Architecture-Selection" title="Architecture Selection">
@@ -51,11 +51,11 @@ supported for multiple architectures (see <a href="Architecture-Selection.html#A
 A target selection may also have variations for different operating
 systems or architectures.
 
-   <p>The command to list valid target values is &lsquo;<samp><span class="samp">objdump -i</span></samp>&rsquo;
+   <p>The command to list valid target values is `<samp><span class="samp">objdump -i</span></samp>'
 (the first column of output contains the relevant information).
 
-   <p>Some sample values are: &lsquo;<samp><span class="samp">a.out-hp300bsd</span></samp>&rsquo;, &lsquo;<samp><span class="samp">ecoff-littlemips</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">a.out-sunos-big</span></samp>&rsquo;.
+   <p>Some sample values are: `<samp><span class="samp">a.out-hp300bsd</span></samp>', `<samp><span class="samp">ecoff-littlemips</span></samp>',
+`<samp><span class="samp">a.out-sunos-big</span></samp>'.
 
    <p>You can also specify a target using a configuration triplet.  This is
 the same sort of name that is passed to <samp><span class="file">configure</span></samp> to specify a
@@ -64,8 +64,8 @@ fully canonicalized.  You can see the canonical version of a triplet by
 running the shell script <samp><span class="file">config.sub</span></samp> which is included with the
 sources.
 
-   <p>Some sample configuration triplets are: &lsquo;<samp><span class="samp">m68k-hp-bsd</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">mips-dec-ultrix</span></samp>&rsquo;, &lsquo;<samp><span class="samp">sparc-sun-sunos</span></samp>&rsquo;.
+   <p>Some sample configuration triplets are: `<samp><span class="samp">m68k-hp-bsd</span></samp>',
+`<samp><span class="samp">mips-dec-ultrix</span></samp>', `<samp><span class="samp">sparc-sun-sunos</span></samp>'.
 
 <h4 class="subheading"><samp><span class="command">objdump</span></samp> Target</h4>
 

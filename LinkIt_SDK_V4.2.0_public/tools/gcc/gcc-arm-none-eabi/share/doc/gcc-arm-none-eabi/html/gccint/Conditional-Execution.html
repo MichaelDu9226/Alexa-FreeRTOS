@@ -3,7 +3,7 @@
 <title>Conditional Execution - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Desc.html#Machine-Desc" title="Machine Desc">
 <link rel="prev" href="Insn-Attributes.html#Insn-Attributes" title="Insn Attributes">
@@ -78,8 +78,8 @@ alternative.
 pattern to match.
 
  <p><a name="index-current_005finsn_005fpredicate-3760"></a><var>output-template</var> is a string similar to the <code>define_insn</code>
-output template (see <a href="Output-Template.html#Output-Template">Output Template</a>), except that the &lsquo;<samp><span class="samp">*</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">@</span></samp>&rsquo; special cases do not apply.  This is only useful if the
+output template (see <a href="Output-Template.html#Output-Template">Output Template</a>), except that the `<samp><span class="samp">*</span></samp>'
+and `<samp><span class="samp">@</span></samp>' special cases do not apply.  This is only useful if the
 assembly text for the predicate is a simple prefix to the main insn. 
 In order to handle the general case, there is a global variable
 <code>current_insn_predicate</code> that will contain the entire predicate

@@ -3,7 +3,7 @@
 <title>Basic Python - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Python-API.html#Python-API" title="Python API">
 <link rel="next" href="Exception-Handling.html#Exception-Handling" title="Exception Handling">
@@ -93,7 +93,7 @@ See <a href="Breakpoints-In-Python.html#Breakpoints-In-Python">Breakpoints In Py
 <blockquote><p>Return the value of a <span class="sc">gdb</span> parameter.  <var>parameter</var> is a
 string naming the parameter to look up; <var>parameter</var> may contain
 spaces if the parameter has a multi-part name.  For example,
-&lsquo;<samp><span class="samp">print object</span></samp>&rsquo; is a valid parameter name.
+`<samp><span class="samp">print object</span></samp>' is a valid parameter name.
 
         <p>If the named parameter does not exist, this function throws a
 <code>gdb.error</code> (see <a href="Exception-Handling.html#Exception-Handling">Exception Handling</a>).  Otherwise, the
@@ -180,7 +180,7 @@ this.  For example:
           &gt;MyThread2().start()
           &gt;end
           (gdb) Hello World
-</pre>
+     </pre>
         </blockquote></div>
 
    <p><a name="index-gdb_002ewrite-1737"></a>
@@ -238,7 +238,7 @@ call this function for the relevant stream.
 <div class="defun">
 &mdash; Function: <b>gdb.target_charset</b> ()<var><a name="index-gdb_002etarget_005fcharset-1754"></a></var><br>
 <blockquote><p>Return the name of the current target character set (see <a href="Character-Sets.html#Character-Sets">Character Sets</a>).  This differs from <code>gdb.parameter('target-charset')</code> in
-that &lsquo;<samp><span class="samp">auto</span></samp>&rsquo; is never returned. 
+that `<samp><span class="samp">auto</span></samp>' is never returned. 
 </p></blockquote></div>
 
    <p><a name="index-gdb_002etarget_005fwide_005fcharset-1755"></a>
@@ -247,7 +247,7 @@ that &lsquo;<samp><span class="samp">auto</span></samp>&rsquo; is never returned
 &mdash; Function: <b>gdb.target_wide_charset</b> ()<var><a name="index-gdb_002etarget_005fwide_005fcharset-1756"></a></var><br>
 <blockquote><p>Return the name of the current target wide character set
 (see <a href="Character-Sets.html#Character-Sets">Character Sets</a>).  This differs from
-<code>gdb.parameter('target-wide-charset')</code> in that &lsquo;<samp><span class="samp">auto</span></samp>&rsquo; is
+<code>gdb.parameter('target-wide-charset')</code> in that `<samp><span class="samp">auto</span></samp>' is
 never returned. 
 </p></blockquote></div>
 
@@ -277,7 +277,9 @@ provided, it is decoded the way that <span class="sc">gdb</span>'s inbuilt
 
 <div class="defun">
 &mdash; Function: <b>gdb.prompt_hook</b> (<var>current_prompt</var>)<var><a name="index-gdb_002eprompt_005fhook-1761"></a></var><br>
-<blockquote><p><a name="prompt_005fhook"></a>If <var>prompt_hook</var> is callable, <span class="sc">gdb</span> will call the method
+<blockquote><p><a name="prompt_005fhook"></a>
+
+        <p>If <var>prompt_hook</var> is callable, <span class="sc">gdb</span> will call the method
 assigned to this operation before a prompt is displayed by
 <span class="sc">gdb</span>.
 

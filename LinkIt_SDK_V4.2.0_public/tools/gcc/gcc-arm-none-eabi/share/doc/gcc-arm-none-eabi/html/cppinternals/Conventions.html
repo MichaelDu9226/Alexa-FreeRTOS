@@ -3,7 +3,7 @@
 <title>Conventions - The GNU C Preprocessor Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The GNU C Preprocessor Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="index.html#Top" title="Top">
 <link rel="next" href="Lexer.html#Lexer" title="Lexer">
@@ -38,9 +38,9 @@ cpplib has two interfaces&mdash;one is exposed internally only, and the
 other is for both internal and external use.
 
    <p>The convention is that functions and types that are exposed to multiple
-files internally are prefixed with &lsquo;<samp><span class="samp">_cpp_</span></samp>&rsquo;, and are to be found in
+files internally are prefixed with `<samp><span class="samp">_cpp_</span></samp>', and are to be found in
 the file <samp><span class="file">internal.h</span></samp>.  Functions and types exposed to external
-clients are in <samp><span class="file">cpplib.h</span></samp>, and prefixed with &lsquo;<samp><span class="samp">cpp_</span></samp>&rsquo;.  For
+clients are in <samp><span class="file">cpplib.h</span></samp>, and prefixed with `<samp><span class="samp">cpp_</span></samp>'.  For
 historical reasons this is no longer quite true, but we should strive to
 stick to it.
 

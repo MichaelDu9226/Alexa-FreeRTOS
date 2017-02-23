@@ -3,7 +3,7 @@
 <title>Output Section LMA - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Output-Section-Attributes.html#Output-Section-Attributes" title="Output Section Attributes">
 <link rel="prev" href="Output-Section-Type.html#Output-Section-Type" title="Output Section Type">
@@ -85,9 +85,9 @@ section then the LMA is set equal to the VMA.
 
    <p><a name="index-ROM-initialized-data-452"></a><a name="index-initialized-data-in-ROM-453"></a>This feature is designed to make it easy to build a ROM image.  For
 example, the following linker script creates three output sections: one
-called &lsquo;<samp><span class="samp">.text</span></samp>&rsquo;, which starts at <code>0x1000</code>, one called
-&lsquo;<samp><span class="samp">.mdata</span></samp>&rsquo;, which is loaded at the end of the &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; section
-even though its VMA is <code>0x2000</code>, and one called &lsquo;<samp><span class="samp">.bss</span></samp>&rsquo; to hold
+called `<samp><span class="samp">.text</span></samp>', which starts at <code>0x1000</code>, one called
+`<samp><span class="samp">.mdata</span></samp>', which is loaded at the end of the `<samp><span class="samp">.text</span></samp>' section
+even though its VMA is <code>0x2000</code>, and one called `<samp><span class="samp">.bss</span></samp>' to hold
 uninitialized data at address <code>0x3000</code>.  The symbol <code>_data</code> is
 defined with the value <code>0x2000</code>, which shows that the location
 counter holds the VMA value, not the LMA value.

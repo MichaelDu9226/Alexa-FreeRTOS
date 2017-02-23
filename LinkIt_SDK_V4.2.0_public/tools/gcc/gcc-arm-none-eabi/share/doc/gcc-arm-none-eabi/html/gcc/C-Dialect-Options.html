@@ -3,7 +3,7 @@
 <title>C Dialect Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="Invoking-G_002b_002b.html#Invoking-G_002b_002b" title="Invoking G++">
@@ -71,7 +71,7 @@ such as the <code>asm</code> and <code>typeof</code> keywords, and
 predefined macros such as <code>unix</code> and <code>vax</code> that identify the
 type of system you are using.  It also enables the undesirable and
 rarely used ISO trigraph feature.  For the C compiler,
-it disables recognition of C++ style &lsquo;<samp><span class="samp">//</span></samp>&rsquo; comments as well as
+it disables recognition of C++ style `<samp><span class="samp">//</span></samp>' comments as well as
 the <code>inline</code> keyword.
 
      <p>The alternate keywords <code>__asm__</code>, <code>__extension__</code>,
@@ -100,9 +100,9 @@ affected.
      <br><dt><code>-std=</code><dd><a name="index-std-106"></a>Determine the language standard. See <a href="Standards.html#Standards">Language Standards Supported by GCC</a>, for details of these standard versions.  This option
 is currently only supported when compiling C or C++.
 
-     <p>The compiler can accept several base standards, such as &lsquo;<samp><span class="samp">c90</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">c++98</span></samp>&rsquo;, and GNU dialects of those standards, such as
-&lsquo;<samp><span class="samp">gnu90</span></samp>&rsquo; or &lsquo;<samp><span class="samp">gnu++98</span></samp>&rsquo;.  When a base standard is specified, the
+     <p>The compiler can accept several base standards, such as `<samp><span class="samp">c90</span></samp>' or
+`<samp><span class="samp">c++98</span></samp>', and GNU dialects of those standards, such as
+`<samp><span class="samp">gnu90</span></samp>' or `<samp><span class="samp">gnu++98</span></samp>'.  When a base standard is specified, the
 compiler accepts all programs following that standard plus those
 using GNU extensions that do not contradict it.  For example,
 <samp><span class="option">-std=c90</span></samp> turns off certain features of GCC that are
@@ -115,53 +115,53 @@ those features change the meaning of the base standard.  As a result, some
 strict-conforming programs may be rejected.  The particular standard
 is used by <samp><span class="option">-Wpedantic</span></samp> to identify which features are GNU
 extensions given that version of the standard. For example
-<samp><span class="option">-std=gnu90 -Wpedantic</span></samp> warns about C++ style &lsquo;<samp><span class="samp">//</span></samp>&rsquo;
+<samp><span class="option">-std=gnu90 -Wpedantic</span></samp> warns about C++ style `<samp><span class="samp">//</span></samp>'
 comments, while <samp><span class="option">-std=gnu99 -Wpedantic</span></samp> does not.
 
      <p>A value for this option must be provided; possible values are
 
           <dl>
-<dt>&lsquo;<samp><span class="samp">c90</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">c89</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">iso9899:1990</span></samp>&rsquo;<dd>Support all ISO C90 programs (certain GNU extensions that conflict
+<dt>`<samp><span class="samp">c90</span></samp>'<dt>`<samp><span class="samp">c89</span></samp>'<dt>`<samp><span class="samp">iso9899:1990</span></samp>'<dd>Support all ISO C90 programs (certain GNU extensions that conflict
 with ISO C90 are disabled). Same as <samp><span class="option">-ansi</span></samp> for C code.
 
-          <br><dt>&lsquo;<samp><span class="samp">iso9899:199409</span></samp>&rsquo;<dd>ISO C90 as modified in amendment 1.
+          <br><dt>`<samp><span class="samp">iso9899:199409</span></samp>'<dd>ISO C90 as modified in amendment 1.
 
-          <br><dt>&lsquo;<samp><span class="samp">c99</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">c9x</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">iso9899:1999</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">iso9899:199x</span></samp>&rsquo;<dd>ISO C99.  Note that this standard is not yet fully supported; see
+          <br><dt>`<samp><span class="samp">c99</span></samp>'<dt>`<samp><span class="samp">c9x</span></samp>'<dt>`<samp><span class="samp">iso9899:1999</span></samp>'<dt>`<samp><span class="samp">iso9899:199x</span></samp>'<dd>ISO C99.  Note that this standard is not yet fully supported; see
 <a href="http://gcc.gnu.org/c99status.html">http://gcc.gnu.org/c99status.html</a><!-- /@w --> for more information.  The
-names &lsquo;<samp><span class="samp">c9x</span></samp>&rsquo; and &lsquo;<samp><span class="samp">iso9899:199x</span></samp>&rsquo; are deprecated.
+names `<samp><span class="samp">c9x</span></samp>' and `<samp><span class="samp">iso9899:199x</span></samp>' are deprecated.
 
-          <br><dt>&lsquo;<samp><span class="samp">c11</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">c1x</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">iso9899:2011</span></samp>&rsquo;<dd>ISO C11, the 2011 revision of the ISO C standard. 
-Support is incomplete and experimental.  The name &lsquo;<samp><span class="samp">c1x</span></samp>&rsquo; is
+          <br><dt>`<samp><span class="samp">c11</span></samp>'<dt>`<samp><span class="samp">c1x</span></samp>'<dt>`<samp><span class="samp">iso9899:2011</span></samp>'<dd>ISO C11, the 2011 revision of the ISO C standard. 
+Support is incomplete and experimental.  The name `<samp><span class="samp">c1x</span></samp>' is
 deprecated.
 
-          <br><dt>&lsquo;<samp><span class="samp">gnu90</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">gnu89</span></samp>&rsquo;<dd>GNU dialect of ISO C90 (including some C99 features). This
+          <br><dt>`<samp><span class="samp">gnu90</span></samp>'<dt>`<samp><span class="samp">gnu89</span></samp>'<dd>GNU dialect of ISO C90 (including some C99 features). This
 is the default for C code.
 
-          <br><dt>&lsquo;<samp><span class="samp">gnu99</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">gnu9x</span></samp>&rsquo;<dd>GNU dialect of ISO C99.  When ISO C99 is fully implemented in GCC,
-this will become the default.  The name &lsquo;<samp><span class="samp">gnu9x</span></samp>&rsquo; is deprecated.
+          <br><dt>`<samp><span class="samp">gnu99</span></samp>'<dt>`<samp><span class="samp">gnu9x</span></samp>'<dd>GNU dialect of ISO C99.  When ISO C99 is fully implemented in GCC,
+this will become the default.  The name `<samp><span class="samp">gnu9x</span></samp>' is deprecated.
 
-          <br><dt>&lsquo;<samp><span class="samp">gnu11</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">gnu1x</span></samp>&rsquo;<dd>GNU dialect of ISO C11.  Support is incomplete and experimental.  The
-name &lsquo;<samp><span class="samp">gnu1x</span></samp>&rsquo; is deprecated.
+          <br><dt>`<samp><span class="samp">gnu11</span></samp>'<dt>`<samp><span class="samp">gnu1x</span></samp>'<dd>GNU dialect of ISO C11.  Support is incomplete and experimental.  The
+name `<samp><span class="samp">gnu1x</span></samp>' is deprecated.
 
-          <br><dt>&lsquo;<samp><span class="samp">c++98</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">c++03</span></samp>&rsquo;<dd>The 1998 ISO C++ standard plus the 2003 technical corrigendum and some
+          <br><dt>`<samp><span class="samp">c++98</span></samp>'<dt>`<samp><span class="samp">c++03</span></samp>'<dd>The 1998 ISO C++ standard plus the 2003 technical corrigendum and some
 additional defect reports. Same as <samp><span class="option">-ansi</span></samp> for C++ code.
 
-          <br><dt>&lsquo;<samp><span class="samp">gnu++98</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">gnu++03</span></samp>&rsquo;<dd>GNU dialect of <samp><span class="option">-std=c++98</span></samp>.  This is the default for
+          <br><dt>`<samp><span class="samp">gnu++98</span></samp>'<dt>`<samp><span class="samp">gnu++03</span></samp>'<dd>GNU dialect of <samp><span class="option">-std=c++98</span></samp>.  This is the default for
 C++ code.
 
-          <br><dt>&lsquo;<samp><span class="samp">c++11</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">c++0x</span></samp>&rsquo;<dd>The 2011 ISO C++ standard plus amendments.  Support for C++11 is still
+          <br><dt>`<samp><span class="samp">c++11</span></samp>'<dt>`<samp><span class="samp">c++0x</span></samp>'<dd>The 2011 ISO C++ standard plus amendments.  Support for C++11 is still
 experimental, and may change in incompatible ways in future releases. 
-The name &lsquo;<samp><span class="samp">c++0x</span></samp>&rsquo; is deprecated.
+The name `<samp><span class="samp">c++0x</span></samp>' is deprecated.
 
-          <br><dt>&lsquo;<samp><span class="samp">gnu++11</span></samp>&rsquo;<dt>&lsquo;<samp><span class="samp">gnu++0x</span></samp>&rsquo;<dd>GNU dialect of <samp><span class="option">-std=c++11</span></samp>. Support for C++11 is still
+          <br><dt>`<samp><span class="samp">gnu++11</span></samp>'<dt>`<samp><span class="samp">gnu++0x</span></samp>'<dd>GNU dialect of <samp><span class="option">-std=c++11</span></samp>. Support for C++11 is still
 experimental, and may change in incompatible ways in future releases. 
-The name &lsquo;<samp><span class="samp">gnu++0x</span></samp>&rsquo; is deprecated.
+The name `<samp><span class="samp">gnu++0x</span></samp>' is deprecated.
 
-          <br><dt>&lsquo;<samp><span class="samp">c++1y</span></samp>&rsquo;<dd>The next revision of the ISO C++ standard, tentatively planned for
+          <br><dt>`<samp><span class="samp">c++1y</span></samp>'<dd>The next revision of the ISO C++ standard, tentatively planned for
 2017.  Support is highly experimental, and will almost certainly
 change in incompatible ways in future releases.
 
-          <br><dt>&lsquo;<samp><span class="samp">gnu++1y</span></samp>&rsquo;<dd>GNU dialect of <samp><span class="option">-std=c++1y</span></samp>.  Support is highly experimental,
+          <br><dt>`<samp><span class="samp">gnu++1y</span></samp>'<dd>GNU dialect of <samp><span class="option">-std=c++1y</span></samp>.  Support is highly experimental,
 and will almost certainly change in incompatible ways in future
 releases. 
 </dl>
@@ -191,10 +191,10 @@ files.  This option is silently ignored in any language other than C.
 
      <p>Besides declarations, the file indicates, in comments, the origin of
 each declaration (source file and line), whether the declaration was
-implicit, prototyped or unprototyped (&lsquo;<samp><span class="samp">I</span></samp>&rsquo;, &lsquo;<samp><span class="samp">N</span></samp>&rsquo; for new or
-&lsquo;<samp><span class="samp">O</span></samp>&rsquo; for old, respectively, in the first character after the line
+implicit, prototyped or unprototyped (`<samp><span class="samp">I</span></samp>', `<samp><span class="samp">N</span></samp>' for new or
+`<samp><span class="samp">O</span></samp>' for old, respectively, in the first character after the line
 number and the colon), and whether it came from a declaration or a
-definition (&lsquo;<samp><span class="samp">C</span></samp>&rsquo; or &lsquo;<samp><span class="samp">F</span></samp>&rsquo;, respectively, in the following
+definition (`<samp><span class="samp">C</span></samp>' or `<samp><span class="samp">F</span></samp>', respectively, in the following
 character).  In the case of function definitions, a K&amp;R-style list of
 arguments followed by their declarations is also provided, inside
 comments, after the declaration.
@@ -218,7 +218,7 @@ switch only affects the <code>asm</code> and <code>typeof</code> keywords, since
 <code>inline</code> is a standard keyword in ISO C99.
 
      <br><dt><code>-fno-builtin</code><dt><code>-fno-builtin-</code><var>function</var><dd><a name="index-fno_002dbuiltin-110"></a><a name="index-built_002din-functions-111"></a>Don't recognize built-in functions that do not begin with
-&lsquo;<samp><span class="samp">__builtin_</span></samp>&rsquo; as prefix.  See <a href="Other-Builtins.html#Other-Builtins">Other built-in functions provided by GCC</a>, for details of the functions affected,
+`<samp><span class="samp">__builtin_</span></samp>' as prefix.  See <a href="Other-Builtins.html#Other-Builtins">Other built-in functions provided by GCC</a>, for details of the functions affected,
 including those which are not built-in functions when <samp><span class="option">-ansi</span></samp> or
 <samp><span class="option">-std</span></samp> options for strict ISO C conformance are used because they
 do not have an ISO standard meaning.
@@ -240,7 +240,7 @@ known not to modify global memory.
 
      <p>With the <samp><span class="option">-fno-builtin-</span><var>function</var></samp> option
 only the built-in function <var>function</var> is
-disabled.  <var>function</var> must not begin with &lsquo;<samp><span class="samp">__builtin_</span></samp>&rsquo;.  If a
+disabled.  <var>function</var> must not begin with `<samp><span class="samp">__builtin_</span></samp>'.  If a
 function is named that is not built-in in this version of GCC, this
 option is ignored.  There is no corresponding
 <samp><span class="option">-fbuiltin-</span><var>function</var></samp> option; if you wish to enable
@@ -249,7 +249,7 @@ built-in functions selectively when using <samp><span class="option">-fno-builti
 
      <pre class="smallexample">          #define abs(n)          __builtin_abs ((n))
           #define strcpy(d, s)    __builtin_strcpy ((d), (s))
-</pre>
+     </pre>
      <br><dt><code>-fhosted</code><dd><a name="index-fhosted-112"></a><a name="index-hosted-environment-113"></a>
 Assert that compilation targets a hosted environment.  This implies
 <samp><span class="option">-fbuiltin</span></samp>.  A hosted environment is one in which the
@@ -296,7 +296,7 @@ to previous types declarations.
           struct ABC {
             UOW UOW;
           };
-</pre>
+     </pre>
      <p>Some cases of unnamed fields in structures and unions are only
 accepted with this option.  See <a href="Unnamed-Fields.html#Unnamed-Fields">Unnamed struct/union fields within structs/unions</a>, for details.
 

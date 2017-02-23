@@ -3,7 +3,7 @@
 <title>Target Attributes - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Mode-Switching.html#Mode-Switching" title="Mode Switching">
@@ -61,8 +61,8 @@ be documented in <samp><span class="file">extend.texi</span></samp>.
 
 <div class="defun">
 &mdash; Target Hook: const struct attribute_spec * <b>TARGET_ATTRIBUTE_TABLE</b><var><a name="index-TARGET_005fATTRIBUTE_005fTABLE-4771"></a></var><br>
-<blockquote><p>If defined, this target hook points to an array of &lsquo;<samp><span class="samp">struct
-attribute_spec</span></samp>&rsquo; (defined in <samp><span class="file">tree.h</span></samp>) specifying the machine
+<blockquote><p>If defined, this target hook points to an array of `<samp><span class="samp">struct
+attribute_spec</span></samp>' (defined in <samp><span class="file">tree.h</span></samp>) specifying the machine
 specific attributes for this target and some of the restrictions on the
 entities to which these attributes are applied and the arguments they
 take. 
@@ -112,15 +112,15 @@ when this is needed are when one attribute overrides another, or when an
 attribute is nullified by a subsequent definition.  This function may
 call <code>merge_attributes</code> to handle machine-independent merging.
 
-      <p><a name="index-TARGET_005fDLLIMPORT_005fDECL_005fATTRIBUTES-4777"></a>If the only target-specific handling you require is &lsquo;<samp><span class="samp">dllimport</span></samp>&rsquo;
+      <p><a name="index-TARGET_005fDLLIMPORT_005fDECL_005fATTRIBUTES-4777"></a>If the only target-specific handling you require is `<samp><span class="samp">dllimport</span></samp>'
 for Microsoft Windows targets, you should define the macro
 <code>TARGET_DLLIMPORT_DECL_ATTRIBUTES</code> to <code>1</code>.  The compiler
 will then define a function called
 <code>merge_dllimport_decl_attributes</code> which can then be defined as
 the expansion of <code>TARGET_MERGE_DECL_ATTRIBUTES</code>.  You can also
 add <code>handle_dll_attribute</code> in the attribute table for your port
-to perform initial processing of the &lsquo;<samp><span class="samp">dllimport</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">dllexport</span></samp>&rsquo; attributes.  This is done in <samp><span class="file">i386/cygwin.h</span></samp> and
+to perform initial processing of the `<samp><span class="samp">dllimport</span></samp>' and
+`<samp><span class="samp">dllexport</span></samp>' attributes.  This is done in <samp><span class="file">i386/cygwin.h</span></samp> and
 <samp><span class="file">i386/i386.c</span></samp>, for example. 
 </p></blockquote></div>
 

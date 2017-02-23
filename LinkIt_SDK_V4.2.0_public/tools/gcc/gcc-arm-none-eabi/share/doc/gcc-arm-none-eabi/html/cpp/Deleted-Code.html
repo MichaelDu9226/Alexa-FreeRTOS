@@ -3,7 +3,7 @@
 <title>Deleted Code - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Conditionals.html#Conditionals" title="Conditionals">
 <link rel="prev" href="Conditional-Syntax.html#Conditional-Syntax" title="Conditional Syntax">
@@ -65,7 +65,7 @@ syntax errors.
 instead.  For instance, put <code>#if 0</code> before the deleted code and
 <code>#endif</code> after it.  This works even if the code being turned
 off contains conditionals, but they must be entire conditionals
-(balanced &lsquo;<samp><span class="samp">#if</span></samp>&rsquo; and &lsquo;<samp><span class="samp">#endif</span></samp>&rsquo;).
+(balanced `<samp><span class="samp">#if</span></samp>' and `<samp><span class="samp">#endif</span></samp>').
 
    <p>Some people use <code>#ifdef notdef</code> instead.  This is risky, because
 <code>notdef</code> might be accidentally defined as a macro, and then the
@@ -76,7 +76,7 @@ comment, instead.  The interior of <code>#if 0</code> must consist of complete
 tokens; in particular, single-quote characters must balance.  Comments
 often contain unbalanced single-quote characters (known in English as
 apostrophes).  These confuse <code>#if 0</code>.  They don't confuse
-&lsquo;<samp><span class="samp">/*</span></samp>&rsquo;.
+`<samp><span class="samp">/*</span></samp>'.
 
    </body></html>
 

@@ -3,7 +3,7 @@
 <title>Ifdef - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Conditional-Syntax.html#Conditional-Syntax" title="Conditional Syntax">
 <link rel="next" href="If.html#If" title="If">
@@ -72,8 +72,8 @@ will be included in the output of the preprocessor if and only if
 preprocessing directives.  They are executed only if the conditional
 succeeds.  You can nest conditional groups inside other conditional
 groups, but they must be completely nested.  In other words,
-&lsquo;<samp><span class="samp">#endif</span></samp>&rsquo; always matches the nearest &lsquo;<samp><span class="samp">#ifdef</span></samp>&rsquo; (or
-&lsquo;<samp><span class="samp">#ifndef</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">#if</span></samp>&rsquo;).  Also, you cannot start a conditional
+`<samp><span class="samp">#endif</span></samp>' always matches the nearest `<samp><span class="samp">#ifdef</span></samp>' (or
+`<samp><span class="samp">#ifndef</span></samp>', or `<samp><span class="samp">#if</span></samp>').  Also, you cannot start a conditional
 group in one file and end it in another.
 
    <p>Even if a conditional fails, the <var>controlled text</var> inside it is
@@ -82,17 +82,17 @@ it must all be lexically valid C.  Normally the only way this matters is
 that all comments and string literals inside a failing conditional group
 must still be properly ended.
 
-   <p>The comment following the &lsquo;<samp><span class="samp">#endif</span></samp>&rsquo; is not required, but it is a
+   <p>The comment following the `<samp><span class="samp">#endif</span></samp>' is not required, but it is a
 good practice if there is a lot of <var>controlled text</var>, because it
-helps people match the &lsquo;<samp><span class="samp">#endif</span></samp>&rsquo; to the corresponding &lsquo;<samp><span class="samp">#ifdef</span></samp>&rsquo;. 
+helps people match the `<samp><span class="samp">#endif</span></samp>' to the corresponding `<samp><span class="samp">#ifdef</span></samp>'. 
 Older programs sometimes put <var>MACRO</var> directly after the
-&lsquo;<samp><span class="samp">#endif</span></samp>&rsquo; without enclosing it in a comment.  This is invalid code
+`<samp><span class="samp">#endif</span></samp>' without enclosing it in a comment.  This is invalid code
 according to the C standard.  CPP accepts it with a warning.  It
-never affects which &lsquo;<samp><span class="samp">#ifndef</span></samp>&rsquo; the &lsquo;<samp><span class="samp">#endif</span></samp>&rsquo; matches.
+never affects which `<samp><span class="samp">#ifndef</span></samp>' the `<samp><span class="samp">#endif</span></samp>' matches.
 
    <p><a name="index-g_t_0023ifndef-88"></a>Sometimes you wish to use some code if a macro is <em>not</em> defined. 
-You can do this by writing &lsquo;<samp><span class="samp">#ifndef</span></samp>&rsquo; instead of &lsquo;<samp><span class="samp">#ifdef</span></samp>&rsquo;. 
-One common use of &lsquo;<samp><span class="samp">#ifndef</span></samp>&rsquo; is to include code only the first
+You can do this by writing `<samp><span class="samp">#ifndef</span></samp>' instead of `<samp><span class="samp">#ifdef</span></samp>'. 
+One common use of `<samp><span class="samp">#ifndef</span></samp>' is to include code only the first
 time a header file is included.  See <a href="Once_002dOnly-Headers.html#Once_002dOnly-Headers">Once-Only Headers</a>.
 
    <p>Macro definitions can vary between compilations for several reasons. 

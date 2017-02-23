@@ -3,7 +3,7 @@
 <title>Undefining and Redefining Macros - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Macros.html#Macros" title="Macros">
 <link rel="prev" href="Predefined-Macros.html#Predefined-Macros" title="Predefined Macros">
@@ -58,10 +58,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Macros.html#Macros">Macros</a>
 
 <p><a name="index-undefining-macros-68"></a><a name="index-redefining-macros-69"></a><a name="index-g_t_0023undef-70"></a>
 If a macro ceases to be useful, it may be <dfn>undefined</dfn> with the
-&lsquo;<samp><span class="samp">#undef</span></samp>&rsquo; directive.  &lsquo;<samp><span class="samp">#undef</span></samp>&rsquo; takes a single argument, the
+`<samp><span class="samp">#undef</span></samp>' directive.  `<samp><span class="samp">#undef</span></samp>' takes a single argument, the
 name of the macro to undefine.  You use the bare macro name, even if the
 macro is function-like.  It is an error if anything appears on the line
-after the macro name.  &lsquo;<samp><span class="samp">#undef</span></samp>&rsquo; has no effect if the name is not a
+after the macro name.  `<samp><span class="samp">#undef</span></samp>' has no effect if the name is not a
 macro.
 
 <pre class="smallexample">     #define FOO 4
@@ -70,7 +70,7 @@ macro.
      x = FOO;        ==&gt; x = FOO;
 </pre>
    <p>Once a macro has been undefined, that identifier may be <dfn>redefined</dfn>
-as a macro by a subsequent &lsquo;<samp><span class="samp">#define</span></samp>&rsquo; directive.  The new definition
+as a macro by a subsequent `<samp><span class="samp">#define</span></samp>' directive.  The new definition
 need not have any resemblance to the old definition.
 
    <p>However, if an identifier which is currently a macro is redefined, then

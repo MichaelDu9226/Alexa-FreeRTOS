@@ -3,7 +3,7 @@
 <title>Define Constraints - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Constraints.html#Constraints" title="Constraints">
 <link rel="prev" href="Disable-Insn-Alternatives.html#Disable-Insn-Alternatives" title="Disable Insn Alternatives">
@@ -62,7 +62,7 @@ be specially marked, to give <code>reload</code> more information.
 
  <p>Machine-specific constraints can be given names of arbitrary length,
 but they must be entirely composed of letters, digits, underscores
-(&lsquo;<samp><span class="samp">_</span></samp>&rsquo;), and angle brackets (&lsquo;<samp><span class="samp">&lt; &gt;</span></samp>&rsquo;).  Like C identifiers, they
+(`<samp><span class="samp">_</span></samp>'), and angle brackets (`<samp><span class="samp">&lt; &gt;</span></samp>').  Like C identifiers, they
 must begin with a letter or underscore.
 
  <p>In order to avoid ambiguity in operand constraint strings, no
@@ -70,7 +70,7 @@ constraint can have a name that begins with any other constraint's
 name.  For example, if <code>x</code> is defined as a constraint name,
 <code>xy</code> may not be, and vice versa.  As a consequence of this rule,
 no constraint may begin with one of the generic constraint letters:
-&lsquo;<samp><span class="samp">E F V X g i m n o p r s</span></samp>&rsquo;.
+`<samp><span class="samp">E F V X g i m n o p r s</span></samp>'.
 
  <p>Register constraints correspond directly to register classes. 
 See <a href="Register-Classes.html#Register-Classes">Register Classes</a>.  There is thus not much flexibility in their
@@ -115,12 +115,12 @@ following variables:
           <dl>
 <dt><var>op</var><dd>The RTL object defining the operand. 
 <br><dt><var>mode</var><dd>The machine mode of <var>op</var>. 
-<br><dt><var>ival</var><dd>&lsquo;<samp><span class="samp">INTVAL (</span><var>op</var><span class="samp">)</span></samp>&rsquo;, if <var>op</var> is a <code>const_int</code>. 
-<br><dt><var>hval</var><dd>&lsquo;<samp><span class="samp">CONST_DOUBLE_HIGH (</span><var>op</var><span class="samp">)</span></samp>&rsquo;, if <var>op</var> is an integer
+<br><dt><var>ival</var><dd>`<samp><span class="samp">INTVAL (</span><var>op</var><span class="samp">)</span></samp>', if <var>op</var> is a <code>const_int</code>. 
+<br><dt><var>hval</var><dd>`<samp><span class="samp">CONST_DOUBLE_HIGH (</span><var>op</var><span class="samp">)</span></samp>', if <var>op</var> is an integer
 <code>const_double</code>. 
-<br><dt><var>lval</var><dd>&lsquo;<samp><span class="samp">CONST_DOUBLE_LOW (</span><var>op</var><span class="samp">)</span></samp>&rsquo;, if <var>op</var> is an integer
+<br><dt><var>lval</var><dd>`<samp><span class="samp">CONST_DOUBLE_LOW (</span><var>op</var><span class="samp">)</span></samp>', if <var>op</var> is an integer
 <code>const_double</code>. 
-<br><dt><var>rval</var><dd>&lsquo;<samp><span class="samp">CONST_DOUBLE_REAL_VALUE (</span><var>op</var><span class="samp">)</span></samp>&rsquo;, if <var>op</var> is a floating-point
+<br><dt><var>rval</var><dd>`<samp><span class="samp">CONST_DOUBLE_REAL_VALUE (</span><var>op</var><span class="samp">)</span></samp>', if <var>op</var> is a floating-point
 <code>const_double</code>. 
 </dl>
 
@@ -138,18 +138,18 @@ by <code>reload</code> if they fail to match.
 &mdash; MD Expression: <b>define_memory_constraint</b><var> name docstring exp<a name="index-define_005fmemory_005fconstraint-3321"></a></var><br>
 <blockquote><p>Use this expression for constraints that match a subset of all memory
 operands: that is, <code>reload</code> can make them match by converting the
-operand to the form &lsquo;<samp><span class="samp">(mem&nbsp;(reg&nbsp;</span><var>X</var><span class="samp">))<!-- /@w --></span></samp>&rsquo;, where <var>X</var> is a
+operand to the form `<samp><span class="samp">(mem&nbsp;(reg&nbsp;</span><var>X</var><span class="samp">))<!-- /@w --></span></samp>', where <var>X</var> is a
 base register (from the register class specified by
 <code>BASE_REG_CLASS</code>, see <a href="Register-Classes.html#Register-Classes">Register Classes</a>).
 
       <p>For example, on the S/390, some instructions do not accept arbitrary
 memory references, but only those that do not make use of an index
-register.  The constraint letter &lsquo;<samp><span class="samp">Q</span></samp>&rsquo; is defined to represent a
-memory address of this type.  If &lsquo;<samp><span class="samp">Q</span></samp>&rsquo; is defined with
-<code>define_memory_constraint</code>, a &lsquo;<samp><span class="samp">Q</span></samp>&rsquo; constraint can handle any
+register.  The constraint letter `<samp><span class="samp">Q</span></samp>' is defined to represent a
+memory address of this type.  If `<samp><span class="samp">Q</span></samp>' is defined with
+<code>define_memory_constraint</code>, a `<samp><span class="samp">Q</span></samp>' constraint can handle any
 memory operand, because <code>reload</code> knows it can simply copy the
 memory address into a base register if required.  This is analogous to
-the way an &lsquo;<samp><span class="samp">o</span></samp>&rsquo; constraint can handle any memory operand.
+the way an `<samp><span class="samp">o</span></samp>' constraint can handle any memory operand.
 
       <p>The syntax and semantics are otherwise identical to
 <code>define_constraint</code>. 
@@ -159,21 +159,21 @@ the way an &lsquo;<samp><span class="samp">o</span></samp>&rsquo; constraint can
 &mdash; MD Expression: <b>define_address_constraint</b><var> name docstring exp<a name="index-define_005faddress_005fconstraint-3322"></a></var><br>
 <blockquote><p>Use this expression for constraints that match a subset of all address
 operands: that is, <code>reload</code> can make the constraint match by
-converting the operand to the form &lsquo;<samp><span class="samp">(reg&nbsp;</span><var>X</var><span class="samp">)<!-- /@w --></span></samp>&rsquo;, again
+converting the operand to the form `<samp><span class="samp">(reg&nbsp;</span><var>X</var><span class="samp">)<!-- /@w --></span></samp>', again
 with <var>X</var> a base register.
 
       <p>Constraints defined with <code>define_address_constraint</code> can only be
 used with the <code>address_operand</code> predicate, or machine-specific
 predicates that work the same way.  They are treated analogously to
-the generic &lsquo;<samp><span class="samp">p</span></samp>&rsquo; constraint.
+the generic `<samp><span class="samp">p</span></samp>' constraint.
 
       <p>The syntax and semantics are otherwise identical to
 <code>define_constraint</code>. 
 </p></blockquote></div>
 
- <p>For historical reasons, names beginning with the letters &lsquo;<samp><span class="samp">G H</span></samp>&rsquo;
+ <p>For historical reasons, names beginning with the letters `<samp><span class="samp">G H</span></samp>'
 are reserved for constraints that match only <code>const_double</code>s, and
-names beginning with the letters &lsquo;<samp><span class="samp">I J K L M N O P</span></samp>&rsquo; are reserved
+names beginning with the letters `<samp><span class="samp">I J K L M N O P</span></samp>' are reserved
 for constraints that match only <code>const_int</code>s.  This may change in
 the future.  For the time being, constraints with these names must be
 written in a stylized form, so that <code>genpreds</code> can tell you did
@@ -185,7 +185,7 @@ it correctly:
             <var>condition</var>...))            ; <span class="roman">usually a </span><code>match_test</code>
 </pre>
  <!-- the semicolons line up in the formatted manual -->
- <p>It is fine to use names beginning with other letters for constraints
+<p>It is fine to use names beginning with other letters for constraints
 that match <code>const_double</code>s or <code>const_int</code>s.
 
  <p>Each docstring in a constraint definition should be one or more complete
@@ -195,7 +195,7 @@ that section.  Also, in the future the compiler may use this to give
 more helpful diagnostics when poor choice of <code>asm</code> constraints
 causes a reload failure.
 
- <p>If you put the pseudo-Texinfo directive &lsquo;<samp><span class="samp">@internal</span></samp>&rsquo; at the
+ <p>If you put the pseudo-Texinfo directive `<samp><span class="samp">@internal</span></samp>' at the
 beginning of a docstring, then (in the future) it will appear only in
 the internals manual's version of the machine-specific constraint tables. 
 Use this for constraints that should not appear in <code>asm</code> statements.

@@ -3,7 +3,7 @@
 <title>Alpha-Relocs - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Alpha-Syntax.html#Alpha-Syntax" title="Alpha Syntax">
 <link rel="prev" href="Alpha_002dRegs.html#Alpha_002dRegs" title="Alpha-Regs">
@@ -53,7 +53,7 @@ Some of these relocations are available for ECOFF, but mostly
 only for ELF.  They are modeled after the relocation format
 introduced in Digital Unix 4.0, but there are additions.
 
-   <p>The format is &lsquo;<samp><span class="samp">!</span><var>tag</var></samp>&rsquo; or &lsquo;<samp><span class="samp">!</span><var>tag</var><span class="samp">!</span><var>number</var></samp>&rsquo;
+   <p>The format is `<samp><span class="samp">!</span><var>tag</var></samp>' or `<samp><span class="samp">!</span><var>tag</var><span class="samp">!</span><var>number</var></samp>'
 where <var>tag</var> is the name of the relocation.  In some cases
 <var>number</var> is used to relate specific instructions.
 
@@ -112,7 +112,7 @@ to test whether a weak symbol is defined.
      <pre class="example">          ldq  $27,foo($29)   !literal!1
           beq  $27,is_undef   !lituse_addr!1
           jsr  $26,($27),foo  !lituse_jsr!1
-</pre>
+     </pre>
      <br><dt><code>!lituse_tlsgd!</code><var>N</var><dd>Used with a register branch format instruction to indicate that the
 literal is the call to <code>__tls_get_addr</code> used to compute the
 address of the thread-local storage variable whose descriptor was
@@ -134,7 +134,7 @@ the instruction stream.  The immediate operands must be zero.
      <pre class="example">          bsr  $26,foo
           ldah $29,0($26)     !gpdisp!1
           lda  $29,0($29)     !gpdisp!1
-</pre>
+     </pre>
      <br><dt><code>!gprelhigh</code><dd>Used with an <code>ldah</code> instruction to add the high 16 bits of a
 32-bit displacement from the GP.
 

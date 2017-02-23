@@ -3,7 +3,7 @@
 <title>M32R-Opts - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="M32R_002dDependent.html#M32R_002dDependent" title="M32R-Dependent">
 <link rel="next" href="M32R_002dDirectives.html#M32R_002dDirectives" title="M32R-Directives">
@@ -101,8 +101,8 @@ questionable parallel instructions are encountered.  This option is
 enabled by default, but <code>gcc</code> disables it when it invokes
 <code>as</code> directly.  Questionable instructions are those whose
 behaviour would be different if they were executed sequentially.  For
-example the code fragment &lsquo;<samp><span class="samp">mv r1, r2 || mv r3, r1</span></samp>&rsquo; produces a
-different result from &lsquo;<samp><span class="samp">mv r1, r2 \n mv r3, r1</span></samp>&rsquo; since the former
+example the code fragment `<samp><span class="samp">mv r1, r2 || mv r3, r1</span></samp>' produces a
+different result from `<samp><span class="samp">mv r1, r2 \n mv r3, r1</span></samp>' since the former
 moves r1 into r3 and then r2 into r1, whereas the later moves r2 into r1
 and r3.
 

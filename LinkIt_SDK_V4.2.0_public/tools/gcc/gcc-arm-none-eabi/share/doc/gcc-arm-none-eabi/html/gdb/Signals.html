@@ -3,7 +3,7 @@
 <title>Signals - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Stopping.html#Stopping" title="Stopping">
 <link rel="prev" href="Skipping-Over-Functions-and-Files.html#Skipping-Over-Functions-and-Files" title="Skipping Over Functions and Files">
@@ -85,19 +85,19 @@ the defined types of signals.
 
      <p><code>info handle</code> is an alias for <code>info signals</code>.
 
-     <br><dt><code>catch signal </code><span class="roman">[</span><var>signal</var><code>... </code><span class="roman">|</span><code> &lsquo;</code><samp><span class="samp">all</span></samp><code>&rsquo;</code><span class="roman">]</span><dd>Set a catchpoint for the indicated signals.  See <a href="Set-Catchpoints.html#Set-Catchpoints">Set Catchpoints</a>,
+     <br><dt><code>catch signal </code><span class="roman">[</span><var>signal</var><code>... </code><span class="roman">|</span><code> `<samp></code><span class="samp">all</span><code></samp>'</code><span class="roman">]</span><dd>Set a catchpoint for the indicated signals.  See <a href="Set-Catchpoints.html#Set-Catchpoints">Set Catchpoints</a>,
 for details about this command.
 
      <p><a name="index-handle-338"></a><br><dt><code>handle </code><var>signal</var> <span class="roman">[</span><var>keywords</var><code>...</code><span class="roman">]</span><dd>Change the way <span class="sc">gdb</span> handles signal <var>signal</var>.  <var>signal</var>
 can be the number of a signal or its name (with or without the
-&lsquo;<samp><span class="samp">SIG</span></samp>&rsquo; at the beginning); a list of signal numbers of the form
-&lsquo;<samp><var>low</var><span class="samp">-</span><var>high</var></samp>&rsquo;; or the word &lsquo;<samp><span class="samp">all</span></samp>&rsquo;, meaning all the
+`<samp><span class="samp">SIG</span></samp>' at the beginning); a list of signal numbers of the form
+`<samp><var>low</var><span class="samp">-</span><var>high</var></samp>'; or the word `<samp><span class="samp">all</span></samp>', meaning all the
 known signals.  Optional arguments <var>keywords</var>, described below,
 say what change to make. 
 </dl>
 
 <!-- @group -->
-   <p>The keywords allowed by the <code>handle</code> command can be abbreviated. 
+<p>The keywords allowed by the <code>handle</code> command can be abbreviated. 
 Their full names are:
 
      <dl>
@@ -141,9 +141,11 @@ due to some sort of memory reference error, you might store correct
 values into the erroneous variables and continue, hoping to see more
 execution; but your program would probably terminate immediately as
 a result of the fatal signal once it saw the signal.  To prevent this,
-you can continue with &lsquo;<samp><span class="samp">signal 0</span></samp>&rsquo;.  See <a href="Signaling.html#Signaling">Giving your Program a Signal</a>.
+you can continue with `<samp><span class="samp">signal 0</span></samp>'.  See <a href="Signaling.html#Signaling">Giving your Program a Signal</a>.
 
-   <p><a name="index-extra-signal-information-339"></a><a name="extra-signal-information"></a>On some targets, <span class="sc">gdb</span> can inspect extra signal information
+   <p><a name="index-extra-signal-information-339"></a><a name="extra-signal-information"></a>
+
+   <p>On some targets, <span class="sc">gdb</span> can inspect extra signal information
 associated with the intercepted signal, before it is actually
 delivered to the program being debugged.  This information is exported
 by the convenience variable <code>$_siginfo</code>, and consists of data

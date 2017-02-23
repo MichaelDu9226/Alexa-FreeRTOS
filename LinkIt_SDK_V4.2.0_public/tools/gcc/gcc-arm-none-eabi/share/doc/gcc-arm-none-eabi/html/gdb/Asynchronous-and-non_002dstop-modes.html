@@ -3,7 +3,7 @@
 <title>Asynchronous and non-stop modes - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI-General-Design.html#GDB_002fMI-General-Design" title="GDB/MI General Design">
 <link rel="prev" href="Context-management.html#Context-management" title="Context management">
@@ -74,7 +74,7 @@ that even commands that operate on global state, such as <code>print</code>,
 <code>set</code>, and breakpoint commands, still access the target in the
 context of a specific thread,  so frontend should try to find a
 stopped thread and perform the operation on that thread (using the
-&lsquo;<samp><span class="samp">--thread</span></samp>&rsquo; option).
+`<samp><span class="samp">--thread</span></samp>' option).
 
    <p>Which commands will work in the context of a running thread is
 highly target dependent.  However, the two commands

@@ -3,7 +3,7 @@
 <title>s390 Directives - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="S_002f390_002dDependent.html#S_002f390_002dDependent" title="S/390-Dependent">
 <link rel="prev" href="s390-Syntax.html#s390-Syntax" title="s390 Syntax">
@@ -58,15 +58,15 @@ directives, which are only available for the s390 <code>as</code>.
 <a name="index-g_t_0040code_007b_002einsn_007d-directive_002c-s390-1711"></a>
 <dl><dt><code>.insn</code><dd>This directive permits the numeric representation of an instructions
 and makes the assembler insert the operands according to one of the
-instructions formats for &lsquo;<samp><span class="samp">.insn</span></samp>&rsquo; (<a href="s390-Formats.html#s390-Formats">s390 Formats</a>). 
-For example, the instruction &lsquo;<samp><span class="samp">l %r1,24(%r15)</span></samp>&rsquo; could be written as
-&lsquo;<samp><span class="samp">.insn rx,0x58000000,%r1,24(%r15)</span></samp>&rsquo;. 
+instructions formats for `<samp><span class="samp">.insn</span></samp>' (<a href="s390-Formats.html#s390-Formats">s390 Formats</a>). 
+For example, the instruction `<samp><span class="samp">l %r1,24(%r15)</span></samp>' could be written as
+`<samp><span class="samp">.insn rx,0x58000000,%r1,24(%r15)</span></samp>'. 
 <a name="index-g_t_0040code_007b_002eshort_007d-directive_002c-s390-1712"></a><a name="index-g_t_0040code_007b_002elong_007d-directive_002c-s390-1713"></a><a name="index-g_t_0040code_007b_002equad_007d-directive_002c-s390-1714"></a><br><dt><code>.short</code><dt><code>.long</code><dt><code>.quad</code><dd>This directive places one or more 16-bit (.short), 32-bit (.long), or
 64-bit (.quad) values into the current section. If an ELF or TLS modifier
 is used only the following expressions are allowed:
-&lsquo;<samp><span class="samp">symbol@modifier + constant</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">symbol@modifier + label + constant</span></samp>&rsquo;, and
-&lsquo;<samp><span class="samp">symbol@modifier - label + constant</span></samp>&rsquo;. 
+`<samp><span class="samp">symbol@modifier + constant</span></samp>',
+`<samp><span class="samp">symbol@modifier + label + constant</span></samp>', and
+`<samp><span class="samp">symbol@modifier - label + constant</span></samp>'. 
 The following modifiers are available:
           <dl>
 <dt><code>@got</code><dt><code>@got12</code><dd>The @got modifier can be used for .short, .long and .quad. The @got12
@@ -103,7 +103,7 @@ is replaced with the offset of the symbol relative to the TCB pointer.
 </dl>
 
      <p>For more information about the thread local storage modifiers see the
-ELF extension documentation &lsquo;<samp><span class="samp">ELF Handling For Thread-Local Storage</span></samp>&rsquo;.
+ELF extension documentation `<samp><span class="samp">ELF Handling For Thread-Local Storage</span></samp>'.
 
      <p><a name="index-g_t_0040code_007b_002eltorg_007d-directive_002c-s390-1715"></a><br><dt><code>.ltorg</code><dd>This directive causes the current contents of the literal pool to be
 dumped to the current location (<a href="s390-Literal-Pool-Entries.html#s390-Literal-Pool-Entries">s390 Literal Pool Entries</a>).

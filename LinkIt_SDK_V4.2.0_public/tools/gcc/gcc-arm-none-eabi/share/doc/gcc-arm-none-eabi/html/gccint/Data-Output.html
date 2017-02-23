@@ -3,7 +3,7 @@
 <title>Data Output - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Assembler-Format.html#Assembler-Format" title="Assembler Format">
 <link rel="prev" href="File-Framework.html#File-Framework" title="File Framework">
@@ -153,7 +153,7 @@ anything for RTL expressions that can be output normally.)
       <p>The argument <var>file</var> is the standard I/O stream to output the
 assembler code on.  <var>x</var> is the RTL expression for the constant to
 output, and <var>mode</var> is the machine mode (in case <var>x</var> is a
-&lsquo;<samp><span class="samp">const_int</span></samp>&rsquo;).  <var>align</var> is the required alignment for the value
+`<samp><span class="samp">const_int</span></samp>').  <var>align</var> is the required alignment for the value
 <var>x</var>; you should output an assembler directive to force this much
 alignment.
 
@@ -163,7 +163,7 @@ responsible for outputting the label definition at the proper place.
 Here is how to do this:
 
      <pre class="smallexample">          <code>(*targetm.asm_out.internal_label)</code> (<var>file</var>, "LC", <var>labelno</var>);
-</pre>
+     </pre>
       <p>When you output a pool entry specially, you should end with a
 <code>goto</code> to the label <var>jumpto</var>.  This will prevent the same pool
 entry from being output a second time in the usual manner.
@@ -191,7 +191,7 @@ to the position in the string where <var>C</var> was found; this can be used if
 a line separator uses multiple characters.
 
       <p>If you do not define this macro, the default is that only
-the character &lsquo;<samp><span class="samp">;</span></samp>&rsquo; is treated as a logical line separator. 
+the character `<samp><span class="samp">;</span></samp>' is treated as a logical line separator. 
 </p></blockquote></div>
 
 <div class="defun">

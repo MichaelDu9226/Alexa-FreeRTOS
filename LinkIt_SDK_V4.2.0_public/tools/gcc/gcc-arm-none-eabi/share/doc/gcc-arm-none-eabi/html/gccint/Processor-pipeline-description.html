@@ -3,7 +3,7 @@
 <title>Processor pipeline description - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Insn-Attributes.html#Insn-Attributes" title="Insn Attributes">
 <link rel="prev" href="Delay-Slots.html#Delay-Slots" title="Delay Slots">
@@ -125,7 +125,7 @@ reservations should be described by the following construction.
 <pre class="smallexample">     (define_cpu_unit <var>unit-names</var> [<var>automaton-name</var>])
 </pre>
  <p><var>unit-names</var> is a string giving the names of the functional units
-separated by commas.  Don't use name &lsquo;<samp><span class="samp">nothing</span></samp>&rsquo;, it is reserved
+separated by commas.  Don't use name `<samp><span class="samp">nothing</span></samp>', it is reserved
 for other goals.
 
  <p><var>automaton-name</var> is a string giving the name of the automaton with
@@ -216,28 +216,28 @@ expression according to the following syntax:
                     | "(" regexp ")"
 </pre>
      <ul>
-<li>&lsquo;<samp><span class="samp">,</span></samp>&rsquo; is used for describing the start of the next cycle in
+<li>`<samp><span class="samp">,</span></samp>' is used for describing the start of the next cycle in
 the reservation.
 
-     <li>&lsquo;<samp><span class="samp">|</span></samp>&rsquo; is used for describing a reservation described by the first
+     <li>`<samp><span class="samp">|</span></samp>' is used for describing a reservation described by the first
 regular expression <strong>or</strong> a reservation described by the second
 regular expression <strong>or</strong> etc.
 
-     <li>&lsquo;<samp><span class="samp">+</span></samp>&rsquo; is used for describing a reservation described by the first
+     <li>`<samp><span class="samp">+</span></samp>' is used for describing a reservation described by the first
 regular expression <strong>and</strong> a reservation described by the
 second regular expression <strong>and</strong> etc.
 
-     <li>&lsquo;<samp><span class="samp">*</span></samp>&rsquo; is used for convenience and simply means a sequence in which
+     <li>`<samp><span class="samp">*</span></samp>' is used for convenience and simply means a sequence in which
 the regular expression are repeated <var>number</var> times with cycle
-advancing (see &lsquo;<samp><span class="samp">,</span></samp>&rsquo;).
+advancing (see `<samp><span class="samp">,</span></samp>').
 
-     <li>&lsquo;<samp><span class="samp">cpu_function_unit_name</span></samp>&rsquo; denotes reservation of the named
+     <li>`<samp><span class="samp">cpu_function_unit_name</span></samp>' denotes reservation of the named
 functional unit.
 
-     <li>&lsquo;<samp><span class="samp">reservation_name</span></samp>&rsquo; &mdash; see description of construction
-&lsquo;<samp><span class="samp">define_reservation</span></samp>&rsquo;.
+     <li>`<samp><span class="samp">reservation_name</span></samp>' &mdash; see description of construction
+`<samp><span class="samp">define_reservation</span></samp>'.
 
-     <li>&lsquo;<samp><span class="samp">nothing</span></samp>&rsquo; denotes no unit reservations. 
+     <li>`<samp><span class="samp">nothing</span></samp>' denotes no unit reservations. 
 </ul>
 
  <p><a name="index-define_005freservation-3742"></a>Sometimes unit reservations for different insns contain common parts. 
@@ -249,7 +249,7 @@ the common part by the following construction
  <p><var>reservation-name</var> is a string giving name of <var>regexp</var>. 
 Functional unit names and reservation names are in the same name
 space.  So the reservation names should be different from the
-functional unit names and can not be the reserved name &lsquo;<samp><span class="samp">nothing</span></samp>&rsquo;.
+functional unit names and can not be the reserved name `<samp><span class="samp">nothing</span></samp>'.
 
  <p><a name="index-define_005fbypass-3743"></a><a name="index-instruction-latency-time-3744"></a><a name="index-data-bypass-3745"></a>The following construction is used to describe exceptions in the
 latency time for given instruction pair.  This is so called bypasses.
@@ -266,15 +266,15 @@ For example:
 <pre class="smallexample">     (define_bypass 1 "cpu1_load_*, cpu1_store_*" "cpu1_load_*")
 </pre>
  <p>defines a bypass between instructions that start with
-&lsquo;<samp><span class="samp">cpu1_load_</span></samp>&rsquo; or &lsquo;<samp><span class="samp">cpu1_store_</span></samp>&rsquo; and those that start with
-&lsquo;<samp><span class="samp">cpu1_load_</span></samp>&rsquo;.
+`<samp><span class="samp">cpu1_load_</span></samp>' or `<samp><span class="samp">cpu1_store_</span></samp>' and those that start with
+`<samp><span class="samp">cpu1_load_</span></samp>'.
 
  <p><var>guard</var> is an optional string giving the name of a C function which
 defines an additional guard for the bypass.  The function will get the
 two insns as parameters.  If the function returns zero the bypass will
 be ignored for this case.  The additional guard is necessary to
 recognize complicated bypasses, e.g. when the consumer is only an address
-of insn &lsquo;<samp><span class="samp">store</span></samp>&rsquo; (not a stored value).
+of insn `<samp><span class="samp">store</span></samp>' (not a stored value).
 
  <p>If there are more one bypass with the same output and input insns, the
 chosen bypass is the first bypass with a guard in description whose
@@ -299,7 +299,7 @@ separated by commas.
 separated by comma.  Currently pattern is one unit or units
 separated by white-spaces.
 
- <p>The first construction (&lsquo;<samp><span class="samp">exclusion_set</span></samp>&rsquo;) means that each
+ <p>The first construction (`<samp><span class="samp">exclusion_set</span></samp>') means that each
 functional unit in the first string can not be reserved simultaneously
 with a unit whose name is in the second string and vice versa.  For
 example, the construction is useful for describing processors
@@ -307,54 +307,54 @@ example, the construction is useful for describing processors
 functional unit which can execute simultaneously only single floating
 point insns or only double floating point insns.
 
- <p>The second construction (&lsquo;<samp><span class="samp">presence_set</span></samp>&rsquo;) means that each
+ <p>The second construction (`<samp><span class="samp">presence_set</span></samp>') means that each
 functional unit in the first string can not be reserved unless at
 least one of pattern of units whose names are in the second string is
 reserved.  This is an asymmetric relation.  For example, it is useful
-for description that <acronym>VLIW</acronym> &lsquo;<samp><span class="samp">slot1</span></samp>&rsquo; is reserved after
-&lsquo;<samp><span class="samp">slot0</span></samp>&rsquo; reservation.  We could describe it by the following
+for description that <acronym>VLIW</acronym> `<samp><span class="samp">slot1</span></samp>' is reserved after
+`<samp><span class="samp">slot0</span></samp>' reservation.  We could describe it by the following
 construction
 
 <pre class="smallexample">     (presence_set "slot1" "slot0")
 </pre>
- <p>Or &lsquo;<samp><span class="samp">slot1</span></samp>&rsquo; is reserved only after &lsquo;<samp><span class="samp">slot0</span></samp>&rsquo; and unit &lsquo;<samp><span class="samp">b0</span></samp>&rsquo;
+ <p>Or `<samp><span class="samp">slot1</span></samp>' is reserved only after `<samp><span class="samp">slot0</span></samp>' and unit `<samp><span class="samp">b0</span></samp>'
 reservation.  In this case we could write
 
 <pre class="smallexample">     (presence_set "slot1" "slot0 b0")
 </pre>
- <p>The third construction (&lsquo;<samp><span class="samp">final_presence_set</span></samp>&rsquo;) is analogous to
-&lsquo;<samp><span class="samp">presence_set</span></samp>&rsquo;.  The difference between them is when checking is
+ <p>The third construction (`<samp><span class="samp">final_presence_set</span></samp>') is analogous to
+`<samp><span class="samp">presence_set</span></samp>'.  The difference between them is when checking is
 done.  When an instruction is issued in given automaton state
 reflecting all current and planned unit reservations, the automaton
 state is changed.  The first state is a source state, the second one
-is a result state.  Checking for &lsquo;<samp><span class="samp">presence_set</span></samp>&rsquo; is done on the
-source state reservation, checking for &lsquo;<samp><span class="samp">final_presence_set</span></samp>&rsquo; is
+is a result state.  Checking for `<samp><span class="samp">presence_set</span></samp>' is done on the
+source state reservation, checking for `<samp><span class="samp">final_presence_set</span></samp>' is
 done on the result reservation.  This construction is useful to
 describe a reservation which is actually two subsequent reservations. 
 For example, if we use
 
 <pre class="smallexample">     (presence_set "slot1" "slot0")
 </pre>
- <p>the following insn will be never issued (because &lsquo;<samp><span class="samp">slot1</span></samp>&rsquo; requires
-&lsquo;<samp><span class="samp">slot0</span></samp>&rsquo; which is absent in the source state).
+ <p>the following insn will be never issued (because `<samp><span class="samp">slot1</span></samp>' requires
+`<samp><span class="samp">slot0</span></samp>' which is absent in the source state).
 
 <pre class="smallexample">     (define_reservation "insn_and_nop" "slot0 + slot1")
 </pre>
- <p>but it can be issued if we use analogous &lsquo;<samp><span class="samp">final_presence_set</span></samp>&rsquo;.
+ <p>but it can be issued if we use analogous `<samp><span class="samp">final_presence_set</span></samp>'.
 
- <p>The forth construction (&lsquo;<samp><span class="samp">absence_set</span></samp>&rsquo;) means that each functional
+ <p>The forth construction (`<samp><span class="samp">absence_set</span></samp>') means that each functional
 unit in the first string can be reserved only if each pattern of units
 whose names are in the second string is not reserved.  This is an
-asymmetric relation (actually &lsquo;<samp><span class="samp">exclusion_set</span></samp>&rsquo; is analogous to
+asymmetric relation (actually `<samp><span class="samp">exclusion_set</span></samp>' is analogous to
 this one but it is symmetric).  For example it might be useful in a
-<acronym>VLIW</acronym> description to say that &lsquo;<samp><span class="samp">slot0</span></samp>&rsquo; cannot be reserved
-after either &lsquo;<samp><span class="samp">slot1</span></samp>&rsquo; or &lsquo;<samp><span class="samp">slot2</span></samp>&rsquo; have been reserved.  This
+<acronym>VLIW</acronym> description to say that `<samp><span class="samp">slot0</span></samp>' cannot be reserved
+after either `<samp><span class="samp">slot1</span></samp>' or `<samp><span class="samp">slot2</span></samp>' have been reserved.  This
 can be described as:
 
 <pre class="smallexample">     (absence_set "slot0" "slot1, slot2")
 </pre>
- <p>Or &lsquo;<samp><span class="samp">slot2</span></samp>&rsquo; can not be reserved if &lsquo;<samp><span class="samp">slot0</span></samp>&rsquo; and unit &lsquo;<samp><span class="samp">b0</span></samp>&rsquo;
-are reserved or &lsquo;<samp><span class="samp">slot1</span></samp>&rsquo; and unit &lsquo;<samp><span class="samp">b1</span></samp>&rsquo; are reserved.  In
+ <p>Or `<samp><span class="samp">slot2</span></samp>' can not be reserved if `<samp><span class="samp">slot0</span></samp>' and unit `<samp><span class="samp">b0</span></samp>'
+are reserved or `<samp><span class="samp">slot1</span></samp>' and unit `<samp><span class="samp">b1</span></samp>' are reserved.  In
 this case we could write
 
 <pre class="smallexample">     (absence_set "slot2" "slot0 b0, slot1 b1")
@@ -362,9 +362,9 @@ this case we could write
  <p>All functional units mentioned in a set should belong to the same
 automaton.
 
- <p>The last construction (&lsquo;<samp><span class="samp">final_absence_set</span></samp>&rsquo;) is analogous to
-&lsquo;<samp><span class="samp">absence_set</span></samp>&rsquo; but checking is done on the result (state)
-reservation.  See comments for &lsquo;<samp><span class="samp">final_presence_set</span></samp>&rsquo;.
+ <p>The last construction (`<samp><span class="samp">final_absence_set</span></samp>') is analogous to
+`<samp><span class="samp">absence_set</span></samp>' but checking is done on the result (state)
+reservation.  See comments for `<samp><span class="samp">final_presence_set</span></samp>'.
 
  <p><a name="index-automata_005foption-3753"></a><a name="index-deterministic-finite-state-automaton-3754"></a><a name="index-nondeterministic-finite-state-automaton-3755"></a><a name="index-finite-state-automaton-minimization-3756"></a>You can control the generator of the pipeline hazard recognizer with
 the following construction.
@@ -386,7 +386,7 @@ automata.
 such as the number of DFA states, NDFA states and arcs.
 
      <li><dfn>v</dfn> means a generation of the file describing the result automata. 
-The file has suffix &lsquo;<samp><span class="samp">.dfa</span></samp>&rsquo; and can be used for the description
+The file has suffix `<samp><span class="samp">.dfa</span></samp>' and can be used for the description
 verification and debugging.
 
      <li><dfn>w</dfn> means a generation of warning instead of error for
@@ -399,7 +399,7 @@ very expensive to construct.  This option is useful if the build
 process spends an unacceptably long time in genautomata.
 
      <li><dfn>ndfa</dfn> makes nondeterministic finite state automata.  This affects
-the treatment of operator &lsquo;<samp><span class="samp">|</span></samp>&rsquo; in the regular expressions.  The
+the treatment of operator `<samp><span class="samp">|</span></samp>' in the regular expressions.  The
 usual treatment of the operator is to try the first alternative and,
 if the reservation is not possible, the second alternative.  The
 nondeterministic treatment means trying all alternatives, some of them
@@ -477,7 +477,7 @@ can split orthogonal parts of the machine description among several
 automata: but then, since each of these must be stepped independently,
 this does cause a small decrease in the algorithm's performance.</p>
 
- <hr></div>
+ <p><hr></div>
 
  </body></html>
 

@@ -3,7 +3,7 @@
 <title>Nested Symbols - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Cplusplus.html#Cplusplus" title="Cplusplus">
 <link rel="prev" href="Class-Names.html#Class-Names" title="Class Names">
@@ -49,15 +49,15 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Cplusplus.html#Cplusplus">Cplusplus</a>
 <!-- FIXME: Needs example. -->
 
    <p>In stabs, this is sometimes represented by making the name of a symbol
-which contains &lsquo;<samp><span class="samp">::</span></samp>&rsquo;.  Such a pair of colons does not end the name
+which contains `<samp><span class="samp">::</span></samp>'.  Such a pair of colons does not end the name
 of the symbol, the way a single colon would (see <a href="String-Field.html#String-Field">String Field</a>).  I'm
 not sure how consistently used or well thought out this mechanism is. 
 So that a pair of colons in this position always has this meaning,
-&lsquo;<samp><span class="samp">:</span></samp>&rsquo; cannot be used as a symbol descriptor.
+`<samp><span class="samp">:</span></samp>' cannot be used as a symbol descriptor.
 
-   <p>For example, if the string for a stab is &lsquo;<samp><span class="samp">foo::bar::baz:t5=*6</span></samp>&rsquo;,
-then <code>foo::bar::baz</code> is the name of the symbol, &lsquo;<samp><span class="samp">t</span></samp>&rsquo; is the
-symbol descriptor, and &lsquo;<samp><span class="samp">5=*6</span></samp>&rsquo; is the type information.
+   <p>For example, if the string for a stab is `<samp><span class="samp">foo::bar::baz:t5=*6</span></samp>',
+then <code>foo::bar::baz</code> is the name of the symbol, `<samp><span class="samp">t</span></samp>' is the
+symbol descriptor, and `<samp><span class="samp">5=*6</span></samp>' is the type information.
 
    </body></html>
 

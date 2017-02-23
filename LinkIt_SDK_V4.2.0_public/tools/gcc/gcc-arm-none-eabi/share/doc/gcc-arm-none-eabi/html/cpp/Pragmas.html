@@ -3,7 +3,7 @@
 <title>Pragmas - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Line-Control.html#Line-Control" title="Line Control">
 <link rel="next" href="Other-Directives.html#Other-Directives" title="Other Directives">
@@ -55,7 +55,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 
 <h2 class="chapter">7 Pragmas</h2>
 
-<p>The &lsquo;<samp><span class="samp">#pragma</span></samp>&rsquo; directive is the method specified by the C standard
+<p>The `<samp><span class="samp">#pragma</span></samp>' directive is the method specified by the C standard
 for providing additional information to the compiler, beyond what is
 conveyed in the language itself.  Three forms of this directive
 (commonly known as <dfn>pragmas</dfn>) are specified by the 1999 C standard. 
@@ -75,17 +75,17 @@ deprecated in their entirety.  They are not recognized with the
 <code>GCC</code> prefix.  See <a href="Obsolete-Features.html#Obsolete-Features">Obsolete Features</a>.
 
    <p><a name="index-g_t_0040code_007b_005fPragma_007d-100"></a>C99 introduces the <code>_Pragma<!-- /@w --></code> operator.  This feature addresses a
-major problem with &lsquo;<samp><span class="samp">#pragma</span></samp>&rsquo;: being a directive, it cannot be
+major problem with `<samp><span class="samp">#pragma</span></samp>': being a directive, it cannot be
 produced as the result of macro expansion.  <code>_Pragma<!-- /@w --></code> is an
 operator, much like <code>sizeof</code> or <code>defined</code>, and can be embedded
 in a macro.
 
    <p>Its syntax is <code>_Pragma&nbsp;(</code><var>string-literal</var><code>)<!-- /@w --></code>, where
 <var>string-literal</var> can be either a normal or wide-character string
-literal.  It is destringized, by replacing all &lsquo;<samp><span class="samp">\\</span></samp>&rsquo; with a single
-&lsquo;<samp><span class="samp">\</span></samp>&rsquo; and all &lsquo;<samp><span class="samp">\"</span></samp>&rsquo; with a &lsquo;<samp><span class="samp">"</span></samp>&rsquo;.  The result is then
+literal.  It is destringized, by replacing all `<samp><span class="samp">\\</span></samp>' with a single
+`<samp><span class="samp">\</span></samp>' and all `<samp><span class="samp">\"</span></samp>' with a `<samp><span class="samp">"</span></samp>'.  The result is then
 processed as if it had appeared as the right hand side of a
-&lsquo;<samp><span class="samp">#pragma</span></samp>&rsquo; directive.  For example,
+`<samp><span class="samp">#pragma</span></samp>' directive.  For example,
 
 <pre class="smallexample">     _Pragma ("GCC dependency \"parse.y\"")
 </pre>
@@ -97,8 +97,8 @@ same effect could be achieved using macros, for example
 </pre>
    <p>The standard is unclear on where a <code>_Pragma</code> operator can appear. 
 The preprocessor does not accept it within a preprocessing conditional
-directive like &lsquo;<samp><span class="samp">#if</span></samp>&rsquo;.  To be safe, you are probably best keeping it
-out of directives other than &lsquo;<samp><span class="samp">#define</span></samp>&rsquo;, and putting it on a line of
+directive like `<samp><span class="samp">#if</span></samp>'.  To be safe, you are probably best keeping it
+out of directives other than `<samp><span class="samp">#define</span></samp>', and putting it on a line of
 its own.
 
    <p>This manual documents the pragmas which are meaningful to the
@@ -118,7 +118,7 @@ warning message.
 
      <pre class="smallexample">          #pragma GCC dependency "parse.y"
           #pragma GCC dependency "/usr/include/time.h" rerun fixincludes
-</pre>
+     </pre>
      <br><dt><code>#pragma GCC poison</code><a name="index-g_t_0023pragma-GCC-poison-102"></a><dd>Sometimes, there is an identifier that you want to remove completely
 from your program, and make sure that it never creeps back in.  To
 enforce this, you can <dfn>poison</dfn> the identifier with this pragma. 
@@ -128,7 +128,7 @@ after the directive, it is a hard error.  For example,
 
      <pre class="smallexample">          #pragma GCC poison printf sprintf fprintf
           sprintf(some_string, "hello");
-</pre>
+     </pre>
      <p class="noindent">will produce an error.
 
      <p>If a poisoned identifier appears as part of the expansion of a macro
@@ -141,7 +141,7 @@ about system headers defining macros that use it.
      <pre class="smallexample">          #define strrchr rindex
           #pragma GCC poison rindex
           strrchr(some_string, 'h');
-</pre>
+     </pre>
      <p class="noindent">will not produce an error.
 
      <br><dt><code>#pragma GCC system_header</code><a name="index-g_t_0023pragma-GCC-system_005fheader-103"></a><dd>This pragma takes no arguments.  It causes the rest of the code in the
@@ -149,11 +149,11 @@ current file to be treated as if it came from a system header.
 See <a href="System-Headers.html#System-Headers">System Headers</a>.
 
      <br><dt><code>#pragma GCC warning</code><a name="index-g_t_0023pragma-GCC-warning-104"></a><dt><code>#pragma GCC error</code><a name="index-g_t_0023pragma-GCC-error-105"></a><dd><code>#pragma GCC warning "message"</code> causes the preprocessor to issue
-a warning diagnostic with the text &lsquo;<samp><span class="samp">message</span></samp>&rsquo;.  The message
+a warning diagnostic with the text `<samp><span class="samp">message</span></samp>'.  The message
 contained in the pragma must be a single string literal.  Similarly,
 <code>#pragma GCC error "message"</code> issues an error message.  Unlike
-the &lsquo;<samp><span class="samp">#warning</span></samp>&rsquo; and &lsquo;<samp><span class="samp">#error</span></samp>&rsquo; directives, these pragmas can be
-embedded in preprocessor macros using &lsquo;<samp><span class="samp">_Pragma</span></samp>&rsquo;.
+the `<samp><span class="samp">#warning</span></samp>' and `<samp><span class="samp">#error</span></samp>' directives, these pragmas can be
+embedded in preprocessor macros using `<samp><span class="samp">_Pragma</span></samp>'.
 
    </dl>
 

@@ -3,7 +3,7 @@
 <title>Miscellaneous Types - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Types.html#Types" title="Types">
 <link rel="prev" href="Builtin-Types.html#Builtin-Types" title="Builtin Types">
@@ -48,9 +48,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Types.html#Types">Types</a>
      <dl>
 <dt><code>b </code><var>type-information</var><code> ; </code><var>bytes</var><dd>Pascal space type.  This is documented by IBM; what does it mean?
 
-     <p>This use of the &lsquo;<samp><span class="samp">b</span></samp>&rsquo; type descriptor can be distinguished
+     <p>This use of the `<samp><span class="samp">b</span></samp>' type descriptor can be distinguished
 from its use for builtin integral types (see <a href="Builtin-Type-Descriptors.html#Builtin-Type-Descriptors">Builtin Type Descriptors</a>) because the character following the type descriptor is
-always a digit, &lsquo;<samp><span class="samp">(</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">-</span></samp>&rsquo;.
+always a digit, `<samp><span class="samp">(</span></samp>', or `<samp><span class="samp">-</span></samp>'.
 
      <br><dt><code>B </code><var>type-information</var><dd>A volatile-qualified version of <var>type-information</var>.  This is
 a Sun extension.  References and stores to a variable with a
@@ -65,7 +65,7 @@ extension.  A variable with a const-qualified type cannot be modified.
 
      <br><dt><code>M </code><var>type-information</var><code> ; </code><var>length</var><dd>Multiple instance type.  The type seems to composed of <var>length</var>
 repetitions of <var>type-information</var>, for example <code>character*3</code> is
-represented by &lsquo;<samp><span class="samp">M-2;3</span></samp>&rsquo;, where &lsquo;<samp><span class="samp">-2</span></samp>&rsquo; is a reference to a
+represented by `<samp><span class="samp">M-2;3</span></samp>', where `<samp><span class="samp">-2</span></samp>' is a reference to a
 character type (see <a href="Negative-Type-Numbers.html#Negative-Type-Numbers">Negative Type Numbers</a>).  I'm not sure how this
 differs from an array.  This appears to be a Fortran feature. 
 <var>length</var> is a bound, like those in range types; see <a href="Subranges.html#Subranges">Subranges</a>.
@@ -74,7 +74,7 @@ differs from an array.  This appears to be a Fortran feature.
 enumeration or a subrange, and the type is a bitmask whose length is
 specified by the number of elements in <var>type-information</var>.
 
-     <p>In CHILL, if it is a bitstring instead of a set, also use the &lsquo;<samp><span class="samp">S</span></samp>&rsquo;
+     <p>In CHILL, if it is a bitstring instead of a set, also use the `<samp><span class="samp">S</span></samp>'
 type attribute (see <a href="String-Field.html#String-Field">String Field</a>).
 
      <br><dt><code>* </code><var>type-information</var><dd>Pointer to <var>type-information</var>. 

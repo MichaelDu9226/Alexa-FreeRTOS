@@ -3,7 +3,7 @@
 <title>S/390 and zSeries Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="RX-Options.html#RX-Options" title="RX Options">
@@ -56,7 +56,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
 <h4 class="subsection">3.17.36 S/390 and zSeries Options</h4>
 
 <p><a name="index-S_002f390-and-zSeries-Options-2097"></a>
-These are the &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; options defined for the S/390 and zSeries architecture.
+These are the `<samp><span class="samp">-m</span></samp>' options defined for the S/390 and zSeries architecture.
 
      <dl>
 <dt><code>-mhard-float</code><dt><code>-msoft-float</code><dd><a name="index-mhard_002dfloat-2098"></a><a name="index-msoft_002dfloat-2099"></a>Use (do not use) the hardware floating-point instructions and registers
@@ -125,8 +125,8 @@ which does not have this limitation.
      <br><dt><code>-m64</code><dt><code>-m31</code><dd><a name="index-m64-2110"></a><a name="index-m31-2111"></a>When <samp><span class="option">-m31</span></samp> is specified, generate code compliant to the
 GNU/Linux for S/390 ABI.  When <samp><span class="option">-m64</span></samp> is specified, generate
 code compliant to the GNU/Linux for zSeries ABI.  This allows GCC in
-particular to generate 64-bit instructions.  For the &lsquo;<samp><span class="samp">s390</span></samp>&rsquo;
-targets, the default is <samp><span class="option">-m31</span></samp>, while the &lsquo;<samp><span class="samp">s390x</span></samp>&rsquo;
+particular to generate 64-bit instructions.  For the `<samp><span class="samp">s390</span></samp>'
+targets, the default is <samp><span class="option">-m31</span></samp>, while the `<samp><span class="samp">s390x</span></samp>'
 targets default to <samp><span class="option">-m64</span></samp>.
 
      <br><dt><code>-mzarch</code><dt><code>-mesa</code><dd><a name="index-mzarch-2112"></a><a name="index-mesa-2113"></a>When <samp><span class="option">-mzarch</span></samp> is specified, generate code using the
@@ -148,8 +148,8 @@ The default is to not print debug information.
 
      <br><dt><code>-march=</code><var>cpu-type</var><dd><a name="index-march-2118"></a>Generate code that runs on <var>cpu-type</var>, which is the name of a system
 representing a certain processor type.  Possible values for
-<var>cpu-type</var> are &lsquo;<samp><span class="samp">g5</span></samp>&rsquo;, &lsquo;<samp><span class="samp">g6</span></samp>&rsquo;, &lsquo;<samp><span class="samp">z900</span></samp>&rsquo;, &lsquo;<samp><span class="samp">z990</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">z9-109</span></samp>&rsquo;, &lsquo;<samp><span class="samp">z9-ec</span></samp>&rsquo; and &lsquo;<samp><span class="samp">z10</span></samp>&rsquo;. 
+<var>cpu-type</var> are `<samp><span class="samp">g5</span></samp>', `<samp><span class="samp">g6</span></samp>', `<samp><span class="samp">z900</span></samp>', `<samp><span class="samp">z990</span></samp>',
+`<samp><span class="samp">z9-109</span></samp>', `<samp><span class="samp">z9-ec</span></samp>' and `<samp><span class="samp">z10</span></samp>'. 
 When generating code using the instructions available on z/Architecture,
 the default is <samp><span class="option">-march=z900</span></samp>.  Otherwise, the default is
 <samp><span class="option">-march=g5</span></samp>.

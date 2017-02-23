@@ -3,7 +3,7 @@
 <title>addr2line - GNU Binary Utilities</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Binary Utilities">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="c_002b_002bfilt.html#c_002b_002bfilt" title="c++filt">
 <link rel="next" href="nlmconv.html#nlmconv" title="nlmconv">
@@ -64,7 +64,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
      <!-- man end -->
 </pre>
    <!-- man begin DESCRIPTION addr2line -->
-   <p><samp><span class="command">addr2line</span></samp> translates addresses into file names and line numbers. 
+<p><samp><span class="command">addr2line</span></samp> translates addresses into file names and line numbers. 
 Given an address in an executable or an offset in a section of a relocatable
 object, it uses the debugging information to figure out which file name and
 line number are associated with it.
@@ -84,16 +84,16 @@ standard input, and prints the file name and line number for each
 address on standard output.  In this mode, <samp><span class="command">addr2line</span></samp> may be used
 in a pipe to convert dynamically chosen addresses.
 
-   <p>The format of the output is &lsquo;<samp><span class="samp">FILENAME:LINENO</span></samp>&rsquo;.  The file name and
+   <p>The format of the output is `<samp><span class="samp">FILENAME:LINENO</span></samp>'.  The file name and
 line number for each input address is printed on separate lines.
 
-   <p>If the <samp><span class="option">-f</span></samp> option is used, then each &lsquo;<samp><span class="samp">FILENAME:LINENO</span></samp>&rsquo;
-line is preceded by &lsquo;<samp><span class="samp">FUNCTIONNAME</span></samp>&rsquo; which is the name of the
+   <p>If the <samp><span class="option">-f</span></samp> option is used, then each `<samp><span class="samp">FILENAME:LINENO</span></samp>'
+line is preceded by `<samp><span class="samp">FUNCTIONNAME</span></samp>' which is the name of the
 function containing the address.
 
    <p>If the <samp><span class="option">-i</span></samp> option is used and the code at the given address is
 present there because of inlining by the compiler then the
-&lsquo;<samp><span class="samp">{FUNCTIONNAME} FILENAME:LINENO</span></samp>&rsquo; information for the inlining
+`<samp><span class="samp">{FUNCTIONNAME} FILENAME:LINENO</span></samp>' information for the inlining
 function will be displayed afterwards.  This continues recursively
 until there is no more inlining to report.
 
@@ -111,12 +111,12 @@ line number can not be determined, <samp><span class="command">addr2line</span><
 
 <!-- man end -->
 <!-- man begin OPTIONS addr2line -->
-   <p>The long and short forms of options, shown here as alternatives, are
+<p>The long and short forms of options, shown here as alternatives, are
 equivalent.
 
      <dl>
 <dt><samp><span class="env">-a</span></samp><dt><samp><span class="env">--addresses</span></samp><dd>Display the address before the function name, file and line number
-information.  The address is printed with a &lsquo;<samp><span class="samp">0x</span></samp>&rsquo; prefix to easily
+information.  The address is printed with a `<samp><span class="samp">0x</span></samp>' prefix to easily
 identify it.
 
      <br><dt><samp><span class="env">-b </span><var>bfdname</var></samp><dt><samp><span class="env">--target=</span><var>bfdname</var></samp><dd><a name="index-object-code-format-141"></a>Specify that the object-code format for the object files is
@@ -147,9 +147,9 @@ will also be printed.
 
      <br><dt><samp><span class="env">-p</span></samp><dt><samp><span class="env">--pretty-print</span></samp><dd>Make the output more human friendly: each location are printed on one line. 
 If option <samp><span class="option">-i</span></samp> is specified, lines for all enclosing scopes are
-prefixed with &lsquo;<samp><span class="samp">(inlined by)</span></samp>&rsquo;. 
+prefixed with `<samp><span class="samp">(inlined by)</span></samp>'. 
 </dl>
 
 <!-- man end -->
-   </body></html>
+</body></html>
 

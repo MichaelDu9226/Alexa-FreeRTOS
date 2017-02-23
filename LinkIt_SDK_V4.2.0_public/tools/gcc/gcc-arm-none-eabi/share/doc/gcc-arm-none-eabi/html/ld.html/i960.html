@@ -3,7 +3,7 @@
 <title>i960 - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Machine-Dependent.html#Machine-Dependent" title="Machine Dependent">
 <link rel="prev" href="H8_002f300.html#H8_002f300" title="H8/300">
@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Machine-Dependent.html#Machine-Dependen
 <h3 class="section">4.2 <samp><span class="command">ld</span></samp> and the Intel 960 Family</h3>
 
 <p><a name="index-i960-support-572"></a>
-You can use the &lsquo;<samp><span class="samp">-A</span><var>architecture</var></samp>&rsquo; command line option to
+You can use the `<samp><span class="samp">-A</span><var>architecture</var></samp>' command line option to
 specify one of the two-letter names identifying members of the 960
 family; the option specifies the desired output target, and warns of any
 incompatible instructions in the input files.  It also modifies the
@@ -57,9 +57,9 @@ linker's search strategy for archive libraries, to support the use of
 libraries specific to each particular architecture, by including in the
 search loop names suffixed with the string identifying the architecture.
 
-   <p>For example, if your <samp><span class="command">ld</span></samp> command line included &lsquo;<samp><span class="samp">-ACA</span></samp>&rsquo;<!-- /@w --> as
-well as &lsquo;<samp><span class="samp">-ltry</span></samp>&rsquo;<!-- /@w -->, the linker would look (in its built-in search
-paths, and in any paths you specify with &lsquo;<samp><span class="samp">-L</span></samp>&rsquo;) for a library with
+   <p>For example, if your <samp><span class="command">ld</span></samp> command line included `<samp><span class="samp">-ACA</span></samp>'<!-- /@w --> as
+well as `<samp><span class="samp">-ltry</span></samp>'<!-- /@w -->, the linker would look (in its built-in search
+paths, and in any paths you specify with `<samp><span class="samp">-L</span></samp>') for a library with
 the names
 
 <pre class="smallexample">     try
@@ -68,15 +68,15 @@ the names
      libtryca.a
 </pre>
    <p class="noindent">The first two possibilities would be considered in any event; the last
-two are due to the use of &lsquo;<samp><span class="samp">-ACA</span></samp>&rsquo;<!-- /@w -->.
+two are due to the use of `<samp><span class="samp">-ACA</span></samp>'<!-- /@w -->.
 
-   <p>You can meaningfully use &lsquo;<samp><span class="samp">-A</span></samp>&rsquo; more than once on a command line, since
+   <p>You can meaningfully use `<samp><span class="samp">-A</span></samp>' more than once on a command line, since
 the 960 architecture family allows combination of target architectures; each
-use will add another pair of name variants to search for when &lsquo;<samp><span class="samp">-l</span></samp>&rsquo;<!-- /@w -->
+use will add another pair of name variants to search for when `<samp><span class="samp">-l</span></samp>'<!-- /@w -->
 specifies a library.
 
-   <p><a name="index-g_t_0040option_007b_002d_002drelax_007d-on-i960-573"></a><a name="index-relaxing-on-i960-574"></a><samp><span class="command">ld</span></samp> supports the &lsquo;<samp><span class="samp">--relax</span></samp>&rsquo; option for the i960 family.  If
-you specify &lsquo;<samp><span class="samp">--relax</span></samp>&rsquo;, <samp><span class="command">ld</span></samp> finds all <code>balx</code> and
+   <p><a name="index-g_t_0040option_007b_002d_002drelax_007d-on-i960-573"></a><a name="index-relaxing-on-i960-574"></a><samp><span class="command">ld</span></samp> supports the `<samp><span class="samp">--relax</span></samp>' option for the i960 family.  If
+you specify `<samp><span class="samp">--relax</span></samp>', <samp><span class="command">ld</span></samp> finds all <code>balx</code> and
 <code>calx</code> instructions whose targets are within 24 bits, and turns
 them into 24-bit program-counter relative <code>bal</code> and <code>cal</code>
 instructions, respectively.  <samp><span class="command">ld</span></samp> also turns <code>cal</code>
@@ -84,11 +84,11 @@ instructions into <code>bal</code> instructions when it determines that the
 target subroutine is a leaf routine (that is, the target subroutine does
 not itself call any subroutines).
 
-   <p><a name="index-Cortex_002dA8-erratum-workaround-575"></a><a name="index-g_t_002d_002dfix_002dcortex_002da8-576"></a><a name="index-g_t_002d_002dno_002dfix_002dcortex_002da8-577"></a>The &lsquo;<samp><span class="samp">--fix-cortex-a8</span></samp>&rsquo; switch enables a link-time workaround for an erratum in certain Cortex-A8 processors.  The workaround is enabled by default if you are targeting the ARM v7-A architecture profile.  It can be enabled otherwise by specifying &lsquo;<samp><span class="samp">--fix-cortex-a8</span></samp>&rsquo;, or disabled unconditionally by specifying &lsquo;<samp><span class="samp">--no-fix-cortex-a8</span></samp>&rsquo;.
+   <p><a name="index-Cortex_002dA8-erratum-workaround-575"></a><a name="index-g_t_002d_002dfix_002dcortex_002da8-576"></a><a name="index-g_t_002d_002dno_002dfix_002dcortex_002da8-577"></a>The `<samp><span class="samp">--fix-cortex-a8</span></samp>' switch enables a link-time workaround for an erratum in certain Cortex-A8 processors.  The workaround is enabled by default if you are targeting the ARM v7-A architecture profile.  It can be enabled otherwise by specifying `<samp><span class="samp">--fix-cortex-a8</span></samp>', or disabled unconditionally by specifying `<samp><span class="samp">--no-fix-cortex-a8</span></samp>'.
 
    <p>The erratum only affects Thumb-2 code.  Please contact ARM for further details.
 
-   <p><a name="index-g_t_002d_002dmerge_002dexidx_002dentries-578"></a><a name="index-g_t_002d_002dno_002dmerge_002dexidx_002dentries-579"></a>The &lsquo;<samp><span class="samp">--no-merge-exidx-entries</span></samp>&rsquo; switch disables the merging of adjacent exidx entries in debuginfo.
+   <p><a name="index-g_t_002d_002dmerge_002dexidx_002dentries-578"></a><a name="index-g_t_002d_002dno_002dmerge_002dexidx_002dentries-579"></a>The `<samp><span class="samp">--no-merge-exidx-entries</span></samp>' switch disables the merging of adjacent exidx entries in debuginfo.
 
    </body></html>
 

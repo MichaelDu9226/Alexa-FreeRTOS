@@ -3,7 +3,7 @@
 <title>Go - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Supported-Languages.html#Supported-Languages" title="Supported Languages">
 <link rel="prev" href="D.html#D" title="D">
@@ -64,12 +64,12 @@ specifying global variables and functions.
           func main () {
             // ...
           }
-</pre>
+     </pre>
      <p>When stopped inside <code>main</code> either of these work:
 
      <pre class="example">          (gdb) p myglob
           (gdb) p main.myglob
-</pre>
+     </pre>
      <p><a name="index-builtin-Go-types-899"></a><br><dt><code>Builtin Go types</code><dd>The <code>string</code> type is recognized by <span class="sc">gdb</span> and is printed
 as a string.
 

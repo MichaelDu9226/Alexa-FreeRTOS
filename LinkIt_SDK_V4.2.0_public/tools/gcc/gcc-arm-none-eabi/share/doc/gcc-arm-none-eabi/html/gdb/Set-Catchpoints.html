@@ -3,7 +3,7 @@
 <title>Set Catchpoints - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Breakpoints.html#Breakpoints" title="Breakpoints">
 <link rel="prev" href="Set-Watchpoints.html#Set-Watchpoints" title="Set Watchpoints">
@@ -95,10 +95,10 @@ GNU and Unix systems, you can find the full list of valid syscall
 names on <samp><span class="file">/usr/include/asm/unistd.h</span></samp>.
 
           <!-- For MS-Windows, the syscall names and the corresponding numbers -->
-          <!-- can be found, e.g., on this URL: -->
-          <!-- http://www.metasploit.com/users/opcode/syscalls.html -->
-          <!-- but we don't support Windows syscalls yet. -->
-          <p>Normally, <span class="sc">gdb</span> knows in advance which syscalls are valid for
+<!-- can be found, e.g., on this URL: -->
+<!-- http://www.metasploit.com/users/opcode/syscalls.html -->
+<!-- but we don't support Windows syscalls yet. -->
+<p>Normally, <span class="sc">gdb</span> knows in advance which syscalls are valid for
 each OS, so you can use the <span class="sc">gdb</span> command-line completion
 facilities (see <a href="Completion.html#Completion">command completion</a>) to list the
 available choices.
@@ -128,7 +128,7 @@ arguments to it:
                Catchpoint 1 (returned from syscall 'close'), \
                	0xffffe424 in __kernel_vsyscall ()
                (gdb)
-</pre>
+          </pre>
           <p>Here is an example of catching a system call by name:
 
           <pre class="smallexample">               (gdb) catch syscall chroot
@@ -144,7 +144,7 @@ arguments to it:
                Catchpoint 1 (returned from syscall 'chroot'), \
                	0xffffe424 in __kernel_vsyscall ()
                (gdb)
-</pre>
+          </pre>
           <p>An example of specifying a system call numerically.  In the case
 below, the syscall number has a corresponding entry in the XML
 file, so <span class="sc">gdb</span> finds its name and prints it:
@@ -161,7 +161,7 @@ file, so <span class="sc">gdb</span> finds its name and prints it:
                
                Program exited normally.
                (gdb)
-</pre>
+          </pre>
           <p>However, there can be situations when there is no corresponding name
 in XML file for that syscall number.  In this case, <span class="sc">gdb</span> prints
 a warning message saying that it was not able to find the syscall name,
@@ -171,8 +171,8 @@ but the catchpoint will be set anyway.  See the example below:
                warning: The number '764' does not represent a known syscall.
                Catchpoint 2 (syscall 764)
                (gdb)
-</pre>
-          <p>If you configure <span class="sc">gdb</span> using the &lsquo;<samp><span class="samp">--without-expat</span></samp>&rsquo; option,
+          </pre>
+          <p>If you configure <span class="sc">gdb</span> using the `<samp><span class="samp">--without-expat</span></samp>' option,
 it will not be able to display syscall names.  Also, if your
 architecture does not have an XML file describing its system calls,
 you will not be able to see the syscall names.  It is important to
@@ -185,7 +185,7 @@ name database.  In either case, you will see a warning like this:
                GDB will not be able to display syscall names.
                Catchpoint 1 (syscall)
                (gdb)
-</pre>
+          </pre>
           <p>Of course, the file name will change depending on your architecture and system.
 
           <p>Still using the example above, you can also try to catch a syscall by its
@@ -193,7 +193,7 @@ number.  In this case, you would see something like:
 
           <pre class="smallexample">               (gdb) catch syscall 252
                Catchpoint 1 (syscall(s) 252)
-</pre>
+          </pre>
           <p>Again, in this case <span class="sc">gdb</span> would not be able to display syscall's names.
 
           <br><dt><code>fork</code><dd>A call to <code>fork</code>.  This is currently only available for HP-UX
@@ -206,13 +206,13 @@ and <span class="sc">gnu</span>/Linux.
 given, then the catchpoint will stop only if the regular expression
 matches one of the affected libraries.
 
-          <br><dt><code>signal </code><span class="roman">[</span><var>signal</var><code>... </code><span class="roman">|</span><code> &lsquo;</code><samp><span class="samp">all</span></samp><code>&rsquo;</code><span class="roman">]</span><dd>The delivery of a signal.
+          <br><dt><code>signal </code><span class="roman">[</span><var>signal</var><code>... </code><span class="roman">|</span><code> `<samp></code><span class="samp">all</span><code></samp>'</code><span class="roman">]</span><dd>The delivery of a signal.
 
           <p>With no arguments, this catchpoint will catch any signal that is not
 used internally by <span class="sc">gdb</span>, specifically, all signals except
-&lsquo;<samp><span class="samp">SIGTRAP</span></samp>&rsquo; and &lsquo;<samp><span class="samp">SIGINT</span></samp>&rsquo;.
+`<samp><span class="samp">SIGTRAP</span></samp>' and `<samp><span class="samp">SIGINT</span></samp>'.
 
-          <p>With the argument &lsquo;<samp><span class="samp">all</span></samp>&rsquo;, all signals, including those used by
+          <p>With the argument `<samp><span class="samp">all</span></samp>', all signals, including those used by
 <span class="sc">gdb</span>, will be caught.  This argument cannot be used with other
 signal names.
 

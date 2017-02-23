@@ -3,7 +3,7 @@
 <title>Conformant Arrays - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Parameters.html#Parameters" title="Parameters">
 <link rel="prev" href="Reference-Parameters.html#Reference-Parameters" title="Reference Parameters">
@@ -48,10 +48,10 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Parameters.html#Parameters">Parameters<
 <p>Conformant arrays are a feature of Modula-2, and perhaps other
 languages, in which the size of an array parameter is not known to the
 called function until run-time.  Such parameters have two stabs: a
-&lsquo;<samp><span class="samp">x</span></samp>&rsquo; for the array itself, and a &lsquo;<samp><span class="samp">C</span></samp>&rsquo;, which represents the size
-of the array.  The value of the &lsquo;<samp><span class="samp">x</span></samp>&rsquo; stab is the offset in the
+`<samp><span class="samp">x</span></samp>' for the array itself, and a `<samp><span class="samp">C</span></samp>', which represents the size
+of the array.  The value of the `<samp><span class="samp">x</span></samp>' stab is the offset in the
 argument list where the address of the array is stored (it this right? 
-it is a guess); the value of the &lsquo;<samp><span class="samp">C</span></samp>&rsquo; stab is the offset in the
+it is a guess); the value of the `<samp><span class="samp">C</span></samp>' stab is the offset in the
 argument list where the size of the array (in elements? in bytes?) is
 stored.
 

@@ -3,7 +3,7 @@
 <title>MN10300 Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="MMIX-Options.html#MMIX-Options" title="MMIX Options">
@@ -75,8 +75,8 @@ is the default.
 
      <br><dt><code>-mtune=</code><var>cpu-type</var><dd><a name="index-mtune-1869"></a>Use the timing characteristics of the indicated CPU type when
 scheduling instructions.  This does not change the targeted processor
-type.  The CPU type must be one of &lsquo;<samp><span class="samp">mn10300</span></samp>&rsquo;, &lsquo;<samp><span class="samp">am33</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">am33-2</span></samp>&rsquo; or &lsquo;<samp><span class="samp">am34</span></samp>&rsquo;.
+type.  The CPU type must be one of `<samp><span class="samp">mn10300</span></samp>', `<samp><span class="samp">am33</span></samp>',
+`<samp><span class="samp">am33-2</span></samp>' or `<samp><span class="samp">am34</span></samp>'.
 
      <br><dt><code>-mreturn-pointer-on-d0</code><dd><a name="index-mreturn_002dpointer_002don_002dd0-1870"></a>When generating a function that returns a pointer, return the pointer
 in both <code>a0</code> and <code>d0</code>.  Otherwise, the pointer is returned
@@ -93,20 +93,20 @@ has an effect when used on the command line for the final link step.
      <p>This option makes symbolic debugging impossible.
 
      <br><dt><code>-mliw</code><dd><a name="index-mliw-1873"></a>Allow the compiler to generate <em>Long Instruction Word</em>
-instructions if the target is the &lsquo;<samp><span class="samp">AM33</span></samp>&rsquo; or later.  This is the
-default.  This option defines the preprocessor macro &lsquo;<samp><span class="samp">__LIW__</span></samp>&rsquo;.
+instructions if the target is the `<samp><span class="samp">AM33</span></samp>' or later.  This is the
+default.  This option defines the preprocessor macro `<samp><span class="samp">__LIW__</span></samp>'.
 
      <br><dt><code>-mnoliw</code><dd><a name="index-mnoliw-1874"></a>Do not allow the compiler to generate <em>Long Instruction Word</em>
 instructions.  This option defines the preprocessor macro
-&lsquo;<samp><span class="samp">__NO_LIW__</span></samp>&rsquo;.
+`<samp><span class="samp">__NO_LIW__</span></samp>'.
 
      <br><dt><code>-msetlb</code><dd><a name="index-msetlb-1875"></a>Allow the compiler to generate the <em>SETLB</em> and <em>Lcc</em>
-instructions if the target is the &lsquo;<samp><span class="samp">AM33</span></samp>&rsquo; or later.  This is the
-default.  This option defines the preprocessor macro &lsquo;<samp><span class="samp">__SETLB__</span></samp>&rsquo;.
+instructions if the target is the `<samp><span class="samp">AM33</span></samp>' or later.  This is the
+default.  This option defines the preprocessor macro `<samp><span class="samp">__SETLB__</span></samp>'.
 
      <br><dt><code>-mnosetlb</code><dd><a name="index-mnosetlb-1876"></a>Do not allow the compiler to generate <em>SETLB</em> or <em>Lcc</em>
 instructions.  This option defines the preprocessor macro
-&lsquo;<samp><span class="samp">__NO_SETLB__</span></samp>&rsquo;.
+`<samp><span class="samp">__NO_SETLB__</span></samp>'.
 
  </dl>
 

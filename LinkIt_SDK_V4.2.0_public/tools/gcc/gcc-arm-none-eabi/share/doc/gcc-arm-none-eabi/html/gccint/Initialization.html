@@ -3,7 +3,7 @@
 <title>Initialization - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Assembler-Format.html#Assembler-Format" title="Assembler Format">
 <link rel="prev" href="Label-Output.html#Label-Output" title="Label Output">
@@ -92,10 +92,10 @@ list; destructors in forward order.
  <p>The best way to handle static constructors works only for object file
 formats which provide arbitrarily-named sections.  A section is set
 aside for a list of constructors, and another for a list of destructors. 
-Traditionally these are called &lsquo;<samp><span class="samp">.ctors</span></samp>&rsquo; and &lsquo;<samp><span class="samp">.dtors</span></samp>&rsquo;.  Each
+Traditionally these are called `<samp><span class="samp">.ctors</span></samp>' and `<samp><span class="samp">.dtors</span></samp>'.  Each
 object file that defines an initialization function also puts a word in
 the constructor section to point to that function.  The linker
-accumulates all these words into one contiguous &lsquo;<samp><span class="samp">.ctors</span></samp>&rsquo; section. 
+accumulates all these words into one contiguous `<samp><span class="samp">.ctors</span></samp>' section. 
 Termination functions are handled similarly.
 
  <p>This method will be chosen as the default by <samp><span class="file">target-def.h</span></samp> if
@@ -139,7 +139,7 @@ in <samp><span class="file">libgcc2.c</span></samp> and runs the global construc
 two variants.  In the simplest variant, the GNU linker (GNU <code>ld</code>)
 and an `a.out' format must be used.  In this case,
 <code>TARGET_ASM_CONSTRUCTOR</code> is defined to produce a <code>.stabs</code>
-entry of type &lsquo;<samp><span class="samp">N_SETT</span></samp>&rsquo;, referencing the name <code>__CTOR_LIST__</code>,
+entry of type `<samp><span class="samp">N_SETT</span></samp>', referencing the name <code>__CTOR_LIST__</code>,
 and with the address of the void function containing the initialization
 code as its value.  The GNU linker recognizes this as a request to add
 the value to a <dfn>set</dfn>; the values are accumulated, and are eventually

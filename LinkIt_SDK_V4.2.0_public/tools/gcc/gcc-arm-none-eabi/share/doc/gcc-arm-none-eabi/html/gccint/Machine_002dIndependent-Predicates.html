@@ -3,7 +3,7 @@
 <title>Machine-Independent Predicates - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Predicates.html#Predicates" title="Predicates">
 <link rel="next" href="Defining-Predicates.html#Defining-Predicates" title="Defining Predicates">
@@ -96,12 +96,12 @@ instruction operands on a RISC machine.
 a limitation in the machine-description reader.
 
      <pre class="smallexample">          (match_operand <var>n</var> "pmode_register_operand" <var>constraint</var>)
-</pre>
+     </pre>
       <p class="noindent">means exactly what
 
      <pre class="smallexample">          (match_operand:P <var>n</var> "register_operand" <var>constraint</var>)
-</pre>
-      <p class="noindent">would mean, if the machine-description reader accepted &lsquo;<samp><span class="samp">:P</span></samp>&rsquo;
+     </pre>
+      <p class="noindent">would mean, if the machine-description reader accepted `<samp><span class="samp">:P</span></samp>'
 mode suffixes.  Unfortunately, it cannot, because <code>Pmode</code> is an
 alias for some other mode, and might vary with machine-specific
 options.  See <a href="Misc.html#Misc">Misc</a>. 
@@ -129,7 +129,7 @@ it should not be used directly.
 valid expression for the <em>address</em> of a quantity of mode
 <var>mode</var>, again determined by the weak form of
 <code>GO_IF_LEGITIMATE_ADDRESS</code>.  To first order, if
-&lsquo;<samp><span class="samp">(mem:</span><var>mode</var><span class="samp">&nbsp;(</span><var>exp</var><span class="samp">))<!-- /@w --></span></samp>&rsquo; is acceptable to
+`<samp><span class="samp">(mem:</span><var>mode</var><span class="samp">&nbsp;(</span><var>exp</var><span class="samp">))<!-- /@w --></span></samp>' is acceptable to
 <code>memory_operand</code>, then <var>exp</var> is acceptable to
 <code>address_operand</code>.  Note that <var>exp</var> does not necessarily have
 the mode <var>mode</var>. 

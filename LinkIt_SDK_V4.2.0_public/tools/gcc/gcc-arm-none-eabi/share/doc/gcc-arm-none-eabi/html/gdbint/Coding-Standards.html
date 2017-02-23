@@ -3,7 +3,7 @@
 <title>Coding Standards - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Support-Libraries.html#Support-Libraries" title="Support Libraries">
 <link rel="next" href="Misc-Guidelines.html#Misc-Guidelines" title="Misc Guidelines">
@@ -82,7 +82,7 @@ function definition should have its name in column zero.
      }
 </pre>
    <p><em>Pragmatics: This simplifies scripting.  Function definitions can
-be found using &lsquo;</em><samp><span class="samp">^function-name</span></samp><em>&rsquo;.</em>
+be found using `<samp></em><span class="samp">^function-name</span><em></samp>'.</em>
 
    <p>There must be a space between a function or macro name and the opening
 parenthesis of its argument list (except for macro definitions, as
@@ -182,8 +182,8 @@ are just as hard to understand as a single thousand-line function.
 protected with parentheses.)
 
    <p><a name="index-types-459"></a>
-Declarations like &lsquo;<samp><span class="samp">struct foo *</span></samp>&rsquo; should be used in preference to
-declarations like &lsquo;<samp><span class="samp">typedef struct foo { ... } *foo_ptr</span></samp>&rsquo;.
+Declarations like `<samp><span class="samp">struct foo *</span></samp>' should be used in preference to
+declarations like `<samp><span class="samp">typedef struct foo { ... } *foo_ptr</span></samp>'.
 
    <p>Zero constant (<code>0</code>) is not interchangeable with a null pointer
 constant (<code>NULL</code>) anywhere.  <span class="sc">gcc</span> does not give a warning for
@@ -228,11 +228,11 @@ unique.  These requirements apply to both source and generated files.
 
    <p><em>Pragmatics: The core of </em><span class="sc">gdb</span><em> must be buildable on many
 platforms including DJGPP and MacOS/HFS.  Every time an unfriendly file
-is introduced to the build process both </em><samp><span class="file">Makefile.in</span></samp><em> and
-</em><samp><span class="file">configure.in</span></samp><em> need to be modified accordingly.  Compare the
-convoluted conversion process needed to transform </em><samp><span class="file">COPYING</span></samp><em> into
-</em><samp><span class="file">copying.c</span></samp><em> with the conversion needed to transform
-</em><samp><span class="file">version.in</span></samp><em> into </em><samp><span class="file">version.c</span></samp><em>.</em>
+is introduced to the build process both <samp></em><span class="file">Makefile.in</span><em></samp> and
+<samp></em><span class="file">configure.in</span><em></samp> need to be modified accordingly.  Compare the
+convoluted conversion process needed to transform <samp></em><span class="file">COPYING</span><em></samp> into
+<samp></em><span class="file">copying.c</span><em></samp> with the conversion needed to transform
+<samp></em><span class="file">version.in</span><em></samp> into <samp></em><span class="file">version.c</span><em></samp>.</em>
 
    <p>Any file non 8.3 compliant file (that is not used when building the core
 of <span class="sc">gdb</span>) must be added to <samp><span class="file">gdb/config/djgpp/fnchange.lst</span></samp>.
@@ -247,7 +247,7 @@ the compiler, or the host; they should include only system headers; they
 should refer only to system types.  They may be shared between multiple
 programs, e.g. <span class="sc">gdb</span> and <span class="sc">gdbserver</span>.
 
-   <p>For other files &lsquo;<samp><span class="samp">-</span></samp>&rsquo; is used as the separator.
+   <p>For other files `<samp><span class="samp">-</span></samp>' is used as the separator.
 
 <h4 class="subsection">16.1.7 Include Files</h4>
 
@@ -297,7 +297,7 @@ They exist mainly for consistency with the <code>C</code> standards.
 
 <!-- It is expected that there are a few more exceptions, -->
 <!-- so we use itemize here. -->
-     <ul>
+<ul>
 <li>Use <code>FIXME</code> instead of <code>TODO</code>.
 
    </ul>

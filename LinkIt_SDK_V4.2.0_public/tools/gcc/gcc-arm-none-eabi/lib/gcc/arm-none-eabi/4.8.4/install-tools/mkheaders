@@ -53,7 +53,7 @@ if [ x$1 != x ] ; then
   prefix=$1
   shift
 else
-  prefix=/home/build/work/GCC-4-8-build/install-native
+  prefix=/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/install-native
 fi
 
 # Allow for alternate isysroot in which to find headers
@@ -68,7 +68,7 @@ fi
 exec_prefix=${prefix}
 # Directory in which to put the directories used by the compiler.
 libdir=${exec_prefix}/lib
-libexecdir=/home/build/work/GCC-4-8-build/install-native/lib
+libexecdir=/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/install-native/lib
 # Directory in which the compiler finds libraries, etc.
 libsubdir=${libdir}/gcc/${target_noncanonical}/${version}
 # Directory in which the compiler finds executables

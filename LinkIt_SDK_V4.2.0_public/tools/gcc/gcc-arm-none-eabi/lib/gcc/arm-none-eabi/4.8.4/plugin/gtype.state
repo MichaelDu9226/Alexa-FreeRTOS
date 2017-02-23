@@ -6,7 +6,7 @@
 
 (!version  "4.8.4 20140725 (release) [ARM/embedded-4_8-branch revision 213147]")
 
-(!srcdir  "/home/build/work/GCC-4-8-build/src/gcc/gcc")
+(!srcdir  "/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc")
 
 (!languages 9 ada c cp fortran go java lto objc objcp)
 
@@ -330,12 +330,12 @@ nil )
 (!srcfileloc  "tree.h" 437)
 nil )
 (!pair  "u"
-(!type union 12 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/tree.h:439"
+(!type union 12 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/tree.h:439"
 (!srcfileloc  "tree.h" 472)
 
 (!fields 3 
 (!pair  "bits"
-(!type struct 13 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/tree.h:442"
+(!type struct 13 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/tree.h:442"
 (!srcfileloc  "tree.h" 464)
 
 (!fields 15 
@@ -8070,7 +8070,7 @@ nil )
 (!srcfileloc  "gimple.h" 285)
 nil )
 (!pair  "u"
-(!type union 323 nil  gc_used "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/gimple.h:288"
+(!type union 323 nil  gc_used "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/gimple.h:288"
 (!srcfileloc  "gimple.h" 291)
 
 (!fields 2 
@@ -8341,7 +8341,7 @@ nil )
 )
 )
 (!pair  "loc"
-(!type union 336 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/tree.h:1960"
+(!type union 336 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/tree.h:1960"
 (!srcfileloc  "tree.h" 1960)
 
 (!fields 2 
@@ -8988,7 +8988,7 @@ nil 511 nil )
 )
 )
 (!pair  "x"
-(!type struct 361 nil  gc_used "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/basic-block.h:199"
+(!type struct 361 nil  gc_used "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/basic-block.h:199"
 (!srcfileloc  "basic-block.h" 202)
 
 (!fields 2 
@@ -15774,7 +15774,7 @@ nil )
 
 (!fields 11 
 (!pair  "u"
-(!type union 586 nil  gc_used "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/c/c-decl.c:188"
+(!type union 586 nil  gc_used "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/c/c-decl.c:188"
 (!srcfileloc  "c/c-decl.c" 191)
 
 (!fields 2 
@@ -17014,7 +17014,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 649 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/java/expr.c:2058"nil 
+(!type struct 649 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/java/expr.c:2058"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -17151,11 +17151,11 @@ nil )
 nil ))
 nil 8 nil )
 
-(!type struct 659 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/fortran/trans.h:334"nil 
+(!type struct 659 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/fortran/trans.h:334"nil 
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 660 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/fortran/trans.h:322"nil 
+(!type struct 660 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/fortran/trans.h:322"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -17179,7 +17179,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 666 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/fortran/trans.h:31"nil 
+(!type struct 666 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/fortran/trans.h:31"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -18516,7 +18516,7 @@ nil ))
 
 (!type already_seen 112)
 
-(!type struct 755 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/c/c-parser.c:5589"nil 
+(!type struct 755 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/c/c-parser.c:5589"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -18627,7 +18627,7 @@ nil 130 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 761 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/c-family/c-pragma.c:1160"nil 
+(!type struct 761 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/c-family/c-pragma.c:1160"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -19200,7 +19200,7 @@ nil ))
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 817 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/ada/gcc-interface/decl.c:172"nil 
+(!type struct 817 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/ada/gcc-interface/decl.c:172"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -19903,7 +19903,7 @@ nil 0 nil )
 nil ))
 nil 511 nil )
 
-(!type struct 895 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/lto-streamer.h:451"nil 
+(!type struct 895 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/lto-streamer.h:451"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -19915,7 +19915,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 898 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/lto-streamer.h:426"nil 
+(!type struct 898 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/lto-streamer.h:426"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -21288,7 +21288,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 992 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/config/arm/arm.c:28019"nil 
+(!type struct 992 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/config/arm/arm.c:28019"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -21296,15 +21296,15 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 994 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/config/arm/arm.c:21522"nil 
+(!type struct 994 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/config/arm/arm.c:21522"nil 
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 995 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/config/arm/arm.c:2414"nil 
+(!type struct 995 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/config/arm/arm.c:2414"nil 
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 996 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/config/arm/arm.c:1436"nil 
+(!type struct 996 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/config/arm/arm.c:1436"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -21532,7 +21532,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type union 1036 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/tree-eh.c:41"nil 
+(!type union 1036 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/tree-eh.c:41"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -21544,7 +21544,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1039 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/tree-flow.h:571"nil 
+(!type struct 1039 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/tree-flow.h:571"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -21593,7 +21593,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1047 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/tree-flow.h:103"nil 
+(!type struct 1047 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/tree-flow.h:103"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -21685,7 +21685,7 @@ nil 0 nil )
 
 (!type already_seen 312)
 
-(!type struct 1053 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/gimple.h:134"nil 
+(!type struct 1053 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/gimple.h:134"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -21704,11 +21704,11 @@ nil ))
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1056 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/varasm.c:4712"nil 
+(!type struct 1056 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/varasm.c:4712"nil 
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1057 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/varasm.c:4464"nil 
+(!type struct 1057 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/varasm.c:4464"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -21801,7 +21801,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type union 1071 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/mcf.c:344"nil 
+(!type union 1071 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/mcf.c:344"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -22624,7 +22624,7 @@ nil ))
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1163 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/dwarf2cfi.c:192"nil 
+(!type struct 1163 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/dwarf2cfi.c:192"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -22632,7 +22632,7 @@ nil 0 nil )
 (!type pointer 1165 nil  gc_unused
 (!type already_seen 1164)
 )
- gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/dwarf2cfi.c:98"nil 
+ gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/dwarf2cfi.c:98"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -23131,11 +23131,11 @@ nil 511 nil )
 
 (!type already_seen 932)
 
-(!type struct 1222 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/cgraph.h:363"nil 
+(!type struct 1222 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/cgraph.h:363"nil 
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1223 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/cgraph.h:356"nil 
+(!type struct 1223 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/cgraph.h:356"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -23221,7 +23221,7 @@ nil 511 nil )
 
 (!type already_seen 912)
 
-(!type struct 1230 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/basic-block.h:574"nil 
+(!type struct 1230 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/basic-block.h:574"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -23269,7 +23269,7 @@ nil 0 nil )
 
 (!type already_seen 870)
 
-(!type struct 1238 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/cfgloop.h:544"nil 
+(!type struct 1238 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/cfgloop.h:544"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -24188,7 +24188,7 @@ nil 511 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1288 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/tree.h:5525"nil 
+(!type struct 1288 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/tree.h:5525"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -24745,7 +24745,7 @@ nil 511 nil )
 
 (!type already_seen 259)
 
-(!type struct 1307 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/rtl.h:116"nil 
+(!type struct 1307 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/rtl.h:116"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -24803,7 +24803,7 @@ nil ))
 )
 511 nil )
 
-(!type struct 1313 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/bitmap.h:316"nil 
+(!type struct 1313 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/bitmap.h:316"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -24817,7 +24817,7 @@ nil 0 nil )
 
 (!type already_seen 1209)
 
-(!type struct 1314 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/config/arm/arm.h:1540"nil 
+(!type struct 1314 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/config/arm/arm.h:1540"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -24893,11 +24893,11 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1327 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/../libcpp/include/cpplib.h:984"nil 
+(!type struct 1327 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/../libcpp/include/cpplib.h:984"nil 
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1328 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/../libcpp/include/cpplib.h:973"nil 
+(!type struct 1328 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/../libcpp/include/cpplib.h:973"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -24951,7 +24951,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1337 nil  gc_unused "anonymous:/home/build/work/GCC-4-8-build/src/gcc/gcc/../libcpp/include/line-map.h:627"nil 
+(!type struct 1337 nil  gc_unused "anonymous:/Users/build/GCC-4-8-build/gcc-arm-none-eabi-4_8-2014q3-20140805/src/gcc/gcc/../libcpp/include/line-map.h:627"nil 
 (!fields 0 )
 nil 0 nil )
 

@@ -3,7 +3,7 @@
 <title>Machine Code - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Source.html#Source" title="Source">
 <link rel="prev" href="Source-Path.html#Source-Path" title="Source Path">
@@ -77,7 +77,7 @@ the object code for the first line of function
      Line 926 of "builtin.c" starts at pc 0x63e4 and ends at 0x6404.
 </pre>
    <p><a name="index-g_t_0040code_007b_0024_005f_007d-and-_0040code_007binfo-line_007d-510"></a><a name="index-g_t_0040code_007bx_007d-command_002c-default-address-511"></a><a name="index-x_0040r_007b_0028examine_0029_002c-and_007d-info-line-512"></a>After <code>info line</code>, the default address for the <code>x</code> command
-is changed to the starting address of the line, so that &lsquo;<samp><span class="samp">x/i</span></samp>&rsquo; is
+is changed to the starting address of the line, so that `<samp><span class="samp">x/i</span></samp>' is
 sufficient to begin examining the machine code (see <a href="Memory.html#Memory">Examining Memory</a>).  Also, this address is saved as the value of the
 convenience variable <code>$_</code> (see <a href="Convenience-Vars.html#Convenience-Vars">Convenience Variables</a>).
 
@@ -108,7 +108,7 @@ arguments specify a range of addresses to dump, in one of two forms:
 printed (since there could be several functions in the given range).
 
      <p>The argument(s) can be any expression yielding a numeric value, such as
-&lsquo;<samp><span class="samp">0x32c4</span></samp>&rsquo;, &lsquo;<samp><span class="samp">&amp;main+10</span></samp>&rsquo; or &lsquo;<samp><span class="samp">$pc - 8</span></samp>&rsquo;.
+`<samp><span class="samp">0x32c4</span></samp>', `<samp><span class="samp">&amp;main+10</span></samp>' or `<samp><span class="samp">$pc - 8</span></samp>'.
 
      <p>If the range of memory being disassembled contains current program counter,
 the instruction at that location is shown with a <code>=&gt;</code> marker. 
@@ -165,8 +165,8 @@ program is stopped just after function prologue:
 </pre>
    <p>Addresses cannot be specified as a linespec (see <a href="Specify-Location.html#Specify-Location">Specify Location</a>). 
 So, for example, if you want to disassemble function <code>bar</code>
-in file <samp><span class="file">foo.c</span></samp>, you must type &lsquo;<samp><span class="samp">disassemble 'foo.c'::bar</span></samp>&rsquo;
-and not &lsquo;<samp><span class="samp">disassemble foo.c:bar</span></samp>&rsquo;.
+in file <samp><span class="file">foo.c</span></samp>, you must type `<samp><span class="samp">disassemble 'foo.c'::bar</span></samp>'
+and not `<samp><span class="samp">disassemble foo.c:bar</span></samp>'.
 
    <p>Some architectures have more than one commonly-used set of instruction
 mnemonics or other syntax.

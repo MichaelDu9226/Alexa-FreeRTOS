@@ -3,7 +3,7 @@
 <title>Expressions - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Insn-Attributes.html#Insn-Attributes" title="Insn Attributes">
 <link rel="prev" href="Defining-Attributes.html#Defining-Attributes" title="Defining Attributes">
@@ -71,9 +71,9 @@ must be non-negative.
 overrides on specific instructions (see <a href="Tagging-Insns.html#Tagging-Insns">Tagging Insns</a>).
 
      <p><a name="index-g_t_0040code_007bconst_005fstring_007d-and-attributes-3667"></a><br><dt><code>(const_string </code><var>value</var><code>)</code><dd>The string <var>value</var> specifies a constant attribute value. 
-If <var>value</var> is specified as &lsquo;<samp><span class="samp">"*"</span></samp>&rsquo;, it means that the default value of
+If <var>value</var> is specified as `<samp><span class="samp">"*"</span></samp>', it means that the default value of
 the attribute is to be used for the insn containing this expression. 
-&lsquo;<samp><span class="samp">"*"</span></samp>&rsquo; obviously cannot be used in the <var>default</var> expression
+`<samp><span class="samp">"*"</span></samp>' obviously cannot be used in the <var>default</var> expression
 of a <code>define_attr</code>.
 
      <p>If the attribute whose value is being specified is numeric, <var>value</var>
@@ -126,7 +126,7 @@ so there is no need to explicitly convert the expression into a boolean
 
      <pre class="smallexample">          (match_test "x &amp; 2")
           (match_test "(x &amp; 2) != 0")
-</pre>
+     </pre>
      <p><a name="index-g_t_0040code_007ble_007d-and-attributes-3676"></a><a name="index-g_t_0040code_007bleu_007d-and-attributes-3677"></a><a name="index-g_t_0040code_007blt_007d-and-attributes-3678"></a><a name="index-g_t_0040code_007bgt_007d-and-attributes-3679"></a><a name="index-g_t_0040code_007bgtu_007d-and-attributes-3680"></a><a name="index-g_t_0040code_007bge_007d-and-attributes-3681"></a><a name="index-g_t_0040code_007bgeu_007d-and-attributes-3682"></a><a name="index-g_t_0040code_007bne_007d-and-attributes-3683"></a><a name="index-g_t_0040code_007beq_007d-and-attributes-3684"></a><a name="index-g_t_0040code_007bplus_007d-and-attributes-3685"></a><a name="index-g_t_0040code_007bminus_007d-and-attributes-3686"></a><a name="index-g_t_0040code_007bmult_007d-and-attributes-3687"></a><a name="index-g_t_0040code_007bdiv_007d-and-attributes-3688"></a><a name="index-g_t_0040code_007bmod_007d-and-attributes-3689"></a><a name="index-g_t_0040code_007babs_007d-and-attributes-3690"></a><a name="index-g_t_0040code_007bneg_007d-and-attributes-3691"></a><a name="index-g_t_0040code_007bashift_007d-and-attributes-3692"></a><a name="index-g_t_0040code_007blshiftrt_007d-and-attributes-3693"></a><a name="index-g_t_0040code_007bashiftrt_007d-and-attributes-3694"></a><br><dt><code>(le </code><var>arith1</var> <var>arith2</var><code>)</code><dt><code>(leu </code><var>arith1</var> <var>arith2</var><code>)</code><dt><code>(lt </code><var>arith1</var> <var>arith2</var><code>)</code><dt><code>(ltu </code><var>arith1</var> <var>arith2</var><code>)</code><dt><code>(gt </code><var>arith1</var> <var>arith2</var><code>)</code><dt><code>(gtu </code><var>arith1</var> <var>arith2</var><code>)</code><dt><code>(ge </code><var>arith1</var> <var>arith2</var><code>)</code><dt><code>(geu </code><var>arith1</var> <var>arith2</var><code>)</code><dt><code>(ne </code><var>arith1</var> <var>arith2</var><code>)</code><dt><code>(eq </code><var>arith1</var> <var>arith2</var><code>)</code><dd>These tests are true if the indicated comparison of the two arithmetic
 expressions is true.  Arithmetic expressions are formed with
 <code>plus</code>, <code>minus</code>, <code>mult</code>, <code>div</code>, <code>mod</code>,
@@ -135,39 +135,39 @@ expressions is true.  Arithmetic expressions are formed with
 
      <p><a name="index-get_005fattr-3695"></a><code>const_int</code> and <code>symbol_ref</code> are always valid terms (see <a href="Insn-Lengths.html#Insn-Lengths">Insn Lengths</a>,for additional forms).  <code>symbol_ref</code> is a string
 denoting a C expression that yields an <code>int</code> when evaluated by the
-&lsquo;<samp><span class="samp">get_attr_...</span></samp>&rsquo; routine.  It should normally be a global
+`<samp><span class="samp">get_attr_...</span></samp>' routine.  It should normally be a global
 variable.
 
      <p><a name="index-eq_005fattr-3696"></a><br><dt><code>(eq_attr </code><var>name</var> <var>value</var><code>)</code><dd><var>name</var> is a string specifying the name of an attribute.
 
      <p><var>value</var> is a string that is either a valid value for attribute
-<var>name</var>, a comma-separated list of values, or &lsquo;<samp><span class="samp">!</span></samp>&rsquo; followed by a
-value or list.  If <var>value</var> does not begin with a &lsquo;<samp><span class="samp">!</span></samp>&rsquo;, this
+<var>name</var>, a comma-separated list of values, or `<samp><span class="samp">!</span></samp>' followed by a
+value or list.  If <var>value</var> does not begin with a `<samp><span class="samp">!</span></samp>', this
 test is true if the value of the <var>name</var> attribute of the current
 insn is in the list specified by <var>value</var>.  If <var>value</var> begins
-with a &lsquo;<samp><span class="samp">!</span></samp>&rsquo;, this test is true if the attribute's value is
+with a `<samp><span class="samp">!</span></samp>', this test is true if the attribute's value is
 <em>not</em> in the specified list.
 
      <p>For example,
 
      <pre class="smallexample">          (eq_attr "type" "load,store")
-</pre>
+     </pre>
      <p class="noindent">is equivalent to
 
      <pre class="smallexample">          (ior (eq_attr "type" "load") (eq_attr "type" "store"))
-</pre>
-     <p>If <var>name</var> specifies an attribute of &lsquo;<samp><span class="samp">alternative</span></samp>&rsquo;, it refers to the
+     </pre>
+     <p>If <var>name</var> specifies an attribute of `<samp><span class="samp">alternative</span></samp>', it refers to the
 value of the compiler variable <code>which_alternative</code>
 (see <a href="Output-Statement.html#Output-Statement">Output Statement</a>) and the values must be small integers.  For
 example,
 
      <pre class="smallexample">          (eq_attr "alternative" "2,3")
-</pre>
+     </pre>
      <p class="noindent">is equivalent to
 
      <pre class="smallexample">          (ior (eq (symbol_ref "which_alternative") (const_int 2))
                (eq (symbol_ref "which_alternative") (const_int 3)))
-</pre>
+     </pre>
      <p>Note that, for most attributes, an <code>eq_attr</code> test is simplified in cases
 where the value of the attribute being tested is known for all insns matching
 a particular pattern.  This is by far the most common case.
@@ -190,7 +190,7 @@ for backward branches which are not taken (annul-false).
                   (attr_flag "forward"))
              (and (eq_attr "in_branch_delay" "true")
                   (attr_flag "backward"))])
-</pre>
+     </pre>
      <p>The <code>forward</code> and <code>backward</code> flags are false if the current
 <code>insn</code> being scheduled is not a conditional branch.
 

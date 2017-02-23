@@ -3,7 +3,7 @@
 <title>Traditional lexical analysis - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Traditional-Mode.html#Traditional-Mode" title="Traditional Mode">
 <link rel="next" href="Traditional-macros.html#Traditional-macros" title="Traditional macros">
@@ -69,9 +69,9 @@ the output.  In particular, hard tabs remain hard tabs.  This can be
 useful if, for example, you are preprocessing a Makefile.
 
    <p>Traditional CPP only recognizes C-style block comments, and treats the
-&lsquo;<samp><span class="samp">/*</span></samp>&rsquo; sequence as introducing a comment only if it lies outside
+`<samp><span class="samp">/*</span></samp>' sequence as introducing a comment only if it lies outside
 quoted text.  Quoted text is introduced by the usual single and double
-quotes, and also by an initial &lsquo;<samp><span class="samp">&lt;</span></samp>&rsquo; in a <code>#include</code>
+quotes, and also by an initial `<samp><span class="samp">&lt;</span></samp>' in a <code>#include</code>
 directive.
 
    <p>Traditionally, comments are completely removed and are not replaced
@@ -83,7 +83,7 @@ since it doesn't re-lex its input.  For example, in
 
 <pre class="smallexample">     #if foo/**/bar
 </pre>
-   <p class="noindent">&lsquo;<samp><span class="samp">foo</span></samp>&rsquo; and &lsquo;<samp><span class="samp">bar</span></samp>&rsquo; are distinct identifiers and expanded
+   <p class="noindent">`<samp><span class="samp">foo</span></samp>' and `<samp><span class="samp">bar</span></samp>' are distinct identifiers and expanded
 separately if they happen to be macros.  In other words, this
 directive is equivalent to
 

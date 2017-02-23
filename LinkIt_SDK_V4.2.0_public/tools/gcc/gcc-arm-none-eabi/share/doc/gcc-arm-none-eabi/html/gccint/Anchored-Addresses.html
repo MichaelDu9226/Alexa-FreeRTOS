@@ -3,7 +3,7 @@
 <title>Anchored Addresses - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Target-Macros.html#Target-Macros" title="Target Macros">
 <link rel="prev" href="Addressing-Modes.html#Addressing-Modes" title="Addressing Modes">
@@ -99,12 +99,12 @@ value is 0.
 <div class="defun">
 &mdash; Target Hook: void <b>TARGET_ASM_OUTPUT_ANCHOR</b> (<var>rtx x</var>)<var><a name="index-TARGET_005fASM_005fOUTPUT_005fANCHOR-4366"></a></var><br>
 <blockquote><p>Write the assembly code to define section anchor <var>x</var>, which is a
-<code>SYMBOL_REF</code> for which &lsquo;<samp><span class="samp">SYMBOL_REF_ANCHOR_P (</span><var>x</var><span class="samp">)</span></samp>&rsquo; is true. 
+<code>SYMBOL_REF</code> for which `<samp><span class="samp">SYMBOL_REF_ANCHOR_P (</span><var>x</var><span class="samp">)</span></samp>' is true. 
 The hook is called with the assembly output position set to the beginning
 of <code>SYMBOL_REF_BLOCK (</code><var>x</var><code>)</code>.
 
       <p>If <code>ASM_OUTPUT_DEF</code> is available, the hook's default definition uses
-it to define the symbol as &lsquo;<samp><span class="samp">. + SYMBOL_REF_BLOCK_OFFSET (</span><var>x</var><span class="samp">)</span></samp>&rsquo;. 
+it to define the symbol as `<samp><span class="samp">. + SYMBOL_REF_BLOCK_OFFSET (</span><var>x</var><span class="samp">)</span></samp>'. 
 If <code>ASM_OUTPUT_DEF</code> is not available, the hook's default definition
 is <code>NULL</code>, which disables the use of section anchors altogether. 
 </p></blockquote></div>
@@ -112,8 +112,8 @@ is <code>NULL</code>, which disables the use of section anchors altogether.
 <div class="defun">
 &mdash; Target Hook: bool <b>TARGET_USE_ANCHORS_FOR_SYMBOL_P</b> (<var>const_rtx x</var>)<var><a name="index-TARGET_005fUSE_005fANCHORS_005fFOR_005fSYMBOL_005fP-4367"></a></var><br>
 <blockquote><p>Return true if GCC should attempt to use anchors to access <code>SYMBOL_REF</code>
-<var>x</var>.  You can assume &lsquo;<samp><span class="samp">SYMBOL_REF_HAS_BLOCK_INFO_P (</span><var>x</var><span class="samp">)</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">!SYMBOL_REF_ANCHOR_P (</span><var>x</var><span class="samp">)</span></samp>&rsquo;.
+<var>x</var>.  You can assume `<samp><span class="samp">SYMBOL_REF_HAS_BLOCK_INFO_P (</span><var>x</var><span class="samp">)</span></samp>' and
+`<samp><span class="samp">!SYMBOL_REF_ANCHOR_P (</span><var>x</var><span class="samp">)</span></samp>'.
 
       <p>The default version is correct for most targets, but you might need to
 intercept this hook to handle things like target-specific attributes

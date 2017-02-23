@@ -3,7 +3,7 @@
 <title>Reentrancy - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Locale.html#Locale" title="Locale">
 <link rel="next" href="Misc.html#Misc" title="Misc">
@@ -43,12 +43,12 @@ Hooks have been provided to allow you to use these functions in a fully
 reentrant fashion.
 
    <p><a name="index-g_t_005freent-450"></a><a name="index-reent_002eh-451"></a><a name="index-reentrancy-structure-452"></a>These hooks use the structure <code>_reent</code> defined in <samp><span class="file">reent.h</span></samp>. 
-A variable defined as &lsquo;<samp><span class="samp">struct _reent</span></samp>&rsquo; is called a <dfn>reentrancy
+A variable defined as `<samp><span class="samp">struct _reent</span></samp>' is called a <dfn>reentrancy
 structure</dfn>.  All functions which must manipulate global information are
 available in two versions.  The first version has the usual name, and
 uses a single global instance of the reentrancy structure.  The second
-has a different name, normally formed by prepending &lsquo;<samp><span class="samp">_</span></samp>&rsquo; and
-appending &lsquo;<samp><span class="samp">_r</span></samp>&rsquo;, and takes a pointer to the particular reentrancy
+has a different name, normally formed by prepending `<samp><span class="samp">_</span></samp>' and
+appending `<samp><span class="samp">_r</span></samp>', and takes a pointer to the particular reentrancy
 structure to use.
 
    <p>For example, the function <code>fopen</code> takes two arguments, <var>file</var>
@@ -57,7 +57,7 @@ and <var>mode</var>, and uses the global reentrancy structure.  The function
 pointer to an instance of the reentrancy structure, <var>file</var>
 and <var>mode</var>.
 
-   <p>There are two versions of &lsquo;<samp><span class="samp">struct _reent</span></samp>&rsquo;, a normal one and one
+   <p>There are two versions of `<samp><span class="samp">struct _reent</span></samp>', a normal one and one
 for small memory systems, controlled by the <code>_REENT_SMALL</code>
 definition from the (automatically included) <samp><span class="file">&lt;sys/config.h&gt;</span></samp>.
 
@@ -66,7 +66,7 @@ variable <code>_impure_ptr</code>, which points to a reentrancy structure.
 
    <p>This means that you have two ways to achieve reentrancy.  Both require
 that each thread of execution control initialize a unique global
-variable of type &lsquo;<samp><span class="samp">struct _reent</span></samp>&rsquo;:
+variable of type `<samp><span class="samp">struct _reent</span></samp>':
 
      <ol type=1 start=1>
 <li><a name="index-extra-argument_002c-reentrant-fns-455"></a>Use the reentrant versions of the library functions, after initializing

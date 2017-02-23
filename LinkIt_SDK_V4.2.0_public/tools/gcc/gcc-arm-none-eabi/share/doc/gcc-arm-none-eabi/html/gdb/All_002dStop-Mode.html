@@ -3,7 +3,7 @@
 <title>All-Stop Mode - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Thread-Stops.html#Thread-Stops" title="Thread Stops">
 <link rel="next" href="Non_002dStop-Mode.html#Non_002dStop-Mode" title="Non-Stop Mode">
@@ -73,7 +73,7 @@ first thread completes whatever you requested.
    <p><a name="index-automatic-thread-selection-345"></a><a name="index-switching-threads-automatically-346"></a><a name="index-threads_002c-automatic-switching-347"></a>Whenever <span class="sc">gdb</span> stops your program, due to a breakpoint or a
 signal, it automatically selects the thread where that breakpoint or
 signal happened.  <span class="sc">gdb</span> alerts you to the context switch with a
-message such as &lsquo;<samp><span class="samp">[Switching to Thread </span><var>n</var><span class="samp">]</span></samp>&rsquo; to identify the
+message such as `<samp><span class="samp">[Switching to Thread </span><var>n</var><span class="samp">]</span></samp>' to identify the
 thread.
 
    <p>On some OSes, you can modify <span class="sc">gdb</span>'s default behavior by
@@ -87,9 +87,9 @@ mode optimizes for single-stepping; it prevents other threads
 from preempting the current thread while you are stepping, so that
 the focus of debugging does not change unexpectedly. 
 Other threads only rarely (or never) get a chance to run
-when you step.  They are more likely to run when you &lsquo;<samp><span class="samp">next</span></samp>&rsquo; over a
+when you step.  They are more likely to run when you `<samp><span class="samp">next</span></samp>' over a
 function call, and they are completely free to run when you use commands
-like &lsquo;<samp><span class="samp">continue</span></samp>&rsquo;, &lsquo;<samp><span class="samp">until</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">finish</span></samp>&rsquo;.  However, unless another
+like `<samp><span class="samp">continue</span></samp>', `<samp><span class="samp">until</span></samp>', or `<samp><span class="samp">finish</span></samp>'.  However, unless another
 thread hits a breakpoint during its timeslice, <span class="sc">gdb</span> does not change
 the current thread away from the thread that you are debugging.
 

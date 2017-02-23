@@ -3,7 +3,7 @@
 <title>Dispatch Tables - GNU Compiler Collection (GCC) Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU Compiler Collection (GCC) Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Assembler-Format.html#Assembler-Format" title="Assembler Format">
 <link rel="prev" href="Instruction-Output.html#Instruction-Output" title="Instruction Output">
@@ -70,7 +70,7 @@ way here.  For example,
 
      <pre class="smallexample">          fprintf (<var>stream</var>, "\t.word L%d-L%d\n",
                    <var>value</var>, <var>rel</var>)
-</pre>
+     </pre>
       <p>You must provide this macro on machines where the addresses in a
 dispatch table are relative to the table's own address.  If defined, GCC
 will also use this macro on all machines when producing PIC. 
@@ -90,7 +90,7 @@ definition is output using <code>(*targetm.asm_out.internal_label)</code>.
 For example,
 
      <pre class="smallexample">          fprintf (<var>stream</var>, "\t.word L%d\n", <var>value</var>)
-</pre>
+     </pre>
       </blockquote></div>
 
 <div class="defun">

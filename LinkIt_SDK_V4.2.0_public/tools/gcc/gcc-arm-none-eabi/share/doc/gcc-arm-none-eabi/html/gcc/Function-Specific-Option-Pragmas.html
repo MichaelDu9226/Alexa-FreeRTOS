@@ -3,7 +3,7 @@
 <title>Function Specific Option Pragmas - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Pragmas.html#Pragmas" title="Pragmas">
 <link rel="prev" href="Push_002fPop-Macro-Pragmas.html#Push_002fPop-Macro-Pragmas" title="Push/Pop Macro Pragmas">
@@ -77,7 +77,7 @@ function.  The parenthesis around the options is optional.
 See <a href="Function-Attributes.html#Function-Attributes">Function Attributes</a>, for more information about the
 <code>optimize</code> attribute and the attribute syntax.
 
-     <p>The &lsquo;<samp><span class="samp">#pragma GCC optimize</span></samp>&rsquo; pragma is not implemented in GCC
+     <p>The `<samp><span class="samp">#pragma GCC optimize</span></samp>' pragma is not implemented in GCC
 versions earlier than 4.4. 
 </dl>
 
@@ -85,11 +85,11 @@ versions earlier than 4.4.
 <dt><code>#pragma GCC push_options</code><dt><code>#pragma GCC pop_options</code><dd><a name="index-pragma-GCC-push_005foptions-3507"></a><a name="index-pragma-GCC-pop_005foptions-3508"></a>
 These pragmas maintain a stack of the current target and optimization
 options.  It is intended for include files where you temporarily want
-to switch to using a different &lsquo;<samp><span class="samp">#pragma GCC target</span></samp>&rsquo; or
-&lsquo;<samp><span class="samp">#pragma GCC optimize</span></samp>&rsquo; and then to pop back to the previous
+to switch to using a different `<samp><span class="samp">#pragma GCC target</span></samp>' or
+`<samp><span class="samp">#pragma GCC optimize</span></samp>' and then to pop back to the previous
 options.
 
-     <p>The &lsquo;<samp><span class="samp">#pragma GCC push_options</span></samp>&rsquo; and &lsquo;<samp><span class="samp">#pragma GCC pop_options</span></samp>&rsquo;
+     <p>The `<samp><span class="samp">#pragma GCC push_options</span></samp>' and `<samp><span class="samp">#pragma GCC pop_options</span></samp>'
 pragmas are not implemented in GCC versions earlier than 4.4. 
 </dl>
 
@@ -99,7 +99,7 @@ This pragma clears the current <code>#pragma GCC target</code> and
 <code>#pragma GCC optimize</code> to use the default switches as specified
 on the command line.
 
-     <p>The &lsquo;<samp><span class="samp">#pragma GCC reset_options</span></samp>&rsquo; pragma is not implemented in GCC
+     <p>The `<samp><span class="samp">#pragma GCC reset_options</span></samp>' pragma is not implemented in GCC
 versions earlier than 4.4. 
 </dl>
 

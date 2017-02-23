@@ -3,7 +3,7 @@
 <title>Library List Format for SVR4 Targets - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Protocol.html#Remote-Protocol" title="Remote Protocol">
 <link rel="prev" href="Library-List-Format.html#Library-List-Format" title="Library List Format">
@@ -53,7 +53,7 @@ On SVR4 platforms <span class="sc">gdb</span> can use the symbol table of a dyna
 shared libraries.  Still a special library list provided by this packet is
 more efficient for the <span class="sc">gdb</span> remote protocol.
 
-   <p>The &lsquo;<samp><span class="samp">qXfer:libraries-svr4:read</span></samp>&rsquo; packet returns an XML document which lists
+   <p>The `<samp><span class="samp">qXfer:libraries-svr4:read</span></samp>' packet returns an XML document which lists
 loaded libraries and their SVR4 linker parameters.  For each library on SVR4
 target, the following parameters are reported:
 

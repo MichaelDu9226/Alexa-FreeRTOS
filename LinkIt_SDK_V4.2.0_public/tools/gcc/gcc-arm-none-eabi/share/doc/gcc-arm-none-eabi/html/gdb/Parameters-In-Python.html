@@ -3,7 +3,7 @@
 <title>Parameters In Python - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Python-API.html#Python-API" title="Python API">
 <link rel="prev" href="Commands-In-Python.html#Commands-In-Python" title="Commands In Python">
@@ -77,11 +77,11 @@ parameter.  In this case the parameter can subsequently be accessed in
         <p>If <var>name</var> consists of multiple words, and no prefix parameter group
 can be found, an exception is raised.
 
-        <p><var>command-class</var> should be one of the &lsquo;<samp><span class="samp">COMMAND_</span></samp>&rsquo; constants
+        <p><var>command-class</var> should be one of the `<samp><span class="samp">COMMAND_</span></samp>' constants
 (see <a href="Commands-In-Python.html#Commands-In-Python">Commands In Python</a>).  This argument tells <span class="sc">gdb</span> how to
 categorize the new parameter in the help system.
 
-        <p><var>parameter-class</var> should be one of the &lsquo;<samp><span class="samp">PARAM_</span></samp>&rsquo; constants
+        <p><var>parameter-class</var> should be one of the `<samp><span class="samp">PARAM_</span></samp>' constants
 defined below.  This argument tells <span class="sc">gdb</span> the type of the new
 parameter; this information is used for input validation and
 completion.
@@ -150,9 +150,9 @@ module:
 <dl><dt><code>gdb.PARAM_BOOLEAN</code><dd>The value is a plain boolean.  The Python boolean values, <code>True</code>
 and <code>False</code> are the only valid values.
 
-     <p><a name="index-PARAM_005fAUTO_005fBOOLEAN-1962"></a><a name="index-gdb_002ePARAM_005fAUTO_005fBOOLEAN-1963"></a><br><dt><code>gdb.PARAM_AUTO_BOOLEAN</code><dd>The value has three possible states: true, false, and &lsquo;<samp><span class="samp">auto</span></samp>&rsquo;.  In
+     <p><a name="index-PARAM_005fAUTO_005fBOOLEAN-1962"></a><a name="index-gdb_002ePARAM_005fAUTO_005fBOOLEAN-1963"></a><br><dt><code>gdb.PARAM_AUTO_BOOLEAN</code><dd>The value has three possible states: true, false, and `<samp><span class="samp">auto</span></samp>'.  In
 Python, true and false are represented using boolean constants, and
-&lsquo;<samp><span class="samp">auto</span></samp>&rsquo; is represented using <code>None</code>.
+`<samp><span class="samp">auto</span></samp>' is represented using <code>None</code>.
 
      <p><a name="index-PARAM_005fUINTEGER-1964"></a><a name="index-gdb_002ePARAM_005fUINTEGER-1965"></a><br><dt><code>gdb.PARAM_UINTEGER</code><dd>The value is an unsigned integer.  The value of 0 should be
 interpreted to mean &ldquo;unlimited&rdquo;.
@@ -161,7 +161,7 @@ interpreted to mean &ldquo;unlimited&rdquo;.
 to mean &ldquo;unlimited&rdquo;.
 
      <p><a name="index-PARAM_005fSTRING-1968"></a><a name="index-gdb_002ePARAM_005fSTRING-1969"></a><br><dt><code>gdb.PARAM_STRING</code><dd>The value is a string.  When the user modifies the string, any escape
-sequences, such as &lsquo;<samp><span class="samp">\t</span></samp>&rsquo;, &lsquo;<samp><span class="samp">\f</span></samp>&rsquo;, and octal escapes, are
+sequences, such as `<samp><span class="samp">\t</span></samp>', `<samp><span class="samp">\f</span></samp>', and octal escapes, are
 translated into corresponding characters and encoded into the current
 host charset.
 

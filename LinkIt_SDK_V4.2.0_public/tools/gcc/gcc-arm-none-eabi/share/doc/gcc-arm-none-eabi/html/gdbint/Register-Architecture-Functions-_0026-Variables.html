@@ -3,7 +3,7 @@
 <title>Register Architecture Functions &amp; Variables - GDB Internals</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GDB Internals">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Register-Representation.html#Register-Representation" title="Register Representation">
 <link rel="prev" href="Raw-and-Cooked-Registers.html#Raw-and-Cooked-Registers" title="Raw and Cooked Registers">
@@ -52,12 +52,12 @@ and type of registers in the architecture.
 
 <div class="defun">
 &mdash; Architecture Function: CORE_ADDR <b>read_pc</b> (<var>struct regcache *regcache</var>)<var><a name="index-read_005fpc-264"></a></var><br>
-        </div>
+</div>
 
 <div class="defun">
 &mdash; Architecture Function: void <b>write_pc</b> (<var>struct regcache *regcache, CORE_ADDR val</var>)<var><a name="index-write_005fpc-265"></a></var><br>
 <blockquote>
-        <p>Read or write the program counter.  The default value of both
+<p>Read or write the program counter.  The default value of both
 functions is <code>NULL</code> (no function available).  If the program
 counter is just an ordinary register, it can be specified in
 <code>struct gdbarch</code> instead (see <code>pc_regnum</code> below) and it will
@@ -72,12 +72,12 @@ cache, <var>regcache</var>.  See <a href="Register-Caching.html#Register-Caching
 
 <div class="defun">
 &mdash; Architecture Function: void <b>pseudo_register_read</b> (<var>struct gdbarch *gdbarch, struct regcache *regcache, int regnum, const gdb_byte *buf</var>)<var><a name="index-pseudo_005fregister_005fread-266"></a></var><br>
-        </div>
+</div>
 
 <div class="defun">
 &mdash; Architecture Function: void <b>pseudo_register_write</b> (<var>struct gdbarch *gdbarch, struct regcache *regcache, int regnum, const gdb_byte *buf</var>)<var><a name="index-pseudo_005fregister_005fwrite-267"></a></var><br>
 <blockquote>
-        <p>These functions should be defined if there are any pseudo-registers. 
+<p>These functions should be defined if there are any pseudo-registers. 
 The default value is <code>NULL</code>.  <var>regnum</var> is the number of the
 register to read or write (which will be a <dfn>cooked</dfn> register
 number) and <var>buf</var> is the buffer where the value read will be

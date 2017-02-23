@@ -3,7 +3,7 @@
 <title>Sampling Error - GNU gprof</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU gprof">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Inaccuracy.html#Inaccuracy" title="Inaccuracy">
 <link rel="next" href="Assumptions.html#Assumptions" title="Assumptions">
@@ -88,25 +88,25 @@ the whole program's time.  Usually this means it is not worth optimizing.
 
    <p>One way to get more accuracy is to give your program more (but similar)
 input data so it will take longer.  Another way is to combine the data from
-several runs, using the &lsquo;<samp><span class="samp">-s</span></samp>&rsquo; option of <code>gprof</code>.  Here is how:
+several runs, using the `<samp><span class="samp">-s</span></samp>' option of <code>gprof</code>.  Here is how:
 
      <ol type=1 start=1>
 <li>Run your program once.
 
-     <li>Issue the command &lsquo;<samp><span class="samp">mv gmon.out gmon.sum</span></samp>&rsquo;.
+     <li>Issue the command `<samp><span class="samp">mv gmon.out gmon.sum</span></samp>'.
 
      <li>Run your program again, the same as before.
 
      <li>Merge the new data in <samp><span class="file">gmon.out</span></samp> into <samp><span class="file">gmon.sum</span></samp> with this command:
 
      <pre class="example">          gprof -s <var>executable-file</var> gmon.out gmon.sum
-</pre>
+     </pre>
      <li>Repeat the last two steps as often as you wish.
 
      <li>Analyze the cumulative data using this command:
 
      <pre class="example">          gprof <var>executable-file</var> gmon.sum &gt; <var>output-file</var>
-</pre>
+     </pre>
      </ol>
 
    </body></html>

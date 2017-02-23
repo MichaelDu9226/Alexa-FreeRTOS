@@ -3,7 +3,7 @@
 <title>Implementation limits - The C Preprocessor</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="The C Preprocessor">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Implementation-Details.html#Implementation-Details" title="Implementation Details">
 <link rel="prev" href="Implementation_002ddefined-behavior.html#Implementation_002ddefined-behavior" title="Implementation-defined behavior">
@@ -71,7 +71,7 @@ allocated by the compiler at the same time, the amount of memory
 consumed by other processes on the same computer, etc.
 
      <ul>
-<li>Nesting levels of &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; files.
+<li>Nesting levels of `<samp><span class="samp">#include</span></samp>' files.
 
      <p>We impose an arbitrary limit of 200 levels, to avoid runaway recursion. 
 The standard requires at least 15 levels.

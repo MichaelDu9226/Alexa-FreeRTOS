@@ -3,7 +3,7 @@
 <title>Symbols - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="prev" href="Languages.html#Languages" title="Languages">
 <link rel="next" href="Altering.html#Altering" title="Altering">
@@ -60,8 +60,8 @@ most frequent case is in referring to static variables in other
 source files (see <a href="Variables.html#Variables">Program Variables</a>).  File names
 are recorded in object files as debugging symbols, but <span class="sc">gdb</span> would
 ordinarily parse a typical file name, like <samp><span class="file">foo.c</span></samp>, as the three words
-&lsquo;<samp><span class="samp">foo</span></samp>&rsquo; &lsquo;<samp><span class="samp">.</span></samp>&rsquo; &lsquo;<samp><span class="samp">c</span></samp>&rsquo;.  To allow <span class="sc">gdb</span> to recognize
-&lsquo;<samp><span class="samp">foo.c</span></samp>&rsquo; as a single symbol, enclose it in single quotes; for example,
+`<samp><span class="samp">foo</span></samp>' `<samp><span class="samp">.</span></samp>' `<samp><span class="samp">c</span></samp>'.  To allow <span class="sc">gdb</span> to recognize
+`<samp><span class="samp">foo.c</span></samp>' as a single symbol, enclose it in single quotes; for example,
 
 <pre class="smallexample">     p 'foo.c'::x
 </pre>
@@ -113,7 +113,7 @@ variable, this says which register it is kept in.  For a non-register
 local variable, this prints the stack-frame offset at which the variable
 is always stored.
 
-     <p>Note the contrast with &lsquo;<samp><span class="samp">print &amp;</span><var>symbol</var></samp>&rsquo;, which does not work
+     <p>Note the contrast with `<samp><span class="samp">print &amp;</span><var>symbol</var></samp>', which does not work
 at all for a register variable, and for a stack local variable prints
 the exact address of the current instantiation of the variable.
 
@@ -123,7 +123,7 @@ nearest symbol and an offset from it:
 
      <pre class="smallexample">          (gdb) info symbol 0x54320
           _initialize_vx + 396 in section .text
-</pre>
+     </pre>
      <p class="noindent">This is the opposite of the <code>info address</code> command.  You can use
 it to find out the name of a variable or a function given its address.
 
@@ -134,7 +134,7 @@ library containing the symbol is also printed:
           _start + 5 in section .text of /tmp/a.out
           (gdb) info symbol 0x2aaaac2811cf
           __read_nocancel + 6 in section .text of /usr/lib64/libc.so.6
-</pre>
+     </pre>
      <p><a name="index-whatis-985"></a><br><dt><code>whatis[/</code><var>flags</var><code>] [</code><var>arg</var><code>]</code><dd>Print the data type of <var>arg</var>, which can be either an expression
 or a name of a data type.  With no argument, print the data type of
 <code>$</code>, the last value in the value history.
@@ -160,9 +160,9 @@ in the <code>typedef</code> declaration of <var>arg</var>.  However, if that
 underlying type is also a <code>typedef</code>, <code>whatis</code> will not
 unroll it.
 
-     <p>For C code, the type names may also have the form &lsquo;<samp><span class="samp">class
-</span><var>class-name</var></samp>&rsquo;, &lsquo;<samp><span class="samp">struct </span><var>struct-tag</var></samp>&rsquo;, &lsquo;<samp><span class="samp">union
-</span><var>union-tag</var></samp>&rsquo; or &lsquo;<samp><span class="samp">enum </span><var>enum-tag</var></samp>&rsquo;.
+     <p>For C code, the type names may also have the form `<samp><span class="samp">class
+</span><var>class-name</var></samp>', `<samp><span class="samp">struct </span><var>struct-tag</var></samp>', `<samp><span class="samp">union
+</span><var>union-tag</var></samp>' or `<samp><span class="samp">enum </span><var>enum-tag</var></samp>'.
 
      <p><var>flags</var> can be used to modify how the type is displayed. 
 Available flags are:
@@ -205,7 +205,7 @@ fields, methods and inner <code>class typedef</code>s of <code>struct</code>s,
           typedef struct complex complex_t;
           complex_t var;
           real_t *real_pointer_var;
-</pre>
+     </pre>
      <p class="noindent">the two commands give this output:
 
      <pre class="smallexample">          (gdb) whatis var
@@ -228,33 +228,33 @@ fields, methods and inner <code>class typedef</code>s of <code>struct</code>s,
           type = real_t *
           (gdb) ptype real_pointer_var
           type = double *
-</pre>
+     </pre>
      <p class="noindent">As with <code>whatis</code>, using <code>ptype</code> without an argument refers to
 the type of <code>$</code>, the last value in the value history.
 
      <p><a name="index-incomplete-type-987"></a>Sometimes, programs use opaque data types or incomplete specifications
 of complex data structure.  If the debug information included in the
 program does not allow <span class="sc">gdb</span> to display a full declaration of
-the data type, it will say &lsquo;<samp><span class="samp">&lt;incomplete type&gt;</span></samp>&rsquo;.  For example,
+the data type, it will say `<samp><span class="samp">&lt;incomplete type&gt;</span></samp>'.  For example,
 given these declarations:
 
      <pre class="smallexample">              struct foo;
               struct foo *fooptr;
-</pre>
+     </pre>
      <p class="noindent">but no definition for <code>struct foo</code> itself, <span class="sc">gdb</span> will say:
 
      <pre class="smallexample">            (gdb) ptype foo
             $1 = &lt;incomplete type&gt;
-</pre>
+     </pre>
      <p class="noindent">&ldquo;Incomplete type&rdquo; is C terminology for data types that are not
 completely specified.
 
      <p><a name="index-info-types-988"></a><br><dt><code>info types </code><var>regexp</var><dt><code>info types</code><dd>Print a brief description of all types whose names match the regular
 expression <var>regexp</var> (or all types in your program, if you supply
 no argument).  Each complete typename is matched as though it were a
-complete line; thus, &lsquo;<samp><span class="samp">i type value</span></samp>&rsquo; gives information on all
+complete line; thus, `<samp><span class="samp">i type value</span></samp>' gives information on all
 types in your program whose names include the string <code>value</code>, but
-&lsquo;<samp><span class="samp">i type ^value$</span></samp>&rsquo; gives information only on types whose complete
+`<samp><span class="samp">i type ^value$</span></samp>' gives information only on types whose complete
 name is <code>value</code>.
 
      <p>This command differs from <code>ptype</code> in two ways: first, like
@@ -273,7 +273,7 @@ type printers.
 
      <p><a name="index-info-scope-992"></a><a name="index-local-variables-993"></a><br><dt><code>info scope </code><var>location</var><dd>List all the variables local to a particular scope.  This command
 accepts a <var>location</var> argument&mdash;a function name, a source line, or
-an address preceded by a &lsquo;<samp><span class="samp">*</span></samp>&rsquo;, and prints all the variables local
+an address preceded by a `<samp><span class="samp">*</span></samp>', and prints all the variables local
 to the scope defined by that location.  (See <a href="Specify-Location.html#Specify-Location">Specify Location</a>, for
 details about supported forms of <var>location</var>.)  For example:
 
@@ -286,7 +286,7 @@ details about supported forms of <var>location</var>.)  For example:
           Symbol p1 is a local variable in register $ebx, length 4.
           Symbol nline is a local variable in register $edx, length 4.
           Symbol repeat is a local variable at frame offset -8, length 4.
-</pre>
+     </pre>
      <p class="noindent">This command is especially useful for determining what data to collect
 during a <dfn>trace experiment</dfn>, see <a href="Tracepoint-Actions.html#Tracepoint-Actions">collect</a>.
 
@@ -311,11 +311,11 @@ have already been read, and files whose symbols will be read when needed.
 
      <br><dt><code>info functions </code><var>regexp</var><dd>Print the names and data types of all defined functions
 whose names contain a match for regular expression <var>regexp</var>. 
-Thus, &lsquo;<samp><span class="samp">info fun step</span></samp>&rsquo; finds all functions whose names
-include <code>step</code>; &lsquo;<samp><span class="samp">info fun ^step</span></samp>&rsquo; finds those whose names
+Thus, `<samp><span class="samp">info fun step</span></samp>' finds all functions whose names
+include <code>step</code>; `<samp><span class="samp">info fun ^step</span></samp>' finds those whose names
 start with <code>step</code>.  If a function name contains characters
 that conflict with the regular expression language (e.g. 
-&lsquo;<samp><span class="samp">operator*()</span></samp>&rsquo;), they may be quoted with a backslash.
+`<samp><span class="samp">operator*()</span></samp>'), they may be quoted with a backslash.
 
      <p><a name="index-info-variables-997"></a><br><dt><code>info variables</code><dd>Print the names and data types of all variables that are defined
 outside of functions (i.e. excluding local variables).
@@ -344,20 +344,20 @@ the next time symbols for a file are loaded.
      <br><dt><code>set opaque-type-resolution off</code><dd>Tell <span class="sc">gdb</span> not to resolve opaque types.  In this case, the type
 is printed as follows:
      <pre class="smallexample">          {&lt;no data fields&gt;}
-</pre>
+     </pre>
      <p><a name="index-show-opaque_002dtype_002dresolution-1003"></a><br><dt><code>show opaque-type-resolution</code><dd>Show whether opaque types are resolved or not.
 
      <p><a name="index-maint-print-symbols-1004"></a><a name="index-symbol-dump-1005"></a><a name="index-maint-print-psymbols-1006"></a><a name="index-partial-symbol-dump-1007"></a><br><dt><code>maint print symbols </code><var>filename</var><dt><code>maint print psymbols </code><var>filename</var><dt><code>maint print msymbols </code><var>filename</var><dd>Write a dump of debugging symbol data into the file <var>filename</var>. 
 These commands are used to debug the <span class="sc">gdb</span> symbol-reading code.  Only
-symbols with debugging data are included.  If you use &lsquo;<samp><span class="samp">maint print
-symbols</span></samp>&rsquo;, <span class="sc">gdb</span> includes all the symbols for which it has already
+symbols with debugging data are included.  If you use `<samp><span class="samp">maint print
+symbols</span></samp>', <span class="sc">gdb</span> includes all the symbols for which it has already
 collected full details: that is, <var>filename</var> reflects symbols for
 only those files whose symbols <span class="sc">gdb</span> has read.  You can use the
 command <code>info sources</code> to find out which files these are.  If you
-use &lsquo;<samp><span class="samp">maint print psymbols</span></samp>&rsquo; instead, the dump shows information about
+use `<samp><span class="samp">maint print psymbols</span></samp>' instead, the dump shows information about
 symbols that <span class="sc">gdb</span> only knows partially&mdash;that is, symbols defined in
 files that <span class="sc">gdb</span> has skimmed, but not yet read completely.  Finally,
-&lsquo;<samp><span class="samp">maint print msymbols</span></samp>&rsquo; dumps just the minimal symbol information
+`<samp><span class="samp">maint print msymbols</span></samp>' dumps just the minimal symbol information
 required for each object file from which <span class="sc">gdb</span> has read some symbols. 
 See <a href="Files.html#Files">Commands to Specify Files</a>, for a discussion of how
 <span class="sc">gdb</span> reads symbols (in the description of <code>symbol-file</code>).
@@ -384,9 +384,9 @@ structure in more detail.  For example:
           }
           (gdb) maint info symtabs
           (gdb)
-</pre>
+     </pre>
      <p class="noindent">We see that there is one partial symbol table whose filename contains
-the string &lsquo;<samp><span class="samp">dwarf2read</span></samp>&rsquo;, belonging to the &lsquo;<samp><span class="samp">gdb</span></samp>&rsquo; executable;
+the string `<samp><span class="samp">dwarf2read</span></samp>', belonging to the `<samp><span class="samp">gdb</span></samp>' executable;
 and we see that <span class="sc">gdb</span> has not read in any symtabs yet at all. 
 If we set a breakpoint on a function, that will cause <span class="sc">gdb</span> to
 read the symtab for the compilation unit containing that function:
@@ -407,7 +407,7 @@ read the symtab for the compilation unit containing that function:
             }
           }
           (gdb)
-</pre>
+     </pre>
      </dl>
 
    </body></html>

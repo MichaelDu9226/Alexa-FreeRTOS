@@ -3,7 +3,7 @@
 <title>GNU libiberty</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="GNU libiberty">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="top" href="#Top">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <meta http-equiv="Content-Style-Type" content="text/css">
@@ -234,7 +234,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Replacement-Functions">Replacement Fun
 <h4 class="subsection">2.2.1 Memory Allocation</h4>
 
 <p><a name="index-memory-allocation-9"></a>
-The functions beginning with the letter &lsquo;<samp><span class="samp">x</span></samp>&rsquo; are wrappers around
+The functions beginning with the letter `<samp><span class="samp">x</span></samp>' are wrappers around
 standard functions; the functions provided by the system environment
 are called and their results checked before the results are passed back
 to client code.  If the standard functions fail, these wrappers will
@@ -462,7 +462,7 @@ You should supply a function that either calls <code>exit</code>
      <pre class="smallexample">          void my_obstack_alloc_failed (void)
           ...
           obstack_alloc_failed_handler = &amp;my_obstack_alloc_failed;
-</pre>
+     </pre>
         </blockquote></div>
 
 <div class="node">
@@ -926,7 +926,7 @@ returns the same value as <code>obstack_base</code>.
 This is equivalent to
 
      <pre class="smallexample">          obstack_next_free (<var>obstack-ptr</var>) - obstack_base (<var>obstack-ptr</var>)
-</pre>
+     </pre>
         </blockquote></div>
 
 <div class="node">
@@ -964,7 +964,7 @@ on any multiple of 1 (that is, no alignment is required).
 so you can alter the mask by assignment.  For example, this statement:
 
      <pre class="smallexample">          obstack_alignment_mask (obstack_ptr) = 0;
-</pre>
+     </pre>
         <p class="noindent">has the effect of turning off alignment processing in the specified obstack. 
 </p></blockquote></div>
 
@@ -1122,7 +1122,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="#Top">Top</a>
 <div class="defun">
 &mdash; Replacement: void* <b>alloca</b> (<var>size_t size</var>)<var><a name="index-alloca-55"></a></var><br>
 <blockquote>
-        <p>This function allocates memory which will be automatically reclaimed
+<p>This function allocates memory which will be automatically reclaimed
 after the procedure exits.  The <code>libiberty</code> implementation does not free
 the memory immediately but will do so eventually during subsequent
 calls to this function.  Memory is allocated using <code>xmalloc</code> under
@@ -1141,7 +1141,7 @@ the possibility of a GCC built-in function.
 <div class="defun">
 &mdash; Extension: int <b>asprintf</b> (<var>char **resptr, const char *format, ...</var>)<var><a name="index-asprintf-56"></a></var><br>
 <blockquote>
-        <p>Like <code>sprintf</code>, but instead of passing a pointer to a buffer, you
+<p>Like <code>sprintf</code>, but instead of passing a pointer to a buffer, you
 pass a pointer to a pointer.  This function will compute the size of
 the buffer needed, allocate memory with <code>malloc</code>, and store a
 pointer to the allocated memory in <code>*</code><var>resptr</var>.  The value
@@ -1155,7 +1155,7 @@ not be allocated, minus one is returned and <code>NULL</code> is stored in
 <div class="defun">
 &mdash; Supplemental: int <b>atexit</b> (<var>void </var>(<var>*f</var>)())<var><a name="index-atexit-57"></a></var><br>
 <blockquote>
-        <p>Causes function <var>f</var> to be called at exit.  Returns 0.
+<p>Causes function <var>f</var> to be called at exit.  Returns 0.
 
         </blockquote></div>
 
@@ -1163,7 +1163,7 @@ not be allocated, minus one is returned and <code>NULL</code> is stored in
 <div class="defun">
 &mdash; Supplemental: char* <b>basename</b> (<var>const char *name</var>)<var><a name="index-basename-58"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to the last component of pathname <var>name</var>. 
+<p>Returns a pointer to the last component of pathname <var>name</var>. 
 Behavior is undefined if the pathname ends in a directory separator.
 
         </blockquote></div>
@@ -1172,7 +1172,7 @@ Behavior is undefined if the pathname ends in a directory separator.
 <div class="defun">
 &mdash; Supplemental: int <b>bcmp</b> (<var>char *x, char *y, int count</var>)<var><a name="index-bcmp-59"></a></var><br>
 <blockquote>
-        <p>Compares the first <var>count</var> bytes of two areas of memory.  Returns
+<p>Compares the first <var>count</var> bytes of two areas of memory.  Returns
 zero if they are the same, nonzero otherwise.  Returns zero if
 <var>count</var> is zero.  A nonzero result only indicates a difference,
 it does not indicate any sorting order (say, by having a positive
@@ -1184,7 +1184,7 @@ result mean <var>x</var> sorts before <var>y</var>).
 <div class="defun">
 &mdash; Supplemental: void <b>bcopy</b> (<var>char *in, char *out, int length</var>)<var><a name="index-bcopy-60"></a></var><br>
 <blockquote>
-        <p>Copies <var>length</var> bytes from memory region <var>in</var> to region
+<p>Copies <var>length</var> bytes from memory region <var>in</var> to region
 <var>out</var>.  The use of <code>bcopy</code> is deprecated in new programs.
 
         </blockquote></div>
@@ -1193,7 +1193,7 @@ result mean <var>x</var> sorts before <var>y</var>).
 <div class="defun">
 &mdash; Supplemental: void* <b>bsearch</b> (<var>const void *key, const void *base, size_t nmemb, size_t size, int </var>(<var>*compar</var>)(<var>const void *, const void *</var>))<var><a name="index-bsearch-61"></a></var><br>
 <blockquote>
-        <p>Performs a search over an array of <var>nmemb</var> elements pointed to by
+<p>Performs a search over an array of <var>nmemb</var> elements pointed to by
 <var>base</var> for a member that matches the object pointed to by <var>key</var>. 
 The size of each member is specified by <var>size</var>.  The array contents
 should be sorted in ascending order according to the <var>compar</var>
@@ -1208,7 +1208,7 @@ is respectively less than, matching, or greater than the array member.
 <div class="defun">
 &mdash; Extension: char** <b>buildargv</b> (<var>char *sp</var>)<var><a name="index-buildargv-62"></a></var><br>
 <blockquote>
-        <p>Given a pointer to a string, parse the string extracting fields
+<p>Given a pointer to a string, parse the string extracting fields
 separated by whitespace and optionally enclosed within either single
 or double quotes (which are stripped off), and build a vector of
 pointers to copies of the string for each field.  The input string
@@ -1234,7 +1234,7 @@ string.
 <div class="defun">
 &mdash; Supplemental: void <b>bzero</b> (<var>char *mem, int count</var>)<var><a name="index-bzero-63"></a></var><br>
 <blockquote>
-        <p>Zeros <var>count</var> bytes starting at <var>mem</var>.  Use of this function
+<p>Zeros <var>count</var> bytes starting at <var>mem</var>.  Use of this function
 is deprecated in favor of <code>memset</code>.
 
         </blockquote></div>
@@ -1243,7 +1243,7 @@ is deprecated in favor of <code>memset</code>.
 <div class="defun">
 &mdash; Supplemental: void* <b>calloc</b> (<var>size_t nelem, size_t elsize</var>)<var><a name="index-calloc-64"></a></var><br>
 <blockquote>
-        <p>Uses <code>malloc</code> to allocate storage for <var>nelem</var> objects of
+<p>Uses <code>malloc</code> to allocate storage for <var>nelem</var> objects of
 <var>elsize</var> bytes each, then zeros the memory.
 
         </blockquote></div>
@@ -1252,7 +1252,7 @@ is deprecated in favor of <code>memset</code>.
 <div class="defun">
 &mdash; Extension: char* <b>choose_temp_base</b> (<var>void</var>)<var><a name="index-choose_005ftemp_005fbase-65"></a></var><br>
 <blockquote>
-        <p>Return a prefix for temporary file names or <code>NULL</code> if unable to
+<p>Return a prefix for temporary file names or <code>NULL</code> if unable to
 find one.  The current directory is chosen if all else fails so the
 program is exited if a temporary directory can't be found (<code>mktemp</code>
 fails).  The buffer for the result is obtained with <code>xmalloc</code>.
@@ -1266,7 +1266,7 @@ not recommended.
 <div class="defun">
 &mdash; Replacement: char* <b>choose_tmpdir</b> ()<var><a name="index-choose_005ftmpdir-66"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to a directory path suitable for creating temporary
+<p>Returns a pointer to a directory path suitable for creating temporary
 files in.
 
         </blockquote></div>
@@ -1275,8 +1275,8 @@ files in.
 <div class="defun">
 &mdash; Supplemental: long <b>clock</b> (<var>void</var>)<var><a name="index-clock-67"></a></var><br>
 <blockquote>
-        <p>Returns an approximation of the CPU time used by the process as a
-<code>clock_t</code>; divide this number by &lsquo;<samp><span class="samp">CLOCKS_PER_SEC</span></samp>&rsquo; to get the
+<p>Returns an approximation of the CPU time used by the process as a
+<code>clock_t</code>; divide this number by `<samp><span class="samp">CLOCKS_PER_SEC</span></samp>' to get the
 number of seconds used.
 
         </blockquote></div>
@@ -1285,7 +1285,7 @@ number of seconds used.
 <div class="defun">
 &mdash; Extension: char* <b>concat</b> (<var>const char *s1, const char *s2, <small class="dots">...</small>, </var><code>NULL</code>)<var><a name="index-concat-68"></a></var><br>
 <blockquote>
-        <p>Concatenate zero or more of strings and return the result in freshly
+<p>Concatenate zero or more of strings and return the result in freshly
 <code>xmalloc</code>ed memory.  Returns <code>NULL</code> if insufficient memory is
 available.  The argument list is terminated by the first <code>NULL</code>
 pointer encountered.  Pointers to empty strings are ignored.
@@ -1296,7 +1296,7 @@ pointer encountered.  Pointers to empty strings are ignored.
 <div class="defun">
 &mdash; Extension: int <b>countargv</b> (<var>char **argv</var>)<var><a name="index-countargv-69"></a></var><br>
 <blockquote>
-        <p>Return the number of elements in <var>argv</var>. 
+<p>Return the number of elements in <var>argv</var>. 
 Returns zero if <var>argv</var> is NULL.
 
         </blockquote></div>
@@ -1305,13 +1305,13 @@ Returns zero if <var>argv</var> is NULL.
 <div class="defun">
 &mdash; Extension: unsigned int <b>crc32</b> (<var>const unsigned char *buf, int len, unsigned int init</var>)<var><a name="index-crc32-70"></a></var><br>
 <blockquote>
-        <p>Compute the 32-bit CRC of <var>buf</var> which has length <var>len</var>.  The
+<p>Compute the 32-bit CRC of <var>buf</var> which has length <var>len</var>.  The
 starting value is <var>init</var>; this may be used to compute the CRC of
 data split across multiple buffers by passing the return value of each
 call as the <var>init</var> parameter of the next.
 
         <p>This is intended to match the CRC used by the <samp><span class="command">gdb</span></samp> remote
-protocol for the &lsquo;<samp><span class="samp">qCRC</span></samp>&rsquo; command.  In order to get the same
+protocol for the `<samp><span class="samp">qCRC</span></samp>' command.  In order to get the same
 results as gdb for a block of data, you must pass the first CRC
 parameter as <code>0xffffffff</code>.
 
@@ -1334,7 +1334,7 @@ make it easy to compose the values of multiple blocks.
 <div class="defun">
 &mdash; Extension: char** <b>dupargv</b> (<var>char **vector</var>)<var><a name="index-dupargv-71"></a></var><br>
 <blockquote>
-        <p>Duplicate an argument vector.  Simply scans through <var>vector</var>,
+<p>Duplicate an argument vector.  Simply scans through <var>vector</var>,
 duplicating each argument until the terminating <code>NULL</code> is found. 
 Returns a pointer to the argument vector if successful.  Returns
 <code>NULL</code> if there is insufficient memory to complete building the
@@ -1346,7 +1346,7 @@ argument vector.
 <div class="defun">
 &mdash; Extension: int <b>errno_max</b> (<var>void</var>)<var><a name="index-errno_005fmax-72"></a></var><br>
 <blockquote>
-        <p>Returns the maximum <code>errno</code> value for which a corresponding
+<p>Returns the maximum <code>errno</code> value for which a corresponding
 symbolic name or message is available.  Note that in the case where we
 use the <code>sys_errlist</code> supplied by the system, it is possible for
 there to be more symbolic names than messages, or vice versa.  In
@@ -1365,9 +1365,9 @@ symbolic name or message.
 <div class="defun">
 &mdash; Extension: void <b>expandargv</b> (<var>int *argcp, char ***argvp</var>)<var><a name="index-expandargv-73"></a></var><br>
 <blockquote>
-        <p>The <var>argcp</var> and <code>argvp</code> arguments are pointers to the usual
+<p>The <var>argcp</var> and <code>argvp</code> arguments are pointers to the usual
 <code>argc</code> and <code>argv</code> arguments to <code>main</code>.  This function
-looks for arguments that begin with the character &lsquo;<samp><span class="samp">@</span></samp>&rsquo;.  Any such
+looks for arguments that begin with the character `<samp><span class="samp">@</span></samp>'.  Any such
 arguments are interpreted as &ldquo;response files&rdquo;.  The contents of the
 response file are interpreted as additional command line options.  In
 particular, the file is separated into whitespace-separated strings;
@@ -1386,7 +1386,7 @@ operating system to free the memory when the program exits.
 <div class="defun">
 &mdash; Extension: int <b>fdmatch</b> (<var>int fd1, int fd2</var>)<var><a name="index-fdmatch-74"></a></var><br>
 <blockquote>
-        <p>Check to see if two open file descriptors refer to the same file. 
+<p>Check to see if two open file descriptors refer to the same file. 
 This is useful, for example, when we have an open file descriptor for
 an unnamed file, and the name of a file that we believe to correspond
 to that fd.  This can happen when we are exec'd with an already open
@@ -1402,7 +1402,7 @@ and inode numbers.
 <div class="defun">
 &mdash; Extension: FILE * <b>fdopen_unlocked</b> (<var>int fildes, const char * mode</var>)<var><a name="index-fdopen_005funlocked-75"></a></var><br>
 <blockquote>
-        <p>Opens and returns a <code>FILE</code> pointer via <code>fdopen</code>.  If the
+<p>Opens and returns a <code>FILE</code> pointer via <code>fdopen</code>.  If the
 operating system supports it, ensure that the stream is setup to avoid
 any multi-threaded locking.  Otherwise return the <code>FILE</code> pointer
 unchanged.
@@ -1413,7 +1413,7 @@ unchanged.
 <div class="defun">
 &mdash; Supplemental: int <b>ffs</b> (<var>int valu</var>)<var><a name="index-ffs-76"></a></var><br>
 <blockquote>
-        <p>Find the first (least significant) bit set in <var>valu</var>.  Bits are
+<p>Find the first (least significant) bit set in <var>valu</var>.  Bits are
 numbered from right to left, starting with bit 1 (corresponding to the
 value 1).  If <var>valu</var> is zero, zero is returned.
 
@@ -1423,7 +1423,7 @@ value 1).  If <var>valu</var> is zero, zero is returned.
 <div class="defun">
 &mdash; Extension: int <b>filename_cmp</b> (<var>const char *s1, const char *s2</var>)<var><a name="index-filename_005fcmp-77"></a></var><br>
 <blockquote>
-        <p>Return zero if the two file names <var>s1</var> and <var>s2</var> are equivalent. 
+<p>Return zero if the two file names <var>s1</var> and <var>s2</var> are equivalent. 
 If not equivalent, the returned value is similar to what <code>strcmp</code>
 would return.  In other words, it returns a negative value if <var>s1</var>
 is less than <var>s2</var>, or a positive value if <var>s2</var> is greater than
@@ -1441,7 +1441,7 @@ and backward slashes are equal.
 <div class="defun">
 &mdash; Extension: int <b>filename_eq</b> (<var>const void *s1, const void *s2</var>)<var><a name="index-filename_005feq-78"></a></var><br>
 <blockquote>
-        <p>Return non-zero if file names <var>s1</var> and <var>s2</var> are equivalent. 
+<p>Return non-zero if file names <var>s1</var> and <var>s2</var> are equivalent. 
 This function is for use with hashtab.c hash tables.
 
         </blockquote></div>
@@ -1450,7 +1450,7 @@ This function is for use with hashtab.c hash tables.
 <div class="defun">
 &mdash; Extension: hashval_t <b>filename_hash</b> (<var>const void *s</var>)<var><a name="index-filename_005fhash-79"></a></var><br>
 <blockquote>
-        <p>Return the hash value for file name <var>s</var> that will be compared
+<p>Return the hash value for file name <var>s</var> that will be compared
 using filename_cmp. 
 This function is for use with hashtab.c hash tables.
 
@@ -1460,7 +1460,7 @@ This function is for use with hashtab.c hash tables.
 <div class="defun">
 &mdash; Extension: int <b>filename_ncmp</b> (<var>const char *s1, const char *s2, size_t n</var>)<var><a name="index-filename_005fncmp-80"></a></var><br>
 <blockquote>
-        <p>Return zero if the two file names <var>s1</var> and <var>s2</var> are equivalent
+<p>Return zero if the two file names <var>s1</var> and <var>s2</var> are equivalent
 in range <var>n</var>. 
 If not equivalent, the returned value is similar to what <code>strncmp</code>
 would return.  In other words, it returns a negative value if <var>s1</var>
@@ -1479,11 +1479,11 @@ and backward slashes are equal.
 <div class="defun">
 &mdash; Replacement: int <b>fnmatch</b> (<var>const char *pattern, const char *string, int flags</var>)<var><a name="index-fnmatch-81"></a></var><br>
 <blockquote>
-        <p>Matches <var>string</var> against <var>pattern</var>, returning zero if it
+<p>Matches <var>string</var> against <var>pattern</var>, returning zero if it
 matches, <code>FNM_NOMATCH</code> if not.  <var>pattern</var> may contain the
 wildcards <code>?</code> to match any one character, <code>*</code> to match any
 zero or more characters, or a set of alternate characters in square
-brackets, like &lsquo;<samp><span class="samp">[a-gt8]</span></samp>&rsquo;, which match one character (<code>a</code>
+brackets, like `<samp><span class="samp">[a-gt8]</span></samp>', which match one character (<code>a</code>
 through <code>g</code>, or <code>t</code>, or <code>8</code>, in this example) if that one
 character is in the set.  A set may be inverted (i.e., match anything
 except what's in the set) by giving <code>^</code> or <code>!</code> as the first
@@ -1491,8 +1491,8 @@ character in the set.  To include those characters in the set, list them
 as anything other than the first character of the set.  To include a
 dash in the set, list it last in the set.  A backslash character makes
 the following character not special, so for example you could match
-against a literal asterisk with &lsquo;<samp><span class="samp">\*</span></samp>&rsquo;.  To match a literal
-backslash, use &lsquo;<samp><span class="samp">\\</span></samp>&rsquo;.
+against a literal asterisk with `<samp><span class="samp">\*</span></samp>'.  To match a literal
+backslash, use `<samp><span class="samp">\\</span></samp>'.
 
         <p><code>flags</code> controls various aspects of the matching process, and is a
 boolean OR of zero or more of the following values (defined in
@@ -1510,8 +1510,8 @@ boolean OR of zero or more of the following values (defined in
 
           <br><dt><code>FNM_LEADING_DIR</code><dd>Means that <var>string</var> also matches <var>pattern</var> if some initial part
 of <var>string</var> matches, and is followed by <code>/</code> and zero or more
-characters.  For example, &lsquo;<samp><span class="samp">foo*</span></samp>&rsquo; would match either &lsquo;<samp><span class="samp">foobar</span></samp>&rsquo;
-or &lsquo;<samp><span class="samp">foobar/grill</span></samp>&rsquo;.
+characters.  For example, `<samp><span class="samp">foo*</span></samp>' would match either `<samp><span class="samp">foobar</span></samp>'
+or `<samp><span class="samp">foobar/grill</span></samp>'.
 
           <br><dt><code>FNM_CASEFOLD</code><dd>Ignores case when performing the comparison.
 
@@ -1523,7 +1523,7 @@ or &lsquo;<samp><span class="samp">foobar/grill</span></samp>&rsquo;.
 <div class="defun">
 &mdash; Extension: FILE * <b>fopen_unlocked</b> (<var>const char *path, const char * mode</var>)<var><a name="index-fopen_005funlocked-82"></a></var><br>
 <blockquote>
-        <p>Opens and returns a <code>FILE</code> pointer via <code>fopen</code>.  If the
+<p>Opens and returns a <code>FILE</code> pointer via <code>fopen</code>.  If the
 operating system supports it, ensure that the stream is setup to avoid
 any multi-threaded locking.  Otherwise return the <code>FILE</code> pointer
 unchanged.
@@ -1534,7 +1534,7 @@ unchanged.
 <div class="defun">
 &mdash; Extension: void <b>freeargv</b> (<var>char **vector</var>)<var><a name="index-freeargv-83"></a></var><br>
 <blockquote>
-        <p>Free an argument vector that was built using <code>buildargv</code>.  Simply
+<p>Free an argument vector that was built using <code>buildargv</code>.  Simply
 scans through <var>vector</var>, freeing the memory for each argument until
 the terminating <code>NULL</code> is found, and then frees <var>vector</var>
 itself.
@@ -1545,7 +1545,7 @@ itself.
 <div class="defun">
 &mdash; Extension: FILE * <b>freopen_unlocked</b> (<var>const char * path, const char * mode, FILE * stream</var>)<var><a name="index-freopen_005funlocked-84"></a></var><br>
 <blockquote>
-        <p>Opens and returns a <code>FILE</code> pointer via <code>freopen</code>.  If the
+<p>Opens and returns a <code>FILE</code> pointer via <code>freopen</code>.  If the
 operating system supports it, ensure that the stream is setup to avoid
 any multi-threaded locking.  Otherwise return the <code>FILE</code> pointer
 unchanged.
@@ -1556,7 +1556,7 @@ unchanged.
 <div class="defun">
 &mdash; Replacement: long <b>get_run_time</b> (<var>void</var>)<var><a name="index-get_005frun_005ftime-85"></a></var><br>
 <blockquote>
-        <p>Returns the time used so far, in microseconds.  If possible, this is
+<p>Returns the time used so far, in microseconds.  If possible, this is
 the time used by this process, else it is the elapsed time since the
 process started.
 
@@ -1566,7 +1566,7 @@ process started.
 <div class="defun">
 &mdash; Supplemental: char* <b>getcwd</b> (<var>char *pathname, int len</var>)<var><a name="index-getcwd-86"></a></var><br>
 <blockquote>
-        <p>Copy the absolute pathname for the current working directory into
+<p>Copy the absolute pathname for the current working directory into
 <var>pathname</var>, which is assumed to point to a buffer of at least
 <var>len</var> bytes, and return a pointer to the buffer.  If the current
 directory's path doesn't fit in <var>len</var> characters, the result is
@@ -1580,7 +1580,7 @@ directory's path doesn't fit in <var>len</var> characters, the result is
 <div class="defun">
 &mdash; Supplemental: int <b>getpagesize</b> (<var>void</var>)<var><a name="index-getpagesize-87"></a></var><br>
 <blockquote>
-        <p>Returns the number of bytes in a page of memory.  This is the
+<p>Returns the number of bytes in a page of memory.  This is the
 granularity of many of the system memory management routines.  No
 guarantee is made as to whether or not it is the same as the basic
 memory management hardware page size.
@@ -1591,7 +1591,7 @@ memory management hardware page size.
 <div class="defun">
 &mdash; Supplemental: char* <b>getpwd</b> (<var>void</var>)<var><a name="index-getpwd-88"></a></var><br>
 <blockquote>
-        <p>Returns the current working directory.  This implementation caches the
+<p>Returns the current working directory.  This implementation caches the
 result on the assumption that the process will not call <code>chdir</code>
 between calls to <code>getpwd</code>.
 
@@ -1601,7 +1601,7 @@ between calls to <code>getpwd</code>.
 <div class="defun">
 &mdash; Supplemental: int <b>gettimeofday</b> (<var>struct timeval *tp, void *tz</var>)<var><a name="index-gettimeofday-89"></a></var><br>
 <blockquote>
-        <p>Writes the current time to <var>tp</var>.  This implementation requires
+<p>Writes the current time to <var>tp</var>.  This implementation requires
 that <var>tz</var> be NULL.  Returns 0 on success, -1 on failure.
 
         </blockquote></div>
@@ -1610,7 +1610,7 @@ that <var>tz</var> be NULL.  Returns 0 on success, -1 on failure.
 <div class="defun">
 &mdash; Extension: void <b>hex_init</b> (<var>void</var>)<var><a name="index-hex_005finit-90"></a></var><br>
 <blockquote>
-        <p>Initializes the array mapping the current character set to
+<p>Initializes the array mapping the current character set to
 corresponding hex values.  This function must be called before any
 call to <code>hex_p</code> or <code>hex_value</code>.  If you fail to call it, a
 default ASCII-based table will normally be used on ASCII systems.
@@ -1621,7 +1621,7 @@ default ASCII-based table will normally be used on ASCII systems.
 <div class="defun">
 &mdash; Extension: int <b>hex_p</b> (<var>int c</var>)<var><a name="index-hex_005fp-91"></a></var><br>
 <blockquote>
-        <p>Evaluates to non-zero if the given character is a valid hex character,
+<p>Evaluates to non-zero if the given character is a valid hex character,
 or zero if it is not.  Note that the value you pass will be cast to
 <code>unsigned char</code> within the macro.
 
@@ -1631,7 +1631,7 @@ or zero if it is not.  Note that the value you pass will be cast to
 <div class="defun">
 &mdash; Extension: unsigned int <b>hex_value</b> (<var>int c</var>)<var><a name="index-hex_005fvalue-92"></a></var><br>
 <blockquote>
-        <p>Returns the numeric equivalent of the given character when interpreted
+<p>Returns the numeric equivalent of the given character when interpreted
 as a hexadecimal digit.  The result is undefined if you pass an
 invalid hex digit.  Note that the value you pass will be cast to
 <code>unsigned char</code> within the macro.
@@ -1649,7 +1649,7 @@ systems.
 &mdash; Extension: <b>HOST_CHARSET</b><var><a name="index-HOST_005fCHARSET-93"></a></var><br>
 <blockquote><p>This macro indicates the basic character set and encoding used by the
 host: more precisely, the encoding used for character constants in
-preprocessor &lsquo;<samp><span class="samp">#if</span></samp>&rsquo; statements (the C "execution character set"). 
+preprocessor `<samp><span class="samp">#if</span></samp>' statements (the C "execution character set"). 
 It is defined by <samp><span class="file">safe-ctype.h</span></samp>, and will be an integer constant
 with one of the following values:
 
@@ -1668,7 +1668,7 @@ nineteen EBCDIC varying characters is tested; exercise caution.)
 <div class="defun">
 &mdash; Supplemental: htab_t <b>htab_create_typed_alloc</b> (<var>size_t size, htab_hash hash_f, htab_eq eq_f, htab_del del_f, htab_alloc alloc_tab_f, htab_alloc alloc_f, htab_free free_f</var>)<var><a name="index-htab_005fcreate_005ftyped_005falloc-97"></a></var><br>
 <blockquote>
-        <p>This function creates a hash table that uses two different allocators
+<p>This function creates a hash table that uses two different allocators
 <var>alloc_tab_f</var> and <var>alloc_f</var> to use for allocating the table itself
 and its entries respectively.  This is useful when variables of different
 types need to be allocated with different allocators.
@@ -1684,7 +1684,7 @@ allocation fails.
 <div class="defun">
 &mdash; Supplemental: char* <b>index</b> (<var>char *s, int c</var>)<var><a name="index-index-98"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to the first occurrence of the character <var>c</var> in
+<p>Returns a pointer to the first occurrence of the character <var>c</var> in
 the string <var>s</var>, or <code>NULL</code> if not found.  The use of <code>index</code> is
 deprecated in new programs in favor of <code>strchr</code>.
 
@@ -1695,7 +1695,7 @@ deprecated in new programs in favor of <code>strchr</code>.
 &mdash; Supplemental: void <b>insque</b> (<var>struct qelem *elem, struct qelem *pred</var>)<var><a name="index-insque-99"></a></var><br>
 &mdash; Supplemental: void <b>remque</b> (<var>struct qelem *elem</var>)<var><a name="index-remque-100"></a></var><br>
 <blockquote>
-        <p>Routines to manipulate queues built from doubly linked lists.  The
+<p>Routines to manipulate queues built from doubly linked lists.  The
 <code>insque</code> routine inserts <var>elem</var> in the queue immediately
 after <var>pred</var>.  The <code>remque</code> routine removes <var>elem</var> from
 its containing queue.  These routines expect to be passed pointers to
@@ -1707,7 +1707,7 @@ back pointer, like this prototype (although no prototype is provided):
             struct qelem *q_back;
             char q_data[];
           };
-</pre>
+     </pre>
         </blockquote></div>
 
 <!-- safe-ctype.c:46 -->
@@ -1725,7 +1725,7 @@ back pointer, like this prototype (although no prototype is provided):
 &mdash; Extension: <b>ISUPPER</b> (<var>c</var>)<var><a name="index-ISUPPER-111"></a></var><br>
 &mdash; Extension: <b>ISXDIGIT</b> (<var>c</var>)<var><a name="index-ISXDIGIT-112"></a></var><br>
 <blockquote>
-        <p>These twelve macros are defined by <samp><span class="file">safe-ctype.h</span></samp>.  Each has the
+<p>These twelve macros are defined by <samp><span class="file">safe-ctype.h</span></samp>.  Each has the
 same meaning as the corresponding macro (with name in lowercase)
 defined by the standard header <samp><span class="file">ctype.h</span></samp>.  For example,
 <code>ISALPHA</code> returns true for alphabetic characters and false for
@@ -1786,9 +1786,9 @@ sets of characters:
 <div class="defun">
 &mdash; Replacement: const char* <b>lbasename</b> (<var>const char *name</var>)<var><a name="index-lbasename-119"></a></var><br>
 <blockquote>
-        <p>Given a pointer to a string containing a typical pathname
-(&lsquo;<samp><span class="samp">/usr/src/cmd/ls/ls.c</span></samp>&rsquo; for example), returns a pointer to the
-last component of the pathname (&lsquo;<samp><span class="samp">ls.c</span></samp>&rsquo; in this case).  The
+<p>Given a pointer to a string containing a typical pathname
+(`<samp><span class="samp">/usr/src/cmd/ls/ls.c</span></samp>' for example), returns a pointer to the
+last component of the pathname (`<samp><span class="samp">ls.c</span></samp>' in this case).  The
 returned pointer is guaranteed to lie within the original
 string.  This latter fact is not true of many vendor C
 libraries, which return special strings or modify the passed
@@ -1803,7 +1803,7 @@ and a path ending in <code>/</code> returns the empty string after it.
 <div class="defun">
 &mdash; Replacement: const char* <b>lrealpath</b> (<var>const char *name</var>)<var><a name="index-lrealpath-120"></a></var><br>
 <blockquote>
-        <p>Given a pointer to a string containing a pathname, returns a canonical
+<p>Given a pointer to a string containing a pathname, returns a canonical
 version of the filename.  Symlinks will be resolved, and &ldquo;.&rdquo; and &ldquo;..&rdquo;
 components will be simplified.  The returned value will be allocated using
 <code>malloc</code>, or <code>NULL</code> will be returned on a memory allocation error.
@@ -1814,7 +1814,7 @@ components will be simplified.  The returned value will be allocated using
 <div class="defun">
 &mdash; Extension: const char* <b>make_relative_prefix</b> (<var>const char *progname, const char *bin_prefix, const char *prefix</var>)<var><a name="index-make_005frelative_005fprefix-121"></a></var><br>
 <blockquote>
-        <p>Given three paths <var>progname</var>, <var>bin_prefix</var>, <var>prefix</var>,
+<p>Given three paths <var>progname</var>, <var>bin_prefix</var>, <var>prefix</var>,
 return the path that is in the same position relative to
 <var>progname</var>'s directory as <var>prefix</var> is relative to
 <var>bin_prefix</var>.  That is, a string starting with the directory
@@ -1840,7 +1840,7 @@ relative prefix can be found, return <code>NULL</code>.
 <div class="defun">
 &mdash; Replacement: char* <b>make_temp_file</b> (<var>const char *suffix</var>)<var><a name="index-make_005ftemp_005ffile-122"></a></var><br>
 <blockquote>
-        <p>Return a temporary file name (as a string) or <code>NULL</code> if unable to
+<p>Return a temporary file name (as a string) or <code>NULL</code> if unable to
 create one.  <var>suffix</var> is a suffix to append to the file name.  The
 string is <code>malloc</code>ed, and the temporary file has been created.
 
@@ -1850,7 +1850,7 @@ string is <code>malloc</code>ed, and the temporary file has been created.
 <div class="defun">
 &mdash; Supplemental: void* <b>memchr</b> (<var>const void *s, int c, size_t n</var>)<var><a name="index-memchr-123"></a></var><br>
 <blockquote>
-        <p>This function searches memory starting at <code>*</code><var>s</var> for the
+<p>This function searches memory starting at <code>*</code><var>s</var> for the
 character <var>c</var>.  The search only ends with the first occurrence of
 <var>c</var>, or after <var>length</var> characters; in particular, a null
 character does not terminate the search.  If the character <var>c</var> is
@@ -1864,7 +1864,7 @@ returned.
 <div class="defun">
 &mdash; Supplemental: int <b>memcmp</b> (<var>const void *x, const void *y, size_t count</var>)<var><a name="index-memcmp-124"></a></var><br>
 <blockquote>
-        <p>Compares the first <var>count</var> bytes of two areas of memory.  Returns
+<p>Compares the first <var>count</var> bytes of two areas of memory.  Returns
 zero if they are the same, a value less than zero if <var>x</var> is
 lexically less than <var>y</var>, or a value greater than zero if <var>x</var>
 is lexically greater than <var>y</var>.  Note that lexical order is determined
@@ -1876,7 +1876,7 @@ as if comparing unsigned char arrays.
 <div class="defun">
 &mdash; Supplemental: void* <b>memcpy</b> (<var>void *out, const void *in, size_t length</var>)<var><a name="index-memcpy-125"></a></var><br>
 <blockquote>
-        <p>Copies <var>length</var> bytes from memory region <var>in</var> to region
+<p>Copies <var>length</var> bytes from memory region <var>in</var> to region
 <var>out</var>.  Returns a pointer to <var>out</var>.
 
         </blockquote></div>
@@ -1885,7 +1885,7 @@ as if comparing unsigned char arrays.
 <div class="defun">
 &mdash; Supplemental: void* <b>memmem</b> (<var>const void *haystack, size_t haystack_len const void *needle, size_t needle_len</var>)<var><a name="index-memmem-126"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to the first occurrence of <var>needle</var> (length
+<p>Returns a pointer to the first occurrence of <var>needle</var> (length
 <var>needle_len</var>) in <var>haystack</var> (length <var>haystack_len</var>). 
 Returns <code>NULL</code> if not found.
 
@@ -1895,7 +1895,7 @@ Returns <code>NULL</code> if not found.
 <div class="defun">
 &mdash; Supplemental: void* <b>memmove</b> (<var>void *from, const void *to, size_t count</var>)<var><a name="index-memmove-127"></a></var><br>
 <blockquote>
-        <p>Copies <var>count</var> bytes from memory area <var>from</var> to memory area
+<p>Copies <var>count</var> bytes from memory area <var>from</var> to memory area
 <var>to</var>, returning a pointer to <var>to</var>.
 
         </blockquote></div>
@@ -1904,7 +1904,7 @@ Returns <code>NULL</code> if not found.
 <div class="defun">
 &mdash; Supplemental: void* <b>mempcpy</b> (<var>void *out, const void *in, size_t length</var>)<var><a name="index-mempcpy-128"></a></var><br>
 <blockquote>
-        <p>Copies <var>length</var> bytes from memory region <var>in</var> to region
+<p>Copies <var>length</var> bytes from memory region <var>in</var> to region
 <var>out</var>.  Returns a pointer to <var>out</var> + <var>length</var>.
 
         </blockquote></div>
@@ -1913,7 +1913,7 @@ Returns <code>NULL</code> if not found.
 <div class="defun">
 &mdash; Supplemental: void* <b>memset</b> (<var>void *s, int c, size_t count</var>)<var><a name="index-memset-129"></a></var><br>
 <blockquote>
-        <p>Sets the first <var>count</var> bytes of <var>s</var> to the constant byte
+<p>Sets the first <var>count</var> bytes of <var>s</var> to the constant byte
 <var>c</var>, returning a pointer to <var>s</var>.
 
         </blockquote></div>
@@ -1922,14 +1922,14 @@ Returns <code>NULL</code> if not found.
 <div class="defun">
 &mdash; Replacement: int <b>mkstemps</b> (<var>char *pattern, int suffix_len</var>)<var><a name="index-mkstemps-130"></a></var><br>
 <blockquote>
-        <p>Generate a unique temporary file name from <var>pattern</var>. 
+<p>Generate a unique temporary file name from <var>pattern</var>. 
 <var>pattern</var> has the form:
 
      <pre class="example">             <var>path</var>/ccXXXXXX<var>suffix</var>
-</pre>
+     </pre>
         <p><var>suffix_len</var> tells us how long <var>suffix</var> is (it can be zero
 length).  The last six characters of <var>pattern</var> before <var>suffix</var>
-must be &lsquo;<samp><span class="samp">XXXXXX</span></samp>&rsquo;; they are replaced with a string that makes the
+must be `<samp><span class="samp">XXXXXX</span></samp>'; they are replaced with a string that makes the
 filename unique.  Returns a file descriptor open on the file for
 reading and writing.
 
@@ -1939,7 +1939,7 @@ reading and writing.
 <div class="defun">
 &mdash; Extension: void <b>pex_free</b> (<var>struct pex_obj obj</var>)<var><a name="index-pex_005ffree-131"></a></var><br>
 <blockquote>
-        <p>Clean up and free all data associated with <var>obj</var>.  If you have not
+<p>Clean up and free all data associated with <var>obj</var>.  If you have not
 yet called <code>pex_get_times</code> or <code>pex_get_status</code>, this will
 try to kill the subprocesses.
 
@@ -1949,7 +1949,7 @@ try to kill the subprocesses.
 <div class="defun">
 &mdash; Extension: int <b>pex_get_status</b> (<var>struct pex_obj *obj, int count, int *vector</var>)<var><a name="index-pex_005fget_005fstatus-132"></a></var><br>
 <blockquote>
-        <p>Returns the exit status of all programs run using <var>obj</var>. 
+<p>Returns the exit status of all programs run using <var>obj</var>. 
 <var>count</var> is the number of results expected.  The results will be
 placed into <var>vector</var>.  The results are in the order of the calls
 to <code>pex_run</code>.  Returns 0 on error, 1 on success.
@@ -1960,7 +1960,7 @@ to <code>pex_run</code>.  Returns 0 on error, 1 on success.
 <div class="defun">
 &mdash; Extension: int <b>pex_get_times</b> (<var>struct pex_obj *obj, int count, struct pex_time *vector</var>)<var><a name="index-pex_005fget_005ftimes-133"></a></var><br>
 <blockquote>
-        <p>Returns the process execution times of all programs run using
+<p>Returns the process execution times of all programs run using
 <var>obj</var>.  <var>count</var> is the number of results expected.  The
 results will be placed into <var>vector</var>.  The results are in the
 order of the calls to <code>pex_run</code>.  Returns 0 on error, 1 on
@@ -1978,7 +1978,7 @@ process times, all the fields will be set to <code>0</code>.
 <div class="defun">
 &mdash; Extension: struct pex_obj * <b>pex_init</b> (<var>int flags, const char *pname, const char *tempbase</var>)<var><a name="index-pex_005finit-134"></a></var><br>
 <blockquote>
-        <p>Prepare to execute one or more programs, with standard output of each
+<p>Prepare to execute one or more programs, with standard output of each
 program fed to standard input of the next.  This is a system
 independent interface to execute a pipeline.
 
@@ -2005,7 +2005,7 @@ temporary files; it may be <code>NULL</code> to use a randomly chosen name.
 <div class="defun">
 &mdash; Extension: FILE * <b>pex_input_file</b> (<var>struct pex_obj *obj, int flags, const char *in_name</var>)<var><a name="index-pex_005finput_005ffile-138"></a></var><br>
 <blockquote>
-        <p>Return a stream for a temporary file to pass to the first program in
+<p>Return a stream for a temporary file to pass to the first program in
 the pipeline as input.
 
         <p>The name of the input file is chosen according to the same rules
@@ -2024,7 +2024,7 @@ binary mode; otherwise, open it in the default mode.  Including
 <div class="defun">
 &mdash; Extension: FILE * <b>pex_input_pipe</b> (<var>struct pex_obj *obj, int binary</var>)<var><a name="index-pex_005finput_005fpipe-139"></a></var><br>
 <blockquote>
-        <p>Return a stream <var>fp</var> for a pipe connected to the standard input of
+<p>Return a stream <var>fp</var> for a pipe connected to the standard input of
 the first program in the pipeline; <var>fp</var> is opened for writing. 
 You must have passed <code>PEX_USE_PIPES</code> to the <code>pex_init</code> call
 that returned <var>obj</var>.
@@ -2068,7 +2068,7 @@ the output pipe is you, but you are blocked on the input pipe.
 <div class="defun">
 &mdash; Extension: const char * <b>pex_one</b> (<var>int flags, const char *executable, char * const *argv, const char *pname, const char *outname, const char *errname, int *status, int *err</var>)<var><a name="index-pex_005fone-140"></a></var><br>
 <blockquote>
-        <p>An interface to permit the easy execution of a
+<p>An interface to permit the easy execution of a
 single program.  The return value and most of the parameters are as
 for a call to <code>pex_run</code>.  <var>flags</var> is restricted to a
 combination of <code>PEX_SEARCH</code>, <code>PEX_STDERR_TO_STDOUT</code>, and
@@ -2082,7 +2082,7 @@ be set to the exit status of the program.
 <div class="defun">
 &mdash; Extension: FILE * <b>pex_read_err</b> (<var>struct pex_obj *obj, int binary</var>)<var><a name="index-pex_005fread_005ferr-141"></a></var><br>
 <blockquote>
-        <p>Returns a <code>FILE</code> pointer which may be used to read the standard
+<p>Returns a <code>FILE</code> pointer which may be used to read the standard
 error of the last program in the pipeline.  When this is used,
 <code>PEX_LAST</code> should not be used in a call to <code>pex_run</code>.  After
 this is called, <code>pex_run</code> may no longer be called with the same
@@ -2096,7 +2096,7 @@ it will be closed by <code>pex_free</code>.
 <div class="defun">
 &mdash; Extension: FILE * <b>pex_read_output</b> (<var>struct pex_obj *obj, int binary</var>)<var><a name="index-pex_005fread_005foutput-142"></a></var><br>
 <blockquote>
-        <p>Returns a <code>FILE</code> pointer which may be used to read the standard
+<p>Returns a <code>FILE</code> pointer which may be used to read the standard
 output of the last program in the pipeline.  When this is used,
 <code>PEX_LAST</code> should not be used in a call to <code>pex_run</code>.  After
 this is called, <code>pex_run</code> may no longer be called with the same
@@ -2110,7 +2110,7 @@ it will be closed by <code>pex_free</code>.
 <div class="defun">
 &mdash; Extension: const char * <b>pex_run</b> (<var>struct pex_obj *obj, int flags, const char *executable, char * const *argv, const char *outname, const char *errname, int *err</var>)<var><a name="index-pex_005frun-143"></a></var><br>
 <blockquote>
-        <p>Execute one program in a pipeline.  On success this returns
+<p>Execute one program in a pipeline.  On success this returns
 <code>NULL</code>.  On failure it returns an error message, a statically
 allocated string.
 
@@ -2200,7 +2200,7 @@ value, or to 0 if there is no relevant <code>errno</code>.
 <div class="defun">
 &mdash; Extension: const char * <b>pex_run_in_environment</b> (<var>struct pex_obj *obj, int flags, const char *executable, char * const *argv, char * const *env, int env_size, const char *outname, const char *errname, int *err</var>)<var><a name="index-pex_005frun_005fin_005fenvironment-152"></a></var><br>
 <blockquote>
-        <p>Execute one program in a pipeline, permitting the environment for the
+<p>Execute one program in a pipeline, permitting the environment for the
 program to be specified.  Behaviour and parameters not listed below are
 as for <code>pex_run</code>.
 
@@ -2215,7 +2215,7 @@ form <code>VAR=VALUE</code>, with the exception of the last element that must be
 <div class="defun">
 &mdash; Extension: int <b>pexecute</b> (<var>const char *program, char * const *argv, const char *this_pname, const char *temp_base, char **errmsg_fmt, char **errmsg_arg, int flags</var>)<var><a name="index-pexecute-153"></a></var><br>
 <blockquote>
-        <p>This is the old interface to execute one or more programs.  It is
+<p>This is the old interface to execute one or more programs.  It is
 still supported for compatibility purposes, but is no longer
 documented.
 
@@ -2225,7 +2225,7 @@ documented.
 <div class="defun">
 &mdash; Supplemental: void <b>psignal</b> (<var>int signo, char *message</var>)<var><a name="index-psignal-154"></a></var><br>
 <blockquote>
-        <p>Print <var>message</var> to the standard error, followed by a colon,
+<p>Print <var>message</var> to the standard error, followed by a colon,
 followed by the description of the signal specified by <var>signo</var>,
 followed by a newline.
 
@@ -2235,9 +2235,9 @@ followed by a newline.
 <div class="defun">
 &mdash; Supplemental: int <b>putenv</b> (<var>const char *string</var>)<var><a name="index-putenv-155"></a></var><br>
 <blockquote>
-        <p>Uses <code>setenv</code> or <code>unsetenv</code> to put <var>string</var> into
+<p>Uses <code>setenv</code> or <code>unsetenv</code> to put <var>string</var> into
 the environment or remove it.  If <var>string</var> is of the form
-&lsquo;<samp><span class="samp">name=value</span></samp>&rsquo; the string is added; if no &lsquo;<samp><span class="samp">=</span></samp>&rsquo; is present the
+`<samp><span class="samp">name=value</span></samp>' the string is added; if no `<samp><span class="samp">=</span></samp>' is present the
 name is unset/removed.
 
         </blockquote></div>
@@ -2246,7 +2246,7 @@ name is unset/removed.
 <div class="defun">
 &mdash; Extension: int <b>pwait</b> (<var>int pid, int *status, int flags</var>)<var><a name="index-pwait-156"></a></var><br>
 <blockquote>
-        <p>Another part of the old execution interface.
+<p>Another part of the old execution interface.
 
         </blockquote></div>
 
@@ -2257,7 +2257,7 @@ name is unset/removed.
 &mdash; Supplement: void* <b>initstate</b> (<var>unsigned int seed, void *arg_state, unsigned long n</var>)<var><a name="index-initstate-159"></a></var><br>
 &mdash; Supplement: void* <b>setstate</b> (<var>void *arg_state</var>)<var><a name="index-setstate-160"></a></var><br>
 <blockquote>
-        <p>Random number functions.  <code>random</code> returns a random number in the
+<p>Random number functions.  <code>random</code> returns a random number in the
 range 0 to <code>LONG_MAX</code>.  <code>srandom</code> initializes the random
 number generator to some starting point determined by <var>seed</var>
 (else, the values returned by <code>random</code> are always the same for each
@@ -2270,20 +2270,20 @@ control over the state of the random number generator.
 <div class="defun">
 &mdash; Extension: char* <b>reconcat</b> (<var>char *optr, const char *s1, <small class="dots">...</small>, </var><code>NULL</code>)<var><a name="index-reconcat-161"></a></var><br>
 <blockquote>
-        <p>Same as <code>concat</code>, except that if <var>optr</var> is not <code>NULL</code> it
+<p>Same as <code>concat</code>, except that if <var>optr</var> is not <code>NULL</code> it
 is freed after the string is created.  This is intended to be useful
 when you're extending an existing string or building up a string in a
 loop:
 
      <pre class="example">            str = reconcat (str, "pre-", str, NULL);
-</pre>
+     </pre>
         </blockquote></div>
 
 <!-- rename.c:6 -->
 <div class="defun">
 &mdash; Supplemental: int <b>rename</b> (<var>const char *old, const char *new</var>)<var><a name="index-rename-162"></a></var><br>
 <blockquote>
-        <p>Renames a file from <var>old</var> to <var>new</var>.  If <var>new</var> already
+<p>Renames a file from <var>old</var> to <var>new</var>.  If <var>new</var> already
 exists, it is removed.
 
         </blockquote></div>
@@ -2292,7 +2292,7 @@ exists, it is removed.
 <div class="defun">
 &mdash; Supplemental: char* <b>rindex</b> (<var>const char *s, int c</var>)<var><a name="index-rindex-163"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to the last occurrence of the character <var>c</var> in
+<p>Returns a pointer to the last occurrence of the character <var>c</var> in
 the string <var>s</var>, or <code>NULL</code> if not found.  The use of <code>rindex</code> is
 deprecated in new programs in favor of <code>strrchr</code>.
 
@@ -2303,7 +2303,7 @@ deprecated in new programs in favor of <code>strrchr</code>.
 &mdash; Supplemental: int <b>setenv</b> (<var>const char *name, const char *value, int overwrite</var>)<var><a name="index-setenv-164"></a></var><br>
 &mdash; Supplemental: void <b>unsetenv</b> (<var>const char *name</var>)<var><a name="index-unsetenv-165"></a></var><br>
 <blockquote>
-        <p><code>setenv</code> adds <var>name</var> to the environment with value
+<p><code>setenv</code> adds <var>name</var> to the environment with value
 <var>value</var>.  If the name was already present in the environment,
 the new value will be stored only if <var>overwrite</var> is nonzero. 
 The companion <code>unsetenv</code> function removes <var>name</var> from the
@@ -2315,7 +2315,7 @@ environment.  This implementation is not safe for multithreaded code.
 <div class="defun">
 &mdash; Supplemental: void <b>setproctitle</b> (<var>const char *fmt, ...</var>)<var><a name="index-setproctitle-166"></a></var><br>
 <blockquote>
-        <p>Set the title of a process to <var>fmt</var>. va args not supported for now,
+<p>Set the title of a process to <var>fmt</var>. va args not supported for now,
 but defined for compatibility with BSD.
 
         </blockquote></div>
@@ -2324,7 +2324,7 @@ but defined for compatibility with BSD.
 <div class="defun">
 &mdash; Extension: int <b>signo_max</b> (<var>void</var>)<var><a name="index-signo_005fmax-167"></a></var><br>
 <blockquote>
-        <p>Returns the maximum signal value for which a corresponding symbolic
+<p>Returns the maximum signal value for which a corresponding symbolic
 name or message is available.  Note that in the case where we use the
 <code>sys_siglist</code> supplied by the system, it is possible for there to
 be more symbolic names than messages, or vice versa.  In fact, the
@@ -2343,7 +2343,7 @@ symbolic name or message.
 <div class="defun">
 &mdash; Supplemental: int <b>sigsetmask</b> (<var>int set</var>)<var><a name="index-sigsetmask-168"></a></var><br>
 <blockquote>
-        <p>Sets the signal mask to the one provided in <var>set</var> and returns
+<p>Sets the signal mask to the one provided in <var>set</var> and returns
 the old mask (which, for libiberty's implementation, will always
 be the value <code>1</code>).
 
@@ -2353,7 +2353,7 @@ be the value <code>1</code>).
 <div class="defun">
 &mdash; Extension: const char * <b>simple_object_attributes_compare</b> (<var>simple_object_attributes *attrs1, simple_object_attributes *attrs2, int *err</var>)<var><a name="index-simple_005fobject_005fattributes_005fcompare-169"></a></var><br>
 <blockquote>
-        <p>Compare <var>attrs1</var> and <var>attrs2</var>.  If they could be linked
+<p>Compare <var>attrs1</var> and <var>attrs2</var>.  If they could be linked
 together without error, return <code>NULL</code>.  Otherwise, return an
 error message and set <code>*</code><var>err</var> to an errno value or <code>0</code>
 if there is no relevant errno.
@@ -2364,7 +2364,7 @@ if there is no relevant errno.
 <div class="defun">
 &mdash; Extension: simple_object_attributes * <b>simple_object_fetch_attributes</b> (<var>simple_object_read *simple_object, const char **errmsg, int *err</var>)<var><a name="index-simple_005fobject_005ffetch_005fattributes-170"></a></var><br>
 <blockquote>
-        <p>Fetch the attributes of <var>simple_object</var>.  The attributes are
+<p>Fetch the attributes of <var>simple_object</var>.  The attributes are
 internal information such as the format of the object file, or the
 architecture it was compiled for.  This information will persist until
 <code>simple_object_attributes_release</code> is called, even if
@@ -2380,7 +2380,7 @@ error message, and sets <code>*</code><var>err</var> to an errno value or
 <div class="defun">
 &mdash; Extension: int <b>simple_object_find_section</b> (<var>simple_object_read *simple_object off_t *offset, off_t *length, const char **errmsg, int *err</var>)<var><a name="index-simple_005fobject_005ffind_005fsection-171"></a></var><br>
 <blockquote>
-        <p>Look for the section <var>name</var> in <var>simple_object</var>.  This returns
+<p>Look for the section <var>name</var> in <var>simple_object</var>.  This returns
 information for the first section with that name.
 
         <p>If found, return 1 and set <code>*</code><var>offset</var> to the offset in the
@@ -2404,7 +2404,7 @@ relevant errno.
 <div class="defun">
 &mdash; Extension: const char * <b>simple_object_find_sections</b> (<var>simple_object_read *simple_object, int </var>(<var>*pfn</var>) (<var>void *data, const char *name, off_t offset, off_t length</var>)<var>, void *data, int *err</var>)<var><a name="index-simple_005fobject_005ffind_005fsections-172"></a></var><br>
 <blockquote>
-        <p>This function calls <var>pfn</var> for each section in <var>simple_object</var>. 
+<p>This function calls <var>pfn</var> for each section in <var>simple_object</var>. 
 It calls <var>pfn</var> with the section name, the offset within the file
 of the section contents, and the length of the section contents.  The
 offset within the file is relative to the offset passed to
@@ -2425,7 +2425,7 @@ or <code>0</code> if there is no relevant errno.
 <div class="defun">
 &mdash; Extension: simple_object_read * <b>simple_object_open_read</b> (<var>int descriptor, off_t offset, const char *segment_name, const char **errmsg, int *err</var>)<var><a name="index-simple_005fobject_005fopen_005fread-173"></a></var><br>
 <blockquote>
-        <p>Opens an object file for reading.  Creates and returns an
+<p>Opens an object file for reading.  Creates and returns an
 <code>simple_object_read</code> pointer which may be passed to other
 functions to extract data from the object file.
 
@@ -2450,7 +2450,7 @@ an errno value or <code>0</code> if there is no relevant errno.
 <div class="defun">
 &mdash; Extension: void <b>simple_object_release_attributes</b> (<var>simple_object_attributes *attrs</var>)<var><a name="index-simple_005fobject_005frelease_005fattributes-174"></a></var><br>
 <blockquote>
-        <p>Release all resources associated with <var>attrs</var>.
+<p>Release all resources associated with <var>attrs</var>.
 
         </blockquote></div>
 
@@ -2458,7 +2458,7 @@ an errno value or <code>0</code> if there is no relevant errno.
 <div class="defun">
 &mdash; Extension: void <b>simple_object_release_read</b> (<var>simple_object_read *simple_object</var>)<var><a name="index-simple_005fobject_005frelease_005fread-175"></a></var><br>
 <blockquote>
-        <p>Release all resources associated with <var>simple_object</var>.  This does
+<p>Release all resources associated with <var>simple_object</var>.  This does
 not close the file descriptor.
 
         </blockquote></div>
@@ -2467,7 +2467,7 @@ not close the file descriptor.
 <div class="defun">
 &mdash; Extension: void <b>simple_object_release_write</b> (<var>simple_object_write *simple_object</var>)<var><a name="index-simple_005fobject_005frelease_005fwrite-176"></a></var><br>
 <blockquote>
-        <p>Release all resources associated with <var>simple_object</var>.
+<p>Release all resources associated with <var>simple_object</var>.
 
         </blockquote></div>
 
@@ -2475,7 +2475,7 @@ not close the file descriptor.
 <div class="defun">
 &mdash; Extension: simple_object_write * <b>simple_object_start_write</b> (<var>simple_object_attributes attrs, const char *segment_name, const char **errmsg, int *err</var>)<var><a name="index-simple_005fobject_005fstart_005fwrite-177"></a></var><br>
 <blockquote>
-        <p>Start creating a new object file using the object file format
+<p>Start creating a new object file using the object file format
 described in <var>attrs</var>.  You must fetch attribute information from
 an existing object file before you can create a new one.  There is
 currently no support for creating an object file de novo.
@@ -2495,7 +2495,7 @@ to an errno value or <code>0</code> if there is no relevant errno.
 <div class="defun">
 &mdash; Extension: const char * <b>simple_object_write_add_data</b> (<var>simple_object_write *simple_object, simple_object_write_section *section, const void *buffer, size_t size, int copy, int *err</var>)<var><a name="index-simple_005fobject_005fwrite_005fadd_005fdata-178"></a></var><br>
 <blockquote>
-        <p>Add data <var>buffer</var>/<var>size</var> to <var>section</var> in
+<p>Add data <var>buffer</var>/<var>size</var> to <var>section</var> in
 <var>simple_object</var>.  If <var>copy</var> is non-zero, the data will be
 copied into memory if necessary.  If <var>copy</var> is zero, <var>buffer</var>
 must persist until <code>simple_object_write_to_file</code> is called.  is
@@ -2511,7 +2511,7 @@ no relevant erro.
 <div class="defun">
 &mdash; Extension: simple_object_write_section * <b>simple_object_write_create_section</b> (<var>simple_object_write *simple_object, const char *name, unsigned int align, const char **errmsg, int *err</var>)<var><a name="index-simple_005fobject_005fwrite_005fcreate_005fsection-179"></a></var><br>
 <blockquote>
-        <p>Add a section to <var>simple_object</var>.  <var>name</var> is the name of the
+<p>Add a section to <var>simple_object</var>.  <var>name</var> is the name of the
 new section.  <var>align</var> is the required alignment expressed as the
 number of required low-order 0 bits (e.g., 2 for alignment to a 32-bit
 boundary).
@@ -2530,7 +2530,7 @@ error message, and sets <code>*</code><var>err</var> to an errno value or
 <div class="defun">
 &mdash; Extension: const char * <b>simple_object_write_to_file</b> (<var>simple_object_write *simple_object, int descriptor, int *err</var>)<var><a name="index-simple_005fobject_005fwrite_005fto_005ffile-180"></a></var><br>
 <blockquote>
-        <p>Write the complete object file to <var>descriptor</var>, an open file
+<p>Write the complete object file to <var>descriptor</var>, an open file
 descriptor.  This writes out all the data accumulated by calls to
 <code>simple_object_write_create_section</code> and
 <var>simple_object_write_add_data</var>.
@@ -2545,7 +2545,7 @@ there is no relevant errno.
 <div class="defun">
 &mdash; Supplemental: int <b>snprintf</b> (<var>char *buf, size_t n, const char *format, ...</var>)<var><a name="index-snprintf-181"></a></var><br>
 <blockquote>
-        <p>This function is similar to <code>sprintf</code>, but it will write to
+<p>This function is similar to <code>sprintf</code>, but it will write to
 <var>buf</var> at most <var>n</var><code>-1</code> bytes of text, followed by a
 terminating null byte, for a total of <var>n</var> bytes. 
 On error the return value is -1, otherwise it returns the number of
@@ -2561,7 +2561,7 @@ the system version of this function is used.
 <div class="defun">
 &mdash; Extension: char* <b>spaces</b> (<var>int count</var>)<var><a name="index-spaces-182"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to a memory region filled with the specified
+<p>Returns a pointer to a memory region filled with the specified
 number of spaces and null terminated.  The returned pointer is
 valid until at least the next call.
 
@@ -2571,7 +2571,7 @@ valid until at least the next call.
 <div class="defun">
 &mdash; Supplemental: splay_tree <b>splay_tree_new_with_typed_alloc</b> (<var>splay_tree_compare_fn compare_fn, splay_tree_delete_key_fn delete_key_fn, splay_tree_delete_value_fn delete_value_fn, splay_tree_allocate_fn tree_allocate_fn, splay_tree_allocate_fn node_allocate_fn, splay_tree_deallocate_fn deallocate_fn, void * allocate_data</var>)<var><a name="index-splay_005ftree_005fnew_005fwith_005ftyped_005falloc-183"></a></var><br>
 <blockquote>
-        <p>This function creates a splay tree that uses two different allocators
+<p>This function creates a splay tree that uses two different allocators
 <var>tree_allocate_fn</var> and <var>node_allocate_fn</var> to use for allocating the
 tree itself and its nodes respectively.  This is useful when variables of
 different types need to be allocated with different allocators.
@@ -2586,7 +2586,7 @@ deallocate values.
 <div class="defun">
 &mdash; Extension: void <b>stack_limit_increase</b> (<var>unsigned long pref</var>)<var><a name="index-stack_005flimit_005fincrease-184"></a></var><br>
 <blockquote>
-        <p>Attempt to increase stack size limit to <var>pref</var> bytes if possible.
+<p>Attempt to increase stack size limit to <var>pref</var> bytes if possible.
 
         </blockquote></div>
 
@@ -2594,7 +2594,7 @@ deallocate values.
 <div class="defun">
 &mdash; Supplemental: char* <b>stpcpy</b> (<var>char *dst, const char *src</var>)<var><a name="index-stpcpy-185"></a></var><br>
 <blockquote>
-        <p>Copies the string <var>src</var> into <var>dst</var>.  Returns a pointer to
+<p>Copies the string <var>src</var> into <var>dst</var>.  Returns a pointer to
 <var>dst</var> + strlen(<var>src</var>).
 
         </blockquote></div>
@@ -2603,7 +2603,7 @@ deallocate values.
 <div class="defun">
 &mdash; Supplemental: char* <b>stpncpy</b> (<var>char *dst, const char *src, size_t len</var>)<var><a name="index-stpncpy-186"></a></var><br>
 <blockquote>
-        <p>Copies the string <var>src</var> into <var>dst</var>, copying exactly <var>len</var>
+<p>Copies the string <var>src</var> into <var>dst</var>, copying exactly <var>len</var>
 and padding with zeros if necessary.  If <var>len</var> &lt; strlen(<var>src</var>)
 then return <var>dst</var> + <var>len</var>, otherwise returns <var>dst</var> +
 strlen(<var>src</var>).
@@ -2614,7 +2614,7 @@ strlen(<var>src</var>).
 <div class="defun">
 &mdash; Supplemental: int <b>strcasecmp</b> (<var>const char *s1, const char *s2</var>)<var><a name="index-strcasecmp-187"></a></var><br>
 <blockquote>
-        <p>A case-insensitive <code>strcmp</code>.
+<p>A case-insensitive <code>strcmp</code>.
 
         </blockquote></div>
 
@@ -2622,7 +2622,7 @@ strlen(<var>src</var>).
 <div class="defun">
 &mdash; Supplemental: char* <b>strchr</b> (<var>const char *s, int c</var>)<var><a name="index-strchr-188"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to the first occurrence of the character <var>c</var> in
+<p>Returns a pointer to the first occurrence of the character <var>c</var> in
 the string <var>s</var>, or <code>NULL</code> if not found.  If <var>c</var> is itself the
 null character, the results are undefined.
 
@@ -2632,7 +2632,7 @@ null character, the results are undefined.
 <div class="defun">
 &mdash; Supplemental: char* <b>strdup</b> (<var>const char *s</var>)<var><a name="index-strdup-189"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to a copy of <var>s</var> in memory obtained from
+<p>Returns a pointer to a copy of <var>s</var> in memory obtained from
 <code>malloc</code>, or <code>NULL</code> if insufficient memory was available.
 
         </blockquote></div>
@@ -2641,13 +2641,13 @@ null character, the results are undefined.
 <div class="defun">
 &mdash; Replacement: const char* <b>strerrno</b> (<var>int errnum</var>)<var><a name="index-strerrno-190"></a></var><br>
 <blockquote>
-        <p>Given an error number returned from a system call (typically returned
+<p>Given an error number returned from a system call (typically returned
 in <code>errno</code>), returns a pointer to a string containing the
 symbolic name of that error number, as found in <code>&lt;errno.h&gt;</code>.
 
         <p>If the supplied error number is within the valid range of indices for
 symbolic names, but no name is available for the particular error
-number, then returns the string &lsquo;<samp><span class="samp">Error </span><var>num</var></samp>&rsquo;, where <var>num</var>
+number, then returns the string `<samp><span class="samp">Error </span><var>num</var></samp>', where <var>num</var>
 is the error number.
 
         <p>If the supplied error number is not within the range of valid
@@ -2662,14 +2662,14 @@ valid until the next call to <code>strerrno</code>.
 <div class="defun">
 &mdash; Supplemental: char* <b>strerror</b> (<var>int errnoval</var>)<var><a name="index-strerror-191"></a></var><br>
 <blockquote>
-        <p>Maps an <code>errno</code> number to an error message string, the contents
+<p>Maps an <code>errno</code> number to an error message string, the contents
 of which are implementation defined.  On systems which have the
 external variables <code>sys_nerr</code> and <code>sys_errlist</code>, these
 strings will be the same as the ones used by <code>perror</code>.
 
         <p>If the supplied error number is within the valid range of indices for
 the <code>sys_errlist</code>, but no message is available for the particular
-error number, then returns the string &lsquo;<samp><span class="samp">Error </span><var>num</var></samp>&rsquo;, where
+error number, then returns the string `<samp><span class="samp">Error </span><var>num</var></samp>', where
 <var>num</var> is the error number.
 
         <p>If the supplied error number is not a valid index into
@@ -2684,7 +2684,7 @@ next call to <code>strerror</code>.
 <div class="defun">
 &mdash; Supplemental: int <b>strncasecmp</b> (<var>const char *s1, const char *s2</var>)<var><a name="index-strncasecmp-192"></a></var><br>
 <blockquote>
-        <p>A case-insensitive <code>strncmp</code>.
+<p>A case-insensitive <code>strncmp</code>.
 
         </blockquote></div>
 
@@ -2692,7 +2692,7 @@ next call to <code>strerror</code>.
 <div class="defun">
 &mdash; Supplemental: int <b>strncmp</b> (<var>const char *s1, const char *s2, size_t n</var>)<var><a name="index-strncmp-193"></a></var><br>
 <blockquote>
-        <p>Compares the first <var>n</var> bytes of two strings, returning a value as
+<p>Compares the first <var>n</var> bytes of two strings, returning a value as
 <code>strcmp</code>.
 
         </blockquote></div>
@@ -2701,7 +2701,7 @@ next call to <code>strerror</code>.
 <div class="defun">
 &mdash; Extension: char* <b>strndup</b> (<var>const char *s, size_t n</var>)<var><a name="index-strndup-194"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to a copy of <var>s</var> with at most <var>n</var> characters
+<p>Returns a pointer to a copy of <var>s</var> with at most <var>n</var> characters
 in memory obtained from <code>malloc</code>, or <code>NULL</code> if insufficient
 memory was available.  The result is always NUL terminated.
 
@@ -2711,7 +2711,7 @@ memory was available.  The result is always NUL terminated.
 <div class="defun">
 &mdash; Supplemental: size_t <b>strnlen</b> (<var>const char *s, size_t maxlen</var>)<var><a name="index-strnlen-195"></a></var><br>
 <blockquote>
-        <p>Returns the length of <var>s</var>, as with <code>strlen</code>, but never looks
+<p>Returns the length of <var>s</var>, as with <code>strlen</code>, but never looks
 past the first <var>maxlen</var> characters in the string.  If there is no
 '\0' character in the first <var>maxlen</var> characters, returns
 <var>maxlen</var>.
@@ -2722,7 +2722,7 @@ past the first <var>maxlen</var> characters in the string.  If there is no
 <div class="defun">
 &mdash; Supplemental: char* <b>strrchr</b> (<var>const char *s, int c</var>)<var><a name="index-strrchr-196"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to the last occurrence of the character <var>c</var> in
+<p>Returns a pointer to the last occurrence of the character <var>c</var> in
 the string <var>s</var>, or <code>NULL</code> if not found.  If <var>c</var> is itself the
 null character, the results are undefined.
 
@@ -2732,14 +2732,14 @@ null character, the results are undefined.
 <div class="defun">
 &mdash; Supplemental: const char * <b>strsignal</b> (<var>int signo</var>)<var><a name="index-strsignal-197"></a></var><br>
 <blockquote>
-        <p>Maps an signal number to an signal message string, the contents of
+<p>Maps an signal number to an signal message string, the contents of
 which are implementation defined.  On systems which have the external
 variable <code>sys_siglist</code>, these strings will be the same as the
 ones used by <code>psignal()</code>.
 
         <p>If the supplied signal number is within the valid range of indices for
 the <code>sys_siglist</code>, but no message is available for the particular
-signal number, then returns the string &lsquo;<samp><span class="samp">Signal </span><var>num</var></samp>&rsquo;, where
+signal number, then returns the string `<samp><span class="samp">Signal </span><var>num</var></samp>', where
 <var>num</var> is the signal number.
 
         <p>If the supplied signal number is not a valid index into
@@ -2754,12 +2754,12 @@ call to <code>strsignal</code>.
 <div class="defun">
 &mdash; Extension: const char* <b>strsigno</b> (<var>int signo</var>)<var><a name="index-strsigno-198"></a></var><br>
 <blockquote>
-        <p>Given an signal number, returns a pointer to a string containing the
+<p>Given an signal number, returns a pointer to a string containing the
 symbolic name of that signal number, as found in <code>&lt;signal.h&gt;</code>.
 
         <p>If the supplied signal number is within the valid range of indices for
 symbolic names, but no name is available for the particular signal
-number, then returns the string &lsquo;<samp><span class="samp">Signal </span><var>num</var></samp>&rsquo;, where
+number, then returns the string `<samp><span class="samp">Signal </span><var>num</var></samp>', where
 <var>num</var> is the signal number.
 
         <p>If the supplied signal number is not within the range of valid
@@ -2774,7 +2774,7 @@ valid until the next call to <code>strsigno</code>.
 <div class="defun">
 &mdash; Supplemental: char* <b>strstr</b> (<var>const char *string, const char *sub</var>)<var><a name="index-strstr-199"></a></var><br>
 <blockquote>
-        <p>This function searches for the substring <var>sub</var> in the string
+<p>This function searches for the substring <var>sub</var> in the string
 <var>string</var>, not including the terminating null characters.  A pointer
 to the first occurrence of <var>sub</var> is returned, or <code>NULL</code> if the
 substring is absent.  If <var>sub</var> points to a string with zero
@@ -2786,7 +2786,7 @@ length, the function returns <var>string</var>.
 <div class="defun">
 &mdash; Supplemental: double <b>strtod</b> (<var>const char *string, char **endptr</var>)<var><a name="index-strtod-200"></a></var><br>
 <blockquote>
-        <p>This ISO C function converts the initial portion of <var>string</var> to a
+<p>This ISO C function converts the initial portion of <var>string</var> to a
 <code>double</code>.  If <var>endptr</var> is not <code>NULL</code>, a pointer to the
 character after the last character used in the conversion is stored in
 the location referenced by <var>endptr</var>.  If no conversion is
@@ -2799,7 +2799,7 @@ the location referenced by <var>endptr</var>.
 <div class="defun">
 &mdash; Extension: int <b>strtoerrno</b> (<var>const char *name</var>)<var><a name="index-strtoerrno-201"></a></var><br>
 <blockquote>
-        <p>Given the symbolic name of a error number (e.g., <code>EACCES</code>), map it
+<p>Given the symbolic name of a error number (e.g., <code>EACCES</code>), map it
 to an errno value.  If no translation is found, returns 0.
 
         </blockquote></div>
@@ -2809,7 +2809,7 @@ to an errno value.  If no translation is found, returns 0.
 &mdash; Supplemental: long int <b>strtol</b> (<var>const char *string, char **endptr, int base</var>)<var><a name="index-strtol-202"></a></var><br>
 &mdash; Supplemental: unsigned long int <b>strtoul</b> (<var>const char *string, char **endptr, int base</var>)<var><a name="index-strtoul-203"></a></var><br>
 <blockquote>
-        <p>The <code>strtol</code> function converts the string in <var>string</var> to a
+<p>The <code>strtol</code> function converts the string in <var>string</var> to a
 long integer value according to the given <var>base</var>, which must be
 between 2 and 36 inclusive, or be the special value 0.  If <var>base</var>
 is 0, <code>strtol</code> will look for the prefixes <code>0</code> and <code>0x</code>
@@ -2825,7 +2825,7 @@ that the converted value is unsigned.
 <div class="defun">
 &mdash; Extension: int <b>strtosigno</b> (<var>const char *name</var>)<var><a name="index-strtosigno-204"></a></var><br>
 <blockquote>
-        <p>Given the symbolic name of a signal, map it to a signal number.  If no
+<p>Given the symbolic name of a signal, map it to a signal number.  If no
 translation is found, returns 0.
 
         </blockquote></div>
@@ -2859,16 +2859,16 @@ than the other one; else the comparison behaves normally.
 </ul>
 
      <pre class="smallexample">          strverscmp ("no digit", "no digit")
-               0    // <span class="roman">same behavior as strcmp.</span>
+              =&gt; 0    // <span class="roman">same behavior as strcmp.</span>
           strverscmp ("item#99", "item#100")
-               &lt;0   // <span class="roman">same prefix, but 99 &lt; 100.</span>
+              =&gt; &lt;0   // <span class="roman">same prefix, but 99 &lt; 100.</span>
           strverscmp ("alpha1", "alpha001")
-               &gt;0   // <span class="roman">fractional part inferior to integral one.</span>
+              =&gt; &gt;0   // <span class="roman">fractional part inferior to integral one.</span>
           strverscmp ("part1_f012", "part1_f01")
-               &gt;0   // <span class="roman">two fractional parts.</span>
+              =&gt; &gt;0   // <span class="roman">two fractional parts.</span>
           strverscmp ("foo.009", "foo.0")
-               &lt;0   // <span class="roman">idem, but with leading zeroes only.</span>
-</pre>
+              =&gt; &lt;0   // <span class="roman">idem, but with leading zeroes only.</span>
+     </pre>
         <p>This function is especially useful when dealing with filename sorting,
 because filenames frequently hold indices/version numbers. 
 </p></blockquote></div>
@@ -2877,7 +2877,7 @@ because filenames frequently hold indices/version numbers.
 <div class="defun">
 &mdash; Extension: void <b>timeval_add</b> (<var>struct timeval *a, struct timeval *b, struct timeval *result</var>)<var><a name="index-timeval_005fadd-206"></a></var><br>
 <blockquote>
-        <p>Adds <var>a</var> to <var>b</var> and stores the result in <var>result</var>.
+<p>Adds <var>a</var> to <var>b</var> and stores the result in <var>result</var>.
 
         </blockquote></div>
 
@@ -2885,7 +2885,7 @@ because filenames frequently hold indices/version numbers.
 <div class="defun">
 &mdash; Extension: void <b>timeval_sub</b> (<var>struct timeval *a, struct timeval *b, struct timeval *result</var>)<var><a name="index-timeval_005fsub-207"></a></var><br>
 <blockquote>
-        <p>Subtracts <var>b</var> from <var>a</var> and stores the result in <var>result</var>.
+<p>Subtracts <var>b</var> from <var>a</var> and stores the result in <var>result</var>.
 
         </blockquote></div>
 
@@ -2893,7 +2893,7 @@ because filenames frequently hold indices/version numbers.
 <div class="defun">
 &mdash; Supplemental: char* <b>tmpnam</b> (<var>char *s</var>)<var><a name="index-tmpnam-208"></a></var><br>
 <blockquote>
-        <p>This function attempts to create a name for a temporary file, which
+<p>This function attempts to create a name for a temporary file, which
 will be a valid file name yet not exist when <code>tmpnam</code> checks for
 it.  <var>s</var> must point to a buffer of at least <code>L_tmpnam</code> bytes,
 or be <code>NULL</code>.  Use of this function creates a security risk, and it must
@@ -2905,7 +2905,7 @@ not be used in new projects.  Use <code>mkstemp</code> instead.
 <div class="defun">
 &mdash; Supplemental: int <b>unlink_if_ordinary</b> (<var>const char*</var>)<var><a name="index-unlink_005fif_005fordinary-209"></a></var><br>
 <blockquote>
-        <p>Unlinks the named file, unless it is special (e.g. a device file). 
+<p>Unlinks the named file, unless it is special (e.g. a device file). 
 Returns 0 when the file was unlinked, a negative value (and errno set) when
 there was an error deleting the file, and a positive value if no attempt
 was made to unlink the file because it is special.
@@ -2916,7 +2916,7 @@ was made to unlink the file because it is special.
 <div class="defun">
 &mdash; Extension: void <b>unlock_std_streams</b> (<var>void</var>)<var><a name="index-unlock_005fstd_005fstreams-210"></a></var><br>
 <blockquote>
-        <p>If the OS supports it, ensure that the standard I/O streams,
+<p>If the OS supports it, ensure that the standard I/O streams,
 <code>stdin</code>, <code>stdout</code> and <code>stderr</code> are setup to avoid any
 multi-threaded locking.  Otherwise do nothing.
 
@@ -2926,7 +2926,7 @@ multi-threaded locking.  Otherwise do nothing.
 <div class="defun">
 &mdash; Extension: void <b>unlock_stream</b> (<var>FILE * stream</var>)<var><a name="index-unlock_005fstream-211"></a></var><br>
 <blockquote>
-        <p>If the OS supports it, ensure that the supplied stream is setup to
+<p>If the OS supports it, ensure that the supplied stream is setup to
 avoid any multi-threaded locking.  Otherwise leave the <code>FILE</code>
 pointer unchanged.  If the <var>stream</var> is <code>NULL</code> do nothing.
 
@@ -2936,7 +2936,7 @@ pointer unchanged.  If the <var>stream</var> is <code>NULL</code> do nothing.
 <div class="defun">
 &mdash; Extension: int <b>vasprintf</b> (<var>char **resptr, const char *format, va_list args</var>)<var><a name="index-vasprintf-212"></a></var><br>
 <blockquote>
-        <p>Like <code>vsprintf</code>, but instead of passing a pointer to a buffer,
+<p>Like <code>vsprintf</code>, but instead of passing a pointer to a buffer,
 you pass a pointer to a pointer.  This function will compute the size
 of the buffer needed, allocate memory with <code>malloc</code>, and store a
 pointer to the allocated memory in <code>*</code><var>resptr</var>.  The value
@@ -2950,7 +2950,7 @@ not be allocated, minus one is returned and <code>NULL</code> is stored in
 <div class="defun">
 &mdash; Supplemental: int <b>vfork</b> (<var>void</var>)<var><a name="index-vfork-213"></a></var><br>
 <blockquote>
-        <p>Emulates <code>vfork</code> by calling <code>fork</code> and returning its value.
+<p>Emulates <code>vfork</code> by calling <code>fork</code> and returning its value.
 
         </blockquote></div>
 
@@ -2960,7 +2960,7 @@ not be allocated, minus one is returned and <code>NULL</code> is stored in
 &mdash; Supplemental: int <b>vfprintf</b> (<var>FILE *stream, const char *format, va_list ap</var>)<var><a name="index-vfprintf-215"></a></var><br>
 &mdash; Supplemental: int <b>vsprintf</b> (<var>char *str, const char *format, va_list ap</var>)<var><a name="index-vsprintf-216"></a></var><br>
 <blockquote>
-        <p>These functions are the same as <code>printf</code>, <code>fprintf</code>, and
+<p>These functions are the same as <code>printf</code>, <code>fprintf</code>, and
 <code>sprintf</code>, respectively, except that they are called with a
 <code>va_list</code> instead of a variable number of arguments.  Note that
 they do not call <code>va_end</code>; this is the application's
@@ -2973,7 +2973,7 @@ nonstandard but common function <code>_doprnt</code>.
 <div class="defun">
 &mdash; Supplemental: int <b>vsnprintf</b> (<var>char *buf, size_t n, const char *format, va_list ap</var>)<var><a name="index-vsnprintf-217"></a></var><br>
 <blockquote>
-        <p>This function is similar to <code>vsprintf</code>, but it will write to
+<p>This function is similar to <code>vsprintf</code>, but it will write to
 <var>buf</var> at most <var>n</var><code>-1</code> bytes of text, followed by a
 terminating null byte, for a total of <var>n</var> bytes.  On error the
 return value is -1, otherwise it returns the number of characters that
@@ -2989,7 +2989,7 @@ used.
 <div class="defun">
 &mdash; Supplemental: int <b>waitpid</b> (<var>int pid, int *status, int</var>)<var><a name="index-waitpid-218"></a></var><br>
 <blockquote>
-        <p>This is a wrapper around the <code>wait</code> function.  Any &ldquo;special&rdquo;
+<p>This is a wrapper around the <code>wait</code> function.  Any &ldquo;special&rdquo;
 values of <var>pid</var> depend on your implementation of <code>wait</code>, as
 does the return value.  The third argument is unused in <code>libiberty</code>.
 
@@ -2999,7 +2999,7 @@ does the return value.  The third argument is unused in <code>libiberty</code>.
 <div class="defun">
 &mdash; Extension: int <b>writeargv</b> (<var>const char **argv, FILE *file</var>)<var><a name="index-writeargv-219"></a></var><br>
 <blockquote>
-        <p>Write each member of ARGV, handling all necessary quoting, to the file
+<p>Write each member of ARGV, handling all necessary quoting, to the file
 named by FILE, separated by whitespace.  Return 0 on success, non-zero
 if an error occurred while writing to FILE.
 
@@ -3009,7 +3009,7 @@ if an error occurred while writing to FILE.
 <div class="defun">
 &mdash; Function: int <b>xatexit</b> (<var>void </var>(<var>*fn</var>) (<var>void</var>))<var><a name="index-xatexit-220"></a></var><br>
 <blockquote>
-        <p>Behaves as the standard <code>atexit</code> function, but with no limit on
+<p>Behaves as the standard <code>atexit</code> function, but with no limit on
 the number of registered functions.  Returns 0 on success, or &minus;1 on
 failure.  If you use <code>xatexit</code> to register functions, you must use
 <code>xexit</code> to terminate your program.
@@ -3020,7 +3020,7 @@ failure.  If you use <code>xatexit</code> to register functions, you must use
 <div class="defun">
 &mdash; Replacement: void* <b>xcalloc</b> (<var>size_t nelem, size_t elsize</var>)<var><a name="index-xcalloc-221"></a></var><br>
 <blockquote>
-        <p>Allocate memory without fail, and set it to zero.  This routine functions
+<p>Allocate memory without fail, and set it to zero.  This routine functions
 like <code>calloc</code>, but will behave the same as <code>xmalloc</code> if memory
 cannot be found.
 
@@ -3030,7 +3030,7 @@ cannot be found.
 <div class="defun">
 &mdash; Replacement: void <b>xexit</b> (<var>int code</var>)<var><a name="index-xexit-222"></a></var><br>
 <blockquote>
-        <p>Terminates the program.  If any functions have been registered with
+<p>Terminates the program.  If any functions have been registered with
 the <code>xatexit</code> replacement function, they will be called first. 
 Termination is handled via the system's normal <code>exit</code> call.
 
@@ -3040,7 +3040,7 @@ Termination is handled via the system's normal <code>exit</code> call.
 <div class="defun">
 &mdash; Replacement: void* <b>xmalloc</b> (<var>size_t</var>)<var><a name="index-xmalloc-223"></a></var><br>
 <blockquote>
-        <p>Allocate memory without fail.  If <code>malloc</code> fails, this will print
+<p>Allocate memory without fail.  If <code>malloc</code> fails, this will print
 a message to <code>stderr</code> (using the name set by
 <code>xmalloc_set_program_name</code>,
 if any) and then call <code>xexit</code>.  Note that it is therefore safe for
@@ -3052,7 +3052,7 @@ a program to contain <code>#define malloc xmalloc</code> in its source.
 <div class="defun">
 &mdash; Replacement: void <b>xmalloc_failed</b> (<var>size_t</var>)<var><a name="index-xmalloc_005ffailed-224"></a></var><br>
 <blockquote>
-        <p>This function is not meant to be called by client code, and is listed
+<p>This function is not meant to be called by client code, and is listed
 here for completeness only.  If any of the allocation routines fail, this
 function will be called to print an error message and terminate execution.
 
@@ -3062,7 +3062,7 @@ function will be called to print an error message and terminate execution.
 <div class="defun">
 &mdash; Replacement: void <b>xmalloc_set_program_name</b> (<var>const char *name</var>)<var><a name="index-xmalloc_005fset_005fprogram_005fname-225"></a></var><br>
 <blockquote>
-        <p>You can use this to set the name of the program used by
+<p>You can use this to set the name of the program used by
 <code>xmalloc_failed</code> when printing a failure message.
 
         </blockquote></div>
@@ -3071,7 +3071,7 @@ function will be called to print an error message and terminate execution.
 <div class="defun">
 &mdash; Replacement: void* <b>xmemdup</b> (<var>void *input, size_t copy_size, size_t alloc_size</var>)<var><a name="index-xmemdup-226"></a></var><br>
 <blockquote>
-        <p>Duplicates a region of memory without fail.  First, <var>alloc_size</var> bytes
+<p>Duplicates a region of memory without fail.  First, <var>alloc_size</var> bytes
 are allocated, then <var>copy_size</var> bytes from <var>input</var> are copied into
 it, and the new memory is returned.  If fewer bytes are copied than were
 allocated, the remaining memory is zeroed.
@@ -3090,7 +3090,7 @@ but will behave the same as <code>xmalloc</code> if memory cannot be found.
 <div class="defun">
 &mdash; Replacement: char* <b>xstrdup</b> (<var>const char *s</var>)<var><a name="index-xstrdup-228"></a></var><br>
 <blockquote>
-        <p>Duplicates a character string without fail, using <code>xmalloc</code> to
+<p>Duplicates a character string without fail, using <code>xmalloc</code> to
 obtain memory.
 
         </blockquote></div>
@@ -3099,7 +3099,7 @@ obtain memory.
 <div class="defun">
 &mdash; Replacement: char* <b>xstrerror</b> (<var>int errnum</var>)<var><a name="index-xstrerror-229"></a></var><br>
 <blockquote>
-        <p>Behaves exactly like the standard <code>strerror</code> function, but
+<p>Behaves exactly like the standard <code>strerror</code> function, but
 will never return a <code>NULL</code> pointer.
 
         </blockquote></div>
@@ -3108,7 +3108,7 @@ will never return a <code>NULL</code> pointer.
 <div class="defun">
 &mdash; Replacement: char* <b>xstrndup</b> (<var>const char *s, size_t n</var>)<var><a name="index-xstrndup-230"></a></var><br>
 <blockquote>
-        <p>Returns a pointer to a copy of <var>s</var> with at most <var>n</var> characters
+<p>Returns a pointer to a copy of <var>s</var> with at most <var>n</var> characters
 without fail, using <code>xmalloc</code> to obtain memory.  The result is
 always NUL terminated.
 

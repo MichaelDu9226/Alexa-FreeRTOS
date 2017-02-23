@@ -3,7 +3,7 @@
 <title>HPPA Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Submodel-Options.html#Submodel-Options" title="Submodel Options">
 <link rel="prev" href="H8_002f300-Options.html#H8_002f300-Options" title="H8/300 Options">
@@ -55,12 +55,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Submodel-Options.html#Submodel-Options"
 <h4 class="subsection">3.17.15 HPPA Options</h4>
 
 <p><a name="index-HPPA-Options-1414"></a>
-These &lsquo;<samp><span class="samp">-m</span></samp>&rsquo; options are defined for the HPPA family of computers:
+These `<samp><span class="samp">-m</span></samp>' options are defined for the HPPA family of computers:
 
      <dl>
 <dt><code>-march=</code><var>architecture-type</var><dd><a name="index-march-1415"></a>Generate code for the specified architecture.  The choices for
-<var>architecture-type</var> are &lsquo;<samp><span class="samp">1.0</span></samp>&rsquo; for PA 1.0, &lsquo;<samp><span class="samp">1.1</span></samp>&rsquo; for PA
-1.1, and &lsquo;<samp><span class="samp">2.0</span></samp>&rsquo; for PA 2.0 processors.  Refer to
+<var>architecture-type</var> are `<samp><span class="samp">1.0</span></samp>' for PA 1.0, `<samp><span class="samp">1.1</span></samp>' for PA
+1.1, and `<samp><span class="samp">2.0</span></samp>' for PA 2.0 processors.  Refer to
 <samp><span class="file">/usr/lib/sched.models</span></samp> on an HP-UX system to determine the proper
 architecture option for your machine.  Code compiled for lower numbered
 architectures runs on higher numbered architectures, but not the
@@ -102,7 +102,7 @@ two registers separated by a dash.  Multiple register ranges can be
 specified separated by a comma.
 
      <br><dt><code>-mlong-load-store</code><dd><a name="index-mlong_002dload_002dstore-1426"></a>Generate 3-instruction load and store sequences as sometimes required by
-the HP-UX 10 linker.  This is equivalent to the &lsquo;<samp><span class="samp">+k</span></samp>&rsquo; option to
+the HP-UX 10 linker.  This is equivalent to the `<samp><span class="samp">+k</span></samp>' option to
 the HP compilers.
 
      <br><dt><code>-mportable-runtime</code><dd><a name="index-mportable_002druntime-1427"></a>Use the portable calling conventions proposed by HP for ELF systems.
@@ -110,11 +110,11 @@ the HP compilers.
      <br><dt><code>-mgas</code><dd><a name="index-mgas-1428"></a>Enable the use of assembler directives only GAS understands.
 
      <br><dt><code>-mschedule=</code><var>cpu-type</var><dd><a name="index-mschedule-1429"></a>Schedule code according to the constraints for the machine type
-<var>cpu-type</var>.  The choices for <var>cpu-type</var> are &lsquo;<samp><span class="samp">700</span></samp>&rsquo;
-&lsquo;<samp><span class="samp">7100</span></samp>&rsquo;, &lsquo;<samp><span class="samp">7100LC</span></samp>&rsquo;, &lsquo;<samp><span class="samp">7200</span></samp>&rsquo;, &lsquo;<samp><span class="samp">7300</span></samp>&rsquo; and &lsquo;<samp><span class="samp">8000</span></samp>&rsquo;.  Refer
+<var>cpu-type</var>.  The choices for <var>cpu-type</var> are `<samp><span class="samp">700</span></samp>'
+`<samp><span class="samp">7100</span></samp>', `<samp><span class="samp">7100LC</span></samp>', `<samp><span class="samp">7200</span></samp>', `<samp><span class="samp">7300</span></samp>' and `<samp><span class="samp">8000</span></samp>'.  Refer
 to <samp><span class="file">/usr/lib/sched.models</span></samp> on an HP-UX system to determine the
 proper scheduling option for your machine.  The default scheduling is
-&lsquo;<samp><span class="samp">8000</span></samp>&rsquo;.
+`<samp><span class="samp">8000</span></samp>'.
 
      <br><dt><code>-mlinker-opt</code><dd><a name="index-mlinker_002dopt-1430"></a>Enable the optimization pass in the HP-UX linker.  Note this makes symbolic
 debugging impossible.  It also triggers a bug in the HP-UX 8 and HP-UX 9
@@ -147,8 +147,8 @@ are passed to that <samp><span class="command">ld</span></samp>.
 The <samp><span class="command">ld</span></samp> that is called is determined by the
 <samp><span class="option">--with-ld</span></samp> configure option, GCC's program search path, and
 finally by the user's <samp><span class="env">PATH</span></samp>.  The linker used by GCC can be printed
-using &lsquo;<samp><span class="samp">which `gcc -print-prog-name=ld`</span></samp>&rsquo;.  This option is only available
-on the 64-bit HP-UX GCC, i.e. configured with &lsquo;<samp><span class="samp">hppa*64*-*-hpux*</span></samp>&rsquo;.
+using `<samp><span class="samp">which `gcc -print-prog-name=ld`</span></samp>'.  This option is only available
+on the 64-bit HP-UX GCC, i.e. configured with `<samp><span class="samp">hppa*64*-*-hpux*</span></samp>'.
 
      <br><dt><code>-mhp-ld</code><dd><a name="index-mhp_002dld-1434"></a>Use options specific to HP <samp><span class="command">ld</span></samp>. 
 This passes <samp><span class="option">-b</span></samp> to <samp><span class="command">ld</span></samp> when building
@@ -159,9 +159,9 @@ which <samp><span class="command">ld</span></samp> is called; it only changes wh
 <samp><span class="command">ld</span></samp>. 
 The <samp><span class="command">ld</span></samp> that is called is determined by the <samp><span class="option">--with-ld</span></samp>
 configure option, GCC's program search path, and finally by the user's
-<samp><span class="env">PATH</span></samp>.  The linker used by GCC can be printed using &lsquo;<samp><span class="samp">which
-`gcc -print-prog-name=ld`</span></samp>&rsquo;.  This option is only available on the 64-bit
-HP-UX GCC, i.e. configured with &lsquo;<samp><span class="samp">hppa*64*-*-hpux*</span></samp>&rsquo;.
+<samp><span class="env">PATH</span></samp>.  The linker used by GCC can be printed using `<samp><span class="samp">which
+`gcc -print-prog-name=ld`</span></samp>'.  This option is only available on the 64-bit
+HP-UX GCC, i.e. configured with `<samp><span class="samp">hppa*64*-*-hpux*</span></samp>'.
 
      <br><dt><code>-mlong-calls</code><dd><a name="index-mno_002dlong_002dcalls-1435"></a>Generate code that uses long call sequences.  This ensures that a call
 is always able to reach linker generated stubs.  The default is to generate
@@ -189,11 +189,11 @@ However, an indirect call is used on 32-bit ELF systems in pic code
 and it is quite long.
 
      <br><dt><code>-munix=</code><var>unix-std</var><dd><a name="index-march-1436"></a>Generate compiler predefines and select a startfile for the specified
-UNIX standard.  The choices for <var>unix-std</var> are &lsquo;<samp><span class="samp">93</span></samp>&rsquo;, &lsquo;<samp><span class="samp">95</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">98</span></samp>&rsquo;.  &lsquo;<samp><span class="samp">93</span></samp>&rsquo; is supported on all HP-UX versions.  &lsquo;<samp><span class="samp">95</span></samp>&rsquo;
-is available on HP-UX 10.10 and later.  &lsquo;<samp><span class="samp">98</span></samp>&rsquo; is available on HP-UX
-11.11 and later.  The default values are &lsquo;<samp><span class="samp">93</span></samp>&rsquo; for HP-UX 10.00,
-&lsquo;<samp><span class="samp">95</span></samp>&rsquo; for HP-UX 10.10 though to 11.00, and &lsquo;<samp><span class="samp">98</span></samp>&rsquo; for HP-UX 11.11
+UNIX standard.  The choices for <var>unix-std</var> are `<samp><span class="samp">93</span></samp>', `<samp><span class="samp">95</span></samp>'
+and `<samp><span class="samp">98</span></samp>'.  `<samp><span class="samp">93</span></samp>' is supported on all HP-UX versions.  `<samp><span class="samp">95</span></samp>'
+is available on HP-UX 10.10 and later.  `<samp><span class="samp">98</span></samp>' is available on HP-UX
+11.11 and later.  The default values are `<samp><span class="samp">93</span></samp>' for HP-UX 10.00,
+`<samp><span class="samp">95</span></samp>' for HP-UX 10.10 though to 11.00, and `<samp><span class="samp">98</span></samp>' for HP-UX 11.11
 and later.
 
      <p><samp><span class="option">-munix=93</span></samp> provides the same predefines as GCC 3.3 and 3.4. 

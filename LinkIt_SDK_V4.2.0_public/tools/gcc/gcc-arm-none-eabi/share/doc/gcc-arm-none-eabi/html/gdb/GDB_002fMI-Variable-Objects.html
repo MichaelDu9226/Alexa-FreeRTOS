@@ -3,7 +3,7 @@
 <title>GDB/MI Variable Objects - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-Stack-Manipulation.html#GDB_002fMI-Stack-Manipulation" title="GDB/MI Stack Manipulation">
@@ -203,25 +203,25 @@ a variable, the result of an expression, a memory cell or a CPU
 register.
 
    <p>The <var>name</var> parameter is the string by which the object can be
-referenced.  It must be unique.  If &lsquo;<samp><span class="samp">-</span></samp>&rsquo; is specified, the varobj
+referenced.  It must be unique.  If `<samp><span class="samp">-</span></samp>' is specified, the varobj
 system will generate a string &ldquo;varNNNNNN&rdquo; automatically.  It will be
 unique provided that one does not specify <var>name</var> of that format. 
 The command fails if a duplicate name is found.
 
    <p>The frame under which the expression should be evaluated can be
-specified by <var>frame-addr</var>.  A &lsquo;<samp><span class="samp">*</span></samp>&rsquo; indicates that the current
-frame should be used.  A &lsquo;<samp><span class="samp">@</span></samp>&rsquo; indicates that a floating variable
+specified by <var>frame-addr</var>.  A `<samp><span class="samp">*</span></samp>' indicates that the current
+frame should be used.  A `<samp><span class="samp">@</span></samp>' indicates that a floating variable
 object must be created.
 
    <p><var>expression</var> is any expression valid on the current language set (must not
-begin with a &lsquo;<samp><span class="samp">*</span></samp>&rsquo;), or one of the following:
+begin with a `<samp><span class="samp">*</span></samp>'), or one of the following:
 
      <ul>
-<li>&lsquo;<samp><span class="samp">*</span><var>addr</var></samp>&rsquo;, where <var>addr</var> is the address of a memory cell
+<li>`<samp><span class="samp">*</span><var>addr</var></samp>', where <var>addr</var> is the address of a memory cell
 
-     <li>&lsquo;<samp><span class="samp">*</span><var>addr</var><span class="samp">-</span><var>addr</var></samp>&rsquo; &mdash; a memory address range (TBD)
+     <li>`<samp><span class="samp">*</span><var>addr</var><span class="samp">-</span><var>addr</var></samp>' &mdash; a memory address range (TBD)
 
-     <li>&lsquo;<samp><span class="samp">$</span><var>regname</var></samp>&rsquo; &mdash; a CPU register name
+     <li>`<samp><span class="samp">$</span><var>regname</var></samp>' &mdash; a CPU register name
 </ul>
 
    <p><a name="index-dynamic-varobj-2307"></a>A varobj's contents may be provided by a Python-based pretty-printer.  In this
@@ -237,33 +237,33 @@ compatibility for existing clients.
 are:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">name</span></samp>&rsquo;<dd>The name of the varobj.
+<dt>`<samp><span class="samp">name</span></samp>'<dd>The name of the varobj.
 
-     <br><dt>&lsquo;<samp><span class="samp">numchild</span></samp>&rsquo;<dd>The number of children of the varobj.  This number is not necessarily
+     <br><dt>`<samp><span class="samp">numchild</span></samp>'<dd>The number of children of the varobj.  This number is not necessarily
 reliable for a dynamic varobj.  Instead, you must examine the
-&lsquo;<samp><span class="samp">has_more</span></samp>&rsquo; attribute.
+`<samp><span class="samp">has_more</span></samp>' attribute.
 
-     <br><dt>&lsquo;<samp><span class="samp">value</span></samp>&rsquo;<dd>The varobj's scalar value.  For a varobj whose type is some sort of
+     <br><dt>`<samp><span class="samp">value</span></samp>'<dd>The varobj's scalar value.  For a varobj whose type is some sort of
 aggregate (e.g., a <code>struct</code>), or for a dynamic varobj, this value
 will not be interesting.
 
-     <br><dt>&lsquo;<samp><span class="samp">type</span></samp>&rsquo;<dd>The varobj's type.  This is a string representation of the type, as
-would be printed by the <span class="sc">gdb</span> CLI.  If &lsquo;<samp><span class="samp">print object</span></samp>&rsquo;
+     <br><dt>`<samp><span class="samp">type</span></samp>'<dd>The varobj's type.  This is a string representation of the type, as
+would be printed by the <span class="sc">gdb</span> CLI.  If `<samp><span class="samp">print object</span></samp>'
 (see <a href="Print-Settings.html#Print-Settings">set print object</a>) is set to <code>on</code>, the
 <em>actual</em> (derived) type of the object is shown rather than the
 <em>declared</em> one.
 
-     <br><dt>&lsquo;<samp><span class="samp">thread-id</span></samp>&rsquo;<dd>If a variable object is bound to a specific thread, then this is the
+     <br><dt>`<samp><span class="samp">thread-id</span></samp>'<dd>If a variable object is bound to a specific thread, then this is the
 thread's identifier.
 
-     <br><dt>&lsquo;<samp><span class="samp">has_more</span></samp>&rsquo;<dd>For a dynamic varobj, this indicates whether there appear to be any
+     <br><dt>`<samp><span class="samp">has_more</span></samp>'<dd>For a dynamic varobj, this indicates whether there appear to be any
 children available.  For a non-dynamic varobj, this will be 0.
 
-     <br><dt>&lsquo;<samp><span class="samp">dynamic</span></samp>&rsquo;<dd>This attribute will be present and have the value &lsquo;<samp><span class="samp">1</span></samp>&rsquo; if the
+     <br><dt>`<samp><span class="samp">dynamic</span></samp>'<dd>This attribute will be present and have the value `<samp><span class="samp">1</span></samp>' if the
 varobj is a dynamic varobj.  If the varobj is not a dynamic varobj,
 then this attribute will not be present.
 
-     <br><dt>&lsquo;<samp><span class="samp">displayhint</span></samp>&rsquo;<dd>A dynamic varobj can supply a display hint to the front end.  The
+     <br><dt>`<samp><span class="samp">displayhint</span></samp>'<dd>A dynamic varobj can supply a display hint to the front end.  The
 value comes directly from the Python pretty-printer object's
 <code>display_hint</code> method.  See <a href="Pretty-Printing-API.html#Pretty-Printing-API">Pretty Printing API</a>. 
 </dl>
@@ -282,7 +282,7 @@ value comes directly from the Python pretty-printer object's
 <pre class="smallexample">      -var-delete [ -c ] <var>name</var>
 </pre>
    <p>Deletes a previously created variable object and all of its children. 
-With the &lsquo;<samp><span class="samp">-c</span></samp>&rsquo; option, just deletes the children.
+With the `<samp><span class="samp">-c</span></samp>' option, just deletes the children.
 
    <p>Returns an error if the object <var>name</var> is not found.
 
@@ -297,7 +297,8 @@ With the &lsquo;<samp><span class="samp">-c</span></samp>&rsquo; option, just de
    <p>Sets the output format for the value of the object <var>name</var> to be
 <var>format-spec</var>.
 
-   <p><a name="g_t_002dvar_002dset_002dformat"></a>The syntax for the <var>format-spec</var> is as follows:
+   <p><a name="g_t_002dvar_002dset_002dformat"></a>
+The syntax for the <var>format-spec</var> is as follows:
 
 <pre class="smallexample">      <var>format-spec</var> ==&gt;
       {binary | decimal | hexadecimal | octal | natural}
@@ -346,7 +347,9 @@ be available.
 
 <pre class="smallexample">      -var-list-children [<var>print-values</var>] <var>name</var> [<var>from</var> <var>to</var>]
 </pre>
-   <p><a name="g_t_002dvar_002dlist_002dchildren"></a>Return a list of the children of the specified variable object and
+   <p><a name="g_t_002dvar_002dlist_002dchildren"></a>
+
+   <p>Return a list of the children of the specified variable object and
 create variable objects for them, if they do not already exist.  With
 a single argument or if <var>print-values</var> has a value of 0 or
 <code>--no-values</code>, print only the names of the variables; if
@@ -384,7 +387,7 @@ expression.  There is no way to do this at all with a dynamic varobj.
 
      <p>For C/C<tt>++</tt> structures there are several pseudo children returned to
 designate access qualifiers.  For these pseudo children <var>exp</var> is
-&lsquo;<samp><span class="samp">public</span></samp>&rsquo;, &lsquo;<samp><span class="samp">private</span></samp>&rsquo;, or &lsquo;<samp><span class="samp">protected</span></samp>&rsquo;.  In this case the
+`<samp><span class="samp">public</span></samp>', `<samp><span class="samp">private</span></samp>', or `<samp><span class="samp">protected</span></samp>'.  In this case the
 type and value are not present.
 
      <p>A dynamic varobj will not report the access qualifying
@@ -394,7 +397,7 @@ available at all with a dynamic varobj.
      <br><dt><var>numchild</var><dd>Number of children this child has.  For a dynamic varobj, this will be
 0.
 
-     <br><dt><var>type</var><dd>The type of the child.  If &lsquo;<samp><span class="samp">print object</span></samp>&rsquo;
+     <br><dt><var>type</var><dd>The type of the child.  If `<samp><span class="samp">print object</span></samp>'
 (see <a href="Print-Settings.html#Print-Settings">set print object</a>) is set to <code>on</code>, the
 <em>actual</em> (derived) type of the object is shown rather than the
 <em>declared</em> one.
@@ -410,11 +413,11 @@ Otherwise this result is not present.
    <p>The result may have its own attributes:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">displayhint</span></samp>&rsquo;<dd>A dynamic varobj can supply a display hint to the front end.  The
+<dt>`<samp><span class="samp">displayhint</span></samp>'<dd>A dynamic varobj can supply a display hint to the front end.  The
 value comes directly from the Python pretty-printer object's
 <code>display_hint</code> method.  See <a href="Pretty-Printing-API.html#Pretty-Printing-API">Pretty Printing API</a>.
 
-     <br><dt>&lsquo;<samp><span class="samp">has_more</span></samp>&rsquo;<dd>This is an integer attribute which is nonzero if there are children
+     <br><dt>`<samp><span class="samp">has_more</span></samp>'<dd>This is an integer attribute which is nonzero if there are children
 remaining after the end of the selected range. 
 </dl>
 
@@ -517,9 +520,9 @@ and will give an error when invoked on one.
 </pre>
    <p>Evaluates the expression that is represented by the specified variable
 object and returns its value as a string.  The format of the string
-can be specified with the &lsquo;<samp><span class="samp">-f</span></samp>&rsquo; option.  The possible values of
+can be specified with the `<samp><span class="samp">-f</span></samp>' option.  The possible values of
 this option are the same as for <code>-var-set-format</code>
-(see <a href="_002dvar_002dset_002dformat.html#g_t_002dvar_002dset_002dformat">-var-set-format</a>).  If the &lsquo;<samp><span class="samp">-f</span></samp>&rsquo; option is not specified,
+(see <a href="_002dvar_002dset_002dformat.html#g_t_002dvar_002dset_002dformat">-var-set-format</a>).  If the `<samp><span class="samp">-f</span></samp>' option is not specified,
 the current display format will be used.  The current display format
 can be changed using the <code>-var-set-format</code> command.
 
@@ -537,7 +540,7 @@ before the value of a child variable can be evaluated.
 <pre class="smallexample">      -var-assign <var>name</var> <var>expression</var>
 </pre>
    <p>Assigns the value of <var>expression</var> to the variable object specified
-by <var>name</var>.  The object must be &lsquo;<samp><span class="samp">editable</span></samp>&rsquo;.  If the variable's
+by <var>name</var>.  The object must be `<samp><span class="samp">editable</span></samp>'.  If the variable's
 value is altered by the assign, the variable will show up in any
 subsequent <code>-var-update</code> list.
 
@@ -564,16 +567,16 @@ subsequent <code>-var-update</code> list.
 list of variable objects whose values have changed; <var>name</var> must
 be a root variable object.  Here, &ldquo;changed&rdquo; means that the result of
 <code>-var-evaluate-expression</code> before and after the
-<code>-var-update</code> is different.  If &lsquo;<samp><span class="samp">*</span></samp>&rsquo; is used as the variable
+<code>-var-update</code> is different.  If `<samp><span class="samp">*</span></samp>' is used as the variable
 object names, all existing variable objects are updated, except
 for frozen ones (see <a href="_002dvar_002dset_002dfrozen.html#g_t_002dvar_002dset_002dfrozen">-var-set-frozen</a>).  The option
 <var>print-values</var> determines whether both names and values, or just
 names are printed.  The possible values of this option are the same
 as for <code>-var-list-children</code> (see <a href="_002dvar_002dlist_002dchildren.html#g_t_002dvar_002dlist_002dchildren">-var-list-children</a>).  It is
-recommended to use the &lsquo;<samp><span class="samp">--all-values</span></samp>&rsquo; option, to reduce the
+recommended to use the `<samp><span class="samp">--all-values</span></samp>' option, to reduce the
 number of MI commands needed on each program stop.
 
-   <p>With the &lsquo;<samp><span class="samp">*</span></samp>&rsquo; parameter, if a variable object is bound to a
+   <p>With the `<samp><span class="samp">*</span></samp>' parameter, if a variable object is bound to a
 currently running thread, it will not be updated, without any
 diagnostic.
 
@@ -581,17 +584,18 @@ diagnostic.
 only the selected range of children will be reported.
 
    <p><code>-var-update</code> reports all the changed varobjs in a tuple named
-&lsquo;<samp><span class="samp">changelist</span></samp>&rsquo;.
+`<samp><span class="samp">changelist</span></samp>'.
 
    <p>Each item in the change list is itself a tuple holding:
 
      <dl>
-<dt>&lsquo;<samp><span class="samp">name</span></samp>&rsquo;<dd>The name of the varobj.
+<dt>`<samp><span class="samp">name</span></samp>'<dd>The name of the varobj.
 
-     <br><dt>&lsquo;<samp><span class="samp">value</span></samp>&rsquo;<dd>If values were requested for this update, then this field will be
+     <br><dt>`<samp><span class="samp">value</span></samp>'<dd>If values were requested for this update, then this field will be
 present and will hold the value of the varobj.
 
-     <br><dt>&lsquo;<samp><span class="samp">in_scope</span></samp>&rsquo;<dd><a name="g_t_002dvar_002dupdate"></a>This field is a string which may take one of three values:
+     <br><dt>`<samp><span class="samp">in_scope</span></samp>'<dd><a name="g_t_002dvar_002dupdate"></a>
+This field is a string which may take one of three values:
 
           <dl>
 <dt><code>"true"</code><dd>The variable object's current value is valid.
@@ -610,43 +614,43 @@ objects.
      <p>In the future new values may be added to this list so the front should
 be prepared for this possibility.  See <a href="GDB_002fMI-Development-and-Front-Ends.html#GDB_002fMI-Development-and-Front-Ends"><span class="sc">GDB/MI</span> Development and Front Ends</a>.
 
-     <br><dt>&lsquo;<samp><span class="samp">type_changed</span></samp>&rsquo;<dd>This is only present if the varobj is still valid.  If the type
-changed, then this will be the string &lsquo;<samp><span class="samp">true</span></samp>&rsquo;; otherwise it will
-be &lsquo;<samp><span class="samp">false</span></samp>&rsquo;.
+     <br><dt>`<samp><span class="samp">type_changed</span></samp>'<dd>This is only present if the varobj is still valid.  If the type
+changed, then this will be the string `<samp><span class="samp">true</span></samp>'; otherwise it will
+be `<samp><span class="samp">false</span></samp>'.
 
      <p>When a varobj's type changes, its children are also likely to have
 become incorrect.  Therefore, the varobj's children are automatically
-deleted when this attribute is &lsquo;<samp><span class="samp">true</span></samp>&rsquo;.  Also, the varobj's update
+deleted when this attribute is `<samp><span class="samp">true</span></samp>'.  Also, the varobj's update
 range, when set using the <code>-var-set-update-range</code> command, is
 unset.
 
-     <br><dt>&lsquo;<samp><span class="samp">new_type</span></samp>&rsquo;<dd>If the varobj's type changed, then this field will be present and will
+     <br><dt>`<samp><span class="samp">new_type</span></samp>'<dd>If the varobj's type changed, then this field will be present and will
 hold the new type.
 
-     <br><dt>&lsquo;<samp><span class="samp">new_num_children</span></samp>&rsquo;<dd>For a dynamic varobj, if the number of children changed, or if the
+     <br><dt>`<samp><span class="samp">new_num_children</span></samp>'<dd>For a dynamic varobj, if the number of children changed, or if the
 type changed, this will be the new number of children.
 
-     <p>The &lsquo;<samp><span class="samp">numchild</span></samp>&rsquo; field in other varobj responses is generally not
+     <p>The `<samp><span class="samp">numchild</span></samp>' field in other varobj responses is generally not
 valid for a dynamic varobj &ndash; it will show the number of children that
 <span class="sc">gdb</span> knows about, but because dynamic varobjs lazily
 instantiate their children, this will not reflect the number of
 children which may be available.
 
-     <p>The &lsquo;<samp><span class="samp">new_num_children</span></samp>&rsquo; attribute only reports changes to the
+     <p>The `<samp><span class="samp">new_num_children</span></samp>' attribute only reports changes to the
 number of children known by <span class="sc">gdb</span>.  This is the only way to
 detect whether an update has removed children (which necessarily can
 only happen at the end of the update range).
 
-     <br><dt>&lsquo;<samp><span class="samp">displayhint</span></samp>&rsquo;<dd>The display hint, if any.
+     <br><dt>`<samp><span class="samp">displayhint</span></samp>'<dd>The display hint, if any.
 
-     <br><dt>&lsquo;<samp><span class="samp">has_more</span></samp>&rsquo;<dd>This is an integer value, which will be 1 if there are more children
+     <br><dt>`<samp><span class="samp">has_more</span></samp>'<dd>This is an integer value, which will be 1 if there are more children
 available outside the varobj's update range.
 
-     <br><dt>&lsquo;<samp><span class="samp">dynamic</span></samp>&rsquo;<dd>This attribute will be present and have the value &lsquo;<samp><span class="samp">1</span></samp>&rsquo; if the
+     <br><dt>`<samp><span class="samp">dynamic</span></samp>'<dd>This attribute will be present and have the value `<samp><span class="samp">1</span></samp>' if the
 varobj is a dynamic varobj.  If the varobj is not a dynamic varobj,
 then this attribute will not be present.
 
-     <br><dt>&lsquo;<samp><span class="samp">new_children</span></samp>&rsquo;<dd>If new children were added to a dynamic varobj within the selected
+     <br><dt>`<samp><span class="samp">new_children</span></samp>'<dd>If new children were added to a dynamic varobj within the selected
 update range (as set by <code>-var-set-update-range</code>), then they will
 be listed in this attribute. 
 </dl>
@@ -671,8 +675,8 @@ be listed in this attribute.
 <pre class="smallexample">      -var-set-frozen <var>name</var> <var>flag</var>
 </pre>
    <p>Set the frozenness flag on the variable object <var>name</var>.  The
-<var>flag</var> parameter should be either &lsquo;<samp><span class="samp">1</span></samp>&rsquo; to make the variable
-frozen or &lsquo;<samp><span class="samp">0</span></samp>&rsquo; to make it unfrozen.  If a variable object is
+<var>flag</var> parameter should be either `<samp><span class="samp">1</span></samp>' to make the variable
+frozen or `<samp><span class="samp">0</span></samp>' to make it unfrozen.  If a variable object is
 frozen, then neither itself, nor any of its children, are
 implicitly updated by <code>-var-update</code> of
 a parent variable or by <code>-var-update *</code>.  Only
@@ -722,9 +726,9 @@ children will be reported.  Otherwise, children starting at <var>from</var>
    <p>Set a visualizer for the variable object <var>name</var>.
 
    <p><var>visualizer</var> is the visualizer to use.  The special value
-&lsquo;<samp><span class="samp">None</span></samp>&rsquo; means to disable any visualizer in use.
+`<samp><span class="samp">None</span></samp>' means to disable any visualizer in use.
 
-   <p>If not &lsquo;<samp><span class="samp">None</span></samp>&rsquo;, <var>visualizer</var> must be a Python expression. 
+   <p>If not `<samp><span class="samp">None</span></samp>', <var>visualizer</var> must be a Python expression. 
 This expression must evaluate to a callable object which accepts a
 single argument.  <span class="sc">gdb</span> will call this object with the value of
 the varobj <var>name</var> as an argument (this is done so that the same
@@ -763,5 +767,5 @@ can be used to instantiate this class for a varobj:
      ^done
 </pre>
    <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-   </body></html>
+</body></html>
 

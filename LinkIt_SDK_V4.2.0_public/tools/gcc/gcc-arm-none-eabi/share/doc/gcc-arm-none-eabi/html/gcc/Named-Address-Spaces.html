@@ -3,7 +3,7 @@
 <title>Named Address Spaces - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="C-Extensions.html#C-Extensions" title="C Extensions">
 <link rel="prev" href="Fixed_002dPoint.html#Fixed_002dPoint" title="Fixed-Point">
@@ -159,10 +159,10 @@ together with attribute <code>progmem</code>.
 <p class="noindent"><b>Limitations and caveats</b>
 
      <ul>
-<li>Reading across the 64&nbsp;KiB section boundary of
+<li>Reading across the 64&nbsp;<!-- /@w -->KiB section boundary of
 the <code>__flash</code> or <code>__flash</code><var>N</var> address spaces
 shows undefined behavior. The only address space that
-supports reading across the 64&nbsp;KiB flash segment boundaries is
+supports reading across the 64&nbsp;<!-- /@w -->KiB flash segment boundaries is
 <code>__memx</code>.
 
      <li>If you use one of the <code>__flash</code><var>N</var> address spaces
@@ -182,7 +182,7 @@ as immediates into operands of instructions.
 located in static storage with a 24-bit address:
      <pre class="smallexample">          extern const __memx char foo;
           const __memx void *pfoo = &amp;foo;
-</pre>
+     </pre>
      <p class="noindent">Such code requires at least binutils 2.23, see
 <a href="http://sourceware.org/PR13503">PR13503</a><!-- /@w -->.
 
@@ -193,7 +193,7 @@ located in static storage with a 24-bit address:
 <p><a name="index-g_t_0040code_007b_005f_005ffar_007d-M32C-Named-Address-Spaces-2538"></a>
 On the M32C target, with the R8C and M16C CPU variants, variables
 qualified with <code>__far</code> are accessed using 32-bit addresses in
-order to access memory beyond the first 64&nbsp;Ki bytes.  If
+order to access memory beyond the first 64&nbsp;<!-- /@w -->Ki bytes.  If
 <code>__far</code> is used with the M32CM or M32C CPU variants, it has no
 effect.
 
@@ -203,7 +203,7 @@ effect.
 On the RL78 target, variables qualified with <code>__far</code> are accessed
 with 32-bit pointers (20-bit addresses) rather than the default 16-bit
 addresses.  Non-far variables are assumed to appear in the topmost
-64&nbsp;KiB of the address space.
+64&nbsp;<!-- /@w -->KiB of the address space.
 
 <h4 class="subsection">6.16.4 SPU Named Address Spaces</h4>
 

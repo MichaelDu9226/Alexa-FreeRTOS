@@ -3,7 +3,7 @@
 <title>Sub-Sections - Using as</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using as">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Sections.html#Sections" title="Sections">
 <link rel="prev" href="As-Sections.html#As-Sections" title="As Sections">
@@ -62,8 +62,8 @@ numbered subsections with values from 0 to 8192.  Objects assembled into the
 same subsection go into the object file together with other objects in the same
 subsection.  For example, a compiler might want to store constants in the text
 section, but might not want to have them interspersed with the program being
-assembled.  In this case, the compiler could issue a &lsquo;<samp><span class="samp">.text 0</span></samp>&rsquo; before each
-section of code being output, and a &lsquo;<samp><span class="samp">.text 1</span></samp>&rsquo; before each group of
+assembled.  In this case, the compiler could issue a `<samp><span class="samp">.text 0</span></samp>' before each
+section of code being output, and a `<samp><span class="samp">.text 1</span></samp>' before each group of
 constants being output.
 
    <p>Subsections are optional.  If you do not use subsections, everything
@@ -81,18 +81,18 @@ They just see all your text subsections as a text section, and all your
 data subsections as a data section.
 
    <p>To specify which subsection you want subsequent statements assembled
-into, use a numeric argument to specify it, in a &lsquo;<samp><span class="samp">.text
-</span><var>expression</var></samp>&rsquo; or a &lsquo;<samp><span class="samp">.data </span><var>expression</var></samp>&rsquo; statement. 
+into, use a numeric argument to specify it, in a `<samp><span class="samp">.text
+</span><var>expression</var></samp>' or a `<samp><span class="samp">.data </span><var>expression</var></samp>' statement. 
 When generating COFF output, you
 can also use an extra subsection
-argument with arbitrary named sections: &lsquo;<samp><span class="samp">.section </span><var>name</var><span class="samp">,
-</span><var>expression</var></samp>&rsquo;. 
+argument with arbitrary named sections: `<samp><span class="samp">.section </span><var>name</var><span class="samp">,
+</span><var>expression</var></samp>'. 
 When generating ELF output, you
 can also use the <code>.subsection</code> directive (see <a href="SubSection.html#SubSection">SubSection</a>)
-to specify a subsection: &lsquo;<samp><span class="samp">.subsection </span><var>expression</var></samp>&rsquo;. 
+to specify a subsection: `<samp><span class="samp">.subsection </span><var>expression</var></samp>'. 
 <var>Expression</var> should be an absolute expression
-(see <a href="Expressions.html#Expressions">Expressions</a>).  If you just say &lsquo;<samp><span class="samp">.text</span></samp>&rsquo; then &lsquo;<samp><span class="samp">.text 0</span></samp>&rsquo;
-is assumed.  Likewise &lsquo;<samp><span class="samp">.data</span></samp>&rsquo; means &lsquo;<samp><span class="samp">.data 0</span></samp>&rsquo;.  Assembly
+(see <a href="Expressions.html#Expressions">Expressions</a>).  If you just say `<samp><span class="samp">.text</span></samp>' then `<samp><span class="samp">.text 0</span></samp>'
+is assumed.  Likewise `<samp><span class="samp">.data</span></samp>' means `<samp><span class="samp">.data 0</span></samp>'.  Assembly
 begins in <code>text 0</code>.  For instance:
 <pre class="smallexample">     .text 0     # The default subsection is text 0 anyway.
      .ascii "This lives in the first text subsection. *"

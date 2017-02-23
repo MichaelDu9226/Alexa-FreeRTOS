@@ -3,7 +3,7 @@
 <title>mmo section mapping - Untitled</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Untitled">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="mmo.html#mmo" title="mmo">
 <link rel="prev" href="Symbol_002dtable.html#Symbol_002dtable" title="Symbol-table">
@@ -74,11 +74,11 @@ overlap.
 
    <p>For areas that don't have such descriptors, synthetic sections are
 formed by BFD.  Consecutive contents in the two memory areas
-&lsquo;<samp><span class="samp">0x0000...00</span></samp>&rsquo; to &lsquo;<samp><span class="samp">0x01ff...ff</span></samp>&rsquo; and
-&lsquo;<samp><span class="samp">0x2000...00</span></samp>&rsquo; to &lsquo;<samp><span class="samp">0x20ff...ff</span></samp>&rsquo; are entered in
+`<samp><span class="samp">0x0000...00</span></samp>' to `<samp><span class="samp">0x01ff...ff</span></samp>' and
+`<samp><span class="samp">0x2000...00</span></samp>' to `<samp><span class="samp">0x20ff...ff</span></samp>' are entered in
 sections named <code>.text</code> and <code>.data</code> respectively.  If an area
 is not otherwise described, but would together with a neighboring
-lower area be less than &lsquo;<samp><span class="samp">0x40000000</span></samp>&rsquo; bytes long, it is joined
+lower area be less than `<samp><span class="samp">0x40000000</span></samp>' bytes long, it is joined
 with the lower area and the gap is zero-filled.  For other cases,
 a new section is formed, named <code>.MMIX.sec.</code><var>n</var>.  Here,
 <var>n</var> is a number, a running count through the mmo file,
@@ -90,7 +90,7 @@ starting at 0.
       TETRA 1,2,3,4,-1,-2009
       BYTE 80
 </pre>
-   <p>and linked to address &lsquo;<samp><span class="samp">0x4</span></samp>&rsquo;, is represented by the sequence:
+   <p>and linked to address `<samp><span class="samp">0x4</span></samp>', is represented by the sequence:
 
 <pre class="example">      0x98080050 - lop_spec 80
       0x00000002 - two 32-bit words for the section name
@@ -119,7 +119,7 @@ contents.  Compare this to a non-loaded section specified as:
       TETRA 200001,100002
       BYTE 38,40
 </pre>
-   <p>This, when linked to address &lsquo;<samp><span class="samp">0x200000000000001c</span></samp>&rsquo;, is
+   <p>This, when linked to address `<samp><span class="samp">0x200000000000001c</span></samp>', is
 represented by:
 
 <pre class="example">      0x98080050 - lop_spec 80

@@ -3,7 +3,7 @@
 <title>Protections - STABS</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="STABS">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Cplusplus.html#Cplusplus" title="Cplusplus">
 <link rel="prev" href="Member-Type-Descriptor.html#Member-Type-Descriptor" title="Member Type Descriptor">
@@ -50,16 +50,16 @@ functions were publicly accessible.  The example that follows
 contrasts public, protected and privately accessible fields and shows
 how these protections are encoded in C<tt>++</tt> stabs.
 
-   <p>If the character following the &lsquo;<samp><var>field-name</var><span class="samp">:</span></samp>&rsquo; part of the
-string is &lsquo;<samp><span class="samp">/</span></samp>&rsquo;, then the next character is the visibility.  &lsquo;<samp><span class="samp">0</span></samp>&rsquo;
-means private, &lsquo;<samp><span class="samp">1</span></samp>&rsquo; means protected, and &lsquo;<samp><span class="samp">2</span></samp>&rsquo; means public. 
+   <p>If the character following the `<samp><var>field-name</var><span class="samp">:</span></samp>' part of the
+string is `<samp><span class="samp">/</span></samp>', then the next character is the visibility.  `<samp><span class="samp">0</span></samp>'
+means private, `<samp><span class="samp">1</span></samp>' means protected, and `<samp><span class="samp">2</span></samp>' means public. 
 Debuggers should ignore visibility characters they do not recognize, and
 assume a reasonable default (such as public) (GDB 4.11 does not, but
 this should be fixed in the next GDB release).  If no visibility is
-specified the field is public.  The visibility &lsquo;<samp><span class="samp">9</span></samp>&rsquo; means that the
+specified the field is public.  The visibility `<samp><span class="samp">9</span></samp>' means that the
 field has been optimized out and is public (there is no way to specify
 an optimized out field with a private or protected visibility). 
-Visibility &lsquo;<samp><span class="samp">9</span></samp>&rsquo; is not supported by GDB 4.11; this should be fixed
+Visibility `<samp><span class="samp">9</span></samp>' is not supported by GDB 4.11; this should be fixed
 in the next GDB release.
 
    <p>The following C<tt>++</tt> source:
@@ -78,12 +78,12 @@ in the next GDB release.
 <pre class="example">     # <span class="roman">128 is N_LSYM</span>
      .stabs "vis:T19=s12priv:/01,0,32;prot:/12,32,8;pub:12,64,32;;",128,0,0,0
 </pre>
-   <p>&lsquo;<samp><span class="samp">vis:T19=s12</span></samp>&rsquo; indicates that type number 19 is a 12 byte structure
+   <p>`<samp><span class="samp">vis:T19=s12</span></samp>' indicates that type number 19 is a 12 byte structure
 named <code>vis</code> The <code>priv</code> field has public visibility
-(&lsquo;<samp><span class="samp">/0</span></samp>&rsquo;), type int (&lsquo;<samp><span class="samp">1</span></samp>&rsquo;), and offset and size &lsquo;<samp><span class="samp">,0,32;</span></samp>&rsquo;. 
-The <code>prot</code> field has protected visibility (&lsquo;<samp><span class="samp">/1</span></samp>&rsquo;), type char
-(&lsquo;<samp><span class="samp">2</span></samp>&rsquo;) and offset and size &lsquo;<samp><span class="samp">,32,8;</span></samp>&rsquo;.  The <code>pub</code> field has
-type float (&lsquo;<samp><span class="samp">12</span></samp>&rsquo;), and offset and size &lsquo;<samp><span class="samp">,64,32;</span></samp>&rsquo;.
+(`<samp><span class="samp">/0</span></samp>'), type int (`<samp><span class="samp">1</span></samp>'), and offset and size `<samp><span class="samp">,0,32;</span></samp>'. 
+The <code>prot</code> field has protected visibility (`<samp><span class="samp">/1</span></samp>'), type char
+(`<samp><span class="samp">2</span></samp>') and offset and size `<samp><span class="samp">,32,8;</span></samp>'.  The <code>pub</code> field has
+type float (`<samp><span class="samp">12</span></samp>'), and offset and size `<samp><span class="samp">,64,32;</span></samp>'.
 
    <p>Protections for member functions are signified by one digit embedded in
 the field part of the stab describing the method.  The digit is 0 if
@@ -100,7 +100,7 @@ definition below:
      };
 </pre>
    <p>It generates the following stab.  The digit in question is to the left
-of an &lsquo;<samp><span class="samp">A</span></samp>&rsquo; in each case.  Notice also that in this case two symbol
+of an `<samp><span class="samp">A</span></samp>' in each case.  Notice also that in this case two symbol
 descriptors apply to the class name struct tag and struct type.
 
 <pre class="display">     .stabs "class_name:sym_desc(struct tag&amp;type)type_def(21)=

@@ -3,7 +3,7 @@
 <title>Bootstrapping - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Remote-Stub.html#Remote-Stub" title="Remote Stub">
 <link rel="prev" href="Stub-Contents.html#Stub-Contents" title="Stub Contents">
@@ -66,7 +66,7 @@ different name is used to allow you to distinguish the two if you wish.
 
    <p><a name="index-control-C_002c-and-remote-debugging-1247"></a><a name="index-interrupting-remote-targets-1248"></a>If you want <span class="sc">gdb</span> to be able to stop your program while it is
 running, you need to use an interrupt-driven serial driver, and arrange
-for it to stop when it receives a <code>^C</code> (&lsquo;<samp><span class="samp">\003</span></samp>&rsquo;, the control-C
+for it to stop when it receives a <code>^C</code> (`<samp><span class="samp">\003</span></samp>', the control-C
 character).  That is the character which <span class="sc">gdb</span> uses to tell the
 remote system to stop.
 

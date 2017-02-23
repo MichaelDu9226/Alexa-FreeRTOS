@@ -3,7 +3,7 @@
 <title>Starting - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Running.html#Running" title="Running">
 <link rel="prev" href="Compilation.html#Compilation" title="Compilation">
@@ -62,7 +62,7 @@ argument to <span class="sc">gdb</span> (see <a href="Invocation.html#Invocation
 supports processes, <code>run</code> creates an inferior process and makes
 that process run your program.  In some environments without processes,
 <code>run</code> jumps to the start of your program.  Other targets,
-like &lsquo;<samp><span class="samp">remote</span></samp>&rsquo;, are always running.  If you get an error
+like `<samp><span class="samp">remote</span></samp>', are always running.  If you get an error
 message like this one:
 
 <pre class="smallexample">     The "remote" target does not support "run".
@@ -129,9 +129,9 @@ main procedure.  The debugger provides a convenient way to start the
 execution of the program and to stop at the beginning of the main
 procedure, depending on the language used.
 
-     <p>The &lsquo;<samp><span class="samp">start</span></samp>&rsquo; command does the equivalent of setting a temporary
+     <p>The `<samp><span class="samp">start</span></samp>' command does the equivalent of setting a temporary
 breakpoint at the beginning of the main procedure and then invoking
-the &lsquo;<samp><span class="samp">run</span></samp>&rsquo; command.
+the `<samp><span class="samp">run</span></samp>' command.
 
      <p><a name="index-elaboration-phase-113"></a>Some programs contain an <dfn>elaboration</dfn> phase where some startup code is
 executed before the main procedure is called.  This depends on the
@@ -142,10 +142,10 @@ before reaching the main procedure.  However, the temporary breakpoint
 will remain to halt execution.
 
      <p>Specify the arguments to give to your program as arguments to the
-&lsquo;<samp><span class="samp">start</span></samp>&rsquo; command.  These arguments will be given verbatim to the
-underlying &lsquo;<samp><span class="samp">run</span></samp>&rsquo; command.  Note that the same arguments will be
+`<samp><span class="samp">start</span></samp>' command.  These arguments will be given verbatim to the
+underlying `<samp><span class="samp">run</span></samp>' command.  Note that the same arguments will be
 reused if no argument is provided during subsequent calls to
-&lsquo;<samp><span class="samp">start</span></samp>&rsquo; or &lsquo;<samp><span class="samp">run</span></samp>&rsquo;.
+`<samp><span class="samp">start</span></samp>' or `<samp><span class="samp">run</span></samp>'.
 
      <p>It is sometimes necessary to debug the program during elaboration.  In
 these cases, using the <code>start</code> command would stop the execution of
@@ -153,7 +153,7 @@ your program too late, as the program would have already completed the
 elaboration phase.  Under these circumstances, insert breakpoints in your
 elaboration code before running your program.
 
-     <p><a name="index-set-exec_002dwrapper-114"></a><br><dt><code>set exec-wrapper </code><var>wrapper</var><dt><code>show exec-wrapper</code><dt><code>unset exec-wrapper</code><dd>When &lsquo;<samp><span class="samp">exec-wrapper</span></samp>&rsquo; is set, the specified wrapper is used to
+     <p><a name="index-set-exec_002dwrapper-114"></a><br><dt><code>set exec-wrapper </code><var>wrapper</var><dt><code>show exec-wrapper</code><dt><code>unset exec-wrapper</code><dd>When `<samp><span class="samp">exec-wrapper</span></samp>' is set, the specified wrapper is used to
 launch programs for debugging.  <span class="sc">gdb</span> starts your program
 with a shell command of the form <kbd>exec </kbd><var>wrapper</var>
 <var>program</var>.  Quoting is added to <var>program</var> and its
@@ -172,7 +172,7 @@ environment:
 
      <pre class="smallexample">          (gdb) set exec-wrapper env 'LD_PRELOAD=libtest.so'
           (gdb) run
-</pre>
+     </pre>
      <p>This command is available when debugging locally on most targets, excluding
 <span class="sc">djgpp</span>, Cygwin, MS Windows, and QNX Neutrino.
 
@@ -185,7 +185,7 @@ reproducible and memory addresses reusable across debugging sessions.
 On <span class="sc">gnu</span>/Linux you can get the same behavior using
 
      <pre class="smallexample">          (gdb) set exec-wrapper setarch `uname -m` -R
-</pre>
+     </pre>
      <br><dt><code>set disable-randomization off</code><dd>Leave the behavior of the started executable unchanged.  Some bugs rear their
 ugly heads only when the program is loaded at certain addresses.  If your bug
 disappears when you run the program under <span class="sc">gdb</span>, that might be because

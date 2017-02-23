@@ -3,7 +3,7 @@
 <title>Link Options - Using the GNU Compiler Collection (GCC)</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Using the GNU Compiler Collection (GCC)">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Invoking-GCC.html#Invoking-GCC" title="Invoking GCC">
 <link rel="prev" href="Assembler-Options.html#Assembler-Options" title="Assembler Options">
@@ -76,9 +76,9 @@ POSIX compliance and is not recommended.)
 
      <p>It makes a difference where in the command you write this option; the
 linker searches and processes libraries and object files in the order they
-are specified.  Thus, &lsquo;<samp><span class="samp">foo.o -lz bar.o</span></samp>&rsquo; searches library &lsquo;<samp><span class="samp">z</span></samp>&rsquo;
+are specified.  Thus, `<samp><span class="samp">foo.o -lz bar.o</span></samp>' searches library `<samp><span class="samp">z</span></samp>'
 after file <samp><span class="file">foo.o</span></samp> but before <samp><span class="file">bar.o</span></samp>.  If <samp><span class="file">bar.o</span></samp> refers
-to functions in &lsquo;<samp><span class="samp">z</span></samp>&rsquo;, those functions may not be loaded.
+to functions in `<samp><span class="samp">z</span></samp>', those functions may not be loaded.
 
      <p>The linker searches a standard list of directories for the library,
 which is actually a file named <samp><span class="file">lib</span><var>library</var><span class="file">.a</span></samp>.  The linker
@@ -93,7 +93,7 @@ scanning through it for members which define symbols that have so far
 been referenced but not defined.  But if the file that is found is an
 ordinary object file, it is linked in the usual fashion.  The only
 difference between using an <samp><span class="option">-l</span></samp> option and specifying a file name
-is that <samp><span class="option">-l</span></samp> surrounds <var>library</var> with &lsquo;<samp><span class="samp">lib</span></samp>&rsquo; and &lsquo;<samp><span class="samp">.a</span></samp>&rsquo;
+is that <samp><span class="option">-l</span></samp> surrounds <var>library</var> with `<samp><span class="samp">lib</span></samp>' and `<samp><span class="samp">.a</span></samp>'
 and searches several directories.
 
      <br><dt><code>-lobjc</code><dd><a name="index-lobjc-1034"></a>You need this special case of the <samp><span class="option">-l</span></samp> option in order to
@@ -138,7 +138,7 @@ other standard libraries.  In other words, when you specify <samp><span class="o
 or <samp><span class="option">-nodefaultlibs</span></samp> you should usually specify <samp><span class="option">-lgcc</span></samp> as well. 
 This ensures that you have no unresolved references to internal GCC
 library subroutines. 
-(An example of such an internal subroutine is &lsquo;<samp><span class="samp">__main</span></samp>&rsquo;, used to ensure C++
+(An example of such an internal subroutine is `<samp><span class="samp">__main</span></samp>', used to ensure C++
 constructors are called; see <a href="../gccint/Collect2.html#Collect2"><code>collect2</code></a>.)
 
      <br><dt><code>-pie</code><dd><a name="index-pie-1044"></a>Produce a position independent executable on targets that support it. 
@@ -264,14 +264,14 @@ different symbols to force loading of additional library modules.
 
  <div class="footnote">
 <hr>
-<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="#fnd-1">1</a>]</small> On some systems, &lsquo;<samp><span class="samp">gcc -shared</span></samp>&rsquo;
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="#fnd-1">1</a>]</small> On some systems, `<samp><span class="samp">gcc -shared</span></samp>'
 needs to build supplementary stub code for constructors to work.  On
-multi-libbed systems, &lsquo;<samp><span class="samp">gcc -shared</span></samp>&rsquo; must select the correct support
+multi-libbed systems, `<samp><span class="samp">gcc -shared</span></samp>' must select the correct support
 libraries to link against.  Failing to supply the correct flags may lead
 to subtle defects.  Supplying them in cases where they are not necessary
 is innocuous.</p>
 
- <hr></div>
+ <p><hr></div>
 
  </body></html>
 

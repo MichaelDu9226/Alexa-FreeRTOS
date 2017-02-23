@@ -3,7 +3,7 @@
 <title>Memory - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Data.html#Data" title="Data">
 <link rel="prev" href="Output-Formats.html#Output-Formats" title="Output Formats">
@@ -59,7 +59,7 @@ any of several formats, independently of your program's data types.
    <p><var>n</var>, <var>f</var>, and <var>u</var> are all optional parameters that specify how
 much memory to display and how to format it; <var>addr</var> is an
 expression giving the address where you want to start displaying memory. 
-If you use defaults for <var>nfu</var>, you need not type the slash &lsquo;<samp><span class="samp">/</span></samp>&rsquo;. 
+If you use defaults for <var>nfu</var>, you need not type the slash `<samp><span class="samp">/</span></samp>'. 
 Several commands set convenient defaults for <var>addr</var>.
 
      <dl>
@@ -69,9 +69,9 @@ how much memory (counting by units <var>u</var>) to display.
 <!-- 4.1.2. -->
 
      <br><dt><var>f</var><span class="roman">, the display format</span><dd>The display format is one of the formats used by <code>print</code>
-(&lsquo;<samp><span class="samp">x</span></samp>&rsquo;, &lsquo;<samp><span class="samp">d</span></samp>&rsquo;, &lsquo;<samp><span class="samp">u</span></samp>&rsquo;, &lsquo;<samp><span class="samp">o</span></samp>&rsquo;, &lsquo;<samp><span class="samp">t</span></samp>&rsquo;, &lsquo;<samp><span class="samp">a</span></samp>&rsquo;, &lsquo;<samp><span class="samp">c</span></samp>&rsquo;,
-&lsquo;<samp><span class="samp">f</span></samp>&rsquo;, &lsquo;<samp><span class="samp">s</span></samp>&rsquo;), and in addition &lsquo;<samp><span class="samp">i</span></samp>&rsquo; (for machine instructions). 
-The default is &lsquo;<samp><span class="samp">x</span></samp>&rsquo; (hexadecimal) initially.  The default changes
+(`<samp><span class="samp">x</span></samp>', `<samp><span class="samp">d</span></samp>', `<samp><span class="samp">u</span></samp>', `<samp><span class="samp">o</span></samp>', `<samp><span class="samp">t</span></samp>', `<samp><span class="samp">a</span></samp>', `<samp><span class="samp">c</span></samp>',
+`<samp><span class="samp">f</span></samp>', `<samp><span class="samp">s</span></samp>'), and in addition `<samp><span class="samp">i</span></samp>' (for machine instructions). 
+The default is `<samp><span class="samp">x</span></samp>' (hexadecimal) initially.  The default changes
 each time you use either <code>x</code> or <code>print</code>.
 
      <br><dt><var>u</var><span class="roman">, the unit size</span><dd>The unit size is any of
@@ -84,14 +84,14 @@ each time you use either <code>x</code> or <code>print</code>.
 </dl>
 
      <p>Each time you specify a unit size with <code>x</code>, that size becomes the
-default unit the next time you use <code>x</code>.  For the &lsquo;<samp><span class="samp">i</span></samp>&rsquo; format,
-the unit size is ignored and is normally not written.  For the &lsquo;<samp><span class="samp">s</span></samp>&rsquo; format,
-the unit size defaults to &lsquo;<samp><span class="samp">b</span></samp>&rsquo;, unless it is explicitly given. 
+default unit the next time you use <code>x</code>.  For the `<samp><span class="samp">i</span></samp>' format,
+the unit size is ignored and is normally not written.  For the `<samp><span class="samp">s</span></samp>' format,
+the unit size defaults to `<samp><span class="samp">b</span></samp>', unless it is explicitly given. 
 Use <kbd>x /hs</kbd> to display 16-bit char strings and <kbd>x /ws</kbd> to display
 32-bit strings.  The next use of <kbd>x /s</kbd> will again display 8-bit strings. 
 Note that the results depend on the programming language of the
-current compilation unit.  If the language is C, the &lsquo;<samp><span class="samp">s</span></samp>&rsquo;
-modifier will use the UTF-16 encoding while &lsquo;<samp><span class="samp">w</span></samp>&rsquo; will use
+current compilation unit.  If the language is C, the `<samp><span class="samp">s</span></samp>'
+modifier will use the UTF-16 encoding while `<samp><span class="samp">w</span></samp>' will use
 UTF-32.  The encoding is set by the programming language and cannot
 be altered.
 
@@ -106,23 +106,23 @@ starting address of a line), and <code>print</code> (if you use it to display
 a value from memory). 
 </dl>
 
-   <p>For example, &lsquo;<samp><span class="samp">x/3uh 0x54320</span></samp>&rsquo; is a request to display three halfwords
-(<code>h</code>) of memory, formatted as unsigned decimal integers (&lsquo;<samp><span class="samp">u</span></samp>&rsquo;),
-starting at address <code>0x54320</code>.  &lsquo;<samp><span class="samp">x/4xw $sp</span></samp>&rsquo; prints the four
-words (&lsquo;<samp><span class="samp">w</span></samp>&rsquo;) of memory above the stack pointer (here, &lsquo;<samp><span class="samp">$sp</span></samp>&rsquo;;
-see <a href="Registers.html#Registers">Registers</a>) in hexadecimal (&lsquo;<samp><span class="samp">x</span></samp>&rsquo;).
+   <p>For example, `<samp><span class="samp">x/3uh 0x54320</span></samp>' is a request to display three halfwords
+(<code>h</code>) of memory, formatted as unsigned decimal integers (`<samp><span class="samp">u</span></samp>'),
+starting at address <code>0x54320</code>.  `<samp><span class="samp">x/4xw $sp</span></samp>' prints the four
+words (`<samp><span class="samp">w</span></samp>') of memory above the stack pointer (here, `<samp><span class="samp">$sp</span></samp>';
+see <a href="Registers.html#Registers">Registers</a>) in hexadecimal (`<samp><span class="samp">x</span></samp>').
 
    <p>Since the letters indicating unit sizes are all distinct from the
 letters specifying output formats, you do not have to remember whether
 unit size or format comes first; either order works.  The output
-specifications &lsquo;<samp><span class="samp">4xw</span></samp>&rsquo; and &lsquo;<samp><span class="samp">4wx</span></samp>&rsquo; mean exactly the same thing. 
-(However, the count <var>n</var> must come first; &lsquo;<samp><span class="samp">wx4</span></samp>&rsquo; does not work.)
+specifications `<samp><span class="samp">4xw</span></samp>' and `<samp><span class="samp">4wx</span></samp>' mean exactly the same thing. 
+(However, the count <var>n</var> must come first; `<samp><span class="samp">wx4</span></samp>' does not work.)
 
-   <p>Even though the unit size <var>u</var> is ignored for the formats &lsquo;<samp><span class="samp">s</span></samp>&rsquo;
-and &lsquo;<samp><span class="samp">i</span></samp>&rsquo;, you might still want to use a count <var>n</var>; for example,
-&lsquo;<samp><span class="samp">3i</span></samp>&rsquo; specifies that you want to see three machine instructions,
+   <p>Even though the unit size <var>u</var> is ignored for the formats `<samp><span class="samp">s</span></samp>'
+and `<samp><span class="samp">i</span></samp>', you might still want to use a count <var>n</var>; for example,
+`<samp><span class="samp">3i</span></samp>' specifies that you want to see three machine instructions,
 including any operands.  For convenience, especially when used with
-the <code>display</code> command, the &lsquo;<samp><span class="samp">i</span></samp>&rsquo; format also prints branch delay
+the <code>display</code> command, the `<samp><span class="samp">i</span></samp>' format also prints branch delay
 slot instructions, if any, beyond the count specified, which immediately
 follow the last instruction that is within the count.  The command
 <code>disassemble</code> gives an alternative way of inspecting machine
@@ -131,8 +131,8 @@ instructions; see <a href="Machine-Code.html#Machine-Code">Source and Machine Co
    <p>All the defaults for the arguments to <code>x</code> are designed to make it
 easy to continue scanning memory with minimal specifications each time
 you use <code>x</code>.  For example, after you have inspected three machine
-instructions with &lsquo;<samp><span class="samp">x/3i </span><var>addr</var></samp>&rsquo;, you can inspect the next seven
-with just &lsquo;<samp><span class="samp">x/7</span></samp>&rsquo;.  If you use &lt;RET&gt; to repeat the <code>x</code> command,
+instructions with `<samp><span class="samp">x/3i </span><var>addr</var></samp>', you can inspect the next seven
+with just `<samp><span class="samp">x/7</span></samp>'.  If you use &lt;RET&gt; to repeat the <code>x</code> command,
 the repeat count <var>n</var> is used again; the other arguments default as
 for successive uses of <code>x</code>.
 

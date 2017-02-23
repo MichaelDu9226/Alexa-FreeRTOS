@@ -3,7 +3,7 @@
 <title>GDB/MI Program Execution - Debugging with GDB</title>
 <meta http-equiv="Content-Type" content="text/html">
 <meta name="description" content="Debugging with GDB">
-<meta name="generator" content="makeinfo 4.11">
+<meta name="generator" content="makeinfo 4.8">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="GDB_002fMI.html#GDB_002fMI" title="GDB/MI">
 <link rel="prev" href="GDB_002fMI-Ada-Tasking-Commands.html#GDB_002fMI-Ada-Tasking-Commands" title="GDB/MI Ada Tasking Commands">
@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI.html#GDB_002fMI">GDB/MI</a>
 <h3 class="section">27.13 <span class="sc">gdb/mi</span> Program Execution</h3>
 
 <p>These are the asynchronous commands which generate the out-of-band
-record &lsquo;<samp><span class="samp">*stopped</span></samp>&rsquo;.  Currently <span class="sc">gdb</span> only really executes
+record `<samp><span class="samp">*stopped</span></samp>'.  Currently <span class="sc">gdb</span> only really executes
 asynchronously with remote targets and this interaction is mimicked in
 other cases.
 
@@ -63,23 +63,23 @@ other cases.
 </pre>
    <p>Resumes the execution of the inferior program, which will continue
 to execute until it reaches a debugger stop event.  If the
-&lsquo;<samp><span class="samp">--reverse</span></samp>&rsquo; option is specified, execution resumes in reverse until
+`<samp><span class="samp">--reverse</span></samp>' option is specified, execution resumes in reverse until
 it reaches a stop event.  Stop events may include
      <ul>
 <li>breakpoints or watchpoints
 <li>signals or exceptions
-<li>the end of the process (or its beginning under &lsquo;<samp><span class="samp">--reverse</span></samp>&rsquo;)
+<li>the end of the process (or its beginning under `<samp><span class="samp">--reverse</span></samp>')
 <li>the end or beginning of a replay log if one is being used. 
 </ul>
    In all-stop mode (see <a href="All_002dStop-Mode.html#All_002dStop-Mode">All-Stop Mode</a>), may resume only one thread, or all threads, depending on the
-value of the &lsquo;<samp><span class="samp">scheduler-locking</span></samp>&rsquo; variable.  If &lsquo;<samp><span class="samp">--all</span></samp>&rsquo; is
-specified, all threads (in all inferiors) will be resumed.  The &lsquo;<samp><span class="samp">--all</span></samp>&rsquo; option is
-ignored in all-stop mode.  If the &lsquo;<samp><span class="samp">--thread-group</span></samp>&rsquo; options is
+value of the `<samp><span class="samp">scheduler-locking</span></samp>' variable.  If `<samp><span class="samp">--all</span></samp>' is
+specified, all threads (in all inferiors) will be resumed.  The `<samp><span class="samp">--all</span></samp>' option is
+ignored in all-stop mode.  If the `<samp><span class="samp">--thread-group</span></samp>' options is
 specified, then all threads in that thread group are resumed.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> corresponding is &lsquo;<samp><span class="samp">continue</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> corresponding is `<samp><span class="samp">continue</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -102,13 +102,13 @@ specified, then all threads in that thread group are resumed.
 </pre>
    <p>Resumes the execution of the inferior program until the current
 function is exited.  Displays the results returned by the function. 
-If the &lsquo;<samp><span class="samp">--reverse</span></samp>&rsquo; option is specified, resumes the reverse
+If the `<samp><span class="samp">--reverse</span></samp>' option is specified, resumes the reverse
 execution of the inferior program until the point where current
 function was called.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">finish</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">finish</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -146,22 +146,22 @@ value itself.
    <p>Interrupts the background execution of the target.  Note how the token
 associated with the stop message is the one for the execution command
 that has been interrupted.  The token for the interrupt itself only
-appears in the &lsquo;<samp><span class="samp">^done</span></samp>&rsquo; output.  If the user is trying to
+appears in the `<samp><span class="samp">^done</span></samp>' output.  If the user is trying to
 interrupt a non-running program, an error message will be printed.
 
    <p>Note that when asynchronous execution is enabled, this command is
 asynchronous just like other execution commands.  That is, first the
-&lsquo;<samp><span class="samp">^done</span></samp>&rsquo; response will be printed, and the target stop will be
-reported after that using the &lsquo;<samp><span class="samp">*stopped</span></samp>&rsquo; notification.
+`<samp><span class="samp">^done</span></samp>' response will be printed, and the target stop will be
+reported after that using the `<samp><span class="samp">*stopped</span></samp>' notification.
 
    <p>In non-stop mode, only the context thread is interrupted by default. 
 All threads (in all inferiors) will be interrupted if the
-&lsquo;<samp><span class="samp">--all</span></samp>&rsquo;  option is specified.  If the &lsquo;<samp><span class="samp">--thread-group</span></samp>&rsquo;
+`<samp><span class="samp">--all</span></samp>'  option is specified.  If the `<samp><span class="samp">--thread-group</span></samp>'
 option is specified, all threads in that group will be interrupted.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">interrupt</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">interrupt</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -197,7 +197,7 @@ different forms of <var>location</var>.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">jump</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">jump</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -216,7 +216,7 @@ different forms of <var>location</var>.
    <p>Resumes execution of the inferior program, stopping when the beginning
 of the next source line is reached.
 
-   <p>If the &lsquo;<samp><span class="samp">--reverse</span></samp>&rsquo; option is specified, resumes reverse execution
+   <p>If the `<samp><span class="samp">--reverse</span></samp>' option is specified, resumes reverse execution
 of the inferior program, stopping at the beginning of the previous
 source line.  If you issue this command on the first line of a
 function, it will take you back to the caller of that function, to the
@@ -224,7 +224,7 @@ source line where the function was called.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">next</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">next</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -247,7 +247,7 @@ call, continues until the function returns.  If the program stops at an
 instruction in the middle of a source line, the address will be
 printed as well.
 
-   <p>If the &lsquo;<samp><span class="samp">--reverse</span></samp>&rsquo; option is specified, resumes reverse execution
+   <p>If the `<samp><span class="samp">--reverse</span></samp>' option is specified, resumes reverse execution
 of the inferior program, stopping at the previous instruction.  If the
 previously executed instruction was a return from another function,
 it will continue to execute in reverse until the call to that function
@@ -255,7 +255,7 @@ it will continue to execute in reverse until the call to that function
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">nexti</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">nexti</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -281,7 +281,7 @@ Displays the new current frame.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">return</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">return</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -323,13 +323,13 @@ exits.  In the latter case the output will include an exit code, if
 the program has exited exceptionally.
 
    <p>When no option is specified, the current inferior is started.  If the
-&lsquo;<samp><span class="samp">--thread-group</span></samp>&rsquo; option is specified, it should refer to a thread
-group of type &lsquo;<samp><span class="samp">process</span></samp>&rsquo;, and that thread group will be started. 
-If the &lsquo;<samp><span class="samp">--all</span></samp>&rsquo; option is specified, then all inferiors will be started.
+`<samp><span class="samp">--thread-group</span></samp>' option is specified, it should refer to a thread
+group of type `<samp><span class="samp">process</span></samp>', and that thread group will be started. 
+If the `<samp><span class="samp">--all</span></samp>' option is specified, then all inferiors will be started.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">run</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">run</span></samp>'.
 
 <h5 class="subsubheading">Examples</h5>
 
@@ -384,13 +384,13 @@ If the &lsquo;<samp><span class="samp">--all</span></samp>&rsquo; option is spec
    <p>Resumes execution of the inferior program, stopping when the beginning
 of the next source line is reached, if the next source line is not a
 function call.  If it is, stop at the first instruction of the called
-function.  If the &lsquo;<samp><span class="samp">--reverse</span></samp>&rsquo; option is specified, resumes reverse
+function.  If the `<samp><span class="samp">--reverse</span></samp>' option is specified, resumes reverse
 execution of the inferior program, stopping at the beginning of the
 previously executed source line.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">step</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">step</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -422,7 +422,7 @@ previously executed source line.
 <pre class="smallexample">      -exec-step-instruction [--reverse]
 </pre>
    <p>Resumes the inferior which executes one machine instruction.  If the
-&lsquo;<samp><span class="samp">--reverse</span></samp>&rsquo; option is specified, resumes reverse execution of the
+`<samp><span class="samp">--reverse</span></samp>' option is specified, resumes reverse execution of the
 inferior program, stopping at the previously executed instruction. 
 The output, once <span class="sc">gdb</span> has stopped, will vary depending on
 whether we have stopped in the middle of a source line or not.  In the
@@ -431,7 +431,7 @@ as well.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">stepi</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">stepi</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -464,11 +464,11 @@ as well.
    <p>Executes the inferior until the <var>location</var> specified in the
 argument is reached.  If there is no argument, the inferior executes
 until a source line greater than the current one is reached.  The
-reason for stopping in this case will be &lsquo;<samp><span class="samp">location-reached</span></samp>&rsquo;.
+reason for stopping in this case will be `<samp><span class="samp">location-reached</span></samp>'.
 
 <h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
 
-<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">until</span></samp>&rsquo;.
+<p>The corresponding <span class="sc">gdb</span> command is `<samp><span class="samp">until</span></samp>'.
 
 <h5 class="subsubheading">Example</h5>
 
@@ -482,5 +482,5 @@ reason for stopping in this case will be &lsquo;<samp><span class="samp">locatio
      (gdb)
 </pre>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-   </body></html>
+</body></html>
 
